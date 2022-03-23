@@ -1,0 +1,891 @@
+{
+    "id": "OREWBT",
+    "parent_bible_id": null,
+    "title": "Maijuna 2010 Edition",
+    "title_vernacular": "Las Sagradas Escrituras en Maijuna",
+    "description": null,
+    "description_vernacular": null,
+    "iso": "ore",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2010",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2016-10-12T17:45:28.000000Z",
+    "updated_at": "2020-10-12T17:45:28.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Mark",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B02___01_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B02___02_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B02___03_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "4",
+            "path": "OREWBTP1DA\/B02___04_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "5",
+            "path": "OREWBTP1DA\/B02___05_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "6",
+            "path": "OREWBTP1DA\/B02___06_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "7",
+            "path": "OREWBTP1DA\/B02___07_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "8",
+            "path": "OREWBTP1DA\/B02___08_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "9",
+            "path": "OREWBTP1DA\/B02___09_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "10",
+            "path": "OREWBTP1DA\/B02___10_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "11",
+            "path": "OREWBTP1DA\/B02___11_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "12",
+            "path": "OREWBTP1DA\/B02___12_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "13",
+            "path": "OREWBTP1DA\/B02___13_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "14",
+            "path": "OREWBTP1DA\/B02___14_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "15",
+            "path": "OREWBTP1DA\/B02___15_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "16",
+            "path": "OREWBTP1DA\/B02___16_Mark________OREWBTP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B04___01_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B04___02_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B04___03_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "4",
+            "path": "OREWBTP1DA\/B04___04_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "5",
+            "path": "OREWBTP1DA\/B04___05_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "6",
+            "path": "OREWBTP1DA\/B04___06_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "7",
+            "path": "OREWBTP1DA\/B04___07_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "8",
+            "path": "OREWBTP1DA\/B04___08_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "9",
+            "path": "OREWBTP1DA\/B04___09_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "10",
+            "path": "OREWBTP1DA\/B04___10_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "11",
+            "path": "OREWBTP1DA\/B04___11_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "12",
+            "path": "OREWBTP1DA\/B04___12_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "13",
+            "path": "OREWBTP1DA\/B04___13_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "14",
+            "path": "OREWBTP1DA\/B04___14_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "15",
+            "path": "OREWBTP1DA\/B04___15_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "16",
+            "path": "OREWBTP1DA\/B04___16_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "17",
+            "path": "OREWBTP1DA\/B04___17_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "18",
+            "path": "OREWBTP1DA\/B04___18_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "19",
+            "path": "OREWBTP1DA\/B04___19_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "20",
+            "path": "OREWBTP1DA\/B04___20_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "21",
+            "path": "OREWBTP1DA\/B04___21_John________OREWBTP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B05___01_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B05___02_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B05___03_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "4",
+            "path": "OREWBTP1DA\/B05___04_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "5",
+            "path": "OREWBTP1DA\/B05___05_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "6",
+            "path": "OREWBTP1DA\/B05___06_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "7",
+            "path": "OREWBTP1DA\/B05___07_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "8",
+            "path": "OREWBTP1DA\/B05___08_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "9",
+            "path": "OREWBTP1DA\/B05___09_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "10",
+            "path": "OREWBTP1DA\/B05___10_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "11",
+            "path": "OREWBTP1DA\/B05___11_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "12",
+            "path": "OREWBTP1DA\/B05___12_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "13",
+            "path": "OREWBTP1DA\/B05___13_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "14",
+            "path": "OREWBTP1DA\/B05___14_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "15",
+            "path": "OREWBTP1DA\/B05___15_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "16",
+            "path": "OREWBTP1DA\/B05___16_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "17",
+            "path": "OREWBTP1DA\/B05___17_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "18",
+            "path": "OREWBTP1DA\/B05___18_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "19",
+            "path": "OREWBTP1DA\/B05___19_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "20",
+            "path": "OREWBTP1DA\/B05___20_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "21",
+            "path": "OREWBTP1DA\/B05___21_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "22",
+            "path": "OREWBTP1DA\/B05___22_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "23",
+            "path": "OREWBTP1DA\/B05___23_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "24",
+            "path": "OREWBTP1DA\/B05___24_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "25",
+            "path": "OREWBTP1DA\/B05___25_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "26",
+            "path": "OREWBTP1DA\/B05___26_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "27",
+            "path": "OREWBTP1DA\/B05___27_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "28",
+            "path": "OREWBTP1DA\/B05___28_Acts________OREWBTP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B09___01_Galatians___OREWBTP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B09___02_Galatians___OREWBTP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B09___03_Galatians___OREWBTP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "4",
+            "path": "OREWBTP1DA\/B09___04_Galatians___OREWBTP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "5",
+            "path": "OREWBTP1DA\/B09___05_Galatians___OREWBTP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "6",
+            "path": "OREWBTP1DA\/B09___06_Galatians___OREWBTP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B10___01_Ephesians___OREWBTP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B10___02_Ephesians___OREWBTP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B10___03_Ephesians___OREWBTP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "4",
+            "path": "OREWBTP1DA\/B10___04_Ephesians___OREWBTP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "5",
+            "path": "OREWBTP1DA\/B10___05_Ephesians___OREWBTP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "6",
+            "path": "OREWBTP1DA\/B10___06_Ephesians___OREWBTP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B15___01_1Timothy____OREWBTP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B15___02_1Timothy____OREWBTP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B15___03_1Timothy____OREWBTP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "4",
+            "path": "OREWBTP1DA\/B15___04_1Timothy____OREWBTP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "5",
+            "path": "OREWBTP1DA\/B15___05_1Timothy____OREWBTP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "6",
+            "path": "OREWBTP1DA\/B15___06_1Timothy____OREWBTP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B16___01_2Timothy____OREWBTP1DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B16___02_2Timothy____OREWBTP1DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B16___03_2Timothy____OREWBTP1DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "4",
+            "path": "OREWBTP1DA\/B16___04_2Timothy____OREWBTP1DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B20___01_James_______OREWBTP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B20___02_James_______OREWBTP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B20___03_James_______OREWBTP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "4",
+            "path": "OREWBTP1DA\/B20___04_James_______OREWBTP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "5",
+            "path": "OREWBTP1DA\/B20___05_James_______OREWBTP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "1Pet",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B21___01_1Peter______OREWBTP1DA.mp3",
+            "id_usfm": "1PE",
+            "name": "1 Peter",
+            "order": 61
+        },
+        {
+            "book_id": "1Pet",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B21___02_1Peter______OREWBTP1DA.mp3",
+            "id_usfm": "1PE",
+            "name": "1 Peter",
+            "order": 61
+        },
+        {
+            "book_id": "1Pet",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B21___03_1Peter______OREWBTP1DA.mp3",
+            "id_usfm": "1PE",
+            "name": "1 Peter",
+            "order": 61
+        },
+        {
+            "book_id": "1Pet",
+            "chapter_id": "4",
+            "path": "OREWBTP1DA\/B21___04_1Peter______OREWBTP1DA.mp3",
+            "id_usfm": "1PE",
+            "name": "1 Peter",
+            "order": 61
+        },
+        {
+            "book_id": "1Pet",
+            "chapter_id": "5",
+            "path": "OREWBTP1DA\/B21___05_1Peter______OREWBTP1DA.mp3",
+            "id_usfm": "1PE",
+            "name": "1 Peter",
+            "order": 61
+        },
+        {
+            "book_id": "2Pet",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B22___01_2Peter______OREWBTP1DA.mp3",
+            "id_usfm": "2PE",
+            "name": "2 Peter",
+            "order": 62
+        },
+        {
+            "book_id": "2Pet",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B22___02_2Peter______OREWBTP1DA.mp3",
+            "id_usfm": "2PE",
+            "name": "2 Peter",
+            "order": 62
+        },
+        {
+            "book_id": "2Pet",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B22___03_2Peter______OREWBTP1DA.mp3",
+            "id_usfm": "2PE",
+            "name": "2 Peter",
+            "order": 62
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "1",
+            "path": "OREWBTP1DA\/B23___01_1John_______OREWBTP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "2",
+            "path": "OREWBTP1DA\/B23___02_1John_______OREWBTP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "3",
+            "path": "OREWBTP1DA\/B23___03_1John_______OREWBTP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "4",
+            "path": "OREWBTP1DA\/B23___04_1John_______OREWBTP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "5",
+            "path": "OREWBTP1DA\/B23___05_1John_______OREWBTP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6054,
+            "bible_id": "OREWBT",
+            "equivalent_id": "OREWBTP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 6055,
+            "bible_id": "OREWBT",
+            "equivalent_id": "OREWBTP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "id": "POETBL",
+    "parent_bible_id": null,
+    "title": "San Juan Atzingo Popoloca New Testament",
+    "title_vernacular": "Tí Nuevo Testamento cuènte Inchéni Jesucristo Cʼóna Nquìva",
+    "description": "New Testament in Popoloca, San Juan Atzingo (MX:poe:Popoloca, San Juan Atzingo)",
+    "description_vernacular": "",
+    "iso": "poe",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "1982",
+    "country_id": "MX",
+    "copyright": "Copyright © 1982 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0530-7",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2017-05-12T14:15:32.000000Z",
+    "updated_at": "2020-10-12T17:24:03.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 6059,
+            "bible_id": "POETBL",
+            "equivalent_id": "POETBLP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "id": "ZPMTBL",
+    "parent_bible_id": null,
+    "title": "Mixtepec Zapotec New Testament",
+    "title_vernacular": "Diidz ne rdeed guielmban",
+    "description": "New Testament in Zapotec, Mixtepec (MX:zpm:Zapotec, Mixtepec)",
+    "description_vernacular": "",
+    "iso": "zpm",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "1998",
+    "country_id": "MX",
+    "copyright": "Copyright © 1998 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0754-7",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2016-10-12T17:48:25.000000Z",
+    "updated_at": "2020-10-12T17:48:25.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 6218,
+            "bible_id": "ZPMTBL",
+            "equivalent_id": "ZPMSIMP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

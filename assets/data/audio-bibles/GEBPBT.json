@@ -1,0 +1,336 @@
+{
+    "id": "GEBPBT",
+    "parent_bible_id": null,
+    "title": "Kire New Testament",
+    "title_vernacular": "Fhe Bakɨmen Kaman Kameŋ",
+    "description": "Kire New Testament",
+    "description_vernacular": "",
+    "iso": "geb",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2001",
+    "country_id": "PG",
+    "copyright": "Copyright © 2001 Pioneer Bible Translators",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0249-8",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2020-10-12T14:13:45.000000Z",
+    "updated_at": "2020-10-12T14:13:45.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Mark",
+            "chapter_id": "1",
+            "path": "GEBFBKP2DA\/B02___01_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "2",
+            "path": "GEBFBKP2DA\/B02___02_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "3",
+            "path": "GEBFBKP2DA\/B02___03_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "4",
+            "path": "GEBFBKP2DA\/B02___04_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "5",
+            "path": "GEBFBKP2DA\/B02___05_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "6",
+            "path": "GEBFBKP2DA\/B02___06_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "7",
+            "path": "GEBFBKP2DA\/B02___07_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "8",
+            "path": "GEBFBKP2DA\/B02___08_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "9",
+            "path": "GEBFBKP2DA\/B02___09_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "10",
+            "path": "GEBFBKP2DA\/B02___10_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "11",
+            "path": "GEBFBKP2DA\/B02___11_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "12",
+            "path": "GEBFBKP2DA\/B02___12_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "13",
+            "path": "GEBFBKP2DA\/B02___13_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "14",
+            "path": "GEBFBKP2DA\/B02___14_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "15",
+            "path": "GEBFBKP2DA\/B02___15_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "16",
+            "path": "GEBFBKP2DA\/B02___16_Mark________GEBFBKP2DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "1",
+            "path": "GEBFBKP2DA\/B04___01_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "2",
+            "path": "GEBFBKP2DA\/B04___02_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "3",
+            "path": "GEBFBKP2DA\/B04___03_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "4",
+            "path": "GEBFBKP2DA\/B04___04_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "5",
+            "path": "GEBFBKP2DA\/B04___05_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "6",
+            "path": "GEBFBKP2DA\/B04___06_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "7",
+            "path": "GEBFBKP2DA\/B04___07_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "8",
+            "path": "GEBFBKP2DA\/B04___08_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "9",
+            "path": "GEBFBKP2DA\/B04___09_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "10",
+            "path": "GEBFBKP2DA\/B04___10_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "11",
+            "path": "GEBFBKP2DA\/B04___11_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "12",
+            "path": "GEBFBKP2DA\/B04___12_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "13",
+            "path": "GEBFBKP2DA\/B04___13_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "14",
+            "path": "GEBFBKP2DA\/B04___14_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "15",
+            "path": "GEBFBKP2DA\/B04___15_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "16",
+            "path": "GEBFBKP2DA\/B04___16_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "17",
+            "path": "GEBFBKP2DA\/B04___17_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "18",
+            "path": "GEBFBKP2DA\/B04___18_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "19",
+            "path": "GEBFBKP2DA\/B04___19_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "20",
+            "path": "GEBFBKP2DA\/B04___20_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "21",
+            "path": "GEBFBKP2DA\/B04___21_John________GEBFBKP2DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5905,
+            "bible_id": "GEBPBT",
+            "equivalent_id": "GEBFBKP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

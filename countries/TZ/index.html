@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Tanzania | Find a Bible</title>
+    <style>
+        .country-aside      {padding: .2em 1.2em .5em 1.2em;}
+        .country-aside p    {font-size: .8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin: .25em auto 1em auto;}
+        .country-persecution {background:url("https://images.bible.cloud/fab/logos/odi_gray_logo.svg") no-repeat 95% 10%/ 33px 26px;
+                            border: thin solid #d7d7d7; border-width: 1px 0 1px 0; margin-bottom: .5em;}
+        .country-facts      {margin: 0 0 .5em 0;}
+        .country-links      {margin-top: .75em; padding-top: .5em;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: .5em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .link-icon              {width: 1.5em; height: 1.5em;margin-left:.5em;}
+        th h6                                  {font-size: .7em; font-weight: normal;line-height:.9em; margin:.2em 0 0 0 ; text-transform: none}
+        .dataTable tr td:nth-child(2)       {max-width:120px;text-align:right;}
+        .dataTable tr td:nth-child(3)       {width:80px;text-align:center;}
+        .dataTable tr td:nth-child(4), .dataTable tr td:nth-child(5), .dataTable tr td:nth-child(6)      {width:90px;text-align:center;}
+        #banner .banner-flag {margin: 0 .5em 0 0;}
+    </style>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+    </style
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-flag " src="https://images.bible.cloud/flags/tz.svg" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Tanzania
+                </h1>
+                <h2 itemprop="description"  >A country of  Africa</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Languages
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/TZ/maps">Tanzania Maps | Info</a>
+                                                                <a class="external" href="https://find.bible/countries/TZ/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Tanzania</span>
+                    <meta itemprop="position" content="3" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+            <img class="country-location" src="https://images.bible.cloud/maps/country/TZ-location.png" alt="Tanzania Find a Bible" />
+            <div class="country-facts row">
+                <p><b>Population:</b> 62,092,761</p>
+                <p><b>Official Language:</b> Swahili</p>
+                <p><b>Language Count:</b> <span class="num-badge">151</span></p>
+                <p><b>Primary Religion:</b> Christianity</p>
+                                    <p><b>National Bible Society:</b><br />
+
+                                                    Bible Society of Tanzania</p>
+                            <a href="http://biblesociety-tanzania.org/" target="_blank" alt="Bible Society of Tanzania">
+                                <img src="https://images.bible.cloud/logo_type_bible_societies.svg" class="link-icon"/></a>
+                                         
+            </div>
+
+            <div class="country-links">
+                <p><b>Reference Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/TZ" alt="Find a Bible Tanzania">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://en.wikipedia.org/wiki/Tanzania" alt="Wikipedia - Tanzania">
+                            <img src="http://images.bible.cloud/wiki_type_logo.svg" title="Wikipedia" />
+                            <p>Wikipedia</p></a>
+                    </div>
+
+
+
+                                            <div><a target="_blank" href="https://www.cia.gov/the-world-factbook/countries/tanzania/" alt="World Fact Book - Tanzania">
+                                <img src="http://images.bible.cloud/logo_type_cia.svg" title="World Fact Book" />
+                                <p>WorldFact<br />Book</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="http://hdr.undp.org/en/countries/profiles/TZA" alt="Human Development - Tanzania">
+                                <img src="http://images.bible.cloud/logo_type_united_nations.svg" title="Human Development" />
+                                <p>Human<br />Develop.</p></a>
+                        </div>
+                    
+
+                                            <div><a target="_blank" href="https://www.state.gov/countries-areas/tanzania/" alt="Religious Freedom - Tanzania">
+                                <img src="http://images.bible.cloud/logo_type_dept_state.svg" title="Religious Freedom" />
+                                <p>Religious<br />Freedom</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://www.britannica.com/place/Tanzania" alt="Britannica - Tanzania">
+                                <img src="http://images.bible.cloud/logo_type_britannica.svg" title="Britannica" />
+                                <p>Britannica</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+            
+
+        
+
+
+            <div class="country-links">
+                <p><b>Mission / Prayer Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/TZ" alt="Find a Bible Tanzania">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://www.joshuaproject.net/countries/TZ" alt="Joshua Project - Tanzania">
+                            <img src="http://images.bible.cloud/joshua_type_logo.svg" title="Joshua Project" />
+                            <p>Joshua<br />Project</p></a>
+                    </div>
+
+                                            <div><a target="_blank" href="https://unitedbiblesocieties.org/locations/bible-society-of-tanzania/" alt="United Bible Societies - Tanzania">
+                                <img src="http://images.bible.cloud/logo_type_ubs.svg" title="United Bible Societies" />
+                                <p>UBS</p></a>
+                        </div>
+                    
+
+
+                                            <div><a target="_blank" href="https://operationworld.org/locations/tanzania" alt="Operation World - Tanzania">
+                                <img src="http://images.bible.cloud/logo_type_ow.svg" title="Operation World" />
+                                <p>Operation<br />World</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://prayercast.com/tanzania.html" alt="PrayerCasts - Tanzania">
+                                <img src="http://images.bible.cloud/prayercast_type_logo.svg" title="PrayerCast" />
+                                <p>PrayerCast</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://curlie.org/Regional/Africa/Tanzania" alt="ODP Database - Tanzania">
+                                <img src="http://images.bible.cloud/logo_type_odp.svg" title="Open Directory Project" />
+                                <p>Open<br />Directory</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+
+
+            <div class="country-overview">
+                    <p><b>Language Summary:</b>
+                        Kiswahili or Swahili (official), Kiunguja (name for Swahili in Zanzibar), English (official, primary language of commerce, administration, and higher education), Arabic (widely spoken in Zanzibar), many local languages
+note: Kiswahili (Swahili) is the mother tongue of the Bantu people living in Zanzibar and nearby coastal Tanzania; although Kiswahili is Bantu in structure and origin, its vocabulary draws on a variety of sources including Arabic and English; it has become the lingua franca of central and eastern Africa; the first language of most people is one of the local languages</p>
+                </div>
+
+                <div class="country-overview">
+                    <p><b>Ethnic Summary:</b>
+                        mainland - African 99% (of which 95% are Bantu consisting of more than 130 tribes), other 1% (consisting of Asian, European, and Arab); Zanzibar - Arab, African, mixed Arab and African</p>
+                </div>
+
+
+
+
+            <div class="country-overview">
+                <p><b>Religious Summary:</b>
+                    Christian 61.4%, Muslim 35.2%, folk religion 1.8%, other 0.2%, unaffiliated 1.4% (2010 est.)
+note: Zanzibar is almost entirely Muslim</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="medium-9">
+        <table id="languages" class="table responsive" cellspacing="0" width="100%"
+               data-json='{&quot;data&quot;:[{&quot;id&quot;:&quot;aas&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Aas\u00e1x&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Aas\u00e1&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;acx&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Omani Arabic&quot;,&quot;ci&quot;:&quot;OM&quot;,&quot;cn&quot;:&quot;Oman&quot;,&quot;tv&quot;:&quot;\u0627\u0644\u0644\u0647\u062c\u0629 \u0627\u0644\u0639\u0645\u0627\u0646\u064a\u0629&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;arb&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Arabic&quot;,&quot;ci&quot;:&quot;SA&quot;,&quot;cn&quot;:&quot;Saudi Arabia&quot;,&quot;tv&quot;:&quot;\u0639\u0631\u0628\u064a \u0641\u0635\u064a\u062d&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:19,&quot;fc&quot;:3,&quot;rc&quot;:1506},{&quot;id&quot;:&quot;asa&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Asu (Tanzania)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kipare&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;978,760&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;bdp&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Bende&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;55,210&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;bds&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Burunge&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Bulunge&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;38,970&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;bem&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bemba (Zambia)&quot;,&quot;ci&quot;:&quot;ZM&quot;,&quot;cn&quot;:&quot;Zambia&quot;,&quot;tv&quot;:&quot;Chibemba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,500&quot;,&quot;bc&quot;:3,&quot;fc&quot;:3,&quot;rc&quot;:11},{&quot;id&quot;:&quot;bez&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bena (Tanzania)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ekibena&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,284,790&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;bmb&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bembe&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;Ebeembe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;30,490&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:6},{&quot;id&quot;:&quot;bou&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Bondei&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Bonde&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;101,580&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ccl&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Cutchi-Swahili&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Asian Swahili&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;86,840&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;cmn&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Mandarin Chinese&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;\u5b98\u8bdd; \u5b98\u8a71; Gu\u0101nhu\u00e0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:45,&quot;fc&quot;:22,&quot;rc&quot;:65},{&quot;id&quot;:&quot;cwa&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Kabwa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ekikabhwa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;20,860&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;cwe&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kwere&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;287,700&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;dav&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Taita&quot;,&quot;ci&quot;:&quot;KE&quot;,&quot;cn&quot;:&quot;Kenya&quot;,&quot;tv&quot;:&quot;Dabida&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;28,480&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:10},{&quot;id&quot;:&quot;deu&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;German&quot;,&quot;ci&quot;:&quot;DE&quot;,&quot;cn&quot;:&quot;Germany&quot;,&quot;tv&quot;:&quot;Deutsch&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;13,860&quot;,&quot;bc&quot;:34,&quot;fc&quot;:10,&quot;rc&quot;:12},{&quot;id&quot;:&quot;dhs&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Dhaiso&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kikamba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;dig&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Digo&quot;,&quot;ci&quot;:&quot;KE&quot;,&quot;cn&quot;:&quot;Kenya&quot;,&quot;tv&quot;:&quot;Chidigo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;251,990&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:15},{&quot;id&quot;:&quot;dne&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Ndendeule&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ndwewe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;195,740&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;doe&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Doe&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Dohe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,380&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ell&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Modern Greek (1453-)&quot;,&quot;ci&quot;:&quot;GR&quot;,&quot;cn&quot;:&quot;Greece&quot;,&quot;tv&quot;:&quot;\u039d\u03ad\u03b1 \u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;35,000&quot;,&quot;bc&quot;:23,&quot;fc&quot;:3,&quot;rc&quot;:7},{&quot;id&quot;:&quot;eng&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;English&quot;,&quot;ci&quot;:&quot;GB&quot;,&quot;cn&quot;:&quot;United Kingdom&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,000,000&quot;,&quot;bc&quot;:244,&quot;fc&quot;:29,&quot;rc&quot;:314},{&quot;id&quot;:&quot;fip&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Fipa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ichifipa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;369,020&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;fra&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;French&quot;,&quot;ci&quot;:&quot;FR&quot;,&quot;cn&quot;:&quot;France&quot;,&quot;tv&quot;:&quot;fran\u00e7ais&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,800&quot;,&quot;bc&quot;:45,&quot;fc&quot;:3,&quot;rc&quot;:122},{&quot;id&quot;:&quot;gmx&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Magoma&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ekikinga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;16,580&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;gog&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Gogo&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Cigogo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,622,000&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:12},{&quot;id&quot;:&quot;gow&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Gorowa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Fiome&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;102,250&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;guj&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Gujarati&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;511,860&quot;,&quot;bc&quot;:4,&quot;fc&quot;:10,&quot;rc&quot;:16},{&quot;id&quot;:&quot;guz&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Gusii&quot;,&quot;ci&quot;:&quot;KE&quot;,&quot;cn&quot;:&quot;Kenya&quot;,&quot;tv&quot;:&quot;Ekegusii&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;650&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:11},{&quot;id&quot;:&quot;gwe&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Gweno&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kigweno&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,910&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;han&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Hangaza&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kihangaza&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;428,930&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;haq&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Ha&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ikiha&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,971,450&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:9},{&quot;id&quot;:&quot;hay&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Haya&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ziba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,340,650&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;heh&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Hehe&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kihehe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,467,330&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;hin&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Hindi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0939\u093f\u0902\u0926\u0940 &quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;70,250&quot;,&quot;bc&quot;:12,&quot;fc&quot;:34,&quot;rc&quot;:50},{&quot;id&quot;:&quot;hka&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Kahe&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kikahe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,720&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;hts&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Hadza&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Hazane&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,280&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;ikz&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Ikizu&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ikikizu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;97,950&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;irk&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Iraqw&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;K\u00e1ngw Iraqw&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;897,570&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;isn&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Isanzu&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kinyihanzu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;92,630&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:10},{&quot;id&quot;:&quot;jit&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Jita&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ecijita&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;360,660&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;jmc&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Machame&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;West Chaga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;726,320&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;job&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Joba&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;Kijoba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,810&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;kam&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kamba (Kenya)&quot;,&quot;ci&quot;:&quot;KE&quot;,&quot;cn&quot;:&quot;Kenya&quot;,&quot;tv&quot;:&quot;Kikamba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;12,590&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:17},{&quot;id&quot;:&quot;kck&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kalanga&quot;,&quot;ci&quot;:&quot;ZW&quot;,&quot;cn&quot;:&quot;Zimbabwe&quot;,&quot;tv&quot;:&quot;Ikalanga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;16,800&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:8},{&quot;id&quot;:&quot;kcu&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Kami (Tanzania)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kikami&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;32,690&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kcz&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Konongo&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kikonongo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;145,810&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kdc&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kutu&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;128,650&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kde&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Makonde&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Chi(ni)makonde&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,847,560&quot;,&quot;bc&quot;:4,&quot;fc&quot;:1,&quot;rc&quot;:10},{&quot;id&quot;:&quot;ked&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kerewe&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;285,900&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kfr&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kachhi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0a95\u0a9a\u0acd\u0a9b\u0ac0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;70,090&quot;,&quot;bc&quot;:2,&quot;fc&quot;:5,&quot;rc&quot;:3},{&quot;id&quot;:&quot;kik&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kikuyu&quot;,&quot;ci&quot;:&quot;KE&quot;,&quot;cn&quot;:&quot;Kenya&quot;,&quot;tv&quot;:&quot;G\u0129k\u0169y\u0169&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;26,980&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:15},{&quot;id&quot;:&quot;kin&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kinyarwanda&quot;,&quot;ci&quot;:&quot;RW&quot;,&quot;cn&quot;:&quot;Rwanda&quot;,&quot;tv&quot;:&quot;Ikinyarwanda&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;149,340&quot;,&quot;bc&quot;:6,&quot;fc&quot;:1,&quot;rc&quot;:16},{&quot;id&quot;:&quot;kiv&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Kimbu&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kikimbu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;223,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kiz&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Kisi&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kikisi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;18,740&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kki&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kagulu&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Chikagulu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;408,290&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kqh&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Kisankasa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Dorobo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;13,340&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ksb&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Shambala&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;kishambaa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,273,290&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kuj&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kuria&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Igikuria&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;748,540&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:10},{&quot;id&quot;:&quot;kya&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Kwaya&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kikwaya&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;200,740&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;lag&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Langi&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kilaangi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;699,710&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:10},{&quot;id&quot;:&quot;lai&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Lambya&quot;,&quot;ci&quot;:&quot;MW&quot;,&quot;cn&quot;:&quot;Malawi&quot;,&quot;tv&quot;:&quot;Ichilambya&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;114,360&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;lug&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Ganda&quot;,&quot;ci&quot;:&quot;UG&quot;,&quot;cn&quot;:&quot;Uganda&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;60,190&quot;,&quot;bc&quot;:4,&quot;fc&quot;:3,&quot;rc&quot;:10},{&quot;id&quot;:&quot;luo&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Luo (Kenya and Tanzania)&quot;,&quot;ci&quot;:&quot;KE&quot;,&quot;cn&quot;:&quot;Kenya&quot;,&quot;tv&quot;:&quot;Dholuo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;238,620&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:18},{&quot;id&quot;:&quot;mas&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Masai&quot;,&quot;ci&quot;:&quot;KE&quot;,&quot;cn&quot;:&quot;Kenya&quot;,&quot;tv&quot;:&quot;\u0254l Maa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,439,150&quot;,&quot;bc&quot;:3,&quot;fc&quot;:2,&quot;rc&quot;:27},{&quot;id&quot;:&quot;mgh&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Makhuwa-Meetto&quot;,&quot;ci&quot;:&quot;MZ&quot;,&quot;cn&quot;:&quot;Mozambique&quot;,&quot;tv&quot;:&quot;Emakuana&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;666,890&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:20},{&quot;id&quot;:&quot;mgq&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Malila&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ishimalilia&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;119,800&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mgr&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Mambwe-Lungu&quot;,&quot;ci&quot;:&quot;ZM&quot;,&quot;cn&quot;:&quot;Zambia&quot;,&quot;tv&quot;:&quot;Lungu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;569,330&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;mgs&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Manda (Tanzania)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kimanda&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;41,350&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;mgv&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Matengo&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Chimatengo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;428,850&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mgw&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Matumbi&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kimatuumbi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;277,220&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:9},{&quot;id&quot;:&quot;mgy&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Mbunga&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kimbunga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;83,060&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mgz&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Mbugwe&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kimbugwe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;47,980&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mhd&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Mbugu&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ma\u02bca&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;66,870&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mjh&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Mwera (Nyasa)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Nyasa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,840&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mpa&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Mpoto&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Chimpoto&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;91,010&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mvw&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Machinga&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Chi(ni)makonde&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;103,060&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mwe&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Mwera (Chimwera)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Cimwera&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;899,350&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;mwn&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Nyamwanga&quot;,&quot;ci&quot;:&quot;ZM&quot;,&quot;cn&quot;:&quot;Zambia&quot;,&quot;tv&quot;:&quot;Ichinamwanga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;248,740&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:9},{&quot;id&quot;:&quot;ndg&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Ndengereko&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Rufiji&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;87,220&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ndh&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Ndali&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Chindali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;428,990&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ndj&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Ndamba&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;157,240&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ngo&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Ngoni&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Songea&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;170,000&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ngp&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Ngulu&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kingulu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;377,980&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ngq&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Ngurimi&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Dengurume&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;95,940&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;nih&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Nyiha (Tanzania)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ishinyiha&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;442,400&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;nim&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Nilamba&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;832,840&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:18},{&quot;id&quot;:&quot;njd&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Ndonde Hamba&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Chi(ni)makonde&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;26,150&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nkt&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Nyika&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kinyika&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;38,890&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nnq&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Ngindo&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kingindo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;629,970&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;now&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Nyambo&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ekinyambo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;737,270&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nsg&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Ngasa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ongamo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;250&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ntk&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Ikoma-Nata-Isenye&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;62,600&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;nxi&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Nindi&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kinindi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;170&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nya&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Nyanja&quot;,&quot;ci&quot;:&quot;MW&quot;,&quot;cn&quot;:&quot;Malawi&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;48,080&quot;,&quot;bc&quot;:8,&quot;fc&quot;:7,&quot;rc&quot;:22},{&quot;id&quot;:&quot;nym&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Nyamwezi&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kinyamwesi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,803,780&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:9},{&quot;id&quot;:&quot;nyn&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Nyankole&quot;,&quot;ci&quot;:&quot;UG&quot;,&quot;cn&quot;:&quot;Uganda&quot;,&quot;tv&quot;:&quot;Runyankore&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;35,150&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:9},{&quot;id&quot;:&quot;nyy&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Nyakyusa-Ngonde&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ngonde&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,477,710&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:13},{&quot;id&quot;:&quot;oki&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Okiek&quot;,&quot;ci&quot;:&quot;KE&quot;,&quot;cn&quot;:&quot;Kenya&quot;,&quot;tv&quot;:&quot;Akie&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:10},{&quot;id&quot;:&quot;old&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Mochi&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Central Chaga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,190,260&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;pan&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Panjabi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;70,140&quot;,&quot;bc&quot;:6,&quot;fc&quot;:11,&quot;rc&quot;:72},{&quot;id&quot;:&quot;pbr&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Pangwa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ekipangwa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;178,550&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;piw&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Pimbwe&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Cipimbwe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;82,910&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;por&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Portuguese&quot;,&quot;ci&quot;:&quot;PT&quot;,&quot;cn&quot;:&quot;Portugal&quot;,&quot;tv&quot;:&quot;portugu\u00eas&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,310&quot;,&quot;bc&quot;:17,&quot;fc&quot;:7,&quot;rc&quot;:342},{&quot;id&quot;:&quot;poy&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Pogolo&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Chipogolo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;528,920&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;rag&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Logooli&quot;,&quot;ci&quot;:&quot;KE&quot;,&quot;cn&quot;:&quot;Kenya&quot;,&quot;tv&quot;:&quot;Lulogooli&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;300&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:8},{&quot;id&quot;:&quot;reg&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Kara (Tanzania)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Regi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;rim&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Nyaturu&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,088,270&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:10},{&quot;id&quot;:&quot;rnw&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Rungwa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Icilungwa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;51,460&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;rof&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Rombo&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kirombo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;209,930&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ruf&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Luguru&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ikiruguru&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,344,420&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;rui&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Rufiji&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;572,700&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;run&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Rundi&quot;,&quot;ci&quot;:&quot;BI&quot;,&quot;cn&quot;:&quot;Burundi&quot;,&quot;tv&quot;:&quot;Ikirundi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;664,660&quot;,&quot;bc&quot;:5,&quot;fc&quot;:3,&quot;rc&quot;:16},{&quot;id&quot;:&quot;rwk&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Rwa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;West Chaga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;257,310&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;sad&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Sandawe&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Sandaweeki&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;78,290&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;sbk&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Safwa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot; Ishisafwa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;sbm&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Sagala&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;225,860&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;sbp&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Sangu (Tanzania)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kisangu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;seg&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Segeju&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kisegeju&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:9},{&quot;id&quot;:&quot;snq&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Sangu (Gabon)&quot;,&quot;ci&quot;:&quot;GA&quot;,&quot;cn&quot;:&quot;Gabon&quot;,&quot;tv&quot;:&quot;Isangu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;som&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Somali&quot;,&quot;ci&quot;:&quot;SO&quot;,&quot;cn&quot;:&quot;Somalia&quot;,&quot;tv&quot;:&quot;Af Soomaali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;70,070&quot;,&quot;bc&quot;:3,&quot;fc&quot;:5,&quot;rc&quot;:12},{&quot;id&quot;:&quot;soz&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Temi&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;56,380&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ssc&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Suba-Simbiti&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kisimbiti&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;153,550&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;suj&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Shubi&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kishubi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;101,990&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:8},{&quot;id&quot;:&quot;suk&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Sukuma&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;K\u026asukuma&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,170,000&quot;,&quot;bc&quot;:3,&quot;fc&quot;:2,&quot;rc&quot;:23},{&quot;id&quot;:&quot;suw&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Sumbwa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kisumbwa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;546,070&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;swa&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Swahili&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:4,&quot;rc&quot;:4},{&quot;id&quot;:&quot;swh&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Swahili (Coastal)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kiswahili&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;47,000,000&quot;,&quot;bc&quot;:12,&quot;fc&quot;:3,&quot;rc&quot;:41},{&quot;id&quot;:&quot;tcc&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Datooga&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Datog&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;14,200&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:20},{&quot;id&quot;:&quot;tny&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Tongwe&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Bende&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;61,760&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;tvs&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Taveta&quot;,&quot;ci&quot;:&quot;KE&quot;,&quot;cn&quot;:&quot;Kenya&quot;,&quot;tv&quot;:&quot;Kitaveta&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:9},{&quot;id&quot;:&quot;tza&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Tanzanian Sign Language&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Lugha Ya Alama&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;613,430&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;vid&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Vidunda&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;12,810&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;vin&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Vinza&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kivinza&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;28,590&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;vun&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Vunjo&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Central Chaga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;700,120&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;wbh&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Wanda&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Iciwanda&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;68,760&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;wbi&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Vwanji&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kivwanji&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;51,600&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;wbj&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Alagwa&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Alagwaisa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;58,280&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;wka&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Kw&#039;adza&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ngomvia&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;wun&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Bungu&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Iciwungu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;102,920&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;xnj&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Chingoni&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Songea&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;265,610&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;xog&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Soga&quot;,&quot;ci&quot;:&quot;UG&quot;,&quot;cn&quot;:&quot;Uganda&quot;,&quot;tv&quot;:&quot;Lusoga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,600&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:10},{&quot;id&quot;:&quot;xsj&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Subi&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;109,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;yao&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Yao&quot;,&quot;ci&quot;:&quot;MW&quot;,&quot;cn&quot;:&quot;Malawi&quot;,&quot;tv&quot;:&quot;chiYao&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;727,220&quot;,&quot;bc&quot;:3,&quot;fc&quot;:2,&quot;rc&quot;:20},{&quot;id&quot;:&quot;ymk&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Makwe&quot;,&quot;ci&quot;:&quot;MZ&quot;,&quot;cn&quot;:&quot;Mozambique&quot;,&quot;tv&quot;:&quot;Kimakwe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;18,430&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;yue&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Yue Chinese&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Cantonese&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:12,&quot;fc&quot;:11,&quot;rc&quot;:20},{&quot;id&quot;:&quot;yul&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Yulu&quot;,&quot;ci&quot;:&quot;CF&quot;,&quot;cn&quot;:&quot;Central African Republic&quot;,&quot;tv&quot;:&quot;Binga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;zaj&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Zaramo&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Dzalamo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;zak&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Zanaki&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ekizanaki&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;176,920&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;zga&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kinga&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ekikinga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;257,970&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;zin&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Zinza&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Ecizinza&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;394,540&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ziw&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Zigula&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Mushunguli&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;830,740&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:1}]}'
+               data-searchplaceholder="Filter Items on this Page">
+            <thead>
+            <tr>
+                <th data-column-name="tt" data-link="id" data-path="/languages">Languages<h6>in Tanzania</h6></th>
+                <th data-column-name="po" data-sort-default="desc">Population<h6>Primary Language</h6></th>
+                <th data-column-name="id">iso</th>
+                <th data-column-name="bc">Bible<h6>Versions</h6></th>
+                <th data-column-name="fc">Films</th>
+                <th data-column-name="rc">Resources</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 8.5em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 3px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>Tanzania Language Map | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/TZ.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/tz_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Tanzania
+                </h1>
+                <h2 itemprop="description"  >A country of  Africa</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/TZ">Tanzania Languages</a>
+                                                                <a class="external" href="https://find.bible/countries/TZ/maps">Maps | Info</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Language Map
+                                            </a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/TZ">
+                    <span itemprop="name">Tanzania</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div  class="row">
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+
+        
+        <div class="map-img row">
+            <h4>Languages of Tanzania</h4>
+        </div>
+        <div id="mapid"></div>
+
+    </div>
+
+
+
+<div class="map-modals">
+
+            <div id="gov" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TZ-gov.jpg' />
+    </div>
+</div>            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TZ-land.jpg' />
+    </div>
+</div>            <div id="language" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TZ-lang.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TZ-location.png' />
+    </div>
+</div>            <div id="population" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TZ-population.jpg' />
+    </div>
+</div>            <div id="reference" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TZ-reference.jpg' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TZ-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+        let country_locations={
+            'AD':[42.546245,1.601554],
+            'AE':[23.424076,53.847818],
+            'AF':[33.93911,67.709953],
+            'AG':[17.060816,-61.796428],
+            'AI':[18.220554,-63.068615],
+            'AL':[41.153332,20.168331],
+            'AM':[40.069099,45.038189],
+            'AN':[12.226079,-69.060087],
+            'AO':[-11.202692,17.873887],
+            'AQ':[-75.250973,-0.071389],
+            'AR':[-38.416097,-63.616672],
+            'AS':[-14.270972,-170.132217],
+            'AT':[47.516231,14.550072],
+            'AU':[-25.274398,133.775136],
+            'AW':[12.52111,-69.968338],
+            'AZ':[40.143105,47.576927],
+            'BA':[43.915886,17.679076],
+            'BB':[13.193887,-59.543198],
+            'BD':[23.684994,90.356331],
+            'BE':[50.503887,4.469936],
+            'BF':[12.238333,-1.561593],
+            'BG':[42.733883,25.48583],
+            'BH':[25.930414,50.637772],
+            'BI':[-3.373056,29.918886],
+            'BJ':[9.30769,2.315834],
+            'BM':[32.321384,-64.75737],
+            'BN':[4.535277,114.727669],
+            'BO':[-16.290154,-63.588653],
+            'BR':[-14.235004,-51.92528],
+            'BS':[25.03428,-77.39628],
+            'BT':[27.514162,90.433601],
+            'BV':[-54.423199,3.413194],
+            'BW':[-22.328474,24.684866],
+            'BY':[53.709807,27.953389],
+            'BZ':[17.189877,-88.49765],
+            'CA':[51,-95],
+            'CC':[-12.164165,96.870956],
+            'CD':[-4.038333,21.758664],
+            'CF':[6.611111,20.939444],
+            'CG':[-0.228021,15.827659],
+            'CH':[46.818188,8.227512],
+            'CI':[7.539989,-5.54708],
+            'CK':[-21.236736,-159.777671],
+            'CL':[-35.675147,-71.542969],
+            'CM':[7.369722,12.354722],
+            'CN':[35.86166,104.195397],
+            'CO':[4.570868,-74.297333],
+            'CR':[9.748917,-83.753428],
+            'CU':[21.521757,-77.781167],
+            'CV':[16.002082,-24.013197],
+            'CX':[-10.447525,105.690449],
+            'CY':[35.126413,33.429859],
+            'CZ':[49.817492,15.472962],
+            'DE':[51.165691,10.451526],
+            'DJ':[11.825138,42.590275],
+            'DK':[56.26392,9.501785],
+            'DM':[15.414999,-61.370976],
+            'DO':[18.735693,-70.162651],
+            'DZ':[28.033886,1.659626],
+            'EC':[-1.831239,-78.183406],
+            'EE':[58.595272,25.013607],
+            'EG':[26.820553,30.802498],
+            'EH':[24.215527,-12.885834],
+            'ER':[15.179384,39.782334],
+            'ES':[40.463667,-3.74922],
+            'ET':[9.145,40.489673],
+            'FI':[61.92411,25.748151],
+            'FJ':[-16.578193,179.414413],
+            'FK':[-51.796253,-59.523613],
+            'FM':[7.425554,150.550812],
+            'FO':[61.892635,-6.911806],
+            'FR':[46.227638,2.213749],
+            'GA':[-0.803689,11.609444],
+            'GB':[55.378051,-3.435973],
+            'GD':[12.262776,-61.604171],
+            'GE':[42.315407,43.356892],
+            'GF':[3.933889,-53.125782],
+            'GG':[49.465691,-2.585278],
+            'GH':[7.946527,-1.023194],
+            'GI':[36.137741,-5.345374],
+            'GL':[71.706936,-42.604303],
+            'GM':[13.443182,-15.310139],
+            'GN':[9.945587,-9.696645],
+            'GP':[16.995971,-62.067641],
+            'GQ':[1.650801,10.267895],
+            'GR':[39.074208,21.824312],
+            'GS':[-54.429579,-36.587909],
+            'GT':[15.783471,-90.230759],
+            'GU':[13.444304,144.793731],
+            'GW':[11.803749,-15.180413],
+            'GY':[4.860416,-58.93018],
+            'GZ':[31.354676,34.308825],
+            'HK':[22.396428,114.109497],
+            'HM':[-53.08181,73.504158],
+            'HN':[15.199999,-86.241905],
+            'HR':[45.1,15.2],
+            'HT':[18.971187,-72.285215],
+            'HU':[47.162494,19.503304],
+            'ID':[-0.789275,113.921327],
+            'IE':[53.41291,-8.24389],
+            'IL':[31.046051,34.851612],
+            'IM':[54.236107,-4.548056],
+            'IN':[20.593684,78.96288],
+            'IO':[-6.343194,71.876519],
+            'IQ':[33.223191,43.679291],
+            'IR':[32.427908,53.688046],
+            'IS':[64.963051,-19.020835],
+            'IT':[41.87194,12.56738],
+            'JE':[49.214439,-2.13125],
+            'JM':[18.109581,-77.297508],
+            'JO':[30.585164,36.238414],
+            'JP':[36.204824,138.252924],
+            'KE':[-0.023559,37.906193],
+            'KG':[41.20438,74.766098],
+            'KH':[12.565679,104.990963],
+            'KI':[-3.370417,-168.734039],
+            'KM':[-11.875001,43.872219],
+            'KN':[17.357822,-62.782998],
+            'KP':[40.339852,127.510093],
+            'KR':[35.907757,127.766922],
+            'KW':[29.31166,47.481766],
+            'KY':[19.513469,-80.566956],
+            'KZ':[48.019573,66.923684],
+            'LA':[19.85627,102.495496],
+            'LB':[33.854721,35.862285],
+            'LC':[13.909444,-60.978893],
+            'LI':[47.166,9.555373],
+            'LK':[7.873054,80.771797],
+            'LR':[6.428055,-9.429499],
+            'LS':[-29.609988,28.233608],
+            'LT':[55.169438,23.881275],
+            'LU':[49.815273,6.129583],
+            'LV':[56.879635,24.603189],
+            'LY':[26.3351,17.228331],
+            'MA':[31.791702,-7.09262],
+            'MC':[43.750298,7.412841],
+            'MD':[47.411631,28.369885],
+            'ME':[42.708678,19.37439],
+            'MG':[-18.766947,46.869107],
+            'MH':[7.131474,171.184478],
+            'MK':[41.608635,21.745275],
+            'ML':[17.570692,-3.996166],
+            'MM':[21.913965,95.956223],
+            'MN':[46.862496,103.846656],
+            'MO':[22.198745,113.543873],
+            'MP':[17.33083,145.38469],
+            'MQ':[14.641528,-61.024174],
+            'MR':[21.00789,-10.940835],
+            'MS':[16.742498,-62.187366],
+            'MT':[35.937496,14.375416],
+            'MU':[-20.348404,57.552152],
+            'MV':[3.202778,73.22068],
+            'MW':[-13.254308,34.301525],
+            'MX':[23.634501,-102.552784],
+            'MY':[4.210484,101.975766],
+            'MZ':[-18.665695,35.529562],
+            'NA':[-22.95764,18.49041],
+            'NC':[-20.904305,165.618042],
+            'NE':[17.607789,8.081666],
+            'NF':[-29.040835,167.954712],
+            'NG':[9.081999,8.675277],
+            'NI':[12.865416,-85.207229],
+            'NL':[52.132633,5.291266],
+            'NO':[60.472024,8.468946],
+            'NP':[28.394857,84.124008],
+            'NR':[-0.522778,166.931503],
+            'NU':[-19.054445,-169.867233],
+            'NZ':[-40.900557,174.885971],
+            'OM':[21.512583,55.923255],
+            'PA':[8.537981,-80.782127],
+            'PE':[-9.189967,-75.015152],
+            'PF':[-17.679742,-149.406843],
+            'PG':[-6.314993,143.95555],
+            'PH':[12.879721,121.774017],
+            'PK':[30.375321,69.345116],
+            'PL':[51.919438,19.145136],
+            'PM':[46.941936,-56.27111],
+            'PN':[-24.703615,-127.439308],
+            'PR':[18.220833,-66.590149],
+            'PS':[31.952162,35.233154],
+            'PT':[39.399872,-8.224454],
+            'PW':[7.51498,134.58252],
+            'PY':[-23.442503,-58.443832],
+            'QA':[25.354826,51.183884],
+            'RE':[-21.115141,55.536384],
+            'RO':[45.943161,24.96676],
+            'RS':[44.016521,21.005859],
+            'RU':[61.52401,105.318756],
+            'RW':[-1.940278,29.873888],
+            'SA':[23.885942,45.079162],
+            'SB':[-9.64571,160.156194],
+            'SC':[-4.679574,55.491977],
+            'SD':[12.862807,30.217636],
+            'SE':[60.128161,18.643501],
+            'SG':[1.352083,103.819836],
+            'SH':[-24.143474,-10.030696],
+            'SI':[46.151241,14.995463],
+            'SJ':[77.553604,23.670272],
+            'SK':[48.669026,19.699024],
+            'SL':[8.460555,-11.779889],
+            'SM':[43.94236,12.457777],
+            'SN':[14.497401,-14.452362],
+            'SO':[5.152149,46.199616],
+            'SR':[3.919305,-56.027783],
+            'ST':[0.18636,6.613081],
+            'SV':[13.794185,-88.89653],
+            'SY':[34.802075,38.996815],
+            'SZ':[-26.522503,31.465866],
+            'TC':[21.694025,-71.797928],
+            'TD':[15.454166,18.732207],
+            'TF':[-49.280366,69.348557],
+            'TG':[8.619543,0.824782],
+            'TH':[15.870032,100.992541],
+            'TJ':[38.861034,71.276093],
+            'TK':[-8.967363,-171.855881],
+            'TL':[-8.874217,125.727539],
+            'TM':[38.969719,59.556278],
+            'TN':[33.886917,9.537499],
+            'TO':[-21.178986,-175.198242],
+            'TR':[38.963745,35.243322],
+            'TT':[10.691803,-61.222503],
+            'TV':[-7.109535,177.64933],
+            'TW':[23.69781,120.960515],
+            'TZ':[-6.369028,34.888822],
+            'UA':[48.379433,31.16558],
+            'UG':[1.373333,32.290275],
+            'US':[37.09024,-95.712891],
+            'UY':[-32.522779,-55.765835],
+            'UZ':[41.377491,64.585262],
+            'VA':[41.902916,12.453389],
+            'VC':[12.984305,-61.287228],
+            'VE':[6.42375,-66.58973],
+            'VG':[18.420695,-64.639968],
+            'VI':[18.335765,-64.896335],
+            'VN':[14.058324,108.277199],
+            'VU':[-15.376706,166.959158],
+            'WF':[-13.768752,-177.156097],
+            'WS':[-13.759029,-172.104629],
+            'XK':[42.602636,20.902977],
+            'YE':[15.552727,48.516388],
+            'YT':[-12.8275,45.166244],
+            'ZA':[-30.559482,22.937506],
+            'ZM':[-13.133897,27.849332],
+            'ZW':[-19.015438,29.154857]};
+        var mymap = L.map('mapid', {
+            center: country_locations['TZ'],
+            zoom: 4
+        });
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+        }).addTo(mymap);
+
+        console.log('Location:')
+        console.log(country_locations.TZ)
+
+                        let marker_aas = L.marker([-4.006790, 36.864770]).addTo(mymap);
+        marker_aas.bindPopup('<a href="/languages/aas">Aasáx</a>');
+                                let marker_acx = L.marker([23.250000, 58.500000]).addTo(mymap);
+        marker_acx.bindPopup('<a href="/languages/acx">Omani Arabic</a>');
+                                                let marker_asa = L.marker([-4.179780, 37.832260]).addTo(mymap);
+        marker_asa.bindPopup('<a href="/languages/asa">Asu (Tanzania)</a>');
+                                let marker_bdp = L.marker([-6.220820, 30.592550]).addTo(mymap);
+        marker_bdp.bindPopup('<a href="/languages/bdp">Bende</a>');
+                                let marker_bds = L.marker([-5.213690, 35.962950]).addTo(mymap);
+        marker_bds.bindPopup('<a href="/languages/bds">Burunge</a>');
+                                let marker_bem = L.marker([-10.612245, 29.299260]).addTo(mymap);
+        marker_bem.bindPopup('<a href="/languages/bem">Bemba (Zambia)</a>');
+                                let marker_bez = L.marker([-9.266710, 35.036430]).addTo(mymap);
+        marker_bez.bindPopup('<a href="/languages/bez">Bena (Tanzania)</a>');
+                                let marker_bmb = L.marker([-4.490575, 29.050690]).addTo(mymap);
+        marker_bmb.bindPopup('<a href="/languages/bmb">Bembe</a>');
+                                let marker_bou = L.marker([-5.107490, 38.507910]).addTo(mymap);
+        marker_bou.bindPopup('<a href="/languages/bou">Bondei</a>');
+                                let marker_ccl = L.marker([-3.139045, 38.621690]).addTo(mymap);
+        marker_ccl.bindPopup('<a href="/languages/ccl">Cutchi-Swahili</a>');
+                                let marker_cmn = L.marker([40.020884, 116.228026]).addTo(mymap);
+        marker_cmn.bindPopup('<a href="/languages/cmn">Mandarin Chinese</a>');
+                                let marker_cwa = L.marker([-1.712400, 34.392300]).addTo(mymap);
+        marker_cwa.bindPopup('<a href="/languages/cwa">Kabwa</a>');
+                                let marker_cwe = L.marker([-6.506660, 38.444850]).addTo(mymap);
+        marker_cwe.bindPopup('<a href="/languages/cwe">Kwere</a>');
+                                let marker_dav = L.marker([-3.793470, 38.572540]).addTo(mymap);
+        marker_dav.bindPopup('<a href="/languages/dav">Taita</a>');
+                                let marker_deu = L.marker([48.648954, 12.467623]).addTo(mymap);
+        marker_deu.bindPopup('<a href="/languages/deu">German</a>');
+                                let marker_dhs = L.marker([-4.812090, 38.818010]).addTo(mymap);
+        marker_dhs.bindPopup('<a href="/languages/dhs">Dhaiso</a>');
+                                let marker_dig = L.marker([-4.621010, 39.175200]).addTo(mymap);
+        marker_dig.bindPopup('<a href="/languages/dig">Digo</a>');
+                                let marker_dne = L.marker([-10.420320, 36.010530]).addTo(mymap);
+        marker_dne.bindPopup('<a href="/languages/dne">Ndendeule</a>');
+                                let marker_doe = L.marker([-6.258440, 38.490220]).addTo(mymap);
+        marker_doe.bindPopup('<a href="/languages/doe">Doe</a>');
+                                let marker_ell = L.marker([42.322386, 24.869938]).addTo(mymap);
+        marker_ell.bindPopup('<a href="/languages/ell">Modern Greek (1453-)</a>');
+                                let marker_eng = L.marker([53.000000, -1.000000]).addTo(mymap);
+        marker_eng.bindPopup('<a href="/languages/eng">English</a>');
+                                let marker_fip = L.marker([-7.889630, 31.344150]).addTo(mymap);
+        marker_fip.bindPopup('<a href="/languages/fip">Fipa</a>');
+                                let marker_fra = L.marker([48.000000, 2.000000]).addTo(mymap);
+        marker_fra.bindPopup('<a href="/languages/fra">French</a>');
+                                let marker_gmx = L.marker([-9.234980, 33.982550]).addTo(mymap);
+        marker_gmx.bindPopup('<a href="/languages/gmx">Magoma</a>');
+                                let marker_gog = L.marker([-6.359510, 35.480660]).addTo(mymap);
+        marker_gog.bindPopup('<a href="/languages/gog">Gogo</a>');
+                                let marker_gow = L.marker([-4.235750, 35.799620]).addTo(mymap);
+        marker_gow.bindPopup('<a href="/languages/gow">Gorowa</a>');
+                                let marker_guj = L.marker([22.687012, 71.096191]).addTo(mymap);
+        marker_guj.bindPopup('<a href="/languages/guj">Gujarati</a>');
+                                let marker_guz = L.marker([-0.788720, 34.767510]).addTo(mymap);
+        marker_guz.bindPopup('<a href="/languages/guz">Gusii</a>');
+                                let marker_gwe = L.marker([-3.684070, 37.682730]).addTo(mymap);
+        marker_gwe.bindPopup('<a href="/languages/gwe">Gweno</a>');
+                                let marker_han = L.marker([-2.523470, 30.707390]).addTo(mymap);
+        marker_han.bindPopup('<a href="/languages/han">Hangaza</a>');
+                                let marker_haq = L.marker([-3.778730, 30.489430]).addTo(mymap);
+        marker_haq.bindPopup('<a href="/languages/haq">Ha</a>');
+                                let marker_hay = L.marker([-1.708780, 31.484600]).addTo(mymap);
+        marker_hay.bindPopup('<a href="/languages/hay">Haya</a>');
+                                let marker_heh = L.marker([-7.715720, 35.725470]).addTo(mymap);
+        marker_heh.bindPopup('<a href="/languages/heh">Hehe</a>');
+                                let marker_hin = L.marker([25.000000, 77.000000]).addTo(mymap);
+        marker_hin.bindPopup('<a href="/languages/hin">Hindi</a>');
+                                let marker_hka = L.marker([-3.514120, 37.575860]).addTo(mymap);
+        marker_hka.bindPopup('<a href="/languages/hka">Kahe</a>');
+                                let marker_hts = L.marker([-3.831150, 35.045830]).addTo(mymap);
+        marker_hts.bindPopup('<a href="/languages/hts">Hadza</a>');
+                                let marker_ikz = L.marker([-1.991500, 34.358930]).addTo(mymap);
+        marker_ikz.bindPopup('<a href="/languages/ikz">Ikizu</a>');
+                                let marker_irk = L.marker([-4.199480, 35.293930]).addTo(mymap);
+        marker_irk.bindPopup('<a href="/languages/irk">Iraqw</a>');
+                                let marker_isn = L.marker([-3.999910, 34.846000]).addTo(mymap);
+        marker_isn.bindPopup('<a href="/languages/isn">Isanzu</a>');
+                                let marker_jit = L.marker([-1.626810, 33.914130]).addTo(mymap);
+        marker_jit.bindPopup('<a href="/languages/jit">Jita</a>');
+                                let marker_jmc = L.marker([-3.293850, 37.070330]).addTo(mymap);
+        marker_jmc.bindPopup('<a href="/languages/jmc">Machame</a>');
+                                let marker_job = L.marker([-3.457870, 28.997840]).addTo(mymap);
+        marker_job.bindPopup('<a href="/languages/job">Joba</a>');
+                                let marker_kam = L.marker([-1.608270, 37.953190]).addTo(mymap);
+        marker_kam.bindPopup('<a href="/languages/kam">Kamba (Kenya)</a>');
+                                let marker_kck = L.marker([-21.288690, 27.400970]).addTo(mymap);
+        marker_kck.bindPopup('<a href="/languages/kck">Kalanga</a>');
+                                let marker_kcu = L.marker([-6.710750, 37.980030]).addTo(mymap);
+        marker_kcu.bindPopup('<a href="/languages/kcu">Kami (Tanzania)</a>');
+                                let marker_kcz = L.marker([-6.515030, 32.180280]).addTo(mymap);
+        marker_kcz.bindPopup('<a href="/languages/kcz">Konongo</a>');
+                                let marker_kdc = L.marker([-7.237890, 37.862250]).addTo(mymap);
+        marker_kdc.bindPopup('<a href="/languages/kdc">Kutu</a>');
+                                let marker_kde = L.marker([-10.990575, 39.513310]).addTo(mymap);
+        marker_kde.bindPopup('<a href="/languages/kde">Makonde</a>');
+                                let marker_ked = L.marker([-2.093150, 33.532590]).addTo(mymap);
+        marker_ked.bindPopup('<a href="/languages/ked">Kerewe</a>');
+                                let marker_kfr = L.marker([23.830000, 69.000000]).addTo(mymap);
+        marker_kfr.bindPopup('<a href="/languages/kfr">Kachhi</a>');
+                                let marker_kik = L.marker([-0.290050, 36.719010]).addTo(mymap);
+        marker_kik.bindPopup('<a href="/languages/kik">Kikuyu</a>');
+                                let marker_kin = L.marker([-1.567707, 29.644133]).addTo(mymap);
+        marker_kin.bindPopup('<a href="/languages/kin">Kinyarwanda</a>');
+                                let marker_kiv = L.marker([-7.230230, 33.644510]).addTo(mymap);
+        marker_kiv.bindPopup('<a href="/languages/kiv">Kimbu</a>');
+                                let marker_kiz = L.marker([-9.930000, 34.482540]).addTo(mymap);
+        marker_kiz.bindPopup('<a href="/languages/kiz">Kisi</a>');
+                                let marker_kki = L.marker([-6.382040, 37.053410]).addTo(mymap);
+        marker_kki.bindPopup('<a href="/languages/kki">Kagulu</a>');
+                                let marker_kqh = L.marker([-8.541100, 35.675100]).addTo(mymap);
+        marker_kqh.bindPopup('<a href="/languages/kqh">Kisankasa</a>');
+                                let marker_ksb = L.marker([-8.500000, 34.170000]).addTo(mymap);
+        marker_ksb.bindPopup('<a href="/languages/ksb">Shambala</a>');
+                                let marker_kuj = L.marker([-1.506365, 34.504925]).addTo(mymap);
+        marker_kuj.bindPopup('<a href="/languages/kuj">Kuria</a>');
+                                let marker_kya = L.marker([-1.807370, 33.710010]).addTo(mymap);
+        marker_kya.bindPopup('<a href="/languages/kya">Kwaya</a>');
+                                let marker_lag = L.marker([-4.714130, 35.951740]).addTo(mymap);
+        marker_lag.bindPopup('<a href="/languages/lag">Langi</a>');
+                                let marker_lai = L.marker([-9.493720, 33.158520]).addTo(mymap);
+        marker_lai.bindPopup('<a href="/languages/lai">Lambya</a>');
+                                let marker_lug = L.marker([0.668840, 32.151530]).addTo(mymap);
+        marker_lug.bindPopup('<a href="/languages/lug">Ganda</a>');
+                                let marker_luo = L.marker([-0.932960, 34.489600]).addTo(mymap);
+        marker_luo.bindPopup('<a href="/languages/luo">Luo (Kenya and Tanzania)</a>');
+                                let marker_mas = L.marker([-3.141895, 36.457340]).addTo(mymap);
+        marker_mas.bindPopup('<a href="/languages/mas">Masai</a>');
+                                let marker_mgh = L.marker([-11.955285, 38.687390]).addTo(mymap);
+        marker_mgh.bindPopup('<a href="/languages/mgh">Makhuwa-Meetto</a>');
+                                let marker_mgq = L.marker([-9.166190, 33.338950]).addTo(mymap);
+        marker_mgq.bindPopup('<a href="/languages/mgq">Malila</a>');
+                                let marker_mgr = L.marker([-8.868170, 31.226870]).addTo(mymap);
+        marker_mgr.bindPopup('<a href="/languages/mgr">Mambwe-Lungu</a>');
+                                let marker_mgs = L.marker([-10.399150, 34.742380]).addTo(mymap);
+        marker_mgs.bindPopup('<a href="/languages/mgs">Manda (Tanzania)</a>');
+                                let marker_mgv = L.marker([-11.554040, 35.005600]).addTo(mymap);
+        marker_mgv.bindPopup('<a href="/languages/mgv">Matengo</a>');
+                                let marker_mgw = L.marker([-8.537340, 39.040910]).addTo(mymap);
+        marker_mgw.bindPopup('<a href="/languages/mgw">Matumbi</a>');
+                                let marker_mgy = L.marker([-8.196610, 36.536200]).addTo(mymap);
+        marker_mgy.bindPopup('<a href="/languages/mgy">Mbunga</a>');
+                                let marker_mgz = L.marker([-3.757630, 35.813290]).addTo(mymap);
+        marker_mgz.bindPopup('<a href="/languages/mgz">Mbugwe</a>');
+                                let marker_mhd = L.marker([-4.728630, 38.351910]).addTo(mymap);
+        marker_mhd.bindPopup('<a href="/languages/mhd">Mbugu</a>');
+                                let marker_mjh = L.marker([-11.330420, 34.895920]).addTo(mymap);
+        marker_mjh.bindPopup('<a href="/languages/mjh">Mwera (Nyasa)</a>');
+                                let marker_mpa = L.marker([-11.137670, 34.712690]).addTo(mymap);
+        marker_mpa.bindPopup('<a href="/languages/mpa">Mpoto</a>');
+                                let marker_mvw = L.marker([-9.371010, 39.426810]).addTo(mymap);
+        marker_mvw.bindPopup('<a href="/languages/mvw">Machinga</a>');
+                                let marker_mwe = L.marker([-9.756390, 38.876220]).addTo(mymap);
+        marker_mwe.bindPopup('<a href="/languages/mwe">Mwera (Chimwera)</a>');
+                                let marker_mwn = L.marker([-9.112615, 32.316340]).addTo(mymap);
+        marker_mwn.bindPopup('<a href="/languages/mwn">Nyamwanga</a>');
+                                let marker_ndg = L.marker([-7.546280, 38.958000]).addTo(mymap);
+        marker_ndg.bindPopup('<a href="/languages/ndg">Ndengereko</a>');
+                                let marker_ndh = L.marker([-9.889480, 33.611795]).addTo(mymap);
+        marker_ndh.bindPopup('<a href="/languages/ndh">Ndali</a>');
+                                let marker_ndj = L.marker([-8.404850, 36.027060]).addTo(mymap);
+        marker_ndj.bindPopup('<a href="/languages/ndj">Ndamba</a>');
+                                let marker_ngo = L.marker([-11.779415, 37.411750]).addTo(mymap);
+        marker_ngo.bindPopup('<a href="/languages/ngo">Ngoni</a>');
+                                let marker_ngp = L.marker([-5.797340, 37.682270]).addTo(mymap);
+        marker_ngp.bindPopup('<a href="/languages/ngp">Ngulu</a>');
+                                let marker_ngq = L.marker([-1.848500, 34.617260]).addTo(mymap);
+        marker_ngq.bindPopup('<a href="/languages/ngq">Ngurimi</a>');
+                                let marker_nih = L.marker([-9.447200, 32.905690]).addTo(mymap);
+        marker_nih.bindPopup('<a href="/languages/nih">Nyiha (Tanzania)</a>');
+                                let marker_nim = L.marker([-4.500020, 34.306750]).addTo(mymap);
+        marker_nim.bindPopup('<a href="/languages/nim">Nilamba</a>');
+                                let marker_njd = L.marker([-10.558380, 38.125290]).addTo(mymap);
+        marker_njd.bindPopup('<a href="/languages/njd">Ndonde Hamba</a>');
+                                                let marker_nnq = L.marker([-9.781450, 37.983160]).addTo(mymap);
+        marker_nnq.bindPopup('<a href="/languages/nnq">Ngindo</a>');
+                                let marker_now = L.marker([-1.609600, 30.915550]).addTo(mymap);
+        marker_now.bindPopup('<a href="/languages/now">Nyambo</a>');
+                                let marker_nsg = L.marker([-2.977160, 37.528010]).addTo(mymap);
+        marker_nsg.bindPopup('<a href="/languages/nsg">Ngasa</a>');
+                                let marker_ntk = L.marker([-1.949890, 34.536140]).addTo(mymap);
+        marker_ntk.bindPopup('<a href="/languages/ntk">Ikoma-Nata-Isenye</a>');
+                                let marker_nxi = L.marker([-11.256940, 36.311560]).addTo(mymap);
+        marker_nxi.bindPopup('<a href="/languages/nxi">Nindi</a>');
+                                let marker_nya = L.marker([-14.804720, 32.810775]).addTo(mymap);
+        marker_nya.bindPopup('<a href="/languages/nya">Nyanja</a>');
+                                let marker_nym = L.marker([-5.085590, 32.944520]).addTo(mymap);
+        marker_nym.bindPopup('<a href="/languages/nym">Nyamwezi</a>');
+                                let marker_nyn = L.marker([-0.463640, 30.548030]).addTo(mymap);
+        marker_nyn.bindPopup('<a href="/languages/nyn">Nyankole</a>');
+                                let marker_nyy = L.marker([-9.710180, 33.776340]).addTo(mymap);
+        marker_nyy.bindPopup('<a href="/languages/nyy">Nyakyusa-Ngonde</a>');
+                                let marker_oki = L.marker([-2.780485, 36.597660]).addTo(mymap);
+        marker_oki.bindPopup('<a href="/languages/oki">Okiek</a>');
+                                let marker_old = L.marker([-3.337430, 37.335680]).addTo(mymap);
+        marker_old.bindPopup('<a href="/languages/old">Mochi</a>');
+                                let marker_pan = L.marker([30.036762, 75.670166]).addTo(mymap);
+        marker_pan.bindPopup('<a href="/languages/pan">Panjabi</a>');
+                                let marker_pbr = L.marker([-9.967820, 34.803860]).addTo(mymap);
+        marker_pbr.bindPopup('<a href="/languages/pbr">Pangwa</a>');
+                                let marker_piw = L.marker([-6.813580, 31.428860]).addTo(mymap);
+        marker_piw.bindPopup('<a href="/languages/piw">Pimbwe</a>');
+                                let marker_por = L.marker([42.034120, -4.188150]).addTo(mymap);
+        marker_por.bindPopup('<a href="/languages/por">Portuguese</a>');
+                                let marker_poy = L.marker([-8.722830, 36.414850]).addTo(mymap);
+        marker_poy.bindPopup('<a href="/languages/poy">Pogolo</a>');
+                                let marker_rag = L.marker([0.094870, 34.728950]).addTo(mymap);
+        marker_rag.bindPopup('<a href="/languages/rag">Logooli</a>');
+                                let marker_reg = L.marker([-1.835110, 33.048830]).addTo(mymap);
+        marker_reg.bindPopup('<a href="/languages/reg">Kara (Tanzania)</a>');
+                                let marker_rim = L.marker([-5.122630, 34.665670]).addTo(mymap);
+        marker_rim.bindPopup('<a href="/languages/rim">Nyaturu</a>');
+                                let marker_rnw = L.marker([-7.249590, 31.761410]).addTo(mymap);
+        marker_rnw.bindPopup('<a href="/languages/rnw">Rungwa</a>');
+                                let marker_rof = L.marker([-3.077720, 37.538190]).addTo(mymap);
+        marker_rof.bindPopup('<a href="/languages/rof">Rombo</a>');
+                                let marker_ruf = L.marker([-6.868280, 37.555690]).addTo(mymap);
+        marker_ruf.bindPopup('<a href="/languages/ruf">Luguru</a>');
+                                let marker_rui = L.marker([-7.990590, 38.713260]).addTo(mymap);
+        marker_rui.bindPopup('<a href="/languages/rui">Rufiji</a>');
+                                let marker_run = L.marker([-1.441737, 31.319093]).addTo(mymap);
+        marker_run.bindPopup('<a href="/languages/run">Rundi</a>');
+                                let marker_rwk = L.marker([-3.428620, 36.768550]).addTo(mymap);
+        marker_rwk.bindPopup('<a href="/languages/rwk">Rwa</a>');
+                                let marker_sad = L.marker([-5.269180, 35.480810]).addTo(mymap);
+        marker_sad.bindPopup('<a href="/languages/sad">Sandawe</a>');
+                                let marker_sbk = L.marker([-8.549360, 33.476620]).addTo(mymap);
+        marker_sbk.bindPopup('<a href="/languages/sbk">Safwa</a>');
+                                let marker_sbm = L.marker([-6.985370, 36.915330]).addTo(mymap);
+        marker_sbm.bindPopup('<a href="/languages/sbm">Sagala</a>');
+                                let marker_sbp = L.marker([-6.300000, 39.350000]).addTo(mymap);
+        marker_sbp.bindPopup('<a href="/languages/sbp">Sangu (Tanzania)</a>');
+                                let marker_seg = L.marker([-5.006590, 39.122490]).addTo(mymap);
+        marker_seg.bindPopup('<a href="/languages/seg">Segeju</a>');
+                                let marker_snq = L.marker([-1.526940, 11.909840]).addTo(mymap);
+        marker_snq.bindPopup('<a href="/languages/snq">Sangu (Gabon)</a>');
+                                let marker_som = L.marker([4.778704, 45.152856]).addTo(mymap);
+        marker_som.bindPopup('<a href="/languages/som">Somali</a>');
+                                let marker_soz = L.marker([-2.193030, 35.803450]).addTo(mymap);
+        marker_soz.bindPopup('<a href="/languages/soz">Temi</a>');
+                                let marker_ssc = L.marker([-0.957190, 34.103295]).addTo(mymap);
+        marker_ssc.bindPopup('<a href="/languages/ssc">Suba-Simbiti</a>');
+                                let marker_suj = L.marker([-2.976630, 31.068090]).addTo(mymap);
+        marker_suj.bindPopup('<a href="/languages/suj">Shubi</a>');
+                                let marker_suk = L.marker([-3.160820, 32.876530]).addTo(mymap);
+        marker_suk.bindPopup('<a href="/languages/suk">Sukuma</a>');
+                                let marker_suw = L.marker([-3.473350, 31.945680]).addTo(mymap);
+        marker_suw.bindPopup('<a href="/languages/suw">Sumbwa</a>');
+                                                let marker_swh = L.marker([-8.256053, 37.624033]).addTo(mymap);
+        marker_swh.bindPopup('<a href="/languages/swh">Swahili (Coastal)</a>');
+                                let marker_tcc = L.marker([-4.413100, 35.232070]).addTo(mymap);
+        marker_tcc.bindPopup('<a href="/languages/tcc">Datooga</a>');
+                                let marker_tny = L.marker([-6.430510, 30.080740]).addTo(mymap);
+        marker_tny.bindPopup('<a href="/languages/tny">Tongwe</a>');
+                                let marker_tvs = L.marker([-3.418220, 37.706070]).addTo(mymap);
+        marker_tvs.bindPopup('<a href="/languages/tvs">Taveta</a>');
+                                let marker_tza = L.marker([-6.824310, 39.126970]).addTo(mymap);
+        marker_tza.bindPopup('<a href="/languages/tza">Tanzanian Sign Language</a>');
+                                let marker_vid = L.marker([-7.526740, 36.931620]).addTo(mymap);
+        marker_vid.bindPopup('<a href="/languages/vid">Vidunda</a>');
+                                let marker_vin = L.marker([-4.993120, 30.569890]).addTo(mymap);
+        marker_vin.bindPopup('<a href="/languages/vin">Vinza</a>');
+                                let marker_vun = L.marker([-3.425310, 37.584740]).addTo(mymap);
+        marker_vun.bindPopup('<a href="/languages/vun">Vunjo</a>');
+                                let marker_wbh = L.marker([-8.345220, 32.437530]).addTo(mymap);
+        marker_wbh.bindPopup('<a href="/languages/wbh">Wanda</a>');
+                                let marker_wbi = L.marker([-9.006830, 34.075700]).addTo(mymap);
+        marker_wbi.bindPopup('<a href="/languages/wbi">Vwanji</a>');
+                                let marker_wbj = L.marker([-4.641480, 35.723130]).addTo(mymap);
+        marker_wbj.bindPopup('<a href="/languages/wbj">Alagwa</a>');
+                                let marker_wka = L.marker([-4.007430, 35.182790]).addTo(mymap);
+        marker_wka.bindPopup('<a href="/languages/wka">Kw&#039;adza</a>');
+                                let marker_wun = L.marker([-8.325870, 32.880100]).addTo(mymap);
+        marker_wun.bindPopup('<a href="/languages/wun">Bungu</a>');
+                                let marker_xnj = L.marker([-12.920000, 38.890000]).addTo(mymap);
+        marker_xnj.bindPopup('<a href="/languages/xnj">Chingoni</a>');
+                                let marker_xog = L.marker([0.404560, 33.394200]).addTo(mymap);
+        marker_xog.bindPopup('<a href="/languages/xog">Soga</a>');
+                                let marker_xsj = L.marker([-2.933870, 31.359450]).addTo(mymap);
+        marker_xsj.bindPopup('<a href="/languages/xsj">Subi</a>');
+                                let marker_yao = L.marker([-13.611870, 35.238703]).addTo(mymap);
+        marker_yao.bindPopup('<a href="/languages/yao">Yao</a>');
+                                let marker_ymk = L.marker([-10.467300, 40.027370]).addTo(mymap);
+        marker_ymk.bindPopup('<a href="/languages/ymk">Makwe</a>');
+                                let marker_yue = L.marker([23.000000, 113.000000]).addTo(mymap);
+        marker_yue.bindPopup('<a href="/languages/yue">Yue Chinese</a>');
+                                let marker_yul = L.marker([8.041243, 23.616553]).addTo(mymap);
+        marker_yul.bindPopup('<a href="/languages/yul">Yulu</a>');
+                                let marker_zaj = L.marker([-6.877050, 38.925780]).addTo(mymap);
+        marker_zaj.bindPopup('<a href="/languages/zaj">Zaramo</a>');
+                                let marker_zak = L.marker([-2.263670, 34.054190]).addTo(mymap);
+        marker_zak.bindPopup('<a href="/languages/zak">Zanaki</a>');
+                                let marker_zga = L.marker([-9.358680, 34.232080]).addTo(mymap);
+        marker_zga.bindPopup('<a href="/languages/zga">Kinga</a>');
+                                let marker_zin = L.marker([-2.641320, 32.175470]).addTo(mymap);
+        marker_zin.bindPopup('<a href="/languages/zin">Zinza</a>');
+                                let marker_ziw = L.marker([-5.618640, 38.411380]).addTo(mymap);
+        marker_ziw.bindPopup('<a href="/languages/ziw">Zigula</a>');
+                
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

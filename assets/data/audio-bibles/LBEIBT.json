@@ -1,0 +1,264 @@
+{
+    "id": "LBEIBT",
+    "parent_bible_id": null,
+    "title": "Portions of the Bible in Lak",
+    "title_vernacular": "Библиядин Шикилар",
+    "description": null,
+    "description_vernacular": null,
+    "iso": "lbe",
+    "script": "Cyrl",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2012",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2016-10-12T17:43:01.000000Z",
+    "updated_at": "2020-10-12T17:43:01.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Matt",
+            "chapter_id": "1",
+            "path": "LBEIBTP1DA\/B01___01_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "2",
+            "path": "LBEIBTP1DA\/B01___02_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "3",
+            "path": "LBEIBTP1DA\/B01___03_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "4",
+            "path": "LBEIBTP1DA\/B01___04_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "5",
+            "path": "LBEIBTP1DA\/B01___05_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "6",
+            "path": "LBEIBTP1DA\/B01___06_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "7",
+            "path": "LBEIBTP1DA\/B01___07_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "8",
+            "path": "LBEIBTP1DA\/B01___08_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "9",
+            "path": "LBEIBTP1DA\/B01___09_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "10",
+            "path": "LBEIBTP1DA\/B01___10_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "11",
+            "path": "LBEIBTP1DA\/B01___11_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "12",
+            "path": "LBEIBTP1DA\/B01___12_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "13",
+            "path": "LBEIBTP1DA\/B01___13_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "14",
+            "path": "LBEIBTP1DA\/B01___14_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "15",
+            "path": "LBEIBTP1DA\/B01___15_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "16",
+            "path": "LBEIBTP1DA\/B01___16_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "17",
+            "path": "LBEIBTP1DA\/B01___17_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "18",
+            "path": "LBEIBTP1DA\/B01___18_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "19",
+            "path": "LBEIBTP1DA\/B01___19_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "20",
+            "path": "LBEIBTP1DA\/B01___20_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "21",
+            "path": "LBEIBTP1DA\/B01___21_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "22",
+            "path": "LBEIBTP1DA\/B01___22_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "23",
+            "path": "LBEIBTP1DA\/B01___23_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "24",
+            "path": "LBEIBTP1DA\/B01___24_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "25",
+            "path": "LBEIBTP1DA\/B01___25_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "26",
+            "path": "LBEIBTP1DA\/B01___26_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "27",
+            "path": "LBEIBTP1DA\/B01___27_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "28",
+            "path": "LBEIBTP1DA\/B01___28_Matthew_____LBEIBTP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5961,
+            "bible_id": "LBEIBT",
+            "equivalent_id": "LBEIBTP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

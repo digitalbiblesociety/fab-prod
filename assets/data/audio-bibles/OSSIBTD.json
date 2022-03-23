@@ -1,0 +1,219 @@
+{
+    "id": "OSSIBTD",
+    "parent_bible_id": null,
+    "title": "Gospel of John in the Digor Dialect",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "oss",
+    "script": "Cyrl",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2002",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2018-09-16T23:58:53.000000Z",
+    "updated_at": "2020-10-12T15:30:07.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "John",
+            "chapter_id": "1",
+            "path": "OSSODVP1DA\/B04___01_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "2",
+            "path": "OSSODVP1DA\/B04___02_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "3",
+            "path": "OSSODVP1DA\/B04___03_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "4",
+            "path": "OSSODVP1DA\/B04___04_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "5",
+            "path": "OSSODVP1DA\/B04___05_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "6",
+            "path": "OSSODVP1DA\/B04___06_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "7",
+            "path": "OSSODVP1DA\/B04___07_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "8",
+            "path": "OSSODVP1DA\/B04___08_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "9",
+            "path": "OSSODVP1DA\/B04___09_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "10",
+            "path": "OSSODVP1DA\/B04___10_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "11",
+            "path": "OSSODVP1DA\/B04___11_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "12",
+            "path": "OSSODVP1DA\/B04___12_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "13",
+            "path": "OSSODVP1DA\/B04___13_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "14",
+            "path": "OSSODVP1DA\/B04___14_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "15",
+            "path": "OSSODVP1DA\/B04___15_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "16",
+            "path": "OSSODVP1DA\/B04___16_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "17",
+            "path": "OSSODVP1DA\/B04___17_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "18",
+            "path": "OSSODVP1DA\/B04___18_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "19",
+            "path": "OSSODVP1DA\/B04___19_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "20",
+            "path": "OSSODVP1DA\/B04___20_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "21",
+            "path": "OSSODVP1DA\/B04___21_John________OSSODVP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6056,
+            "bible_id": "OSSIBTD",
+            "equivalent_id": "OSSODVP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 6057,
+            "bible_id": "OSSIBTD",
+            "equivalent_id": "OSSODVP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "id": "BZIWBT",
+    "parent_bible_id": null,
+    "title": "The New Testament in Bisu",
+    "title_vernacular": "จี่วีดม้าม้า พระคัมภีร์ อางซื่อ บี่ซู่ ต่าง",
+    "description": null,
+    "description_vernacular": null,
+    "iso": "bzi",
+    "script": "Thai",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2014",
+    "country_id": "TH",
+    "copyright": "© Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2016-10-12T17:38:09.000000Z",
+    "updated_at": "2020-10-12T17:38:09.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Ruth",
+            "chapter_id": "1",
+            "path": "BZIWYIP1DA\/A08___01_Ruth________BZIWYIP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "2",
+            "path": "BZIWYIP1DA\/A08___02_Ruth________BZIWYIP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "3",
+            "path": "BZIWYIP1DA\/A08___03_Ruth________BZIWYIP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "4",
+            "path": "BZIWYIP1DA\/A08___04_Ruth________BZIWYIP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5840,
+            "bible_id": "BZIWBT",
+            "equivalent_id": "BZIWYIP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 5841,
+            "bible_id": "BZIWBT",
+            "equivalent_id": "BZIWYIP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

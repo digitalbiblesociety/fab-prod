@@ -1,0 +1,816 @@
+{
+    "id": "NCLTBL",
+    "parent_bible_id": null,
+    "title": "Michoacán Nahuatl New Testament",
+    "title_vernacular": "Ilajtulisli Yancuic toTata Jesucristo",
+    "description": "New Testament in Nahuatl, Michoacán (MX:ncl:Nahuatl, Michoacán)",
+    "description_vernacular": "",
+    "iso": "ncl",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "1998",
+    "country_id": "MX",
+    "copyright": "Copyright © 1998 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0473-7",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2018-10-12T14:15:10.000000Z",
+    "updated_at": "2020-10-12T17:24:18.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Matt",
+            "chapter_id": "1",
+            "path": "NCLTBLP1DA\/B01___01_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "2",
+            "path": "NCLTBLP1DA\/B01___02_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "3",
+            "path": "NCLTBLP1DA\/B01___03_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "4",
+            "path": "NCLTBLP1DA\/B01___04_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "5",
+            "path": "NCLTBLP1DA\/B01___05_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "6",
+            "path": "NCLTBLP1DA\/B01___06_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "7",
+            "path": "NCLTBLP1DA\/B01___07_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "8",
+            "path": "NCLTBLP1DA\/B01___08_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "9",
+            "path": "NCLTBLP1DA\/B01___09_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "10",
+            "path": "NCLTBLP1DA\/B01___10_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "11",
+            "path": "NCLTBLP1DA\/B01___11_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "12",
+            "path": "NCLTBLP1DA\/B01___12_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "13",
+            "path": "NCLTBLP1DA\/B01___13_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "14",
+            "path": "NCLTBLP1DA\/B01___14_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "15",
+            "path": "NCLTBLP1DA\/B01___15_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "16",
+            "path": "NCLTBLP1DA\/B01___16_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "17",
+            "path": "NCLTBLP1DA\/B01___17_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "18",
+            "path": "NCLTBLP1DA\/B01___18_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "19",
+            "path": "NCLTBLP1DA\/B01___19_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "20",
+            "path": "NCLTBLP1DA\/B01___20_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "21",
+            "path": "NCLTBLP1DA\/B01___21_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "22",
+            "path": "NCLTBLP1DA\/B01___22_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "23",
+            "path": "NCLTBLP1DA\/B01___23_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "24",
+            "path": "NCLTBLP1DA\/B01___24_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "25",
+            "path": "NCLTBLP1DA\/B01___25_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "26",
+            "path": "NCLTBLP1DA\/B01___26_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "27",
+            "path": "NCLTBLP1DA\/B01___27_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "28",
+            "path": "NCLTBLP1DA\/B01___28_Matthew_____NCLTBLP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "1",
+            "path": "NCLTBLP1DA\/B02___01_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "2",
+            "path": "NCLTBLP1DA\/B02___02_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "3",
+            "path": "NCLTBLP1DA\/B02___03_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "4",
+            "path": "NCLTBLP1DA\/B02___04_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "5",
+            "path": "NCLTBLP1DA\/B02___05_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "6",
+            "path": "NCLTBLP1DA\/B02___06_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "7",
+            "path": "NCLTBLP1DA\/B02___07_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "8",
+            "path": "NCLTBLP1DA\/B02___08_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "9",
+            "path": "NCLTBLP1DA\/B02___09_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "10",
+            "path": "NCLTBLP1DA\/B02___10_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "11",
+            "path": "NCLTBLP1DA\/B02___11_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "12",
+            "path": "NCLTBLP1DA\/B02___12_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "13",
+            "path": "NCLTBLP1DA\/B02___13_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "14",
+            "path": "NCLTBLP1DA\/B02___14_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "15",
+            "path": "NCLTBLP1DA\/B02___15_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "16",
+            "path": "NCLTBLP1DA\/B02___16_Mark________NCLTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "1",
+            "path": "NCLTBLP1DA\/B04___01_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "2",
+            "path": "NCLTBLP1DA\/B04___02_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "3",
+            "path": "NCLTBLP1DA\/B04___03_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "4",
+            "path": "NCLTBLP1DA\/B04___04_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "5",
+            "path": "NCLTBLP1DA\/B04___05_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "6",
+            "path": "NCLTBLP1DA\/B04___06_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "7",
+            "path": "NCLTBLP1DA\/B04___07_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "8",
+            "path": "NCLTBLP1DA\/B04___08_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "9",
+            "path": "NCLTBLP1DA\/B04___09_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "10",
+            "path": "NCLTBLP1DA\/B04___10_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "11",
+            "path": "NCLTBLP1DA\/B04___11_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "12",
+            "path": "NCLTBLP1DA\/B04___12_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "13",
+            "path": "NCLTBLP1DA\/B04___13_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "14",
+            "path": "NCLTBLP1DA\/B04___14_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "15",
+            "path": "NCLTBLP1DA\/B04___15_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "16",
+            "path": "NCLTBLP1DA\/B04___16_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "17",
+            "path": "NCLTBLP1DA\/B04___17_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "18",
+            "path": "NCLTBLP1DA\/B04___18_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "19",
+            "path": "NCLTBLP1DA\/B04___19_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "20",
+            "path": "NCLTBLP1DA\/B04___20_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "21",
+            "path": "NCLTBLP1DA\/B04___21_John________NCLTBLP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "1",
+            "path": "NCLTBLP1DA\/B09___01_Galatians___NCLTBLP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "2",
+            "path": "NCLTBLP1DA\/B09___02_Galatians___NCLTBLP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "3",
+            "path": "NCLTBLP1DA\/B09___03_Galatians___NCLTBLP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "4",
+            "path": "NCLTBLP1DA\/B09___04_Galatians___NCLTBLP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "5",
+            "path": "NCLTBLP1DA\/B09___05_Galatians___NCLTBLP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "6",
+            "path": "NCLTBLP1DA\/B09___06_Galatians___NCLTBLP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "1",
+            "path": "NCLTBLP1DA\/B11___01_Philippians_NCLTBLP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "2",
+            "path": "NCLTBLP1DA\/B11___02_Philippians_NCLTBLP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "3",
+            "path": "NCLTBLP1DA\/B11___03_Philippians_NCLTBLP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "4",
+            "path": "NCLTBLP1DA\/B11___04_Philippians_NCLTBLP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "1",
+            "path": "NCLTBLP1DA\/B27___01_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "2",
+            "path": "NCLTBLP1DA\/B27___02_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "3",
+            "path": "NCLTBLP1DA\/B27___03_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "4",
+            "path": "NCLTBLP1DA\/B27___04_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "5",
+            "path": "NCLTBLP1DA\/B27___05_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "6",
+            "path": "NCLTBLP1DA\/B27___06_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "7",
+            "path": "NCLTBLP1DA\/B27___07_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "8",
+            "path": "NCLTBLP1DA\/B27___08_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "9",
+            "path": "NCLTBLP1DA\/B27___09_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "10",
+            "path": "NCLTBLP1DA\/B27___10_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "11",
+            "path": "NCLTBLP1DA\/B27___11_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "12",
+            "path": "NCLTBLP1DA\/B27___12_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "13",
+            "path": "NCLTBLP1DA\/B27___13_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "14",
+            "path": "NCLTBLP1DA\/B27___14_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "15",
+            "path": "NCLTBLP1DA\/B27___15_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "16",
+            "path": "NCLTBLP1DA\/B27___16_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "17",
+            "path": "NCLTBLP1DA\/B27___17_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "18",
+            "path": "NCLTBLP1DA\/B27___18_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "19",
+            "path": "NCLTBLP1DA\/B27___19_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "20",
+            "path": "NCLTBLP1DA\/B27___20_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "21",
+            "path": "NCLTBLP1DA\/B27___21_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "22",
+            "path": "NCLTBLP1DA\/B27___22_Revelation__NCLTBLP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6018,
+            "bible_id": "NCLTBL",
+            "equivalent_id": "NCLTBLP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-download   {text-align: right;margin-right:2em;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 9em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 2px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>Saudi Arabia | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/SA.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/sa_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Saudi Arabia
+                </h1>
+                <h2 itemprop="description"  >A country of  Asia</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/SA">Saudi Arabia Languages</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Maps | Info
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/SA/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/SA">
+                    <span itemprop="name">Saudi Arabia</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+
+            <div class="country-facts row">
+                <p><b>Title:</b> The Kingdom of Saudi Arabia </p><br>
+                <p><b>Population:</b> 34,783,757</p>
+                <p><b>Population Change:</b> 1.59</p>
+                <p><b>National Average Age:</b> 32</p>
+                <p><b>Urban Percentage:</b> 84</p>
+                <p><b>Christian Population:</b> 1,500,000</p>
+                <p><b>Christian Percentage:</b> 5</p>
+
+            </div>
+
+
+                        <div class="country-overview">
+                <p><b>Introduction:</b>
+                    Saudi Arabia is a desert country encompassing most of the Arabian Peninsula with Red Sea and Persian (Arabian) Gulf coastlines. Known as the birthplace of Islam it’s home to the religion’s 2 most sacred mosques: Masjid al-Haram in Mecca destination of the annual Hajj pilgrimage and Medina’s Masjid an-Nabawi burial site of the prophet Muhammad. Riyadh the capital is a skyscraper-filled metropolis.</p><br>
+                <p><b>Overview:</b>
+                    Saudi Arabia is the birthplace of Islam and home to Islam&#039;s two holiest shrines in Mecca and Medina. The king&#039;s official title is the Custodian of the Two Holy Mosques. The modern Saudi state was founded in 1932 by ABD AL-AZIZ bin Abd al-Rahman Al SAUD (Ibn Saud) after a 30-year campaign to unify most of the Arabian Peninsula. One of his male descendants rules the country today as required by the country&#039;s 1992 Basic Law. Following Iraq&#039;s invasion of Kuwait in 1990 Saudi Arabia accepted the Kuwaiti royal family and 400000 refugees while allowing Western and Arab troops to deploy on its soil for the liberation of Kuwait the following year. The continuing presence of foreign troops on Saudi soil after the liberation of Kuwait became a source of tension between the royal family and the public until all operational US troops left the country in 2003. Major terrorist attacks in May and November 2003 spurred a strong ongoing campaign against domestic terrorism and extremism. ++ From 2005 to 2015 King ABDALLAH incrementally modernized the Kingdom. Driven by personal ideology and political pragmatism he introduced a series of social and economic initiatives including expanding employment and social opportunities for women attracting foreign investment increasing the role of the private sector in the economy and discouraging businesses from hiring foreign workers. Saudi Arabia saw protests during the 2011 Arab Spring among Shia Muslims in the Eastern Province who protested primarily against the detention of political prisoners endemic discrimination and Bahraini and Saudi Government actions in Bahrain. Riyadh took a cautious but firm approach by arresting some protesters but releasing most of them quickly and by using its state-sponsored clerics to counter political and Islamist activism. In addition protests were met by a strong police presence with some arrests but not the level of bloodshed seen in protests elsewhere in the region. ++ The government held its first-ever elections in 2005 and 2011 when Saudis went to the polls to elect municipal councilors. In December 2015 women were allowed to vote and stand as candidates for the first time in municipal council elections with 21 women winning seats. King SALMAN bin Abd al-Aziz Al Saud ascended to the throne in 2015 and placed the first next-generation prince MUHAMMAD BIN NAIF bin Abd al-Aziz Al Saud in the line of succession as Crown Prince. He designated his son MUHAMMAD BIN SALMAN bin Abd al-Aziz Al Saud as the Deputy Crown Prince. In March 2015 Saudi Arabia led a coalition of 10 countries in a military campaign to restore the government of Yemen which had been ousted by Huthi forces allied with former president ALI ABDULLAH al-Salih. The war in Yemen has led to civilian casualties and shortages of basic supplies which has drawn considerable international criticism. In December 2015 Deputy Crown Prince MUHAMMAD BIN SALMAN announced Saudi Arabia would lead a 34-nation Islamic Coalition to fight terrorism. In January 2016 Saudi Arabia executed 47 people on charges of terrorism including Shia Muslim cleric NIMR al-Nimr. Iranian protesters overran Saudi diplomatic facilities in Iran to protest al-NIMR’s execution and the Saudi government responded by cutting off diplomatic ties with Iran.</p>
+            </div>
+                
+
+        </div>
+    </div>
+
+
+
+    <div class="medium-9">
+
+
+        <div  class="row">
+
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Government</h4>
+                    <div><a href="#gov" alt="Saudi Arabia gov Map" title="Saudi Arabia gov Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/SA-gov.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/SA-gov.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Land</h4>
+                    <div><a href="#land" alt="Saudi Arabia land Map" title="Saudi Arabia land Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/SA-land.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/SA-land.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Language Map</h4>
+                    <div><a href="#language" alt="Saudi Arabia language Map" title="Saudi Arabia language Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/SA-lang.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/SA-lang.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Location</h4>
+                    <div><a href="#location" alt="Saudi Arabia location Map" title="Saudi Arabia location Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/SA-location.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/SA-location.png" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Transportation</h4>
+                    <div><a href="#trans" alt="Saudi Arabia trans Map" title="Saudi Arabia trans Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/SA-trans.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/SA-trans.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                    </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+<div class="map-modals">
+
+            <div id="gov" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/SA-gov.jpg' />
+    </div>
+</div>            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/SA-land.jpg' />
+    </div>
+</div>            <div id="language" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/SA-lang.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/SA-location.png' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/SA-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+
+
+                                    let marker_acq = L.marker([13.655470, 45.641070]).addTo(mymap);
+                    marker_acq.bindPopup('<a href="/languages/acq">Ta&#039;izzi-Adeni Arabic</a>').openPopup();
+                                                let marker_acw = L.marker([22.834600, 38.923710]).addTo(mymap);
+                    marker_acw.bindPopup('<a href="/languages/acw">Hijazi Arabic</a>').openPopup();
+                                                let marker_acx = L.marker([23.250000, 58.500000]).addTo(mymap);
+                    marker_acx.bindPopup('<a href="/languages/acx">Omani Arabic</a>').openPopup();
+                                                let marker_afb = L.marker([30.170000, 47.500000]).addTo(mymap);
+                    marker_afb.bindPopup('<a href="/languages/afb">Gulf Arabic</a>').openPopup();
+                                                let marker_ajp = L.marker([31.560116, 38.083716]).addTo(mymap);
+                    marker_ajp.bindPopup('<a href="/languages/ajp">South Levantine Arabic</a>').openPopup();
+                                                let marker_amh = L.marker([11.708182, 39.543456]).addTo(mymap);
+                    marker_amh.bindPopup('<a href="/languages/amh">Amharic</a>').openPopup();
+                                                let marker_apc = L.marker([34.170933, 36.046843]).addTo(mymap);
+                    marker_apc.bindPopup('<a href="/languages/apc">North Levantine Arabic</a>').openPopup();
+                                                let marker_apd = L.marker([17.802113, 33.317930]).addTo(mymap);
+                    marker_apd.bindPopup('<a href="/languages/apd">Sudanese Arabic</a>').openPopup();
+                                                                                        let marker_ars = L.marker([30.337142, 42.177266]).addTo(mymap);
+                    marker_ars.bindPopup('<a href="/languages/ars">Najdi Arabic</a>').openPopup();
+                                                let marker_arz = L.marker([31.000000, 31.000000]).addTo(mymap);
+                    marker_arz.bindPopup('<a href="/languages/arz">Egyptian Arabic</a>').openPopup();
+                                                let marker_ayn = L.marker([15.655170, 44.841180]).addTo(mymap);
+                    marker_ayn.bindPopup('<a href="/languages/ayn">Sanaani Arabic</a>').openPopup();
+                                                let marker_bcc = L.marker([25.108103, 59.735338]).addTo(mymap);
+                    marker_bcc.bindPopup('<a href="/languages/bcc">Southern Balochi</a>').openPopup();
+                                                let marker_ben = L.marker([24.000000, 90.000000]).addTo(mymap);
+                    marker_ben.bindPopup('<a href="/languages/ben">Bengali</a>').openPopup();
+                                                let marker_cmn = L.marker([40.020884, 116.228026]).addTo(mymap);
+                    marker_cmn.bindPopup('<a href="/languages/cmn">Mandarin Chinese</a>').openPopup();
+                                                let marker_ell = L.marker([42.322386, 24.869938]).addTo(mymap);
+                    marker_ell.bindPopup('<a href="/languages/ell">Modern Greek (1453-)</a>').openPopup();
+                                                let marker_eng = L.marker([53.000000, -1.000000]).addTo(mymap);
+                    marker_eng.bindPopup('<a href="/languages/eng">English</a>').openPopup();
+                                                                    let marker_fra = L.marker([48.000000, 2.000000]).addTo(mymap);
+                    marker_fra.bindPopup('<a href="/languages/fra">French</a>').openPopup();
+                                                let marker_gdq = L.marker([21.426837, 51.151197]).addTo(mymap);
+                    marker_gdq.bindPopup('<a href="/languages/gdq">Mehri</a>').openPopup();
+                                                let marker_hin = L.marker([25.000000, 77.000000]).addTo(mymap);
+                    marker_hin.bindPopup('<a href="/languages/hin">Hindi</a>').openPopup();
+                                                                    let marker_ind = L.marker([-7.334580, 109.715720]).addTo(mymap);
+                    marker_ind.bindPopup('<a href="/languages/ind">Indonesian</a>').openPopup();
+                                                let marker_ita = L.marker([43.046411, 12.648925]).addTo(mymap);
+                    marker_ita.bindPopup('<a href="/languages/ita">Italian</a>').openPopup();
+                                                let marker_jav = L.marker([-0.572307, 110.884843]).addTo(mymap);
+                    marker_jav.bindPopup('<a href="/languages/jav">Javanese</a>').openPopup();
+                                                let marker_kbd = L.marker([43.508220, 43.391820]).addTo(mymap);
+                    marker_kbd.bindPopup('<a href="/languages/kbd">Kabardian</a>').openPopup();
+                                                let marker_kor = L.marker([37.500000, 128.000000]).addTo(mymap);
+                    marker_kor.bindPopup('<a href="/languages/kor">Korean</a>').openPopup();
+                                                let marker_pan = L.marker([30.036762, 75.670166]).addTo(mymap);
+                    marker_pan.bindPopup('<a href="/languages/pan">Panjabi</a>').openPopup();
+                                                let marker_pes = L.marker([28.659283, 55.158607]).addTo(mymap);
+                    marker_pes.bindPopup('<a href="/languages/pes">Iranian Persian</a>').openPopup();
+                                                let marker_rhg = L.marker([20.831000, 93.169500]).addTo(mymap);
+                    marker_rhg.bindPopup('<a href="/languages/rhg">Rohingya</a>').openPopup();
+                                                let marker_sdl = L.marker([23.614010, 46.471390]).addTo(mymap);
+                    marker_sdl.bindPopup('<a href="/languages/sdl">Saudi Arabian Sign Language</a>').openPopup();
+                                                let marker_shv = L.marker([17.291540, 53.995260]).addTo(mymap);
+                    marker_shv.bindPopup('<a href="/languages/shv">Shehri</a>').openPopup();
+                                                let marker_som = L.marker([4.778704, 45.152856]).addTo(mymap);
+                    marker_som.bindPopup('<a href="/languages/som">Somali</a>').openPopup();
+                                                let marker_swh = L.marker([-8.256053, 37.624033]).addTo(mymap);
+                    marker_swh.bindPopup('<a href="/languages/swh">Swahili (Coastal)</a>').openPopup();
+                                                let marker_tam = L.marker([10.520219, 78.825989]).addTo(mymap);
+                    marker_tam.bindPopup('<a href="/languages/tam">Tamil</a>').openPopup();
+                                                let marker_tel = L.marker([16.452944, 78.702392]).addTo(mymap);
+                    marker_tel.bindPopup('<a href="/languages/tel">Telugu</a>').openPopup();
+                                                let marker_tgl = L.marker([14.060000, 121.746950]).addTo(mymap);
+                    marker_tgl.bindPopup('<a href="/languages/tgl">Tagalog</a>').openPopup();
+                                                let marker_tur = L.marker([39.866667, 32.866667]).addTo(mymap);
+                    marker_tur.bindPopup('<a href="/languages/tur">Turkish</a>').openPopup();
+                                                let marker_uig = L.marker([43.670000, 79.750000]).addTo(mymap);
+                    marker_uig.bindPopup('<a href="/languages/uig">Uighur</a>').openPopup();
+                                                let marker_urd = L.marker([25.000000, 67.000000]).addTo(mymap);
+                    marker_urd.bindPopup('<a href="/languages/urd">Urdu</a>').openPopup();
+                                                let marker_zlm = L.marker([1.858561, 103.000487]).addTo(mymap);
+                    marker_zlm.bindPopup('<a href="/languages/zlm">Malay</a>').openPopup();
+                    
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

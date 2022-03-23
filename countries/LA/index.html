@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Laos | Find a Bible</title>
+    <style>
+        .country-aside      {padding: .2em 1.2em .5em 1.2em;}
+        .country-aside p    {font-size: .8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin: .25em auto 1em auto;}
+        .country-persecution {background:url("https://images.bible.cloud/fab/logos/odi_gray_logo.svg") no-repeat 95% 10%/ 33px 26px;
+                            border: thin solid #d7d7d7; border-width: 1px 0 1px 0; margin-bottom: .5em;}
+        .country-facts      {margin: 0 0 .5em 0;}
+        .country-links      {margin-top: .75em; padding-top: .5em;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: .5em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .link-icon              {width: 1.5em; height: 1.5em;margin-left:.5em;}
+        th h6                                  {font-size: .7em; font-weight: normal;line-height:.9em; margin:.2em 0 0 0 ; text-transform: none}
+        .dataTable tr td:nth-child(2)       {max-width:120px;text-align:right;}
+        .dataTable tr td:nth-child(3)       {width:80px;text-align:center;}
+        .dataTable tr td:nth-child(4), .dataTable tr td:nth-child(5), .dataTable tr td:nth-child(6)      {width:90px;text-align:center;}
+        #banner .banner-flag {margin: 0 .5em 0 0;}
+    </style>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+    </style
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-flag " src="https://images.bible.cloud/flags/la.svg" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Laos
+                </h1>
+                <h2 itemprop="description"  >A country of  Asia</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Languages
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/LA/maps">Laos Maps | Info</a>
+                                                                <a class="external" href="https://find.bible/countries/LA/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Laos</span>
+                    <meta itemprop="position" content="3" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+            <img class="country-location" src="https://images.bible.cloud/maps/country/LA-location.png" alt="Laos Find a Bible" />
+            <div class="country-facts row">
+                <p><b>Population:</b> 7,574,356</p>
+                <p><b>Official Language:</b> Lao</p>
+                <p><b>Language Count:</b> <span class="num-badge">98</span></p>
+                <p><b>Primary Religion:</b> Buddhism</p>
+                                    <p><b>National Bible Society:</b><br />
+
+                                                    UBS Laos Partnership</p>
+                            <a href="http://biblelaos.org/" target="_blank" alt="UBS Laos Partnership">
+                                <img src="https://images.bible.cloud/logo_type_bible_societies.svg" class="link-icon"/></a>
+                                         
+            </div>
+
+            <div class="country-links">
+                <p><b>Reference Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/LA" alt="Find a Bible Laos">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://en.wikipedia.org/wiki/Laos" alt="Wikipedia - Laos">
+                            <img src="http://images.bible.cloud/wiki_type_logo.svg" title="Wikipedia" />
+                            <p>Wikipedia</p></a>
+                    </div>
+
+
+
+                                            <div><a target="_blank" href="https://www.cia.gov/the-world-factbook/countries/laos/" alt="World Fact Book - Laos">
+                                <img src="http://images.bible.cloud/logo_type_cia.svg" title="World Fact Book" />
+                                <p>WorldFact<br />Book</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="http://hdr.undp.org/en/countries/profiles/LAO" alt="Human Development - Laos">
+                                <img src="http://images.bible.cloud/logo_type_united_nations.svg" title="Human Development" />
+                                <p>Human<br />Develop.</p></a>
+                        </div>
+                    
+
+                                            <div><a target="_blank" href="https://www.state.gov/countries-areas/laos/" alt="Religious Freedom - Laos">
+                                <img src="http://images.bible.cloud/logo_type_dept_state.svg" title="Religious Freedom" />
+                                <p>Religious<br />Freedom</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://www.britannica.com/place/Laos" alt="Britannica - Laos">
+                                <img src="http://images.bible.cloud/logo_type_britannica.svg" title="Britannica" />
+                                <p>Britannica</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+                            <p><b>Factbook Summary:</b>
+                    <a href="https://images.bible.cloud/maps/summary/LA-summary.pdf" target="_blank"  alt="World Fact Book Laos">
+                        <img class="pdf-icon" src="http://images.bible.cloud/icon/pdf_icon.svg" title="Country Summary" /></a></p>
+            
+
+                        <div class="country-persecution">
+                    <p>Persecution: </p>
+                    <p><b>WatchList Rank: </b><span class="num-badge-red">22</span></p>
+                    <p><b>WatchList Page: </b> <a href="https://www.opendoorsusa.org/christian-persecution/world-watch-list/laos/" target="_blank" > Laos</a></p>
+                    <p><b>Type: </b>Communist and Post Communist Oppression</p>
+                </div>
+        
+
+
+            <div class="country-links">
+                <p><b>Mission / Prayer Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/LA" alt="Find a Bible Laos">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://www.joshuaproject.net/countries/LA" alt="Joshua Project - Laos">
+                            <img src="http://images.bible.cloud/joshua_type_logo.svg" title="Joshua Project" />
+                            <p>Joshua<br />Project</p></a>
+                    </div>
+
+                                            <div><a target="_blank" href="https://unitedbiblesocieties.org/locations/laos-partnership/" alt="United Bible Societies - Laos">
+                                <img src="http://images.bible.cloud/logo_type_ubs.svg" title="United Bible Societies" />
+                                <p>UBS</p></a>
+                        </div>
+                    
+
+
+                                            <div><a target="_blank" href="https://operationworld.org/locations/laos" alt="Operation World - Laos">
+                                <img src="http://images.bible.cloud/logo_type_ow.svg" title="Operation World" />
+                                <p>Operation<br />World</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://prayercast.com/laos.html" alt="PrayerCasts - Laos">
+                                <img src="http://images.bible.cloud/prayercast_type_logo.svg" title="PrayerCast" />
+                                <p>PrayerCast</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://curlie.org/Regional/Asia/Laos" alt="ODP Database - Laos">
+                                <img src="http://images.bible.cloud/logo_type_odp.svg" title="Open Directory Project" />
+                                <p>Open<br />Directory</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+
+
+            <div class="country-overview">
+                    <p><b>Language Summary:</b>
+                        Lao (official), French, English, various ethnic languages</p>
+                </div>
+
+                <div class="country-overview">
+                    <p><b>Ethnic Summary:</b>
+                        Lao 53.2%, Khmou 11%, Hmong 9.2%, Phouthay 3.4%, Tai 3.1%, Makong 2.5%, Katong 2.2%, Lue 2%, Akha 1.8%, other 11.6% (2015 est.)
+note: the Laos Government officially recognizes 49 ethnic groups, but the total number of ethnic groups is estimated to be well over 200</p>
+                </div>
+
+
+
+
+            <div class="country-overview">
+                <p><b>Religious Summary:</b>
+                    Buddhist 64.7%, Christian 1.7%, none 31.4%, other/not stated 2.1% (2015 est.)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="medium-9">
+        <table id="languages" class="table responsive" cellspacing="0" width="100%"
+               data-json='{&quot;data&quot;:[{&quot;id&quot;:&quot;aem&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Arem&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;A-Rem&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;790&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;aeu&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Akeu&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Ake&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,170&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ahk&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Akha&quot;,&quot;ci&quot;:&quot;MM&quot;,&quot;cn&quot;:&quot;Myanmar&quot;,&quot;tv&quot;:&quot;Akha &quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;123,010&quot;,&quot;bc&quot;:3,&quot;fc&quot;:2,&quot;rc&quot;:6},{&quot;id&quot;:&quot;alk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Alak&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Harak&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;26,350&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:5},{&quot;id&quot;:&quot;bgk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Bit&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Buxinhua&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,460&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;bgl&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Bo (Laos)&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Pakatan&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,150&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;blt&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Tai Dam&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Black Tai&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;27,530&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;brb&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Lave&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Brao&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;26,990&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:7},{&quot;id&quot;:&quot;bru&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Eastern Bru&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Bruu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;34,220&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:11},{&quot;id&quot;:&quot;brv&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Western Bru&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;Bruu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;86,900&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;cja&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Western Cham&quot;,&quot;ci&quot;:&quot;KH&quot;,&quot;cn&quot;:&quot;Cambodia&quot;,&quot;tv&quot;:&quot;Cambodian Cham&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;630&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;cmn&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Mandarin Chinese&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;\u5b98\u8bdd; \u5b98\u8a71; Gu\u0101nhu\u00e0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:45,&quot;fc&quot;:22,&quot;rc&quot;:65},{&quot;id&quot;:&quot;cno&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Con&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Kha Kior&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,270&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;cqd&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Chuanqiandian Cluster Miao&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;lus Hmoob \/ lug Moob \/ lol Hmongb&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,860&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;hal&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Halang&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Koyong&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,340&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;hld&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Halang Doan&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,230&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;hni&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Hani&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Haqniqdoq&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;740&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:15},{&quot;id&quot;:&quot;hnj&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Hmong Njua&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;lus Hmoob \/ lug Moob \/ lol Hmongb&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;216,880&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:7},{&quot;id&quot;:&quot;hnu&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Hung&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Hung (hnu)Th\u1ed5 (tou)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;41,590&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;how&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Honi&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Baihong&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;irr&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Ir&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Ta Oi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,220&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ium&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Iu Mien&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Iu Mienh&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;34,330&quot;,&quot;bc&quot;:6,&quot;fc&quot;:1,&quot;rc&quot;:57},{&quot;id&quot;:&quot;jeh&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Jeh&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Gie&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;11,880&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:7},{&quot;id&quot;:&quot;kdt&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kuy&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;Kui&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;48,350&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:19},{&quot;id&quot;:&quot;khb&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;L\u00fc&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;\u1985\u19c4\u19ba\u1991&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;130,990&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:5},{&quot;id&quot;:&quot;khf&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Khuen&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;\u1a34\u1a71\u1a60\u1a3f\u1a21\u1a68\u1a60\u1a36&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;12,690&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;khm&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Khmer&quot;,&quot;ci&quot;:&quot;KH&quot;,&quot;cn&quot;:&quot;Cambodia&quot;,&quot;tv&quot;:&quot;Cambodian&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,400&quot;,&quot;bc&quot;:7,&quot;fc&quot;:11,&quot;rc&quot;:13},{&quot;id&quot;:&quot;kjg&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Khmu&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Kmhmu&#039;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;756,440&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:7},{&quot;id&quot;:&quot;kkh&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Kh\u00fcn&quot;,&quot;ci&quot;:&quot;MM&quot;,&quot;cn&quot;:&quot;Myanmar&quot;,&quot;tv&quot;:&quot;\u1a34\u1a71\u1a60\u1a3f\u1a21\u1a68\u1a60\u1a36&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;790&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ktp&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Kaduo&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Khatu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,060&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kuf&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Western Katu&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Low Katu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;29,440&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kyp&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kang&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Tai Khang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;26,230&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;lao&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Lao&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;\u0e9e\u0eb2\u0eaa\u0eb2\u0ea5\u0eb2&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,225,000&quot;,&quot;bc&quot;:3,&quot;fc&quot;:4,&quot;rc&quot;:25},{&quot;id&quot;:&quot;lbg&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Laopang&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Laopa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;13,310&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;lbn&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Rmeet&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;22,400&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:5},{&quot;id&quot;:&quot;lbo&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Laven&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot; \u0e88\u0ebc\u0ecc\u0ea3\u0eb9\u0eb0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;58,540&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:8},{&quot;id&quot;:&quot;lhi&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Lahu Shi&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Ladhof&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,740&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;lhu&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Lahu&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Ladhof&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;8,860&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:26},{&quot;id&quot;:&quot;lso&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Laos Sign Language&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;73,770&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;lvi&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Lavi&quot;,&quot;ci&quot;:&quot;IL&quot;,&quot;cn&quot;:&quot;Israel&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,260&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mji&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kim Mun&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Chasan Yao&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,140&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;mlf&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Mal&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Thin&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;36,810&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;mra&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Mlabri&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;Luang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;80&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mtq&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Muong&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:1,&quot;fc&quot;:5,&quot;rc&quot;:1},{&quot;id&quot;:&quot;mww&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Hmong Daw&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;lus Hmoob \/ lug Moob \/ lol Hmongb&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;400,570&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:15},{&quot;id&quot;:&quot;mya&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Burmese&quot;,&quot;ci&quot;:&quot;MM&quot;,&quot;cn&quot;:&quot;Myanmar&quot;,&quot;tv&quot;:&quot;Myanmar&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;610&quot;,&quot;bc&quot;:12,&quot;fc&quot;:8,&quot;rc&quot;:57},{&quot;id&quot;:&quot;nan&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Min Nan Chinese&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Minnan&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:10,&quot;fc&quot;:7,&quot;rc&quot;:26},{&quot;id&quot;:&quot;ncq&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Northern Katang&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;68,620&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nev&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Nyaheun&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;9,330&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;ngt&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Kriang&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Ta Oi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;18,010&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;nod&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Northern Thai&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot; Kam Mueang\u0e04\u0e33\u0e40\u0e21\u0e37\u0e2d\u0e07&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;37,920&quot;,&quot;bc&quot;:1,&quot;fc&quot;:7,&quot;rc&quot;:1},{&quot;id&quot;:&quot;nos&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Eastern Nisu&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Southern Yi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,260&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:13},{&quot;id&quot;:&quot;nuo&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Ngu\u00f4n&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot; N\u0103m Nguy\u00ean&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;750&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;nut&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Nung (Viet Nam)&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Bu-Nong&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,480&quot;,&quot;bc&quot;:1,&quot;fc&quot;:2,&quot;rc&quot;:3},{&quot;id&quot;:&quot;nyw&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Nyaw&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;Jo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;17,740&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;oog&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Ong&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Ta Oi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;14,510&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;oyb&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Oy&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Huei&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;44,260&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:8},{&quot;id&quot;:&quot;pac&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Pacoh&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Bo River Van Kieu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;24,390&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;pcc&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Bouyei&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Giay (Yay)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,360&quot;,&quot;bc&quot;:1,&quot;fc&quot;:3,&quot;rc&quot;:10},{&quot;id&quot;:&quot;pho&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Phunoi&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Singsali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;44,920&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;phq&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Phana&#039;&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Bana&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;550&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;pht&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Phu Thai&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;\u0e20\u0e32\u0e29\u0e32\u0e1c\u0e39\u0e49\u0e44\u0e17&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;226,870&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:6},{&quot;id&quot;:&quot;phu&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Phuan&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;Lao Phuan&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;149,480&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;pkt&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Maleng&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Pakatan&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;620&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;pnx&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Phong-Kniang&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Kniang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;31,850&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;prt&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Phai&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;29,810&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;puo&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Puoc&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,240&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;scb&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Chut&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Ruc-Sach&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;900&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;sct&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Southern Katang&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;42,230&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;sed&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Sedang&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Cadong&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;930&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;skb&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Saek&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Sek&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,980&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;slt&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Sila&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Sida&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,270&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;spu&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Sapuan&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;S\u0259puar&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,450&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;sqq&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Sou&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Sawk&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,320&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;sss&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;S\u00f4&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Bruu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;163,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:5},{&quot;id&quot;:&quot;stu&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Samtao&quot;,&quot;ci&quot;:&quot;MM&quot;,&quot;cn&quot;:&quot;Myanmar&quot;,&quot;tv&quot;:&quot;Pulang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,540&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tdd&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Tai N\u00fca&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;\u1956\u196d\u1970\u1956\u196c\u1973\u1951\u1968\u1952\u1970&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;14,630&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;tdf&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Talieng&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Trieng&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;39,610&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:6},{&quot;id&quot;:&quot;tgr&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tareng&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Trieng&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;11,370&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tha&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Thai&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;Siamese&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;145,410&quot;,&quot;bc&quot;:8,&quot;fc&quot;:27,&quot;rc&quot;:27},{&quot;id&quot;:&quot;thi&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tai Long&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;\u1956\u196d\u1970\u1956\u196c\u1973\u1951\u1968\u1952\u1970&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,130&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;thm&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Aheu&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;620&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;tlq&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tai Loi&quot;,&quot;ci&quot;:&quot;MM&quot;,&quot;cn&quot;:&quot;Myanmar&quot;,&quot;tv&quot;:&quot;Mong Lue&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;270&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;tnu&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tay Khang&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;240&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tpo&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tai Pao&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Tai Hang Tong&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,810&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tth&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Upper Ta&#039;oih&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Ta Oi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;49,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:15},{&quot;id&quot;:&quot;tto&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Lower Ta&#039;oih&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Ta Oi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;23,100&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;tts&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Northeastern Thai&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot; Lao Isan&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;12,320&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:6,&quot;rc&quot;:3},{&quot;id&quot;:&quot;twh&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Tai D\u00f3n&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;White Tai&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;104,680&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;tyh&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;O&#039;du&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;\u01a0 \u0110u&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;600&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tyj&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tai Do&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Tay Muoi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,730&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tyr&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tai Daeng&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Red TaiT\u00e1y-M\u00f4c-Ch\u00e2u&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;26,230&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;uan&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kuan&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;920&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;vie&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Vietnamese&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Ti\u1ebfng Vi\u1ec7t&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;123,600&quot;,&quot;bc&quot;:9,&quot;fc&quot;:12,&quot;rc&quot;:30},{&quot;id&quot;:&quot;xhv&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Khua&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Bruu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,550&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;xko&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kiorr&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Kha Kior&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,840&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ycp&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Chepya&quot;,&quot;ci&quot;:&quot;LA&quot;,&quot;cn&quot;:&quot;Laos&quot;,&quot;tv&quot;:&quot;Chipia&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,490&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;yoy&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Yoy&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;Dioi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;11,880&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;yue&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Yue Chinese&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Cantonese&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;18,590&quot;,&quot;bc&quot;:12,&quot;fc&quot;:11,&quot;rc&quot;:20}]}'
+               data-searchplaceholder="Filter Items on this Page">
+            <thead>
+            <tr>
+                <th data-column-name="tt" data-link="id" data-path="/languages">Languages<h6>in Laos</h6></th>
+                <th data-column-name="po" data-sort-default="desc">Population<h6>Primary Language</h6></th>
+                <th data-column-name="id">iso</th>
+                <th data-column-name="bc">Bible<h6>Versions</h6></th>
+                <th data-column-name="fc">Films</th>
+                <th data-column-name="rc">Resources</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

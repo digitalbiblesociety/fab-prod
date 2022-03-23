@@ -1,0 +1,1048 @@
+{
+    "id": "CRKCBS",
+    "parent_bible_id": null,
+    "title": "Plains Cree Scripture Portions",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "crk",
+    "script": "Cans",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2013",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2016-10-12T17:38:40.000000Z",
+    "updated_at": "2020-10-12T17:38:40.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Ruth",
+            "chapter_id": "1",
+            "path": "CRKCBSP1DA\/A08___01_Ruth________CRKCBSP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "2",
+            "path": "CRKCBSP1DA\/A08___02_Ruth________CRKCBSP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "3",
+            "path": "CRKCBSP1DA\/A08___03_Ruth________CRKCBSP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "4",
+            "path": "CRKCBSP1DA\/A08___04_Ruth________CRKCBSP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "1",
+            "path": "CRKCBSP1DA\/B01___01_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "2",
+            "path": "CRKCBSP1DA\/B01___02_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "3",
+            "path": "CRKCBSP1DA\/B01___03_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "4",
+            "path": "CRKCBSP1DA\/B01___04_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "5",
+            "path": "CRKCBSP1DA\/B01___05_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "6",
+            "path": "CRKCBSP1DA\/B01___06_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "7",
+            "path": "CRKCBSP1DA\/B01___07_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "8",
+            "path": "CRKCBSP1DA\/B01___08_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "9",
+            "path": "CRKCBSP1DA\/B01___09_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "10",
+            "path": "CRKCBSP1DA\/B01___10_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "11",
+            "path": "CRKCBSP1DA\/B01___11_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "12",
+            "path": "CRKCBSP1DA\/B01___12_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "13",
+            "path": "CRKCBSP1DA\/B01___13_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "14",
+            "path": "CRKCBSP1DA\/B01___14_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "15",
+            "path": "CRKCBSP1DA\/B01___15_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "16",
+            "path": "CRKCBSP1DA\/B01___16_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "17",
+            "path": "CRKCBSP1DA\/B01___17_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "18",
+            "path": "CRKCBSP1DA\/B01___18_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "19",
+            "path": "CRKCBSP1DA\/B01___19_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "20",
+            "path": "CRKCBSP1DA\/B01___20_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "21",
+            "path": "CRKCBSP1DA\/B01___21_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "22",
+            "path": "CRKCBSP1DA\/B01___22_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "23",
+            "path": "CRKCBSP1DA\/B01___23_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "24",
+            "path": "CRKCBSP1DA\/B01___24_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "25",
+            "path": "CRKCBSP1DA\/B01___25_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "26",
+            "path": "CRKCBSP1DA\/B01___26_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "27",
+            "path": "CRKCBSP1DA\/B01___27_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Matt",
+            "chapter_id": "28",
+            "path": "CRKCBSP1DA\/B01___28_Matthew_____CRKCBSP1DA.mp3",
+            "id_usfm": "MAT",
+            "name": "Matthew",
+            "order": 41
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "1",
+            "path": "CRKCBSP1DA\/B02___01_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "2",
+            "path": "CRKCBSP1DA\/B02___02_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "3",
+            "path": "CRKCBSP1DA\/B02___03_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "4",
+            "path": "CRKCBSP1DA\/B02___04_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "5",
+            "path": "CRKCBSP1DA\/B02___05_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "6",
+            "path": "CRKCBSP1DA\/B02___06_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "7",
+            "path": "CRKCBSP1DA\/B02___07_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "8",
+            "path": "CRKCBSP1DA\/B02___08_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "9",
+            "path": "CRKCBSP1DA\/B02___09_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "10",
+            "path": "CRKCBSP1DA\/B02___10_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "11",
+            "path": "CRKCBSP1DA\/B02___11_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "12",
+            "path": "CRKCBSP1DA\/B02___12_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "13",
+            "path": "CRKCBSP1DA\/B02___13_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "14",
+            "path": "CRKCBSP1DA\/B02___14_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "15",
+            "path": "CRKCBSP1DA\/B02___15_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "16",
+            "path": "CRKCBSP1DA\/B02___16_Mark________CRKCBSP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "1",
+            "path": "CRKCBSP1DA\/B03___01_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "2",
+            "path": "CRKCBSP1DA\/B03___02_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "3",
+            "path": "CRKCBSP1DA\/B03___03_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "4",
+            "path": "CRKCBSP1DA\/B03___04_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "5",
+            "path": "CRKCBSP1DA\/B03___05_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "6",
+            "path": "CRKCBSP1DA\/B03___06_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "7",
+            "path": "CRKCBSP1DA\/B03___07_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "8",
+            "path": "CRKCBSP1DA\/B03___08_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "9",
+            "path": "CRKCBSP1DA\/B03___09_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "10",
+            "path": "CRKCBSP1DA\/B03___10_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "11",
+            "path": "CRKCBSP1DA\/B03___11_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "12",
+            "path": "CRKCBSP1DA\/B03___12_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "13",
+            "path": "CRKCBSP1DA\/B03___13_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "14",
+            "path": "CRKCBSP1DA\/B03___14_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "15",
+            "path": "CRKCBSP1DA\/B03___15_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "16",
+            "path": "CRKCBSP1DA\/B03___16_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "17",
+            "path": "CRKCBSP1DA\/B03___17_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "18",
+            "path": "CRKCBSP1DA\/B03___18_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "19",
+            "path": "CRKCBSP1DA\/B03___19_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "20",
+            "path": "CRKCBSP1DA\/B03___20_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "21",
+            "path": "CRKCBSP1DA\/B03___21_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "22",
+            "path": "CRKCBSP1DA\/B03___22_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "23",
+            "path": "CRKCBSP1DA\/B03___23_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "24",
+            "path": "CRKCBSP1DA\/B03___24_Luke________CRKCBSP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "1",
+            "path": "CRKCBSP1DA\/B04___01_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "2",
+            "path": "CRKCBSP1DA\/B04___02_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "3",
+            "path": "CRKCBSP1DA\/B04___03_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "4",
+            "path": "CRKCBSP1DA\/B04___04_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "5",
+            "path": "CRKCBSP1DA\/B04___05_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "6",
+            "path": "CRKCBSP1DA\/B04___06_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "7",
+            "path": "CRKCBSP1DA\/B04___07_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "8",
+            "path": "CRKCBSP1DA\/B04___08_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "9",
+            "path": "CRKCBSP1DA\/B04___09_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "10",
+            "path": "CRKCBSP1DA\/B04___10_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "11",
+            "path": "CRKCBSP1DA\/B04___11_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "12",
+            "path": "CRKCBSP1DA\/B04___12_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "13",
+            "path": "CRKCBSP1DA\/B04___13_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "14",
+            "path": "CRKCBSP1DA\/B04___14_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "15",
+            "path": "CRKCBSP1DA\/B04___15_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "16",
+            "path": "CRKCBSP1DA\/B04___16_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "17",
+            "path": "CRKCBSP1DA\/B04___17_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "18",
+            "path": "CRKCBSP1DA\/B04___18_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "19",
+            "path": "CRKCBSP1DA\/B04___19_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "20",
+            "path": "CRKCBSP1DA\/B04___20_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "21",
+            "path": "CRKCBSP1DA\/B04___21_John________CRKCBSP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "1",
+            "path": "CRKCBSP1DA\/B05___01_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "2",
+            "path": "CRKCBSP1DA\/B05___02_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "3",
+            "path": "CRKCBSP1DA\/B05___03_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "4",
+            "path": "CRKCBSP1DA\/B05___04_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "5",
+            "path": "CRKCBSP1DA\/B05___05_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "6",
+            "path": "CRKCBSP1DA\/B05___06_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "7",
+            "path": "CRKCBSP1DA\/B05___07_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "8",
+            "path": "CRKCBSP1DA\/B05___08_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "9",
+            "path": "CRKCBSP1DA\/B05___09_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "10",
+            "path": "CRKCBSP1DA\/B05___10_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "11",
+            "path": "CRKCBSP1DA\/B05___11_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "12",
+            "path": "CRKCBSP1DA\/B05___12_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "13",
+            "path": "CRKCBSP1DA\/B05___13_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "14",
+            "path": "CRKCBSP1DA\/B05___14_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "15",
+            "path": "CRKCBSP1DA\/B05___15_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "16",
+            "path": "CRKCBSP1DA\/B05___16_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "17",
+            "path": "CRKCBSP1DA\/B05___17_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "18",
+            "path": "CRKCBSP1DA\/B05___18_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "19",
+            "path": "CRKCBSP1DA\/B05___19_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "20",
+            "path": "CRKCBSP1DA\/B05___20_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "21",
+            "path": "CRKCBSP1DA\/B05___21_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "22",
+            "path": "CRKCBSP1DA\/B05___22_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "23",
+            "path": "CRKCBSP1DA\/B05___23_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "24",
+            "path": "CRKCBSP1DA\/B05___24_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "25",
+            "path": "CRKCBSP1DA\/B05___25_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "26",
+            "path": "CRKCBSP1DA\/B05___26_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "27",
+            "path": "CRKCBSP1DA\/B05___27_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "28",
+            "path": "CRKCBSP1DA\/B05___28_Acts________CRKCBSP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "1",
+            "path": "CRKCBSP1DA\/B20___01_James_______CRKCBSP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "2",
+            "path": "CRKCBSP1DA\/B20___02_James_______CRKCBSP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "3",
+            "path": "CRKCBSP1DA\/B20___03_James_______CRKCBSP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "4",
+            "path": "CRKCBSP1DA\/B20___04_James_______CRKCBSP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "5",
+            "path": "CRKCBSP1DA\/B20___05_James_______CRKCBSP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5874,
+            "bible_id": "CRKCBS",
+            "equivalent_id": "CRKCBSP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

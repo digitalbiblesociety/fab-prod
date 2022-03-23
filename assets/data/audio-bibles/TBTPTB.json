@@ -1,0 +1,50 @@
+{
+    "id": "TBTPTB",
+    "parent_bible_id": null,
+    "title": "Tembo Bible",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "tbt",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2016",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2018-09-16T23:58:55.000000Z",
+    "updated_at": "2020-10-12T15:33:00.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 6105,
+            "bible_id": "TBTPTB",
+            "equivalent_id": "TBTPTBP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 6107,
+            "bible_id": "TBTPTB",
+            "equivalent_id": "TBTPTBP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

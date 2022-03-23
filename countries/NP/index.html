@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Nepal | Find a Bible</title>
+    <style>
+        .country-aside      {padding: .2em 1.2em .5em 1.2em;}
+        .country-aside p    {font-size: .8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin: .25em auto 1em auto;}
+        .country-persecution {background:url("https://images.bible.cloud/fab/logos/odi_gray_logo.svg") no-repeat 95% 10%/ 33px 26px;
+                            border: thin solid #d7d7d7; border-width: 1px 0 1px 0; margin-bottom: .5em;}
+        .country-facts      {margin: 0 0 .5em 0;}
+        .country-links      {margin-top: .75em; padding-top: .5em;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: .5em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .link-icon              {width: 1.5em; height: 1.5em;margin-left:.5em;}
+        th h6                                  {font-size: .7em; font-weight: normal;line-height:.9em; margin:.2em 0 0 0 ; text-transform: none}
+        .dataTable tr td:nth-child(2)       {max-width:120px;text-align:right;}
+        .dataTable tr td:nth-child(3)       {width:80px;text-align:center;}
+        .dataTable tr td:nth-child(4), .dataTable tr td:nth-child(5), .dataTable tr td:nth-child(6)      {width:90px;text-align:center;}
+        #banner .banner-flag {margin: 0 .5em 0 0;}
+    </style>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+    </style
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-flag " src="https://images.bible.cloud/flags/np.svg" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Nepal
+                </h1>
+                <h2 itemprop="description"  >A country of  Asia</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Languages
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/NP/maps">Nepal Maps | Info</a>
+                                                                <a class="external" href="https://find.bible/countries/NP/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Nepal</span>
+                    <meta itemprop="position" content="3" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+            <img class="country-location" src="https://images.bible.cloud/maps/country/NP-location.png" alt="Nepal Find a Bible" />
+            <div class="country-facts row">
+                <p><b>Population:</b> 30,424,878</p>
+                <p><b>Official Language:</b> Nepali</p>
+                <p><b>Language Count:</b> <span class="num-badge">143</span></p>
+                <p><b>Primary Religion:</b> Hinduism</p>
+                                    <p><b>National Bible Society:</b><br />
+
+                                                    Nepal Bible Society</p>
+                            <a href="http://www.nepalbiblesociety.org/site/" target="_blank" alt="Nepal Bible Society">
+                                <img src="https://images.bible.cloud/logo_type_bible_societies.svg" class="link-icon"/></a>
+                                         
+            </div>
+
+            <div class="country-links">
+                <p><b>Reference Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/NP" alt="Find a Bible Nepal">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://en.wikipedia.org/wiki/Nepal" alt="Wikipedia - Nepal">
+                            <img src="http://images.bible.cloud/wiki_type_logo.svg" title="Wikipedia" />
+                            <p>Wikipedia</p></a>
+                    </div>
+
+
+
+                                            <div><a target="_blank" href="https://www.cia.gov/the-world-factbook/countries/nepal/" alt="World Fact Book - Nepal">
+                                <img src="http://images.bible.cloud/logo_type_cia.svg" title="World Fact Book" />
+                                <p>WorldFact<br />Book</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="http://hdr.undp.org/en/countries/profiles/NPL" alt="Human Development - Nepal">
+                                <img src="http://images.bible.cloud/logo_type_united_nations.svg" title="Human Development" />
+                                <p>Human<br />Develop.</p></a>
+                        </div>
+                    
+
+                                            <div><a target="_blank" href="https://www.state.gov/countries-areas/nepal/" alt="Religious Freedom - Nepal">
+                                <img src="http://images.bible.cloud/logo_type_dept_state.svg" title="Religious Freedom" />
+                                <p>Religious<br />Freedom</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://www.britannica.com/place/Nepal" alt="Britannica - Nepal">
+                                <img src="http://images.bible.cloud/logo_type_britannica.svg" title="Britannica" />
+                                <p>Britannica</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+                            <p><b>Factbook Summary:</b>
+                    <a href="https://images.bible.cloud/maps/summary/NP-summary.pdf" target="_blank"  alt="World Fact Book Nepal">
+                        <img class="pdf-icon" src="http://images.bible.cloud/icon/pdf_icon.svg" title="Country Summary" /></a></p>
+            
+
+                        <div class="country-persecution">
+                    <p>Persecution: </p>
+                    <p><b>WatchList Rank: </b><span class="num-badge-red">34</span></p>
+                    <p><b>WatchList Page: </b> <a href="https://www.opendoorsusa.org/christian-persecution/world-watch-list/nepal/" target="_blank" > Nepal</a></p>
+                    <p><b>Type: </b>Clan Oppression</p>
+                </div>
+        
+
+
+            <div class="country-links">
+                <p><b>Mission / Prayer Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/NP" alt="Find a Bible Nepal">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://www.joshuaproject.net/countries/NP" alt="Joshua Project - Nepal">
+                            <img src="http://images.bible.cloud/joshua_type_logo.svg" title="Joshua Project" />
+                            <p>Joshua<br />Project</p></a>
+                    </div>
+
+                                            <div><a target="_blank" href="https://unitedbiblesocieties.org/locations/nepal-bible-society/" alt="United Bible Societies - Nepal">
+                                <img src="http://images.bible.cloud/logo_type_ubs.svg" title="United Bible Societies" />
+                                <p>UBS</p></a>
+                        </div>
+                    
+
+
+                                            <div><a target="_blank" href="https://operationworld.org/locations/nepal" alt="Operation World - Nepal">
+                                <img src="http://images.bible.cloud/logo_type_ow.svg" title="Operation World" />
+                                <p>Operation<br />World</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://prayercast.com/nepal.html" alt="PrayerCasts - Nepal">
+                                <img src="http://images.bible.cloud/prayercast_type_logo.svg" title="PrayerCast" />
+                                <p>PrayerCast</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://curlie.org/Regional/Asia/Nepal" alt="ODP Database - Nepal">
+                                <img src="http://images.bible.cloud/logo_type_odp.svg" title="Open Directory Project" />
+                                <p>Open<br />Directory</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+
+
+            <div class="country-overview">
+                    <p><b>Language Summary:</b>
+                        Nepali (official) 44.6%, Maithali 11.7%, Bhojpuri 6%, Tharu 5.8%, Tamang 5.1%, Newar 3.2%, Bajjika 3%, Magar 3%, Doteli 3%, Urdu 2.6%, Avadhi 1.9%, Limbu 1.3%, Gurung 1.2%, Baitadeli 1%, other 6.4%, unspecified 0.2% (2011 est.)
+note: 123 languages reported as mother tongue in 2011 national census; many in government and business also speak English</p>
+                </div>
+
+                <div class="country-overview">
+                    <p><b>Ethnic Summary:</b>
+                        Chhettri 16.6%, Brahman-Hill 12.2%, Magar 7.1%, Tharu 6.6%, Tamang 5.8%, Newar 5%, Kami 4.8%, Muslim 4.4%, Yadav 4%, Rai 2.3%, Gurung 2%, Damai/Dholii 1.8%, Thakuri 1.6%, Limbu 1.5%, Sarki 1.4%, Teli 1.4%, Chamar/Harijan/Ram 1.3%, Koiri/Kushwaha 1.2%, other 19% (2011 est.)
+note: 125 caste/ethnic groups were reported in the 2011 national census</p>
+                </div>
+
+
+
+
+            <div class="country-overview">
+                <p><b>Religious Summary:</b>
+                    Hindu 81.3%, Buddhist 9%, Muslim 4.4%, Kirant 3.1%, Christian 1.4%, other 0.5%, unspecified 0.2% (2011 est.)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="medium-9">
+        <table id="languages" class="table responsive" cellspacing="0" width="100%"
+               data-json='{&quot;data&quot;:[{&quot;id&quot;:&quot;anp&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Angika&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0905\u0902\u0917\u093f\u0915\u093e&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;28,610&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;aph&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Athpariya&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Arthare&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,500&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;asm&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Assamese&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0985\u09b8\u09ae\u09c0\u09af\u09bc\u09be&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;330&quot;,&quot;bc&quot;:5,&quot;fc&quot;:4,&quot;rc&quot;:3},{&quot;id&quot;:&quot;awa&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Awadhi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0905\u0935\u0927\u0940&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;615,650&quot;,&quot;bc&quot;:2,&quot;fc&quot;:4,&quot;rc&quot;:16},{&quot;id&quot;:&quot;bap&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bantawa&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Bantaba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;149,260&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;bee&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Byangsi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Byangkho Lwo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,330&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:11},{&quot;id&quot;:&quot;ben&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bengali&quot;,&quot;ci&quot;:&quot;BD&quot;,&quot;cn&quot;:&quot;Bangladesh&quot;,&quot;tv&quot;:&quot;\u09ac\u09be\u0982\u09b2\u09be&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;25,860&quot;,&quot;bc&quot;:17,&quot;fc&quot;:35,&quot;rc&quot;:104},{&quot;id&quot;:&quot;bfy&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bagheli&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u092c\u0918\u0947\u0932\u0940&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,910&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:7},{&quot;id&quot;:&quot;bgc&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Haryanvi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0939\u0930\u092f\u093e\u0923\u0935\u0940&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;880&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:9},{&quot;id&quot;:&quot;bhj&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bahing&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Baying&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,920&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;bho&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bhojpuri&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u092d\u094b\u091c\u092a\u0941\u0930\u0940&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,673,180&quot;,&quot;bc&quot;:4,&quot;fc&quot;:4,&quot;rc&quot;:25},{&quot;id&quot;:&quot;bmj&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Bote-Darai&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;8,930&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;bod&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Tibetan&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;\u0f56\u0f7c\u0f51\u0f0b\u0f66\u0f90\u0f51\u0f0b&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,460&quot;,&quot;bc&quot;:6,&quot;fc&quot;:7,&quot;rc&quot;:23},{&quot;id&quot;:&quot;bon&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bine&quot;,&quot;ci&quot;:&quot;PG&quot;,&quot;cn&quot;:&quot;Papua New Guinea&quot;,&quot;tv&quot;:&quot;Masingara&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,730&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:6},{&quot;id&quot;:&quot;brd&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Baraamu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;690&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;brx&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bodo (India)&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Boro language&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,340&quot;,&quot;bc&quot;:1,&quot;fc&quot;:2,&quot;rc&quot;:10},{&quot;id&quot;:&quot;byh&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Bhujel&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Bujhyal&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;17,510&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;byw&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Belhariya&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Athpagari&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;930&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;cdm&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Chepang&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Chyo-bang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;48,830&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;cdn&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Chaudangsi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Bangba Lo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,200&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;chx&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Chantyal&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Chantel&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,250&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ctn&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Chhintange&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u091b\u093f\u0928\u094d\u0924\u093e\u0919\u094d&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,670&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;cur&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Chhulung&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Chhilling&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,170&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;cuw&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Chukwa&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;kulu ri\u014b&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;100&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;dhi&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Dhimal&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Dhemal&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;19,460&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:5},{&quot;id&quot;:&quot;dhw&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Dhanwar (Nepal)&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Danuwar Rai&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;45,780&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;drd&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Darmiya&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,200&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;dre&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Dolpo&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u00dc-Tsang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,700&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:6},{&quot;id&quot;:&quot;drq&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Dura&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,140&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;dry&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Darai&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;11,900&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;dty&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Dotyali&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;899,210&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;dus&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Dumi&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Dumi Bo&#039;o&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,280&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;dwz&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Dewas Rai&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;9,990&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;dzo&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Dzongkha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Bhutanese&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;30&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;emg&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Eastern Meohang&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Mewahang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,670&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;eng&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;English&quot;,&quot;ci&quot;:&quot;GB&quot;,&quot;cn&quot;:&quot;United Kingdom&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,100&quot;,&quot;bc&quot;:244,&quot;fc&quot;:29,&quot;rc&quot;:314},{&quot;id&quot;:&quot;gbk&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Gaddi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;???????&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;80&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;gbm&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Garhwali&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0917\u0922\u093c\u0935\u0933\u093f&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;20&quot;,&quot;bc&quot;:3,&quot;fc&quot;:4,&quot;rc&quot;:20},{&quot;id&quot;:&quot;gds&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Ghandruk Sign Language&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ghe&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Southern Ghale&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Galle Gurung&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;8,740&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;ghh&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Northern Ghale&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Lila&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,440&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ght&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kuke&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,300&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;guj&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Gujarati&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;40&quot;,&quot;bc&quot;:4,&quot;fc&quot;:10,&quot;rc&quot;:16},{&quot;id&quot;:&quot;gvr&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Gurung&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Tamu Kyi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;333,770&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:24},{&quot;id&quot;:&quot;hin&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Hindi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0939\u093f\u0902\u0926\u0940 &quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;90,710&quot;,&quot;bc&quot;:12,&quot;fc&quot;:34,&quot;rc&quot;:50},{&quot;id&quot;:&quot;hut&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Humla&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u00dc-Tsang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;22,440&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;jee&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Jerung&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Jero&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,720&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;jhs&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Jhankot Sign Language&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;jml&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Jumli&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Central Nepali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,370&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:8},{&quot;id&quot;:&quot;jnl&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Rawat&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Ban Manus&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,310&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;jul&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Jirel&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Jiri&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,890&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;jus&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Jumla Sign Language&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kdq&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Koch&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Koc&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,340&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kfv&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kurmukar&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Kamar&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;kfy&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kumaoni&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0915\u0941\u092e\u093e\u0901\u090a\u0928\u0940&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;17,640&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:4,&quot;rc&quot;:14},{&quot;id&quot;:&quot;kgg&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kusunda&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Ban Raja&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;100&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kgj&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Gamale Kham&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Kham language&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,680&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;kgy&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kyerung&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot; Lende Kyerung &quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,100&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;khr&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kharia&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Haria&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;370&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:6},{&quot;id&quot;:&quot;kif&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Eastern Parbate Kham&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Kham language&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,500&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kip&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Sheshi Kham&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Kham language&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,090&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kjl&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Western Parbate Kham&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Kham language&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;19,310&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;kkt&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Koi&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Kohi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,370&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kle&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kulung (Nepal)&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;kulu ri\u014b&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;32,700&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;klr&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Khaling&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u0916\u093e\u0932\u093f\u0919&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;14,810&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;kra&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kumhali&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Kumali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;13,220&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;kru&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kurukh&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot; Oraon&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;36,060&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:33},{&quot;id&quot;:&quot;kte&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Nubri&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Kutang Bhotia&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,570&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kxl&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Nepali Kurux&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot; Oraon&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;28,600&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kyv&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kayort&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,150&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kyw&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kudmali&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Panchpargania&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;220&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kzq&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kaike&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Magar Kaike&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;890&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;lbr&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Lohorung&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Loharung&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,750&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;lep&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Lepcha&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u1c1b\u1c29\u1c35\u1c1b\u1c27\u1c35\u1c36&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,360&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;lhm&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Lhomi&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u00dc-Tsang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;620&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;lif&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Limbu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u1915\u1920\u1930\u190c\u1922\u1931 \u1910\u1920\u1934&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;345,250&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:19},{&quot;id&quot;:&quot;lmh&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Lambichhong&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Lambicchong&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,030&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;loy&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Loke&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u00dc-Tsang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,100&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;lrr&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Southern Yamphu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Loharung&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,640&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;luu&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Lumba-Yakkha&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Yakkhaba Cea&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,360&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mag&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Magahi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Magadhi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;34,880&quot;,&quot;bc&quot;:2,&quot;fc&quot;:2,&quot;rc&quot;:5},{&quot;id&quot;:&quot;mai&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Maithili&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u092e\u0948\u0925\u093f\u0932\u0940 \/ \u09ae\u09c8\u09a5\u09bf\u09a8\u09c0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,094,620&quot;,&quot;bc&quot;:2,&quot;fc&quot;:2,&quot;rc&quot;:41},{&quot;id&quot;:&quot;mar&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Marathi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u092e\u0930\u093e\u0920\u0940&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;155,540&quot;,&quot;bc&quot;:6,&quot;fc&quot;:9,&quot;rc&quot;:24},{&quot;id&quot;:&quot;mgp&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Eastern Magar&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot; \u092e\u0917\u0930 \u092d\u093e\u0937\u093e&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;512,980&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;mjz&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Majhi&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Manjhi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;25,980&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;mrd&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Western Magar&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot; \u092e\u0917\u0930 \u092d\u093e\u0937\u093e&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;279,460&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;muk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Mugom&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Mugali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;110&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nao&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Naaba&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Naapa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;770&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;ncd&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Nachering&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Bangdale&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;9,460&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;new&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Newari&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Nepal Bhasa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;850,450&quot;,&quot;bc&quot;:2,&quot;fc&quot;:2,&quot;rc&quot;:40},{&quot;id&quot;:&quot;nmm&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Manangba&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Nyishang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,130&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;npa&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Nar Phu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Nar-Phu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;800&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;npi&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Nepali&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot; Nepalese&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;21,000,000&quot;,&quot;bc&quot;:5,&quot;fc&quot;:3,&quot;rc&quot;:108},{&quot;id&quot;:&quot;nsp&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Nepalese Sign Language&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Nepali Sign Language&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,490&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ola&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Walungge&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u00dc-Tsang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,410&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;ory&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Odia&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0b13\u0b21\u0b3c\u0b3f\u0b06&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;470&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:3,&quot;rc&quot;:35},{&quot;id&quot;:&quot;pan&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Panjabi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;870&quot;,&quot;bc&quot;:6,&quot;fc&quot;:11,&quot;rc&quot;:72},{&quot;id&quot;:&quot;phw&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Phangduwali&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Phangduvali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,130&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;plp&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Palpa&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Pahari-Palpa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,560&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;pum&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Puma&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u092a\u0941\u092e\u093e&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,480&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;raa&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Dungmali&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Arthare&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,240&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;rab&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Camling&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Rodong&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;78,640&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;raf&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Western Meohang&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Mewahang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,840&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;raq&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Saam&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Saam Rai&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;500&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;rau&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Raute&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Boto boli&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,070&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;rav&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Sampang&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Sampang Gun&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;18,260&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;rji&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Raji&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Ban Raji&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,760&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;rjs&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Rajbanshi&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Gangai&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;132,370&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;rkt&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Rangpuri&quot;,&quot;ci&quot;:&quot;BD&quot;,&quot;cn&quot;:&quot;Bangladesh&quot;,&quot;tv&quot;:&quot;Anchalit Bangla&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,660&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;rwr&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Marwari (India)&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u092e\u093e\u0930\u0935\u093e\u0921\u093c\u0940\/\u0645\u0627\u0631\u0648\u0627\u0691\u06cc\u200e&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;32,690&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:9,&quot;rc&quot;:9},{&quot;id&quot;:&quot;san&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Sanskrit&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0938\u0902\u0938\u094d\u0915\u0943\u0924\u092e\u094d&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,760&quot;,&quot;bc&quot;:25,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;sat&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Santali&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u1c65\u1c5f\u1c71\u1c5b\u1c5f\u1c72\u1c64&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;49,890&quot;,&quot;bc&quot;:2,&quot;fc&quot;:4,&quot;rc&quot;:40},{&quot;id&quot;:&quot;sck&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Sadri&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Nagpuri&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;160&quot;,&quot;bc&quot;:2,&quot;fc&quot;:2,&quot;rc&quot;:13},{&quot;id&quot;:&quot;scp&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Hyolmo&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Helambu Sherpa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;12,610&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;skj&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Seke (Nepal)&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;270&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;smm&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Musasa&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Musahar&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;25,050&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;snd&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Sindhi&quot;,&quot;ci&quot;:&quot;PK&quot;,&quot;cn&quot;:&quot;Pakistan&quot;,&quot;tv&quot;:&quot;\u0633\u0646\u068c\u064a&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;810&quot;,&quot;bc&quot;:2,&quot;fc&quot;:5,&quot;rc&quot;:39},{&quot;id&quot;:&quot;soi&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Sonha&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;(polyphyletic)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,350&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;srb&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Sora&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Savara&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,530&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:18},{&quot;id&quot;:&quot;suz&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Sunwar&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;38,210&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:6},{&quot;id&quot;:&quot;syw&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Kagate&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Syuba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;710&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;taj&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Eastern Tamang&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u0924\u093e\u092e\u093e\u0919&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,350,000&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:12},{&quot;id&quot;:&quot;tcn&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tichurong&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u00dc-Tsang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,420&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;tdg&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Western Tamang&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u0924\u093e\u092e\u093e\u0919&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;406,270&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;tdh&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Thulung&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Tholong Lo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;20,270&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:10},{&quot;id&quot;:&quot;tge&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Eastern Gorkha Tamang&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u0924\u093e\u092e\u093e\u0919&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;121,460&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;the&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Chitwania Tharu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;(polyphyletic)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;32,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:13},{&quot;id&quot;:&quot;thf&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Thangmi&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot; Thangmi Khan&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;23,440&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:17},{&quot;id&quot;:&quot;thl&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Dangaura Tharu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;(polyphyletic)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;700,830&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:23},{&quot;id&quot;:&quot;thq&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Kochila Tharu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Saptariya Tharu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;258,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;thr&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Rana Tharu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;(polyphyletic)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;336,000&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;ths&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Thakali&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Barhagaule&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,530&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;thw&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Thudam&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u00dc-Tsang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,800&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;tij&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tilung&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Tiling&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,450&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tkt&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Kathoriya Tharu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;(polyphyletic)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;750,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:9},{&quot;id&quot;:&quot;tmk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Northwestern Tamang&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u0924\u093e\u092e\u093e\u0919&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;55,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tsk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tseku&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Tsuku&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,600&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ttz&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tsum&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Tsumke&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,540&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;unr&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Mundari&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0b2e\u0b41\u0b23\u0b4d\u0b21\u0b3e&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;420&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:23},{&quot;id&quot;:&quot;urd&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Urdu&quot;,&quot;ci&quot;:&quot;PK&quot;,&quot;cn&quot;:&quot;Pakistan&quot;,&quot;tv&quot;:&quot;\u0627\u064f\u0631\u062f\u064f\u0648&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;695,530&quot;,&quot;bc&quot;:12,&quot;fc&quot;:33,&quot;rc&quot;:24},{&quot;id&quot;:&quot;vay&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Wayu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Hayu (\u0939\u093e\u092f\u0941)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,560&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;wly&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Waling&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Walung&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;wme&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Wambule&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Chourase&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;12,310&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:17},{&quot;id&quot;:&quot;xsr&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Sherpa&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u0936\u0947\u0930\u094d\u0935\u0940 \u0924\u092e\u094d\u0919&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;112,180&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:7},{&quot;id&quot;:&quot;ybh&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Yakha&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Dewansala&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;19,470&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;ybi&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Yamphu&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Yamphe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;9,180&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3}]}'
+               data-searchplaceholder="Filter Items on this Page">
+            <thead>
+            <tr>
+                <th data-column-name="tt" data-link="id" data-path="/languages">Languages<h6>in Nepal</h6></th>
+                <th data-column-name="po" data-sort-default="desc">Population<h6>Primary Language</h6></th>
+                <th data-column-name="id">iso</th>
+                <th data-column-name="bc">Bible<h6>Versions</h6></th>
+                <th data-column-name="fc">Films</th>
+                <th data-column-name="rc">Resources</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

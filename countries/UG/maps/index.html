@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-download   {text-align: right;margin-right:2em;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 9em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 2px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>Uganda | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/UG.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/ug_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Uganda
+                </h1>
+                <h2 itemprop="description"  >A country of  Africa</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/UG">Uganda Languages</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Maps | Info
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/UG/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/UG">
+                    <span itemprop="name">Uganda</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+
+            <div class="country-facts row">
+                <p><b>Title:</b> The Republic of Uganda </p><br>
+                <p><b>Population:</b> 44,712,143</p>
+                <p><b>Population Change:</b> 3.32</p>
+                <p><b>National Average Age:</b> 17</p>
+                <p><b>Urban Percentage:</b> 26</p>
+                <p><b>Christian Population:</b> 29,943,000</p>
+                <p><b>Christian Percentage:</b> 88.6</p>
+
+            </div>
+
+
+                        <div class="country-overview">
+                <p><b>Introduction:</b>
+                    Uganda is a landlocked country in East Africa whose diverse landscape encompasses the snow-capped Rwenzori Mountains and immense Lake Victoria. Its abundant wildlife includes chimpanzees as well as rare birds. Remote Bwindi Impenetrable National Park is a renowned mountain gorilla sanctuary. Murchison Falls National Park in the northwest is known for its 43m-tall waterfall and wildlife such as hippos.</p><br>
+                <p><b>Overview:</b>
+                    The colonial boundaries created by Britain to delimit Uganda grouped together a wide range of ethnic groups with different political systems and cultures. These differences complicated the establishment of a working political community after independence was achieved in 1962. The dictatorial regime of Idi AMIN (1971-79) was responsible for the deaths of some 300000 opponents; guerrilla war and human rights abuses under Milton OBOTE (1980-85) claimed at least another 100000 lives. The rule of Yoweri MUSEVENI since 1986 has brought relative stability and economic growth to Uganda. A constitutional referendum in 2005 cancelled a 19-year ban on multi-party politics and lifted presidential term limits.</p>
+            </div>
+                
+
+        </div>
+    </div>
+
+
+
+    <div class="medium-9">
+
+
+        <div  class="row">
+
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Government</h4>
+                    <div><a href="#gov" alt="Uganda gov Map" title="Uganda gov Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/UG-gov.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/UG-gov.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Land</h4>
+                    <div><a href="#land" alt="Uganda land Map" title="Uganda land Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/UG-land.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/UG-land.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Language Map</h4>
+                    <div><a href="#language" alt="Uganda language Map" title="Uganda language Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/UG-lang.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/UG-lang.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Location</h4>
+                    <div><a href="#location" alt="Uganda location Map" title="Uganda location Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/UG-location.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/UG-location.png" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Population</h4>
+                    <div><a href="#population" alt="Uganda population Map" title="Uganda population Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/UG-population.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/UG-population.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Reference</h4>
+                    <div><a href="#reference" alt="Uganda reference Map" title="Uganda reference Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/UG-reference.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/UG-reference.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Transportation</h4>
+                    <div><a href="#trans" alt="Uganda trans Map" title="Uganda trans Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/UG-trans.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/UG-trans.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                    </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+<div class="map-modals">
+
+            <div id="gov" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/UG-gov.jpg' />
+    </div>
+</div>            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/UG-land.jpg' />
+    </div>
+</div>            <div id="language" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/UG-lang.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/UG-location.png' />
+    </div>
+</div>            <div id="population" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/UG-population.jpg' />
+    </div>
+</div>            <div id="reference" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/UG-reference.jpg' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/UG-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+
+
+                                    let marker_ach = L.marker([3.577385, 32.514725]).addTo(mymap);
+                    marker_ach.bindPopup('<a href="/languages/ach">Acoli</a>').openPopup();
+                                                let marker_adh = L.marker([0.732350, 34.034080]).addTo(mymap);
+                    marker_adh.bindPopup('<a href="/languages/adh">Adhola</a>').openPopup();
+                                                let marker_alz = L.marker([2.362130, 31.001635]).addTo(mymap);
+                    marker_alz.bindPopup('<a href="/languages/alz">Alur</a>').openPopup();
+                                                let marker_apc = L.marker([34.170933, 36.046843]).addTo(mymap);
+                    marker_apc.bindPopup('<a href="/languages/apc">North Levantine Arabic</a>').openPopup();
+                                                let marker_bfa = L.marker([4.195225, 31.072335]).addTo(mymap);
+                    marker_bfa.bindPopup('<a href="/languages/bfa">Bari</a>').openPopup();
+                                                let marker_brf = L.marker([1.500540, 30.029320]).addTo(mymap);
+                    marker_brf.bindPopup('<a href="/languages/brf">Bera</a>').openPopup();
+                                                let marker_bxk = L.marker([0.680430, 34.771850]).addTo(mymap);
+                    marker_bxk.bindPopup('<a href="/languages/bxk">Bukusu</a>').openPopup();
+                                                let marker_cgg = L.marker([-1.043870, 29.912190]).addTo(mymap);
+                    marker_cgg.bindPopup('<a href="/languages/cgg">Chiga</a>').openPopup();
+                                                let marker_cmn = L.marker([40.020884, 116.228026]).addTo(mymap);
+                    marker_cmn.bindPopup('<a href="/languages/cmn">Mandarin Chinese</a>').openPopup();
+                                                                    let marker_eng = L.marker([53.000000, -1.000000]).addTo(mymap);
+                    marker_eng.bindPopup('<a href="/languages/eng">English</a>').openPopup();
+                                                let marker_fra = L.marker([48.000000, 2.000000]).addTo(mymap);
+                    marker_fra.bindPopup('<a href="/languages/fra">French</a>').openPopup();
+                                                let marker_gom = L.marker([15.273250, 74.209790]).addTo(mymap);
+                    marker_gom.bindPopup('<a href="/languages/gom">Goan Konkani</a>').openPopup();
+                                                let marker_guj = L.marker([22.687012, 71.096191]).addTo(mymap);
+                    marker_guj.bindPopup('<a href="/languages/guj">Gujarati</a>').openPopup();
+                                                let marker_gwr = L.marker([1.113920, 33.822650]).addTo(mymap);
+                    marker_gwr.bindPopup('<a href="/languages/gwr">Gwere</a>').openPopup();
+                                                let marker_hay = L.marker([-1.708780, 31.484600]).addTo(mymap);
+                    marker_hay.bindPopup('<a href="/languages/hay">Haya</a>').openPopup();
+                                                let marker_hin = L.marker([25.000000, 77.000000]).addTo(mymap);
+                    marker_hin.bindPopup('<a href="/languages/hin">Hindi</a>').openPopup();
+                                                let marker_ikx = L.marker([3.614070, 34.250660]).addTo(mymap);
+                    marker_ikx.bindPopup('<a href="/languages/ikx">Ik</a>').openPopup();
+                                                let marker_kam = L.marker([-1.608270, 37.953190]).addTo(mymap);
+                    marker_kam.bindPopup('<a href="/languages/kam">Kamba (Kenya)</a>').openPopup();
+                                                let marker_kbo = L.marker([3.560390, 30.555980]).addTo(mymap);
+                    marker_kbo.bindPopup('<a href="/languages/kbo">Keliko</a>').openPopup();
+                                                let marker_kcn = L.marker([-0.183215, 34.755200]).addTo(mymap);
+                    marker_kcn.bindPopup('<a href="/languages/kcn">Nubi</a>').openPopup();
+                                                let marker_kdi = L.marker([1.747480, 33.211640]).addTo(mymap);
+                    marker_kdi.bindPopup('<a href="/languages/kdi">Kumam</a>').openPopup();
+                                                let marker_kdj = L.marker([2.451570, 34.276140]).addTo(mymap);
+                    marker_kdj.bindPopup('<a href="/languages/kdj">Karamojong</a>').openPopup();
+                                                let marker_keo = L.marker([3.652333, 30.776243]).addTo(mymap);
+                    marker_keo.bindPopup('<a href="/languages/keo">Kakwa</a>').openPopup();
+                                                let marker_kik = L.marker([-0.290050, 36.719010]).addTo(mymap);
+                    marker_kik.bindPopup('<a href="/languages/kik">Kikuyu</a>').openPopup();
+                                                let marker_kin = L.marker([-1.567707, 29.644133]).addTo(mymap);
+                    marker_kin.bindPopup('<a href="/languages/kin">Kinyarwanda</a>').openPopup();
+                                                let marker_kng = L.marker([-5.577220, 14.477057]).addTo(mymap);
+                    marker_kng.bindPopup('<a href="/languages/kng">Koongo</a>').openPopup();
+                                                let marker_koo = L.marker([0.323950, 29.869620]).addTo(mymap);
+                    marker_koo.bindPopup('<a href="/languages/koo">Konzo</a>').openPopup();
+                                                let marker_kpz = L.marker([1.331970, 34.599140]).addTo(mymap);
+                    marker_kpz.bindPopup('<a href="/languages/kpz">Kupsabiny</a>').openPopup();
+                                                let marker_laj = L.marker([2.138670, 33.055270]).addTo(mymap);
+                    marker_laj.bindPopup('<a href="/languages/laj">Lango (Uganda)</a>').openPopup();
+                                                let marker_led = L.marker([2.189795, 30.679450]).addTo(mymap);
+                    marker_led.bindPopup('<a href="/languages/led">Lendu</a>').openPopup();
+                                                let marker_lgg = L.marker([3.022450, 30.864170]).addTo(mymap);
+                    marker_lgg.bindPopup('<a href="/languages/lgg">Lugbara</a>').openPopup();
+                                                let marker_lin = L.marker([1.403245, 19.782905]).addTo(mymap);
+                    marker_lin.bindPopup('<a href="/languages/lin">Lingala</a>').openPopup();
+                                                let marker_lke = L.marker([1.151300, 33.479120]).addTo(mymap);
+                    marker_lke.bindPopup('<a href="/languages/lke">Kenyi</a>').openPopup();
+                                                let marker_lsm = L.marker([0.365200, 34.033500]).addTo(mymap);
+                    marker_lsm.bindPopup('<a href="/languages/lsm">Saamia</a>').openPopup();
+                                                                    let marker_luc = L.marker([3.561430, 31.307090]).addTo(mymap);
+                    marker_luc.bindPopup('<a href="/languages/luc">Aringa</a>').openPopup();
+                                                let marker_lug = L.marker([0.668840, 32.151530]).addTo(mymap);
+                    marker_lug.bindPopup('<a href="/languages/lug">Ganda</a>').openPopup();
+                                                let marker_lul = L.marker([4.624200, 31.910310]).addTo(mymap);
+                    marker_lul.bindPopup('<a href="/languages/lul">Olu&#039;bo</a>').openPopup();
+                                                let marker_mdj = L.marker([2.551100, 27.071200]).addTo(mymap);
+                    marker_mdj.bindPopup('<a href="/languages/mdj">Mangbetu</a>').openPopup();
+                                                let marker_mhi = L.marker([3.624995, 31.847135]).addTo(mymap);
+                    marker_mhi.bindPopup('<a href="/languages/mhi">Ma&#039;di</a>').openPopup();
+                                                let marker_mxh = L.marker([0.739800, 29.665560]).addTo(mymap);
+                    marker_mxh.bindPopup('<a href="/languages/mxh">Mvuba</a>').openPopup();
+                                                let marker_myx = L.marker([1.059060, 34.282860]).addTo(mymap);
+                    marker_myx.bindPopup('<a href="/languages/myx">Masaaba</a>').openPopup();
+                                                let marker_ndp = L.marker([2.685455, 30.565245]).addTo(mymap);
+                    marker_ndp.bindPopup('<a href="/languages/ndp">Ndo</a>').openPopup();
+                                                let marker_nnb = L.marker([-0.249040, 29.024260]).addTo(mymap);
+                    marker_nnb.bindPopup('<a href="/languages/nnb">Nande</a>').openPopup();
+                                                let marker_nuj = L.marker([0.880720, 33.918120]).addTo(mymap);
+                    marker_nuj.bindPopup('<a href="/languages/nuj">Nyole</a>').openPopup();
+                                                let marker_nyn = L.marker([-0.463640, 30.548030]).addTo(mymap);
+                    marker_nyn.bindPopup('<a href="/languages/nyn">Nyankole</a>').openPopup();
+                                                let marker_nyo = L.marker([0.952940, 31.349280]).addTo(mymap);
+                    marker_nyo.bindPopup('<a href="/languages/nyo">Nyoro</a>').openPopup();
+                                                let marker_nyp = L.marker([3.499700, 33.736510]).addTo(mymap);
+                    marker_nyp.bindPopup('<a href="/languages/nyp">Nyang&#039;i</a>').openPopup();
+                                                let marker_pko = L.marker([1.570230, 35.231830]).addTo(mymap);
+                    marker_pko.bindPopup('<a href="/languages/pko">Pökoot</a>').openPopup();
+                                                let marker_rub = L.marker([2.067540, 31.481910]).addTo(mymap);
+                    marker_rub.bindPopup('<a href="/languages/rub">Gungu</a>').openPopup();
+                                                let marker_ruc = L.marker([1.417260, 32.417900]).addTo(mymap);
+                    marker_ruc.bindPopup('<a href="/languages/ruc">Ruuli</a>').openPopup();
+                                                let marker_run = L.marker([-1.441737, 31.319093]).addTo(mymap);
+                    marker_run.bindPopup('<a href="/languages/run">Rundi</a>').openPopup();
+                                                let marker_rwm = L.marker([0.812060, 30.001415]).addTo(mymap);
+                    marker_rwm.bindPopup('<a href="/languages/rwm">Amba (Uganda)</a>').openPopup();
+                                                let marker_sgm = L.marker([-0.245870, 33.899650]).addTo(mymap);
+                    marker_sgm.bindPopup('<a href="/languages/sgm">Singa</a>').openPopup();
+                                                let marker_snm = L.marker([2.873500, 31.250000]).addTo(mymap);
+                    marker_snm.bindPopup('<a href="/languages/snm">Southern Ma&#039;di</a>').openPopup();
+                                                let marker_spa = L.marker([40.441418, -1.117880]).addTo(mymap);
+                    marker_spa.bindPopup('<a href="/languages/spa">Spanish</a>').openPopup();
+                                                let marker_swh = L.marker([-8.256053, 37.624033]).addTo(mymap);
+                    marker_swh.bindPopup('<a href="/languages/swh">Swahili (Coastal)</a>').openPopup();
+                                                let marker_teo = L.marker([1.183210, 33.939385]).addTo(mymap);
+                    marker_teo.bindPopup('<a href="/languages/teo">Teso</a>').openPopup();
+                                                let marker_teu = L.marker([2.583670, 34.759540]).addTo(mymap);
+                    marker_teu.bindPopup('<a href="/languages/teu">Soo</a>').openPopup();
+                                                let marker_tlj = L.marker([0.676185, 29.949415]).addTo(mymap);
+                    marker_tlj.bindPopup('<a href="/languages/tlj">Talinga-Bwisi</a>').openPopup();
+                                                let marker_toq = L.marker([5.159040, 34.215910]).addTo(mymap);
+                    marker_toq.bindPopup('<a href="/languages/toq">Toposa</a>').openPopup();
+                                                let marker_ttj = L.marker([0.572910, 30.638870]).addTo(mymap);
+                    marker_ttj.bindPopup('<a href="/languages/ttj">Tooro</a>').openPopup();
+                                                let marker_ugn = L.marker([0.247500, 32.482900]).addTo(mymap);
+                    marker_ugn.bindPopup('<a href="/languages/ugn">Ugandan Sign Language</a>').openPopup();
+                                                let marker_xog = L.marker([0.404560, 33.394200]).addTo(mymap);
+                    marker_xog.bindPopup('<a href="/languages/xog">Soga</a>').openPopup();
+                    
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 8.5em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 3px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>Mali Language Map | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/ML.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/ml_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Mali
+                </h1>
+                <h2 itemprop="description"  >A country of  Africa</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/ML">Mali Languages</a>
+                                                                <a class="external" href="https://find.bible/countries/ML/maps">Maps | Info</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Language Map
+                                            </a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/ML">
+                    <span itemprop="name">Mali</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div  class="row">
+
+            
+            
+            
+            
+            
+            
+            
+        </div>
+
+        
+        <div class="map-img row">
+            <h4>Languages of Mali</h4>
+        </div>
+        <div id="mapid"></div>
+
+    </div>
+
+
+
+<div class="map-modals">
+
+            <div id="gov" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/ML-gov.jpg' />
+    </div>
+</div>            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/ML-land.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/ML-location.png' />
+    </div>
+</div>            <div id="population" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/ML-population.jpg' />
+    </div>
+</div>            <div id="reference" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/ML-reference.jpg' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/ML-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+        let country_locations={
+            'AD':[42.546245,1.601554],
+            'AE':[23.424076,53.847818],
+            'AF':[33.93911,67.709953],
+            'AG':[17.060816,-61.796428],
+            'AI':[18.220554,-63.068615],
+            'AL':[41.153332,20.168331],
+            'AM':[40.069099,45.038189],
+            'AN':[12.226079,-69.060087],
+            'AO':[-11.202692,17.873887],
+            'AQ':[-75.250973,-0.071389],
+            'AR':[-38.416097,-63.616672],
+            'AS':[-14.270972,-170.132217],
+            'AT':[47.516231,14.550072],
+            'AU':[-25.274398,133.775136],
+            'AW':[12.52111,-69.968338],
+            'AZ':[40.143105,47.576927],
+            'BA':[43.915886,17.679076],
+            'BB':[13.193887,-59.543198],
+            'BD':[23.684994,90.356331],
+            'BE':[50.503887,4.469936],
+            'BF':[12.238333,-1.561593],
+            'BG':[42.733883,25.48583],
+            'BH':[25.930414,50.637772],
+            'BI':[-3.373056,29.918886],
+            'BJ':[9.30769,2.315834],
+            'BM':[32.321384,-64.75737],
+            'BN':[4.535277,114.727669],
+            'BO':[-16.290154,-63.588653],
+            'BR':[-14.235004,-51.92528],
+            'BS':[25.03428,-77.39628],
+            'BT':[27.514162,90.433601],
+            'BV':[-54.423199,3.413194],
+            'BW':[-22.328474,24.684866],
+            'BY':[53.709807,27.953389],
+            'BZ':[17.189877,-88.49765],
+            'CA':[51,-95],
+            'CC':[-12.164165,96.870956],
+            'CD':[-4.038333,21.758664],
+            'CF':[6.611111,20.939444],
+            'CG':[-0.228021,15.827659],
+            'CH':[46.818188,8.227512],
+            'CI':[7.539989,-5.54708],
+            'CK':[-21.236736,-159.777671],
+            'CL':[-35.675147,-71.542969],
+            'CM':[7.369722,12.354722],
+            'CN':[35.86166,104.195397],
+            'CO':[4.570868,-74.297333],
+            'CR':[9.748917,-83.753428],
+            'CU':[21.521757,-77.781167],
+            'CV':[16.002082,-24.013197],
+            'CX':[-10.447525,105.690449],
+            'CY':[35.126413,33.429859],
+            'CZ':[49.817492,15.472962],
+            'DE':[51.165691,10.451526],
+            'DJ':[11.825138,42.590275],
+            'DK':[56.26392,9.501785],
+            'DM':[15.414999,-61.370976],
+            'DO':[18.735693,-70.162651],
+            'DZ':[28.033886,1.659626],
+            'EC':[-1.831239,-78.183406],
+            'EE':[58.595272,25.013607],
+            'EG':[26.820553,30.802498],
+            'EH':[24.215527,-12.885834],
+            'ER':[15.179384,39.782334],
+            'ES':[40.463667,-3.74922],
+            'ET':[9.145,40.489673],
+            'FI':[61.92411,25.748151],
+            'FJ':[-16.578193,179.414413],
+            'FK':[-51.796253,-59.523613],
+            'FM':[7.425554,150.550812],
+            'FO':[61.892635,-6.911806],
+            'FR':[46.227638,2.213749],
+            'GA':[-0.803689,11.609444],
+            'GB':[55.378051,-3.435973],
+            'GD':[12.262776,-61.604171],
+            'GE':[42.315407,43.356892],
+            'GF':[3.933889,-53.125782],
+            'GG':[49.465691,-2.585278],
+            'GH':[7.946527,-1.023194],
+            'GI':[36.137741,-5.345374],
+            'GL':[71.706936,-42.604303],
+            'GM':[13.443182,-15.310139],
+            'GN':[9.945587,-9.696645],
+            'GP':[16.995971,-62.067641],
+            'GQ':[1.650801,10.267895],
+            'GR':[39.074208,21.824312],
+            'GS':[-54.429579,-36.587909],
+            'GT':[15.783471,-90.230759],
+            'GU':[13.444304,144.793731],
+            'GW':[11.803749,-15.180413],
+            'GY':[4.860416,-58.93018],
+            'GZ':[31.354676,34.308825],
+            'HK':[22.396428,114.109497],
+            'HM':[-53.08181,73.504158],
+            'HN':[15.199999,-86.241905],
+            'HR':[45.1,15.2],
+            'HT':[18.971187,-72.285215],
+            'HU':[47.162494,19.503304],
+            'ID':[-0.789275,113.921327],
+            'IE':[53.41291,-8.24389],
+            'IL':[31.046051,34.851612],
+            'IM':[54.236107,-4.548056],
+            'IN':[20.593684,78.96288],
+            'IO':[-6.343194,71.876519],
+            'IQ':[33.223191,43.679291],
+            'IR':[32.427908,53.688046],
+            'IS':[64.963051,-19.020835],
+            'IT':[41.87194,12.56738],
+            'JE':[49.214439,-2.13125],
+            'JM':[18.109581,-77.297508],
+            'JO':[30.585164,36.238414],
+            'JP':[36.204824,138.252924],
+            'KE':[-0.023559,37.906193],
+            'KG':[41.20438,74.766098],
+            'KH':[12.565679,104.990963],
+            'KI':[-3.370417,-168.734039],
+            'KM':[-11.875001,43.872219],
+            'KN':[17.357822,-62.782998],
+            'KP':[40.339852,127.510093],
+            'KR':[35.907757,127.766922],
+            'KW':[29.31166,47.481766],
+            'KY':[19.513469,-80.566956],
+            'KZ':[48.019573,66.923684],
+            'LA':[19.85627,102.495496],
+            'LB':[33.854721,35.862285],
+            'LC':[13.909444,-60.978893],
+            'LI':[47.166,9.555373],
+            'LK':[7.873054,80.771797],
+            'LR':[6.428055,-9.429499],
+            'LS':[-29.609988,28.233608],
+            'LT':[55.169438,23.881275],
+            'LU':[49.815273,6.129583],
+            'LV':[56.879635,24.603189],
+            'LY':[26.3351,17.228331],
+            'MA':[31.791702,-7.09262],
+            'MC':[43.750298,7.412841],
+            'MD':[47.411631,28.369885],
+            'ME':[42.708678,19.37439],
+            'MG':[-18.766947,46.869107],
+            'MH':[7.131474,171.184478],
+            'MK':[41.608635,21.745275],
+            'ML':[17.570692,-3.996166],
+            'MM':[21.913965,95.956223],
+            'MN':[46.862496,103.846656],
+            'MO':[22.198745,113.543873],
+            'MP':[17.33083,145.38469],
+            'MQ':[14.641528,-61.024174],
+            'MR':[21.00789,-10.940835],
+            'MS':[16.742498,-62.187366],
+            'MT':[35.937496,14.375416],
+            'MU':[-20.348404,57.552152],
+            'MV':[3.202778,73.22068],
+            'MW':[-13.254308,34.301525],
+            'MX':[23.634501,-102.552784],
+            'MY':[4.210484,101.975766],
+            'MZ':[-18.665695,35.529562],
+            'NA':[-22.95764,18.49041],
+            'NC':[-20.904305,165.618042],
+            'NE':[17.607789,8.081666],
+            'NF':[-29.040835,167.954712],
+            'NG':[9.081999,8.675277],
+            'NI':[12.865416,-85.207229],
+            'NL':[52.132633,5.291266],
+            'NO':[60.472024,8.468946],
+            'NP':[28.394857,84.124008],
+            'NR':[-0.522778,166.931503],
+            'NU':[-19.054445,-169.867233],
+            'NZ':[-40.900557,174.885971],
+            'OM':[21.512583,55.923255],
+            'PA':[8.537981,-80.782127],
+            'PE':[-9.189967,-75.015152],
+            'PF':[-17.679742,-149.406843],
+            'PG':[-6.314993,143.95555],
+            'PH':[12.879721,121.774017],
+            'PK':[30.375321,69.345116],
+            'PL':[51.919438,19.145136],
+            'PM':[46.941936,-56.27111],
+            'PN':[-24.703615,-127.439308],
+            'PR':[18.220833,-66.590149],
+            'PS':[31.952162,35.233154],
+            'PT':[39.399872,-8.224454],
+            'PW':[7.51498,134.58252],
+            'PY':[-23.442503,-58.443832],
+            'QA':[25.354826,51.183884],
+            'RE':[-21.115141,55.536384],
+            'RO':[45.943161,24.96676],
+            'RS':[44.016521,21.005859],
+            'RU':[61.52401,105.318756],
+            'RW':[-1.940278,29.873888],
+            'SA':[23.885942,45.079162],
+            'SB':[-9.64571,160.156194],
+            'SC':[-4.679574,55.491977],
+            'SD':[12.862807,30.217636],
+            'SE':[60.128161,18.643501],
+            'SG':[1.352083,103.819836],
+            'SH':[-24.143474,-10.030696],
+            'SI':[46.151241,14.995463],
+            'SJ':[77.553604,23.670272],
+            'SK':[48.669026,19.699024],
+            'SL':[8.460555,-11.779889],
+            'SM':[43.94236,12.457777],
+            'SN':[14.497401,-14.452362],
+            'SO':[5.152149,46.199616],
+            'SR':[3.919305,-56.027783],
+            'ST':[0.18636,6.613081],
+            'SV':[13.794185,-88.89653],
+            'SY':[34.802075,38.996815],
+            'SZ':[-26.522503,31.465866],
+            'TC':[21.694025,-71.797928],
+            'TD':[15.454166,18.732207],
+            'TF':[-49.280366,69.348557],
+            'TG':[8.619543,0.824782],
+            'TH':[15.870032,100.992541],
+            'TJ':[38.861034,71.276093],
+            'TK':[-8.967363,-171.855881],
+            'TL':[-8.874217,125.727539],
+            'TM':[38.969719,59.556278],
+            'TN':[33.886917,9.537499],
+            'TO':[-21.178986,-175.198242],
+            'TR':[38.963745,35.243322],
+            'TT':[10.691803,-61.222503],
+            'TV':[-7.109535,177.64933],
+            'TW':[23.69781,120.960515],
+            'TZ':[-6.369028,34.888822],
+            'UA':[48.379433,31.16558],
+            'UG':[1.373333,32.290275],
+            'US':[37.09024,-95.712891],
+            'UY':[-32.522779,-55.765835],
+            'UZ':[41.377491,64.585262],
+            'VA':[41.902916,12.453389],
+            'VC':[12.984305,-61.287228],
+            'VE':[6.42375,-66.58973],
+            'VG':[18.420695,-64.639968],
+            'VI':[18.335765,-64.896335],
+            'VN':[14.058324,108.277199],
+            'VU':[-15.376706,166.959158],
+            'WF':[-13.768752,-177.156097],
+            'WS':[-13.759029,-172.104629],
+            'XK':[42.602636,20.902977],
+            'YE':[15.552727,48.516388],
+            'YT':[-12.8275,45.166244],
+            'ZA':[-30.559482,22.937506],
+            'ZM':[-13.133897,27.849332],
+            'ZW':[-19.015438,29.154857]};
+        var mymap = L.map('mapid', {
+            center: country_locations['ML'],
+            zoom: 4
+        });
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+        }).addTo(mymap);
+
+        console.log('Location:')
+        console.log(country_locations.ML)
+
+                        let marker_aqd = L.marker([14.150000, -3.550000]).addTo(mymap);
+        marker_aqd.bindPopup('<a href="/languages/aqd">Ampari Dogon</a>');
+                                let marker_bam = L.marker([12.040080, -9.989490]).addTo(mymap);
+        marker_bam.bindPopup('<a href="/languages/bam">Bambara</a>');
+                                let marker_bbo = L.marker([12.418220, -4.475375]).addTo(mymap);
+        marker_bbo.bindPopup('<a href="/languages/bbo">Northern Bobo Madaré</a>');
+                                let marker_bmq = L.marker([12.381555, -4.538000]).addTo(mymap);
+        marker_bmq.bindPopup('<a href="/languages/bmq">Bomu</a>');
+                                let marker_bof = L.marker([11.824220, -4.755240]).addTo(mymap);
+        marker_bof.bindPopup('<a href="/languages/bof">Bolon</a>');
+                                let marker_bog = L.marker([12.651000, -8.001360]).addTo(mymap);
+        marker_bog.bindPopup('<a href="/languages/bog">Bamako Sign Language</a>');
+                                let marker_boo = L.marker([15.470520, -4.256880]).addTo(mymap);
+        marker_boo.bindPopup('<a href="/languages/boo">Tiemacèwè Bozo</a>');
+                                let marker_boz = L.marker([14.122300, -5.086090]).addTo(mymap);
+        marker_boz.bindPopup('<a href="/languages/boz">Tiéyaxo Bozo</a>');
+                                let marker_bxw = L.marker([11.749710, -5.507440]).addTo(mymap);
+        marker_bxw.bindPopup('<a href="/languages/bxw">Bankagooma</a>');
+                                let marker_bze = L.marker([15.500000, -4.000000]).addTo(mymap);
+        marker_bze.bindPopup('<a href="/languages/bze">Jenaama Bozo</a>');
+                                let marker_bzx = L.marker([13.873390, -5.650850]).addTo(mymap);
+        marker_bzx.bindPopup('<a href="/languages/bzx">Kɛlɛngaxo Bozo</a>');
+                                let marker_dba = L.marker([14.811630, -3.770920]).addTo(mymap);
+        marker_dba.bindPopup('<a href="/languages/dba">Bangime</a>');
+                                let marker_dbg = L.marker([14.587190, -3.568550]).addTo(mymap);
+        marker_dbg.bindPopup('<a href="/languages/dbg">Dogul Dom Dogon</a>');
+                                                let marker_dbu = L.marker([14.906650, -3.326360]).addTo(mymap);
+        marker_dbu.bindPopup('<a href="/languages/dbu">Bondum Dom Dogon</a>');
+                                                let marker_dds = L.marker([14.340190, -3.514680]).addTo(mymap);
+        marker_dds.bindPopup('<a href="/languages/dds">Donno So Dogon</a>');
+                                let marker_dgb = L.marker([14.430000, -3.490000]).addTo(mymap);
+        marker_dgb.bindPopup('<a href="/languages/dgb">Bunoge Dogon</a>');
+                                let marker_dje = L.marker([12.855377, 2.411727]).addTo(mymap);
+        marker_dje.bindPopup('<a href="/languages/dje">Zarma</a>');
+                                let marker_djm = L.marker([14.179400, -2.579995]).addTo(mymap);
+        marker_djm.bindPopup('<a href="/languages/djm">Jamsay Dogon</a>');
+                                let marker_dmb = L.marker([14.376155, -3.664799]).addTo(mymap);
+        marker_dmb.bindPopup('<a href="/languages/dmb">Mombo Dogon</a>');
+                                let marker_dsq = L.marker([16.685000, 2.326530]).addTo(mymap);
+        marker_dsq.bindPopup('<a href="/languages/dsq">Tadaksahak</a>');
+                                let marker_dti = L.marker([14.666900, -3.116800]).addTo(mymap);
+        marker_dti.bindPopup('<a href="/languages/dti">Ana Tinga Dogon</a>');
+                                let marker_dtk = L.marker([14.067550, -3.371580]).addTo(mymap);
+        marker_dtk.bindPopup('<a href="/languages/dtk">Tene Kan Dogon</a>');
+                                let marker_dtm = L.marker([13.633135, -3.822280]).addTo(mymap);
+        marker_dtm.bindPopup('<a href="/languages/dtm">Tomo Kan Dogon</a>');
+                                                let marker_dts = L.marker([14.407490, -3.100060]).addTo(mymap);
+        marker_dts.bindPopup('<a href="/languages/dts">Toro So Dogon</a>');
+                                let marker_dtt = L.marker([15.064370, -2.224270]).addTo(mymap);
+        marker_dtt.bindPopup('<a href="/languages/dtt">Toro Tegu Dogon</a>');
+                                let marker_dtu = L.marker([14.660000, -3.100000]).addTo(mymap);
+        marker_dtu.bindPopup('<a href="/languages/dtu">Tebul Ure Dogon</a>');
+                                let marker_dux = L.marker([10.923440, -5.858720]).addTo(mymap);
+        marker_dux.bindPopup('<a href="/languages/dux">Duungooma</a>');
+                                let marker_dym = L.marker([14.630000, -3.150000]).addTo(mymap);
+        marker_dym.bindPopup('<a href="/languages/dym">Yanda Dom Dogon</a>');
+                                let marker_dyu = L.marker([10.453640, -4.720073]).addTo(mymap);
+        marker_dyu.bindPopup('<a href="/languages/dyu">Dyula</a>');
+                                let marker_emk = L.marker([9.330483, -10.539400]).addTo(mymap);
+        marker_emk.bindPopup('<a href="/languages/emk">Eastern Maninkakan</a>');
+                                let marker_eng = L.marker([53.000000, -1.000000]).addTo(mymap);
+        marker_eng.bindPopup('<a href="/languages/eng">English</a>');
+                                let marker_ffm = L.marker([11.132407, -3.647633]).addTo(mymap);
+        marker_ffm.bindPopup('<a href="/languages/ffm">Maasina Fulfulde</a>');
+                                let marker_fra = L.marker([48.000000, 2.000000]).addTo(mymap);
+        marker_fra.bindPopup('<a href="/languages/fra">French</a>');
+                                let marker_fuc = L.marker([13.869355, -13.448212]).addTo(mymap);
+        marker_fuc.bindPopup('<a href="/languages/fuc">Pulaar</a>');
+                                let marker_fuf = L.marker([12.182612, -12.733800]).addTo(mymap);
+        marker_fuf.bindPopup('<a href="/languages/fuf">Pular</a>');
+                                let marker_hmb = L.marker([15.294810, -1.693010]).addTo(mymap);
+        marker_hmb.bindPopup('<a href="/languages/hmb">Humburi Senni Songhay</a>');
+                                let marker_jad = L.marker([11.539900, -12.726175]).addTo(mymap);
+        marker_jad.bindPopup('<a href="/languages/jad">Jahanka</a>');
+                                let marker_jow = L.marker([10.769120, -5.478730]).addTo(mymap);
+        marker_jow.bindPopup('<a href="/languages/jow">Jowulu</a>');
+                                let marker_kao = L.marker([14.214660, -13.805095]).addTo(mymap);
+        marker_kao.bindPopup('<a href="/languages/kao">Xaasongaxango</a>');
+                                let marker_kfz = L.marker([14.045990, -1.961870]).addTo(mymap);
+        marker_kfz.bindPopup('<a href="/languages/kfz">Koromfé</a>');
+                                let marker_khq = L.marker([16.192020, -3.739620]).addTo(mymap);
+        marker_khq.bindPopup('<a href="/languages/khq">Koyra Chiini Songhay</a>');
+                                let marker_knz = L.marker([13.610570, -3.100330]).addTo(mymap);
+        marker_knz.bindPopup('<a href="/languages/knz">Kalamsé</a>');
+                                let marker_mey = L.marker([20.146440, -2.402780]).addTo(mymap);
+        marker_mey.bindPopup('<a href="/languages/mey">Hassaniyya</a>');
+                                let marker_mlq = L.marker([13.567710, -12.800880]).addTo(mymap);
+        marker_mlq.bindPopup('<a href="/languages/mlq">Western Maninkakan</a>');
+                                let marker_mos = L.marker([10.452370, -1.172775]).addTo(mymap);
+        marker_mos.bindPopup('<a href="/languages/mos">Mossi</a>');
+                                let marker_mwk = L.marker([13.179800, -9.491510]).addTo(mymap);
+        marker_mwk.bindPopup('<a href="/languages/mwk">Kita Maninkakan</a>');
+                                let marker_myk = L.marker([12.487140, -5.282450]).addTo(mymap);
+        marker_myk.bindPopup('<a href="/languages/myk">Mamara Senoufo</a>');
+                                                let marker_nzz = L.marker([14.490000, -3.020000]).addTo(mymap);
+        marker_nzz.bindPopup('<a href="/languages/nzz">Nanga Dama Dogon</a>');
+                                let marker_pnq = L.marker([13.350055, -3.366850]).addTo(mymap);
+        marker_pnq.bindPopup('<a href="/languages/pnq">Pana (Burkina Faso)</a>');
+                                let marker_rkm = L.marker([12.717835, -3.583550]).addTo(mymap);
+        marker_rkm.bindPopup('<a href="/languages/rkm">Marka</a>');
+                                let marker_seb = L.marker([10.486730, -6.371290]).addTo(mymap);
+        marker_seb.bindPopup('<a href="/languages/seb">Shempire Senoufo</a>');
+                                let marker_sep = L.marker([11.178905, -5.289320]).addTo(mymap);
+        marker_sep.bindPopup('<a href="/languages/sep">Sìcìté Sénoufo</a>');
+                                let marker_ses = L.marker([16.963380, -0.551870]).addTo(mymap);
+        marker_ses.bindPopup('<a href="/languages/ses">Koyraboro Senni Songhai</a>');
+                                let marker_shz = L.marker([10.595380, -5.858100]).addTo(mymap);
+        marker_shz.bindPopup('<a href="/languages/shz">Syenara Senoufo</a>');
+                                let marker_sif = L.marker([10.998020, -4.921430]).addTo(mymap);
+        marker_sif.bindPopup('<a href="/languages/sif">Siamou</a>');
+                                let marker_snk = L.marker([13.127263, -11.717780]).addTo(mymap);
+        marker_snk.bindPopup('<a href="/languages/snk">Soninke</a>');
+                                let marker_sos = L.marker([11.128520, -4.582030]).addTo(mymap);
+        marker_sos.bindPopup('<a href="/languages/sos">Seeku</a>');
+                                let marker_spp = L.marker([11.632010, -5.877090]).addTo(mymap);
+        marker_spp.bindPopup('<a href="/languages/spp">Supyire Senoufo</a>');
+                                let marker_stj = L.marker([13.102710, -3.251280]).addTo(mymap);
+        marker_stj.bindPopup('<a href="/languages/stj">Matya Samo</a>');
+                                let marker_taq = L.marker([14.203840, -2.412690]).addTo(mymap);
+        marker_taq.bindPopup('<a href="/languages/taq">Tamasheq</a>');
+                                let marker_tde = L.marker([14.760000, -3.700000]).addTo(mymap);
+        marker_tde.bindPopup('<a href="/languages/tde">Tiranige Diga Dogon</a>');
+                                                let marker_tst = L.marker([15.262989, -2.816163]).addTo(mymap);
+        marker_tst.bindPopup('<a href="/languages/tst">Tondi Songway Kiini</a>');
+                                                let marker_ttq = L.marker([13.987830, 4.476920]).addTo(mymap);
+        marker_ttq.bindPopup('<a href="/languages/ttq">Tawallammat Tamajaq</a>');
+                                let marker_wol = L.marker([15.253360, -15.382973]).addTo(mymap);
+        marker_wol.bindPopup('<a href="/languages/wol">Wolof</a>');
+                                let marker_xkg = L.marker([14.054640, -9.964040]).addTo(mymap);
+        marker_xkg.bindPopup('<a href="/languages/xkg">Kagoro</a>');
+                                let marker_yal = L.marker([9.971855, -11.283565]).addTo(mymap);
+        marker_yal.bindPopup('<a href="/languages/yal">Yalunka</a>');
+                
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

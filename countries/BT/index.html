@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Bhutan | Find a Bible</title>
+    <style>
+        .country-aside      {padding: .2em 1.2em .5em 1.2em;}
+        .country-aside p    {font-size: .8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin: .25em auto 1em auto;}
+        .country-persecution {background:url("https://images.bible.cloud/fab/logos/odi_gray_logo.svg") no-repeat 95% 10%/ 33px 26px;
+                            border: thin solid #d7d7d7; border-width: 1px 0 1px 0; margin-bottom: .5em;}
+        .country-facts      {margin: 0 0 .5em 0;}
+        .country-links      {margin-top: .75em; padding-top: .5em;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: .5em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .link-icon              {width: 1.5em; height: 1.5em;margin-left:.5em;}
+        th h6                                  {font-size: .7em; font-weight: normal;line-height:.9em; margin:.2em 0 0 0 ; text-transform: none}
+        .dataTable tr td:nth-child(2)       {max-width:120px;text-align:right;}
+        .dataTable tr td:nth-child(3)       {width:80px;text-align:center;}
+        .dataTable tr td:nth-child(4), .dataTable tr td:nth-child(5), .dataTable tr td:nth-child(6)      {width:90px;text-align:center;}
+        #banner .banner-flag {margin: 0 .5em 0 0;}
+    </style>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+    </style
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-flag " src="https://images.bible.cloud/flags/bt.svg" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Bhutan
+                </h1>
+                <h2 itemprop="description"  >A country of  Asia</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Languages
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/BT/maps">Bhutan Maps | Info</a>
+                                                                <a class="external" href="https://find.bible/countries/BT/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Bhutan</span>
+                    <meta itemprop="position" content="3" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+            <img class="country-location" src="https://images.bible.cloud/maps/country/BT-location.png" alt="Bhutan Find a Bible" />
+            <div class="country-facts row">
+                <p><b>Population:</b> 857,423</p>
+                <p><b>Official Language:</b> Dzongkha</p>
+                <p><b>Language Count:</b> <span class="num-badge">55</span></p>
+                <p><b>Primary Religion:</b> Buddhism</p>
+                
+            </div>
+
+            <div class="country-links">
+                <p><b>Reference Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/BT" alt="Find a Bible Bhutan">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://en.wikipedia.org/wiki/Bhutan" alt="Wikipedia - Bhutan">
+                            <img src="http://images.bible.cloud/wiki_type_logo.svg" title="Wikipedia" />
+                            <p>Wikipedia</p></a>
+                    </div>
+
+
+
+                                            <div><a target="_blank" href="https://www.cia.gov/the-world-factbook/countries/bhutan/" alt="World Fact Book - Bhutan">
+                                <img src="http://images.bible.cloud/logo_type_cia.svg" title="World Fact Book" />
+                                <p>WorldFact<br />Book</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="http://hdr.undp.org/en/countries/profiles/BTN" alt="Human Development - Bhutan">
+                                <img src="http://images.bible.cloud/logo_type_united_nations.svg" title="Human Development" />
+                                <p>Human<br />Develop.</p></a>
+                        </div>
+                    
+
+                                            <div><a target="_blank" href="https://www.state.gov/countries-areas/bhutan/" alt="Religious Freedom - Bhutan">
+                                <img src="http://images.bible.cloud/logo_type_dept_state.svg" title="Religious Freedom" />
+                                <p>Religious<br />Freedom</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://www.britannica.com/place/Bhutan" alt="Britannica - Bhutan">
+                                <img src="http://images.bible.cloud/logo_type_britannica.svg" title="Britannica" />
+                                <p>Britannica</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+                            <p><b>Factbook Summary:</b>
+                    <a href="https://images.bible.cloud/maps/summary/BT-summary.pdf" target="_blank"  alt="World Fact Book Bhutan">
+                        <img class="pdf-icon" src="http://images.bible.cloud/icon/pdf_icon.svg" title="Country Summary" /></a></p>
+            
+
+                        <div class="country-persecution">
+                    <p>Persecution: </p>
+                    <p><b>WatchList Rank: </b><span class="num-badge-red">43</span></p>
+                    <p><b>WatchList Page: </b> <a href="https://www.opendoorsusa.org/christian-persecution/world-watch-list/bhutan/" target="_blank" > Bhutan</a></p>
+                    <p><b>Type: </b>Religious Nationalism</p>
+                </div>
+        
+
+
+            <div class="country-links">
+                <p><b>Mission / Prayer Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/BT" alt="Find a Bible Bhutan">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://www.joshuaproject.net/countries/BT" alt="Joshua Project - Bhutan">
+                            <img src="http://images.bible.cloud/joshua_type_logo.svg" title="Joshua Project" />
+                            <p>Joshua<br />Project</p></a>
+                    </div>
+
+                    
+
+
+                                            <div><a target="_blank" href="https://operationworld.org/locations/bhutan" alt="Operation World - Bhutan">
+                                <img src="http://images.bible.cloud/logo_type_ow.svg" title="Operation World" />
+                                <p>Operation<br />World</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://prayercast.com/bhutan.html" alt="PrayerCasts - Bhutan">
+                                <img src="http://images.bible.cloud/prayercast_type_logo.svg" title="PrayerCast" />
+                                <p>PrayerCast</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://curlie.org/Regional/Asia/Bhutan" alt="ODP Database - Bhutan">
+                                <img src="http://images.bible.cloud/logo_type_odp.svg" title="Open Directory Project" />
+                                <p>Open<br />Directory</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+
+
+            <div class="country-overview">
+                    <p><b>Language Summary:</b>
+                        Sharchhopka 28%, Dzongkha (official) 24%, Lhotshamkha 22%, other 26% (includes foreign languages) (2005 est.)</p>
+                </div>
+
+                <div class="country-overview">
+                    <p><b>Ethnic Summary:</b>
+                        Ngalop (also known as Bhote) 50%, ethnic Nepali 35% (predominantly Lhotshampas), indigenous or migrant tribes 15%</p>
+                </div>
+
+
+
+
+            <div class="country-overview">
+                <p><b>Religious Summary:</b>
+                    Lamaistic Buddhist 75.3%, Indian- and Nepali-influenced Hinduism 22.1%, other 2.6% (2005 est.)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="medium-9">
+        <table id="languages" class="table responsive" cellspacing="0" width="100%"
+               data-json='{&quot;data&quot;:[{&quot;id&quot;:&quot;adi&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Adi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Abo tani&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,760&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:29},{&quot;id&quot;:&quot;asm&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Assamese&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0985\u09b8\u09ae\u09c0\u09af\u09bc\u09be&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;26,200&quot;,&quot;bc&quot;:5,&quot;fc&quot;:4,&quot;rc&quot;:3},{&quot;id&quot;:&quot;bap&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bantawa&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;Bantaba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;19,200&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;ben&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bengali&quot;,&quot;ci&quot;:&quot;BD&quot;,&quot;cn&quot;:&quot;Bangladesh&quot;,&quot;tv&quot;:&quot;\u09ac\u09be\u0982\u09b2\u09be&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;20,000&quot;,&quot;bc&quot;:17,&quot;fc&quot;:35,&quot;rc&quot;:104},{&quot;id&quot;:&quot;bod&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Tibetan&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;\u0f56\u0f7c\u0f51\u0f0b\u0f66\u0f90\u0f51\u0f0b&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,450&quot;,&quot;bc&quot;:6,&quot;fc&quot;:7,&quot;rc&quot;:23},{&quot;id&quot;:&quot;bro&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Brokkat&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Brokskad&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;300&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;cgk&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Chocangacakha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Tsamang&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;20,330&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;dka&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Dakpakha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Tawang Monpa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;dzl&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Dzalakha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Dzala &#039;Mat&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;16,680&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;dzo&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Dzongkha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Bhutanese&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;306,650&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;eng&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;English&quot;,&quot;ci&quot;:&quot;GB&quot;,&quot;cn&quot;:&quot;United Kingdom&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;100&quot;,&quot;bc&quot;:244,&quot;fc&quot;:29,&quot;rc&quot;:314},{&quot;id&quot;:&quot;goe&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Gongduk&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Gongdukpa Ang\u0f51\u0f42\u0f7c\u0f44\u0f0b\u0f60\u0f51\u0f74\u0f66\u0f0b&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,460&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kbg&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Khamba&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Kham-Hor&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,680&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kjz&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Bumthangkha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Bhumtam&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;22,590&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kru&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kurukh&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot; Oraon&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,000&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:33},{&quot;id&quot;:&quot;lep&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Lepcha&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u1c1b\u1c29\u1c35\u1c1b\u1c27\u1c35\u1c36&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,900&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;lhp&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Lhokpu&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Lhobikha&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,460&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;lkh&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Lakha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;\u0f63\u0f0b\u0f41\u0f0b&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,620&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;luk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Lunanakha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;\u0f63\u0f74\u0f44\u0f0b\u0f53\u0f42\u0f0b\u0f53\u0f0b\u0f41\u0f0b&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,220&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;lya&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Layakha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;\u0f63\u0f0b\u0f61\u0f0b\u0f41\u0f0b&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,480&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;neh&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Nyenkha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Henkha&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;12,640&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nep&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Nepali&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot;\u0928\u0947\u092a\u093e\u0932\u0940&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;265,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:6,&quot;rc&quot;:77},{&quot;id&quot;:&quot;npb&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Nupbikha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Trongsakha&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,010&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;npi&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Nepali&quot;,&quot;ci&quot;:&quot;NP&quot;,&quot;cn&quot;:&quot;Nepal&quot;,&quot;tv&quot;:&quot; Nepalese&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;33,000&quot;,&quot;bc&quot;:5,&quot;fc&quot;:3,&quot;rc&quot;:108},{&quot;id&quot;:&quot;ole&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Olekha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot; Monkha&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;520&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;sat&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Santali&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u1c65\u1c5f\u1c71\u1c5b\u1c5f\u1c72\u1c64&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,300&quot;,&quot;bc&quot;:2,&quot;fc&quot;:4,&quot;rc&quot;:40},{&quot;id&quot;:&quot;sdp&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Sherdukpen&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Mey&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;240&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;sgt&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Brokpake&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,200&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;sjl&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Sajalong&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;Dhammai&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;280&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;tgf&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Chalikha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;\u0f5a\u0f0b\u0f63\u0f72\u0f0b\u0f41&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,790&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tsj&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Tshangla&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot;Sharchop&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;167,380&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:9},{&quot;id&quot;:&quot;tsk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tseku&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;Tsuku&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,590&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;xkf&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Khengkha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot; \u0fa8\u0f55\u0f42\u0f63\u0f54\u0f58\u0f55&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;65,160&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;xkz&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kurtokha&quot;,&quot;ci&quot;:&quot;BT&quot;,&quot;cn&quot;:&quot;Bhutan&quot;,&quot;tv&quot;:&quot; Zh\u00e2ke&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;15,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2}]}'
+               data-searchplaceholder="Filter Items on this Page">
+            <thead>
+            <tr>
+                <th data-column-name="tt" data-link="id" data-path="/languages">Languages<h6>in Bhutan</h6></th>
+                <th data-column-name="po" data-sort-default="desc">Population<h6>Primary Language</h6></th>
+                <th data-column-name="id">iso</th>
+                <th data-column-name="bc">Bible<h6>Versions</h6></th>
+                <th data-column-name="fc">Films</th>
+                <th data-column-name="rc">Resources</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

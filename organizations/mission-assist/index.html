@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <style>
+        #banner         {margin-bottom: 2em; text-align: center;}
+        .count {background-color: var(--primary-color);width: 2.7em; color: #fff;border-radius: 16px; margin: 0 3px 0 9px; font-size:.8em; padding:3px; text-decoration: none;}
+        aside.org-info       {margin: 1em auto;padding: 0 2em;}
+        div.logo           { width: 100%;margin-bottom: 1em; padding: 0 .5em;}
+        .social-links   {text-align: center;margin-bottom: 2em;}
+        .social-links a {font-size: 1.5em; padding:0 .25em;}
+        address         {font-size: .72em; display: inline-flex;align-items: center;justify-content: center;flex-direction: column; font-style:normal;
+            margin-bottom:2em;}
+        address b       {margin-top: 1rem;}
+        address .add      {text-indent: 1em; display: inline-block; }
+        #subheader nav[role=tablist] a[aria-selected=true] {border-radius: 10px 10px 0 0; color: #000;}
+        .count {background-color: var(--primary-color);width: 2.7em; color: #fff;border-radius: 16px; margin: 0 3px 0 9px; font-size:.8em; padding:3px; text-decoration: none;}
+    </style>
+    <title>MissionAssist | Find a Bible</title>
+    <style>
+        .nav-agencies                        {color: var(--primary-color)!important}
+        .banner-image img                    {filter: grayscale(1)}
+        .banner.gradient .banner-image:after {opacity: .85;background: linear-gradient(to right, #1C2F70, #009774)}
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/agencies/mission-assist.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Agencies Pages</h3>
+                <p>As a service to the Forum of Bible Agencies and the many Bible agencies of the world, these pages are added to allow quick identification of which of their resources are discoverable in Find-A-Bible, and where they are being shared by other sites.</p>
+                <p>Listed from the FOBAI tab are the members of the Forum of Bible Agencies International. The second tab lists all the agencies included in the Find-A-Bible database.</p>
+                <p>Doubtless, many agencies will discover that we have missed some of their resources. For which, we apologize in advance. For those, you will find a submission page under the ABOUT link on the top menu. Let us know what you have and where it can be accessed and we will add those as we are able.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #3: Our missions agency is seeking to create content for and partner with agencies working in Africa.</p>
+                <ol>
+                <li>There are a number of functions that may be of assistance here. From the top menu select LANGUAGES. From the sidebar you can filter by Continent.  Select Africa. </li>
+                <li>The languages of Africa are sorted by Bible Content, but by clicking the arrows on Population, you can see the population of each language - showing the most populous languages of Africa.</li>
+                <li>You can also sort by Country and to see the languages for each Country. From there you can click on each country or each language to explore more possibilities.</li>
+                <li>From the top menu select AGENCIES, then select the Agencies tab to view the organizations listed in Find.Bible. In the filter box on the left, select Africa to see the African based organizations working in the Bible world.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                            <svg class="banner-icon icon  banner-icon  "><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_groups"></use></svg>
+                                                                </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    MissionAssist
+                </h1>
+                <h2 itemprop="description"  ></h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                               controls="bibles" href="#bibles">Bibles <span class="tab-badge">2</span>
+                                            </a>
+                                                                </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/organizations">
+                    <span itemprop="name">Agencies</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">MissionAssist</span>
+                    <meta itemprop="position" content="3" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+                <div class="row">
+    <aside class="medium-3 small-hide org-info">
+        <div>
+            <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 291.1 145.2">
+  <defs>
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h291v145.1H0z"/>
+    </clipPath>
+  </defs>
+  <path d="M3.8 74.3h4l10.6 16 .6.9.5.8.5.7.4.7.8 1.2.7 1.2h.1l.8-1.2.8-1.4.4-.7.5-.7.5-.9.5-.8 10-15.8h4v38.1h-4.2V81.5l-.7 1.2-.7 1.2-.7 1.2-.4.5-.3.5-9.4 15H21L10.7 85.8l-.7-1-.7-1-.7-1.1-.5-1.1h-.2v.7l.1.8v29.3H3.9v-38z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M3.3 73.8H40V113H3.3z" clip-path="url(#a)" fill="none"/>
+  <path d="M45.6 76v-.5l.2-.6.2-.5.4-.4.4-.3.5-.3.5-.2h1.3l.5.2.5.2.4.4.4.4.2.5.2.5v1.2l-.2.6-.3.5-.3.4-.4.3-.5.3-.6.1h-1.2l-.5-.1-.5-.3-.4-.3-.4-.4-.2-.5-.2-.6V76zm.7 9h4.2v27.4h-4.2V85.1z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M45 72.6h7V113h-7z" clip-path="url(#a)" fill="none"/>
+  <path d="m56.8 107.3.6.4.7.4.8.3.8.3.8.3 1 .2 1 .1h2.3l1.1-.2 1-.3.9-.4.6-.6.3-.4.3-.4.2-.5.2-.4V104l-.2-.5-.3-.4-.3-.4-.3-.4-.8-.6-1-.6-1-.5-2.4-1L62 99l-1.1-.6-1.1-.8-1-.8-.4-.4-.4-.5-.3-.6-.3-.6-.3-.7-.1-.6-.1-.8v-2.3l.3-.7.2-.7.3-.7.5-.6.4-.6.6-.5.6-.5.7-.5.8-.3.7-.3 1-.3 1-.2 1-.1h3l1.8.3 1.6.5 1.4.4v3.8l-1.4-.6-1.6-.5-.8-.2-.9-.1h-.9l-1-.1h-1l-.9.2-.9.2-.7.4-.7.5-.3.3-.3.3-.1.5-.2.4v.5l-.1.5v.5l.1.5.2.5.3.4.2.4.4.4.8.6 1 .6 1 .5 2.5 1 1.2.6 1.1.6 1.1.7 1 .8.4.5.4.5.4.6.2.6.3.6.2.7v.8l.1.8v1l-.2 1-.2.8-.4.8-.4.7-.5.7-.6.6-.7.5-.7.5-.8.4-.8.3-1 .3-.8.2-1 .2h-1l-1 .1h-1.4l-1.2-.2-1.2-.2-1-.4-1-.3-1-.4-.7-.5-.8-.4 1.4-3.3z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M55 83.8h19.4v29.8H54.9z" clip-path="url(#a)" fill="none"/>
+  <path d="m77.9 107.3.6.4.6.4.8.3.8.3.9.3 1 .2 1 .1h2.2l1.1-.2 1-.3.9-.4.7-.6.3-.4.2-.4.2-.5.2-.4V104l-.2-.5-.2-.4-.3-.4-.4-.4-.8-.6-1-.6-1-.5-2.4-1L83 99l-1.1-.6-1.1-.8-1-.8-.4-.4-.4-.5-.3-.6-.3-.6-.3-.7-.1-.6-.1-.8V91l.1-.7.2-.7.2-.7.4-.7.4-.6.5-.6.5-.5.6-.5.7-.5.8-.3.8-.3.9-.3 1-.2 1-.1h3l1.8.3 1.6.5 1.4.4v3.8l-1.4-.6-1.6-.5-.8-.2-.9-.1h-.9l-1-.1h-1l-.9.2-.8.2-.8.4-.7.5-.3.3-.2.3-.2.5-.2.4v.5l-.1.5v.5l.2.5.1.5.3.4.2.4.4.4.8.6 1 .6 1 .5 2.5 1 1.1.6 1.2.6 1.1.7 1 .8.4.5.4.5.4.6.2.6.3.6.1.7.2.8v1.8l-.2 1-.3.8-.3.8-.4.7-.5.7-.6.6-.7.5-.7.5-.8.4-.8.3-1 .3-.8.2-1 .2h-1l-1 .1h-1.4l-1.2-.2-1.1-.2-1.1-.4-1-.3-1-.4-.7-.5-.7-.4 1.4-3.3z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M76 83.8h19.4v29.8H75.9z" clip-path="url(#a)" fill="none"/>
+  <path d="M98.5 76v-.5l.3-.6.2-.5.3-.4.4-.3.5-.3.6-.2h1.2l.5.2.6.2.4.4.3.4.3.5.1.5v1.2l-.1.6-.3.5-.4.4-.4.3-.5.3-.5.1h-1.2l-.6-.1-.5-.3-.4-.3-.3-.4-.2-.5-.2-.6V76zm.8 9h4.2v27.4h-4.2V85.1z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M98 72.6h6.8V113H98z" clip-path="url(#a)" fill="none"/>
+  <path d="m107.8 98.7.1-1.5.2-1.4.2-1.4.4-1.3.5-1.3.6-1.2.7-1 .8-1 .8-1 1-.8 1-.7 1.1-.6 1.2-.5 1.3-.3 1.4-.3h2.8l1.3.3 1.3.3 1.2.5 1 .6 1.1.7 1 .8.8 1 .8 1 .7 1 .6 1.2.5 1.3.4 1.3.3 1.4.1 1.4.1 1.5v1.5l-.2 1.4-.3 1.4-.4 1.3-.5 1.2-.6 1.2-.7 1.1-.8 1-.8 1-1 .8-1 .7-1.2.6-1.2.5-1.2.3-1.4.2-1.4.1H119l-1.3-.3-1.3-.3-1.2-.5-1.1-.6-1-.7-1-.8-.8-1-.8-1-.7-1-.6-1.3-.5-1.2-.4-1.3-.2-1.4-.2-1.4v-1.5zm20.8 0v-1.2l-.1-1-.2-1.1-.2-1-.4-1-.3-.9-.5-.8-.5-.7-.5-.7-.6-.6-.7-.5-.7-.4-.8-.4-.8-.2-.9-.2h-1.9l-.8.2-.9.2-.7.4-.8.4-.7.5-.6.6-.6.7-.5.7-.4.8-.4.9-.3 1-.2 1-.2 1-.1 1.1v3.4l.3 1 .2 1 .3 1 .4.9.4.8.5.7.6.7.6.6.7.5.7.4.8.4.8.2 1 .2h1.8l.8-.2.8-.2.8-.4.7-.4.7-.5.6-.6.6-.7.5-.7.4-.8.4-.9.4-1 .2-1 .2-1v-1l.1-1.2z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M107.3 83.8h26.4v29.8h-26.4z" clip-path="url(#a)" fill="none"/>
+  <path d="M137.2 85h3.6l.6 3.6 1-1 1.2-.7 1.2-.8 1.1-.6 1.2-.5 1.2-.3 1.3-.3h2.9l.8.3.7.2.7.3.7.4.6.5.6.5.5.6.5.7.4.8.4.9.3 1 .2 1 .1 1.1v19.7h-4.2V93.9l-.2-1.4-.3-1.2-.2-.6-.3-.4-.3-.5-.4-.4-.4-.4-.4-.3-.5-.2-.6-.2h-.6l-.7-.1h-1.1l-1.1.3-1.1.4-1 .5-1.1.6-1 .7-1 .7-1 .9v20.1h-4.3V85z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M136.7 83.8h23V113h-23z" clip-path="url(#a)" fill="none"/>
+  <path d="M177.4 74.2h2.8l14.7 38.2h-4.6l-3.9-10.2h-15.2l-3.8 10.2H163l14.5-38.2zm7.7 24.4-4-11-.4-1.2-.3-1-.4-1-.2-.8-.3-.8-.2-.6-.4-1.2h-.1l-.4 1.2-.2.6-.3.8-.3.8-.3 1-.4 1-.4 1.2-4 11h12.6z" clip-path="url(#a)" fill="#00926f" fill-rule="evenodd"/>
+  <path d="M162.4 73.7h33V113h-33z" clip-path="url(#a)" fill="none"/>
+  <path d="m198 107.3.6.4.7.4.7.3.8.3.9.3 1 .2 1 .1h2.2l1.1-.2 1-.3.9-.4.7-.6.3-.4.2-.4.2-.5.2-.4v-.5l.1-.6v-.5l-.2-.5-.1-.5-.2-.4-.3-.4-.4-.4-.8-.6-1-.6-1-.5-2.4-1-1.2-.5-1.1-.6-1-.8-1-.8-.5-.4-.4-.5-.3-.6-.3-.6-.2-.7-.2-.6-.1-.8v-1.6l.1-.7.2-.7.3-.7.3-.7.4-.6.5-.6.5-.5.6-.5.7-.5.8-.3.8-.3.9-.3 1-.2 1-.1h3l1.8.3 1.6.5 1.4.4v3.8l-1.4-.6-1.5-.5-.9-.2-.8-.1h-1l-1-.1h-1l-.9.2-.8.2-.8.4-.7.5-.3.3-.2.3-.2.5-.2.4v2l.2.5.3.4.2.4.4.4.8.6 1 .6 1.1.5 2.4 1 1.2.6 1.1.6 1.1.7 1 .8.4.5.4.5.4.6.2.6.3.6.2.7v.8l.1.8v1l-.2 1-.2.8-.4.8-.4.7-.5.7-.6.6-.6.5-.8.5-.8.4-.8.3-.9.3-.9.2-1 .2h-1l-1 .1h-1.3l-1.3-.2-1.1-.2-1.1-.4-1-.3-1-.4-.7-.5-.7-.4 1.4-3.3z" clip-path="url(#a)" fill="#00926f" fill-rule="evenodd"/>
+  <path d="M196 83.8h19.5v29.8H196z" clip-path="url(#a)" fill="none"/>
+  <path d="m219.1 107.3.6.4.7.4.7.3.8.3.9.3 1 .2 1 .1h2.3l1-.2 1-.3 1-.4.6-.6.3-.4.3-.4.2-.5.1-.4v-.5l.1-.6v-.5l-.1-.5-.2-.5-.2-.4-.3-.4-.3-.4-.9-.6-1-.6-1-.5-2.3-1-1.2-.5-1.2-.6-1-.8-1-.8-.5-.4-.3-.5-.4-.6-.3-.6-.2-.7-.2-.6v-.8l-.1-.8V91l.1-.7.2-.7.3-.7.3-.7.4-.6.5-.6.5-.5.6-.5.7-.5.8-.3.8-.3 1-.3.9-.2 1-.1h3l1.8.3 1.6.5 1.5.4v3.8l-1.5-.6-1.5-.5-.8-.2-1-.1h-.8l-1-.1h-1l-1 .2-.8.2-.8.4-.7.5-.3.3-.2.3-.2.5-.1.4-.1.5v1.5l.2.5.3.4.3.4.3.4.8.6 1 .6 1.1.5 2.4 1 1.2.6 1.1.6 1.1.7 1 .8.4.5.5.5.3.6.3.6.2.6.2.7v.8l.1.8v1l-.2 1-.2.8-.4.8-.4.7-.5.7-.6.6-.6.5-.8.5-.7.4-.9.3-.9.3-.9.2-1 .2h-1l-1 .1h-1.3l-1.3-.2-1.1-.2-1.1-.4-1-.3-.9-.4-.8-.5-.7-.4 1.4-3.3z" clip-path="url(#a)" fill="#00926f" fill-rule="evenodd"/>
+  <path d="M217.2 83.8h19.4v29.8h-19.4z" clip-path="url(#a)" fill="none"/>
+  <path d="M239.4 76v-.5l.2-.6.2-.5.4-.4.4-.3.5-.3.5-.2h1.2l.6.2.5.2.4.4.3.4.3.5.2.5v1.2l-.2.6-.3.5-.3.4-.4.3-.5.3-.6.1h-1.2l-.5-.1-.5-.3-.4-.3-.4-.4-.2-.5-.2-.6V76zm.7 9h4.2v27.4h-4.2V85.1z" clip-path="url(#a)" fill="#00926f" fill-rule="evenodd"/>
+  <path d="M238.8 72.6h6.9V113h-6.9z" clip-path="url(#a)" fill="none"/>
+  <path d="m250.6 107.3.6.4.7.4.7.3.8.3.9.3 1 .2 1 .1h2.3l1-.2 1-.3 1-.4.6-.6.3-.4.3-.4.1-.5.2-.4v-.5l.1-.6v-.5l-.1-.5-.2-.5-.2-.4-.3-.4-.4-.4-.8-.6-1-.6-1-.5-2.3-1-1.3-.5-1-.6-1.2-.8-1-.8-.4-.4-.4-.5-.3-.6-.3-.6-.2-.7-.2-.6v-.8l-.1-.8V91l.1-.7.2-.7.3-.7.3-.7.4-.6.5-.6.5-.5.6-.5.7-.5.8-.3.8-.3.9-.3 1-.2 1-.1h3l1.8.3 1.6.5 1.5.4v3.8l-1.5-.6-1.5-.5-.9-.2-.8-.1h-1l-1-.1h-.9l-1 .2-.8.2-.8.4-.7.5-.3.3-.2.3-.2.5-.2.4v2l.2.5.3.4.3.4.3.4.8.6 1 .6 1.1.5 2.4 1 1.2.6 1.1.6 1.1.7 1 .8.4.5.4.5.4.6.2.6.3.6.2.7v.8l.1.8v1l-.2 1-.2.8-.4.8-.4.7-.5.7-.6.6-.6.5-.8.5-.7.4-.9.3-.9.3-.9.2-1 .2h-1l-1 .1H256l-1.3-.2-1.1-.2-1.1-.4-1-.3-.9-.4-.8-.5-.7-.4 1.4-3.3z" clip-path="url(#a)" fill="#00926f" fill-rule="evenodd"/>
+  <path d="M248.7 83.8H268v29.8h-19.4z" clip-path="url(#a)" fill="none"/>
+  <path d="M274.2 106.6v-18h-4.6V85h4.6v-6l4.3-1.4V85h8.1l-1.2 3.5h-7V106l.1.8.2.8.2.5.3.5.4.4.5.2.6.2h1.3l.6-.1 1.2-.3 1-.5 1-.6 1.5 3-.7.5-.7.3-.8.4-.9.4-.9.2-1 .2-1 .1H279l-.7-.2-.5-.1-.6-.3-.5-.3-.5-.3-.4-.4-.3-.4-.4-.5-.2-.5-.2-.6-.2-.6-.1-.7-.1-.7v-.7z" clip-path="url(#a)" fill="#00926f" fill-rule="evenodd"/>
+  <path d="M269.1 77h18.7v36.5h-18.7z" clip-path="url(#a)" fill="none"/>
+  <path d="m19 135.6.4.3.5.2.6.1h1.3l.3-.1.3-.2.2-.2v-.2l.2-.3v-.7l-.4-.4-.2-.2-.3-.2-.3-.2-.4-.2-.6-.2-.5-.2-.4-.3-.3-.3-.3-.4-.2-.3v-.4l-.1-.4v-.5l.2-.5.2-.4.4-.4.4-.3.6-.3.6-.1H23l.5.2.4.3-.4 1.1-.3-.1-.4-.2-.5-.2h-.8l-.3.1-.3.1-.2.2-.3.4v.8l.3.4.5.3.8.4.5.2.5.2.4.3.4.3.2.3.2.4.1.5v1l-.1.5-.4.5-.3.4-.5.3-.5.2-.7.2h-1.5l-.6-.2-.7-.2-.4-.2.3-1.3z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M18 127.7h7v10.4h-7z" clip-path="url(#a)" fill="none"/>
+  <path d="m27.3 133.1.1.8.2.6.3.5.3.5.5.3.5.2.5.1h2.1l.5-.2.5-.1.3 1-.5.3-.7.2-.8.1-1 .1h-1l-.8-.3-.7-.4-.7-.5-.4-.7-.4-.8-.2-.9-.1-.9v-1l.3-.9.3-.8.5-.7.6-.6.7-.4.8-.3 1-.1h.5l.4.1.5.1.3.2.7.5.5.6.3.6.3.7.1.7v1.5h-6.3zM32 132v-.9l-.2-.4-.2-.4-.3-.4-.4-.3-.5-.2h-1.1l-.5.2-.5.3-.3.3-.3.5-.1.4-.2.4v.5H32z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M25.2 127.7h9V138h-9z" clip-path="url(#a)" fill="none"/>
+  <path d="M35.6 131.2v-2.8h1.3l.1 1.8.2-.4.3-.4.2-.4.3-.2.4-.3.3-.1.4-.1h.9v1.5h-1l-.4.1-.3.2-.3.2-.3.3-.2.4-.1.4-.1.4v.4l-.1.4v4.7h-1.6v-6.1z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M35 127.7h5.6V138H35z" clip-path="url(#a)" fill="none"/>
+  <path d="m42.6 128.4 1.8 5 .4 1.2.3 1 .4-1 .4-1.2 1.7-5h1.8l-3.6 9h-1.5l-3.4-9h1.7z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M40.4 127.9h9.5v10h-9.5z" clip-path="url(#a)" fill="none"/>
+  <path d="M51.6 126.8h-.4l-.3-.3-.3-.3v-.8l.3-.3.3-.3h.8l.4.3.2.3v.8l-.2.3-.4.3h-.4zm-.8 10.5v-8.8h1.6v8.8h-1.6z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M50 124.2h3.3V138H50z" clip-path="url(#a)" fill="none"/>
+  <path d="M55.1 130.8v-2.4h1.4v1.5l.5-.6.3-.3.4-.2.4-.3.4-.1.5-.1h1.5l.5.3.6.4.4.5.4.6v.4l.2.5v6.3H61v-6.1l-.2-.5-.2-.3-.3-.4-.4-.2-.4-.2h-1.3l-.3.3-.3.2-.5.5-.3.6v6.1H55v-6.5z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M54.5 127.7h8.7V138h-8.7z" clip-path="url(#a)" fill="none"/>
+  <path d="M72.8 136v1.4l-.2.6-.1.5-.2.5-.2.4-.3.4-.3.3-.7.5-.8.3-.8.2h-1.7l-.8-.2-.7-.2-.7-.3.5-1.3.5.3.6.3.7.1H69l.5-.1.5-.2.4-.3.4-.5.2-.5.2-.7v-1.8l-.5.7-.6.4-.4.2-.4.2h-1.7l-.7-.3-.7-.3-.5-.6-.5-.6-.3-.8-.2-.8-.1-.9v-1l.3-1 .4-.8.5-.7.6-.5.7-.4.7-.2h1.8l.4.2.4.2.3.3.3.2.4.6v-1.4H73v1.1l-.1.6v5.9zm-1.6-4v-.5l-.1-.3-.3-.7-.2-.3-.3-.2-.3-.2-.3-.2h-.4l-.4-.1h-.6l-.5.2-.4.3-.4.4-.4.5-.2.6-.1.6v2l.3.5.3.5.3.4.5.3.5.1.6.1h.7l.4-.2.3-.2.3-.3.2-.2.2-.4.2-.3v-.5l.1-.4v-1.6z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M64 127.7h9.5v14H64z" clip-path="url(#a)" fill="none"/>
+  <path d="m80 128.4 1.2 4.5.3 1.5.3 1.4.4-1.4.5-1.5 1.4-4.5h1.4l1.4 4.5.4 1.5.3 1.4.4-1.4.4-1.5 1.2-4.5h1.6l-2.8 9h-1.5l-1.4-4.4-.4-1.4-.4-1.5-.3 1.5-.5 1.5-1.4 4.2H81l-2.7-8.9H80z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M77.8 127.9h14v10h-14z" clip-path="url(#a)" fill="none"/>
+  <path d="M96.2 137.5h-.8l-.8-.3-.8-.4-.6-.5-.5-.7-.4-.8-.2-.9-.1-1v-1l.3-1 .4-.8.6-.6.6-.5.8-.5.8-.2h1.8l.8.3.8.4.6.5.5.7.4.7.2.9v2.1l-.1.5-.2.5-.5.8-.5.7-.7.5-.8.4-.7.2h-.8zm.1-1.2h.6l.5-.3.4-.3.4-.4.3-.5.3-.6.1-.7v-1.8l-.3-.6-.2-.5-.4-.5-.5-.3-.5-.3h-1.3l-.6.3-.5.3-.3.4-.3.5-.2.6-.1.6v1.4l.1.6.2.6.4.5.4.4.4.3.5.2h.6z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M91.5 127.7h9.8v10.4h-9.8z" clip-path="url(#a)" fill="none"/>
+  <path d="M102.7 131.2v-2.8h1.3v1.8h.2l.1-.4.2-.4.3-.4.3-.2.3-.3.4-.1.4-.1h.9v1.5h-1l-.4.1-.3.2-.3.2-.3.3-.2.4-.1.4-.1.4v.4l-.1.4v4.7h-1.6v-6.1z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M102 127.7h5.7V138H102z" clip-path="url(#a)" fill="none"/>
+  <path d="M108.7 124.3h1.7v13h-1.7v-13z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M108.2 123.8h2.8v14.1h-2.8z" clip-path="url(#a)" fill="none"/>
+  <path d="M120.6 124.3v11.9l.1.6v.5h-1.4v-1.5h-.1l-.3.3-.2.3-.3.3-.4.3-.4.2-.4.2-.5.1h-1.3l-.7-.3-.7-.4-.5-.5-.5-.7-.3-.7-.3-1V132l.3-1 .3-.8.5-.7.6-.5.7-.4.7-.3h1.8l.4.2.3.2.6.4.4.5v-5.3h1.6zm-1.5 7.8-.1-.8-.1-.3-.2-.4-.2-.3-.4-.2-.3-.3-.3-.2h-.4l-.5-.1h-.6l-.5.3-.4.3-.4.4-.3.5-.2.5-.2.7v1.4l.1.6.3.5.3.5.3.4.5.3.5.2.6.1h.4l.4-.1.4-.2.3-.2.3-.3.2-.3.2-.4.2-.4V132z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M111.8 123.8h9.5V138h-9.5z" clip-path="url(#a)" fill="none"/>
+  <path d="M127.2 130.8v-2.4h1.3l.1 1.5.5-.6.6-.6.4-.2.4-.1.5-.1h1.3l.4.2.3.2.3.3.3.3.2.3.1.4.3-.4.3-.3.5-.5.4-.2.5-.2.5-.1h1.5l.5.4.5.3.4.5.3.7.1.4.1.4v.5l.1.6v5.2h-1.6v-5.6l-.1-.6-.2-.4-.2-.4-.3-.3-.3-.2-.4-.2h-1.1l-.5.4-.5.5-.2.5-.1.4v5.9h-1.6v-5.8l-.1-.5-.2-.4-.2-.4-.2-.3-.4-.1-.4-.2h-.7l-.4.1-.3.2-.3.2-.4.5-.3.5v6.2h-1.7v-6.5z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M126.6 127.7h13.9V138h-13.9z" clip-path="url(#a)" fill="none"/>
+  <path d="M143.2 126.8h-.4l-.3-.3-.2-.3v-.8l.2-.3.3-.3h.9l.3.3.3.3v.8l-.3.3-.3.3h-.5zm-.7 10.5v-8.8h1.6v8.8h-1.6z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M141.7 124.2h3.2V138h-3.2z" clip-path="url(#a)" fill="none"/>
+  <path d="m146.5 135.6.4.3.6.2.5.1h1.4l.3-.1.2-.2.2-.2.1-.2.1-.3v-.7l-.3-.4-.3-.2-.2-.2-.4-.2-.4-.2-.5-.2-.5-.2-.4-.3-.4-.3-.2-.4-.2-.3-.1-.4v-.9l.2-.5.2-.4.4-.4.4-.3.5-.3.6-.1h2l.4.2.5.3-.4 1.1-.3-.1-.4-.2-.5-.2h-1l-.3.1-.2.1-.2.2-.3.4-.1.4v.3l.1.2.3.4.5.3.8.4.5.2.5.2.4.3.3.3.3.3.2.4.1.5v1l-.2.5-.3.5-.4.4-.4.3-.6.2-.7.2H148l-.7-.2-.6-.2-.5-.2.4-1.3z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M145.6 127.7h6.9v10.4h-7z" clip-path="url(#a)" fill="none"/>
+  <path d="m153.8 135.6.4.3.5.2.6.1h1.4l.2-.1.3-.2.2-.2v-.2l.2-.3v-.7l-.4-.4-.2-.2-.3-.2-.3-.2-.4-.2-.6-.2-.5-.2-.4-.3-.3-.3-.3-.4-.1-.3-.2-.4v-.9l.2-.5.3-.4.3-.4.4-.3.6-.3.6-.1h1.9l.5.2.4.3-.4 1.1-.3-.1-.4-.2-.5-.2h-.9l-.3.1-.2.1-.3.2-.2.4-.2.4v.3l.2.2.3.4.5.3.7.4.5.2.5.2.4.3.4.3.3.3.1.4.2.5v1l-.2.5-.3.5-.4.4-.5.3-.5.2-.7.2H155l-.6-.2-.6-.2-.5-.2.4-1.3z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M152.8 127.7h7v10.4h-7z" clip-path="url(#a)" fill="none"/>
+  <path d="M162 126.8h-.4l-.3-.3-.3-.3v-.8l.3-.3.3-.3h.8l.4.3.2.3v.8l-.2.3-.4.3h-.4zm-.8 10.5v-8.8h1.6v8.8h-1.6z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M160.4 124.2h3.3V138h-3.3z" clip-path="url(#a)" fill="none"/>
+  <path d="M169.1 137.5h-.9l-.8-.3-.7-.4-.6-.5-.5-.7-.4-.8-.3-.9v-2l.3-1 .4-.8.5-.6.7-.5.7-.5.9-.2h1.8l.8.3.7.4.6.5.6.7.4.7.2.9v2.1l-.2.5-.2.5-.4.8-.6.7-.7.5-.7.4-.8.2h-.8zm0-1.2h.6l.5-.3.5-.3.4-.4.3-.5.3-.6.1-.7v-1.3l-.1-.5-.2-.6-.2-.5-.4-.5-.5-.3-.5-.3h-1.3l-.6.3-.5.3-.4.4-.2.5-.3.6v.6l-.1.7v.7l.2.6.2.6.3.5.4.4.5.3.5.2h.5z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M164.3 127.7h9.8v10.4h-9.8z" clip-path="url(#a)" fill="none"/>
+  <path d="M175.5 130.8v-2.4h1.4v1.5h.1l.4-.6.4-.3.3-.2.4-.3.4-.1.5-.1h1.5l.6.3.5.4.4.5.4.6v.4l.2.5v6.3h-1.5v-5.6l-.2-.5-.1-.5-.2-.3-.3-.4-.3-.2-.5-.2h-1.2l-.4.3-.2.2-.5.5-.4.6v6.1h-1.7v-6.5z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M175 127.7h8.6V138H175z" clip-path="url(#a)" fill="none"/>
+  <path d="M189.7 137.3v-7.6h-1.2v-1.2h1.2V127l.3-.8.3-.7.5-.6.4-.4.6-.3.5-.1h1.4l.6.2-.2 1.2-.5-.1h-.2l-.4-.1h-.4l-.4.2-.3.3-.2.3-.2.4-.1.4v1.5h2v1.2h-2v7.6h-1.7z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M188 123.6h6.9v14.3h-7z" clip-path="url(#a)" fill="none"/>
+  <path d="m195 131.2-.1-1.4v-1.4h1.3l.1 1.8.2-.4.3-.4.2-.4.3-.2.4-.3.3-.1.4-.1h.9v1.5h-1l-.4.1-.3.2-.3.2-.3.3-.2.4-.2.4v.8l-.1.4v4.7h-1.6v-6.1z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M194.3 127.7h5.6V138h-5.6z" clip-path="url(#a)" fill="none"/>
+  <path d="M204.4 137.5h-1l-.7-.3-.7-.4-.7-.5-.5-.7-.3-.8-.3-.9v-2l.3-1 .4-.8.5-.6.7-.5.7-.5.8-.2h1.8l.8.3.8.4.6.5.5.7.4.7.2.9.1 1v1.1l-.2.5-.2.5-.5.8-.5.7-.7.5-.8.4-.7.2h-.8zm0-1.2h.6l.5-.3.4-.3.5-.4.3-.5.2-.6.2-.7v-1.3l-.1-.5-.2-.6-.3-.5-.4-.5-.4-.3-.6-.3h-1.3l-.5.3-.5.3-.4.4-.3.5-.2.6-.1.6v1.4l.1.6.3.6.3.5.4.4.4.3.5.2h.6z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M199.6 127.7h9.8v10.4h-9.8z" clip-path="url(#a)" fill="none"/>
+  <path d="M210.8 130.8v-2.4h1.3l.1 1.5h.1l.4-.6.6-.6.4-.2.4-.1.5-.1h1.3l.4.2.3.2.3.3.3.3.2.3.1.4.3-.4.3-.3.5-.5.4-.2.5-.2.5-.1h1.5l.5.4.5.3.4.5.3.7.1.4.1.4v.5l.1.6v5.2H222v-5.6l-.1-.6-.2-.4-.2-.4-.3-.3-.3-.2-.4-.2h-1.1l-.5.4-.5.5-.2.5-.1.4v5.9h-1.6v-5.8l-.1-.5-.2-.4-.2-.4-.2-.3-.4-.1-.4-.2h-.7l-.4.1-.3.2-.3.2-.4.5-.3.5v6.2h-1.7v-6.5z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M210.2 127.7h13.9V138h-13.9z" clip-path="url(#a)" fill="none"/>
+  <path d="M230 124.3h1.6v5.5l.2-.3.3-.3.3-.3.3-.2.4-.2.4-.1.5-.1h1.4l.5.3.5.4.4.5.4.6.1.4.1.5v.5l.1.5v5.3H236v-5.6l-.1-.5-.2-.5-.2-.3-.2-.4-.4-.2-.4-.2H233l-.3.3-.3.2-.5.5-.4.6v6.1h-1.7v-13z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M229.4 123.8h8.7v14.1h-8.7z" clip-path="url(#a)" fill="none"/>
+  <path d="M243.7 137.5h-.9l-.8-.3-.7-.4-.6-.5-.5-.7-.4-.8-.3-.9v-2l.3-1 .4-.8.6-.6.6-.5.8-.5.8-.2h1.8l.8.3.7.4.7.5.5.7.4.7.2.9v2.1l-.2.5-.2.5-.4.8-.6.7-.7.5-.7.4-.8.2h-.8zm0-1.2h.6l.5-.3.5-.3.4-.4.3-.5.3-.6.1-.7v-1.8l-.3-.6-.2-.5-.4-.5-.5-.3-.5-.3h-1.3l-.6.3-.5.3-.4.4-.2.5-.3.6v.6l-.1.7v.7l.2.6.2.6.4.5.3.4.5.3.5.2h.5z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M239 127.7h9.7v10.4H239z" clip-path="url(#a)" fill="none"/>
+  <path d="M250.1 130.8v-2.4h1.4v1.5h.1l.4-.6.6-.6.4-.2.4-.1.5-.1h1.3l.4.2.3.2.3.3.3.3.2.3.2.4.2-.4.3-.3.5-.5.4-.2.5-.2.5-.1h1.5l.5.4.5.3.4.5.3.7.1.4.2.4v6.3h-1.6v-5.6l-.1-.6-.2-.4-.2-.4-.3-.3-.3-.2-.4-.2h-1.1l-.5.4-.4.5-.3.5-.1.4v5.9h-1.6v-5.8l-.1-.5-.2-.4-.2-.4-.2-.3-.4-.1-.4-.2h-.7l-.3.1-.3.2-.4.2-.4.5-.3.5v6.2H250v-6.5z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M249.5 127.7h13.9V138h-13.9z" clip-path="url(#a)" fill="none"/>
+  <path d="M266.3 133.1v.8l.3.6.2.5.4.5.5.3.5.2.5.1h2.1l.5-.2.5-.1.3 1-.5.3-.7.2-.8.1-1 .1h-1l-.8-.3-.8-.4-.6-.5-.5-.7-.3-.8-.3-.9V132l.3-.9.3-.8.5-.7.6-.6.7-.4.8-.3 1-.1h.4l.5.1.4.1.4.2.7.5.5.6.3.6.3.7v.7l.1.7v.4l-.1.4h-6.2zm4.7-1.1v-.9l-.2-.4-.2-.4-.3-.4-.4-.3-.5-.2h-1.2l-.5.2-.4.3-.3.3-.3.5-.2.4v.4l-.2.5h4.7z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M264.2 127.7h9V138h-9zM130.4 63.6h1v1.1h-1z" clip-path="url(#a)" fill="none"/>
+  <path d="M108.8 63h-.6l-.5-.3-.4-.3-.4-.5-.2-.5-.2-.5v-.6l.2-.5 25-54.7.4-.5.4-.4.6-.3.7-.1h.6l.6.4.5.4.3.5 9.6 21 .1.4v1l-.1.4L130 61.6l-.4.6-.5.4-.5.3-.7.1h-19.1z" clip-path="url(#a)" fill="#00926f" fill-rule="evenodd"/>
+  <path d="M106 3.3h40.2v60.3H106z" clip-path="url(#a)" fill="none"/>
+  <path d="m163.2 63-.7-.1-.5-.3-.5-.4-.3-.6L145.7 28l-.1-.4v-1l.1-.4 9.6-21 .4-.5.4-.4.6-.3.7-.1h.6l.6.3.4.4.4.6 25 54.7.2.6v.5l-.1.6-.3.4-.4.5-.4.3-.5.2-.6.1h-19.1z" clip-path="url(#a)" fill="#14386f" fill-rule="evenodd"/>
+  <path d="M145 3.3h40.2v60.3H145z" clip-path="url(#a)" fill="none"/>
+</svg></div>
+
+                        <address>
+                <div class="row">
+                     <div class="small-12"><b>Address: </b><br>PO Box 257 Evesham Worcestershire England WR11 9AW</div>                      <div class="small-12"><b>Country: </b><span class="add">United Kingdom</span></div>                                                         </div>
+            </address>
+
+            <nav class="social-links">
+                                <a href="https://www.facebook.com/MissionAssist/" target="_blank">
+                    <svg class="icon">
+                        <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#social_facebook"></use>
+                    </svg>
+                </a>
+                                                    <a href="https://twitter.com/MissionAssist1" target="_blank">
+                    <svg class="icon">
+                        <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#social_twitter"></use>
+                    </svg>
+                </a>
+                                                        <a href="https://www.missionassist.org.uk" target="_blank">
+                    <svg class="icon">
+                        <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_external"></use>
+                    </svg>
+                </a>
+                                    </nav>
+
+            <fieldset class="filters" data-table="bibles_table" data-name="ci">
+    <legend class="filter-title">Continents</legend>
+            <input
+            name="continbibles_tableci[]"
+            type="radio"
+            data-regex="true"
+            id="continbibles_tableciall"
+            value=""  checked  />
+        <label for="continbibles_tableciall" class="text-center">All</label>
+            <input
+            name="continbibles_tableci[]"
+            type="radio"
+            data-regex="true"
+            id="continbibles_tableciafrica"
+            value="AO|BF|BI|BJ|BW|CD|CF|CG|CI|CM|CV|DJ|DZ|EG|EH|ER|ET|GA|GH|GM|GN|GQ|GW|KE|KM|LR|LS|LY|MA|MG|ML|MR|MU|MW|MZ|NA|NE|NG|RE|RW|SC|SD|SH|SL|SN|SO|SS|ST|SZ|TD|TG|TN|TZ|UG|YT|ZA|ZM|ZW"  />
+        <label for="continbibles_tableciafrica" class="text-center">Africa</label>
+            <input
+            name="continbibles_tableci[]"
+            type="radio"
+            data-regex="true"
+            id="continbibles_tableciasia"
+            value="AE|AF|AM|AZ|BD|BH|BN|BT|CC|CN|CX|GE|HK|ID|IL|IN|IO|IQ|IR|JO|JP|KG|KH|KP|KR|KW|KZ|LA|LB|LK|MM|MN|MO|MV|MY|NP|OM|PH|PK|PS|QA|SA|SG|SY|TH|TJ|TM|TR|TW|UZ|VN|YE"  />
+        <label for="continbibles_tableciasia" class="text-center">Asia</label>
+            <input
+            name="continbibles_tableci[]"
+            type="radio"
+            data-regex="true"
+            id="continbibles_tablecieurope"
+            value="AD|AL|AT|AX|BA|BE|BG|BY|CH|CY|CZ|DE|DK|EE|ES|FI|FO|FR|GB|GG|GI|GR|HR|HU|IE|IM|IS|IT|JE|LI|LT|LU|LV|MC|MD|ME|MK|MT|NL|NO|PL|PT|RO|RS|RU|SE|SI|SJ|SK|SM|UA|VA|XK"  />
+        <label for="continbibles_tablecieurope" class="text-center">Europe</label>
+            <input
+            name="continbibles_tableci[]"
+            type="radio"
+            data-regex="true"
+            id="continbibles_tablecinorth-america"
+            value="AG|AI|AW|BB|BL|BM|BQ|BS|BZ|CA|CR|CU|CW|DM|DO|GD|GL|GP|GT|HN|HT|JM|KN|KY|LC|MF|MQ|MS|MX|NI|PA|PM|PR|SV|SX|TC|TT|US|VC|VG|VI"  />
+        <label for="continbibles_tablecinorth-america" class="text-center">North America</label>
+            <input
+            name="continbibles_tableci[]"
+            type="radio"
+            data-regex="true"
+            id="continbibles_tablecioceania"
+            value="AS|AU|CK|FJ|FM|GU|KI|MH|MP|NC|NF|NR|NU|NZ|PF|PG|PN|PW|SB|TK|TL|TO|TV|UM|VU|WF|WS"  />
+        <label for="continbibles_tablecioceania" class="text-center">Oceania</label>
+            <input
+            name="continbibles_tableci[]"
+            type="radio"
+            data-regex="true"
+            id="continbibles_tablecisouth-america"
+            value="AR|BO|BR|CL|CO|EC|FK|GF|GY|PE|PY|SR|UY|VE"  />
+        <label for="continbibles_tablecisouth-america" class="text-center">South America</label>
+    </fieldset>
+            
+
+            
+        </div>
+    </aside>
+
+    <div class="medium-9">
+        <section role="tabpanel" id="bibles" aria-hidden="false">
+            <table id="bibles_table" class="table responsive" cellspacing="0" width="100%"
+                   data-searchplaceholder="Filter Items on this Page"
+                   data-json='{&quot;data&quot;:[{&quot;id&quot;:&quot;ENGEEB&quot;,&quot;iso&quot;:&quot;eng&quot;,&quot;type&quot;:&quot;bibles&quot;,&quot;co&quot;:&quot;&quot;,&quot;ci&quot;:&quot;GB&quot;,&quot;ln&quot;:&quot;English&quot;,&quot;tt&quot;:&quot;EasyEnglish Bible&quot;,&quot;tv&quot;:&quot;&quot;,&quot;dt&quot;:&quot;2001, 2018&quot;,&quot;cn&quot;:&quot;United Kingdom&quot;,&quot;lc&quot;:&quot;&lt;i&gt;3&lt;\/i&gt;&quot;,&quot;fs&quot;:&quot;web,archive&quot;},{&quot;id&quot;:&quot;SCOPSA&quot;,&quot;iso&quot;:&quot;sco&quot;,&quot;type&quot;:&quot;bibles&quot;,&quot;co&quot;:&quot;&quot;,&quot;ci&quot;:&quot;GB&quot;,&quot;ln&quot;:&quot;Scots&quot;,&quot;tt&quot;:&quot;Psalms and Proverbs in Braid Scots &quot;,&quot;tv&quot;:&quot;Lallans Scots Psalms and Proverbs (Alexander - Patterson)&quot;,&quot;dt&quot;:&quot;1916-28&quot;,&quot;cn&quot;:&quot;United Kingdom&quot;,&quot;lc&quot;:&quot;&lt;i&gt;3&lt;\/i&gt;&quot;,&quot;fs&quot;:&quot;web,archive,historic&quot;}]}'>
+                <thead>
+                <tr>
+                    <th data-column-name="ci" data-invisible="true">Country</th>
+                    <th data-column-name="ln" data-sort-default="asc">Languages</th>
+                    <th data-column-name="dt">Date</th>
+                    <th data-column-name="tt" data-link="id" data-path="https://find.bible/bibles">Title</th>
+                    <th data-column-name="tv" data-link="id" data-path="https://find.bible/bibles">Vernacular </th>
+                    <th data-column-name="cn">Country</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+        <section id="resources" role="tabpanel" id="resources" aria-hidden="true">
+            <table id="resources_table" class="table responsive" cellspacing="0" width="100%"
+                   data-json='{&quot;data&quot;:[]}'>
+                <thead>
+                <tr>
+                    <th data-column-name="ln">Languages</th>
+                    <th data-column-name="tt" data-link="lk">Title</th>
+                    <th data-column-name="tv">Vernacular </th>
+                    <th data-column-name="iso">ISO</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+    "id": "SPANVI",
+    "parent_bible_id": null,
+    "title": "New International Version",
+    "title_vernacular": "La Santa Biblia, Nueva Versión Internacional®",
+    "description": null,
+    "description_vernacular": null,
+    "iso": "spa",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "1999",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2016-10-12T17:46:47.000000Z",
+    "updated_at": "2020-10-12T17:46:47.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 2376,
+            "bible_id": "SPANVI",
+            "equivalent_id": "SPNNVIN2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "New Testament Dramatized Audio",
+            "notes": null
+        }
+    ]
+}

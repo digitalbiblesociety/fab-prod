@@ -1,0 +1,50 @@
+{
+    "id": "OMWWBT",
+    "parent_bible_id": null,
+    "title": "South Tairora New Testament",
+    "title_vernacular": "QARAAKYA QUA TIMWATORA",
+    "description": "The New Testament in the Omwunra-Toqura (South Tairora) Language of Papua New Guinea",
+    "description_vernacular": "Nupela Testamen long tokples Omwurna-Toqura long Niugini",
+    "iso": "omw",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2000",
+    "country_id": "PG",
+    "copyright": "Copyright © 2000 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0503-1",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2019-02-12T14:15:24.000000Z",
+    "updated_at": "2020-10-12T17:23:12.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 6047,
+            "bible_id": "OMWWBT",
+            "equivalent_id": "OM1TBLP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 6049,
+            "bible_id": "OMWWBT",
+            "equivalent_id": "OM1TBLP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

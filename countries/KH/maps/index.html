@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-download   {text-align: right;margin-right:2em;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 9em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 2px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>Cambodia | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/KH.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/kh_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Cambodia
+                </h1>
+                <h2 itemprop="description"  >A country of  Asia</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/KH">Cambodia Languages</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Maps | Info
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/KH/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/KH">
+                    <span itemprop="name">Cambodia</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+
+            <div class="country-facts row">
+                <p><b>Title:</b> The Kingdom of Cambodia </p><br>
+                <p><b>Population:</b> 17,304,363</p>
+                <p><b>Population Change:</b> 1.41</p>
+                <p><b>National Average Age:</b> 26</p>
+                <p><b>Urban Percentage:</b> 24</p>
+                <p><b>Christian Population:</b> 148,000</p>
+                <p><b>Christian Percentage:</b> 1</p>
+
+            </div>
+
+
+                        <div class="country-overview">
+                <p><b>Introduction:</b>
+                    &#039;Cambodia is a Southeast Asian nation whose landscape spans low-lying plains the Mekong Delta mountains and Gulf of Thailand coastline. Phnom Penh its capital is home to the art deco Central Market glittering Royal Palace and the National Museum&#039;&#039;s historical and archaeological exhibits. In the country&#039;&#039;s northwest are the ruins of Angkor Wat a massive stone temple complex built during the Khmer Empire.&#039;</p><br>
+                <p><b>Overview:</b>
+                    Most Cambodians consider themselves to be Khmers descendants of the Angkor Empire that extended over much of Southeast Asia and reached its zenith between the 10th and 13th centuries. Attacks by the Thai and Cham (from present-day Vietnam) weakened the empire ushering in a long period of decline. The king placed the country under French protection in 1863 and it became part of French Indochina in 1887. Following Japanese occupation in World War II Cambodia gained full independence from France in 1953. In April 1975 after a five-year struggle communist Khmer Rouge forces captured Phnom Penh and evacuated all cities and towns. At least 1.5 million Cambodians died from execution forced hardships or starvation during the Khmer Rouge regime under POL POT. A December 1978 Vietnamese invasion drove the Khmer Rouge into the countryside began a 10-year Vietnamese occupation and touched off almost 13 years of civil war. The 1991 Paris Peace Accords mandated democratic elections and a ceasefire which was not fully respected by the Khmer Rouge. UN-sponsored elections in 1993 helped restore some semblance of normalcy under a coalition government. Factional fighting in 1997 ended the first coalition government but a second round of national elections in 1998 led to the formation of another coalition government and renewed political stability. The remaining elements of the Khmer Rouge surrendered in early 1999. Some of the surviving Khmer Rouge leaders have been tried or are awaiting trial for crimes against humanity by a hybrid UN-Cambodian tribunal supported by international assistance. Elections in July 2003 were relatively peaceful but it took one year of negotiations between contending political parties before a coalition government was formed. In October 2004 King Norodom SIHANOUK abdicated the throne and his son Prince Norodom SIHAMONI was selected to succeed him. Local elections were held in Cambodia in April 2007 with little of the pre-election violence that preceded prior elections. National elections in July 2008 were relatively peaceful as were commune council elections in June 2012.</p>
+            </div>
+                
+
+        </div>
+    </div>
+
+
+
+    <div class="medium-9">
+
+
+        <div  class="row">
+
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Government</h4>
+                    <div><a href="#gov" alt="Cambodia gov Map" title="Cambodia gov Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/KH-gov.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/KH-gov.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Land</h4>
+                    <div><a href="#land" alt="Cambodia land Map" title="Cambodia land Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/KH-land.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/KH-land.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Location</h4>
+                    <div><a href="#location" alt="Cambodia location Map" title="Cambodia location Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/KH-location.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/KH-location.png" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Transportation</h4>
+                    <div><a href="#trans" alt="Cambodia trans Map" title="Cambodia trans Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/KH-trans.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/KH-trans.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                    </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+<div class="map-modals">
+
+            <div id="gov" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/KH-gov.jpg' />
+    </div>
+</div>            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/KH-land.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/KH-location.png' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/KH-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+
+
+                                    let marker_brb = L.marker([14.599420, 107.008360]).addTo(mymap);
+                    marker_brb.bindPopup('<a href="/languages/brb">Lave</a>').openPopup();
+                                                let marker_cja = L.marker([12.477113, 104.025660]).addTo(mymap);
+                    marker_cja.bindPopup('<a href="/languages/cja">Western Cham</a>').openPopup();
+                                                let marker_cjm = L.marker([11.285280, 108.490120]).addTo(mymap);
+                    marker_cjm.bindPopup('<a href="/languages/cjm">Eastern Cham</a>').openPopup();
+                                                let marker_cmn = L.marker([40.020884, 116.228026]).addTo(mymap);
+                    marker_cmn.bindPopup('<a href="/languages/cmn">Mandarin Chinese</a>').openPopup();
+                                                let marker_cmo = L.marker([12.631320, 107.300640]).addTo(mymap);
+                    marker_cmo.bindPopup('<a href="/languages/cmo">Central Mnong</a>').openPopup();
+                                                let marker_cog = L.marker([12.521810, 102.513715]).addTo(mymap);
+                    marker_cog.bindPopup('<a href="/languages/cog">Chong</a>').openPopup();
+                                                let marker_eng = L.marker([53.000000, -1.000000]).addTo(mymap);
+                    marker_eng.bindPopup('<a href="/languages/eng">English</a>').openPopup();
+                                                let marker_fra = L.marker([48.000000, 2.000000]).addTo(mymap);
+                    marker_fra.bindPopup('<a href="/languages/fra">French</a>').openPopup();
+                                                let marker_hak = L.marker([25.000000, 116.000000]).addTo(mymap);
+                    marker_hak.bindPopup('<a href="/languages/hak">Hakka Chinese</a>').openPopup();
+                                                let marker_hin = L.marker([25.000000, 77.000000]).addTo(mymap);
+                    marker_hin.bindPopup('<a href="/languages/hin">Hindi</a>').openPopup();
+                                                                    let marker_jra = L.marker([13.616065, 107.813025]).addTo(mymap);
+                    marker_jra.bindPopup('<a href="/languages/jra">Jarai</a>').openPopup();
+                                                let marker_kdt = L.marker([14.669807, 104.911040]).addTo(mymap);
+                    marker_kdt.bindPopup('<a href="/languages/kdt">Kuy</a>').openPopup();
+                                                let marker_khm = L.marker([12.051550, 105.015373]).addTo(mymap);
+                    marker_khm.bindPopup('<a href="/languages/khm">Khmer</a>').openPopup();
+                                                let marker_kor = L.marker([37.500000, 128.000000]).addTo(mymap);
+                    marker_kor.bindPopup('<a href="/languages/kor">Korean</a>').openPopup();
+                                                let marker_krr = L.marker([13.569890, 106.761340]).addTo(mymap);
+                    marker_krr.bindPopup('<a href="/languages/krr">Krung</a>').openPopup();
+                                                let marker_krv = L.marker([14.179640, 106.585790]).addTo(mymap);
+                    marker_krv.bindPopup('<a href="/languages/krv">Kavet</a>').openPopup();
+                                                let marker_kxm = L.marker([14.467430, 103.863130]).addTo(mymap);
+                    marker_kxm.bindPopup('<a href="/languages/kxm">Northern Khmer</a>').openPopup();
+                                                let marker_lao = L.marker([16.072620, 104.568480]).addTo(mymap);
+                    marker_lao.bindPopup('<a href="/languages/lao">Lao</a>').openPopup();
+                                                let marker_mng = L.marker([12.393850, 108.353510]).addTo(mymap);
+                    marker_mng.bindPopup('<a href="/languages/mng">Eastern Mnong</a>').openPopup();
+                                                let marker_mnn = L.marker([12.063540, 107.654240]).addTo(mymap);
+                    marker_mnn.bindPopup('<a href="/languages/mnn">Southern Mnong</a>').openPopup();
+                                                let marker_mya = L.marker([20.792575, 93.966490]).addTo(mymap);
+                    marker_mya.bindPopup('<a href="/languages/mya">Burmese</a>').openPopup();
+                                                let marker_nan = L.marker([24.500000, 118.170000]).addTo(mymap);
+                    marker_nan.bindPopup('<a href="/languages/nan">Min Nan Chinese</a>').openPopup();
+                                                let marker_pcb = L.marker([13.593000, 105.027740]).addTo(mymap);
+                    marker_pcb.bindPopup('<a href="/languages/pcb">Pear</a>').openPopup();
+                                                let marker_phu = L.marker([17.520725, 102.191190]).addTo(mymap);
+                    marker_phu.bindPopup('<a href="/languages/phu">Phuan</a>').openPopup();
+                                                let marker_rad = L.marker([12.979000, 108.409890]).addTo(mymap);
+                    marker_rad.bindPopup('<a href="/languages/rad">Rade</a>').openPopup();
+                                                let marker_rka = L.marker([12.810700, 106.538640]).addTo(mymap);
+                    marker_rka.bindPopup('<a href="/languages/rka">Kraol</a>').openPopup();
+                                                let marker_scq = L.marker([10.873910, 103.835160]).addTo(mymap);
+                    marker_scq.bindPopup('<a href="/languages/scq">Sa&#039;och</a>').openPopup();
+                                                let marker_smu = L.marker([12.242960, 103.138700]).addTo(mymap);
+                    marker_smu.bindPopup('<a href="/languages/smu">Somray</a>').openPopup();
+                                                let marker_sti = L.marker([11.977730, 106.798205]).addTo(mymap);
+                    marker_sti.bindPopup('<a href="/languages/sti">Bulo Stieng</a>').openPopup();
+                                                let marker_sxm = L.marker([13.478990, 103.978000]).addTo(mymap);
+                    marker_sxm.bindPopup('<a href="/languages/sxm">Samre</a>').openPopup();
+                                                let marker_syo = L.marker([11.936010, 104.136080]).addTo(mymap);
+                    marker_syo.bindPopup('<a href="/languages/syo">Suoy</a>').openPopup();
+                                                let marker_tam = L.marker([10.520219, 78.825989]).addTo(mymap);
+                    marker_tam.bindPopup('<a href="/languages/tam">Tamil</a>').openPopup();
+                                                let marker_tha = L.marker([14.191968, 100.671386]).addTo(mymap);
+                    marker_tha.bindPopup('<a href="/languages/tha">Thai</a>').openPopup();
+                                                let marker_tpu = L.marker([13.564470, 107.245440]).addTo(mymap);
+                    marker_tpu.bindPopup('<a href="/languages/tpu">Tampuan</a>').openPopup();
+                                                let marker_vie = L.marker([18.388703, 106.756827]).addTo(mymap);
+                    marker_vie.bindPopup('<a href="/languages/vie">Vietnamese</a>').openPopup();
+                                                let marker_xkk = L.marker([13.827360, 107.257450]).addTo(mymap);
+                    marker_xkk.bindPopup('<a href="/languages/xkk">Kaco&#039;</a>').openPopup();
+                                                let marker_yue = L.marker([23.000000, 113.000000]).addTo(mymap);
+                    marker_yue.bindPopup('<a href="/languages/yue">Yue Chinese</a>').openPopup();
+                                                let marker_zlm = L.marker([1.858561, 103.000487]).addTo(mymap);
+                    marker_zlm.bindPopup('<a href="/languages/zlm">Malay</a>').openPopup();
+                    
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

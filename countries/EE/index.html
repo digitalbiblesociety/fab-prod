@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Estonia | Find a Bible</title>
+    <style>
+        .country-aside      {padding: .2em 1.2em .5em 1.2em;}
+        .country-aside p    {font-size: .8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin: .25em auto 1em auto;}
+        .country-persecution {background:url("https://images.bible.cloud/fab/logos/odi_gray_logo.svg") no-repeat 95% 10%/ 33px 26px;
+                            border: thin solid #d7d7d7; border-width: 1px 0 1px 0; margin-bottom: .5em;}
+        .country-facts      {margin: 0 0 .5em 0;}
+        .country-links      {margin-top: .75em; padding-top: .5em;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: .5em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .link-icon              {width: 1.5em; height: 1.5em;margin-left:.5em;}
+        th h6                                  {font-size: .7em; font-weight: normal;line-height:.9em; margin:.2em 0 0 0 ; text-transform: none}
+        .dataTable tr td:nth-child(2)       {max-width:120px;text-align:right;}
+        .dataTable tr td:nth-child(3)       {width:80px;text-align:center;}
+        .dataTable tr td:nth-child(4), .dataTable tr td:nth-child(5), .dataTable tr td:nth-child(6)      {width:90px;text-align:center;}
+        #banner .banner-flag {margin: 0 .5em 0 0;}
+    </style>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+    </style
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-flag " src="https://images.bible.cloud/flags/ee.svg" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Estonia
+                </h1>
+                <h2 itemprop="description"  >A country of  Europe</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Languages
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/EE/maps">Estonia Maps | Info</a>
+                                                                <a class="external" href="https://find.bible/countries/EE/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Estonia</span>
+                    <meta itemprop="position" content="3" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+            <img class="country-location" src="https://images.bible.cloud/maps/country/EE-location.png" alt="Estonia Find a Bible" />
+            <div class="country-facts row">
+                <p><b>Population:</b> 1,220,042</p>
+                <p><b>Official Language:</b> Estonian Standard</p>
+                <p><b>Language Count:</b> <span class="num-badge">24</span></p>
+                <p><b>Primary Religion:</b> Non-Religious</p>
+                                    <p><b>National Bible Society:</b><br />
+
+                                                    Estonian Bible Society</p>
+                            <a href="http://piibliselts.ee/" target="_blank" alt="Estonian Bible Society">
+                                <img src="https://images.bible.cloud/logo_type_bible_societies.svg" class="link-icon"/></a>
+                                         
+            </div>
+
+            <div class="country-links">
+                <p><b>Reference Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/EE" alt="Find a Bible Estonia">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://en.wikipedia.org/wiki/Estonia" alt="Wikipedia - Estonia">
+                            <img src="http://images.bible.cloud/wiki_type_logo.svg" title="Wikipedia" />
+                            <p>Wikipedia</p></a>
+                    </div>
+
+
+
+                                            <div><a target="_blank" href="https://www.cia.gov/the-world-factbook/countries/estonia/" alt="World Fact Book - Estonia">
+                                <img src="http://images.bible.cloud/logo_type_cia.svg" title="World Fact Book" />
+                                <p>WorldFact<br />Book</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="http://hdr.undp.org/en/countries/profiles/EST" alt="Human Development - Estonia">
+                                <img src="http://images.bible.cloud/logo_type_united_nations.svg" title="Human Development" />
+                                <p>Human<br />Develop.</p></a>
+                        </div>
+                    
+
+                                            <div><a target="_blank" href="https://www.state.gov/countries-areas/estonia/" alt="Religious Freedom - Estonia">
+                                <img src="http://images.bible.cloud/logo_type_dept_state.svg" title="Religious Freedom" />
+                                <p>Religious<br />Freedom</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://www.britannica.com/place/Estonia" alt="Britannica - Estonia">
+                                <img src="http://images.bible.cloud/logo_type_britannica.svg" title="Britannica" />
+                                <p>Britannica</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+                            <p><b>Factbook Summary:</b>
+                    <a href="https://images.bible.cloud/maps/summary/EN-summary.pdf" target="_blank"  alt="World Fact Book Estonia">
+                        <img class="pdf-icon" src="http://images.bible.cloud/icon/pdf_icon.svg" title="Country Summary" /></a></p>
+            
+
+        
+
+
+            <div class="country-links">
+                <p><b>Mission / Prayer Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/EE" alt="Find a Bible Estonia">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://www.joshuaproject.net/countries/EN" alt="Joshua Project - Estonia">
+                            <img src="http://images.bible.cloud/joshua_type_logo.svg" title="Joshua Project" />
+                            <p>Joshua<br />Project</p></a>
+                    </div>
+
+                                            <div><a target="_blank" href="https://unitedbiblesocieties.org/locations/estonian-bible-society/" alt="United Bible Societies - Estonia">
+                                <img src="http://images.bible.cloud/logo_type_ubs.svg" title="United Bible Societies" />
+                                <p>UBS</p></a>
+                        </div>
+                    
+
+
+                                            <div><a target="_blank" href="https://operationworld.org/locations/estonia" alt="Operation World - Estonia">
+                                <img src="http://images.bible.cloud/logo_type_ow.svg" title="Operation World" />
+                                <p>Operation<br />World</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://prayercast.com/estonia.html" alt="PrayerCasts - Estonia">
+                                <img src="http://images.bible.cloud/prayercast_type_logo.svg" title="PrayerCast" />
+                                <p>PrayerCast</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://curlie.org/Regional/Europe/Estonia" alt="ODP Database - Estonia">
+                                <img src="http://images.bible.cloud/logo_type_odp.svg" title="Open Directory Project" />
+                                <p>Open<br />Directory</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+
+
+            <div class="country-overview">
+                    <p><b>Language Summary:</b>
+                        Estonian (official) 68.5%, Russian 29.6%, Ukrainian 0.6%, other 1.2%, unspecified 0.1% (2011 est.)</p>
+                </div>
+
+                <div class="country-overview">
+                    <p><b>Ethnic Summary:</b>
+                        Estonian 68.7%, Russian 24.8%, Ukrainian 1.7%, Belarusian 1%, Finn 0.6%, other 1.6%, unspecified 1.6% (2011 est.)</p>
+                </div>
+
+
+
+
+            <div class="country-overview">
+                <p><b>Religious Summary:</b>
+                    Orthodox 16.2%, Lutheran 9.9%, other Christian (including Methodist, Seventh Day Adventist, Roman Catholic, Pentecostal) 2.2%, other 0.9%, none 54.1%, unspecified 16.7% (2011 est.)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="medium-9">
+        <table id="languages" class="table responsive" cellspacing="0" width="100%"
+               data-json='{&quot;data&quot;:[{&quot;id&quot;:&quot;azj&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;North Azerbaijani&quot;,&quot;ci&quot;:&quot;AZ&quot;,&quot;cn&quot;:&quot;Azerbaijan&quot;,&quot;tv&quot;:&quot; \u0622\u0630\u0631\u0628\u0627\u06cc\u062c\u0627\u0646 \u062f\u06cc\u0644\u06cc&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;880&quot;,&quot;bc&quot;:3,&quot;fc&quot;:15,&quot;rc&quot;:4},{&quot;id&quot;:&quot;bel&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Belarusian&quot;,&quot;ci&quot;:&quot;BY&quot;,&quot;cn&quot;:&quot;Belarus&quot;,&quot;tv&quot;:&quot;\u0431\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f \u043c\u043e\u0432\u0430 bie\u0142aruskaja mova&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,660&quot;,&quot;bc&quot;:6,&quot;fc&quot;:2,&quot;rc&quot;:5},{&quot;id&quot;:&quot;deu&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;German&quot;,&quot;ci&quot;:&quot;DE&quot;,&quot;cn&quot;:&quot;Germany&quot;,&quot;tv&quot;:&quot;Deutsch&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,420&quot;,&quot;bc&quot;:34,&quot;fc&quot;:10,&quot;rc&quot;:12},{&quot;id&quot;:&quot;ekk&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Standard Estonian&quot;,&quot;ci&quot;:&quot;EE&quot;,&quot;cn&quot;:&quot;Estonia&quot;,&quot;tv&quot;:&quot;eesti keel&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;835,700&quot;,&quot;bc&quot;:3,&quot;fc&quot;:3,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;eng&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;English&quot;,&quot;ci&quot;:&quot;GB&quot;,&quot;cn&quot;:&quot;United Kingdom&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;900&quot;,&quot;bc&quot;:244,&quot;fc&quot;:29,&quot;rc&quot;:314},{&quot;id&quot;:&quot;eso&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Estonian Sign Language&quot;,&quot;ci&quot;:&quot;EE&quot;,&quot;cn&quot;:&quot;Estonia&quot;,&quot;tv&quot;:&quot;Eesti viipekeel (EVK)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,640&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;fin&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Finnish&quot;,&quot;ci&quot;:&quot;FI&quot;,&quot;cn&quot;:&quot;Finland&quot;,&quot;tv&quot;:&quot;suomen kieli&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,110&quot;,&quot;bc&quot;:8,&quot;fc&quot;:7,&quot;rc&quot;:2},{&quot;id&quot;:&quot;hyw&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Western Armenian&quot;,&quot;ci&quot;:&quot;TR&quot;,&quot;cn&quot;:&quot;Turkey&quot;,&quot;tv&quot;:&quot;???????&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,340&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;kpv&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Komi-Zyrian&quot;,&quot;ci&quot;:&quot;RU&quot;,&quot;cn&quot;:&quot;Russia&quot;,&quot;tv&quot;:&quot;\u041a\u043e\u043c\u0438 \u043a\u044b\u0432&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;90&quot;,&quot;bc&quot;:1,&quot;fc&quot;:3,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;lit&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Lithuanian&quot;,&quot;ci&quot;:&quot;LT&quot;,&quot;cn&quot;:&quot;Lithuania&quot;,&quot;tv&quot;:&quot;lietuvi\u0173 kalba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,610&quot;,&quot;bc&quot;:8,&quot;fc&quot;:4,&quot;rc&quot;:4},{&quot;id&quot;:&quot;lvs&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Standard Latvian&quot;,&quot;ci&quot;:&quot;LV&quot;,&quot;cn&quot;:&quot;Latvia&quot;,&quot;tv&quot;:&quot;Lettish&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,640&quot;,&quot;bc&quot;:4,&quot;fc&quot;:2,&quot;rc&quot;:2},{&quot;id&quot;:&quot;pol&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Polish&quot;,&quot;ci&quot;:&quot;PL&quot;,&quot;cn&quot;:&quot;Poland&quot;,&quot;tv&quot;:&quot;polski&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,550&quot;,&quot;bc&quot;:13,&quot;fc&quot;:6,&quot;rc&quot;:12},{&quot;id&quot;:&quot;rml&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Baltic Romani&quot;,&quot;ci&quot;:&quot;PL&quot;,&quot;cn&quot;:&quot;Poland&quot;,&quot;tv&quot;:&quot;Romani, Baltic&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;360&quot;,&quot;bc&quot;:4,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;rus&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Russian&quot;,&quot;ci&quot;:&quot;RU&quot;,&quot;cn&quot;:&quot;Russia&quot;,&quot;tv&quot;:&quot;\u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;361,130&quot;,&quot;bc&quot;:20,&quot;fc&quot;:9,&quot;rc&quot;:93},{&quot;id&quot;:&quot;tat&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Tatar&quot;,&quot;ci&quot;:&quot;RU&quot;,&quot;cn&quot;:&quot;Russia&quot;,&quot;tv&quot;:&quot; \u062a\u0627\u062a\u0627\u0631 \u062a\u0644\u06cc;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,860&quot;,&quot;bc&quot;:1,&quot;fc&quot;:5,&quot;rc&quot;:3},{&quot;id&quot;:&quot;ukr&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Ukrainian&quot;,&quot;ci&quot;:&quot;UA&quot;,&quot;cn&quot;:&quot;Ukraine&quot;,&quot;tv&quot;:&quot;\u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430 \u043c\u043e\u0432\u0430ukrayins&#039;ka mova&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;21,360&quot;,&quot;bc&quot;:8,&quot;fc&quot;:9,&quot;rc&quot;:10},{&quot;id&quot;:&quot;vep&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Veps&quot;,&quot;ci&quot;:&quot;RU&quot;,&quot;cn&quot;:&quot;Russia&quot;,&quot;tv&quot;:&quot;veps\u00e4n kel\u02b9&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;50&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;vro&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;V\u00f5ro&quot;,&quot;ci&quot;:&quot;EE&quot;,&quot;cn&quot;:&quot;Estonia&quot;,&quot;tv&quot;:&quot;v\u00f5ro kiil\u02bc&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;87,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ydd&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Eastern Yiddish&quot;,&quot;ci&quot;:&quot;UA&quot;,&quot;cn&quot;:&quot;Ukraine&quot;,&quot;tv&quot;:&quot;\u05d9\u05d9\u05b4\u05d3\u05d9\u05e9&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,840&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:1}]}'
+               data-searchplaceholder="Filter Items on this Page">
+            <thead>
+            <tr>
+                <th data-column-name="tt" data-link="id" data-path="/languages">Languages<h6>in Estonia</h6></th>
+                <th data-column-name="po" data-sort-default="desc">Population<h6>Primary Language</h6></th>
+                <th data-column-name="id">iso</th>
+                <th data-column-name="bc">Bible<h6>Versions</h6></th>
+                <th data-column-name="fc">Films</th>
+                <th data-column-name="rc">Resources</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

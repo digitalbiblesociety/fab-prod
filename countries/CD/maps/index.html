@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-download   {text-align: right;margin-right:2em;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 9em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 2px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>DR Congo | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/CD.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/cd_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    DR Congo
+                </h1>
+                <h2 itemprop="description"  >A country of  Africa</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/CD">DR Congo Languages</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Maps | Info
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/CD/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/CD">
+                    <span itemprop="name">DR Congo</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+
+            <div class="country-facts row">
+                <p><b>Title:</b> The Democratic Republic of the Congo </p><br>
+                <p><b>Population:</b> 105,044,646</p>
+                <p><b>Population Change:</b> 3.19</p>
+                <p><b>National Average Age:</b> 17</p>
+                <p><b>Urban Percentage:</b> 46</p>
+                <p><b>Christian Population:</b> 63,150,000</p>
+                <p><b>Christian Percentage:</b> 92</p>
+
+            </div>
+
+
+                        <div class="country-overview">
+                <p><b>Introduction:</b>
+                    The Democratic Republic of the Congo also known as DR Congo the DRC Congo-Kinshasa or simply the Congo is a country located in Central Africa. It is sometimes referred to by its former name of Zaire which was its official name between 1971 and 1997. The DRC borders the Central African Republic and South Sudan to the north; Uganda Rwanda Burundi and Tanzania to the east; Zambia to the south; Angola to the southwest; and the Republic of the Congo and the Atlantic Ocean to the west. It is the second-largest country in Africa after Algeria (the largest in Sub-Saharan Africa) by area and the 11th-largest in the world.</p><br>
+                <p><b>Overview:</b>
+                    Established as an official Belgian colony in 1908 the then-Republic of the Congo gained its independence in 1960 but its early years were marred by political and social instability. Col. Joseph MOBUTU seized power and declared himself president in a November 1965 coup. He subsequently changed his name - to MOBUTU Sese Seko - as well as that of the country - to Zaire. MOBUTU retained his position for 32 years through several sham elections as well as through brutal force. Ethnic strife and civil war touched off by a massive inflow of refugees in 1994 from fighting in Rwanda and Burundi led in May 1997 to the toppling of the MOBUTU regime by a rebellion backed by Rwanda and Uganda and fronted by Laurent KABILA. He renamed the country the Democratic Republic of the Congo (DRC) but in August 1998 his regime was itself challenged by a second insurrection again backed by Rwanda and Uganda. Troops from Angola Chad Namibia Sudan and Zimbabwe intervened to support KABILA&#039;s regime. In January 2001 KABILA was assassinated and his son Joseph KABILA was named head of state. In October 2002 the new president was successful in negotiating the withdrawal of Rwandan forces occupying the eastern DRC; two months later the Pretoria Accord was signed by all remaining warring parties to end the fighting and establish a government of national unity. A transitional government was set up in July 2003; it held a successful constitutional referendum in December 2005 and elections for the presidency National Assembly and provincial legislatures took place in 2006. ++ In 2009 following a resurgence of conflict in the eastern DRC the government signed a peace agreement with the National Congress for the Defense of the People (CNDP) a primarily Tutsi rebel group. An attempt to integrate CNDP members into the Congolese military failed prompting their defection in 2012 and the formation of the M23 armed group - named after the 23 March 2009 peace agreements. Renewed conflict led to large population displacements and significant human rights abuses before the M23 was pushed out of DRC to Uganda and Rwanda in late 2013 by a joint DRC and UN offensive. In addition the DRC continues to experience violence committed by other armed groups including the Democratic Forces for the Liberation of Rwanda the Allied Democratic Forces and assorted Mai Mai militias. In the most recent national elections held in November 2011 disputed results allowed Joseph KABILA to be reelected to the presidency; the next presidential election is scheduled for late 2016.</p>
+            </div>
+                
+
+        </div>
+    </div>
+
+
+
+    <div class="medium-9">
+
+
+        <div  class="row">
+
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Government</h4>
+                    <div><a href="#gov" alt="DR Congo gov Map" title="DR Congo gov Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/CD-gov.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/CD-gov.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Land</h4>
+                    <div><a href="#land" alt="DR Congo land Map" title="DR Congo land Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/CD-land.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/CD-land.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Language Map</h4>
+                    <div><a href="#language" alt="DR Congo language Map" title="DR Congo language Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/CD-lang.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/CD-lang.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Location</h4>
+                    <div><a href="#location" alt="DR Congo location Map" title="DR Congo location Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/CD-location.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/CD-location.png" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Population</h4>
+                    <div><a href="#population" alt="DR Congo population Map" title="DR Congo population Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/CD-population.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/CD-population.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Reference</h4>
+                    <div><a href="#reference" alt="DR Congo reference Map" title="DR Congo reference Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/CD-reference.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/CD-reference.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Transportation</h4>
+                    <div><a href="#trans" alt="DR Congo trans Map" title="DR Congo trans Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/CD-trans.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/CD-trans.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                    </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+<div class="map-modals">
+
+            <div id="gov" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/CD-gov.jpg' />
+    </div>
+</div>            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/CD-land.jpg' />
+    </div>
+</div>            <div id="language" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/CD-lang.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/CD-location.png' />
+    </div>
+</div>            <div id="population" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/CD-population.jpg' />
+    </div>
+</div>            <div id="reference" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/CD-reference.jpg' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/CD-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+
+
+                                    let marker_agh = L.marker([1.813140, 24.875380]).addTo(mymap);
+                    marker_agh.bindPopup('<a href="/languages/agh">Ngelima</a>').openPopup();
+                                                let marker_alz = L.marker([2.362130, 31.001635]).addTo(mymap);
+                    marker_alz.bindPopup('<a href="/languages/alz">Alur</a>').openPopup();
+                                                let marker_apc = L.marker([34.170933, 36.046843]).addTo(mymap);
+                    marker_apc.bindPopup('<a href="/languages/apc">North Levantine Arabic</a>').openPopup();
+                                                let marker_asv = L.marker([2.268180, 26.719770]).addTo(mymap);
+                    marker_asv.bindPopup('<a href="/languages/asv">Asoa</a>').openPopup();
+                                                let marker_auh = L.marker([-11.629545, 29.016760]).addTo(mymap);
+                    marker_auh.bindPopup('<a href="/languages/auh">Aushi</a>').openPopup();
+                                                let marker_avu = L.marker([4.386395, 29.937940]).addTo(mymap);
+                    marker_avu.bindPopup('<a href="/languages/avu">Avokaya</a>').openPopup();
+                                                let marker_bbe = L.marker([3.399560, 28.313760]).addTo(mymap);
+                    marker_bbe.bindPopup('<a href="/languages/bbe">Bangba</a>').openPopup();
+                                                let marker_bbm = L.marker([1.794750, 23.585120]).addTo(mymap);
+                    marker_bbm.bindPopup('<a href="/languages/bbm">Babango</a>').openPopup();
+                                                let marker_bcp = L.marker([1.180700, 26.594060]).addTo(mymap);
+                    marker_bcp.bindPopup('<a href="/languages/bcp">Bali (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_bct = L.marker([2.202290, 30.367890]).addTo(mymap);
+                    marker_bct.bindPopup('<a href="/languages/bct">Bendi</a>').openPopup();
+                                                let marker_bdh = L.marker([4.659435, 29.589960]).addTo(mymap);
+                    marker_bdh.bindPopup('<a href="/languages/bdh">Baka (South Sudan)</a>').openPopup();
+                                                let marker_bem = L.marker([-10.612245, 29.299260]).addTo(mymap);
+                    marker_bem.bindPopup('<a href="/languages/bem">Bemba (Zambia)</a>').openPopup();
+                                                let marker_bfa = L.marker([4.195225, 31.072335]).addTo(mymap);
+                    marker_bfa.bindPopup('<a href="/languages/bfa">Bari</a>').openPopup();
+                                                let marker_bhy = L.marker([0.245530, 28.668090]).addTo(mymap);
+                    marker_bhy.bindPopup('<a href="/languages/bhy">Bhele</a>').openPopup();
+                                                let marker_bip = L.marker([1.168390, 28.762650]).addTo(mymap);
+                    marker_bip.bindPopup('<a href="/languages/bip">Bila</a>').openPopup();
+                                                let marker_biz = L.marker([0.937770, 18.126610]).addTo(mymap);
+                    marker_biz.bindPopup('<a href="/languages/biz">Baloi</a>').openPopup();
+                                                let marker_bja = L.marker([2.199510, 22.610690]).addTo(mymap);
+                    marker_bja.bindPopup('<a href="/languages/bja">Budza</a>').openPopup();
+                                                let marker_bjo = L.marker([5.878933, 22.466640]).addTo(mymap);
+                    marker_bjo.bindPopup('<a href="/languages/bjo">Mid-Southern Banda</a>').openPopup();
+                                                let marker_bkf = L.marker([3.184380, 29.984160]).addTo(mymap);
+                    marker_bkf.bindPopup('<a href="/languages/bkf">Beeke</a>').openPopup();
+                                                let marker_bkg = L.marker([4.422830, 20.716090]).addTo(mymap);
+                    marker_bkg.bindPopup('<a href="/languages/bkg">Buraka</a>').openPopup();
+                                                let marker_bkp = L.marker([1.516120, 18.880640]).addTo(mymap);
+                    marker_bkp.bindPopup('<a href="/languages/bkp">Boko (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_bkt = L.marker([0.834630, 18.455540]).addTo(mymap);
+                    marker_bkt.bindPopup('<a href="/languages/bkt">Boloki</a>').openPopup();
+                                                let marker_bli = L.marker([-1.383620, 18.097480]).addTo(mymap);
+                    marker_bli.bindPopup('<a href="/languages/bli">Bolia</a>').openPopup();
+                                                let marker_bmb = L.marker([-4.490575, 29.050690]).addTo(mymap);
+                    marker_bmb.bindPopup('<a href="/languages/bmb">Bembe</a>').openPopup();
+                                                let marker_bmg = L.marker([2.167730, 19.164450]).addTo(mymap);
+                    marker_bmg.bindPopup('<a href="/languages/bmg">Bamwe</a>').openPopup();
+                                                let marker_bml = L.marker([1.993150, 18.513100]).addTo(mymap);
+                    marker_bml.bindPopup('<a href="/languages/bml">Bomboli</a>').openPopup();
+                                                let marker_bni = L.marker([-0.874370, 17.226970]).addTo(mymap);
+                    marker_bni.bindPopup('<a href="/languages/bni">Bangi</a>').openPopup();
+                                                let marker_bnx = L.marker([-4.314640, 27.243760]).addTo(mymap);
+                    marker_bnx.bindPopup('<a href="/languages/bnx">Bangubangu</a>').openPopup();
+                                                let marker_boh = L.marker([3.585700, 22.973020]).addTo(mymap);
+                    marker_boh.bindPopup('<a href="/languages/boh">Boma</a>').openPopup();
+                                                let marker_bpj = L.marker([-4.677910, 22.791480]).addTo(mymap);
+                    marker_bpj.bindPopup('<a href="/languages/bpj">Binji</a>').openPopup();
+                                                let marker_bqc = L.marker([10.518905, 3.717705]).addTo(mymap);
+                    marker_bqc.bindPopup('<a href="/languages/bqc">Boko (Benin)</a>').openPopup();
+                                                let marker_bqu = L.marker([4.492130, 29.134430]).addTo(mymap);
+                    marker_bqu.bindPopup('<a href="/languages/bqu">Boguru</a>').openPopup();
+                                                let marker_brf = L.marker([1.500540, 30.029320]).addTo(mymap);
+                    marker_brf.bindPopup('<a href="/languages/brf">Bera</a>').openPopup();
+                                                let marker_brm = L.marker([3.346420, 26.861020]).addTo(mymap);
+                    marker_brm.bindPopup('<a href="/languages/brm">Barambu</a>').openPopup();
+                                                let marker_buf = L.marker([-4.694630, 21.455580]).addTo(mymap);
+                    marker_buf.bindPopup('<a href="/languages/buf">Bushoong</a>').openPopup();
+                                                let marker_buu = L.marker([2.005010, 27.951040]).addTo(mymap);
+                    marker_buu.bindPopup('<a href="/languages/buu">Budu</a>').openPopup();
+                                                let marker_bwc = L.marker([-8.304105, 29.407090]).addTo(mymap);
+                    marker_bwc.bindPopup('<a href="/languages/bwc">Bwile</a>').openPopup();
+                                                let marker_bwl = L.marker([-1.630620, 26.450820]).addTo(mymap);
+                    marker_bwl.bindPopup('<a href="/languages/bwl">Bwela</a>').openPopup();
+                                                let marker_bws = L.marker([2.401950, 18.784080]).addTo(mymap);
+                    marker_bws.bindPopup('<a href="/languages/bws">Bomboma</a>').openPopup();
+                                                let marker_bww = L.marker([2.595700, 25.251380]).addTo(mymap);
+                    marker_bww.bindPopup('<a href="/languages/bww">Bwa</a>').openPopup();
+                                                let marker_bxg = L.marker([3.346600, 28.044530]).addTo(mymap);
+                    marker_bxg.bindPopup('<a href="/languages/bxg">Bangala</a>').openPopup();
+                                                let marker_byi = L.marker([-5.418060, 28.554500]).addTo(mymap);
+                    marker_byi.bindPopup('<a href="/languages/byi">Buyu</a>').openPopup();
+                                                let marker_bzm = L.marker([2.463270, 19.618070]).addTo(mymap);
+                    marker_bzm.bindPopup('<a href="/languages/bzm">Bolondo</a>').openPopup();
+                                                let marker_bzo = L.marker([2.072950, 18.678370]).addTo(mymap);
+                    marker_bzo.bindPopup('<a href="/languages/bzo">Bozaba</a>').openPopup();
+                                                let marker_cjk = L.marker([-9.660823, 21.399183]).addTo(mymap);
+                    marker_cjk.bindPopup('<a href="/languages/cjk">Chokwe</a>').openPopup();
+                                                let marker_dez = L.marker([-3.263370, 21.419430]).addTo(mymap);
+                    marker_dez.bindPopup('<a href="/languages/dez">Dengese</a>').openPopup();
+                                                let marker_diz = L.marker([-4.443040, 19.388090]).addTo(mymap);
+                    marker_diz.bindPopup('<a href="/languages/diz">Ding</a>').openPopup();
+                                                                    let marker_doo = L.marker([2.966830, 29.961930]).addTo(mymap);
+                    marker_doo.bindPopup('<a href="/languages/doo">Dongo</a>').openPopup();
+                                                let marker_dzn = L.marker([2.241950, 19.002210]).addTo(mymap);
+                    marker_dzn.bindPopup('<a href="/languages/dzn">Dzando</a>').openPopup();
+                                                let marker_ebo = L.marker([-2.623600, 17.030960]).addTo(mymap);
+                    marker_ebo.bindPopup('<a href="/languages/ebo">Teke-Ebo</a>').openPopup();
+                                                let marker_efe = L.marker([1.879800, 29.291850]).addTo(mymap);
+                    marker_efe.bindPopup('<a href="/languages/efe">Efe</a>').openPopup();
+                                                let marker_ell = L.marker([42.322386, 24.869938]).addTo(mymap);
+                    marker_ell.bindPopup('<a href="/languages/ell">Modern Greek (1453-)</a>').openPopup();
+                                                let marker_flr = L.marker([-3.040220, 28.986460]).addTo(mymap);
+                    marker_flr.bindPopup('<a href="/languages/flr">Fuliiru</a>').openPopup();
+                                                let marker_fom = L.marker([0.880320, 24.320230]).addTo(mymap);
+                    marker_fom.bindPopup('<a href="/languages/fom">Foma</a>').openPopup();
+                                                let marker_fra = L.marker([48.000000, 2.000000]).addTo(mymap);
+                    marker_fra.bindPopup('<a href="/languages/fra">French</a>').openPopup();
+                                                let marker_fuu = L.marker([4.485005, 20.644785]).addTo(mymap);
+                    marker_fuu.bindPopup('<a href="/languages/fuu">Furu</a>').openPopup();
+                                                let marker_gbg = L.marker([4.684670, 20.260860]).addTo(mymap);
+                    marker_gbg.bindPopup('<a href="/languages/gbg">Gbanziri</a>').openPopup();
+                                                let marker_gey = L.marker([-4.673370, 26.749650]).addTo(mymap);
+                    marker_gey.bindPopup('<a href="/languages/gey">Enya</a>').openPopup();
+                                                let marker_gix = L.marker([4.558500, 19.009120]).addTo(mymap);
+                    marker_gix.bindPopup('<a href="/languages/gix">Gilima</a>').openPopup();
+                                                let marker_gox = L.marker([5.012010, 20.019430]).addTo(mymap);
+                    marker_gox.bindPopup('<a href="/languages/gox">Gobu</a>').openPopup();
+                                                let marker_hav = L.marker([-1.999750, 28.862350]).addTo(mymap);
+                    marker_hav.bindPopup('<a href="/languages/hav">Havu</a>').openPopup();
+                                                let marker_hba = L.marker([-2.490470, 24.229950]).addTo(mymap);
+                    marker_hba.bindPopup('<a href="/languages/hba">Hamba</a>').openPopup();
+                                                let marker_hem = L.marker([-7.774590, 27.591280]).addTo(mymap);
+                    marker_hem.bindPopup('<a href="/languages/hem">Hemba</a>').openPopup();
+                                                let marker_hin = L.marker([25.000000, 77.000000]).addTo(mymap);
+                    marker_hin.bindPopup('<a href="/languages/hin">Hindi</a>').openPopup();
+                                                let marker_hke = L.marker([-1.467620, 28.930830]).addTo(mymap);
+                    marker_hke.bindPopup('<a href="/languages/hke">Hunde</a>').openPopup();
+                                                let marker_hol = L.marker([-8.147545, 17.572000]).addTo(mymap);
+                    marker_hol.bindPopup('<a href="/languages/hol">Holu</a>').openPopup();
+                                                let marker_hoo = L.marker([-5.375450, 28.327380]).addTo(mymap);
+                    marker_hoo.bindPopup('<a href="/languages/hoo">Holoholo</a>').openPopup();
+                                                let marker_hum = L.marker([-3.696950, 18.431210]).addTo(mymap);
+                    marker_hum.bindPopup('<a href="/languages/hum">Hungana</a>').openPopup();
+                                                let marker_ifm = L.marker([-3.590030, 15.506050]).addTo(mymap);
+                    marker_ifm.bindPopup('<a href="/languages/ifm">Teke-Fuumu</a>').openPopup();
+                                                let marker_jgb = L.marker([3.604470, 27.652920]).addTo(mymap);
+                    marker_jgb.bindPopup('<a href="/languages/jgb">Ngbee</a>').openPopup();
+                                                let marker_job = L.marker([-3.457870, 28.997840]).addTo(mymap);
+                    marker_job.bindPopup('<a href="/languages/job">Joba</a>').openPopup();
+                                                let marker_kbj = L.marker([5.035250, 25.749140]).addTo(mymap);
+                    marker_kbj.bindPopup('<a href="/languages/kbj">Kari</a>').openPopup();
+                                                let marker_kbo = L.marker([3.560390, 30.555980]).addTo(mymap);
+                    marker_kbo.bindPopup('<a href="/languages/kbo">Keliko</a>').openPopup();
+                                                let marker_kcv = L.marker([-7.151040, 22.902710]).addTo(mymap);
+                    marker_kcv.bindPopup('<a href="/languages/kcv">Kete</a>').openPopup();
+                                                let marker_kcw = L.marker([-4.369660, 29.168380]).addTo(mymap);
+                    marker_kcw.bindPopup('<a href="/languages/kcw">Kabwari</a>').openPopup();
+                                                let marker_kdg = L.marker([-11.939600, 27.514380]).addTo(mymap);
+                    marker_kdg.bindPopup('<a href="/languages/kdg">Seba</a>').openPopup();
+                                                let marker_keb = L.marker([-0.788540, 10.383580]).addTo(mymap);
+                    marker_keb.bindPopup('<a href="/languages/keb">Kélé</a>').openPopup();
+                                                let marker_kel = L.marker([-1.390850, 24.005060]).addTo(mymap);
+                    marker_kel.bindPopup('<a href="/languages/kel">Kela (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_keo = L.marker([3.652333, 30.776243]).addTo(mymap);
+                    marker_keo.bindPopup('<a href="/languages/keo">Kakwa</a>').openPopup();
+                                                let marker_khx = L.marker([-1.825590, 28.101690]).addTo(mymap);
+                    marker_khx.bindPopup('<a href="/languages/khx">Kanu</a>').openPopup();
+                                                let marker_khy = L.marker([0.369060, 24.309770]).addTo(mymap);
+                    marker_khy.bindPopup('<a href="/languages/khy">Kele (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_kin = L.marker([-1.567707, 29.644133]).addTo(mymap);
+                    marker_kin.bindPopup('<a href="/languages/kin">Kinyarwanda</a>').openPopup();
+                                                let marker_kkq = L.marker([0.750680, 28.739380]).addTo(mymap);
+                    marker_kkq.bindPopup('<a href="/languages/kkq">Kaiku</a>').openPopup();
+                                                let marker_kmb = L.marker([-8.978350, 14.889260]).addTo(mymap);
+                    marker_kmb.bindPopup('<a href="/languages/kmb">Kimbundu</a>').openPopup();
+                                                let marker_kmw = L.marker([-0.763330, 26.714440]).addTo(mymap);
+                    marker_kmw.bindPopup('<a href="/languages/kmw">Komo (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_kng = L.marker([-5.577220, 14.477057]).addTo(mymap);
+                    marker_kng.bindPopup('<a href="/languages/kng">Koongo</a>').openPopup();
+                                                let marker_kny = L.marker([-7.318780, 23.612980]).addTo(mymap);
+                    marker_kny.bindPopup('<a href="/languages/kny">Kanyok</a>').openPopup();
+                                                                    let marker_koo = L.marker([0.323950, 29.869620]).addTo(mymap);
+                    marker_koo.bindPopup('<a href="/languages/koo">Konzo</a>').openPopup();
+                                                let marker_kpl = L.marker([4.510930, 20.310830]).addTo(mymap);
+                    marker_kpl.bindPopup('<a href="/languages/kpl">Kpala</a>').openPopup();
+                                                let marker_kqn = L.marker([-12.412865, 25.764565]).addTo(mymap);
+                    marker_kqn.bindPopup('<a href="/languages/kqn">Kaonde</a>').openPopup();
+                                                let marker_ksv = L.marker([-3.614590, 25.292300]).addTo(mymap);
+                    marker_ksv.bindPopup('<a href="/languages/ksv">Kusu</a>').openPopup();
+                                                let marker_ktf = L.marker([-1.537120, 27.463320]).addTo(mymap);
+                    marker_ktf.bindPopup('<a href="/languages/ktf">Kwami</a>').openPopup();
+                                                let marker_ktu = L.marker([-2.296010, 17.154790]).addTo(mymap);
+                    marker_ktu.bindPopup('<a href="/languages/ktu">Kituba</a>').openPopup();
+                                                let marker_kty = L.marker([3.476330, 24.820230]).addTo(mymap);
+                    marker_kty.bindPopup('<a href="/languages/kty">Kango (Bas-Uélé District)</a>').openPopup();
+                                                let marker_kws = L.marker([-5.604450, 18.575890]).addTo(mymap);
+                    marker_kws.bindPopup('<a href="/languages/kws">Kwese</a>').openPopup();
+                                                let marker_kwy = L.marker([-5.335390, 13.358650]).addTo(mymap);
+                    marker_kwy.bindPopup('<a href="/languages/kwy">San Salvador Kongo</a>').openPopup();
+                                                let marker_kzy = L.marker([1.598550, 27.018640]).addTo(mymap);
+                    marker_kzy.bindPopup('<a href="/languages/kzy">Kango (Tshopo District)</a>').openPopup();
+                                                let marker_lal = L.marker([-1.117110, 23.363370]).addTo(mymap);
+                    marker_lal.bindPopup('<a href="/languages/lal">Lalia</a>').openPopup();
+                                                let marker_lam = L.marker([-12.336595, 27.902620]).addTo(mymap);
+                    marker_lam.bindPopup('<a href="/languages/lam">Lamba</a>').openPopup();
+                                                let marker_lea = L.marker([-3.831960, 27.142360]).addTo(mymap);
+                    marker_lea.bindPopup('<a href="/languages/lea">Lega-Shabunda</a>').openPopup();
+                                                let marker_leb = L.marker([-12.945010, 30.229725]).addTo(mymap);
+                    marker_leb.bindPopup('<a href="/languages/leb">Lala-Bisa</a>').openPopup();
+                                                let marker_led = L.marker([2.189795, 30.679450]).addTo(mymap);
+                    marker_led.bindPopup('<a href="/languages/led">Lendu</a>').openPopup();
+                                                let marker_lej = L.marker([-1.958740, 25.334340]).addTo(mymap);
+                    marker_lej.bindPopup('<a href="/languages/lej">Lengola</a>').openPopup();
+                                                let marker_lel = L.marker([-4.946720, 20.567390]).addTo(mymap);
+                    marker_lel.bindPopup('<a href="/languages/lel">Lele (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_les = L.marker([1.879800, 29.291850]).addTo(mymap);
+                    marker_les.bindPopup('<a href="/languages/les">Lese</a>').openPopup();
+                                                let marker_lgg = L.marker([3.022450, 30.864170]).addTo(mymap);
+                    marker_lgg.bindPopup('<a href="/languages/lgg">Lugbara</a>').openPopup();
+                                                let marker_lgm = L.marker([-3.390070, 28.262060]).addTo(mymap);
+                    marker_lgm.bindPopup('<a href="/languages/lgm">Lega-Mwenga</a>').openPopup();
+                                                let marker_lgz = L.marker([2.861680, 22.493590]).addTo(mymap);
+                    marker_lgz.bindPopup('<a href="/languages/lgz">Ligenza</a>').openPopup();
+                                                let marker_lie = L.marker([1.751060, 19.022250]).addTo(mymap);
+                    marker_lie.bindPopup('<a href="/languages/lie">Likila</a>').openPopup();
+                                                let marker_lik = L.marker([2.137770, 27.608830]).addTo(mymap);
+                    marker_lik.bindPopup('<a href="/languages/lik">Lika</a>').openPopup();
+                                                let marker_lin = L.marker([1.403245, 19.782905]).addTo(mymap);
+                    marker_lin.bindPopup('<a href="/languages/lin">Lingala</a>').openPopup();
+                                                let marker_liz = L.marker([1.977290, 18.888610]).addTo(mymap);
+                    marker_liz.bindPopup('<a href="/languages/liz">Libinza</a>').openPopup();
+                                                let marker_lln = L.marker([9.158000, 15.811490]).addTo(mymap);
+                    marker_lln.bindPopup('<a href="/languages/lln">Lele (Chad)</a>').openPopup();
+                                                let marker_lmi = L.marker([0.267960, 27.341960]).addTo(mymap);
+                    marker_lmi.bindPopup('<a href="/languages/lmi">Lombi</a>').openPopup();
+                                                let marker_lna = L.marker([4.875225, 20.109035]).addTo(mymap);
+                    marker_lna.bindPopup('<a href="/languages/lna">Langbashe</a>').openPopup();
+                                                let marker_lnl = L.marker([2.941135, 21.050960]).addTo(mymap);
+                    marker_lnl.bindPopup('<a href="/languages/lnl">South Central Banda</a>').openPopup();
+                                                let marker_lnz = L.marker([-4.614440, 16.725880]).addTo(mymap);
+                    marker_lnz.bindPopup('<a href="/languages/lnz">Lonzo</a>').openPopup();
+                                                let marker_log = L.marker([3.326080, 29.886550]).addTo(mymap);
+                    marker_log.bindPopup('<a href="/languages/log">Logo</a>').openPopup();
+                                                let marker_lol = L.marker([-1.542280, 20.425870]).addTo(mymap);
+                    marker_lol.bindPopup('<a href="/languages/lol">Mongo</a>').openPopup();
+                                                let marker_loo = L.marker([0.882670, 24.686160]).addTo(mymap);
+                    marker_loo.bindPopup('<a href="/languages/loo">Lombo</a>').openPopup();
+                                                let marker_loq = L.marker([2.048810, 18.366660]).addTo(mymap);
+                    marker_loq.bindPopup('<a href="/languages/loq">Lobala</a>').openPopup();
+                                                let marker_lse = L.marker([0.169880, 18.399080]).addTo(mymap);
+                    marker_lse.bindPopup('<a href="/languages/lse">Lusengo</a>').openPopup();
+                                                let marker_lua = L.marker([-5.727170, 22.442200]).addTo(mymap);
+                    marker_lua.bindPopup('<a href="/languages/lua">Luba-Lulua</a>').openPopup();
+                                                let marker_lub = L.marker([-8.281600, 25.891830]).addTo(mymap);
+                    marker_lub.bindPopup('<a href="/languages/lub">Luba-Katanga</a>').openPopup();
+                                                let marker_luc = L.marker([3.561430, 31.307090]).addTo(mymap);
+                    marker_luc.bindPopup('<a href="/languages/luc">Aringa</a>').openPopup();
+                                                let marker_lue = L.marker([-13.538245, 22.292385]).addTo(mymap);
+                    marker_lue.bindPopup('<a href="/languages/lue">Luvale</a>').openPopup();
+                                                let marker_luj = L.marker([-5.086930, 23.542580]).addTo(mymap);
+                    marker_luj.bindPopup('<a href="/languages/luj">Luna</a>').openPopup();
+                                                let marker_lun = L.marker([-11.179277, 23.866193]).addTo(mymap);
+                    marker_lun.bindPopup('<a href="/languages/lun">Lunda</a>').openPopup();
+                                                let marker_lwa = L.marker([-7.163880, 22.109710]).addTo(mymap);
+                    marker_lwa.bindPopup('<a href="/languages/lwa">Lwalu</a>').openPopup();
+                                                let marker_mdi = L.marker([2.681670, 28.986180]).addTo(mymap);
+                    marker_mdi.bindPopup('<a href="/languages/mdi">Mamvu</a>').openPopup();
+                                                let marker_mdj = L.marker([2.551100, 27.071200]).addTo(mymap);
+                    marker_mdj.bindPopup('<a href="/languages/mdj">Mangbetu</a>').openPopup();
+                                                let marker_mdk = L.marker([2.747790, 29.735770]).addTo(mymap);
+                    marker_mdk.bindPopup('<a href="/languages/mdk">Mangbutu</a>').openPopup();
+                                                let marker_mdm = L.marker([2.798270, 27.828160]).addTo(mymap);
+                    marker_mdm.bindPopup('<a href="/languages/mdm">Mayogo</a>').openPopup();
+                                                let marker_mdp = L.marker([-5.118880, 18.040960]).addTo(mymap);
+                    marker_mdp.bindPopup('<a href="/languages/mdp">Mbala</a>').openPopup();
+                                                let marker_mdq = L.marker([-0.571810, 24.044300]).addTo(mymap);
+                    marker_mdq.bindPopup('<a href="/languages/mdq">Mbole</a>').openPopup();
+                                                let marker_mfc = L.marker([1.068850, 25.142960]).addTo(mymap);
+                    marker_mfc.bindPopup('<a href="/languages/mfc">Mba</a>').openPopup();
+                                                let marker_mhi = L.marker([3.624995, 31.847135]).addTo(mymap);
+                    marker_mhi.bindPopup('<a href="/languages/mhi">Ma&#039;di</a>').openPopup();
+                                                let marker_mmz = L.marker([2.119420, 20.875860]).addTo(mymap);
+                    marker_mmz.bindPopup('<a href="/languages/mmz">Mabaale</a>').openPopup();
+                                                let marker_mnh = L.marker([4.579150, 19.826380]).addTo(mymap);
+                    marker_mnh.bindPopup('<a href="/languages/mnh">Mono (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_moj = L.marker([3.190077, 18.512943]).addTo(mymap);
+                    marker_moj.bindPopup('<a href="/languages/moj">Monzombo</a>').openPopup();
+                                                let marker_msj = L.marker([3.693510, 26.993880]).addTo(mymap);
+                    marker_msj.bindPopup('<a href="/languages/msj">Ma (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_muh = L.marker([4.227550, 29.996665]).addTo(mymap);
+                    marker_muh.bindPopup('<a href="/languages/muh">Mündü</a>').openPopup();
+                                                let marker_mwz = L.marker([1.206150, 23.503450]).addTo(mymap);
+                    marker_mwz.bindPopup('<a href="/languages/mwz">Moingi</a>').openPopup();
+                                                let marker_mxh = L.marker([0.739800, 29.665560]).addTo(mymap);
+                    marker_mxh.bindPopup('<a href="/languages/mxh">Mvuba</a>').openPopup();
+                                                let marker_myc = L.marker([-1.100380, 17.822470]).addTo(mymap);
+                    marker_myc.bindPopup('<a href="/languages/myc">Mayeka</a>').openPopup();
+                                                let marker_nbd = L.marker([3.272510, 23.566940]).addTo(mymap);
+                    marker_nbd.bindPopup('<a href="/languages/nbd">Ngbinda</a>').openPopup();
+                                                let marker_nbm = L.marker([4.000000, 18.120000]).addTo(mymap);
+                    marker_nbm.bindPopup('<a href="/languages/nbm">Ngbaka Ma&#039;bo</a>').openPopup();
+                                                let marker_nbw = L.marker([2.541400, 19.593870]).addTo(mymap);
+                    marker_nbw.bindPopup('<a href="/languages/nbw">Southern Ngbandi</a>').openPopup();
+                                                let marker_ndk = L.marker([1.533410, 27.969280]).addTo(mymap);
+                    marker_ndk.bindPopup('<a href="/languages/ndk">Ndaka</a>').openPopup();
+                                                let marker_ndl = L.marker([2.151010, 19.408660]).addTo(mymap);
+                    marker_ndl.bindPopup('<a href="/languages/ndl">Ndolo</a>').openPopup();
+                                                let marker_ndp = L.marker([2.685455, 30.565245]).addTo(mymap);
+                    marker_ndp.bindPopup('<a href="/languages/ndp">Ndo</a>').openPopup();
+                                                let marker_ndt = L.marker([2.388600, 21.575540]).addTo(mymap);
+                    marker_ndt.bindPopup('<a href="/languages/ndt">Ndunga</a>').openPopup();
+                                                let marker_ndw = L.marker([1.325390, 18.615120]).addTo(mymap);
+                    marker_ndw.bindPopup('<a href="/languages/ndw">Ndobo</a>').openPopup();
+                                                let marker_ndz = L.marker([7.730280, 27.558770]).addTo(mymap);
+                    marker_ndz.bindPopup('<a href="/languages/ndz">Ndogo</a>').openPopup();
+                                                let marker_nga = L.marker([2.988875, 18.994025]).addTo(mymap);
+                    marker_nga.bindPopup('<a href="/languages/nga">Ngbaka</a>').openPopup();
+                                                let marker_ngb = L.marker([3.563570, 21.852510]).addTo(mymap);
+                    marker_ngb.bindPopup('<a href="/languages/ngb">Northern Ngbandi</a>').openPopup();
+                                                let marker_ngc = L.marker([1.453570, 20.141480]).addTo(mymap);
+                    marker_ngc.bindPopup('<a href="/languages/ngc">Ngombe (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_nix = L.marker([1.049530, 30.087220]).addTo(mymap);
+                    marker_nix.bindPopup('<a href="/languages/nix">Hema</a>').openPopup();
+                                                let marker_niy = L.marker([1.304550, 30.224210]).addTo(mymap);
+                    marker_niy.bindPopup('<a href="/languages/niy">Ngiti</a>').openPopup();
+                                                let marker_nkw = L.marker([-3.674320, 22.680210]).addTo(mymap);
+                    marker_nkw.bindPopup('<a href="/languages/nkw">Nkutu</a>').openPopup();
+                                                let marker_nlj = L.marker([1.920980, 30.020100]).addTo(mymap);
+                    marker_nlj.bindPopup('<a href="/languages/nlj">Nyali</a>').openPopup();
+                                                let marker_nlo = L.marker([-4.098160, 19.512870]).addTo(mymap);
+                    marker_nlo.bindPopup('<a href="/languages/nlo">Ngul</a>').openPopup();
+                                                let marker_nnb = L.marker([-0.249040, 29.024260]).addTo(mymap);
+                    marker_nnb.bindPopup('<a href="/languages/nnb">Nande</a>').openPopup();
+                                                let marker_noq = L.marker([-2.870190, 21.383130]).addTo(mymap);
+                    marker_noq.bindPopup('<a href="/languages/noq">Ngongo</a>').openPopup();
+                                                let marker_nto = L.marker([-1.990620, 18.265010]).addTo(mymap);
+                    marker_nto.bindPopup('<a href="/languages/nto">Ntomba</a>').openPopup();
+                                                let marker_nue = L.marker([4.886278, 20.421753]).addTo(mymap);
+                    marker_nue.bindPopup('<a href="/languages/nue">Ngundu</a>').openPopup();
+                                                let marker_nuu = L.marker([3.822450, 18.718290]).addTo(mymap);
+                    marker_nuu.bindPopup('<a href="/languages/nuu">Ngbundu</a>').openPopup();
+                                                let marker_nxd = L.marker([-0.143630, 22.623150]).addTo(mymap);
+                    marker_nxd.bindPopup('<a href="/languages/nxd">Ngando (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_nyc = L.marker([2.976340, 29.180500]).addTo(mymap);
+                    marker_nyc.bindPopup('<a href="/languages/nyc">Nyanga-li</a>').openPopup();
+                                                let marker_nyg = L.marker([-3.038020, 28.643450]).addTo(mymap);
+                    marker_nyg.bindPopup('<a href="/languages/nyg">Nyindu</a>').openPopup();
+                                                let marker_nyj = L.marker([-1.293570, 28.315460]).addTo(mymap);
+                    marker_nyj.bindPopup('<a href="/languages/nyj">Nyanga</a>').openPopup();
+                                                                    let marker_nzk = L.marker([4.795675, 22.825365]).addTo(mymap);
+                    marker_nzk.bindPopup('<a href="/languages/nzk">Nzakara</a>').openPopup();
+                                                let marker_nzu = L.marker([-2.652610, 15.204700]).addTo(mymap);
+                    marker_nzu.bindPopup('<a href="/languages/nzu">Teke-Nzikou</a>').openPopup();
+                                                let marker_omi = L.marker([3.254200, 30.538500]).addTo(mymap);
+                    marker_omi.bindPopup('<a href="/languages/omi">Omi</a>').openPopup();
+                                                let marker_oml = L.marker([-2.321620, 25.174770]).addTo(mymap);
+                    marker_oml.bindPopup('<a href="/languages/oml">Ombo</a>').openPopup();
+                                                let marker_pae = L.marker([3.156360, 22.121220]).addTo(mymap);
+                    marker_pae.bindPopup('<a href="/languages/pae">Pagibete</a>').openPopup();
+                                                let marker_pem = L.marker([-5.647350, 19.827530]).addTo(mymap);
+                    marker_pem.bindPopup('<a href="/languages/pem">Phende</a>').openPopup();
+                                                let marker_pmb = L.marker([3.739000, 26.610000]).addTo(mymap);
+                    marker_pmb.bindPopup('<a href="/languages/pmb">Pambia</a>').openPopup();
+                                                let marker_pof = L.marker([0.735380, 23.897180]).addTo(mymap);
+                    marker_pof.bindPopup('<a href="/languages/pof">Poke</a>').openPopup();
+                                                let marker_por = L.marker([42.034120, -4.188150]).addTo(mymap);
+                    marker_por.bindPopup('<a href="/languages/por">Portuguese</a>').openPopup();
+                                                let marker_ppp = L.marker([-4.908770, 17.314200]).addTo(mymap);
+                    marker_ppp.bindPopup('<a href="/languages/ppp">Pelende</a>').openPopup();
+                                                let marker_rnd = L.marker([-8.869705, 21.416410]).addTo(mymap);
+                    marker_rnd.bindPopup('<a href="/languages/rnd">Ruund</a>').openPopup();
+                                                let marker_rwm = L.marker([0.812060, 30.001415]).addTo(mymap);
+                    marker_rwm.bindPopup('<a href="/languages/rwm">Amba (Uganda)</a>').openPopup();
+                                                let marker_sag = L.marker([6.785843, 20.170203]).addTo(mymap);
+                    marker_sag.bindPopup('<a href="/languages/sag">Sango</a>').openPopup();
+                                                let marker_shc = L.marker([-6.322230, 18.355470]).addTo(mymap);
+                    marker_shc.bindPopup('<a href="/languages/shc">Sonde</a>').openPopup();
+                                                let marker_shr = L.marker([-2.557770, 28.612190]).addTo(mymap);
+                    marker_shr.bindPopup('<a href="/languages/shr">Shi</a>').openPopup();
+                                                let marker_skt = L.marker([-2.856530, 17.966860]).addTo(mymap);
+                    marker_skt.bindPopup('<a href="/languages/skt">Sakata</a>').openPopup();
+                                                let marker_slx = L.marker([-5.449370, 23.150220]).addTo(mymap);
+                    marker_slx.bindPopup('<a href="/languages/slx">Salampasu</a>').openPopup();
+                                                let marker_smx = L.marker([-6.213440, 17.165830]).addTo(mymap);
+                    marker_smx.bindPopup('<a href="/languages/smx">Samba</a>').openPopup();
+                                                let marker_sng = L.marker([-10.023590, 26.846210]).addTo(mymap);
+                    marker_sng.bindPopup('<a href="/languages/sng">Sanga (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_soc = L.marker([1.250370, 23.690650]).addTo(mymap);
+                    marker_soc.bindPopup('<a href="/languages/soc">So (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_sod = L.marker([-2.218710, 26.347750]).addTo(mymap);
+                    marker_sod.bindPopup('<a href="/languages/sod">Songoora</a>').openPopup();
+                                                let marker_soe = L.marker([-3.810410, 21.422330]).addTo(mymap);
+                    marker_soe.bindPopup('<a href="/languages/soe">Songomeno</a>').openPopup();
+                                                let marker_soo = L.marker([-4.550570, 18.497770]).addTo(mymap);
+                    marker_soo.bindPopup('<a href="/languages/soo">Songo</a>').openPopup();
+                                                let marker_sop = L.marker([-5.719930, 25.276470]).addTo(mymap);
+                    marker_sop.bindPopup('<a href="/languages/sop">Songe</a>').openPopup();
+                                                let marker_sub = L.marker([-5.764950, 17.773560]).addTo(mymap);
+                    marker_sub.bindPopup('<a href="/languages/sub">Suku</a>').openPopup();
+                                                let marker_swc = L.marker([-7.269200, 27.419580]).addTo(mymap);
+                    marker_swc.bindPopup('<a href="/languages/swc">Congo Swahili</a>').openPopup();
+                                                let marker_swf = L.marker([4.711270, 27.468810]).addTo(mymap);
+                    marker_swf.bindPopup('<a href="/languages/swf">Sere</a>').openPopup();
+                                                let marker_swh = L.marker([-8.256053, 37.624033]).addTo(mymap);
+                    marker_swh.bindPopup('<a href="/languages/swh">Swahili (Coastal)</a>').openPopup();
+                                                let marker_szg = L.marker([-1.922560, 17.296500]).addTo(mymap);
+                    marker_szg.bindPopup('<a href="/languages/szg">Sengele</a>').openPopup();
+                                                let marker_tap = L.marker([-7.914160, 29.523770]).addTo(mymap);
+                    marker_tap.bindPopup('<a href="/languages/tap">Taabwa</a>').openPopup();
+                                                let marker_tbm = L.marker([4.685200, 26.447540]).addTo(mymap);
+                    marker_tbm.bindPopup('<a href="/languages/tbm">Tagbu</a>').openPopup();
+                                                let marker_tbt = L.marker([-1.918630, 28.577790]).addTo(mymap);
+                    marker_tbt.bindPopup('<a href="/languages/tbt">Tembo (Kitembo)</a>').openPopup();
+                                                let marker_tek = L.marker([-4.206970, 15.389310]).addTo(mymap);
+                    marker_tek.bindPopup('<a href="/languages/tek">Ibali Teke</a>').openPopup();
+                                                let marker_tii = L.marker([-2.846940, 16.476510]).addTo(mymap);
+                    marker_tii.bindPopup('<a href="/languages/tii">Tiene</a>').openPopup();
+                                                let marker_tlj = L.marker([0.676185, 29.949415]).addTo(mymap);
+                    marker_tlj.bindPopup('<a href="/languages/tlj">Talinga-Bwisi</a>').openPopup();
+                                                let marker_tll = L.marker([-4.293140, 24.545960]).addTo(mymap);
+                    marker_tll.bindPopup('<a href="/languages/tll">Tetela</a>').openPopup();
+                                                let marker_tmv = L.marker([2.024600, 20.368490]).addTo(mymap);
+                    marker_tmv.bindPopup('<a href="/languages/tmv">Tembo (Motembo)</a>').openPopup();
+                                                let marker_tor = L.marker([6.358150, 22.736157]).addTo(mymap);
+                    marker_tor.bindPopup('<a href="/languages/tor">Togbo-Vara Banda</a>').openPopup();
+                                                let marker_vau = L.marker([0.938470, 29.813480]).addTo(mymap);
+                    marker_vau.bindPopup('<a href="/languages/vau">Vanuma</a>').openPopup();
+                                                let marker_won = L.marker([-5.738370, 20.505400]).addTo(mymap);
+                    marker_won.bindPopup('<a href="/languages/won">Wongo</a>').openPopup();
+                                                let marker_xsn = L.marker([10.415660, 8.838820]).addTo(mymap);
+                    marker_xsn.bindPopup('<a href="/languages/xsn">Sanga (Nigeria)</a>').openPopup();
+                                                let marker_yaf = L.marker([-6.939645, 16.996505]).addTo(mymap);
+                    marker_yaf.bindPopup('<a href="/languages/yaf">Yaka (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_yel = L.marker([-2.462040, 22.589120]).addTo(mymap);
+                    marker_yel.bindPopup('<a href="/languages/yel">Yela</a>').openPopup();
+                                                let marker_yky = L.marker([4.165105, 22.170210]).addTo(mymap);
+                    marker_yky.bindPopup('<a href="/languages/yky">Yakoma</a>').openPopup();
+                                                let marker_ymg = L.marker([-0.242480, 22.307300]).addTo(mymap);
+                    marker_ymg.bindPopup('<a href="/languages/ymg">Yamongeri</a>').openPopup();
+                                                let marker_yng = L.marker([2.815230, 19.010820]).addTo(mymap);
+                    marker_yng.bindPopup('<a href="/languages/yng">Yango</a>').openPopup();
+                                                let marker_yns = L.marker([-3.823100, 18.234070]).addTo(mymap);
+                    marker_yns.bindPopup('<a href="/languages/yns">Yansi</a>').openPopup();
+                                                let marker_yom = L.marker([-4.862267, 12.636240]).addTo(mymap);
+                    marker_yom.bindPopup('<a href="/languages/yom">Yombe</a>').openPopup();
+                                                let marker_yul = L.marker([8.041243, 23.616553]).addTo(mymap);
+                    marker_yul.bindPopup('<a href="/languages/yul">Yulu</a>').openPopup();
+                                                let marker_zmb = L.marker([-4.013000, 26.608300]).addTo(mymap);
+                    marker_zmb.bindPopup('<a href="/languages/zmb">Zimba</a>').openPopup();
+                                                let marker_zmf = L.marker([-4.265730, 16.255880]).addTo(mymap);
+                    marker_zmf.bindPopup('<a href="/languages/zmf">Mfinu</a>').openPopup();
+                                                let marker_zmp = L.marker([-5.211340, 19.426880]).addTo(mymap);
+                    marker_zmp.bindPopup('<a href="/languages/zmp">Mpuono</a>').openPopup();
+                                                let marker_zmq = L.marker([-1.570310, 25.104050]).addTo(mymap);
+                    marker_zmq.bindPopup('<a href="/languages/zmq">Mituku</a>').openPopup();
+                                                let marker_zms = L.marker([1.620700, 22.838870]).addTo(mymap);
+                    marker_zms.bindPopup('<a href="/languages/zms">Mbesa</a>').openPopup();
+                                                let marker_zmw = L.marker([1.116020, 28.018050]).addTo(mymap);
+                    marker_zmw.bindPopup('<a href="/languages/zmw">Mbo (Democratic Republic of Congo)</a>').openPopup();
+                                                let marker_zmz = L.marker([3.980030, 19.445465]).addTo(mymap);
+                    marker_zmz.bindPopup('<a href="/languages/zmz">Mbandja</a>').openPopup();
+                                                let marker_zne = L.marker([4.620470, 26.715677]).addTo(mymap);
+                    marker_zne.bindPopup('<a href="/languages/zne">Zande</a>').openPopup();
+                    
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

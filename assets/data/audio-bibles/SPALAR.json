@@ -1,0 +1,288 @@
+{
+    "id": "SPALAR",
+    "parent_bible_id": null,
+    "title": null,
+    "title_vernacular": "Lenguaje Actual",
+    "description": null,
+    "description_vernacular": null,
+    "iso": "spa",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": null,
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2019-08-16T23:51:18.000000Z",
+    "updated_at": "2020-10-12T15:32:24.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Prov",
+            "chapter_id": "1",
+            "path": "SPNLARP2DA\/A20___01_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "2",
+            "path": "SPNLARP2DA\/A20___02_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "3",
+            "path": "SPNLARP2DA\/A20___03_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "4",
+            "path": "SPNLARP2DA\/A20___04_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "5",
+            "path": "SPNLARP2DA\/A20___05_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "6",
+            "path": "SPNLARP2DA\/A20___06_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "7",
+            "path": "SPNLARP2DA\/A20___07_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "8",
+            "path": "SPNLARP2DA\/A20___08_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "9",
+            "path": "SPNLARP2DA\/A20___09_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "10",
+            "path": "SPNLARP2DA\/A20___10_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "11",
+            "path": "SPNLARP2DA\/A20___11_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "12",
+            "path": "SPNLARP2DA\/A20___12_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "13",
+            "path": "SPNLARP2DA\/A20___13_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "14",
+            "path": "SPNLARP2DA\/A20___14_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "15",
+            "path": "SPNLARP2DA\/A20___15_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "16",
+            "path": "SPNLARP2DA\/A20___16_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "17",
+            "path": "SPNLARP2DA\/A20___17_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "18",
+            "path": "SPNLARP2DA\/A20___18_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "19",
+            "path": "SPNLARP2DA\/A20___19_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "20",
+            "path": "SPNLARP2DA\/A20___20_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "21",
+            "path": "SPNLARP2DA\/A20___21_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "22",
+            "path": "SPNLARP2DA\/A20___22_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "23",
+            "path": "SPNLARP2DA\/A20___23_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "24",
+            "path": "SPNLARP2DA\/A20___24_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "25",
+            "path": "SPNLARP2DA\/A20___25_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "26",
+            "path": "SPNLARP2DA\/A20___26_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "27",
+            "path": "SPNLARP2DA\/A20___27_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "28",
+            "path": "SPNLARP2DA\/A20___28_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "29",
+            "path": "SPNLARP2DA\/A20___29_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "30",
+            "path": "SPNLARP2DA\/A20___30_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "31",
+            "path": "SPNLARP2DA\/A20___31_Proverbs____SPNLARP2DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6090,
+            "bible_id": "SPALAR",
+            "equivalent_id": "SPNLARP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

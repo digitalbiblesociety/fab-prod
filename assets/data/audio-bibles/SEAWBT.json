@@ -1,0 +1,675 @@
+{
+    "id": "SEAWBT",
+    "parent_bible_id": null,
+    "title": "Portions of the Bible in Semai",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "sea",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2016",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2019-05-16T23:58:53.000000Z",
+    "updated_at": "2020-10-12T15:31:53.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Gen",
+            "chapter_id": "1",
+            "path": "SEAWYIP1DA\/A01___01_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "2",
+            "path": "SEAWYIP1DA\/A01___02_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "3",
+            "path": "SEAWYIP1DA\/A01___03_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "4",
+            "path": "SEAWYIP1DA\/A01___04_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "5",
+            "path": "SEAWYIP1DA\/A01___05_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "6",
+            "path": "SEAWYIP1DA\/A01___06_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "7",
+            "path": "SEAWYIP1DA\/A01___07_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "8",
+            "path": "SEAWYIP1DA\/A01___08_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "9",
+            "path": "SEAWYIP1DA\/A01___09_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "10",
+            "path": "SEAWYIP1DA\/A01___10_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "11",
+            "path": "SEAWYIP1DA\/A01___11_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "12",
+            "path": "SEAWYIP1DA\/A01___12_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "13",
+            "path": "SEAWYIP1DA\/A01___13_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "14",
+            "path": "SEAWYIP1DA\/A01___14_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "15",
+            "path": "SEAWYIP1DA\/A01___15_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "16",
+            "path": "SEAWYIP1DA\/A01___16_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "17",
+            "path": "SEAWYIP1DA\/A01___17_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "18",
+            "path": "SEAWYIP1DA\/A01___18_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "19",
+            "path": "SEAWYIP1DA\/A01___19_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "20",
+            "path": "SEAWYIP1DA\/A01___20_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "21",
+            "path": "SEAWYIP1DA\/A01___21_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "22",
+            "path": "SEAWYIP1DA\/A01___22_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "23",
+            "path": "SEAWYIP1DA\/A01___23_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "24",
+            "path": "SEAWYIP1DA\/A01___24_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "25",
+            "path": "SEAWYIP1DA\/A01___25_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "26",
+            "path": "SEAWYIP1DA\/A01___26_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "27",
+            "path": "SEAWYIP1DA\/A01___27_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "28",
+            "path": "SEAWYIP1DA\/A01___28_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "29",
+            "path": "SEAWYIP1DA\/A01___29_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "30",
+            "path": "SEAWYIP1DA\/A01___30_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "31",
+            "path": "SEAWYIP1DA\/A01___31_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "32",
+            "path": "SEAWYIP1DA\/A01___32_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "33",
+            "path": "SEAWYIP1DA\/A01___33_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "34",
+            "path": "SEAWYIP1DA\/A01___34_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "35",
+            "path": "SEAWYIP1DA\/A01___35_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "36",
+            "path": "SEAWYIP1DA\/A01___36_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "37",
+            "path": "SEAWYIP1DA\/A01___37_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "38",
+            "path": "SEAWYIP1DA\/A01___38_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "39",
+            "path": "SEAWYIP1DA\/A01___39_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "40",
+            "path": "SEAWYIP1DA\/A01___40_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "41",
+            "path": "SEAWYIP1DA\/A01___41_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "42",
+            "path": "SEAWYIP1DA\/A01___42_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "43",
+            "path": "SEAWYIP1DA\/A01___43_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "44",
+            "path": "SEAWYIP1DA\/A01___44_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "45",
+            "path": "SEAWYIP1DA\/A01___45_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "46",
+            "path": "SEAWYIP1DA\/A01___46_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "47",
+            "path": "SEAWYIP1DA\/A01___47_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "48",
+            "path": "SEAWYIP1DA\/A01___48_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "49",
+            "path": "SEAWYIP1DA\/A01___49_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "50",
+            "path": "SEAWYIP1DA\/A01___50_Genesis_____SEAWYIP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "1",
+            "path": "SEAWYIP1DA\/B05___01_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "2",
+            "path": "SEAWYIP1DA\/B05___02_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "3",
+            "path": "SEAWYIP1DA\/B05___03_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "4",
+            "path": "SEAWYIP1DA\/B05___04_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "5",
+            "path": "SEAWYIP1DA\/B05___05_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "6",
+            "path": "SEAWYIP1DA\/B05___06_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "7",
+            "path": "SEAWYIP1DA\/B05___07_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "8",
+            "path": "SEAWYIP1DA\/B05___08_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "9",
+            "path": "SEAWYIP1DA\/B05___09_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "10",
+            "path": "SEAWYIP1DA\/B05___10_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "11",
+            "path": "SEAWYIP1DA\/B05___11_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "12",
+            "path": "SEAWYIP1DA\/B05___12_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "13",
+            "path": "SEAWYIP1DA\/B05___13_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "14",
+            "path": "SEAWYIP1DA\/B05___14_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "15",
+            "path": "SEAWYIP1DA\/B05___15_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "16",
+            "path": "SEAWYIP1DA\/B05___16_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "17",
+            "path": "SEAWYIP1DA\/B05___17_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "18",
+            "path": "SEAWYIP1DA\/B05___18_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "19",
+            "path": "SEAWYIP1DA\/B05___19_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "20",
+            "path": "SEAWYIP1DA\/B05___20_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "21",
+            "path": "SEAWYIP1DA\/B05___21_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "22",
+            "path": "SEAWYIP1DA\/B05___22_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "23",
+            "path": "SEAWYIP1DA\/B05___23_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "24",
+            "path": "SEAWYIP1DA\/B05___24_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "25",
+            "path": "SEAWYIP1DA\/B05___25_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "26",
+            "path": "SEAWYIP1DA\/B05___26_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "27",
+            "path": "SEAWYIP1DA\/B05___27_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        },
+        {
+            "book_id": "Acts",
+            "chapter_id": "28",
+            "path": "SEAWYIP1DA\/B05___28_Acts________SEAWYIP1DA.mp3",
+            "id_usfm": "ACT",
+            "name": "Acts",
+            "order": 45
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6081,
+            "bible_id": "SEAWBT",
+            "equivalent_id": "SEAWYIP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 6082,
+            "bible_id": "SEAWBT",
+            "equivalent_id": "SEAWYIP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

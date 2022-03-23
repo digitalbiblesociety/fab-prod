@@ -1,0 +1,48 @@
+{
+    "id": "ESKWBT",
+    "parent_bible_id": null,
+    "title": "Northwest Alaska Eskimo New Testament",
+    "title_vernacular": "Ipqitchuat Makpiġaat - Agaayyutim Uqałhi Iñupiatun",
+    "description": "The New Testament in Northwest Alaska Eskimo",
+    "description_vernacular": "",
+    "iso": "esk",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2010",
+    "country_id": "US",
+    "copyright": "Copyright © 2010 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0233-7",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2019-05-12T14:13:38.000000Z",
+    "updated_at": "2020-10-12T17:22:25.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Jude",
+            "chapter_id": "1",
+            "path": "ESKWBTP2DA\/B26___01_Jude________ESKWBTP2DA.mp3",
+            "id_usfm": "JUD",
+            "name": "Jude",
+            "order": 66
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5894,
+            "bible_id": "ESKWBT",
+            "equivalent_id": "ESKWBTP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

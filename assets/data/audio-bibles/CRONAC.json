@@ -1,0 +1,216 @@
+{
+    "id": "CRONAC",
+    "parent_bible_id": null,
+    "title": "New American Catholic Version",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "cro",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "1991",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2016-10-12T17:38:43.000000Z",
+    "updated_at": "2020-10-12T17:38:43.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "1Thess",
+            "chapter_id": "1",
+            "path": "CRONABP1DA\/B13___01_1Thess______CRONABP1DA.mp3",
+            "id_usfm": "1TH",
+            "name": "1 Thessalonians",
+            "order": 53
+        },
+        {
+            "book_id": "1Thess",
+            "chapter_id": "2",
+            "path": "CRONABP1DA\/B13___02_1Thess______CRONABP1DA.mp3",
+            "id_usfm": "1TH",
+            "name": "1 Thessalonians",
+            "order": 53
+        },
+        {
+            "book_id": "1Thess",
+            "chapter_id": "3",
+            "path": "CRONABP1DA\/B13___03_1Thess______CRONABP1DA.mp3",
+            "id_usfm": "1TH",
+            "name": "1 Thessalonians",
+            "order": 53
+        },
+        {
+            "book_id": "1Thess",
+            "chapter_id": "4",
+            "path": "CRONABP1DA\/B13___04_1Thess______CRONABP1DA.mp3",
+            "id_usfm": "1TH",
+            "name": "1 Thessalonians",
+            "order": 53
+        },
+        {
+            "book_id": "1Thess",
+            "chapter_id": "5",
+            "path": "CRONABP1DA\/B13___05_1Thess______CRONABP1DA.mp3",
+            "id_usfm": "1TH",
+            "name": "1 Thessalonians",
+            "order": 53
+        },
+        {
+            "book_id": "2Thess",
+            "chapter_id": "1",
+            "path": "CRONABP1DA\/B14___01_2Thess______CRONABP1DA.mp3",
+            "id_usfm": "2TH",
+            "name": "2 Thessalonians",
+            "order": 54
+        },
+        {
+            "book_id": "2Thess",
+            "chapter_id": "2",
+            "path": "CRONABP1DA\/B14___02_2Thess______CRONABP1DA.mp3",
+            "id_usfm": "2TH",
+            "name": "2 Thessalonians",
+            "order": 54
+        },
+        {
+            "book_id": "2Thess",
+            "chapter_id": "3",
+            "path": "CRONABP1DA\/B14___03_2Thess______CRONABP1DA.mp3",
+            "id_usfm": "2TH",
+            "name": "2 Thessalonians",
+            "order": 54
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "1",
+            "path": "CRONABP1DA\/B15___01_1Timothy____CRONABP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "2",
+            "path": "CRONABP1DA\/B15___02_1Timothy____CRONABP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "3",
+            "path": "CRONABP1DA\/B15___03_1Timothy____CRONABP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "4",
+            "path": "CRONABP1DA\/B15___04_1Timothy____CRONABP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "5",
+            "path": "CRONABP1DA\/B15___05_1Timothy____CRONABP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "6",
+            "path": "CRONABP1DA\/B15___06_1Timothy____CRONABP1DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "1",
+            "path": "CRONABP1DA\/B16___01_2Timothy____CRONABP1DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "2",
+            "path": "CRONABP1DA\/B16___02_2Timothy____CRONABP1DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "3",
+            "path": "CRONABP1DA\/B16___03_2Timothy____CRONABP1DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "4",
+            "path": "CRONABP1DA\/B16___04_2Timothy____CRONABP1DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "1",
+            "path": "CRONABP1DA\/B17___01_Titus_______CRONABP1DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "2",
+            "path": "CRONABP1DA\/B17___02_Titus_______CRONABP1DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "3",
+            "path": "CRONABP1DA\/B17___03_Titus_______CRONABP1DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Phlm",
+            "chapter_id": "1",
+            "path": "CRONABP1DA\/B18___01_Philemon____CRONABP1DA.mp3",
+            "id_usfm": "PHM",
+            "name": "Philemon",
+            "order": 58
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5875,
+            "bible_id": "CRONAC",
+            "equivalent_id": "CRONABP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

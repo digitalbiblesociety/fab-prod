@@ -1,0 +1,39 @@
+{
+    "id": "HOPHNT",
+    "parent_bible_id": null,
+    "title": "Hopi New Testament",
+    "title_vernacular": "God Lavayiyat Aṅ Puhuvasiwni",
+    "description": "New Testament in Hopi (US:hop:Hopi)",
+    "description_vernacular": "",
+    "iso": "hop",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2012",
+    "country_id": "US",
+    "copyright": "Copyright © 2012 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0287-0",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2017-10-12T14:13:59.000000Z",
+    "updated_at": "2020-10-12T17:24:25.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 5913,
+            "bible_id": "HOPHNT",
+            "equivalent_id": "HOPABSP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

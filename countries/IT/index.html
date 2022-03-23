@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Italy | Find a Bible</title>
+    <style>
+        .country-aside      {padding: .2em 1.2em .5em 1.2em;}
+        .country-aside p    {font-size: .8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin: .25em auto 1em auto;}
+        .country-persecution {background:url("https://images.bible.cloud/fab/logos/odi_gray_logo.svg") no-repeat 95% 10%/ 33px 26px;
+                            border: thin solid #d7d7d7; border-width: 1px 0 1px 0; margin-bottom: .5em;}
+        .country-facts      {margin: 0 0 .5em 0;}
+        .country-links      {margin-top: .75em; padding-top: .5em;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: .5em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .link-icon              {width: 1.5em; height: 1.5em;margin-left:.5em;}
+        th h6                                  {font-size: .7em; font-weight: normal;line-height:.9em; margin:.2em 0 0 0 ; text-transform: none}
+        .dataTable tr td:nth-child(2)       {max-width:120px;text-align:right;}
+        .dataTable tr td:nth-child(3)       {width:80px;text-align:center;}
+        .dataTable tr td:nth-child(4), .dataTable tr td:nth-child(5), .dataTable tr td:nth-child(6)      {width:90px;text-align:center;}
+        #banner .banner-flag {margin: 0 .5em 0 0;}
+    </style>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+    </style
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-flag " src="https://images.bible.cloud/flags/it.svg" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Italy
+                </h1>
+                <h2 itemprop="description"  >A country of  Europe</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Languages
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/IT/maps">Italy Maps | Info</a>
+                                                                <a class="external" href="https://find.bible/countries/IT/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Italy</span>
+                    <meta itemprop="position" content="3" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+            <img class="country-location" src="https://images.bible.cloud/maps/country/IT-location.png" alt="Italy Find a Bible" />
+            <div class="country-facts row">
+                <p><b>Population:</b> 62,390,364</p>
+                <p><b>Official Language:</b> Italian</p>
+                <p><b>Language Count:</b> <span class="num-badge">96</span></p>
+                <p><b>Primary Religion:</b> Christianity</p>
+                                    <p><b>National Bible Society:</b><br />
+
+                                                    Bible Society in Italy</p>
+                            <a href="http://www.italiabiblica.it/" target="_blank" alt="Bible Society in Italy">
+                                <img src="https://images.bible.cloud/logo_type_bible_societies.svg" class="link-icon"/></a>
+                                         
+            </div>
+
+            <div class="country-links">
+                <p><b>Reference Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/IT" alt="Find a Bible Italy">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://en.wikipedia.org/wiki/Italy" alt="Wikipedia - Italy">
+                            <img src="http://images.bible.cloud/wiki_type_logo.svg" title="Wikipedia" />
+                            <p>Wikipedia</p></a>
+                    </div>
+
+
+
+                                            <div><a target="_blank" href="https://www.cia.gov/the-world-factbook/countries/italy/" alt="World Fact Book - Italy">
+                                <img src="http://images.bible.cloud/logo_type_cia.svg" title="World Fact Book" />
+                                <p>WorldFact<br />Book</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="http://hdr.undp.org/en/countries/profiles/ITA" alt="Human Development - Italy">
+                                <img src="http://images.bible.cloud/logo_type_united_nations.svg" title="Human Development" />
+                                <p>Human<br />Develop.</p></a>
+                        </div>
+                    
+
+                                            <div><a target="_blank" href="https://www.state.gov/countries-areas/italy/" alt="Religious Freedom - Italy">
+                                <img src="http://images.bible.cloud/logo_type_dept_state.svg" title="Religious Freedom" />
+                                <p>Religious<br />Freedom</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://www.britannica.com/place/Italy" alt="Britannica - Italy">
+                                <img src="http://images.bible.cloud/logo_type_britannica.svg" title="Britannica" />
+                                <p>Britannica</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+                            <p><b>Factbook Summary:</b>
+                    <a href="https://images.bible.cloud/maps/summary/IT-summary.pdf" target="_blank"  alt="World Fact Book Italy">
+                        <img class="pdf-icon" src="http://images.bible.cloud/icon/pdf_icon.svg" title="Country Summary" /></a></p>
+            
+
+        
+
+
+            <div class="country-links">
+                <p><b>Mission / Prayer Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/IT" alt="Find a Bible Italy">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://www.joshuaproject.net/countries/IT" alt="Joshua Project - Italy">
+                            <img src="http://images.bible.cloud/joshua_type_logo.svg" title="Joshua Project" />
+                            <p>Joshua<br />Project</p></a>
+                    </div>
+
+                                            <div><a target="_blank" href="https://unitedbiblesocieties.org/locations/bible-society-in-italy/" alt="United Bible Societies - Italy">
+                                <img src="http://images.bible.cloud/logo_type_ubs.svg" title="United Bible Societies" />
+                                <p>UBS</p></a>
+                        </div>
+                    
+
+
+                                            <div><a target="_blank" href="https://operationworld.org/locations/italy" alt="Operation World - Italy">
+                                <img src="http://images.bible.cloud/logo_type_ow.svg" title="Operation World" />
+                                <p>Operation<br />World</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://prayercast.com/italy.html" alt="PrayerCasts - Italy">
+                                <img src="http://images.bible.cloud/prayercast_type_logo.svg" title="PrayerCast" />
+                                <p>PrayerCast</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://curlie.org/Regional/Europe/Italy" alt="ODP Database - Italy">
+                                <img src="http://images.bible.cloud/logo_type_odp.svg" title="Open Directory Project" />
+                                <p>Open<br />Directory</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+
+
+            <div class="country-overview">
+                    <p><b>Language Summary:</b>
+                        Italian (official), German (parts of Trentino-Alto Adige region are predominantly German speaking), French (small French-speaking minority in Valle dAosta region), Slovene (Slovene-speaking minority in the Trieste-Gorizia area)</p>
+                </div>
+
+                <div class="country-overview">
+                    <p><b>Ethnic Summary:</b>
+                        Italian (includes small clusters of German-, French-, and Slovene-Italians in the north and Albanian-Italians and Greek-Italians in the south)</p>
+                </div>
+
+
+
+
+            <div class="country-overview">
+                <p><b>Religious Summary:</b>
+                    Christian 83.3% (overwhelmingly Roman Catholic with very small groups of Jehovahs Witnesses and Protestants), Muslim 3.7%, unaffiliated 12.4%, other 0.6% (2010 est.)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="medium-9">
+        <table id="languages" class="table responsive" cellspacing="0" width="100%"
+               data-json='{&quot;data&quot;:[{&quot;id&quot;:&quot;aae&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Arb\u00ebresh\u00eb Albanian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;arb\u00ebrisht&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;102,850&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;acm&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Mesopotamian Arabic&quot;,&quot;ci&quot;:&quot;IQ&quot;,&quot;cn&quot;:&quot;Iraq&quot;,&quot;tv&quot;:&quot;Iraqi Arabic&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,200&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:6,&quot;rc&quot;:5},{&quot;id&quot;:&quot;aeb&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Tunisian Arabic&quot;,&quot;ci&quot;:&quot;TN&quot;,&quot;cn&quot;:&quot;Tunisia&quot;,&quot;tv&quot;:&quot;\u062a\u0648\u0646\u0633\u064a &quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:1,&quot;fc&quot;:3,&quot;rc&quot;:3},{&quot;id&quot;:&quot;aka&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Akan&quot;,&quot;ci&quot;:&quot;GH&quot;,&quot;cn&quot;:&quot;Ghana&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;48,910&quot;,&quot;bc&quot;:7,&quot;fc&quot;:2,&quot;rc&quot;:24},{&quot;id&quot;:&quot;amh&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Amharic&quot;,&quot;ci&quot;:&quot;ET&quot;,&quot;cn&quot;:&quot;Ethiopia&quot;,&quot;tv&quot;:&quot;\u12a0\u121b\u1260\u12a0\u121b\u1228\u129b \u122d\u129b (Amar\u0259\u00f1\u00f1a)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,980&quot;,&quot;bc&quot;:9,&quot;fc&quot;:15,&quot;rc&quot;:13},{&quot;id&quot;:&quot;apd&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Sudanese Arabic&quot;,&quot;ci&quot;:&quot;SD&quot;,&quot;cn&quot;:&quot;Sudan&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,030&quot;,&quot;bc&quot;:2,&quot;fc&quot;:2,&quot;rc&quot;:11},{&quot;id&quot;:&quot;arq&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Algerian Arabic&quot;,&quot;ci&quot;:&quot;DZ&quot;,&quot;cn&quot;:&quot;Algeria&quot;,&quot;tv&quot;:&quot;\u062f\u0627\u0631\u062c\u0629&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;21,950&quot;,&quot;bc&quot;:1,&quot;fc&quot;:5,&quot;rc&quot;:5},{&quot;id&quot;:&quot;ary&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Moroccan Arabic&quot;,&quot;ci&quot;:&quot;MA&quot;,&quot;cn&quot;:&quot;Morocco&quot;,&quot;tv&quot;:&quot;\u0627\u0644\u062f\u0627\u0631\u062c\u0629 Darija&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:1,&quot;fc&quot;:5,&quot;rc&quot;:10},{&quot;id&quot;:&quot;arz&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Egyptian Arabic&quot;,&quot;ci&quot;:&quot;EG&quot;,&quot;cn&quot;:&quot;Egypt&quot;,&quot;tv&quot;:&quot;\u0627\u0644\u0644\u0647\u062c\u0647 \u0627\u0644\u0645\u0635\u0631\u064a\u0647&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;77,220&quot;,&quot;bc&quot;:2,&quot;fc&quot;:47,&quot;rc&quot;:8},{&quot;id&quot;:&quot;ayl&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Libyan Arabic&quot;,&quot;ci&quot;:&quot;LY&quot;,&quot;cn&quot;:&quot;Libya&quot;,&quot;tv&quot;:&quot;\u0644\u064a\u0628\u064a&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,236,850&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:3,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;bar&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bavarian&quot;,&quot;ci&quot;:&quot;AT&quot;,&quot;cn&quot;:&quot;Austria&quot;,&quot;tv&quot;:&quot;Boarisch&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;260,760&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;bci&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Baoul\u00e9&quot;,&quot;ci&quot;:&quot;CI&quot;,&quot;cn&quot;:&quot;C\u00f4te d&#039;Ivoire&quot;,&quot;tv&quot;:&quot;Baule&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;23,720&quot;,&quot;bc&quot;:1,&quot;fc&quot;:2,&quot;rc&quot;:2},{&quot;id&quot;:&quot;bel&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Belarusian&quot;,&quot;ci&quot;:&quot;BY&quot;,&quot;cn&quot;:&quot;Belarus&quot;,&quot;tv&quot;:&quot;\u0431\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f \u043c\u043e\u0432\u0430 bie\u0142aruskaja mova&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,490&quot;,&quot;bc&quot;:6,&quot;fc&quot;:2,&quot;rc&quot;:5},{&quot;id&quot;:&quot;ben&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bengali&quot;,&quot;ci&quot;:&quot;BD&quot;,&quot;cn&quot;:&quot;Bangladesh&quot;,&quot;tv&quot;:&quot;\u09ac\u09be\u0982\u09b2\u09be&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;93,340&quot;,&quot;bc&quot;:17,&quot;fc&quot;:35,&quot;rc&quot;:104},{&quot;id&quot;:&quot;bos&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bosnian&quot;,&quot;ci&quot;:&quot;BA&quot;,&quot;cn&quot;:&quot;Bosnia and Herzegovina&quot;,&quot;tv&quot;:&quot;\u0431\u043e\u0441\u0430\u043d\u0441\u043a\u0438&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;29,190&quot;,&quot;bc&quot;:1,&quot;fc&quot;:2,&quot;rc&quot;:8},{&quot;id&quot;:&quot;bul&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bulgarian&quot;,&quot;ci&quot;:&quot;BG&quot;,&quot;cn&quot;:&quot;Bulgaria&quot;,&quot;tv&quot;:&quot;\u0431\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438b\u0103lgarski&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;48,200&quot;,&quot;bc&quot;:13,&quot;fc&quot;:4,&quot;rc&quot;:2},{&quot;id&quot;:&quot;cat&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Catalan&quot;,&quot;ci&quot;:&quot;ES&quot;,&quot;cn&quot;:&quot;Spain&quot;,&quot;tv&quot;:&quot;catal\u00e0\/valenci\u00e0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:9,&quot;fc&quot;:3,&quot;rc&quot;:7},{&quot;id&quot;:&quot;ces&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Czech&quot;,&quot;ci&quot;:&quot;CZ&quot;,&quot;cn&quot;:&quot;Czechia&quot;,&quot;tv&quot;:&quot;\u010de\u0161tina&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,600&quot;,&quot;bc&quot;:10,&quot;fc&quot;:8,&quot;rc&quot;:14},{&quot;id&quot;:&quot;cim&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Cimbrian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;zimbar&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,370&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;cmn&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Mandarin Chinese&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;\u5b98\u8bdd; \u5b98\u8a71; Gu\u0101nhu\u00e0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;224,920&quot;,&quot;bc&quot;:45,&quot;fc&quot;:22,&quot;rc&quot;:65},{&quot;id&quot;:&quot;cos&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Corsican&quot;,&quot;ci&quot;:&quot;FR&quot;,&quot;cn&quot;:&quot;France&quot;,&quot;tv&quot;:&quot;corsu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,080&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;deu&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;German&quot;,&quot;ci&quot;:&quot;DE&quot;,&quot;cn&quot;:&quot;Germany&quot;,&quot;tv&quot;:&quot;Deutsch&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;35,820&quot;,&quot;bc&quot;:34,&quot;fc&quot;:10,&quot;rc&quot;:12},{&quot;id&quot;:&quot;egl&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Emilian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;emigli\u00e0n&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ell&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Modern Greek (1453-)&quot;,&quot;ci&quot;:&quot;GR&quot;,&quot;cn&quot;:&quot;Greece&quot;,&quot;tv&quot;:&quot;\u039d\u03ad\u03b1 \u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,790&quot;,&quot;bc&quot;:23,&quot;fc&quot;:3,&quot;rc&quot;:7},{&quot;id&quot;:&quot;eng&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;English&quot;,&quot;ci&quot;:&quot;GB&quot;,&quot;cn&quot;:&quot;United Kingdom&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;37,160&quot;,&quot;bc&quot;:244,&quot;fc&quot;:29,&quot;rc&quot;:314},{&quot;id&quot;:&quot;ewe&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Ewe&quot;,&quot;ci&quot;:&quot;GH&quot;,&quot;cn&quot;:&quot;Ghana&quot;,&quot;tv&quot;:&quot;\u00c8\u028begbe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,590&quot;,&quot;bc&quot;:4,&quot;fc&quot;:2,&quot;rc&quot;:22},{&quot;id&quot;:&quot;fra&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;French&quot;,&quot;ci&quot;:&quot;FR&quot;,&quot;cn&quot;:&quot;France&quot;,&quot;tv&quot;:&quot;fran\u00e7ais&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;25,180&quot;,&quot;bc&quot;:45,&quot;fc&quot;:3,&quot;rc&quot;:122},{&quot;id&quot;:&quot;frp&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Arpitan&quot;,&quot;ci&quot;:&quot;FR&quot;,&quot;cn&quot;:&quot;France&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;72,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;fuf&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Pular&quot;,&quot;ci&quot;:&quot;GN&quot;,&quot;cn&quot;:&quot;Guinea&quot;,&quot;tv&quot;:&quot;Fuuta Jalon&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,920&quot;,&quot;bc&quot;:1,&quot;fc&quot;:6,&quot;rc&quot;:27},{&quot;id&quot;:&quot;fur&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Friulian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;furlan&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;gsw&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Swiss German&quot;,&quot;ci&quot;:&quot;CH&quot;,&quot;cn&quot;:&quot;Switzerland&quot;,&quot;tv&quot;:&quot;Schwiizerd\u00fctsch&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,970&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;hin&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Hindi&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0939\u093f\u0902\u0926\u0940 &quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:12,&quot;fc&quot;:34,&quot;rc&quot;:50},{&quot;id&quot;:&quot;hrv&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Croatian&quot;,&quot;ci&quot;:&quot;HR&quot;,&quot;cn&quot;:&quot;Croatia&quot;,&quot;tv&quot;:&quot;hrvatski&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;17,160&quot;,&quot;bc&quot;:10,&quot;fc&quot;:3,&quot;rc&quot;:5},{&quot;id&quot;:&quot;hun&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Hungarian&quot;,&quot;ci&quot;:&quot;HU&quot;,&quot;cn&quot;:&quot;Hungary&quot;,&quot;tv&quot;:&quot;magyar nyelv&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,880&quot;,&quot;bc&quot;:13,&quot;fc&quot;:6,&quot;rc&quot;:8},{&quot;id&quot;:&quot;hyw&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Western Armenian&quot;,&quot;ci&quot;:&quot;TR&quot;,&quot;cn&quot;:&quot;Turkey&quot;,&quot;tv&quot;:&quot;???????&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;740&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;ils&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;International Sign&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;Gestuno&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ise&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Italian Sign Language&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;Lingua dei Segni Italiana&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ita&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Italian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;italiano&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;40,000,000&quot;,&quot;bc&quot;:15,&quot;fc&quot;:8,&quot;rc&quot;:15},{&quot;id&quot;:&quot;itk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Judeo-Italian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;\u05d2&#039;\u05d9\u05d5\u05d3\u05d5-\u05d0\u05d9\u05d8\u05d0\u05dc\u05d9\u05d0\u05e0\u05d5 giudeo-italiano&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;28,080&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;jpn&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Japanese&quot;,&quot;ci&quot;:&quot;JP&quot;,&quot;cn&quot;:&quot;Japan&quot;,&quot;tv&quot;:&quot;\u65e5\u672c\u8a9e&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,320&quot;,&quot;bc&quot;:13,&quot;fc&quot;:5,&quot;rc&quot;:6},{&quot;id&quot;:&quot;kat&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Georgian&quot;,&quot;ci&quot;:&quot;GE&quot;,&quot;cn&quot;:&quot;Georgia&quot;,&quot;tv&quot;:&quot;Kartuli&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;9,180&quot;,&quot;bc&quot;:6,&quot;fc&quot;:3,&quot;rc&quot;:4},{&quot;id&quot;:&quot;kaz&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kazakh&quot;,&quot;ci&quot;:&quot;KZ&quot;,&quot;cn&quot;:&quot;Kazakhstan&quot;,&quot;tv&quot;:&quot;Kazak&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,260&quot;,&quot;bc&quot;:2,&quot;fc&quot;:5,&quot;rc&quot;:4},{&quot;id&quot;:&quot;kea&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Kabuverdianu&quot;,&quot;ci&quot;:&quot;CV&quot;,&quot;cn&quot;:&quot;Cabo Verde&quot;,&quot;tv&quot;:&quot;Kriolu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,130&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;kir&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kirghiz&quot;,&quot;ci&quot;:&quot;KG&quot;,&quot;cn&quot;:&quot;Kyrgyzstan&quot;,&quot;tv&quot;:&quot; \u0642\u0649\u0631\u0639\u0649\u0632 \u062a\u0626\u0644\u0649&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;930&quot;,&quot;bc&quot;:3,&quot;fc&quot;:6,&quot;rc&quot;:6},{&quot;id&quot;:&quot;kmr&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Northern Kurdish - Kurmanji&quot;,&quot;ci&quot;:&quot;TR&quot;,&quot;cn&quot;:&quot;Turkey&quot;,&quot;tv&quot;:&quot;Northern Kurdish&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;12,160&quot;,&quot;bc&quot;:8,&quot;fc&quot;:4,&quot;rc&quot;:11},{&quot;id&quot;:&quot;lij&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Ligurian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot; zeneize&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;471,200&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;lld&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Ladin&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;lingaz ladin&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;lmo&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Lombard&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;Lumbaart&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,391,270&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mfe&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Morisyen&quot;,&quot;ci&quot;:&quot;MU&quot;,&quot;cn&quot;:&quot;Mauritius&quot;,&quot;tv&quot;:&quot;kreol morisien&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,510&quot;,&quot;bc&quot;:1,&quot;fc&quot;:2,&quot;rc&quot;:2},{&quot;id&quot;:&quot;mhn&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;M\u00f3cheno&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;Bersntoler sproch&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,060&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mkd&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Macedonian&quot;,&quot;ci&quot;:&quot;MK&quot;,&quot;cn&quot;:&quot;North Macedonia&quot;,&quot;tv&quot;:&quot;\u043c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438makedonski&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;77,140&quot;,&quot;bc&quot;:9,&quot;fc&quot;:3,&quot;rc&quot;:16},{&quot;id&quot;:&quot;mlt&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Maltese&quot;,&quot;ci&quot;:&quot;MT&quot;,&quot;cn&quot;:&quot;Malta&quot;,&quot;tv&quot;:&quot;Malti&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;30,430&quot;,&quot;bc&quot;:2,&quot;fc&quot;:3,&quot;rc&quot;:2},{&quot;id&quot;:&quot;mos&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Mossi&quot;,&quot;ci&quot;:&quot;BF&quot;,&quot;cn&quot;:&quot;Burkina Faso&quot;,&quot;tv&quot;:&quot;Moor\u00e9&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;14,100&quot;,&quot;bc&quot;:2,&quot;fc&quot;:2,&quot;rc&quot;:22},{&quot;id&quot;:&quot;nap&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Neapolitan&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;napulitano&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,200,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;nld&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Dutch&quot;,&quot;ci&quot;:&quot;NL&quot;,&quot;cn&quot;:&quot;Netherlands&quot;,&quot;tv&quot;:&quot;Nederlands&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,420&quot;,&quot;bc&quot;:17,&quot;fc&quot;:9,&quot;rc&quot;:8},{&quot;id&quot;:&quot;oci&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Occitan (post 1500)&quot;,&quot;ci&quot;:&quot;FR&quot;,&quot;cn&quot;:&quot;France&quot;,&quot;tv&quot;:&quot; lenga d&#039;\u00f2c&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;107,430&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;pes&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Iranian Persian&quot;,&quot;ci&quot;:&quot;IR&quot;,&quot;cn&quot;:&quot;Iran&quot;,&quot;tv&quot;:&quot;Farsi\/Parsi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,320&quot;,&quot;bc&quot;:8,&quot;fc&quot;:31,&quot;rc&quot;:16},{&quot;id&quot;:&quot;pms&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Piemontese&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;piemont\u00e8is&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;704,870&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;pol&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Polish&quot;,&quot;ci&quot;:&quot;PL&quot;,&quot;cn&quot;:&quot;Poland&quot;,&quot;tv&quot;:&quot;polski&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;89,450&quot;,&quot;bc&quot;:13,&quot;fc&quot;:6,&quot;rc&quot;:12},{&quot;id&quot;:&quot;por&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Portuguese&quot;,&quot;ci&quot;:&quot;PT&quot;,&quot;cn&quot;:&quot;Portugal&quot;,&quot;tv&quot;:&quot;portugu\u00eas&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;39,430&quot;,&quot;bc&quot;:17,&quot;fc&quot;:7,&quot;rc&quot;:342},{&quot;id&quot;:&quot;rgn&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Romagnol&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;rumagn\u00f4l&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;rmn&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Balkan Romani&quot;,&quot;ci&quot;:&quot;RS&quot;,&quot;cn&quot;:&quot;Serbia&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;60,950&quot;,&quot;bc&quot;:4,&quot;fc&quot;:1,&quot;rc&quot;:11},{&quot;id&quot;:&quot;rmo&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Sinte Romani&quot;,&quot;ci&quot;:&quot;DE&quot;,&quot;cn&quot;:&quot;Germany&quot;,&quot;tv&quot;:&quot;Sintengheri \/ Romanes&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;15,210&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;rmy&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Vlax Romani&quot;,&quot;ci&quot;:&quot;RO&quot;,&quot;cn&quot;:&quot;Romania&quot;,&quot;tv&quot;:&quot;\u0159omani \u010dhib&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:9,&quot;fc&quot;:2,&quot;rc&quot;:5},{&quot;id&quot;:&quot;roh&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Romansh&quot;,&quot;ci&quot;:&quot;CH&quot;,&quot;cn&quot;:&quot;Switzerland&quot;,&quot;tv&quot;:&quot;rumantsch&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;23,220&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;ron&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Romanian&quot;,&quot;ci&quot;:&quot;RO&quot;,&quot;cn&quot;:&quot;Romania&quot;,&quot;tv&quot;:&quot;Daco-Romanian&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,080,550&quot;,&quot;bc&quot;:16,&quot;fc&quot;:9,&quot;rc&quot;:20},{&quot;id&quot;:&quot;rus&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Russian&quot;,&quot;ci&quot;:&quot;RU&quot;,&quot;cn&quot;:&quot;Russia&quot;,&quot;tv&quot;:&quot;\u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;31,160&quot;,&quot;bc&quot;:20,&quot;fc&quot;:9,&quot;rc&quot;:93},{&quot;id&quot;:&quot;scn&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Sicilian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;sicilianu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,400,000&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;sdc&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Sassarese Sardinian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot; turritanu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;107,470&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;sdn&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Gallurese Sardinian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;gadduresu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;107,470&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;shy&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Tachawit&quot;,&quot;ci&quot;:&quot;DZ&quot;,&quot;cn&quot;:&quot;Algeria&quot;,&quot;tv&quot;:&quot;Chaou\u00efa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;39,350&quot;,&quot;bc&quot;:1,&quot;fc&quot;:2,&quot;rc&quot;:2},{&quot;id&quot;:&quot;sin&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Sinhala&quot;,&quot;ci&quot;:&quot;LK&quot;,&quot;cn&quot;:&quot;Sri Lanka&quot;,&quot;tv&quot;:&quot;Sinhalese&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;60,210&quot;,&quot;bc&quot;:4,&quot;fc&quot;:3,&quot;rc&quot;:12},{&quot;id&quot;:&quot;slk&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Slovak&quot;,&quot;ci&quot;:&quot;SK&quot;,&quot;cn&quot;:&quot;Slovakia&quot;,&quot;tv&quot;:&quot;Slovakian&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,920&quot;,&quot;bc&quot;:9,&quot;fc&quot;:4,&quot;rc&quot;:12},{&quot;id&quot;:&quot;slv&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Slovenian&quot;,&quot;ci&quot;:&quot;SI&quot;,&quot;cn&quot;:&quot;Slovenia&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,510&quot;,&quot;bc&quot;:14,&quot;fc&quot;:2,&quot;rc&quot;:13},{&quot;id&quot;:&quot;som&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Somali&quot;,&quot;ci&quot;:&quot;SO&quot;,&quot;cn&quot;:&quot;Somalia&quot;,&quot;tv&quot;:&quot;Af Soomaali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,270&quot;,&quot;bc&quot;:3,&quot;fc&quot;:5,&quot;rc&quot;:12},{&quot;id&quot;:&quot;spa&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Spanish&quot;,&quot;ci&quot;:&quot;ES&quot;,&quot;cn&quot;:&quot;Spain&quot;,&quot;tv&quot;:&quot;Castilian&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;297,820&quot;,&quot;bc&quot;:32,&quot;fc&quot;:11,&quot;rc&quot;:124},{&quot;id&quot;:&quot;src&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Logudorese Sardinian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;sardu logudoresulogudoresu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;537,400&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:2,&quot;rc&quot;:3},{&quot;id&quot;:&quot;srd&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Sardinian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;sro&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Campidanese Sardinian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;Sard&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;514,290&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;svm&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Slavomolisano&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;Molise Croatian&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,010&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;swh&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Swahili (Coastal)&quot;,&quot;ci&quot;:&quot;TZ&quot;,&quot;cn&quot;:&quot;Tanzania&quot;,&quot;tv&quot;:&quot;Kiswahili&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;125,870&quot;,&quot;bc&quot;:12,&quot;fc&quot;:3,&quot;rc&quot;:41},{&quot;id&quot;:&quot;tam&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Tamil&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;\u0ba4\u0bae\u0bbf\u0bb4\u0bcd&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;30,100&quot;,&quot;bc&quot;:10,&quot;fc&quot;:10,&quot;rc&quot;:282},{&quot;id&quot;:&quot;tgk&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Tajik&quot;,&quot;ci&quot;:&quot;TJ&quot;,&quot;cn&quot;:&quot;Tajikistan&quot;,&quot;tv&quot;:&quot;\u0422\u043e\u04b7\u0438\u043a\u04e3 (Tojik\u012b)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,840&quot;,&quot;bc&quot;:6,&quot;fc&quot;:7,&quot;rc&quot;:3},{&quot;id&quot;:&quot;tgl&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Tagalog&quot;,&quot;ci&quot;:&quot;PH&quot;,&quot;cn&quot;:&quot;Philippines&quot;,&quot;tv&quot;:&quot;\u170f\u1712\u1703\u1705\u1714 \u1706\u1704\u170e\u1713\u1704\u1714&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;140,800&quot;,&quot;bc&quot;:8,&quot;fc&quot;:14,&quot;rc&quot;:12},{&quot;id&quot;:&quot;tha&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Thai&quot;,&quot;ci&quot;:&quot;TH&quot;,&quot;cn&quot;:&quot;Thailand&quot;,&quot;tv&quot;:&quot;Siamese&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,400&quot;,&quot;bc&quot;:8,&quot;fc&quot;:27,&quot;rc&quot;:27},{&quot;id&quot;:&quot;tir&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Tigrinya&quot;,&quot;ci&quot;:&quot;ET&quot;,&quot;cn&quot;:&quot;Ethiopia&quot;,&quot;tv&quot;:&quot;\u1275\u130d\u122d\u129b tigri\u00f1\u00f1\u0101&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;8,810&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:13},{&quot;id&quot;:&quot;tur&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Turkish&quot;,&quot;ci&quot;:&quot;TR&quot;,&quot;cn&quot;:&quot;Turkey&quot;,&quot;tv&quot;:&quot;T\u00fcrk\u00e7e&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;17,830&quot;,&quot;bc&quot;:8,&quot;fc&quot;:35,&quot;rc&quot;:289},{&quot;id&quot;:&quot;ukr&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Ukrainian&quot;,&quot;ci&quot;:&quot;UA&quot;,&quot;cn&quot;:&quot;Ukraine&quot;,&quot;tv&quot;:&quot;\u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430 \u043c\u043e\u0432\u0430ukrayins&#039;ka mova&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;193,050&quot;,&quot;bc&quot;:8,&quot;fc&quot;:9,&quot;rc&quot;:10},{&quot;id&quot;:&quot;urd&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Urdu&quot;,&quot;ci&quot;:&quot;PK&quot;,&quot;cn&quot;:&quot;Pakistan&quot;,&quot;tv&quot;:&quot;\u0627\u064f\u0631\u062f\u064f\u0648&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:12,&quot;fc&quot;:33,&quot;rc&quot;:24},{&quot;id&quot;:&quot;uzn&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Northern Uzbek&quot;,&quot;ci&quot;:&quot;UZ&quot;,&quot;cn&quot;:&quot;Uzbekistan&quot;,&quot;tv&quot;:&quot;\u0627\u06c9\u0632\u0628\u06d0\u06a9\u0686\u0647&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,150&quot;,&quot;bc&quot;:3,&quot;fc&quot;:16,&quot;rc&quot;:13},{&quot;id&quot;:&quot;vec&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Venetian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot; v\u00e8neto&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,581,150&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;vie&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Vietnamese&quot;,&quot;ci&quot;:&quot;VN&quot;,&quot;cn&quot;:&quot;Vietnam&quot;,&quot;tv&quot;:&quot;Ti\u1ebfng Vi\u1ec7t&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,010&quot;,&quot;bc&quot;:9,&quot;fc&quot;:12,&quot;rc&quot;:30},{&quot;id&quot;:&quot;wae&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Walser&quot;,&quot;ci&quot;:&quot;CH&quot;,&quot;cn&quot;:&quot;Switzerland&quot;,&quot;tv&quot;:&quot; Wallissertitsch&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,610&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;wol&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Wolof&quot;,&quot;ci&quot;:&quot;SN&quot;,&quot;cn&quot;:&quot;Senegal&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;80,880&quot;,&quot;bc&quot;:4,&quot;fc&quot;:6,&quot;rc&quot;:13},{&quot;id&quot;:&quot;yor&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Yoruba&quot;,&quot;ci&quot;:&quot;NG&quot;,&quot;cn&quot;:&quot;Nigeria&quot;,&quot;tv&quot;:&quot;\u00c8d\u00e8 Yor\u00f9b\u00e1&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;56,860&quot;,&quot;bc&quot;:5,&quot;fc&quot;:2,&quot;rc&quot;:16},{&quot;id&quot;:&quot;zho&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Chinese&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;??&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:6}]}'
+               data-searchplaceholder="Filter Items on this Page">
+            <thead>
+            <tr>
+                <th data-column-name="tt" data-link="id" data-path="/languages">Languages<h6>in Italy</h6></th>
+                <th data-column-name="po" data-sort-default="desc">Population<h6>Primary Language</h6></th>
+                <th data-column-name="id">iso</th>
+                <th data-column-name="bc">Bible<h6>Versions</h6></th>
+                <th data-column-name="fc">Films</th>
+                <th data-column-name="rc">Resources</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

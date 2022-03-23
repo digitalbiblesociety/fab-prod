@@ -1,0 +1,184 @@
+{
+    "id": "WRSPNG",
+    "parent_bible_id": null,
+    "title": "Waris Bible",
+    "title_vernacular": "Sesoana Besal Nemelmoa Walsana Moana",
+    "description": "Genesis, Ruth, Jonah, and The New Testament in the Waris Language, also called the Walsa Language, of Papua New Guinea",
+    "description_vernacular": "Buk Stat, Rut, Jona, na Nupela Testamen long tokples Waris long Niugini",
+    "iso": "wrs",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2002",
+    "country_id": "PG",
+    "copyright": "Copyright © 2002 The Bible Society of Papua New Guinea",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0703-5",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2018-08-12T14:16:41.000000Z",
+    "updated_at": "2020-10-12T17:24:55.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "1Tim",
+            "chapter_id": "0",
+            "path": "WR1WSVP2DA\/B15___00_1Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "1",
+            "path": "WR1WSVP2DA\/B15___01_1Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "2",
+            "path": "WR1WSVP2DA\/B15___02_1Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "3",
+            "path": "WR1WSVP2DA\/B15___03_1Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "4",
+            "path": "WR1WSVP2DA\/B15___04_1Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "5",
+            "path": "WR1WSVP2DA\/B15___05_1Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "6",
+            "path": "WR1WSVP2DA\/B15___06_1Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "0",
+            "path": "WR1WSVP2DA\/B16___00_2Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "1",
+            "path": "WR1WSVP2DA\/B16___01_2Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "2",
+            "path": "WR1WSVP2DA\/B16___02_2Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "3",
+            "path": "WR1WSVP2DA\/B16___03_2Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "4",
+            "path": "WR1WSVP2DA\/B16___04_2Timothy____WR1WSVP2DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "0",
+            "path": "WR1WSVP2DA\/B17___00_Titus_______WR1WSVP2DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "1",
+            "path": "WR1WSVP2DA\/B17___01_Titus_______WR1WSVP2DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "2",
+            "path": "WR1WSVP2DA\/B17___02_Titus_______WR1WSVP2DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "3",
+            "path": "WR1WSVP2DA\/B17___03_Titus_______WR1WSVP2DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Phlm",
+            "chapter_id": "0",
+            "path": "WR1WSVP2DA\/B18___00_Philemon____WR1WSVP2DA.mp3",
+            "id_usfm": "PHM",
+            "name": "Philemon",
+            "order": 58
+        },
+        {
+            "book_id": "Phlm",
+            "chapter_id": "1",
+            "path": "WR1WSVP2DA\/B18___01_Philemon____WR1WSVP2DA.mp3",
+            "id_usfm": "PHM",
+            "name": "Philemon",
+            "order": 58
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6170,
+            "bible_id": "WRSPNG",
+            "equivalent_id": "WR1WSVP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

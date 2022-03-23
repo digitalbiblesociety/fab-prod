@@ -1,0 +1,39 @@
+{
+    "id": "TATIBT",
+    "parent_bible_id": null,
+    "title": "Tatar New Testament",
+    "title_vernacular": "Инҗил",
+    "description": null,
+    "description_vernacular": "Инҗил: Татарчага тѳп нѳсхәдән, грек теленнән тәрҗемә ителде",
+    "iso": "tat",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2001",
+    "country_id": "RU",
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-1901-4",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2017-04-12T14:16:05.000000Z",
+    "updated_at": "2020-10-12T17:25:02.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 2480,
+            "bible_id": "TATIBT",
+            "equivalent_id": "TTRIBTN2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "New Testament Dramatized Audio",
+            "notes": null
+        }
+    ]
+}

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-download   {text-align: right;margin-right:2em;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 9em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 2px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>Pakistan | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/PK.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/pk_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Pakistan
+                </h1>
+                <h2 itemprop="description"  >A country of  Asia</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/PK">Pakistan Languages</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Maps | Info
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/PK/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/PK">
+                    <span itemprop="name">Pakistan</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+
+            <div class="country-facts row">
+                <p><b>Title:</b> The Islamic Republic of Pakistan </p><br>
+                <p><b>Population:</b> 238,181,034</p>
+                <p><b>Population Change:</b> 2</p>
+                <p><b>National Average Age:</b> 23</p>
+                <p><b>Urban Percentage:</b> 35</p>
+                <p><b>Christian Population:</b> 3,300,000</p>
+                <p><b>Christian Percentage:</b> 1.6</p>
+
+            </div>
+
+
+                        <div class="country-overview">
+                <p><b>Introduction:</b>
+                    Pakistan officially the Islamic Republic of Pakistan is a country in South Asia. It is the fifth-most populous country with a population exceeding 212742631 people. In area it is the 33rd-largest country spanning 881913 square kilometres.</p><br>
+                <p><b>Overview:</b>
+                    The Indus Valley civilization one of the oldest in the world and dating back at least 5000 years spread over much of what is presently Pakistan. During the second millennium B.C. remnants of this culture fused with the migrating Indo-Aryan peoples. The area underwent successive invasions in subsequent centuries from the Persians Greeks Scythians Arabs (who brought Islam) Afghans and Turks. The Mughal Empire flourished in the 16th and 17th centuries; the British came to dominate the region in the 18th century. The separation in 1947 of British India into the Muslim state of Pakistan (with West and East sections) and largely Hindu India was never satisfactorily resolved and India and Pakistan fought two wars and a limited conflict - in 1947-48 1965 and 1999 respectively - over the disputed Kashmir territory. A third war between these countries in 1971 - in which India capitalized on Islamabad&#039;s marginalization of Bengalis in Pakistani politics - resulted in East Pakistan becoming the separate nation of Bangladesh. In response to Indian nuclear weapons testing Pakistan conducted its own tests in mid-1998. India-Pakistan relations improved in the mid-2000s but have been rocky since the November 2008 Mumbai attacks and have been further strained by attacks in India by militants suspected of being backed by Pakistan. Nawaz SHARIF took office as prime minister in 2013 marking the first time in Pakistani history that a democratically elected government completed a full term and transitioned to a successive democratically elected government. Following a series of bomb and suicide attacks by the Tehrik-e Pakistan Taliban (TTP) begun in 2007 the Pakistan Government and TTP representatives agreed to a cease-fire in early 2014. However by mid-year 2014 the talks collapsed and the TTP resumed attack plotting against Pakistani targets.</p>
+            </div>
+                
+
+        </div>
+    </div>
+
+
+
+    <div class="medium-9">
+
+
+        <div  class="row">
+
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Government</h4>
+                    <div><a href="#gov" alt="Pakistan gov Map" title="Pakistan gov Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/PK-gov.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/PK-gov.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Land</h4>
+                    <div><a href="#land" alt="Pakistan land Map" title="Pakistan land Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/PK-land.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/PK-land.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Language Map</h4>
+                    <div><a href="#language" alt="Pakistan language Map" title="Pakistan language Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/PK-lang.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/PK-lang.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Location</h4>
+                    <div><a href="#location" alt="Pakistan location Map" title="Pakistan location Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/PK-location.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/PK-location.png" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Transportation</h4>
+                    <div><a href="#trans" alt="Pakistan trans Map" title="Pakistan trans Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/PK-trans.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/PK-trans.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                    </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+<div class="map-modals">
+
+            <div id="gov" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/PK-gov.jpg' />
+    </div>
+</div>            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/PK-land.jpg' />
+    </div>
+</div>            <div id="language" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/PK-lang.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/PK-location.png' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/PK-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+
+
+                                    let marker_acm = L.marker([33.817765, 43.109463]).addTo(mymap);
+                    marker_acm.bindPopup('<a href="/languages/acm">Mesopotamian Arabic</a>').openPopup();
+                                                let marker_aeq = L.marker([25.254000, 69.029000]).addTo(mymap);
+                    marker_aeq.bindPopup('<a href="/languages/aeq">Aer</a>').openPopup();
+                                                let marker_aiq = L.marker([35.283045, 59.175580]).addTo(mymap);
+                    marker_aiq.bindPopup('<a href="/languages/aiq">Aimaq</a>').openPopup();
+                                                let marker_azj = L.marker([40.977675, 46.473698]).addTo(mymap);
+                    marker_azj.bindPopup('<a href="/languages/azj">North Azerbaijani</a>').openPopup();
+                                                                    let marker_bcc = L.marker([25.108103, 59.735338]).addTo(mymap);
+                    marker_bcc.bindPopup('<a href="/languages/bcc">Southern Balochi</a>').openPopup();
+                                                let marker_bdz = L.marker([35.265500, 72.682250]).addTo(mymap);
+                    marker_bdz.bindPopup('<a href="/languages/bdz">Badeshi</a>').openPopup();
+                                                let marker_ben = L.marker([24.000000, 90.000000]).addTo(mymap);
+                    marker_ben.bindPopup('<a href="/languages/ben">Bengali</a>').openPopup();
+                                                let marker_bft = L.marker([34.449115, 77.285940]).addTo(mymap);
+                    marker_bft.bindPopup('<a href="/languages/bft">Balti</a>').openPopup();
+                                                let marker_bgn = L.marker([37.830000, 62.170000]).addTo(mymap);
+                    marker_bgn.bindPopup('<a href="/languages/bgn">Western Balochi</a>').openPopup();
+                                                let marker_bgp = L.marker([28.000000, 62.000000]).addTo(mymap);
+                    marker_bgp.bindPopup('<a href="/languages/bgp">Eastern Balochi</a>').openPopup();
+                                                let marker_bgq = L.marker([28.603640, 71.453050]).addTo(mymap);
+                    marker_bgq.bindPopup('<a href="/languages/bgq">Bagri</a>').openPopup();
+                                                let marker_bhb = L.marker([20.849980, 73.959230]).addTo(mymap);
+                    marker_bhb.bindPopup('<a href="/languages/bhb">Bhili</a>').openPopup();
+                                                let marker_bhe = L.marker([25.482000, 69.310000]).addTo(mymap);
+                    marker_bhe.bindPopup('<a href="/languages/bhe">Bhaya</a>').openPopup();
+                                                let marker_bkk = L.marker([34.530770, 76.602610]).addTo(mymap);
+                    marker_bkk.bindPopup('<a href="/languages/bkk">Brokskat</a>').openPopup();
+                                                let marker_brh = L.marker([28.534703, 64.299057]).addTo(mymap);
+                    marker_brh.bindPopup('<a href="/languages/brh">Brahui</a>').openPopup();
+                                                let marker_bsh = L.marker([35.414470, 70.982585]).addTo(mymap);
+                    marker_bsh.bindPopup('<a href="/languages/bsh">Kati</a>').openPopup();
+                                                let marker_bsk = L.marker([36.216100, 74.823640]).addTo(mymap);
+                    marker_bsk.bindPopup('<a href="/languages/bsk">Burushaski</a>').openPopup();
+                                                let marker_btv = L.marker([33.996385, 74.965170]).addTo(mymap);
+                    marker_btv.bindPopup('<a href="/languages/btv">Bateri</a>').openPopup();
+                                                let marker_clh = L.marker([35.249430, 73.334400]).addTo(mymap);
+                    marker_clh.bindPopup('<a href="/languages/clh">Chilisso</a>').openPopup();
+                                                let marker_deh = L.marker([29.520460, 66.597750]).addTo(mymap);
+                    marker_deh.bindPopup('<a href="/languages/deh">Dehwari</a>').openPopup();
+                                                let marker_dmk = L.marker([36.325800, 74.798400]).addTo(mymap);
+                    marker_dmk.bindPopup('<a href="/languages/dmk">Domaaki</a>').openPopup();
+                                                let marker_dml = L.marker([35.299010, 71.680650]).addTo(mymap);
+                    marker_dml.bindPopup('<a href="/languages/dml">Dameli</a>').openPopup();
+                                                let marker_eng = L.marker([53.000000, -1.000000]).addTo(mymap);
+                    marker_eng.bindPopup('<a href="/languages/eng">English</a>').openPopup();
+                                                let marker_gas = L.marker([24.071160, 73.142620]).addTo(mymap);
+                    marker_gas.bindPopup('<a href="/languages/gas">Adiwasi Garasia</a>').openPopup();
+                                                let marker_ggg = L.marker([25.737000, 68.565000]).addTo(mymap);
+                    marker_ggg.bindPopup('<a href="/languages/ggg">Gurgula</a>').openPopup();
+                                                let marker_ghr = L.marker([25.383000, 68.368000]).addTo(mymap);
+                    marker_ghr.bindPopup('<a href="/languages/ghr">Ghera</a>').openPopup();
+                                                let marker_gig = L.marker([27.253000, 68.363000]).addTo(mymap);
+                    marker_gig.bindPopup('<a href="/languages/gig">Goaria</a>').openPopup();
+                                                let marker_gjk = L.marker([24.296645, 69.190140]).addTo(mymap);
+                    marker_gjk.bindPopup('<a href="/languages/gjk">Kachi Koli</a>').openPopup();
+                                                let marker_gju = L.marker([34.376763, 73.146073]).addTo(mymap);
+                    marker_gju.bindPopup('<a href="/languages/gju">Gujari</a>').openPopup();
+                                                let marker_guj = L.marker([22.687012, 71.096191]).addTo(mymap);
+                    marker_guj.bindPopup('<a href="/languages/guj">Gujarati</a>').openPopup();
+                                                let marker_gwc = L.marker([35.530330, 72.573840]).addTo(mymap);
+                    marker_gwc.bindPopup('<a href="/languages/gwc">Kalami</a>').openPopup();
+                                                let marker_gwf = L.marker([35.124340, 73.123330]).addTo(mymap);
+                    marker_gwf.bindPopup('<a href="/languages/gwf">Gowro</a>').openPopup();
+                                                let marker_gwt = L.marker([35.198170, 71.542785]).addTo(mymap);
+                    marker_gwt.bindPopup('<a href="/languages/gwt">Gawar-Bati</a>').openPopup();
+                                                let marker_haz = L.marker([33.370800, 64.510477]).addTo(mymap);
+                    marker_haz.bindPopup('<a href="/languages/haz">Hazaragi</a>').openPopup();
+                                                let marker_hin = L.marker([25.000000, 77.000000]).addTo(mymap);
+                    marker_hin.bindPopup('<a href="/languages/hin">Hindi</a>').openPopup();
+                                                let marker_hnd = L.marker([33.212150, 72.170180]).addTo(mymap);
+                    marker_hnd.bindPopup('<a href="/languages/hnd">Southern Hindko</a>').openPopup();
+                                                let marker_hno = L.marker([34.320240, 73.384400]).addTo(mymap);
+                    marker_hno.bindPopup('<a href="/languages/hno">Northern Hindko</a>').openPopup();
+                                                let marker_hns = L.marker([7.673490, -58.569730]).addTo(mymap);
+                    marker_hns.bindPopup('<a href="/languages/hns">Caribbean Hindustani</a>').openPopup();
+                                                let marker_ins = L.marker([27.518563, 79.678687]).addTo(mymap);
+                    marker_ins.bindPopup('<a href="/languages/ins">Indian Sign Language</a>').openPopup();
+                                                let marker_jdg = L.marker([26.968180, 63.534955]).addTo(mymap);
+                    marker_jdg.bindPopup('<a href="/languages/jdg">Jadgali</a>').openPopup();
+                                                let marker_jnd = L.marker([25.617000, 69.760000]).addTo(mymap);
+                    marker_jnd.bindPopup('<a href="/languages/jnd">Jandavra</a>').openPopup();
+                                                let marker_kas = L.marker([34.166825, 74.330455]).addTo(mymap);
+                    marker_kas.bindPopup('<a href="/languages/kas">Kashmiri</a>').openPopup();
+                                                let marker_kbu = L.marker([25.292000, 69.691000]).addTo(mymap);
+                    marker_kbu.bindPopup('<a href="/languages/kbu">Kabutra</a>').openPopup();
+                                                let marker_kfr = L.marker([23.830000, 69.000000]).addTo(mymap);
+                    marker_kfr.bindPopup('<a href="/languages/kfr">Kachhi</a>').openPopup();
+                                                let marker_khw = L.marker([36.000000, 72.000000]).addTo(mymap);
+                    marker_khw.bindPopup('<a href="/languages/khw">Khowar</a>').openPopup();
+                                                let marker_kls = L.marker([35.641510, 71.665750]).addTo(mymap);
+                    marker_kls.bindPopup('<a href="/languages/kls">Kalasha</a>').openPopup();
+                                                let marker_knn = L.marker([19.241430, 73.916590]).addTo(mymap);
+                    marker_knn.bindPopup('<a href="/languages/knn">Konkani</a>').openPopup();
+                                                let marker_kvx = L.marker([24.486020, 69.942280]).addTo(mymap);
+                    marker_kvx.bindPopup('<a href="/languages/kvx">Parkari Koli</a>').openPopup();
+                                                let marker_kxp = L.marker([26.071320, 72.131250]).addTo(mymap);
+                    marker_kxp.bindPopup('<a href="/languages/kxp">Wadiyara Koli</a>').openPopup();
+                                                                    let marker_lbj = L.marker([33.468005, 80.601305]).addTo(mymap);
+                    marker_lbj.bindPopup('<a href="/languages/lbj">Ladakhi</a>').openPopup();
+                                                let marker_lrk = L.marker([26.095000, 68.715000]).addTo(mymap);
+                    marker_lrk.bindPopup('<a href="/languages/lrk">Loarki</a>').openPopup();
+                                                let marker_lss = L.marker([25.329340, 66.913700]).addTo(mymap);
+                    marker_lss.bindPopup('<a href="/languages/lss">Lasi</a>').openPopup();
+                                                let marker_mby = L.marker([24.853000, 67.007000]).addTo(mymap);
+                    marker_mby.bindPopup('<a href="/languages/mby">Memoni</a>').openPopup();
+                                                let marker_mki = L.marker([26.415630, 70.782565]).addTo(mymap);
+                    marker_mki.bindPopup('<a href="/languages/mki">Dhatki</a>').openPopup();
+                                                let marker_mve = L.marker([28.324180, 71.567140]).addTo(mymap);
+                    marker_mve.bindPopup('<a href="/languages/mve">Marwari (Pakistan)</a>').openPopup();
+                                                let marker_mvy = L.marker([35.338860, 73.015400]).addTo(mymap);
+                    marker_mvy.bindPopup('<a href="/languages/mvy">Indus Kohistani</a>').openPopup();
+                                                let marker_odk = L.marker([27.536360, 67.847540]).addTo(mymap);
+                    marker_odk.bindPopup('<a href="/languages/odk">Od</a>').openPopup();
+                                                let marker_oru = L.marker([32.681910, 69.344420]).addTo(mymap);
+                    marker_oru.bindPopup('<a href="/languages/oru">Ormuri</a>').openPopup();
+                                                let marker_pan = L.marker([30.036762, 75.670166]).addTo(mymap);
+                    marker_pan.bindPopup('<a href="/languages/pan">Panjabi</a>').openPopup();
+                                                let marker_pbt = L.marker([37.170000, 68.250000]).addTo(mymap);
+                    marker_pbt.bindPopup('<a href="/languages/pbt">Southern Pashto</a>').openPopup();
+                                                let marker_pbu = L.marker([34.000000, 71.330000]).addTo(mymap);
+                    marker_pbu.bindPopup('<a href="/languages/pbu">Northern Pashto</a>').openPopup();
+                                                let marker_pes = L.marker([28.659283, 55.158607]).addTo(mymap);
+                    marker_pes.bindPopup('<a href="/languages/pes">Iranian Persian</a>').openPopup();
+                                                let marker_phl = L.marker([35.509560, 71.842110]).addTo(mymap);
+                    marker_phl.bindPopup('<a href="/languages/phl">Phalura</a>').openPopup();
+                                                let marker_phr = L.marker([33.642400, 73.807080]).addTo(mymap);
+                    marker_phr.bindPopup('<a href="/languages/phr">Pahari-Potwari</a>').openPopup();
+                                                let marker_pks = L.marker([28.066680, 67.884270]).addTo(mymap);
+                    marker_pks.bindPopup('<a href="/languages/pks">Pakistan Sign Language</a>').openPopup();
+                                                let marker_plk = L.marker([35.174080, 73.320690]).addTo(mymap);
+                    marker_plk.bindPopup('<a href="/languages/plk">Kohistani Shina</a>').openPopup();
+                                                let marker_pnb = L.marker([30.094840, 75.347425]).addTo(mymap);
+                    marker_pnb.bindPopup('<a href="/languages/pnb">Western Panjabi</a>').openPopup();
+                                                let marker_prs = L.marker([31.040545, 67.359255]).addTo(mymap);
+                    marker_prs.bindPopup('<a href="/languages/prs">Dari</a>').openPopup();
+                                                let marker_prx = L.marker([34.338550, 76.012670]).addTo(mymap);
+                    marker_prx.bindPopup('<a href="/languages/prx">Purik</a>').openPopup();
+                                                let marker_pst = L.marker([31.915300, 69.452940]).addTo(mymap);
+                    marker_pst.bindPopup('<a href="/languages/pst">Central Pashto</a>').openPopup();
+                                                                    let marker_rhg = L.marker([20.831000, 93.169500]).addTo(mymap);
+                    marker_rhg.bindPopup('<a href="/languages/rhg">Rohingya</a>').openPopup();
+                                                let marker_rmy = L.marker([46.819124, 14.845093]).addTo(mymap);
+                    marker_rmy.bindPopup('<a href="/languages/rmy">Vlax Romani</a>').openPopup();
+                                                let marker_rwr = L.marker([27.001997, 75.065600]).addTo(mymap);
+                    marker_rwr.bindPopup('<a href="/languages/rwr">Marwari (India)</a>').openPopup();
+                                                let marker_sbn = L.marker([24.540840, 69.000760]).addTo(mymap);
+                    marker_sbn.bindPopup('<a href="/languages/sbn">Sindhi Bhil</a>').openPopup();
+                                                let marker_scl = L.marker([34.651450, 75.287010]).addTo(mymap);
+                    marker_scl.bindPopup('<a href="/languages/scl">Shina</a>').openPopup();
+                                                let marker_sdg = L.marker([35.302910, 71.555670]).addTo(mymap);
+                    marker_sdg.bindPopup('<a href="/languages/sdg">Savi</a>').openPopup();
+                                                let marker_skr = L.marker([29.553395, 71.905975]).addTo(mymap);
+                    marker_skr.bindPopup('<a href="/languages/skr">Saraiki</a>').openPopup();
+                                                let marker_snd = L.marker([26.000000, 69.000000]).addTo(mymap);
+                    marker_snd.bindPopup('<a href="/languages/snd">Sindhi</a>').openPopup();
+                                                let marker_ssi = L.marker([28.736380, 72.683765]).addTo(mymap);
+                    marker_ssi.bindPopup('<a href="/languages/ssi">Sansi</a>').openPopup();
+                                                let marker_tgk = L.marker([38.821310, 68.554930]).addTo(mymap);
+                    marker_tgk.bindPopup('<a href="/languages/tgk">Tajik</a>').openPopup();
+                                                let marker_trw = L.marker([35.310140, 72.531650]).addTo(mymap);
+                    marker_trw.bindPopup('<a href="/languages/trw">Torwali</a>').openPopup();
+                                                let marker_tuk = L.marker([37.087194, 59.175736]).addTo(mymap);
+                    marker_tuk.bindPopup('<a href="/languages/tuk">Turkmen</a>').openPopup();
+                                                let marker_urd = L.marker([25.000000, 67.000000]).addTo(mymap);
+                    marker_urd.bindPopup('<a href="/languages/urd">Urdu</a>').openPopup();
+                                                let marker_ush = L.marker([35.158350, 72.642970]).addTo(mymap);
+                    marker_ush.bindPopup('<a href="/languages/ush">Ushojo</a>').openPopup();
+                                                let marker_uzn = L.marker([43.748876, 59.230956]).addTo(mymap);
+                    marker_uzn.bindPopup('<a href="/languages/uzn">Northern Uzbek</a>').openPopup();
+                                                let marker_uzs = L.marker([36.609853, 60.690747]).addTo(mymap);
+                    marker_uzs.bindPopup('<a href="/languages/uzs">Southern Uzbek</a>').openPopup();
+                                                let marker_vgr = L.marker([26.140350, 68.605100]).addTo(mymap);
+                    marker_vgr.bindPopup('<a href="/languages/vgr">Vaghri</a>').openPopup();
+                                                let marker_wbl = L.marker([37.176843, 73.977698]).addTo(mymap);
+                    marker_wbl.bindPopup('<a href="/languages/wbl">Wakhi</a>').openPopup();
+                                                let marker_wne = L.marker([30.050050, 67.832720]).addTo(mymap);
+                    marker_wne.bindPopup('<a href="/languages/wne">Waneci</a>').openPopup();
+                                                let marker_xhe = L.marker([30.479940, 70.282780]).addTo(mymap);
+                    marker_xhe.bindPopup('<a href="/languages/xhe">Khetrani</a>').openPopup();
+                                                let marker_xka = L.marker([35.365100, 72.053280]).addTo(mymap);
+                    marker_xka.bindPopup('<a href="/languages/xka">Kalkoti</a>').openPopup();
+                                                let marker_xvi = L.marker([30.000000, 70.000000]).addTo(mymap);
+                    marker_xvi.bindPopup('<a href="/languages/xvi">Kamviri</a>').openPopup();
+                                                let marker_ydg = L.marker([36.014030, 71.507650]).addTo(mymap);
+                    marker_ydg.bindPopup('<a href="/languages/ydg">Yidgha</a>').openPopup();
+                    
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

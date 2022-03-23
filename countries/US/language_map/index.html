@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 8.5em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 3px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>United States Language Map | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/US.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/us_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    United States
+                </h1>
+                <h2 itemprop="description"  >A country of  North America</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/US">United States Languages</a>
+                                                                <a class="external" href="https://find.bible/countries/US/maps">Maps | Info</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Language Map
+                                            </a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/US">
+                    <span itemprop="name">United States</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div  class="row">
+
+            
+            
+            
+            
+            
+            
+        </div>
+
+        
+        <div class="map-img row">
+            <h4>Languages of United States</h4>
+        </div>
+        <div id="mapid"></div>
+
+    </div>
+
+
+
+<div class="map-modals">
+
+            <div id="gov" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/US-gov.jpg' />
+    </div>
+</div>            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/US-land.jpg' />
+    </div>
+</div>            <div id="language" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/US-lang.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/US-location.png' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/US-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+        let country_locations={
+            'AD':[42.546245,1.601554],
+            'AE':[23.424076,53.847818],
+            'AF':[33.93911,67.709953],
+            'AG':[17.060816,-61.796428],
+            'AI':[18.220554,-63.068615],
+            'AL':[41.153332,20.168331],
+            'AM':[40.069099,45.038189],
+            'AN':[12.226079,-69.060087],
+            'AO':[-11.202692,17.873887],
+            'AQ':[-75.250973,-0.071389],
+            'AR':[-38.416097,-63.616672],
+            'AS':[-14.270972,-170.132217],
+            'AT':[47.516231,14.550072],
+            'AU':[-25.274398,133.775136],
+            'AW':[12.52111,-69.968338],
+            'AZ':[40.143105,47.576927],
+            'BA':[43.915886,17.679076],
+            'BB':[13.193887,-59.543198],
+            'BD':[23.684994,90.356331],
+            'BE':[50.503887,4.469936],
+            'BF':[12.238333,-1.561593],
+            'BG':[42.733883,25.48583],
+            'BH':[25.930414,50.637772],
+            'BI':[-3.373056,29.918886],
+            'BJ':[9.30769,2.315834],
+            'BM':[32.321384,-64.75737],
+            'BN':[4.535277,114.727669],
+            'BO':[-16.290154,-63.588653],
+            'BR':[-14.235004,-51.92528],
+            'BS':[25.03428,-77.39628],
+            'BT':[27.514162,90.433601],
+            'BV':[-54.423199,3.413194],
+            'BW':[-22.328474,24.684866],
+            'BY':[53.709807,27.953389],
+            'BZ':[17.189877,-88.49765],
+            'CA':[51,-95],
+            'CC':[-12.164165,96.870956],
+            'CD':[-4.038333,21.758664],
+            'CF':[6.611111,20.939444],
+            'CG':[-0.228021,15.827659],
+            'CH':[46.818188,8.227512],
+            'CI':[7.539989,-5.54708],
+            'CK':[-21.236736,-159.777671],
+            'CL':[-35.675147,-71.542969],
+            'CM':[7.369722,12.354722],
+            'CN':[35.86166,104.195397],
+            'CO':[4.570868,-74.297333],
+            'CR':[9.748917,-83.753428],
+            'CU':[21.521757,-77.781167],
+            'CV':[16.002082,-24.013197],
+            'CX':[-10.447525,105.690449],
+            'CY':[35.126413,33.429859],
+            'CZ':[49.817492,15.472962],
+            'DE':[51.165691,10.451526],
+            'DJ':[11.825138,42.590275],
+            'DK':[56.26392,9.501785],
+            'DM':[15.414999,-61.370976],
+            'DO':[18.735693,-70.162651],
+            'DZ':[28.033886,1.659626],
+            'EC':[-1.831239,-78.183406],
+            'EE':[58.595272,25.013607],
+            'EG':[26.820553,30.802498],
+            'EH':[24.215527,-12.885834],
+            'ER':[15.179384,39.782334],
+            'ES':[40.463667,-3.74922],
+            'ET':[9.145,40.489673],
+            'FI':[61.92411,25.748151],
+            'FJ':[-16.578193,179.414413],
+            'FK':[-51.796253,-59.523613],
+            'FM':[7.425554,150.550812],
+            'FO':[61.892635,-6.911806],
+            'FR':[46.227638,2.213749],
+            'GA':[-0.803689,11.609444],
+            'GB':[55.378051,-3.435973],
+            'GD':[12.262776,-61.604171],
+            'GE':[42.315407,43.356892],
+            'GF':[3.933889,-53.125782],
+            'GG':[49.465691,-2.585278],
+            'GH':[7.946527,-1.023194],
+            'GI':[36.137741,-5.345374],
+            'GL':[71.706936,-42.604303],
+            'GM':[13.443182,-15.310139],
+            'GN':[9.945587,-9.696645],
+            'GP':[16.995971,-62.067641],
+            'GQ':[1.650801,10.267895],
+            'GR':[39.074208,21.824312],
+            'GS':[-54.429579,-36.587909],
+            'GT':[15.783471,-90.230759],
+            'GU':[13.444304,144.793731],
+            'GW':[11.803749,-15.180413],
+            'GY':[4.860416,-58.93018],
+            'GZ':[31.354676,34.308825],
+            'HK':[22.396428,114.109497],
+            'HM':[-53.08181,73.504158],
+            'HN':[15.199999,-86.241905],
+            'HR':[45.1,15.2],
+            'HT':[18.971187,-72.285215],
+            'HU':[47.162494,19.503304],
+            'ID':[-0.789275,113.921327],
+            'IE':[53.41291,-8.24389],
+            'IL':[31.046051,34.851612],
+            'IM':[54.236107,-4.548056],
+            'IN':[20.593684,78.96288],
+            'IO':[-6.343194,71.876519],
+            'IQ':[33.223191,43.679291],
+            'IR':[32.427908,53.688046],
+            'IS':[64.963051,-19.020835],
+            'IT':[41.87194,12.56738],
+            'JE':[49.214439,-2.13125],
+            'JM':[18.109581,-77.297508],
+            'JO':[30.585164,36.238414],
+            'JP':[36.204824,138.252924],
+            'KE':[-0.023559,37.906193],
+            'KG':[41.20438,74.766098],
+            'KH':[12.565679,104.990963],
+            'KI':[-3.370417,-168.734039],
+            'KM':[-11.875001,43.872219],
+            'KN':[17.357822,-62.782998],
+            'KP':[40.339852,127.510093],
+            'KR':[35.907757,127.766922],
+            'KW':[29.31166,47.481766],
+            'KY':[19.513469,-80.566956],
+            'KZ':[48.019573,66.923684],
+            'LA':[19.85627,102.495496],
+            'LB':[33.854721,35.862285],
+            'LC':[13.909444,-60.978893],
+            'LI':[47.166,9.555373],
+            'LK':[7.873054,80.771797],
+            'LR':[6.428055,-9.429499],
+            'LS':[-29.609988,28.233608],
+            'LT':[55.169438,23.881275],
+            'LU':[49.815273,6.129583],
+            'LV':[56.879635,24.603189],
+            'LY':[26.3351,17.228331],
+            'MA':[31.791702,-7.09262],
+            'MC':[43.750298,7.412841],
+            'MD':[47.411631,28.369885],
+            'ME':[42.708678,19.37439],
+            'MG':[-18.766947,46.869107],
+            'MH':[7.131474,171.184478],
+            'MK':[41.608635,21.745275],
+            'ML':[17.570692,-3.996166],
+            'MM':[21.913965,95.956223],
+            'MN':[46.862496,103.846656],
+            'MO':[22.198745,113.543873],
+            'MP':[17.33083,145.38469],
+            'MQ':[14.641528,-61.024174],
+            'MR':[21.00789,-10.940835],
+            'MS':[16.742498,-62.187366],
+            'MT':[35.937496,14.375416],
+            'MU':[-20.348404,57.552152],
+            'MV':[3.202778,73.22068],
+            'MW':[-13.254308,34.301525],
+            'MX':[23.634501,-102.552784],
+            'MY':[4.210484,101.975766],
+            'MZ':[-18.665695,35.529562],
+            'NA':[-22.95764,18.49041],
+            'NC':[-20.904305,165.618042],
+            'NE':[17.607789,8.081666],
+            'NF':[-29.040835,167.954712],
+            'NG':[9.081999,8.675277],
+            'NI':[12.865416,-85.207229],
+            'NL':[52.132633,5.291266],
+            'NO':[60.472024,8.468946],
+            'NP':[28.394857,84.124008],
+            'NR':[-0.522778,166.931503],
+            'NU':[-19.054445,-169.867233],
+            'NZ':[-40.900557,174.885971],
+            'OM':[21.512583,55.923255],
+            'PA':[8.537981,-80.782127],
+            'PE':[-9.189967,-75.015152],
+            'PF':[-17.679742,-149.406843],
+            'PG':[-6.314993,143.95555],
+            'PH':[12.879721,121.774017],
+            'PK':[30.375321,69.345116],
+            'PL':[51.919438,19.145136],
+            'PM':[46.941936,-56.27111],
+            'PN':[-24.703615,-127.439308],
+            'PR':[18.220833,-66.590149],
+            'PS':[31.952162,35.233154],
+            'PT':[39.399872,-8.224454],
+            'PW':[7.51498,134.58252],
+            'PY':[-23.442503,-58.443832],
+            'QA':[25.354826,51.183884],
+            'RE':[-21.115141,55.536384],
+            'RO':[45.943161,24.96676],
+            'RS':[44.016521,21.005859],
+            'RU':[61.52401,105.318756],
+            'RW':[-1.940278,29.873888],
+            'SA':[23.885942,45.079162],
+            'SB':[-9.64571,160.156194],
+            'SC':[-4.679574,55.491977],
+            'SD':[12.862807,30.217636],
+            'SE':[60.128161,18.643501],
+            'SG':[1.352083,103.819836],
+            'SH':[-24.143474,-10.030696],
+            'SI':[46.151241,14.995463],
+            'SJ':[77.553604,23.670272],
+            'SK':[48.669026,19.699024],
+            'SL':[8.460555,-11.779889],
+            'SM':[43.94236,12.457777],
+            'SN':[14.497401,-14.452362],
+            'SO':[5.152149,46.199616],
+            'SR':[3.919305,-56.027783],
+            'ST':[0.18636,6.613081],
+            'SV':[13.794185,-88.89653],
+            'SY':[34.802075,38.996815],
+            'SZ':[-26.522503,31.465866],
+            'TC':[21.694025,-71.797928],
+            'TD':[15.454166,18.732207],
+            'TF':[-49.280366,69.348557],
+            'TG':[8.619543,0.824782],
+            'TH':[15.870032,100.992541],
+            'TJ':[38.861034,71.276093],
+            'TK':[-8.967363,-171.855881],
+            'TL':[-8.874217,125.727539],
+            'TM':[38.969719,59.556278],
+            'TN':[33.886917,9.537499],
+            'TO':[-21.178986,-175.198242],
+            'TR':[38.963745,35.243322],
+            'TT':[10.691803,-61.222503],
+            'TV':[-7.109535,177.64933],
+            'TW':[23.69781,120.960515],
+            'TZ':[-6.369028,34.888822],
+            'UA':[48.379433,31.16558],
+            'UG':[1.373333,32.290275],
+            'US':[37.09024,-95.712891],
+            'UY':[-32.522779,-55.765835],
+            'UZ':[41.377491,64.585262],
+            'VA':[41.902916,12.453389],
+            'VC':[12.984305,-61.287228],
+            'VE':[6.42375,-66.58973],
+            'VG':[18.420695,-64.639968],
+            'VI':[18.335765,-64.896335],
+            'VN':[14.058324,108.277199],
+            'VU':[-15.376706,166.959158],
+            'WF':[-13.768752,-177.156097],
+            'WS':[-13.759029,-172.104629],
+            'XK':[42.602636,20.902977],
+            'YE':[15.552727,48.516388],
+            'YT':[-12.8275,45.166244],
+            'ZA':[-30.559482,22.937506],
+            'ZM':[-13.133897,27.849332],
+            'ZW':[-19.015438,29.154857]};
+        var mymap = L.map('mapid', {
+            center: country_locations['US'],
+            zoom: 4
+        });
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+        }).addTo(mymap);
+
+        console.log('Location:')
+        console.log(country_locations.US)
+
+                        let marker_aaq = L.marker([45.011210, -68.661670]).addTo(mymap);
+        marker_aaq.bindPopup('<a href="/languages/aaq">Eastern Abnaki</a>');
+                                let marker_acf = L.marker([15.394660, -61.364130]).addTo(mymap);
+        marker_acf.bindPopup('<a href="/languages/acf">Saint Lucian Creole French</a>');
+                                let marker_acm = L.marker([33.817765, 43.109463]).addTo(mymap);
+        marker_acm.bindPopup('<a href="/languages/acm">Mesopotamian Arabic</a>');
+                                let marker_acq = L.marker([13.655470, 45.641070]).addTo(mymap);
+        marker_acq.bindPopup('<a href="/languages/acq">Ta&#039;izzi-Adeni Arabic</a>');
+                                let marker_acv = L.marker([41.097850, -121.190800]).addTo(mymap);
+        marker_acv.bindPopup('<a href="/languages/acv">Achumawi</a>');
+                                let marker_acw = L.marker([22.834600, 38.923710]).addTo(mymap);
+        marker_acw.bindPopup('<a href="/languages/acw">Hijazi Arabic</a>');
+                                let marker_acx = L.marker([23.250000, 58.500000]).addTo(mymap);
+        marker_acx.bindPopup('<a href="/languages/acx">Omani Arabic</a>');
+                                let marker_ady = L.marker([44.000000, 39.330000]).addTo(mymap);
+        marker_ady.bindPopup('<a href="/languages/ady">Adyghe</a>');
+                                let marker_aeb = L.marker([33.796580, 9.561560]).addTo(mymap);
+        marker_aeb.bindPopup('<a href="/languages/aeb">Tunisian Arabic</a>');
+                                let marker_aes = L.marker([44.408000, -123.940000]).addTo(mymap);
+        marker_aes.bindPopup('<a href="/languages/aes">Alsea</a>');
+                                let marker_afb = L.marker([30.170000, 47.500000]).addTo(mymap);
+        marker_afb.bindPopup('<a href="/languages/afb">Gulf Arabic</a>');
+                                let marker_afr = L.marker([-22.000000, 30.000000]).addTo(mymap);
+        marker_afr.bindPopup('<a href="/languages/afr">Afrikaans</a>');
+                                let marker_afs = L.marker([31.784255, -99.293385]).addTo(mymap);
+        marker_afs.bindPopup('<a href="/languages/afs">Afro-Seminole Creole</a>');
+                                let marker_aht = L.marker([61.706840, -144.888940]).addTo(mymap);
+        marker_aht.bindPopup('<a href="/languages/aht">Ahtena</a>');
+                                let marker_aig = L.marker([15.553140, -61.315600]).addTo(mymap);
+        marker_aig.bindPopup('<a href="/languages/aig">Antigua and Barbuda Creole English</a>');
+                                let marker_aii = L.marker([36.750000, 43.000000]).addTo(mymap);
+        marker_aii.bindPopup('<a href="/languages/aii">Assyrian Neo-Aramaic</a>');
+                                let marker_ajp = L.marker([31.560116, 38.083716]).addTo(mymap);
+        marker_ajp.bindPopup('<a href="/languages/ajp">South Levantine Arabic</a>');
+                                let marker_aju = L.marker([33.500000, -7.500000]).addTo(mymap);
+        marker_aju.bindPopup('<a href="/languages/aju">Judeo-Moroccan Arabic</a>');
+                                let marker_aka = L.marker([6.347560, -1.332540]).addTo(mymap);
+        marker_aka.bindPopup('<a href="/languages/aka">Akan</a>');
+                                let marker_akl = L.marker([11.554320, 122.354130]).addTo(mymap);
+        marker_akl.bindPopup('<a href="/languages/akl">Aklanon</a>');
+                                let marker_akz = L.marker([30.767380, -94.628480]).addTo(mymap);
+        marker_akz.bindPopup('<a href="/languages/akz">Alabama</a>');
+                                let marker_ale = L.marker([52.122830, -174.290130]).addTo(mymap);
+        marker_ale.bindPopup('<a href="/languages/ale">Aleut</a>');
+                                let marker_aln = L.marker([42.316993, 21.383683]).addTo(mymap);
+        marker_aln.bindPopup('<a href="/languages/aln">Gheg Albanian</a>');
+                                let marker_als = L.marker([41.000000, 20.000000]).addTo(mymap);
+        marker_als.bindPopup('<a href="/languages/als">Tosk Albanian</a>');
+                                let marker_amh = L.marker([11.708182, 39.543456]).addTo(mymap);
+        marker_amh.bindPopup('<a href="/languages/amh">Amharic</a>');
+                                let marker_anu = L.marker([7.577140, 34.026655]).addTo(mymap);
+        marker_anu.bindPopup('<a href="/languages/anu">Anuak</a>');
+                                let marker_apd = L.marker([17.802113, 33.317930]).addTo(mymap);
+        marker_apd.bindPopup('<a href="/languages/apd">Sudanese Arabic</a>');
+                                let marker_apj = L.marker([36.807900, -107.006940]).addTo(mymap);
+        marker_apj.bindPopup('<a href="/languages/apj">Jicarilla Apache</a>');
+                                let marker_apk = L.marker([34.907710, -98.246120]).addTo(mymap);
+        marker_apk.bindPopup('<a href="/languages/apk">Kiowa Apache</a>');
+                                let marker_apl = L.marker([33.274790, -105.819390]).addTo(mymap);
+        marker_apl.bindPopup('<a href="/languages/apl">Lipan Apache</a>');
+                                let marker_apm = L.marker([33.129100, -105.566120]).addTo(mymap);
+        marker_apm.bindPopup('<a href="/languages/apm">Mescalero-Chiricahua Apache</a>');
+                                let marker_apw = L.marker([33.857430, -110.122640]).addTo(mymap);
+        marker_apw.bindPopup('<a href="/languages/apw">Western Apache</a>');
+                                let marker_aqp = L.marker([30.912070, -93.082710]).addTo(mymap);
+        marker_aqp.bindPopup('<a href="/languages/aqp">Atakapa</a>');
+                                                let marker_ari = L.marker([40.647304, -98.715822]).addTo(mymap);
+        marker_ari.bindPopup('<a href="/languages/ari">Arikara</a>');
+                                let marker_arp = L.marker([43.387920, -108.809640]).addTo(mymap);
+        marker_arp.bindPopup('<a href="/languages/arp">Arapaho</a>');
+                                let marker_arq = L.marker([35.420780, 3.230330]).addTo(mymap);
+        marker_arq.bindPopup('<a href="/languages/arq">Algerian Arabic</a>');
+                                let marker_ars = L.marker([30.337142, 42.177266]).addTo(mymap);
+        marker_ars.bindPopup('<a href="/languages/ars">Najdi Arabic</a>');
+                                let marker_arw = L.marker([5.642953, -56.924345]).addTo(mymap);
+        marker_arw.bindPopup('<a href="/languages/arw">Arawak</a>');
+                                let marker_ary = L.marker([32.500000, -7.500000]).addTo(mymap);
+        marker_ary.bindPopup('<a href="/languages/ary">Moroccan Arabic</a>');
+                                let marker_arz = L.marker([31.000000, 31.000000]).addTo(mymap);
+        marker_arz.bindPopup('<a href="/languages/arz">Egyptian Arabic</a>');
+                                let marker_asb = L.marker([49.292285, -106.068105]).addTo(mymap);
+        marker_asb.bindPopup('<a href="/languages/asb">Assiniboine</a>');
+                                let marker_ase = L.marker([33.811710, -81.612090]).addTo(mymap);
+        marker_ase.bindPopup('<a href="/languages/ase">American Sign Language</a>');
+                                let marker_ats = L.marker([48.483410, -108.738410]).addTo(mymap);
+        marker_ats.bindPopup('<a href="/languages/ats">Gros Ventre</a>');
+                                let marker_atw = L.marker([40.427110, -120.661250]).addTo(mymap);
+        marker_atw.bindPopup('<a href="/languages/atw">Atsugewi</a>');
+                                let marker_ayl = L.marker([22.003240, 15.001360]).addTo(mymap);
+        marker_ayl.bindPopup('<a href="/languages/ayl">Libyan Arabic</a>');
+                                let marker_azb = L.marker([36.513664, 48.430180]).addTo(mymap);
+        marker_azb.bindPopup('<a href="/languages/azb">South Azerbaijani</a>');
+                                let marker_azj = L.marker([40.977675, 46.473698]).addTo(mymap);
+        marker_azj.bindPopup('<a href="/languages/azj">North Azerbaijani</a>');
+                                let marker_bam = L.marker([12.040080, -9.989490]).addTo(mymap);
+        marker_bam.bindPopup('<a href="/languages/bam">Bambara</a>');
+                                let marker_bcl = L.marker([13.757430, 123.403310]).addTo(mymap);
+        marker_bcl.bindPopup('<a href="/languages/bcl">Central Bikol</a>');
+                                let marker_bel = L.marker([53.230655, 25.603835]).addTo(mymap);
+        marker_bel.bindPopup('<a href="/languages/bel">Belarusian</a>');
+                                let marker_ben = L.marker([24.000000, 90.000000]).addTo(mymap);
+        marker_ben.bindPopup('<a href="/languages/ben">Bengali</a>');
+                                let marker_bex = L.marker([6.033210, 29.974030]).addTo(mymap);
+        marker_bex.bindPopup('<a href="/languages/bex">Jur Modo</a>');
+                                let marker_bfa = L.marker([4.195225, 31.072335]).addTo(mymap);
+        marker_bfa.bindPopup('<a href="/languages/bfa">Bari</a>');
+                                let marker_bhh = L.marker([41.000000, 64.000000]).addTo(mymap);
+        marker_bhh.bindPopup('<a href="/languages/bhh">Bukharic</a>');
+                                let marker_bla = L.marker([49.066915, -113.109275]).addTo(mymap);
+        marker_bla.bindPopup('<a href="/languages/bla">Blackfoot</a>');
+                                let marker_bll = L.marker([31.319990, -89.195080]).addTo(mymap);
+        marker_bll.bindPopup('<a href="/languages/bll">Biloxi</a>');
+                                let marker_blt = L.marker([18.957235, 102.927963]).addTo(mymap);
+        marker_blt.bindPopup('<a href="/languages/blt">Tai Dam</a>');
+                                let marker_bod = L.marker([28.368070, 90.187243]).addTo(mymap);
+        marker_bod.bindPopup('<a href="/languages/bod">Tibetan</a>');
+                                let marker_boi = L.marker([34.461957, -119.699249]).addTo(mymap);
+        marker_boi.bindPopup('<a href="/languages/boi">Barbareño</a>');
+                                let marker_bos = L.marker([42.933080, 17.670440]).addTo(mymap);
+        marker_bos.bindPopup('<a href="/languages/bos">Bosnian</a>');
+                                let marker_brb = L.marker([14.599420, 107.008360]).addTo(mymap);
+        marker_brb.bindPopup('<a href="/languages/brb">Lave</a>');
+                                let marker_bsy = L.marker([5.304330, 115.512290]).addTo(mymap);
+        marker_bsy.bindPopup('<a href="/languages/bsy">Sabah Bisaya</a>');
+                                let marker_bul = L.marker([43.364585, 25.046987]).addTo(mymap);
+        marker_bul.bindPopup('<a href="/languages/bul">Bulgarian</a>');
+                                let marker_bzj = L.marker([17.394070, -88.628140]).addTo(mymap);
+        marker_bzj.bindPopup('<a href="/languages/bzj">Belize Kriol English</a>');
+                                let marker_cab = L.marker([15.352868, -86.909058]).addTo(mymap);
+        marker_cab.bindPopup('<a href="/languages/cab">Garifuna</a>');
+                                let marker_cad = L.marker([35.182600, -98.263350]).addTo(mymap);
+        marker_cad.bindPopup('<a href="/languages/cad">Caddo</a>');
+                                let marker_cak = L.marker([14.466220, -90.988100]).addTo(mymap);
+        marker_cak.bindPopup('<a href="/languages/cak">Kaqchikel</a>');
+                                let marker_cal = L.marker([15.205000, 145.764980]).addTo(mymap);
+        marker_cal.bindPopup('<a href="/languages/cal">Carolinian</a>');
+                                let marker_car = L.marker([5.837718, -56.832298]).addTo(mymap);
+        marker_car.bindPopup('<a href="/languages/car">Galibi Carib</a>');
+                                let marker_cat = L.marker([41.898260, 3.393755]).addTo(mymap);
+        marker_cat.bindPopup('<a href="/languages/cat">Catalan</a>');
+                                let marker_cay = L.marker([42.814285, -79.442360]).addTo(mymap);
+        marker_cay.bindPopup('<a href="/languages/cay">Cayuga</a>');
+                                let marker_cdo = L.marker([26.000000, 119.500000]).addTo(mymap);
+        marker_cdo.bindPopup('<a href="/languages/cdo">Min Dong Chinese</a>');
+                                let marker_cea = L.marker([46.773610, -124.004320]).addTo(mymap);
+        marker_cea.bindPopup('<a href="/languages/cea">Lower Chehalis</a>');
+                                let marker_ceb = L.marker([8.387990, 124.366620]).addTo(mymap);
+        marker_ceb.bindPopup('<a href="/languages/ceb">Cebuano</a>');
+                                let marker_ces = L.marker([49.873398, 15.104370]).addTo(mymap);
+        marker_ces.bindPopup('<a href="/languages/ces">Czech</a>');
+                                let marker_cha = L.marker([14.330665, 145.275795]).addTo(mymap);
+        marker_cha.bindPopup('<a href="/languages/cha">Chamorro</a>');
+                                let marker_chc = L.marker([34.968480, -80.885690]).addTo(mymap);
+        marker_chc.bindPopup('<a href="/languages/chc">Catawba</a>');
+                                let marker_chh = L.marker([45.172850, -119.165600]).addTo(mymap);
+        marker_chh.bindPopup('<a href="/languages/chh">Chinook</a>');
+                                let marker_chk = L.marker([7.340830, 151.595850]).addTo(mymap);
+        marker_chk.bindPopup('<a href="/languages/chk">Chuukese</a>');
+                                let marker_chl = L.marker([33.532380, -116.691460]).addTo(mymap);
+        marker_chl.bindPopup('<a href="/languages/chl">Cahuilla</a>');
+                                let marker_chn = L.marker([55.000000, -125.000000]).addTo(mymap);
+        marker_chn.bindPopup('<a href="/languages/chn">Chinook jargon</a>');
+                                let marker_cho = L.marker([33.899280, -94.818990]).addTo(mymap);
+        marker_cho.bindPopup('<a href="/languages/cho">Choctaw</a>');
+                                let marker_chr = L.marker([35.466390, -83.163030]).addTo(mymap);
+        marker_chr.bindPopup('<a href="/languages/chr">Cherokee</a>');
+                                let marker_chy = L.marker([45.532060, -106.658880]).addTo(mymap);
+        marker_chy.bindPopup('<a href="/languages/chy">Cheyenne</a>');
+                                let marker_cic = L.marker([33.945230, -97.130120]).addTo(mymap);
+        marker_cic.bindPopup('<a href="/languages/cic">Chickasaw</a>');
+                                let marker_cid = L.marker([41.000000, -123.000000]).addTo(mymap);
+        marker_cid.bindPopup('<a href="/languages/cid">Chimariko</a>');
+                                let marker_ciw = L.marker([47.347040, -94.273760]).addTo(mymap);
+        marker_ciw.bindPopup('<a href="/languages/ciw">Chippewa</a>');
+                                let marker_cja = L.marker([12.477113, 104.025660]).addTo(mymap);
+        marker_cja.bindPopup('<a href="/languages/cja">Western Cham</a>');
+                                let marker_cjh = L.marker([46.798070, -123.169290]).addTo(mymap);
+        marker_cjh.bindPopup('<a href="/languages/cjh">Upper Chehalis</a>');
+                                let marker_cjm = L.marker([11.285280, 108.490120]).addTo(mymap);
+        marker_cjm.bindPopup('<a href="/languages/cjm">Eastern Cham</a>');
+                                let marker_ckb = L.marker([35.653865, 45.807735]).addTo(mymap);
+        marker_ckb.bindPopup('<a href="/languages/ckb">Central Kurdish - Sorani</a>');
+                                let marker_cku = L.marker([30.409570, -92.709020]).addTo(mymap);
+        marker_cku.bindPopup('<a href="/languages/cku">Koasati</a>');
+                                let marker_cld = L.marker([37.097240, 43.502690]).addTo(mymap);
+        marker_cld.bindPopup('<a href="/languages/cld">Chaldean Neo-Aramaic</a>');
+                                let marker_clm = L.marker([48.070680, -123.511500]).addTo(mymap);
+        marker_clm.bindPopup('<a href="/languages/clm">Clallam</a>');
+                                let marker_cmn = L.marker([40.020884, 116.228026]).addTo(mymap);
+        marker_cmn.bindPopup('<a href="/languages/cmn">Mandarin Chinese</a>');
+                                let marker_coc = L.marker([32.375965, -114.847780]).addTo(mymap);
+        marker_coc.bindPopup('<a href="/languages/coc">Cocopa</a>');
+                                let marker_col = L.marker([48.216970, -118.453610]).addTo(mymap);
+        marker_col.bindPopup('<a href="/languages/col">Columbia-Wenatchi</a>');
+                                let marker_com = L.marker([34.570140, -98.423950]).addTo(mymap);
+        marker_com.bindPopup('<a href="/languages/com">Comanche</a>');
+                                let marker_coq = L.marker([44.517660, -119.605130]).addTo(mymap);
+        marker_coq.bindPopup('<a href="/languages/coq">Coquille</a>');
+                                let marker_cos = L.marker([41.700015, 9.255365]).addTo(mymap);
+        marker_cos.bindPopup('<a href="/languages/cos">Corsican</a>');
+                                let marker_cow = L.marker([46.416660, -122.916650]).addTo(mymap);
+        marker_cow.bindPopup('<a href="/languages/cow">Cowlitz</a>');
+                                let marker_crd = L.marker([47.295830, -116.715120]).addTo(mymap);
+        marker_crd.bindPopup('<a href="/languages/crd">Coeur d&#039;Alene</a>');
+                                let marker_crg = L.marker([49.168080, -99.911875]).addTo(mymap);
+        marker_crg.bindPopup('<a href="/languages/crg">Michif</a>');
+                                let marker_crk = L.marker([51.243685, -110.463400]).addTo(mymap);
+        marker_crk.bindPopup('<a href="/languages/crk">Plains Cree</a>');
+                                let marker_crn = L.marker([22.409930, -104.467440]).addTo(mymap);
+        marker_crn.bindPopup('<a href="/languages/crn">El Nayar Cora</a>');
+                                let marker_cro = L.marker([45.368000, -107.874030]).addTo(mymap);
+        marker_cro.bindPopup('<a href="/languages/cro">Crow</a>');
+                                let marker_crr = L.marker([35.979000, -77.291000]).addTo(mymap);
+        marker_crr.bindPopup('<a href="/languages/crr">Carolina Algonquian</a>');
+                                let marker_crz = L.marker([34.046515, -119.864044]).addTo(mymap);
+        marker_crz.bindPopup('<a href="/languages/crz">Cruzeño</a>');
+                                let marker_csi = L.marker([38.328500, -122.994310]).addTo(mymap);
+        marker_csi.bindPopup('<a href="/languages/csi">Coast Miwok</a>');
+                                let marker_csm = L.marker([38.081200, -120.256840]).addTo(mymap);
+        marker_csm.bindPopup('<a href="/languages/csm">Central Sierra Miwok</a>');
+                                let marker_css = L.marker([36.364000, -121.177000]).addTo(mymap);
+        marker_css.bindPopup('<a href="/languages/css">Southern Ohlone</a>');
+                                let marker_cst = L.marker([36.364000, -121.177000]).addTo(mymap);
+        marker_cst.bindPopup('<a href="/languages/cst">Northern Ohlone</a>');
+                                let marker_csz = L.marker([43.441310, -124.159620]).addTo(mymap);
+        marker_csz.bindPopup('<a href="/languages/csz">Coos</a>');
+                                let marker_ctc = L.marker([42.686370, -124.375880]).addTo(mymap);
+        marker_ctc.bindPopup('<a href="/languages/ctc">Chetco</a>');
+                                let marker_ctm = L.marker([30.338610, -90.912320]).addTo(mymap);
+        marker_ctm.bindPopup('<a href="/languages/ctm">Chitimacha</a>');
+                                let marker_ctp = L.marker([16.249500, -97.324360]).addTo(mymap);
+        marker_ctp.bindPopup('<a href="/languages/ctp">Western Highland Chatino</a>');
+                                let marker_ctu = L.marker([17.489650, -92.469830]).addTo(mymap);
+        marker_ctu.bindPopup('<a href="/languages/ctu">Chol</a>');
+                                let marker_cup = L.marker([33.314830, -116.514710]).addTo(mymap);
+        marker_cup.bindPopup('<a href="/languages/cup">Cupeño</a>');
+                                let marker_cym = L.marker([52.000000, -4.000000]).addTo(mymap);
+        marker_cym.bindPopup('<a href="/languages/cym">Welsh</a>');
+                                let marker_czn = L.marker([16.527990, -97.455460]).addTo(mymap);
+        marker_czn.bindPopup('<a href="/languages/czn">Zenzontepec Chatino</a>');
+                                let marker_dak = L.marker([47.685710, -102.119730]).addTo(mymap);
+        marker_dak.bindPopup('<a href="/languages/dak">Dakota</a>');
+                                let marker_dan = L.marker([54.865500, 9.362840]).addTo(mymap);
+        marker_dan.bindPopup('<a href="/languages/dan">Danish</a>');
+                                                let marker_dep = L.marker([38.569000, -75.463000]).addTo(mymap);
+        marker_dep.bindPopup('<a href="/languages/dep">Pidgin Delaware</a>');
+                                let marker_deu = L.marker([48.648954, 12.467623]).addTo(mymap);
+        marker_deu.bindPopup('<a href="/languages/deu">German</a>');
+                                let marker_dih = L.marker([32.515300, -116.609415]).addTo(mymap);
+        marker_dih.bindPopup('<a href="/languages/dih">Kumiai</a>');
+                                let marker_dsb = L.marker([51.662130, 13.940700]).addTo(mymap);
+        marker_dsb.bindPopup('<a href="/languages/dsb">Lower Sorbian</a>');
+                                let marker_dyu = L.marker([10.453640, -4.720073]).addTo(mymap);
+        marker_dyu.bindPopup('<a href="/languages/dyu">Dyula</a>');
+                                let marker_efi = L.marker([4.893790, 8.381210]).addTo(mymap);
+        marker_efi.bindPopup('<a href="/languages/efi">Efik</a>');
+                                                let marker_ell = L.marker([42.322386, 24.869938]).addTo(mymap);
+        marker_ell.bindPopup('<a href="/languages/ell">Modern Greek (1453-)</a>');
+                                let marker_emk = L.marker([9.330483, -10.539400]).addTo(mymap);
+        marker_emk.bindPopup('<a href="/languages/emk">Eastern Maninkakan</a>');
+                                let marker_ems = L.marker([60.423820, -148.042810]).addTo(mymap);
+        marker_ems.bindPopup('<a href="/languages/ems">Pacific Gulf Yupik</a>');
+                                let marker_eng = L.marker([53.000000, -1.000000]).addTo(mymap);
+        marker_eng.bindPopup('<a href="/languages/eng">English</a>');
+                                let marker_esi = L.marker([69.581955, -143.769935]).addTo(mymap);
+        marker_esi.bindPopup('<a href="/languages/esi">North Alaskan Inupiatun</a>');
+                                let marker_esk = L.marker([64.779550, -161.806660]).addTo(mymap);
+        marker_esk.bindPopup('<a href="/languages/esk">Northwest Alaska Inupiatun</a>');
+                                let marker_esq = L.marker([36.547260, -121.866560]).addTo(mymap);
+        marker_esq.bindPopup('<a href="/languages/esq">Esselen</a>');
+                                let marker_ess = L.marker([63.430830, -170.271660]).addTo(mymap);
+        marker_ess.bindPopup('<a href="/languages/ess">Central Siberian Yupik</a>');
+                                let marker_esu = L.marker([60.306160, -161.485880]).addTo(mymap);
+        marker_esu.bindPopup('<a href="/languages/esu">Central Yupik</a>');
+                                let marker_eus = L.marker([43.278720, -1.316220]).addTo(mymap);
+        marker_eus.bindPopup('<a href="/languages/eus">Basque</a>');
+                                let marker_evn = L.marker([53.850030, 108.625523]).addTo(mymap);
+        marker_evn.bindPopup('<a href="/languages/evn">Evenki</a>');
+                                let marker_ewe = L.marker([6.460610, 0.814975]).addTo(mymap);
+        marker_ewe.bindPopup('<a href="/languages/ewe">Ewe</a>');
+                                let marker_eya = L.marker([60.423200, -144.761860]).addTo(mymap);
+        marker_eya.bindPopup('<a href="/languages/eya">Eyak</a>');
+                                let marker_fij = L.marker([-18.000000, 178.330000]).addTo(mymap);
+        marker_fij.bindPopup('<a href="/languages/fij">Fijian</a>');
+                                let marker_fin = L.marker([64.762825, 25.557670]).addTo(mymap);
+        marker_fin.bindPopup('<a href="/languages/fin">Finnish</a>');
+                                let marker_fla = L.marker([47.582510, -114.189870]).addTo(mymap);
+        marker_fla.bindPopup('<a href="/languages/fla">Kalispel-Pend d&#039;Oreille</a>');
+                                let marker_fra = L.marker([48.000000, 2.000000]).addTo(mymap);
+        marker_fra.bindPopup('<a href="/languages/fra">French</a>');
+                                let marker_frc = L.marker([29.686860, -91.613250]).addTo(mymap);
+        marker_frc.bindPopup('<a href="/languages/frc">Cajun French</a>');
+                                let marker_frr = L.marker([54.640870, 8.584890]).addTo(mymap);
+        marker_frr.bindPopup('<a href="/languages/frr">Northern Frisian</a>');
+                                let marker_fry = L.marker([53.143000, 5.860910]).addTo(mymap);
+        marker_fry.bindPopup('<a href="/languages/fry">Western Frisian</a>');
+                                let marker_fub = L.marker([8.140326, 13.077338]).addTo(mymap);
+        marker_fub.bindPopup('<a href="/languages/fub">Adamawa Fulfulde</a>');
+                                let marker_fuc = L.marker([13.869355, -13.448212]).addTo(mymap);
+        marker_fuc.bindPopup('<a href="/languages/fuc">Pulaar</a>');
+                                let marker_fuf = L.marker([12.182612, -12.733800]).addTo(mymap);
+        marker_fuf.bindPopup('<a href="/languages/fuf">Pular</a>');
+                                let marker_gaz = L.marker([8.813910, 36.736470]).addTo(mymap);
+        marker_gaz.bindPopup('<a href="/languages/gaz">West Central Oromo</a>');
+                                let marker_gce = L.marker([45.391420, -120.750100]).addTo(mymap);
+        marker_gce.bindPopup('<a href="/languages/gce">Galice</a>');
+                                let marker_gcf = L.marker([14.498940, -61.022810]).addTo(mymap);
+        marker_gcf.bindPopup('<a href="/languages/gcf">Guadeloupean Creole French</a>');
+                                let marker_geh = L.marker([40.000000, -97.000000]).addTo(mymap);
+        marker_geh.bindPopup('<a href="/languages/geh">Hutterite German</a>');
+                                let marker_gil = L.marker([0.640490, 173.219604]).addTo(mymap);
+        marker_gil.bindPopup('<a href="/languages/gil">Gilbertese</a>');
+                                let marker_gla = L.marker([56.757350, -5.243660]).addTo(mymap);
+        marker_gla.bindPopup('<a href="/languages/gla">Scottish Gaelic</a>');
+                                let marker_gle = L.marker([53.218550, -7.615090]).addTo(mymap);
+        marker_gle.bindPopup('<a href="/languages/gle">Irish</a>');
+                                let marker_guj = L.marker([22.687012, 71.096191]).addTo(mymap);
+        marker_guj.bindPopup('<a href="/languages/guj">Gujarati</a>');
+                                let marker_gul = L.marker([33.663240, -79.603600]).addTo(mymap);
+        marker_gul.bindPopup('<a href="/languages/gul">Sea Island Creole English</a>');
+                                let marker_gwi = L.marker([67.430670, -142.962745]).addTo(mymap);
+        marker_gwi.bindPopup('<a href="/languages/gwi">Gwichʼin</a>');
+                                let marker_gyn = L.marker([5.623205, -56.945130]).addTo(mymap);
+        marker_gyn.bindPopup('<a href="/languages/gyn">Guyanese Creole English</a>');
+                                let marker_haa = L.marker([64.500200, -140.351700]).addTo(mymap);
+        marker_haa.bindPopup('<a href="/languages/haa">Han</a>');
+                                let marker_hak = L.marker([25.000000, 116.000000]).addTo(mymap);
+        marker_hak.bindPopup('<a href="/languages/hak">Hakka Chinese</a>');
+                                let marker_hat = L.marker([19.000000, -73.330000]).addTo(mymap);
+        marker_hat.bindPopup('<a href="/languages/hat">Haitian</a>');
+                                let marker_haw = L.marker([19.629650, -155.429950]).addTo(mymap);
+        marker_haw.bindPopup('<a href="/languages/haw">Hawaiian</a>');
+                                let marker_haz = L.marker([33.370800, 64.510477]).addTo(mymap);
+        marker_haz.bindPopup('<a href="/languages/haz">Hazaragi</a>');
+                                let marker_hch = L.marker([21.953990, -104.062280]).addTo(mymap);
+        marker_hch.bindPopup('<a href="/languages/hch">Huichol</a>');
+                                let marker_hdn = L.marker([54.693070, -132.464840]).addTo(mymap);
+        marker_hdn.bindPopup('<a href="/languages/hdn">Northern Haida</a>');
+                                let marker_heb = L.marker([31.105650, 35.017880]).addTo(mymap);
+        marker_heb.bindPopup('<a href="/languages/heb">Hebrew</a>');
+                                let marker_hid = L.marker([47.753410, -102.527770]).addTo(mymap);
+        marker_hid.bindPopup('<a href="/languages/hid">Hidatsa</a>');
+                                let marker_hin = L.marker([25.000000, 77.000000]).addTo(mymap);
+        marker_hin.bindPopup('<a href="/languages/hin">Hindi</a>');
+                                let marker_hnj = L.marker([22.563832, 101.950052]).addTo(mymap);
+        marker_hnj.bindPopup('<a href="/languages/hnj">Hmong Njua</a>');
+                                let marker_hoi = L.marker([62.726620, -159.831430]).addTo(mymap);
+        marker_hoi.bindPopup('<a href="/languages/hoi">Holikachuk</a>');
+                                let marker_hop = L.marker([35.765260, -110.534830]).addTo(mymap);
+        marker_hop.bindPopup('<a href="/languages/hop">Hopi</a>');
+                                let marker_hps = L.marker([21.631070, -158.001790]).addTo(mymap);
+        marker_hps.bindPopup('<a href="/languages/hps">Hawai&#039;i Sign Language (HSL)</a>');
+                                let marker_hrv = L.marker([45.200602, 16.826005]).addTo(mymap);
+        marker_hrv.bindPopup('<a href="/languages/hrv">Croatian</a>');
+                                let marker_hsn = L.marker([27.668470, 111.471120]).addTo(mymap);
+        marker_hsn.bindPopup('<a href="/languages/hsn">Xiang Chinese</a>');
+                                let marker_hun = L.marker([46.906859, 19.655527]).addTo(mymap);
+        marker_hun.bindPopup('<a href="/languages/hun">Hungarian</a>');
+                                let marker_hup = L.marker([41.098210, -123.679880]).addTo(mymap);
+        marker_hup.bindPopup('<a href="/languages/hup">Hupa</a>');
+                                let marker_hur = L.marker([48.075050, -122.028980]).addTo(mymap);
+        marker_hur.bindPopup('<a href="/languages/hur">Halkomelem</a>');
+                                let marker_hwc = L.marker([19.628750, -155.436980]).addTo(mymap);
+        marker_hwc.bindPopup('<a href="/languages/hwc">Hawai&#039;i Creole English</a>');
+                                                let marker_ibo = L.marker([4.627050, 7.234410]).addTo(mymap);
+        marker_ibo.bindPopup('<a href="/languages/ibo">Igbo</a>');
+                                let marker_ilo = L.marker([15.936140, 120.993290]).addTo(mymap);
+        marker_ilo.bindPopup('<a href="/languages/ilo">Iloko</a>');
+                                let marker_ind = L.marker([-7.334580, 109.715720]).addTo(mymap);
+        marker_ind.bindPopup('<a href="/languages/ind">Indonesian</a>');
+                                let marker_ing = L.marker([62.069700, -160.044270]).addTo(mymap);
+        marker_ing.bindPopup('<a href="/languages/ing">Degexit&#039;an</a>');
+                                let marker_inz = L.marker([34.616907, -120.079937]).addTo(mymap);
+        marker_inz.bindPopup('<a href="/languages/inz">Ineseño</a>');
+                                let marker_iow = L.marker([40.051140, -95.521350]).addTo(mymap);
+        marker_iow.bindPopup('<a href="/languages/iow">Iowa-Oto</a>');
+                                                let marker_isl = L.marker([63.483750, -19.021170]).addTo(mymap);
+        marker_isl.bindPopup('<a href="/languages/isl">Icelandic</a>');
+                                let marker_ita = L.marker([43.046411, 12.648925]).addTo(mymap);
+        marker_ita.bindPopup('<a href="/languages/ita">Italian</a>');
+                                let marker_ium = L.marker([20.830000, 101.170000]).addTo(mymap);
+        marker_ium.bindPopup('<a href="/languages/ium">Iu Mien</a>');
+                                let marker_jac = L.marker([15.660950, -91.663270]).addTo(mymap);
+        marker_jac.bindPopup('<a href="/languages/jac">Popti&#039;</a>');
+                                let marker_jam = L.marker([18.130000, -77.261200]).addTo(mymap);
+        marker_jam.bindPopup('<a href="/languages/jam">Jamaican Creole English</a>');
+                                let marker_jav = L.marker([-0.572307, 110.884843]).addTo(mymap);
+        marker_jav.bindPopup('<a href="/languages/jav">Javanese</a>');
+                                let marker_jdt = L.marker([32.330000, 34.750000]).addTo(mymap);
+        marker_jdt.bindPopup('<a href="/languages/jdt">Judeo-Tat</a>');
+                                let marker_jpn = L.marker([35.000000, 135.000000]).addTo(mymap);
+        marker_jpn.bindPopup('<a href="/languages/jpn">Japanese</a>');
+                                let marker_jye = L.marker([15.000000, 45.000000]).addTo(mymap);
+        marker_jye.bindPopup('<a href="/languages/jye">Judeo-Yemeni Arabic</a>');
+                                let marker_kac = L.marker([25.463415, 97.327840]).addTo(mymap);
+        marker_kac.bindPopup('<a href="/languages/kac">Kachin</a>');
+                                let marker_kat = L.marker([39.370453, 45.806610]).addTo(mymap);
+        marker_kat.bindPopup('<a href="/languages/kat">Georgian</a>');
+                                let marker_kaz = L.marker([41.872878, 65.770909]).addTo(mymap);
+        marker_kaz.bindPopup('<a href="/languages/kaz">Kazakh</a>');
+                                let marker_kbd = L.marker([43.508220, 43.391820]).addTo(mymap);
+        marker_kbd.bindPopup('<a href="/languages/kbd">Kabardian</a>');
+                                let marker_kea = L.marker([15.058630, -23.614760]).addTo(mymap);
+        marker_kea.bindPopup('<a href="/languages/kea">Kabuverdianu</a>');
+                                let marker_kee = L.marker([35.521580, -106.452850]).addTo(mymap);
+        marker_kee.bindPopup('<a href="/languages/kee">Eastern Keres</a>');
+                                let marker_khb = L.marker([21.032106, 101.281582]).addTo(mymap);
+        marker_khb.bindPopup('<a href="/languages/khb">Lü</a>');
+                                let marker_khf = L.marker([21.079280, 101.326945]).addTo(mymap);
+        marker_khf.bindPopup('<a href="/languages/khf">Khuen</a>');
+                                let marker_khk = L.marker([48.323970, 106.288735]).addTo(mymap);
+        marker_khk.bindPopup('<a href="/languages/khk">Halh Mongolian</a>');
+                                let marker_khm = L.marker([12.051550, 105.015373]).addTo(mymap);
+        marker_khm.bindPopup('<a href="/languages/khm">Khmer</a>');
+                                let marker_kic = L.marker([41.655145, -89.030340]).addTo(mymap);
+        marker_kic.bindPopup('<a href="/languages/kic">Kickapoo</a>');
+                                let marker_kii = L.marker([31.830000, -96.500000]).addTo(mymap);
+        marker_kii.bindPopup('<a href="/languages/kii">Kitsai</a>');
+                                let marker_kin = L.marker([-1.567707, 29.644133]).addTo(mymap);
+        marker_kin.bindPopup('<a href="/languages/kin">Kinyarwanda</a>');
+                                let marker_kio = L.marker([34.940260, -98.904240]).addTo(mymap);
+        marker_kio.bindPopup('<a href="/languages/kio">Kiowa</a>');
+                                let marker_kir = L.marker([42.000000, 74.000000]).addTo(mymap);
+        marker_kir.bindPopup('<a href="/languages/kir">Kirghiz</a>');
+                                let marker_kjb = L.marker([15.684550, -91.304300]).addTo(mymap);
+        marker_kjb.bindPopup('<a href="/languages/kjb">Q&#039;anjob&#039;al</a>');
+                                let marker_kjg = L.marker([20.246292, 101.671160]).addTo(mymap);
+        marker_kjg.bindPopup('<a href="/languages/kjg">Khmu</a>');
+                                let marker_kjq = L.marker([34.973250, -107.517440]).addTo(mymap);
+        marker_kjq.bindPopup('<a href="/languages/kjq">Western Keres</a>');
+                                let marker_kju = L.marker([38.542365, -123.080292]).addTo(mymap);
+        marker_kju.bindPopup('<a href="/languages/kju">Kashaya</a>');
+                                let marker_kla = L.marker([42.586080, -121.704030]).addTo(mymap);
+        marker_kla.bindPopup('<a href="/languages/kla">Klamath-Modoc</a>');
+                                let marker_kmr = L.marker([37.000000, 43.000000]).addTo(mymap);
+        marker_kmr.bindPopup('<a href="/languages/kmr">Northern Kurdish - Kurmanji</a>');
+                                let marker_kor = L.marker([37.500000, 128.000000]).addTo(mymap);
+        marker_kor.bindPopup('<a href="/languages/kor">Korean</a>');
+                                let marker_kos = L.marker([5.500000, 163.000000]).addTo(mymap);
+        marker_kos.bindPopup('<a href="/languages/kos">Kosraean</a>');
+                                let marker_koy = L.marker([65.609270, -154.228520]).addTo(mymap);
+        marker_koy.bindPopup('<a href="/languages/koy">Koyukon</a>');
+                                let marker_kpc = L.marker([0.696180, -67.502770]).addTo(mymap);
+        marker_kpc.bindPopup('<a href="/languages/kpc">Curripaco</a>');
+                                let marker_kpm = L.marker([11.644360, 108.057210]).addTo(mymap);
+        marker_kpm.bindPopup('<a href="/languages/kpm">Koho</a>');
+                                let marker_krb = L.marker([40.560000, -122.167000]).addTo(mymap);
+        marker_krb.bindPopup('<a href="/languages/krb">Karkin</a>');
+                                let marker_krc = L.marker([43.565040, 42.260590]).addTo(mymap);
+        marker_krc.bindPopup('<a href="/languages/krc">Karachay-Balkar</a>');
+                                let marker_kri = L.marker([10.881135, -14.320425]).addTo(mymap);
+        marker_kri.bindPopup('<a href="/languages/kri">Krio</a>');
+                                let marker_ksk = L.marker([36.804390, -96.857120]).addTo(mymap);
+        marker_ksk.bindPopup('<a href="/languages/ksk">Kansa</a>');
+                                let marker_ktw = L.marker([39.700190, -123.432440]).addTo(mymap);
+        marker_ktw.bindPopup('<a href="/languages/ktw">Kato</a>');
+                                let marker_kut = L.marker([48.789195, -115.064765]).addTo(mymap);
+        marker_kut.bindPopup('<a href="/languages/kut">Kutenai</a>');
+                                let marker_kuu = L.marker([62.297600, -155.950740]).addTo(mymap);
+        marker_kuu.bindPopup('<a href="/languages/kuu">Upper Kuskokwim</a>');
+                                let marker_kwk = L.marker([50.926940, -127.307830]).addTo(mymap);
+        marker_kwk.bindPopup('<a href="/languages/kwk">Kwakiutl</a>');
+                                let marker_kxd = L.marker([4.456045, 114.429505]).addTo(mymap);
+        marker_kxd.bindPopup('<a href="/languages/kxd">Brunei</a>');
+                                let marker_kyh = L.marker([41.822830, -123.315340]).addTo(mymap);
+        marker_kyh.bindPopup('<a href="/languages/kyh">Karok</a>');
+                                let marker_kyl = L.marker([44.986150, -123.924630]).addTo(mymap);
+        marker_kyl.bindPopup('<a href="/languages/kyl">Kalapuya</a>');
+                                let marker_lao = L.marker([16.072620, 104.568480]).addTo(mymap);
+        marker_lao.bindPopup('<a href="/languages/lao">Lao</a>');
+                                let marker_lbo = L.marker([15.272610, 106.321960]).addTo(mymap);
+        marker_lbo.bindPopup('<a href="/languages/lbo">Laven</a>');
+                                let marker_lhi = L.marker([21.207768, 100.970154]).addTo(mymap);
+        marker_lhi.bindPopup('<a href="/languages/lhi">Lahu Shi</a>');
+                                let marker_lhu = L.marker([21.270104, 100.213720]).addTo(mymap);
+        marker_lhu.bindPopup('<a href="/languages/lhu">Lahu</a>');
+                                let marker_lin = L.marker([1.403245, 19.782905]).addTo(mymap);
+        marker_lin.bindPopup('<a href="/languages/lin">Lingala</a>');
+                                let marker_lit = L.marker([55.142910, 23.960070]).addTo(mymap);
+        marker_lit.bindPopup('<a href="/languages/lit">Lithuanian</a>');
+                                let marker_lkt = L.marker([46.369900, -103.950435]).addTo(mymap);
+        marker_lkt.bindPopup('<a href="/languages/lkt">Lakota</a>');
+                                let marker_lmw = L.marker([39.002140, -122.621320]).addTo(mymap);
+        marker_lmw.bindPopup('<a href="/languages/lmw">Lake Miwok</a>');
+                                let marker_lmz = L.marker([35.617150, -78.453140]).addTo(mymap);
+        marker_lmz.bindPopup('<a href="/languages/lmz">Lumbee</a>');
+                                let marker_lou = L.marker([30.041180, -90.747540]).addTo(mymap);
+        marker_lou.bindPopup('<a href="/languages/lou">Louisiana Creole</a>');
+                                let marker_lua = L.marker([-5.727170, 22.442200]).addTo(mymap);
+        marker_lua.bindPopup('<a href="/languages/lua">Luba-Lulua</a>');
+                                let marker_lug = L.marker([0.668840, 32.151530]).addTo(mymap);
+        marker_lug.bindPopup('<a href="/languages/lug">Ganda</a>');
+                                let marker_lui = L.marker([33.318370, -116.938680]).addTo(mymap);
+        marker_lui.bindPopup('<a href="/languages/lui">Luiseno</a>');
+                                let marker_luo = L.marker([-0.932960, 34.489600]).addTo(mymap);
+        marker_luo.bindPopup('<a href="/languages/luo">Luo (Kenya and Tanzania)</a>');
+                                let marker_lut = L.marker([48.420000, -122.528740]).addTo(mymap);
+        marker_lut.bindPopup('<a href="/languages/lut">Lushootseed</a>');
+                                                let marker_mah = L.marker([3.129645, 170.462580]).addTo(mymap);
+        marker_mah.bindPopup('<a href="/languages/mah">Marshallese</a>');
+                                let marker_mal = L.marker([9.592084, 76.765136]).addTo(mymap);
+        marker_mal.bindPopup('<a href="/languages/mal">Malayalam</a>');
+                                let marker_mam = L.marker([14.803430, -91.723140]).addTo(mymap);
+        marker_mam.bindPopup('<a href="/languages/mam">Mam</a>');
+                                let marker_mar = L.marker([17.934380, 76.666490]).addTo(mymap);
+        marker_mar.bindPopup('<a href="/languages/mar">Marathi</a>');
+                                let marker_mbe = L.marker([44.556000, -122.857000]).addTo(mymap);
+        marker_mbe.bindPopup('<a href="/languages/mbe">Molale</a>');
+                                let marker_men = L.marker([7.909350, -10.992585]).addTo(mymap);
+        marker_men.bindPopup('<a href="/languages/men">Mende (Sierra Leone)</a>');
+                                let marker_mey = L.marker([20.146440, -2.402780]).addTo(mymap);
+        marker_mey.bindPopup('<a href="/languages/mey">Hassaniyya</a>');
+                                let marker_mez = L.marker([44.979410, -88.639480]).addTo(mymap);
+        marker_mez.bindPopup('<a href="/languages/mez">Menominee</a>');
+                                let marker_mgd = L.marker([5.123200, 30.328730]).addTo(mymap);
+        marker_mgd.bindPopup('<a href="/languages/mgd">Moru</a>');
+                                let marker_mhq = L.marker([47.663120, -102.375790]).addTo(mymap);
+        marker_mhq.bindPopup('<a href="/languages/mhq">Mandan</a>');
+                                let marker_mia = L.marker([40.000000, -90.000000]).addTo(mymap);
+        marker_mia.bindPopup('<a href="/languages/mia">Miami</a>');
+                                let marker_mic = L.marker([45.994120, -65.576585]).addTo(mymap);
+        marker_mic.bindPopup('<a href="/languages/mic">Mi&#039;kmaq</a>');
+                                let marker_mid = L.marker([31.344310, 48.812840]).addTo(mymap);
+        marker_mid.bindPopup('<a href="/languages/mid">Mandaic</a>');
+                                let marker_mik = L.marker([26.081420, -80.908470]).addTo(mymap);
+        marker_mik.bindPopup('<a href="/languages/mik">Mikasuki</a>');
+                                let marker_mix = L.marker([17.331710, -97.879070]).addTo(mymap);
+        marker_mix.bindPopup('<a href="/languages/mix">Mixtepec Mixtec</a>');
+                                let marker_mjd = L.marker([39.672110, -121.367860]).addTo(mymap);
+        marker_mjd.bindPopup('<a href="/languages/mjd">Northwest Maidu</a>');
+                                let marker_mjy = L.marker([43.903000, -74.266000]).addTo(mymap);
+        marker_mjy.bindPopup('<a href="/languages/mjy">Mahican</a>');
+                                let marker_mkd = L.marker([41.595727, 21.793212]).addTo(mymap);
+        marker_mkd.bindPopup('<a href="/languages/mkd">Macedonian</a>');
+                                let marker_mkj = L.marker([6.656510, 159.775900]).addTo(mymap);
+        marker_mkj.bindPopup('<a href="/languages/mkj">Mokilese</a>');
+                                let marker_mkq = L.marker([37.784000, -122.419000]).addTo(mymap);
+        marker_mkq.bindPopup('<a href="/languages/mkq">Bay Miwok</a>');
+                                let marker_mks = L.marker([17.554070, -98.116290]).addTo(mymap);
+        marker_mks.bindPopup('<a href="/languages/mks">Silacayoapan Mixtec</a>');
+                                let marker_mlq = L.marker([13.567710, -12.800880]).addTo(mymap);
+        marker_mlq.bindPopup('<a href="/languages/mlq">Western Maninkakan</a>');
+                                let marker_mlt = L.marker([35.888400, 14.450820]).addTo(mymap);
+        marker_mlt.bindPopup('<a href="/languages/mlt">Maltese</a>');
+                                let marker_mnk = L.marker([12.816523, -15.653947]).addTo(mymap);
+        marker_mnk.bindPopup('<a href="/languages/mnk">Mandinka</a>');
+                                let marker_mnr = L.marker([37.193500, -119.347410]).addTo(mymap);
+        marker_mnr.bindPopup('<a href="/languages/mnr">Mono (USA)</a>');
+                                let marker_moh = L.marker([45.000640, -74.624415]).addTo(mymap);
+        marker_moh.bindPopup('<a href="/languages/moh">Mohawk</a>');
+                                let marker_mos = L.marker([10.452370, -1.172775]).addTo(mymap);
+        marker_mos.bindPopup('<a href="/languages/mos">Mossi</a>');
+                                let marker_mot = L.marker([9.084970, -72.935255]).addTo(mymap);
+        marker_mot.bindPopup('<a href="/languages/mot">Barí</a>');
+                                let marker_mov = L.marker([34.886610, -114.599260]).addTo(mymap);
+        marker_mov.bindPopup('<a href="/languages/mov">Mohave</a>');
+                                let marker_mqh = L.marker([17.006960, -96.978270]).addTo(mymap);
+        marker_mqh.bindPopup('<a href="/languages/mqh">Tlazoyaltepec Mixtec</a>');
+                                let marker_mrc = L.marker([33.512320, -111.748570]).addTo(mymap);
+        marker_mrc.bindPopup('<a href="/languages/mrc">Maricopa</a>');
+                                let marker_mri = L.marker([-38.288140, 176.540550]).addTo(mymap);
+        marker_mri.bindPopup('<a href="/languages/mri">Maori</a>');
+                                let marker_mrq = L.marker([-8.894120, -140.107920]).addTo(mymap);
+        marker_mrq.bindPopup('<a href="/languages/mrq">North Marquesan</a>');
+                                let marker_mte = L.marker([-7.051020, 155.759640]).addTo(mymap);
+        marker_mte.bindPopup('<a href="/languages/mte">Mono (Solomon Islands)</a>');
+                                let marker_mus = L.marker([31.000000, -87.500000]).addTo(mymap);
+        marker_mus.bindPopup('<a href="/languages/mus">Creek</a>');
+                                let marker_mvb = L.marker([40.432080, -122.863270]).addTo(mymap);
+        marker_mvb.bindPopup('<a href="/languages/mvb">Mattole</a>');
+                                let marker_mvf = L.marker([42.420815, 110.157135]).addTo(mymap);
+        marker_mvf.bindPopup('<a href="/languages/mvf">Peripheral Mongolian</a>');
+                                let marker_mww = L.marker([21.546060, 103.163915]).addTo(mymap);
+        marker_mww.bindPopup('<a href="/languages/mww">Hmong Daw</a>');
+                                let marker_mxv = L.marker([17.047960, -98.351380]).addTo(mymap);
+        marker_mxv.bindPopup('<a href="/languages/mxv">Metlatónoc Mixtec</a>');
+                                let marker_mya = L.marker([20.792575, 93.966490]).addTo(mymap);
+        marker_mya.bindPopup('<a href="/languages/mya">Burmese</a>');
+                                let marker_myh = L.marker([48.325810, -124.616390]).addTo(mymap);
+        marker_myh.bindPopup('<a href="/languages/myh">Makah</a>');
+                                let marker_nan = L.marker([24.500000, 118.170000]).addTo(mymap);
+        marker_nan.bindPopup('<a href="/languages/nan">Min Nan Chinese</a>');
+                                let marker_nav = L.marker([36.210570, -110.082180]).addTo(mymap);
+        marker_nav.bindPopup('<a href="/languages/nav">Navajo</a>');
+                                let marker_ncj = L.marker([20.135600, -97.981410]).addTo(mymap);
+        marker_ncj.bindPopup('<a href="/languages/ncj">Northern Puebla Nahuatl</a>');
+                                let marker_ncz = L.marker([31.750000, -91.330000]).addTo(mymap);
+        marker_ncz.bindPopup('<a href="/languages/ncz">Natchez</a>');
+                                let marker_nez = L.marker([46.307310, -116.407870]).addTo(mymap);
+        marker_nez.bindPopup('<a href="/languages/nez">Nez Perce</a>');
+                                let marker_ngu = L.marker([17.858280, -99.002330]).addTo(mymap);
+        marker_ngu.bindPopup('<a href="/languages/ngu">Guerrero Nahuatl</a>');
+                                let marker_nhe = L.marker([21.063920, -97.907680]).addTo(mymap);
+        marker_nhe.bindPopup('<a href="/languages/nhe">Eastern Huasteca Nahuatl</a>');
+                                let marker_nhi = L.marker([20.058070, -97.897420]).addTo(mymap);
+        marker_nhi.bindPopup('<a href="/languages/nhi">Zacatlán-Ahuacatlán-Tepetzintla Nahuatl</a>');
+                                let marker_nhx = L.marker([18.200000, -94.754720]).addTo(mymap);
+        marker_nhx.bindPopup('<a href="/languages/nhx">Isthmus-Mecayapan Nahuatl</a>');
+                                let marker_nld = L.marker([52.000000, 5.000000]).addTo(mymap);
+        marker_nld.bindPopup('<a href="/languages/nld">Dutch</a>');
+                                let marker_nmu = L.marker([40.410230, -120.645250]).addTo(mymap);
+        marker_nmu.bindPopup('<a href="/languages/nmu">Northeast Maidu</a>');
+                                let marker_nnt = L.marker([39.677810, -74.986480]).addTo(mymap);
+        marker_nnt.bindPopup('<a href="/languages/nnt">Nanticoke</a>');
+                                let marker_nok = L.marker([48.220060, -121.973450]).addTo(mymap);
+        marker_nok.bindPopup('<a href="/languages/nok">Nooksack</a>');
+                                                                let marker_npl = L.marker([18.396880, -97.126550]).addTo(mymap);
+        marker_npl.bindPopup('<a href="/languages/npl">Southeastern Puebla Nahuatl</a>');
+                                let marker_nsq = L.marker([38.417880, -120.588190]).addTo(mymap);
+        marker_nsq.bindPopup('<a href="/languages/nsq">Northern Sierra Miwok</a>');
+                                let marker_nsz = L.marker([38.047000, -120.393000]).addTo(mymap);
+        marker_nsz.bindPopup('<a href="/languages/nsz">Nisenan</a>');
+                                let marker_ntw = L.marker([36.720000, -77.115000]).addTo(mymap);
+        marker_ntw.bindPopup('<a href="/languages/ntw">Nottoway</a>');
+                                let marker_nus = L.marker([8.139110, 32.382860]).addTo(mymap);
+        marker_nus.bindPopup('<a href="/languages/nus">Nuer</a>');
+                                let marker_nwa = L.marker([41.316000, -104.450000]).addTo(mymap);
+        marker_nwa.bindPopup('<a href="/languages/nwa">Nawathinehena</a>');
+                                let marker_obi = L.marker([35.287330, -120.669251]).addTo(mymap);
+        marker_obi.bindPopup('<a href="/languages/obi">Obispeño</a>');
+                                let marker_ofo = L.marker([30.430000, -91.750000]).addTo(mymap);
+        marker_ofo.bindPopup('<a href="/languages/ofo">Ofo</a>');
+                                let marker_oka = L.marker([49.274530, -119.294115]).addTo(mymap);
+        marker_oka.bindPopup('<a href="/languages/oka">Okanagan</a>');
+                                let marker_oma = L.marker([42.094360, -96.529470]).addTo(mymap);
+        marker_oma.bindPopup('<a href="/languages/oma">Omaha-Ponca</a>');
+                                let marker_one = L.marker([43.772860, -84.057715]).addTo(mymap);
+        marker_one.bindPopup('<a href="/languages/one">Oneida</a>');
+                                let marker_ono = L.marker([42.986380, -78.049730]).addTo(mymap);
+        marker_ono.bindPopup('<a href="/languages/ono">Onondaga</a>');
+                                let marker_ood = L.marker([31.797250, -111.994865]).addTo(mymap);
+        marker_ood.bindPopup('<a href="/languages/ood">Tohono O&#039;odham</a>');
+                                                let marker_osa = L.marker([36.782820, -96.294890]).addTo(mymap);
+        marker_osa.bindPopup('<a href="/languages/osa">Osage</a>');
+                                let marker_otw = L.marker([44.598835, -83.225950]).addTo(mymap);
+        marker_otw.bindPopup('<a href="/languages/otw">Ottawa</a>');
+                                let marker_pag = L.marker([15.937740, 120.365190]).addTo(mymap);
+        marker_pag.bindPopup('<a href="/languages/pag">Pangasinan</a>');
+                                let marker_pam = L.marker([14.960270, 120.501830]).addTo(mymap);
+        marker_pam.bindPopup('<a href="/languages/pam">Pampanga</a>');
+                                let marker_pan = L.marker([30.036762, 75.670166]).addTo(mymap);
+        marker_pan.bindPopup('<a href="/languages/pan">Panjabi</a>');
+                                let marker_pao = L.marker([40.079900, -119.536090]).addTo(mymap);
+        marker_pao.bindPopup('<a href="/languages/pao">Northern Paiute</a>');
+                                let marker_pap = L.marker([12.484850, -69.939880]).addTo(mymap);
+        marker_pap.bindPopup('<a href="/languages/pap">Papiamento</a>');
+                                let marker_par = L.marker([36.000730, -117.901390]).addTo(mymap);
+        marker_par.bindPopup('<a href="/languages/par">Panamint</a>');
+                                let marker_pau = L.marker([7.170000, 134.500000]).addTo(mymap);
+        marker_pau.bindPopup('<a href="/languages/pau">Palauan</a>');
+                                let marker_paw = L.marker([36.286180, -96.893670]).addTo(mymap);
+        marker_paw.bindPopup('<a href="/languages/paw">Pawnee</a>');
+                                let marker_pbu = L.marker([34.000000, 71.330000]).addTo(mymap);
+        marker_pbu.bindPopup('<a href="/languages/pbu">Northern Pashto</a>');
+                                let marker_pcm = L.marker([9.658730, 4.210680]).addTo(mymap);
+        marker_pcm.bindPopup('<a href="/languages/pcm">Nigerian Pidgin</a>');
+                                let marker_pdc = L.marker([47.334120, -87.806440]).addTo(mymap);
+        marker_pdc.bindPopup('<a href="/languages/pdc">Pennsylvania German</a>');
+                                let marker_pdt = L.marker([12.046615, -81.352470]).addTo(mymap);
+        marker_pdt.bindPopup('<a href="/languages/pdt">Plautdietsch</a>');
+                                let marker_peb = L.marker([38.564670, -122.585820]).addTo(mymap);
+        marker_peb.bindPopup('<a href="/languages/peb">Eastern Pomo</a>');
+                                let marker_pef = L.marker([39.289380, -122.509430]).addTo(mymap);
+        marker_pef.bindPopup('<a href="/languages/pef">Northeastern Pomo</a>');
+                                let marker_pej = L.marker([39.108430, -123.208940]).addTo(mymap);
+        marker_pej.bindPopup('<a href="/languages/pej">Northern Pomo</a>');
+                                let marker_peq = L.marker([38.764290, -122.545190]).addTo(mymap);
+        marker_peq.bindPopup('<a href="/languages/peq">Southern Pomo</a>');
+                                let marker_pes = L.marker([28.659283, 55.158607]).addTo(mymap);
+        marker_pes.bindPopup('<a href="/languages/pes">Iranian Persian</a>');
+                                let marker_pht = L.marker([17.754497, 104.684233]).addTo(mymap);
+        marker_pht.bindPopup('<a href="/languages/pht">Phu Thai</a>');
+                                let marker_pia = L.marker([28.654010, -108.326330]).addTo(mymap);
+        marker_pia.bindPopup('<a href="/languages/pia">Pima Bajo</a>');
+                                let marker_pie = L.marker([35.229120, -106.414750]).addTo(mymap);
+        marker_pie.bindPopup('<a href="/languages/pie">Piro</a>');
+                                let marker_pif = L.marker([6.207430, 160.710640]).addTo(mymap);
+        marker_pif.bindPopup('<a href="/languages/pif">Pingelapese</a>');
+                                let marker_pim = L.marker([36.994220, -77.207520]).addTo(mymap);
+        marker_pim.bindPopup('<a href="/languages/pim">Powhatan</a>');
+                                let marker_plt = L.marker([-19.590650, 47.121110]).addTo(mymap);
+        marker_plt.bindPopup('<a href="/languages/plt">Plateau Malagasy</a>');
+                                let marker_pmw = L.marker([38.030830, -121.421610]).addTo(mymap);
+        marker_pmw.bindPopup('<a href="/languages/pmw">Plains Miwok</a>');
+                                let marker_pol = L.marker([51.843923, 18.625487]).addTo(mymap);
+        marker_pol.bindPopup('<a href="/languages/pol">Polish</a>');
+                                let marker_pom = L.marker([38.935440, -122.598500]).addTo(mymap);
+        marker_pom.bindPopup('<a href="/languages/pom">Southeastern Pomo</a>');
+                                let marker_pon = L.marker([6.872120, 158.223140]).addTo(mymap);
+        marker_pon.bindPopup('<a href="/languages/pon">Pohnpeian</a>');
+                                let marker_poo = L.marker([38.905470, -123.663930]).addTo(mymap);
+        marker_poo.bindPopup('<a href="/languages/poo">Central Pomo</a>');
+                                let marker_por = L.marker([42.034120, -4.188150]).addTo(mymap);
+        marker_por.bindPopup('<a href="/languages/por">Portuguese</a>');
+                                let marker_pot = L.marker([40.954965, -89.188140]).addTo(mymap);
+        marker_pot.bindPopup('<a href="/languages/pot">Potawatomi</a>');
+                                let marker_pov = L.marker([13.233507, -15.332540]).addTo(mymap);
+        marker_pov.bindPopup('<a href="/languages/pov">Upper Guinea Crioulo</a>');
+                                let marker_pqm = L.marker([45.494475, -67.408050]).addTo(mymap);
+        marker_pqm.bindPopup('<a href="/languages/pqm">Malecite-Passamaquoddy</a>');
+                                let marker_prp = L.marker([20.625000, 74.438000]).addTo(mymap);
+        marker_prp.bindPopup('<a href="/languages/prp">Parsi</a>');
+                                let marker_prs = L.marker([31.040545, 67.359255]).addTo(mymap);
+        marker_prs.bindPopup('<a href="/languages/prs">Dari</a>');
+                                let marker_psd = L.marker([38.394060, -99.249890]).addTo(mymap);
+        marker_psd.bindPopup('<a href="/languages/psd">Plains Indian Sign Language</a>');
+                                let marker_psy = L.marker([39.073000, -76.803000]).addTo(mymap);
+        marker_psy.bindPopup('<a href="/languages/psy">Piscataway</a>');
+                                let marker_pua = L.marker([19.539240, -102.154000]).addTo(mymap);
+        marker_pua.bindPopup('<a href="/languages/pua">Western Highland Purepecha</a>');
+                                let marker_pui = L.marker([3.929740, -67.688600]).addTo(mymap);
+        marker_pui.bindPopup('<a href="/languages/pui">Puinave</a>');
+                                let marker_puy = L.marker([34.686637, -120.430985]).addTo(mymap);
+        marker_puy.bindPopup('<a href="/languages/puy">Purisimeño</a>');
+                                let marker_qua = L.marker([36.947120, -94.663360]).addTo(mymap);
+        marker_qua.bindPopup('<a href="/languages/qua">Quapaw</a>');
+                                let marker_quc = L.marker([14.527770, -91.169650]).addTo(mymap);
+        marker_quc.bindPopup('<a href="/languages/quc">K&#039;iche&#039;</a>');
+                                let marker_quh = L.marker([-20.920095, -66.333145]).addTo(mymap);
+        marker_quh.bindPopup('<a href="/languages/quh">South Bolivian Quechua</a>');
+                                let marker_qui = L.marker([47.910560, -124.603110]).addTo(mymap);
+        marker_qui.bindPopup('<a href="/languages/qui">Quileute</a>');
+                                let marker_qun = L.marker([47.421400, -124.160240]).addTo(mymap);
+        marker_qun.bindPopup('<a href="/languages/qun">Quinault</a>');
+                                let marker_rmc = L.marker([48.196788, 20.312905]).addTo(mymap);
+        marker_rmc.bindPopup('<a href="/languages/rmc">Carpathian Romani</a>');
+                                let marker_rme = L.marker([39.000000, -78.000000]).addTo(mymap);
+        marker_rme.bindPopup('<a href="/languages/rme">Angloromani</a>');
+                                let marker_rmo = L.marker([47.500000, 16.500000]).addTo(mymap);
+        marker_rmo.bindPopup('<a href="/languages/rmo">Sinte Romani</a>');
+                                let marker_rmy = L.marker([46.819124, 14.845093]).addTo(mymap);
+        marker_rmy.bindPopup('<a href="/languages/rmy">Vlax Romani</a>');
+                                let marker_ron = L.marker([46.391292, 24.225570]).addTo(mymap);
+        marker_ron.bindPopup('<a href="/languages/ron">Romanian</a>');
+                                let marker_run = L.marker([-1.441737, 31.319093]).addTo(mymap);
+        marker_run.bindPopup('<a href="/languages/run">Rundi</a>');
+                                let marker_rus = L.marker([53.919516, 72.392575]).addTo(mymap);
+        marker_rus.bindPopup('<a href="/languages/rus">Russian</a>');
+                                let marker_ryu = L.marker([26.148540, 127.781600]).addTo(mymap);
+        marker_ryu.bindPopup('<a href="/languages/ryu">Central Okinawan</a>');
+                                let marker_sac = L.marker([40.000000, -94.000000]).addTo(mymap);
+        marker_sac.bindPopup('<a href="/languages/sac">Meskwaki</a>');
+                                let marker_see = L.marker([42.612800, -79.340345]).addTo(mymap);
+        marker_see.bindPopup('<a href="/languages/see">Seneca</a>');
+                                let marker_ser = L.marker([33.947870, -116.771960]).addTo(mymap);
+        marker_ser.bindPopup('<a href="/languages/ser">Serrano</a>');
+                                let marker_shh = L.marker([41.000000, -116.000000]).addTo(mymap);
+        marker_shh.bindPopup('<a href="/languages/shh">Shoshoni</a>');
+                                let marker_shk = L.marker([9.854720, 31.792630]).addTo(mymap);
+        marker_shk.bindPopup('<a href="/languages/shk">Shilluk</a>');
+                                let marker_sht = L.marker([41.758660, -122.738210]).addTo(mymap);
+        marker_sht.bindPopup('<a href="/languages/sht">Shasta</a>');
+                                let marker_shu = L.marker([14.670000, 13.500000]).addTo(mymap);
+        marker_shu.bindPopup('<a href="/languages/shu">Chadian Arabic</a>');
+                                let marker_sin = L.marker([8.000000, 81.000000]).addTo(mymap);
+        marker_sin.bindPopup('<a href="/languages/sin">Sinhala</a>');
+                                let marker_sis = L.marker([42.511070, -124.378600]).addTo(mymap);
+        marker_sis.bindPopup('<a href="/languages/sis">Siuslaw</a>');
+                                let marker_sjw = L.marker([35.353970, -96.763450]).addTo(mymap);
+        marker_sjw.bindPopup('<a href="/languages/sjw">Shawnee</a>');
+                                let marker_ska = L.marker([48.531380, -121.990990]).addTo(mymap);
+        marker_ska.bindPopup('<a href="/languages/ska">Skagit</a>');
+                                let marker_skd = L.marker([38.236300, -120.507080]).addTo(mymap);
+        marker_skd.bindPopup('<a href="/languages/skd">Southern Sierra Miwok</a>');
+                                let marker_slh = L.marker([47.263030, -122.140730]).addTo(mymap);
+        marker_slh.bindPopup('<a href="/languages/slh">Southern Puget Sound Salish</a>');
+                                let marker_slk = L.marker([48.545705, 18.784790]).addTo(mymap);
+        marker_slk.bindPopup('<a href="/languages/slk">Slovak</a>');
+                                let marker_sln = L.marker([37.664620, -121.717730]).addTo(mymap);
+        marker_sln.bindPopup('<a href="/languages/sln">Salinan</a>');
+                                let marker_slv = L.marker([46.254258, 14.776588]).addTo(mymap);
+        marker_slv.bindPopup('<a href="/languages/slv">Slovenian</a>');
+                                let marker_smo = L.marker([-13.920000, -171.830000]).addTo(mymap);
+        marker_smo.bindPopup('<a href="/languages/smo">Samoan</a>');
+                                let marker_snd = L.marker([26.000000, 69.000000]).addTo(mymap);
+        marker_snd.bindPopup('<a href="/languages/snd">Sindhi</a>');
+                                let marker_snk = L.marker([13.127263, -11.717780]).addTo(mymap);
+        marker_snk.bindPopup('<a href="/languages/snk">Soninke</a>');
+                                let marker_sno = L.marker([47.934140, -122.137770]).addTo(mymap);
+        marker_sno.bindPopup('<a href="/languages/sno">Snohomish</a>');
+                                let marker_som = L.marker([4.778704, 45.152856]).addTo(mymap);
+        marker_som.bindPopup('<a href="/languages/som">Somali</a>');
+                                let marker_spa = L.marker([40.441418, -1.117880]).addTo(mymap);
+        marker_spa.bindPopup('<a href="/languages/spa">Spanish</a>');
+                                let marker_spo = L.marker([47.908690, -118.062110]).addTo(mymap);
+        marker_spo.bindPopup('<a href="/languages/spo">Spokane</a>');
+                                let marker_srn = L.marker([5.830000, -55.330000]).addTo(mymap);
+        marker_srn.bindPopup('<a href="/languages/srn">Sranan Tongo</a>');
+                                let marker_srp = L.marker([44.323844, 21.919184]).addTo(mymap);
+        marker_srp.bindPopup('<a href="/languages/srp">Serbian</a>');
+                                let marker_ssw = L.marker([-26.000000, 31.500000]).addTo(mymap);
+        marker_ssw.bindPopup('<a href="/languages/ssw">Swati</a>');
+                                let marker_sth = L.marker([53.790710, -7.739830]).addTo(mymap);
+        marker_sth.bindPopup('<a href="/languages/sth">Shelta</a>');
+                                let marker_str = L.marker([48.722045, -123.037160]).addTo(mymap);
+        marker_str.bindPopup('<a href="/languages/str">Straits Salish</a>');
+                                let marker_swe = L.marker([59.800634, 17.389526]).addTo(mymap);
+        marker_swe.bindPopup('<a href="/languages/swe">Swedish</a>');
+                                let marker_swh = L.marker([-8.256053, 37.624033]).addTo(mymap);
+        marker_swh.bindPopup('<a href="/languages/swh">Swahili (Coastal)</a>');
+                                let marker_syn = L.marker([35.777640, 51.436310]).addTo(mymap);
+        marker_syn.bindPopup('<a href="/languages/syn">Senaya</a>');
+                                let marker_taa = L.marker([64.883410, -149.451420]).addTo(mymap);
+        marker_taa.bindPopup('<a href="/languages/taa">Lower Tanana</a>');
+                                let marker_tah = L.marker([-17.648472, -149.450226]).addTo(mymap);
+        marker_tah.bindPopup('<a href="/languages/tah">Tahitian</a>');
+                                let marker_tam = L.marker([10.520219, 78.825989]).addTo(mymap);
+        marker_tam.bindPopup('<a href="/languages/tam">Tamil</a>');
+                                let marker_tat = L.marker([55.000000, 50.000000]).addTo(mymap);
+        marker_tat.bindPopup('<a href="/languages/tat">Tatar</a>');
+                                let marker_tau = L.marker([62.686735, -141.369535]).addTo(mymap);
+        marker_tau.bindPopup('<a href="/languages/tau">Upper Tanana</a>');
+                                let marker_tcb = L.marker([63.404590, -143.338100]).addTo(mymap);
+        marker_tcb.bindPopup('<a href="/languages/tcb">Tanacross</a>');
+                                let marker_tel = L.marker([16.452944, 78.702392]).addTo(mymap);
+        marker_tel.bindPopup('<a href="/languages/tel">Telugu</a>');
+                                let marker_tew = L.marker([35.905320, -106.124050]).addTo(mymap);
+        marker_tew.bindPopup('<a href="/languages/tew">Tewa (USA)</a>');
+                                let marker_tfn = L.marker([60.471240, -150.759260]).addTo(mymap);
+        marker_tfn.bindPopup('<a href="/languages/tfn">Tanaina</a>');
+                                let marker_tgk = L.marker([38.821310, 68.554930]).addTo(mymap);
+        marker_tgk.bindPopup('<a href="/languages/tgk">Tajik</a>');
+                                let marker_tgl = L.marker([14.060000, 121.746950]).addTo(mymap);
+        marker_tgl.bindPopup('<a href="/languages/tgl">Tagalog</a>');
+                                let marker_tha = L.marker([14.191968, 100.671386]).addTo(mymap);
+        marker_tha.bindPopup('<a href="/languages/tha">Thai</a>');
+                                let marker_til = L.marker([44.092390, -122.769480]).addTo(mymap);
+        marker_til.bindPopup('<a href="/languages/til">Tillamook</a>');
+                                let marker_tir = L.marker([15.335942, 38.926563]).addTo(mymap);
+        marker_tir.bindPopup('<a href="/languages/tir">Tigrinya</a>');
+                                let marker_tix = L.marker([34.787300, -106.660590]).addTo(mymap);
+        marker_tix.bindPopup('<a href="/languages/tix">Southern Tiwa</a>');
+                                let marker_tkm = L.marker([42.423000, -123.452000]).addTo(mymap);
+        marker_tkm.bindPopup('<a href="/languages/tkm">Takelma</a>');
+                                let marker_tli = L.marker([59.444665, -135.290310]).addTo(mymap);
+        marker_tli.bindPopup('<a href="/languages/tli">Tlingit</a>');
+                                let marker_tol = L.marker([41.919200, -124.099550]).addTo(mymap);
+        marker_tol.bindPopup('<a href="/languages/tol">Tolowa</a>');
+                                let marker_ton = L.marker([-21.170000, -175.250000]).addTo(mymap);
+        marker_ton.bindPopup('<a href="/languages/ton">Tonga (Tonga Islands)</a>');
+                                let marker_tow = L.marker([35.599420, -106.766200]).addTo(mymap);
+        marker_tow.bindPopup('<a href="/languages/tow">Jemez</a>');
+                                let marker_tpi = L.marker([-9.419710, 147.303100]).addTo(mymap);
+        marker_tpi.bindPopup('<a href="/languages/tpi">Tok Pisin</a>');
+                                let marker_tpx = L.marker([17.103380, -99.060220]).addTo(mymap);
+        marker_tpx.bindPopup('<a href="/languages/tpx">Acatepec Me&#039;phaa</a>');
+                                let marker_tqn = L.marker([44.798480, -121.439770]).addTo(mymap);
+        marker_tqn.bindPopup('<a href="/languages/tqn">Tenino</a>');
+                                let marker_tqw = L.marker([30.250000, -96.750000]).addTo(mymap);
+        marker_tqw.bindPopup('<a href="/languages/tqw">Tonkawa</a>');
+                                let marker_trc = L.marker([17.154140, -97.982620]).addTo(mymap);
+        marker_trc.bindPopup('<a href="/languages/trc">Copala Triqui</a>');
+                                let marker_trl = L.marker([55.982920, -4.385930]).addTo(mymap);
+        marker_trl.bindPopup('<a href="/languages/trl">Traveller Scottish</a>');
+                                let marker_trs = L.marker([17.162780, -97.854710]).addTo(mymap);
+        marker_trs.bindPopup('<a href="/languages/trs">Chicahuaxtla Triqui</a>');
+                                let marker_tru = L.marker([37.227460, 42.145103]).addTo(mymap);
+        marker_tru.bindPopup('<a href="/languages/tru">Turoyo</a>');
+                                let marker_tsi = L.marker([54.621380, -130.496315]).addTo(mymap);
+        marker_tsi.bindPopup('<a href="/languages/tsi">Tsimshian</a>');
+                                let marker_tsz = L.marker([19.246650, -101.631400]).addTo(mymap);
+        marker_tsz.bindPopup('<a href="/languages/tsz">Purepecha</a>');
+                                let marker_tta = L.marker([37.670000, -78.750000]).addTo(mymap);
+        marker_tta.bindPopup('<a href="/languages/tta">Tutelo</a>');
+                                let marker_tts = L.marker([14.325260, 102.986380]).addTo(mymap);
+        marker_tts.bindPopup('<a href="/languages/tts">Northeastern Thai</a>');
+                                let marker_tub = L.marker([35.327000, -117.163000]).addTo(mymap);
+        marker_tub.bindPopup('<a href="/languages/tub">Tübatulabal</a>');
+                                let marker_tun = L.marker([30.988790, -92.540260]).addTo(mymap);
+        marker_tun.bindPopup('<a href="/languages/tun">Tunica</a>');
+                                let marker_tur = L.marker([39.866667, 32.866667]).addTo(mymap);
+        marker_tur.bindPopup('<a href="/languages/tur">Turkish</a>');
+                                let marker_tus = L.marker([43.130315, -79.421375]).addTo(mymap);
+        marker_tus.bindPopup('<a href="/languages/tus">Tuscarora</a>');
+                                let marker_tuu = L.marker([42.556280, -124.293030]).addTo(mymap);
+        marker_tuu.bindPopup('<a href="/languages/tuu">Tututni</a>');
+                                let marker_twa = L.marker([47.741900, -121.765380]).addTo(mymap);
+        marker_twa.bindPopup('<a href="/languages/twa">Twana</a>');
+                                let marker_twf = L.marker([36.427650, -105.604440]).addTo(mymap);
+        marker_twf.bindPopup('<a href="/languages/twf">Northern Tiwa</a>');
+                                let marker_twh = L.marker([21.848980, 103.570497]).addTo(mymap);
+        marker_twh.bindPopup('<a href="/languages/twh">Tai Dón</a>');
+                                let marker_tyz = L.marker([21.644830, 106.167150]).addTo(mymap);
+        marker_tyz.bindPopup('<a href="/languages/tyz">Tày</a>');
+                                let marker_tzh = L.marker([16.638410, -92.278610]).addTo(mymap);
+        marker_tzh.bindPopup('<a href="/languages/tzh">Tzeltal</a>');
+                                let marker_tzm = L.marker([32.741545, -2.408720]).addTo(mymap);
+        marker_tzm.bindPopup('<a href="/languages/tzm">Central Atlas Tamazight</a>');
+                                let marker_tzo = L.marker([16.636230, -92.738810]).addTo(mymap);
+        marker_tzo.bindPopup('<a href="/languages/tzo">Tzotzil</a>');
+                                let marker_udu = L.marker([9.160120, 34.229265]).addTo(mymap);
+        marker_udu.bindPopup('<a href="/languages/udu">Uduk</a>');
+                                let marker_uig = L.marker([43.670000, 79.750000]).addTo(mymap);
+        marker_uig.bindPopup('<a href="/languages/uig">Uighur</a>');
+                                let marker_ukr = L.marker([48.175842, 24.395786]).addTo(mymap);
+        marker_ukr.bindPopup('<a href="/languages/ukr">Ukrainian</a>');
+                                let marker_uli = L.marker([10.000000, 140.000000]).addTo(mymap);
+        marker_uli.bindPopup('<a href="/languages/uli">Ulithian</a>');
+                                let marker_uma = L.marker([45.639150, -118.551670]).addTo(mymap);
+        marker_uma.bindPopup('<a href="/languages/uma">Umatilla</a>');
+                                let marker_unm = L.marker([35.026440, -98.320130]).addTo(mymap);
+        marker_unm.bindPopup('<a href="/languages/unm">Unami</a>');
+                                let marker_unx = L.marker([25.039110, 87.179200]).addTo(mymap);
+        marker_unx.bindPopup('<a href="/languages/unx">Munda</a>');
+                                let marker_urd = L.marker([25.000000, 67.000000]).addTo(mymap);
+        marker_urd.bindPopup('<a href="/languages/urd">Urdu</a>');
+                                let marker_ute = L.marker([40.096480, -110.305500]).addTo(mymap);
+        marker_ute.bindPopup('<a href="/languages/ute">Ute-Southern Paiute</a>');
+                                let marker_uzn = L.marker([43.748876, 59.230956]).addTo(mymap);
+        marker_uzn.bindPopup('<a href="/languages/uzn">Northern Uzbek</a>');
+                                let marker_uzs = L.marker([36.609853, 60.690747]).addTo(mymap);
+        marker_uzs.bindPopup('<a href="/languages/uzs">Southern Uzbek</a>');
+                                let marker_veo = L.marker([34.176135, -119.034576]).addTo(mymap);
+        marker_veo.bindPopup('<a href="/languages/veo">Ventureño</a>');
+                                let marker_vie = L.marker([18.388703, 106.756827]).addTo(mymap);
+        marker_vie.bindPopup('<a href="/languages/vie">Vietnamese</a>');
+                                let marker_vls = L.marker([51.075403, 3.113453]).addTo(mymap);
+        marker_vls.bindPopup('<a href="/languages/vls">Vlaams</a>');
+                                let marker_vmv = L.marker([39.807830, -121.190780]).addTo(mymap);
+        marker_vmv.bindPopup('<a href="/languages/vmv">Valley Maidu</a>');
+                                let marker_waa = L.marker([45.720550, -118.424160]).addTo(mymap);
+        marker_waa.bindPopup('<a href="/languages/waa">Walla Walla</a>');
+                                let marker_wac = L.marker([45.027830, -121.508760]).addTo(mymap);
+        marker_wac.bindPopup('<a href="/languages/wac">Wasco-Wishram</a>');
+                                let marker_wam = L.marker([41.705040, -73.314780]).addTo(mymap);
+        marker_wam.bindPopup('<a href="/languages/wam">Wampanoag</a>');
+                                let marker_wao = L.marker([38.250000, -122.499990]).addTo(mymap);
+        marker_wao.bindPopup('<a href="/languages/wao">Wappo</a>');
+                                let marker_was = L.marker([38.818410, -119.640300]).addTo(mymap);
+        marker_was.bindPopup('<a href="/languages/was">Washo</a>');
+                                let marker_wic = L.marker([35.066480, -98.183140]).addTo(mymap);
+        marker_wic.bindPopup('<a href="/languages/wic">Wichita</a>');
+                                let marker_win = L.marker([43.500000, -88.500000]).addTo(mymap);
+        marker_win.bindPopup('<a href="/languages/win">Ho-Chunk</a>');
+                                let marker_wiy = L.marker([39.249210, -122.952350]).addTo(mymap);
+        marker_wiy.bindPopup('<a href="/languages/wiy">Wiyot</a>');
+                                let marker_wlk = L.marker([39.151280, -123.283780]).addTo(mymap);
+        marker_wlk.bindPopup('<a href="/languages/wlk">Wailaki</a>');
+                                let marker_wol = L.marker([15.253360, -15.382973]).addTo(mymap);
+        marker_wol.bindPopup('<a href="/languages/wol">Wolof</a>');
+                                let marker_wuu = L.marker([29.862090, 119.682460]).addTo(mymap);
+        marker_wuu.bindPopup('<a href="/languages/wuu">Wu Chinese</a>');
+                                let marker_wya = L.marker([44.330000, -77.500000]).addTo(mymap);
+        marker_wya.bindPopup('<a href="/languages/wya">Wyandot</a>');
+                                let marker_xal = L.marker([46.759220, 45.424430]).addTo(mymap);
+        marker_xal.bindPopup('<a href="/languages/xal">Kalmyk</a>');
+                                let marker_xaw = L.marker([36.053830, -118.678890]).addTo(mymap);
+        marker_xaw.bindPopup('<a href="/languages/xaw">Kawaiisu</a>');
+                                let marker_xsr = L.marker([27.673953, 86.999427]).addTo(mymap);
+        marker_xsr.bindPopup('<a href="/languages/xsr">Sherpa</a>');
+                                let marker_xtl = L.marker([17.153860, -97.457780]).addTo(mymap);
+        marker_xtl.bindPopup('<a href="/languages/xtl">Tijaltepec Mixtec</a>');
+                                let marker_xtn = L.marker([17.480580, -97.834900]).addTo(mymap);
+        marker_xtn.bindPopup('<a href="/languages/xtn">Northern Tlaxiaco Mixtec</a>');
+                                let marker_yak = L.marker([46.265520, -120.755870]).addTo(mymap);
+        marker_yak.bindPopup('<a href="/languages/yak">Yakama</a>');
+                                let marker_yan = L.marker([14.125922, -84.343872]).addTo(mymap);
+        marker_yan.bindPopup('<a href="/languages/yan">Mayangna</a>');
+                                let marker_yap = L.marker([9.558110, 138.124780]).addTo(mymap);
+        marker_yap.bindPopup('<a href="/languages/yap">Yapese</a>');
+                                let marker_yaq = L.marker([29.944630, -110.680990]).addTo(mymap);
+        marker_yaq.bindPopup('<a href="/languages/yaq">Yaqui</a>');
+                                let marker_ydd = L.marker([51.750000, 19.420000]).addTo(mymap);
+        marker_ydd.bindPopup('<a href="/languages/ydd">Eastern Yiddish</a>');
+                                let marker_ymm = L.marker([3.222880, 43.618190]).addTo(mymap);
+        marker_ymm.bindPopup('<a href="/languages/ymm">Maay</a>');
+                                let marker_yok = L.marker([36.316740, -119.721400]).addTo(mymap);
+        marker_yok.bindPopup('<a href="/languages/yok">Yokuts</a>');
+                                let marker_yor = L.marker([7.153455, 3.672245]).addTo(mymap);
+        marker_yor.bindPopup('<a href="/languages/yor">Yoruba</a>');
+                                let marker_yua = L.marker([18.775675, -88.956730]).addTo(mymap);
+        marker_yua.bindPopup('<a href="/languages/yua">Yucateco</a>');
+                                let marker_yuc = L.marker([35.961460, -95.039330]).addTo(mymap);
+        marker_yuc.bindPopup('<a href="/languages/yuc">Yuchi</a>');
+                                let marker_yue = L.marker([23.000000, 113.000000]).addTo(mymap);
+        marker_yue.bindPopup('<a href="/languages/yue">Yue Chinese</a>');
+                                let marker_yuf = L.marker([35.630200, -113.385190]).addTo(mymap);
+        marker_yuf.bindPopup('<a href="/languages/yuf">Havasupai-Walapai-Yavapai</a>');
+                                let marker_yuk = L.marker([39.838910, -123.295660]).addTo(mymap);
+        marker_yuk.bindPopup('<a href="/languages/yuk">Yuki</a>');
+                                let marker_yum = L.marker([32.785890, -114.598620]).addTo(mymap);
+        marker_yum.bindPopup('<a href="/languages/yum">Quechan</a>');
+                                let marker_yup = L.marker([9.675340, -73.055740]).addTo(mymap);
+        marker_yup.bindPopup('<a href="/languages/yup">Yukpa</a>');
+                                let marker_yur = L.marker([41.326250, -123.824320]).addTo(mymap);
+        marker_yur.bindPopup('<a href="/languages/yur">Yurok</a>');
+                                let marker_zab = L.marker([17.033170, -96.596750]).addTo(mymap);
+        marker_zab.bindPopup('<a href="/languages/zab">Western Tlacolula Valley Zapotec</a>');
+                                let marker_zac = L.marker([16.825850, -96.726330]).addTo(mymap);
+        marker_zac.bindPopup('<a href="/languages/zac">Ocotlán Zapotec</a>');
+                                let marker_zad = L.marker([17.142740, -96.335210]).addTo(mymap);
+        marker_zad.bindPopup('<a href="/languages/zad">Cajonos Zapotec</a>');
+                                let marker_ziw = L.marker([-5.618640, 38.411380]).addTo(mymap);
+        marker_ziw.bindPopup('<a href="/languages/ziw">Zigula</a>');
+                                let marker_zlm = L.marker([1.858561, 103.000487]).addTo(mymap);
+        marker_zlm.bindPopup('<a href="/languages/zlm">Malay</a>');
+                                let marker_zne = L.marker([4.620470, 26.715677]).addTo(mymap);
+        marker_zne.bindPopup('<a href="/languages/zne">Zande</a>');
+                                let marker_zpd = L.marker([17.258830, -96.619910]).addTo(mymap);
+        marker_zpd.bindPopup('<a href="/languages/zpd">Southeastern Ixtlán Zapotec</a>');
+                                let marker_zpq = L.marker([17.201570, -96.343260]).addTo(mymap);
+        marker_zpq.bindPopup('<a href="/languages/zpq">Zoogocho Zapotec</a>');
+                                let marker_zpu = L.marker([17.213400, -96.218340]).addTo(mymap);
+        marker_zpu.bindPopup('<a href="/languages/zpu">Yalálag Zapotec</a>');
+                                let marker_zsr = L.marker([17.303090, -96.377500]).addTo(mymap);
+        marker_zsr.bindPopup('<a href="/languages/zsr">Southern Rincon Zapotec</a>');
+                                let marker_ztp = L.marker([15.844200, -96.699680]).addTo(mymap);
+        marker_ztp.bindPopup('<a href="/languages/ztp">Loxicha Zapotec</a>');
+                                let marker_zun = L.marker([35.005610, -108.781970]).addTo(mymap);
+        marker_zun.bindPopup('<a href="/languages/zun">Zuni</a>');
+                
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

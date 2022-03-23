@@ -1,0 +1,232 @@
+{
+    "id": "ZPVTBL",
+    "parent_bible_id": null,
+    "title": "Chichicapan Zapotec New Testament",
+    "title_vernacular": "Xchiʼdxyi cuubi dxiohs nin bieʼgaluuʼyi daada Jesucristu",
+    "description": "New Testament in Zapotec, Chichicapan (MX:zpv:Zapotec, Chichicapan)",
+    "description_vernacular": "",
+    "iso": "zpv",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "1990",
+    "country_id": "MX",
+    "copyright": "Copyright © 1990 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0758-5",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2017-06-12T14:17:00.000000Z",
+    "updated_at": "2020-10-12T17:23:23.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Luke",
+            "chapter_id": "1",
+            "path": "ZPVTBLP1DA\/B03___01_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "2",
+            "path": "ZPVTBLP1DA\/B03___02_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "3",
+            "path": "ZPVTBLP1DA\/B03___03_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "4",
+            "path": "ZPVTBLP1DA\/B03___04_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "5",
+            "path": "ZPVTBLP1DA\/B03___05_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "6",
+            "path": "ZPVTBLP1DA\/B03___06_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "7",
+            "path": "ZPVTBLP1DA\/B03___07_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "8",
+            "path": "ZPVTBLP1DA\/B03___08_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "9",
+            "path": "ZPVTBLP1DA\/B03___09_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "10",
+            "path": "ZPVTBLP1DA\/B03___10_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "11",
+            "path": "ZPVTBLP1DA\/B03___11_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "12",
+            "path": "ZPVTBLP1DA\/B03___12_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "13",
+            "path": "ZPVTBLP1DA\/B03___13_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "14",
+            "path": "ZPVTBLP1DA\/B03___14_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "15",
+            "path": "ZPVTBLP1DA\/B03___15_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "16",
+            "path": "ZPVTBLP1DA\/B03___16_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "17",
+            "path": "ZPVTBLP1DA\/B03___17_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "18",
+            "path": "ZPVTBLP1DA\/B03___18_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "19",
+            "path": "ZPVTBLP1DA\/B03___19_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "20",
+            "path": "ZPVTBLP1DA\/B03___20_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "21",
+            "path": "ZPVTBLP1DA\/B03___21_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "22",
+            "path": "ZPVTBLP1DA\/B03___22_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "23",
+            "path": "ZPVTBLP1DA\/B03___23_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "24",
+            "path": "ZPVTBLP1DA\/B03___24_Luke________ZPVTBLP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6221,
+            "bible_id": "ZPVTBL",
+            "equivalent_id": "ZPVTBLP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

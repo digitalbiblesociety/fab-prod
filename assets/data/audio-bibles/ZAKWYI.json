@@ -1,0 +1,91 @@
+{
+    "id": "ZAKWYI",
+    "parent_bible_id": null,
+    "title": "Zanaki WBT Version",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "zak",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2015",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2016-10-12T17:48:21.000000Z",
+    "updated_at": "2020-10-12T17:48:21.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Jas",
+            "chapter_id": "1",
+            "path": "ZAKWYIP1DA\/B20___01_James_______ZAKWYIP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "2",
+            "path": "ZAKWYIP1DA\/B20___02_James_______ZAKWYIP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "3",
+            "path": "ZAKWYIP1DA\/B20___03_James_______ZAKWYIP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "4",
+            "path": "ZAKWYIP1DA\/B20___04_James_______ZAKWYIP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "5",
+            "path": "ZAKWYIP1DA\/B20___05_James_______ZAKWYIP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6208,
+            "bible_id": "ZAKWYI",
+            "equivalent_id": "ZAKWYIP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 6209,
+            "bible_id": "ZAKWYI",
+            "equivalent_id": "ZAKWYIP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

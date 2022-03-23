@@ -1,0 +1,112 @@
+{
+    "id": "MKSTBL",
+    "parent_bible_id": null,
+    "title": "Silacayoapan Mixtec New Testament",
+    "title_vernacular": "Tu̱hun sa̱á ña̱ na̱jándacoo Jesucristo nu̱ yo̱",
+    "description": "New Testament in Mixtec, Silacayoapan (MX:mks:Mixtec, Silacayoapan)",
+    "description_vernacular": "",
+    "iso": "mks",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2009",
+    "country_id": "MX",
+    "copyright": "Copyright © 2009 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0427-0",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2018-02-12T14:14:56.000000Z",
+    "updated_at": "2020-10-12T17:25:11.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Phil",
+            "chapter_id": "1",
+            "path": "MKSTBLP1DA\/B11___01_Philippians_MKSTBLP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "2",
+            "path": "MKSTBLP1DA\/B11___02_Philippians_MKSTBLP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "3",
+            "path": "MKSTBLP1DA\/B11___03_Philippians_MKSTBLP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "4",
+            "path": "MKSTBLP1DA\/B11___04_Philippians_MKSTBLP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "1",
+            "path": "MKSTBLP1DA\/B23___01_1John_______MKSTBLP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "2",
+            "path": "MKSTBLP1DA\/B23___02_1John_______MKSTBLP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "3",
+            "path": "MKSTBLP1DA\/B23___03_1John_______MKSTBLP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "4",
+            "path": "MKSTBLP1DA\/B23___04_1John_______MKSTBLP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "5",
+            "path": "MKSTBLP1DA\/B23___05_1John_______MKSTBLP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5992,
+            "bible_id": "MKSTBL",
+            "equivalent_id": "MKSTBLP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

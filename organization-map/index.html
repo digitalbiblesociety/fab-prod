@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                    <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Bible Agencies Map | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 8.5em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 3px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/agencies.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                            <svg class="banner-icon icon  banner-icon  "><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                                                                </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Agencies
+                </h1>
+                <h2 itemprop="description"  >Bible Agencies from around the World</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/organizations">Agencies</a>
+                                                                <a class="external" href="https://find.bible/fobai">FOBAI</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Agencies Map
+                                            </a>
+                                    </nav>
+    
+</section>
+
+        <div id="content">
+            
+    
+
+
+<h4 class="map-img row">
+    <h4>Bible Agencies Map<small>(Zoomable)</small></h4>
+</div>
+<div id="mapid"></div>
+
+</div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+        var mymap = L.map('mapid').setView([0,0], 2);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 6,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+        }).addTo(mymap);
+
+        var Agency = new L.Icon({
+            iconUrl: 'https://images.bible.cloud/maps/pins/map-pin-yellow.svg',
+            shadowUrl: '',
+            iconSize: [16, 26],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [20, 20]
+        });
+
+        var UBS = new L.Icon({
+            iconUrl: 'https://images.bible.cloud/maps/pins/map-flag-green.svg',
+            shadowUrl: '',
+            iconSize: [14, 23],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [0, 0]
+        });
+
+
+        var Library = new L.Icon({
+            iconUrl: 'https://images.bible.cloud/maps/pins/map-library-red.svg',
+            shadowUrl: '',
+            iconSize: [16, 18],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [20, 20]
+        });
+
+        var FOBAI = new L.Icon({
+            iconUrl: 'https://images.bible.cloud/maps/pins/map-pin-blue1.svg',
+            shadowUrl: 'https://images.bible.cloud/maps/pins/map-shadow.png',
+            iconSize: [20, 32],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [20, 20]
+        });
+
+
+
+                                        let marker_1 = L.marker([38, -78], {icon: FOBAI }).addTo(mymap);
+        marker_1.bindPopup('<a href="/organizations/4-2-20-foundation">4.2.20 Foundation</a>');
+                                                let marker_3 = L.marker([40, -77], {icon: Agency }).addTo(mymap);
+        marker_3.bindPopup('<a href="/organizations/abwe-international">ABWE International</a>');
+                                let marker_4 = L.marker([52, -1], {icon: Agency }).addTo(mymap);
+        marker_4.bindPopup('<a href="/organizations/african-books-collective">African Books Collective</a>');
+                                let marker_5 = L.marker([37.52, 139.922], {icon: Agency }).addTo(mymap);
+        marker_5.bindPopup('<a href="/organizations/akihide-kitamura">Akihide Kitamura (ThruSteppes)</a>');
+                                                                                                let marker_10 = L.marker([43, -80], {icon: Agency }).addTo(mymap);
+        marker_10.bindPopup('<a href="/organizations/all-saints-of-north-america-orthodox-church">All Saints of North America Orthodox Church</a>');
+                                let marker_11 = L.marker([6.38607, 2.40453], {icon: Agency }).addTo(mymap);
+        marker_11.bindPopup('<a href="/organizations/alliance-biblique-du-benin">Alliance-Biblique-Du-Benin</a>');
+                                let marker_12 = L.marker([4.39669, 18.5586], {icon: UBS }).addTo(mymap);
+        marker_12.bindPopup('<a href="/organizations/alliance-biblique-en-centrafrique">Alliance Biblique en Centrafrique</a>');
+                                                let marker_14 = L.marker([3, -61], {icon: Agency }).addTo(mymap);
+        marker_14.bindPopup('<a href="/organizations/amazon-evangelical-mission">Amazon Evangelical Mission</a>');
+                                let marker_15 = L.marker([40, -76], {icon: Agency }).addTo(mymap);
+        marker_15.bindPopup('<a href="/organizations/ambassadors-for-christ">Ambassadors for Christ</a>');
+                                let marker_16 = L.marker([40, -75], {icon: Agency }).addTo(mymap);
+        marker_16.bindPopup('<a href="/organizations/american-baptist-mission-press">American Baptist Mission Press</a>');
+                                let marker_17 = L.marker([39.95095, -75.1476778], {icon: FOBAI }).addTo(mymap);
+        marker_17.bindPopup('<a href="/organizations/american-bible-society">American Bible Society</a>');
+                                let marker_18 = L.marker([41, -82], {icon: Agency }).addTo(mymap);
+        marker_18.bindPopup('<a href="/organizations/american-board-of-commissioners-for-foreign-missions">American Board of Commissioners for Foreign Missions</a>');
+                                let marker_19 = L.marker([40, -77], {icon: Agency }).addTo(mymap);
+        marker_19.bindPopup('<a href="/organizations/american-presbyterian-church">American Presbyterian Church</a>');
+                                let marker_20 = L.marker([45, -93], {icon: Agency }).addTo(mymap);
+        marker_20.bindPopup('<a href="/organizations/american-publishing-company">American Publishing Company</a>');
+                                                                let marker_23 = L.marker([32, 119], {icon: Agency }).addTo(mymap);
+        marker_23.bindPopup('<a href="/organizations/amity-printing-company">Amity Printing Company</a>');
+                                                                let marker_26 = L.marker([39.9505768, -75.1474869], {icon: Agency }).addTo(mymap);
+        marker_26.bindPopup('<a href="/organizations/api-bible">api.bible</a>');
+                                                                let marker_29 = L.marker([43, -71], {icon: Agency }).addTo(mymap);
+        marker_29.bindPopup('<a href="/organizations/arabic-bible-outreach">Arabic Bible Outreach</a>');
+                                let marker_30 = L.marker([42, -88], {icon: Agency }).addTo(mymap);
+        marker_30.bindPopup('<a href="/organizations/aramaic-bible-translation">Aramaic Bible Translation</a>');
+                                let marker_31 = L.marker([22, 114], {icon: Agency }).addTo(mymap);
+        marker_31.bindPopup('<a href="/organizations/archimandrite-guri-karpov">Archimandrite Guri (Karpov)</a>');
+                                                                let marker_34 = L.marker([42, -77], {icon: Agency }).addTo(mymap);
+        marker_34.bindPopup('<a href="/organizations/armenian-apostolic-church">Armenian Apostolic Church</a>');
+                                                let marker_36 = L.marker([41, -74], {icon: Agency }).addTo(mymap);
+        marker_36.bindPopup('<a href="/organizations/armenian-missionary-association-of-america">Armenian Missionary Association of America</a>');
+                                let marker_37 = L.marker([41, -74], {icon: Agency }).addTo(mymap);
+        marker_37.bindPopup('<a href="/organizations/artists-for-israel-international-messianic-publishers">Artists for Israel International Messianic Publishers</a>');
+                                let marker_38 = L.marker([35.7585668, 139.5507422], {icon: Agency }).addTo(mymap);
+        marker_38.bindPopup('<a href="/organizations/asia-pacifica-sign-language-development-association">Asia Pacifica Sign Language Development Association (APSLDA)</a>');
+                                let marker_39 = L.marker([33.53319, -101.91632], {icon: Agency }).addTo(mymap);
+        marker_39.bindPopup('<a href="/organizations/asian-partners-international-inc">Asian Partners International, Inc.</a>');
+                                let marker_40 = L.marker([26.7747781, 83.3987417], {icon: Agency }).addTo(mymap);
+        marker_40.bindPopup('<a href="/organizations/asian-sahyogi-sanstha-india-gorakhpur-u-p">Asian Sahyogi Sanstha India Gorakhpur, (U.P.)</a>');
+                                let marker_41 = L.marker([39.49078, -0.38846], {icon: Agency }).addTo(mymap);
+        marker_41.bindPopup('<a href="/organizations/asociacion-cristiana-manos-en-accion">Asociación Cristiana Manos en Acción</a>');
+                                let marker_42 = L.marker([15.094581, -90.4005641], {icon: Agency }).addTo(mymap);
+        marker_42.bindPopup('<a href="/organizations/asociacion-educativa-y-cultural-maya">Asociación Educativa y Cultural Maya</a>');
+                                                let marker_44 = L.marker([37.2253015, -93.2929742], {icon: Agency }).addTo(mymap);
+        marker_44.bindPopup('<a href="/organizations/assemblies-of-god-world-missions">Assemblies of God World Missions</a>');
+                                                                                                                                let marker_51 = L.marker([27.487818, -82.42022], {icon: Agency }).addTo(mymap);
+        marker_51.bindPopup('<a href="/organizations/aurora-ministries">Aurora Ministries, Inc.</a>');
+                                                let marker_53 = L.marker([40.867875, -96.635768], {icon: Agency }).addTo(mymap);
+        marker_53.bindPopup('<a href="/organizations/back-to-the-bible">Back to the Bible</a>');
+                                                let marker_55 = L.marker([43, -86], {icon: Agency }).addTo(mymap);
+        marker_55.bindPopup('<a href="/organizations/baker-publishing-group">Baker Publishing Group</a>');
+                                let marker_56 = L.marker([48, 21], {icon: Agency }).addTo(mymap);
+        marker_56.bindPopup('<a href="/organizations/balint-mantskovit">Bálint Mantskovit</a>');
+                                let marker_57 = L.marker([8.96032, -79.65847], {icon: Agency }).addTo(mymap);
+        marker_57.bindPopup('<a href="/organizations/baptist-convention-of-panama">Baptist Convention of Panama</a>');
+                                                let marker_59 = L.marker([41, -80], {icon: Agency }).addTo(mymap);
+        marker_59.bindPopup('<a href="/organizations/baronius-press">Baronius Press</a>');
+                                                                let marker_62 = L.marker([42, -72], {icon: Agency }).addTo(mymap);
+        marker_62.bindPopup('<a href="/organizations/bayard">Bayard</a>');
+                                let marker_63 = L.marker([22, 114], {icon: Agency }).addTo(mymap);
+        marker_63.bindPopup('<a href="/organizations/beijing-eastern-orthodox-association">Beijing Eastern Orthodox Association</a>');
+                                                                let marker_66 = L.marker([41.15114, -73.94038], {icon: Agency }).addTo(mymap);
+        marker_66.bindPopup('<a href="/organizations/bharatiya-general-conference-mennonite-church">Bharatiya General Conference Mennonite Church</a>');
+                                let marker_67 = L.marker([49.9182353, 9.1303414], {icon: Agency }).addTo(mymap);
+        marker_67.bindPopup('<a href="/organizations/bibel-mission">Bibel-Mission e.V.</a>');
+                                                let marker_69 = L.marker([51.0563149, 7.5479186], {icon: Agency }).addTo(mymap);
+        marker_69.bindPopup('<a href="/organizations/bibellesebund">Bibellesebund e. V.</a>');
+                                let marker_70 = L.marker([48.9938089, -122.7467069], {icon: Agency }).addTo(mymap);
+        marker_70.bindPopup('<a href="/organizations/bible-believers-washington">Bible Believers of Washington</a>');
+                                                let marker_72 = L.marker([36, -87], {icon: Agency }).addTo(mymap);
+        marker_72.bindPopup('<a href="/organizations/bible-gateway">Bible Gateway</a>');
+                                                let marker_74 = L.marker([43, -80], {icon: FOBAI }).addTo(mymap);
+        marker_74.bindPopup('<a href="/organizations/bible-league-canada">Bible League Canada</a>');
+                                let marker_75 = L.marker([41, -88], {icon: Agency }).addTo(mymap);
+        marker_75.bindPopup('<a href="/organizations/bible-league-international">Bible League International</a>');
+                                let marker_76 = L.marker([33, -94], {icon: Agency }).addTo(mymap);
+        marker_76.bindPopup('<a href="/organizations/bible-lessons-int">Bible Lessons International</a>');
+                                                let marker_78 = L.marker([39, -77], {icon: Library }).addTo(mymap);
+        marker_78.bindPopup('<a href="/organizations/bible-museum">Bible Museum</a>');
+                                                let marker_80 = L.marker([45.5218526, -122.6520448], {icon: Agency }).addTo(mymap);
+        marker_80.bindPopup('<a href="/organizations/bible-project">The Bible Project</a>');
+                                let marker_81 = L.marker([40, -75], {icon: Agency }).addTo(mymap);
+        marker_81.bindPopup('<a href="/organizations/bible-search">Bible Search</a>');
+                                let marker_82 = L.marker([41.19716, 19.5555], {icon: UBS }).addTo(mymap);
+        marker_82.bindPopup('<a href="/organizations/bible-society-of-albania">Bible Society of Albania</a>');
+                                let marker_83 = L.marker([-32.3735783, 19.0573315], {icon: UBS }).addTo(mymap);
+        marker_83.bindPopup('<a href="/organizations/bible-society-of-algeria">Bible Society of Algeria</a>');
+                                let marker_84 = L.marker([39.950765, -75.14797], {icon: UBS }).addTo(mymap);
+        marker_84.bindPopup('<a href="/organizations/bible-society-of-america">Bible Society of America</a>');
+                                let marker_85 = L.marker([-8.8134747, 13.2332849], {icon: UBS }).addTo(mymap);
+        marker_85.bindPopup('<a href="/organizations/bible-society-of-angola">Bible Society of Angola</a>');
+                                let marker_86 = L.marker([-34.6006947, -58.3721008], {icon: UBS }).addTo(mymap);
+        marker_86.bindPopup('<a href="/organizations/bible-society-of-argentina">Bible Society of Argentina</a>');
+                                let marker_87 = L.marker([40.1772299, 44.5064469], {icon: UBS }).addTo(mymap);
+        marker_87.bindPopup('<a href="/organizations/bible-society-of-armenia">Bible Society of Armenia</a>');
+                                let marker_88 = L.marker([-33.8373237, 151.2067825], {icon: UBS }).addTo(mymap);
+        marker_88.bindPopup('<a href="/organizations/bible-society-of-australia">Bible Society in Australia</a>');
+                                let marker_89 = L.marker([48.2036206, 16.3570481], {icon: UBS }).addTo(mymap);
+        marker_89.bindPopup('<a href="/organizations/bible-society-of-austria">Austrian Bible Society</a>');
+                                let marker_90 = L.marker([40.3303156, 47.8181889], {icon: UBS }).addTo(mymap);
+        marker_90.bindPopup('<a href="/organizations/bible-society-of-azerbaijan">Bible Society of Azerbaijan</a>');
+                                let marker_91 = L.marker([23.7491629, 90.4016682], {icon: UBS }).addTo(mymap);
+        marker_91.bindPopup('<a href="/organizations/bible-society-of-bangladesh">Bible Society of Bangladesh</a>');
+                                let marker_92 = L.marker([53.9253099, 27.4993855], {icon: UBS }).addTo(mymap);
+        marker_92.bindPopup('<a href="/organizations/bible-society-of-belarus">Bible Society of the Republic of Belarus</a>');
+                                let marker_93 = L.marker([50.6807744, 4.2504331], {icon: UBS }).addTo(mymap);
+        marker_93.bindPopup('<a href="/organizations/bible-society-of-belgium">Belgian Bible Society (French)</a>');
+                                let marker_94 = L.marker([6.3901365, 2.4567103], {icon: UBS }).addTo(mymap);
+        marker_94.bindPopup('<a href="/organizations/bible-society-of-benin">Bible Society of Benin</a>');
+                                let marker_95 = L.marker([-17.3921206, -66.1521911], {icon: UBS }).addTo(mymap);
+        marker_95.bindPopup('<a href="/organizations/bible-society-of-bolivia">Bible Society of Bolivia</a>');
+                                let marker_96 = L.marker([-24.6654427, 25.9175524], {icon: UBS }).addTo(mymap);
+        marker_96.bindPopup('<a href="/organizations/bible-society-of-botswana">Bible Society in Botswana</a>');
+                                let marker_97 = L.marker([-23.4982707, -46.8229491], {icon: UBS }).addTo(mymap);
+        marker_97.bindPopup('<a href="/organizations/bible-society-of-brazil">Bible Society of Brazil</a>');
+                                let marker_98 = L.marker([42.7014692, 23.3141307], {icon: UBS }).addTo(mymap);
+        marker_98.bindPopup('<a href="/organizations/bible-society-of-bulgaria">Bulgarian Bible Society</a>');
+                                let marker_99 = L.marker([12.3786044, -1.52071], {icon: UBS }).addTo(mymap);
+        marker_99.bindPopup('<a href="/organizations/bible-society-of-burkina-faso">Bible Society of Burkina Faso</a>');
+                                let marker_100 = L.marker([-3.3833693, 29.3639168], {icon: UBS }).addTo(mymap);
+        marker_100.bindPopup('<a href="/organizations/bible-society-of-burundi">Bible Society of Burundi</a>');
+                                let marker_101 = L.marker([16.025495, -23.7257565], {icon: UBS }).addTo(mymap);
+        marker_101.bindPopup('<a href="/organizations/bible-society-of-cabo-verde">Cabo Verde Bible Society</a>');
+                                let marker_102 = L.marker([11.5766908, 104.8583108], {icon: UBS }).addTo(mymap);
+        marker_102.bindPopup('<a href="/organizations/bible-society-of-cambodia">Bible Society of Cambodia</a>');
+                                let marker_103 = L.marker([3.866604, 11.5001418], {icon: UBS }).addTo(mymap);
+        marker_103.bindPopup('<a href="/organizations/bible-society-of-cameroon">Bible Society of Cameroon</a>');
+                                let marker_104 = L.marker([43.7412654, -79.3147143], {icon: UBS }).addTo(mymap);
+        marker_104.bindPopup('<a href="/organizations/bible-society-of-canada">Bible Society of Canada</a>');
+                                let marker_105 = L.marker([6.9120684, 79.8493587], {icon: UBS }).addTo(mymap);
+        marker_105.bindPopup('<a href="/organizations/bible-society-of-ceylon">Ceylon Bible Society</a>');
+                                let marker_106 = L.marker([12.1433697, 15.0560828], {icon: UBS }).addTo(mymap);
+        marker_106.bindPopup('<a href="/organizations/bible-society-of-chad">Bible Society of Chad</a>');
+                                let marker_107 = L.marker([-33.4442402, -70.6494147], {icon: UBS }).addTo(mymap);
+        marker_107.bindPopup('<a href="/organizations/bible-society-of-chile">Bible Society of Chile</a>');
+                                let marker_108 = L.marker([1, 104], {icon: UBS }).addTo(mymap);
+        marker_108.bindPopup('<a href="/organizations/bible-society-of-china">Bible Society of China</a>');
+                                let marker_109 = L.marker([4.6627587, -74.0526371], {icon: UBS }).addTo(mymap);
+        marker_109.bindPopup('<a href="/organizations/bible-society-of-colombia">Bible Society of Colombia</a>');
+                                let marker_110 = L.marker([-19, 48], {icon: UBS }).addTo(mymap);
+        marker_110.bindPopup('<a href="/organizations/bible-society-of-comoros">Bible Society of Comoros</a>');
+                                let marker_111 = L.marker([-4.2656707, 15.2814559], {icon: UBS }).addTo(mymap);
+        marker_111.bindPopup('<a href="/organizations/bible-society-of-congo">Bible Society of Congo</a>');
+                                let marker_112 = L.marker([9.9287803, -84.0924031], {icon: UBS }).addTo(mymap);
+        marker_112.bindPopup('<a href="/organizations/bible-society-of-costa-rica">Bible Society of Costa Rica</a>');
+                                let marker_113 = L.marker([5, -4], {icon: UBS }).addTo(mymap);
+        marker_113.bindPopup('<a href="/organizations/bible-society-of-cote-divoire">Bible Society of Côte d’Ivoire</a>');
+                                let marker_114 = L.marker([45.8133713, 15.98769], {icon: UBS }).addTo(mymap);
+        marker_114.bindPopup('<a href="/organizations/bible-society-of-croatian">Bible Society of Croatia</a>');
+                                let marker_115 = L.marker([35.1888655, 33.3702772], {icon: UBS }).addTo(mymap);
+        marker_115.bindPopup('<a href="/organizations/bible-society-of-cyprus">Bible Society in Cyprus</a>');
+                                let marker_116 = L.marker([55.6860095, 12.5667643], {icon: UBS }).addTo(mymap);
+        marker_116.bindPopup('<a href="/organizations/bible-society-of-denmark">Bible Society of Denmark</a>');
+                                let marker_117 = L.marker([-0.1762991, -78.4905083], {icon: UBS }).addTo(mymap);
+        marker_117.bindPopup('<a href="/organizations/bible-society-of-ecuador">United Bible Societies in Ecuador</a>');
+                                let marker_118 = L.marker([-0.1791114, -78.486998], {icon: UBS }).addTo(mymap);
+        marker_118.bindPopup('<a href="/organizations/bible-society-of-egypt">Bible Society of Egypt</a>');
+                                let marker_119 = L.marker([15.3287862, 38.915009], {icon: UBS }).addTo(mymap);
+        marker_119.bindPopup('<a href="/organizations/bible-society-of-eritrea">Bible Society of Eritrea</a>');
+                                let marker_120 = L.marker([59.4321186, 24.741323], {icon: UBS }).addTo(mymap);
+        marker_120.bindPopup('<a href="/organizations/bible-society-of-estonia">Estonian Bible Society</a>');
+                                let marker_121 = L.marker([-26.4933331, 31.3814958], {icon: UBS }).addTo(mymap);
+        marker_121.bindPopup('<a href="/organizations/bible-society-of-eswatini">Bible Society Eswatini</a>');
+                                let marker_122 = L.marker([9, 39], {icon: UBS }).addTo(mymap);
+        marker_122.bindPopup('<a href="/organizations/bible-society-of-ethiopia">Bible Society of Ethiopia</a>');
+                                let marker_123 = L.marker([62.0558, -7.15336], {icon: UBS }).addTo(mymap);
+        marker_123.bindPopup('<a href="/organizations/bible-society-of-faroe">Faroese Bible Society</a>');
+                                let marker_124 = L.marker([60, 25], {icon: UBS }).addTo(mymap);
+        marker_124.bindPopup('<a href="/organizations/bible-society-of-finland">Bible Society of Finland</a>');
+                                let marker_125 = L.marker([0.4214998, 9.4296923], {icon: UBS }).addTo(mymap);
+        marker_125.bindPopup('<a href="/organizations/bible-society-of-gabon">Bible Society of Gabon</a>');
+                                let marker_126 = L.marker([47, 7], {icon: UBS }).addTo(mymap);
+        marker_126.bindPopup('<a href="/organizations/bible-society-of-geneva">Bible Society of Geneva</a>');
+                                let marker_127 = L.marker([41.7298121, 44.8264841], {icon: UBS }).addTo(mymap);
+        marker_127.bindPopup('<a href="/organizations/bible-society-of-georgia">Bible Society of Georgia</a>');
+                                let marker_128 = L.marker([48.7300444, 9.1427307], {icon: UBS }).addTo(mymap);
+        marker_128.bindPopup('<a href="/organizations/bible-society-of-germany">Bible Society of Germany</a>');
+                                let marker_129 = L.marker([5.5345565, -0.211401], {icon: UBS }).addTo(mymap);
+        marker_129.bindPopup('<a href="/organizations/bible-society-of-ghana">Bible Society of Ghana</a>');
+                                let marker_130 = L.marker([37.98484, 23.73376], {icon: UBS }).addTo(mymap);
+        marker_130.bindPopup('<a href="/organizations/bible-society-of-greece">Greek Bible Society</a>');
+                                let marker_131 = L.marker([14.6029802, -90.5190399], {icon: UBS }).addTo(mymap);
+        marker_131.bindPopup('<a href="/organizations/bible-society-of-guatemala">Bible Society of Guatemala</a>');
+                                let marker_132 = L.marker([10.6459041, -13.5557816], {icon: UBS }).addTo(mymap);
+        marker_132.bindPopup('<a href="/organizations/bible-society-of-guinea-conakry">Bible Society in Guinea-Conakry</a>');
+                                let marker_133 = L.marker([6, -55], {icon: UBS }).addTo(mymap);
+        marker_133.bindPopup('<a href="/organizations/bible-society-of-guyana">Bible Society of Guyana</a>');
+                                let marker_134 = L.marker([18.5542897, -72.2930459], {icon: UBS }).addTo(mymap);
+        marker_134.bindPopup('<a href="/organizations/bible-society-of-haiti">Haitian Bible Society</a>');
+                                let marker_135 = L.marker([14.0869787, -87.1739872], {icon: UBS }).addTo(mymap);
+        marker_135.bindPopup('<a href="/organizations/bible-society-of-honduras">Bible Society of Honduras</a>');
+                                let marker_136 = L.marker([22.3001578, 114.1758156], {icon: UBS }).addTo(mymap);
+        marker_136.bindPopup('<a href="/organizations/bible-society-of-hong-kong">Bible Society of Hong Kong</a>');
+                                let marker_137 = L.marker([47.4763311, 19.0382818], {icon: UBS }).addTo(mymap);
+        marker_137.bindPopup('<a href="/organizations/bible-society-of-hungary">Bible Society of Hungary</a>');
+                                let marker_138 = L.marker([64.1421211, -21.92656], {icon: UBS }).addTo(mymap);
+        marker_138.bindPopup('<a href="/organizations/bible-society-of-iceland">Bible Society of Iceland</a>');
+                                let marker_139 = L.marker([12.9728016, 77.6177488], {icon: UBS }).addTo(mymap);
+        marker_139.bindPopup('<a href="/organizations/bible-society-of-india">Bible Society of India</a>');
+                                let marker_140 = L.marker([6.8737147, 79.8616178], {icon: UBS }).addTo(mymap);
+        marker_140.bindPopup('<a href="/organizations/bible-society-of-india-and-ceylon">Bible Society of India and Ceylon</a>');
+                                let marker_141 = L.marker([-6.1962328, 106.8499242], {icon: UBS }).addTo(mymap);
+        marker_141.bindPopup('<a href="/organizations/bible-society-of-indonesia">Indonesian Bible Society</a>');
+                                let marker_142 = L.marker([33.1953402, 42.9784117], {icon: UBS }).addTo(mymap);
+        marker_142.bindPopup('<a href="/organizations/bible-society-of-iraq">Bible Society in Iraq</a>');
+                                let marker_143 = L.marker([55, -6], {icon: UBS }).addTo(mymap);
+        marker_143.bindPopup('<a href="/organizations/bible-society-of-ireland">National Bible Society of Ireland</a>');
+                                let marker_144 = L.marker([31.779251, 35.224705], {icon: UBS }).addTo(mymap);
+        marker_144.bindPopup('<a href="/organizations/bible-society-of-israel">Bible Society of Israel</a>');
+                                let marker_145 = L.marker([32.702041, 35.2915334], {icon: UBS }).addTo(mymap);
+        marker_145.bindPopup('<a href="/organizations/bible-society-of-israel-arabic">Arab Israeli Bible Society</a>');
+                                let marker_146 = L.marker([41.9035898, 12.4929116], {icon: UBS }).addTo(mymap);
+        marker_146.bindPopup('<a href="/organizations/bible-society-of-italy">Bible Society of Italy</a>');
+                                let marker_147 = L.marker([35.6771685, 139.7709128], {icon: UBS }).addTo(mymap);
+        marker_147.bindPopup('<a href="/organizations/bible-society-of-japan">Bible Society of Japan</a>');
+                                let marker_148 = L.marker([31.9487139, 35.9290814], {icon: UBS }).addTo(mymap);
+        marker_148.bindPopup('<a href="/organizations/bible-society-of-jordan">Bible Society in Jordan</a>');
+                                let marker_149 = L.marker([43.2473768, 76.846626], {icon: UBS }).addTo(mymap);
+        marker_149.bindPopup('<a href="/organizations/bible-society-of-kazakhstan">Bible Society of Kazakhstan</a>');
+                                let marker_150 = L.marker([-1.3072702, 36.8181656], {icon: UBS }).addTo(mymap);
+        marker_150.bindPopup('<a href="/organizations/bible-society-of-kenya">Bible Society of Kenya</a>');
+                                let marker_151 = L.marker([37.5768351, 126.9747633], {icon: UBS }).addTo(mymap);
+        marker_151.bindPopup('<a href="/organizations/bible-society-of-korea">Bible Society of Korea</a>');
+                                let marker_152 = L.marker([42.8788664, 74.5695427], {icon: UBS }).addTo(mymap);
+        marker_152.bindPopup('<a href="/organizations/bible-society-of-kyrgyzstan">Bible Society of Kyrgyzstan</a>');
+                                let marker_153 = L.marker([17.96667, 102.6], {icon: UBS }).addTo(mymap);
+        marker_153.bindPopup('<a href="/organizations/bible-society-of-laos">Laos Partnership</a>');
+                                let marker_154 = L.marker([57, 24], {icon: UBS }).addTo(mymap);
+        marker_154.bindPopup('<a href="/organizations/bible-society-of-latvia">Latvian Bible Society</a>');
+                                let marker_155 = L.marker([33.8893572, 35.5576287], {icon: UBS }).addTo(mymap);
+        marker_155.bindPopup('<a href="/organizations/bible-society-of-lebanon">Bible Society of Lebanon</a>');
+                                let marker_156 = L.marker([56.8062773, 15.7300987], {icon: UBS }).addTo(mymap);
+        marker_156.bindPopup('<a href="/organizations/bible-society-of-lesotho">Bible Society of Lesotho</a>');
+                                let marker_157 = L.marker([6.2755311, -10.7454554], {icon: UBS }).addTo(mymap);
+        marker_157.bindPopup('<a href="/organizations/bible-society-of-liberia">Bible Society of Liberia</a>');
+                                let marker_158 = L.marker([54.6813613, 25.26846], {icon: UBS }).addTo(mymap);
+        marker_158.bindPopup('<a href="/organizations/bible-society-of-lithuania">Bible Society of Lithuania</a>');
+                                let marker_159 = L.marker([42, 21], {icon: UBS }).addTo(mymap);
+        marker_159.bindPopup('<a href="/organizations/bible-society-of-macedonia">Bible Society of Macedonia</a>');
+                                let marker_160 = L.marker([31.1141901, 31.4378663], {icon: UBS }).addTo(mymap);
+        marker_160.bindPopup('<a href="/organizations/bible-society-of-malagasy">Bible Society of Malagasy</a>');
+                                let marker_161 = L.marker([-15.7596771, 35.0159999], {icon: UBS }).addTo(mymap);
+        marker_161.bindPopup('<a href="/organizations/bible-society-of-malawi">Bible Society of Malawi</a>');
+                                let marker_162 = L.marker([3.1415263, 101.6242967], {icon: UBS }).addTo(mymap);
+        marker_162.bindPopup('<a href="/organizations/bible-society-of-malaysia">Bible Society of Malaysia</a>');
+                                let marker_163 = L.marker([12.6406963, -8.0085709], {icon: UBS }).addTo(mymap);
+        marker_163.bindPopup('<a href="/organizations/bible-society-of-mali">Bible Society in Mali</a>');
+                                let marker_164 = L.marker([35.8924879, 14.5053495], {icon: UBS }).addTo(mymap);
+        marker_164.bindPopup('<a href="/organizations/bible-society-of-malta">Bible Society of Malta</a>');
+                                let marker_165 = L.marker([-20.3056991, 57.5282427], {icon: UBS }).addTo(mymap);
+        marker_165.bindPopup('<a href="/organizations/bible-society-of-mauritius">Bible Society of Mauritius</a>');
+                                let marker_166 = L.marker([19.4404292, -99.1305276], {icon: UBS }).addTo(mymap);
+        marker_166.bindPopup('<a href="/organizations/bible-society-of-mexico">Bible Society of Mexico</a>');
+                                let marker_167 = L.marker([7, 158], {icon: UBS }).addTo(mymap);
+        marker_167.bindPopup('<a href="/organizations/bible-society-of-micronesia">Bible Society of Micronesia</a>');
+                                let marker_168 = L.marker([47.2010283, 28.4637062], {icon: UBS }).addTo(mymap);
+        marker_168.bindPopup('<a href="/organizations/bible-society-of-moldova">Interconfessional Bible Society of Moldova</a>');
+                                let marker_169 = L.marker([48, 107], {icon: UBS }).addTo(mymap);
+        marker_169.bindPopup('<a href="/organizations/bible-society-of-mongolia">Bible Society of Mongolia</a>');
+                                let marker_170 = L.marker([31.9272686, -5.7997127], {icon: UBS }).addTo(mymap);
+        marker_170.bindPopup('<a href="/organizations/bible-society-of-morocco">Morocco Bible Society</a>');
+                                let marker_171 = L.marker([-25.9640304, 32.5821991], {icon: UBS }).addTo(mymap);
+        marker_171.bindPopup('<a href="/organizations/bible-society-of-mozambique">Bible Society of Mozambique</a>');
+                                let marker_172 = L.marker([16.779051, 96.1592189], {icon: UBS }).addTo(mymap);
+        marker_172.bindPopup('<a href="/organizations/bible-society-of-myanmar">Bible Society of Myanmar</a>');
+                                let marker_173 = L.marker([-22.5523451, 17.0829456], {icon: UBS }).addTo(mymap);
+        marker_173.bindPopup('<a href="/organizations/bible-society-of-namibia">Bible Society of Namibia</a>');
+                                let marker_174 = L.marker([27.7054605, 85.3149741], {icon: UBS }).addTo(mymap);
+        marker_174.bindPopup('<a href="/organizations/bible-society-of-nepal">Nepal Bible Society</a>');
+                                let marker_175 = L.marker([-41, 175], {icon: UBS }).addTo(mymap);
+        marker_175.bindPopup('<a href="/organizations/bible-society-of-new-zealand">Bible Society in New Zealand</a>');
+                                let marker_176 = L.marker([12.1462974, -86.24134], {icon: UBS }).addTo(mymap);
+        marker_176.bindPopup('<a href="/organizations/bible-society-of-nicaragua">Bible Society of Nicaragua</a>');
+                                let marker_177 = L.marker([6.4445342, 3.3730644], {icon: UBS }).addTo(mymap);
+        marker_177.bindPopup('<a href="/organizations/bible-society-of-nigeria">Bible Society of Nigeria</a>');
+                                let marker_178 = L.marker([54.5961549, -5.9326839], {icon: UBS }).addTo(mymap);
+        marker_178.bindPopup('<a href="/organizations/bible-society-of-northern-ireland">Bible Society of Northern Ireland</a>');
+                                let marker_179 = L.marker([59.9173989, 10.7425436], {icon: UBS }).addTo(mymap);
+        marker_179.bindPopup('<a href="/organizations/bible-society-of-norway">Bible Society of Norway</a>');
+                                let marker_180 = L.marker([31.5668069, 74.3094335], {icon: UBS }).addTo(mymap);
+        marker_180.bindPopup('<a href="/organizations/bible-society-of-pakistan">Pakistan Bible Society</a>');
+                                let marker_181 = L.marker([31.8432583, 35.232559], {icon: UBS }).addTo(mymap);
+        marker_181.bindPopup('<a href="/organizations/bible-society-of-palestine">Palestinian Bible Society</a>');
+                                let marker_182 = L.marker([9, -80], {icon: UBS }).addTo(mymap);
+        marker_182.bindPopup('<a href="/organizations/bible-society-of-panama">Bible Society of Panama</a>');
+                                let marker_183 = L.marker([-9.4781137, 147.1708397], {icon: UBS }).addTo(mymap);
+        marker_183.bindPopup('<a href="/organizations/bible-society-of-papua-new-guinea">Bible Society of Papua New Guinea</a>');
+                                let marker_184 = L.marker([-25.2825072, -57.6392555], {icon: UBS }).addTo(mymap);
+        marker_184.bindPopup('<a href="/organizations/bible-society-of-paraguay">Bible Society of Paraguay</a>');
+                                let marker_185 = L.marker([-12.0740022, -77.0347543], {icon: UBS }).addTo(mymap);
+        marker_185.bindPopup('<a href="/organizations/bible-society-of-peru">Peruvian Bible Society</a>');
+                                let marker_186 = L.marker([52.2165485, 21.0194511], {icon: UBS }).addTo(mymap);
+        marker_186.bindPopup('<a href="/organizations/bible-society-of-poland">Bible Society of Poland</a>');
+                                let marker_187 = L.marker([38.7278079, -9.1374153], {icon: UBS }).addTo(mymap);
+        marker_187.bindPopup('<a href="/organizations/bible-society-of-portugal">Bible Society of Portugal</a>');
+                                let marker_188 = L.marker([18.4001893, -66.0500386], {icon: UBS }).addTo(mymap);
+        marker_188.bindPopup('<a href="/organizations/bible-society-of-puerto-rico">Bible Society of Puerto Rico</a>');
+                                let marker_189 = L.marker([44.4326245, 26.1268223], {icon: UBS }).addTo(mymap);
+        marker_189.bindPopup('<a href="/organizations/bible-society-of-romania">Bible Society of Romania</a>');
+                                let marker_190 = L.marker([55.7311697, 37.6332261], {icon: UBS }).addTo(mymap);
+        marker_190.bindPopup('<a href="/organizations/bible-society-of-russia">Bible Society of Russia</a>');
+                                let marker_191 = L.marker([-1.9208435, 30.076421], {icon: UBS }).addTo(mymap);
+        marker_191.bindPopup('<a href="/organizations/bible-society-of-rwanda">Bible Society in Rwanda</a>');
+                                let marker_192 = L.marker([13.7013909, -89.2122739], {icon: UBS }).addTo(mymap);
+        marker_192.bindPopup('<a href="/organizations/bible-society-of-salvador">Bible Society of El Salvador</a>');
+                                let marker_193 = L.marker([0.2558114, 6.4982877], {icon: UBS }).addTo(mymap);
+        marker_193.bindPopup('<a href="/organizations/bible-society-of-sao-tome">Bible Society Office in Sao Tome</a>');
+                                let marker_194 = L.marker([55.945608, -3.2293969], {icon: UBS }).addTo(mymap);
+        marker_194.bindPopup('<a href="/organizations/bible-society-of-scotland">Scottish Bible Society</a>');
+                                let marker_195 = L.marker([14.6612448, -17.4376062], {icon: UBS }).addTo(mymap);
+        marker_195.bindPopup('<a href="/organizations/bible-society-of-senegal">Bible Society of Senegal</a>');
+                                let marker_196 = L.marker([44.8176118, 20.4529527], {icon: UBS }).addTo(mymap);
+        marker_196.bindPopup('<a href="/organizations/bible-society-of-serbia">Bible Society of Serbia</a>');
+                                let marker_197 = L.marker([8.4821051, -13.2619953], {icon: UBS }).addTo(mymap);
+        marker_197.bindPopup('<a href="/organizations/bible-society-of-sierra-leone">Bible Society of Sierra Leone</a>');
+                                let marker_198 = L.marker([1.2937653, 103.8485943], {icon: UBS }).addTo(mymap);
+        marker_198.bindPopup('<a href="/organizations/bible-society-of-singapore">Bible Society of Singapore</a>');
+                                let marker_199 = L.marker([48.7546345, 19.0998816], {icon: UBS }).addTo(mymap);
+        marker_199.bindPopup('<a href="/organizations/bible-society-of-slovakia">Slovak Bible Society</a>');
+                                let marker_200 = L.marker([46.0398961, 14.4711265], {icon: UBS }).addTo(mymap);
+        marker_200.bindPopup('<a href="/organizations/bible-society-of-slovenia">Bible Society of Slovenia</a>');
+                                let marker_201 = L.marker([-18.1229397, 178.4594522], {icon: UBS }).addTo(mymap);
+        marker_201.bindPopup('<a href="/organizations/bible-society-of-somalia">Bible Society of Somalia</a>');
+                                let marker_202 = L.marker([-33.8783198, 18.6364668], {icon: UBS }).addTo(mymap);
+        marker_202.bindPopup('<a href="/organizations/bible-society-of-south-africa">Bible Society of South Africa</a>');
+                                let marker_203 = L.marker([4.85165, 31.58247], {icon: UBS }).addTo(mymap);
+        marker_203.bindPopup('<a href="/organizations/bible-society-of-south-sudan">Bible Society in South Sudan</a>');
+                                let marker_204 = L.marker([40.4367396, -3.6992787], {icon: UBS }).addTo(mymap);
+        marker_204.bindPopup('<a href="/organizations/bible-society-of-spain">Bible Society of Spain</a>');
+                                let marker_205 = L.marker([7, 80], {icon: UBS }).addTo(mymap);
+        marker_205.bindPopup('<a href="/organizations/bible-society-of-sri-lanka">Bible Society of Sri Lanka</a>');
+                                let marker_206 = L.marker([15.5064965, 32.5595474], {icon: UBS }).addTo(mymap);
+        marker_206.bindPopup('<a href="/organizations/bible-society-of-sudan">Bible Society of Sudan</a>');
+                                let marker_207 = L.marker([5.858908, -55.2056588], {icon: UBS }).addTo(mymap);
+        marker_207.bindPopup('<a href="/organizations/bible-society-of-suriname">Suriname Bible Society</a>');
+                                let marker_208 = L.marker([-26.493285, 31.381581], {icon: UBS }).addTo(mymap);
+        marker_208.bindPopup('<a href="/organizations/bible-society-of-swaziland">Bible Society of Swaziland</a>');
+                                let marker_209 = L.marker([59.856973, 17.6407293], {icon: UBS }).addTo(mymap);
+        marker_209.bindPopup('<a href="/organizations/bible-society-of-sweden">Bible Society of Sweden</a>');
+                                let marker_210 = L.marker([47.1370806, 7.2416038], {icon: UBS }).addTo(mymap);
+        marker_210.bindPopup('<a href="/organizations/bible-society-of-switzerland">Swiss Bible Society</a>');
+                                let marker_211 = L.marker([35.0105677, 38.5385113], {icon: UBS }).addTo(mymap);
+        marker_211.bindPopup('<a href="/organizations/bible-society-of-syria">Bible Society in Syria</a>');
+                                let marker_212 = L.marker([25.0026521, 121.6042163], {icon: UBS }).addTo(mymap);
+        marker_212.bindPopup('<a href="/organizations/bible-society-of-taiwan">Bible Society of Taiwan</a>');
+                                let marker_213 = L.marker([38.6310394, 70.8171799], {icon: UBS }).addTo(mymap);
+        marker_213.bindPopup('<a href="/organizations/bible-society-of-tajikistan">Bible Society of Tajikistan</a>');
+                                let marker_214 = L.marker([-6.4406677, 35.1055556], {icon: UBS }).addTo(mymap);
+        marker_214.bindPopup('<a href="/organizations/bible-society-of-tanzania">Bible Society of Tanzania</a>');
+                                let marker_215 = L.marker([13.7881, 100.5619485], {icon: UBS }).addTo(mymap);
+        marker_215.bindPopup('<a href="/organizations/bible-society-of-thailand">Bible Society of Thailand</a>');
+                                let marker_216 = L.marker([4.3958508, 18.5584873], {icon: UBS }).addTo(mymap);
+        marker_216.bindPopup('<a href="/organizations/bible-society-of-the-central-african-republic">Bible Society in the Central African Republic</a>');
+                                let marker_217 = L.marker([50.1254396, 14.458291], {icon: UBS }).addTo(mymap);
+        marker_217.bindPopup('<a href="/organizations/bible-society-of-the-czech-republic">Czech Bible Society</a>');
+                                let marker_218 = L.marker([-4.3058908, 15.3140561], {icon: UBS }).addTo(mymap);
+        marker_218.bindPopup('<a href="/organizations/bible-society-of-the-democratic-republic-of-congo">Bible Society of the Democratic Republic of Congo</a>');
+                                let marker_219 = L.marker([18.5327717, -70.0512529], {icon: UBS }).addTo(mymap);
+        marker_219.bindPopup('<a href="/organizations/bible-society-of-the-dominican-republic">Bible Society of the Dominican Republic</a>');
+                                let marker_220 = L.marker([13.0962796, -59.6034656], {icon: UBS }).addTo(mymap);
+        marker_220.bindPopup('<a href="/organizations/bible-society-of-the-east-caribbean">Bible Society of the East Caribbean</a>');
+                                let marker_221 = L.marker([13.4499957, -16.5758695], {icon: UBS }).addTo(mymap);
+        marker_221.bindPopup('<a href="/organizations/bible-society-of-the-gambia">Bible Society of the Gambia</a>');
+                                let marker_222 = L.marker([15.8401738, 47.7395054], {icon: UBS }).addTo(mymap);
+        marker_222.bindPopup('<a href="/organizations/bible-society-of-the-gulf">Bible Society in the Gulf</a>');
+                                let marker_223 = L.marker([52, 5], {icon: UBS }).addTo(mymap);
+        marker_223.bindPopup('<a href="/organizations/bible-society-of-the-netherlands">Bible Society of the Netherlands</a>');
+                                let marker_224 = L.marker([12.11667, -68.9], {icon: UBS }).addTo(mymap);
+        marker_224.bindPopup('<a href="/organizations/bible-society-of-the-netherlands-antilles">Bible Society of the Netherlands Antilles</a>');
+                                let marker_225 = L.marker([14.5828596, 120.9859691], {icon: UBS }).addTo(mymap);
+        marker_225.bindPopup('<a href="/organizations/bible-society-of-the-philippines">Philippine Bible Society</a>');
+                                let marker_226 = L.marker([42.0008511, 21.415157], {icon: UBS }).addTo(mymap);
+        marker_226.bindPopup('<a href="/organizations/bible-society-of-the-republic-of-macedonia">Bible Society of the Republic of Macedonia</a>');
+                                let marker_227 = L.marker([-4.132343, 55.4534209], {icon: UBS }).addTo(mymap);
+        marker_227.bindPopup('<a href="/organizations/bible-society-of-the-seychelles">Bible Society in the Seychelles</a>');
+                                let marker_228 = L.marker([-18, 178], {icon: UBS }).addTo(mymap);
+        marker_228.bindPopup('<a href="/organizations/bible-society-of-the-south-pacific">Bible Society in the South Pacific</a>');
+                                let marker_229 = L.marker([6.1416778, 1.2451741], {icon: UBS }).addTo(mymap);
+        marker_229.bindPopup('<a href="/organizations/bible-society-of-togo">Bible Society of Togo</a>');
+                                let marker_230 = L.marker([41.0237977, 28.9709663], {icon: UBS }).addTo(mymap);
+        marker_230.bindPopup('<a href="/organizations/bible-society-of-turkey">Bible Society of Turkey</a>');
+                                let marker_231 = L.marker([0.3260906, 32.5739354], {icon: UBS }).addTo(mymap);
+        marker_231.bindPopup('<a href="/organizations/bible-society-of-uganda">Bible Society of Uganda</a>');
+                                let marker_232 = L.marker([50.4651383, 30.4149123], {icon: UBS }).addTo(mymap);
+        marker_232.bindPopup('<a href="/organizations/bible-society-of-ukraine">Ukrainian Bible Society</a>');
+                                let marker_233 = L.marker([-34.90593, -56.18254], {icon: UBS }).addTo(mymap);
+        marker_233.bindPopup('<a href="/organizations/bible-society-of-uruguay">Bible Society of Uruguay</a>');
+                                let marker_234 = L.marker([42.0324905, 63.4668936], {icon: UBS }).addTo(mymap);
+        marker_234.bindPopup('<a href="/organizations/bible-society-of-uzbekistan">Bible Society of Uzbekistan</a>');
+                                let marker_235 = L.marker([10.4926487, -66.8086397], {icon: UBS }).addTo(mymap);
+        marker_235.bindPopup('<a href="/organizations/bible-society-of-venezuela">United Bible Societies of Venezuela</a>');
+                                let marker_236 = L.marker([10.8130105, 106.6971696], {icon: UBS }).addTo(mymap);
+        marker_236.bindPopup('<a href="/organizations/bible-society-of-vietnam">Bible Society of Vietnam</a>');
+                                let marker_237 = L.marker([18.0244533, -76.8095855], {icon: UBS }).addTo(mymap);
+        marker_237.bindPopup('<a href="/organizations/bible-society-of-west-indies">Bible Society of the West Indies</a>');
+                                let marker_238 = L.marker([-15.4109156, 28.2778706], {icon: UBS }).addTo(mymap);
+        marker_238.bindPopup('<a href="/organizations/bible-society-of-zambia">Bible Society of Zambia</a>');
+                                let marker_239 = L.marker([-17.8358686, 31.0425912], {icon: UBS }).addTo(mymap);
+        marker_239.bindPopup('<a href="/organizations/bible-society-of-zimbabwe">Bible Society of Zimbabwe</a>');
+                                let marker_240 = L.marker([29.6155993, -98.5178291], {icon: Agency }).addTo(mymap);
+        marker_240.bindPopup('<a href="/organizations/bible-study-fellowship">Bible Study Fellowship</a>');
+                                                let marker_242 = L.marker([40.8091634, -73.6718965], {icon: Agency }).addTo(mymap);
+        marker_242.bindPopup('<a href="/organizations/bible-translation-and-literacy">Bible Translation and Literacy</a>');
+                                let marker_243 = L.marker([38.5692, -121.4763], {icon: FOBAI }).addTo(mymap);
+        marker_243.bindPopup('<a href="/organizations/bible-translation-fellowship">Bible Translation Fellowship</a>');
+                                                                let marker_246 = L.marker([40, -76], {icon: Agency }).addTo(mymap);
+        marker_246.bindPopup('<a href="/organizations/bible-visuals">Bible Visuals</a>');
+                                                let marker_248 = L.marker([50.1025177, 14.3868945], {icon: Agency }).addTo(mymap);
+        marker_248.bindPopup('<a href="/organizations/bible21">Bible 21 Project</a>');
+                                                                let marker_251 = L.marker([29.09341, -97.299017], {icon: Agency }).addTo(mymap);
+        marker_251.bindPopup('<a href="/organizations/bibles-for-peoples">Bibles For Peoples, Inc.</a>');
+                                let marker_252 = L.marker([43, -86], {icon: Agency }).addTo(mymap);
+        marker_252.bindPopup('<a href="/organizations/bibles-international">Bibles International</a>');
+                                let marker_253 = L.marker([51.5616, -1.81803], {icon: Agency }).addTo(mymap);
+        marker_253.bindPopup('<a href="/organizations/bibles-on-demand">Bibles On Demand</a>');
+                                                let marker_255 = L.marker([55, 37], {icon: Agency }).addTo(mymap);
+        marker_255.bindPopup('<a href="/organizations/biblia-plus">Biblia Plus</a>');
+                                                let marker_257 = L.marker([39, -105], {icon: FOBAI }).addTo(mymap);
+        marker_257.bindPopup('<a href="/organizations/biblica">Biblica</a>');
+                                                let marker_259 = L.marker([41, 20], {icon: Agency }).addTo(mymap);
+        marker_259.bindPopup('<a href="/organizations/biblical-alerts-service">Biblical Alerts Service</a>');
+                                let marker_260 = L.marker([32.95741, -96.74636], {icon: Agency }).addTo(mymap);
+        marker_260.bindPopup('<a href="/organizations/biblical-studies-foundation">Biblical Studies Foundation</a>');
+                                let marker_261 = L.marker([33, -97], {icon: Agency }).addTo(mymap);
+        marker_261.bindPopup('<a href="/organizations/biblical-studies-press">Biblical Studies Press</a>');
+                                                                                                                let marker_267 = L.marker([41, 20], {icon: Agency }).addTo(mymap);
+        marker_267.bindPopup('<a href="/organizations/botime-cabej-mcm">Botime Çabej MÇM</a>');
+                                let marker_268 = L.marker([51, 5], {icon: Agency }).addTo(mymap);
+        marker_268.bindPopup('<a href="/organizations/brepols-publishers">Brepols Publishers</a>');
+                                let marker_269 = L.marker([33, -93], {icon: Agency }).addTo(mymap);
+        marker_269.bindPopup('<a href="/organizations/brg-bible-ministries">BRG Bible Ministries</a>');
+                                                let marker_271 = L.marker([51.5621752, -1.8204471], {icon: Agency }).addTo(mymap);
+        marker_271.bindPopup('<a href="/organizations/british-and-foreign-bible-society">British and Foreign Bible Society</a>');
+                                                                                let marker_275 = L.marker([41, -74], {icon: Agency }).addTo(mymap);
+        marker_275.bindPopup('<a href="/organizations/bro-dr-mathews-vergis">AboutBible.net</a>');
+                                let marker_276 = L.marker([44.773668, -93.386445], {icon: Agency }).addTo(mymap);
+        marker_276.bindPopup('<a href="/organizations/broad-street-publishing">BroadStreet Publishing Group</a>');
+                                                                                                let marker_281 = L.marker([23, 88], {icon: UBS }).addTo(mymap);
+        marker_281.bindPopup('<a href="/organizations/calcutta-auxiliary-bible-society">Calcutta Auxiliary Bible Society</a>');
+                                                                                let marker_285 = L.marker([4, 12], {icon: Agency }).addTo(mymap);
+        marker_285.bindPopup('<a href="/organizations/cameroon-association-for-bible-translation-and-literacy">CABTAL</a>');
+                                let marker_286 = L.marker([-27, 28], {icon: Agency }).addTo(mymap);
+        marker_286.bindPopup('<a href="/organizations/carpe-diem-media">Carpe Diem Media</a>');
+                                                                let marker_289 = L.marker([-26, 28], {icon: Agency }).addTo(mymap);
+        marker_289.bindPopup('<a href="/organizations/catholic-bible-foundation">Catholic Bible Foundation</a>');
+                                let marker_290 = L.marker([49, 9], {icon: Agency }).addTo(mymap);
+        marker_290.bindPopup('<a href="/organizations/catholic-bible-society">Catholic Bible Society</a>');
+                                let marker_291 = L.marker([24, 90], {icon: Agency }).addTo(mymap);
+        marker_291.bindPopup('<a href="/organizations/catholic-bishops-conference-of-bangladesh">Catholic Bishops Conference of Bangladesh</a>');
+                                                                                                                let marker_297 = L.marker([29, -81], {icon: Agency }).addTo(mymap);
+        marker_297.bindPopup('<a href="/organizations/charisma-media">Charisma Media</a>');
+                                let marker_298 = L.marker([35, -83], {icon: Agency }).addTo(mymap);
+        marker_298.bindPopup('<a href="/organizations/cherokee-bible-project">Cherokee Bible Project</a>');
+                                let marker_299 = L.marker([45.536835, -106.95581], {icon: Agency }).addTo(mymap);
+        marker_299.bindPopup('<a href="/organizations/cheyenne-bible-translation-committee">Cheyenne Bible Translation Committee</a>');
+                                                let marker_301 = L.marker([39, -91], {icon: Agency }).addTo(mymap);
+        marker_301.bindPopup('<a href="/organizations/child-evangelism-fellowship">Child Evangelism Fellowship</a>');
+                                let marker_302 = L.marker([42, -72], {icon: Agency }).addTo(mymap);
+        marker_302.bindPopup('<a href="/organizations/chilton-book-publishing">Chilton Book Publishing</a>');
+                                                let marker_304 = L.marker([1.2899698, 103.8627778], {icon: Agency }).addTo(mymap);
+        marker_304.bindPopup('<a href="/organizations/china-partnership">China Partnership</a>');
+                                let marker_305 = L.marker([22, 114], {icon: Agency }).addTo(mymap);
+        marker_305.bindPopup('<a href="/organizations/chinese-bible-international">Chinese Bible International</a>');
+                                let marker_306 = L.marker([42, -71], {icon: Agency }).addTo(mymap);
+        marker_306.bindPopup('<a href="/organizations/chinese-christian-internet-mission">Chinese Christian Internet Mission</a>');
+                                                                let marker_309 = L.marker([-33.9493, 25.57412], {icon: Agency }).addTo(mymap);
+        marker_309.bindPopup('<a href="/organizations/christelike">The Christian Publishing Company</a>');
+                                let marker_310 = L.marker([37, -76], {icon: Agency }).addTo(mymap);
+        marker_310.bindPopup('<a href="/organizations/christian-broadcasting-network">Christian Broadcasting Network</a>');
+                                                                let marker_313 = L.marker([42, -88], {icon: Agency }).addTo(mymap);
+        marker_313.bindPopup('<a href="/organizations/christian-life-quarterly">Christian Life Quarterly</a>');
+                                let marker_314 = L.marker([45, -123], {icon: Agency }).addTo(mymap);
+        marker_314.bindPopup('<a href="/organizations/christian-literature-international">Christian Literature International</a>');
+                                let marker_315 = L.marker([50, 14], {icon: Agency }).addTo(mymap);
+        marker_315.bindPopup('<a href="/organizations/christian-missionary-society">Christian Missionary Society</a>');
+                                                let marker_317 = L.marker([50.7451903, 8.2862229], {icon: Agency }).addTo(mymap);
+        marker_317.bindPopup('<a href="/organizations/christliche-verlagsgesellschaft-dillenburg">Christliche Verlagsgesellschaft Dillenburg</a>');
+                                                let marker_319 = L.marker([52, -1], {icon: Agency }).addTo(mymap);
+        marker_319.bindPopup('<a href="/organizations/church-missionary-society">Church Missionary Society</a>');
+                                                                let marker_322 = L.marker([36.0663657, -79.4962376], {icon: Agency }).addTo(mymap);
+        marker_322.bindPopup('<a href="/organizations/citygate-church">CityGate Church Inc</a>');
+                                let marker_323 = L.marker([15, 121], {icon: Agency }).addTo(mymap);
+        marker_323.bindPopup('<a href="/organizations/claretian-publications">Claretian Publications</a>');
+                                let marker_324 = L.marker([33, -87], {icon: Agency }).addTo(mymap);
+        marker_324.bindPopup('<a href="/organizations/clarion-creative">Clarion Creative</a>');
+                                                                                                let marker_329 = L.marker([43, -83], {icon: Agency }).addTo(mymap);
+        marker_329.bindPopup('<a href="/organizations/concordant-publishing-concern">Concordant Publishing Concern</a>');
+                                let marker_330 = L.marker([14.6344407, -90.5859293], {icon: Agency }).addTo(mymap);
+        marker_330.bindPopup('<a href="/organizations/conferencia-episcopal-de-guatemala">Conferencia Episcopal de Guatemala</a>');
+                                let marker_331 = L.marker([38.929667, -76.9994151], {icon: Agency }).addTo(mymap);
+        marker_331.bindPopup('<a href="/organizations/confraternity-of-christian-doctrine-inc">Confraternity of Christian Doctrine, Inc.</a>');
+                                                                                                let marker_336 = L.marker([40, -80], {icon: Agency }).addTo(mymap);
+        marker_336.bindPopup('<a href="/organizations/cornerstone-ministries">Cornerstone Ministries</a>');
+                                let marker_337 = L.marker([50, -5], {icon: Agency }).addTo(mymap);
+        marker_337.bindPopup('<a href="/organizations/cornish-bible-project">Cornish Bible Project</a>');
+                                let marker_338 = L.marker([50, -5], {icon: Agency }).addTo(mymap);
+        marker_338.bindPopup('<a href="/organizations/cornish-language-board">The Cornish Language Board</a>');
+                                let marker_339 = L.marker([40.7047913, -74.0072615], {icon: Agency }).addTo(mymap);
+        marker_339.bindPopup('<a href="/organizations/covenant-press">Covenant Press</a>');
+                                let marker_340 = L.marker([46, 16], {icon: Agency }).addTo(mymap);
+        marker_340.bindPopup('<a href="/organizations/crazy-love-ministries">Crazy Love Ministries</a>');
+                                                let marker_342 = L.marker([18.79124, 98.992], {icon: Agency }).addTo(mymap);
+        marker_342.bindPopup('<a href="/organizations/create-international">Create International</a>');
+                                                let marker_344 = L.marker([42, -88], {icon: FOBAI }).addTo(mymap);
+        marker_344.bindPopup('<a href="/organizations/crossway">Crossway</a>');
+                                let marker_345 = L.marker([33, -112], {icon: Agency }).addTo(mymap);
+        marker_345.bindPopup('<a href="/organizations/crosswire">CrossWire</a>');
+                                let marker_346 = L.marker([26.068062, -80.3035888], {icon: Agency }).addTo(mymap);
+        marker_346.bindPopup('<a href="/organizations/cuban-bible-commission">Cuban Bible Commission</a>');
+                                                let marker_348 = L.marker([33, 35], {icon: FOBAI }).addTo(mymap);
+        marker_348.bindPopup('<a href="/organizations/davar-partners-international">Davar Partners International</a>');
+                                let marker_349 = L.marker([39, -105], {icon: Agency }).addTo(mymap);
+        marker_349.bindPopup('<a href="/organizations/david-c-cook">David C. Cook</a>');
+                                let marker_350 = L.marker([33, -97], {icon: FOBAI }).addTo(mymap);
+        marker_350.bindPopup('<a href="/organizations/deaf-bible">Deaf Bible Society</a>');
+                                let marker_351 = L.marker([45.303972, -93.564401], {icon: Agency }).addTo(mymap);
+        marker_351.bindPopup('<a href="/organizations/deaf-harbor">Deaf Harbor</a>');
+                                let marker_352 = L.marker([41.2395893, -95.8161878], {icon: FOBAI }).addTo(mymap);
+        marker_352.bindPopup('<a href="/organizations/deaf-missions">Deaf Missions</a>');
+                                let marker_353 = L.marker([43, -3], {icon: Agency }).addTo(mymap);
+        marker_353.bindPopup('<a href="/organizations/desclee-de-brouwer">Desclée De Brouwer</a>');
+                                let marker_354 = L.marker([45, -93], {icon: Agency }).addTo(mymap);
+        marker_354.bindPopup('<a href="/organizations/desiring-god">Desiring God</a>');
+                                let marker_355 = L.marker([43, -71], {icon: Agency }).addTo(mymap);
+        marker_355.bindPopup('<a href="/organizations/destiny-publishers">Destiny Publishers</a>');
+                                let marker_356 = L.marker([45, -96], {icon: Agency }).addTo(mymap);
+        marker_356.bindPopup('<a href="/organizations/deuel-enterprises-inc">Deuel Enterprises Inc.</a>');
+                                                let marker_358 = L.marker([52, -2], {icon: Library }).addTo(mymap);
+        marker_358.bindPopup('<a href="/organizations/digital-bible-library">The Digital Bible Library</a>');
+                                let marker_359 = L.marker([30.3635845, -95.4770041], {icon: FOBAI }).addTo(mymap);
+        marker_359.bindPopup('<a href="/organizations/digital-bible-society">Digital Bible Society</a>');
+                                                                let marker_362 = L.marker([15, -91], {icon: Agency }).addTo(mymap);
+        marker_362.bindPopup('<a href="/organizations/diocesis-de-quiche">Diócesis de Quiché</a>');
+                                                                                                                let marker_368 = L.marker([43, -86], {icon: Agency }).addTo(mymap);
+        marker_368.bindPopup('<a href="/organizations/door-international">DOOR International</a>');
+                                                                let marker_371 = L.marker([44.33847, -79.69727], {icon: Agency }).addTo(mymap);
+        marker_371.bindPopup('<a href="/organizations/dunamos-media">Dunamos Media Inc</a>');
+                                                                let marker_374 = L.marker([6, -11], {icon: Agency }).addTo(mymap);
+        marker_374.bindPopup('<a href="/organizations/e-je-bible-translation-committee">E Je Bible Translation Committee</a>');
+                                                let marker_376 = L.marker([48.1369567, 16.3147639], {icon: Agency }).addTo(mymap);
+        marker_376.bindPopup('<a href="/organizations/eastern-european-mission">Eastern European Mission</a>');
+                                                let marker_378 = L.marker([28, 85], {icon: Agency }).addTo(mymap);
+        marker_378.bindPopup('<a href="/organizations/eastern-tamang-language-team">Eastern Tamang Language Team</a>');
+                                let marker_379 = L.marker([21, -156], {icon: Agency }).addTo(mymap);
+        marker_379.bindPopup('<a href="/organizations/ebible">eBible</a>');
+                                let marker_380 = L.marker([42.498645, -90.66822], {icon: Agency }).addTo(mymap);
+        marker_380.bindPopup('<a href="/organizations/ecs-ministries-emmaus-worldwide">ECS Ministries (DBA Emmaus Worldwide)</a>');
+                                let marker_381 = L.marker([-24, -47], {icon: FOBAI }).addTo(mymap);
+        marker_381.bindPopup('<a href="/organizations/editora-mundo-cristao">Editora-Mundo-Cristao</a>');
+                                let marker_382 = L.marker([42, 2], {icon: Agency }).addTo(mymap);
+        marker_382.bindPopup('<a href="/organizations/editorial-clie">Editorial CLIE</a>');
+                                let marker_383 = L.marker([44.44459, 26.23043], {icon: Agency }).addTo(mymap);
+        marker_383.bindPopup('<a href="/organizations/editura-viata-si-sanatate">Editura Viata si Sanatate</a>');
+                                let marker_384 = L.marker([44.44459, 26.23043], {icon: Agency }).addTo(mymap);
+        marker_384.bindPopup('<a href="/organizations/educational-media-foundation">Educational Media Foundation</a>');
+                                let marker_385 = L.marker([48.7216104, 9.093481], {icon: Agency }).addTo(mymap);
+        marker_385.bindPopup('<a href="/organizations/ejw-service">ejw-service gmbh</a>');
+                                                let marker_387 = L.marker([51, -1], {icon: Agency }).addTo(mymap);
+        marker_387.bindPopup('<a href="/organizations/elam-ministries">Elam Ministries</a>');
+                                                let marker_389 = L.marker([34.4412095, -119.8221863], {icon: Agency }).addTo(mymap);
+        marker_389.bindPopup('<a href="/organizations/enduring-word">Enduring Word</a>');
+                                                                let marker_392 = L.marker([-19.833022, 34.8609185], {icon: Agency }).addTo(mymap);
+        marker_392.bindPopup('<a href="/organizations/equip-mozambique">Equip Mozambique</a>');
+                                let marker_393 = L.marker([38, -79], {icon: Agency }).addTo(mymap);
+        marker_393.bindPopup('<a href="/organizations/equipping-the-saints">Equipping The Saints</a>');
+                                let marker_394 = L.marker([50.5639, 8.47165], {icon: Agency }).addTo(mymap);
+        marker_394.bindPopup('<a href="/organizations/erf-medien">ERF Medien e. V.</a>');
+                                                                let marker_397 = L.marker([8.9977402, 38.7650869], {icon: Agency }).addTo(mymap);
+        marker_397.bindPopup('<a href="/organizations/ethiopian-kale-heywet-church">Ethiopian Kale Heywet Church</a>');
+                                                let marker_399 = L.marker([29, -81], {icon: Agency }).addTo(mymap);
+        marker_399.bindPopup('<a href="/organizations/ethnos-360">Ethnos 360</a>');
+                                                                                                let marker_404 = L.marker([12, -15], {icon: Agency }).addTo(mymap);
+        marker_404.bindPopup('<a href="/organizations/evangelical-church-of-guinea-bissau">Evangelical Church of Guinea-Bissau</a>');
+                                let marker_405 = L.marker([-9, 147], {icon: Agency }).addTo(mymap);
+        marker_405.bindPopup('<a href="/organizations/evangelical-church-of-papua-new-guinea">Evangelical Church of Papua New Guinea</a>');
+                                let marker_406 = L.marker([10.76781, 106.69539], {icon: Agency }).addTo(mymap);
+        marker_406.bindPopup('<a href="/organizations/evangelical-church-of-vietnam">Evangelical Church of Vietnam</a>');
+                                let marker_407 = L.marker([33.774056, -117.824646], {icon: Agency }).addTo(mymap);
+        marker_407.bindPopup('<a href="/organizations/everest-audio-bible">Everest Audio Bible</a>');
+                                let marker_408 = L.marker([53, -7], {icon: Agency }).addTo(mymap);
+        marker_408.bindPopup('<a href="/organizations/evertype">Evertype</a>');
+                                let marker_409 = L.marker([39, -105], {icon: Agency }).addTo(mymap);
+        marker_409.bindPopup('<a href="/organizations/every-home-for-christ">Every Home for Christ</a>');
+                                let marker_410 = L.marker([48, 12], {icon: Agency }).addTo(mymap);
+        marker_410.bindPopup('<a href="/organizations/f-a-brockhaus-ag">F.A. Brockhaus AG</a>');
+                                let marker_411 = L.marker([55, 9], {icon: Agency }).addTo(mymap);
+        marker_411.bindPopup('<a href="/organizations/f-h-baader">F.H. Baader</a>');
+                                let marker_412 = L.marker([43.5476721, -96.7237563], {icon: Agency }).addTo(mymap);
+        marker_412.bindPopup('<a href="/organizations/faith-agency">FAITH Agency, LLC</a>');
+                                let marker_413 = L.marker([35, -107], {icon: FOBAI }).addTo(mymap);
+        marker_413.bindPopup('<a href="/organizations/faith-comes-by-hearing">Faith Comes By Hearing</a>');
+                                                                let marker_416 = L.marker([34.0160857, -117.8565866], {icon: Agency }).addTo(mymap);
+        marker_416.bindPopup('<a href="/organizations/family-keepers-malaysia-berhad">Family Keepers Malaysia Berhad</a>');
+                                                                let marker_419 = L.marker([34, -118], {icon: Agency }).addTo(mymap);
+        marker_419.bindPopup('<a href="/organizations/farsi-praise">Farsi Praise</a>');
+                                let marker_420 = L.marker([49, 2], {icon: Agency }).addTo(mymap);
+        marker_420.bindPopup('<a href="/organizations/fayard">Fayard</a>');
+                                let marker_421 = L.marker([44, -79], {icon: Agency }).addTo(mymap);
+        marker_421.bindPopup('<a href="/organizations/fellowship-for-faith-for-the-muslims">Fellowship for Faith for the Muslims</a>');
+                                                let marker_423 = L.marker([60, 25], {icon: Agency }).addTo(mymap);
+        marker_423.bindPopup('<a href="/organizations/finnish-lutheran-church">Finnish Lutheran Church</a>');
+                                let marker_424 = L.marker([1.3343313, 103.887151], {icon: Agency }).addTo(mymap);
+        marker_424.bindPopup('<a href="/organizations/folk-and-sprak-and-swedish-mission-alliance">Folk and Sprak and Swedish Mission Alliance</a>');
+                                                let marker_426 = L.marker([37, -96], {icon: Agency }).addTo(mymap);
+        marker_426.bindPopup('<a href="/organizations/folkandsprak">Folk&amp;Språk</a>');
+                                                let marker_428 = L.marker([40.30528, -75.366665], {icon: Agency }).addTo(mymap);
+        marker_428.bindPopup('<a href="/organizations/franconia-mennonite-conference">Franconia Mennonite Conference</a>');
+                                let marker_429 = L.marker([39.15328, -76.906335], {icon: Agency }).addTo(mymap);
+        marker_429.bindPopup('<a href="/organizations/free-bible-ministry">Free Bible Ministry, Inc.</a>');
+                                                let marker_431 = L.marker([36, -84], {icon: Agency }).addTo(mymap);
+        marker_431.bindPopup('<a href="/organizations/freedom-in-christ">Freedom in Christ</a>');
+                                let marker_432 = L.marker([48.8448771, 2.2859959], {icon: UBS }).addTo(mymap);
+        marker_432.bindPopup('<a href="/organizations/french-bible-society">French Bible Society</a>');
+                                                let marker_434 = L.marker([13.11687, 80.1524], {icon: Agency }).addTo(mymap);
+        marker_434.bindPopup('<a href="/organizations/friends-missionary-prayer-band">Friends Missionary Prayer Band</a>');
+                                let marker_435 = L.marker([53, 19], {icon: Agency }).addTo(mymap);
+        marker_435.bindPopup('<a href="/organizations/fundacja-wrota-nadziei">Fundacja Wrota Nadziei</a>');
+                                let marker_436 = L.marker([48, -122], {icon: Agency }).addTo(mymap);
+        marker_436.bindPopup('<a href="/organizations/funk-and-wagnalls">Funk and Wagnalls</a>');
+                                let marker_437 = L.marker([28, -83], {icon: Agency }).addTo(mymap);
+        marker_437.bindPopup('<a href="/organizations/galcom">Galcom</a>');
+                                let marker_438 = L.marker([49, 2], {icon: Agency }).addTo(mymap);
+        marker_438.bindPopup('<a href="/organizations/gallimard">Gallimard</a>');
+                                                                let marker_441 = L.marker([46.5722049, 6.6063051], {icon: Agency }).addTo(mymap);
+        marker_441.bindPopup('<a href="/organizations/genfer">Genfer Bibelgesellschaft</a>');
+                                                                                let marker_445 = L.marker([38, -86], {icon: Agency }).addTo(mymap);
+        marker_445.bindPopup('<a href="/organizations/gideons-international">Gideons International</a>');
+                                let marker_446 = L.marker([44, -80], {icon: Agency }).addTo(mymap);
+        marker_446.bindPopup('<a href="/organizations/gideons-international-canada">Gideons International Canada</a>');
+                                                let marker_448 = L.marker([5.57888, -0.23261], {icon: Agency }).addTo(mymap);
+        marker_448.bindPopup('<a href="/organizations/gillbt">GILLBT</a>');
+                                let marker_449 = L.marker([30.1654, -81.72242], {icon: Agency }).addTo(mymap);
+        marker_449.bindPopup('<a href="/organizations/give-gods-word">God’s Word to the Nations Mission Society, Inc.</a>');
+                                let marker_450 = L.marker([56, -4], {icon: Agency }).addTo(mymap);
+        marker_450.bindPopup('<a href="/organizations/glasgow-iranian-church">Glasgow Iranian Church</a>');
+                                                let marker_452 = L.marker([43, -86], {icon: Agency }).addTo(mymap);
+        marker_452.bindPopup('<a href="/organizations/global-bible-initiative">Global Bible Initiative</a>');
+                                                let marker_454 = L.marker([37, -122], {icon: Agency }).addTo(mymap);
+        marker_454.bindPopup('<a href="/organizations/global-media-outreach">Global Media Outreach</a>');
+                                                let marker_456 = L.marker([34, -117], {icon: FOBAI }).addTo(mymap);
+        marker_456.bindPopup('<a href="/organizations/global-recordings-network">Agency</a>');
+                                let marker_457 = L.marker([37, -95], {icon: Agency }).addTo(mymap);
+        marker_457.bindPopup('<a href="/organizations/gnpi">GNPI</a>');
+                                let marker_458 = L.marker([36.0382728, -115.0469444], {icon: Agency }).addTo(mymap);
+        marker_458.bindPopup('<a href="/organizations/god-behind-bars">God Behind Bars</a>');
+                                let marker_459 = L.marker([40.8422734, -72.8759299], {icon: Agency }).addTo(mymap);
+        marker_459.bindPopup('<a href="/organizations/gods-vision-ministries">God&#039;s Vision Ministries</a>');
+                                let marker_460 = L.marker([52, -4], {icon: Agency }).addTo(mymap);
+        marker_460.bindPopup('<a href="/organizations/gomer-press">Gomer Press</a>');
+                                let marker_461 = L.marker([51.93178, -2.40659], {icon: Agency }).addTo(mymap);
+        marker_461.bindPopup('<a href="/organizations/good-news-centre">Good News Centre</a>');
+                                                let marker_463 = L.marker([37.09084, -94.51312], {icon: Agency }).addTo(mymap);
+        marker_463.bindPopup('<a href="/organizations/good-news-productions-international">Good News Productions&#039; International</a>');
+                                                let marker_465 = L.marker([52, -114], {icon: Agency }).addTo(mymap);
+        marker_465.bindPopup('<a href="/organizations/good-seed-intl">GoodSeed International</a>');
+                                                let marker_467 = L.marker([43.35683, -79.7689], {icon: Agency }).addTo(mymap);
+        marker_467.bindPopup('<a href="/organizations/gospel-comics">Gospel Comics</a>');
+                                                let marker_469 = L.marker([11.022271, 76.8843447], {icon: Agency }).addTo(mymap);
+        marker_469.bindPopup('<a href="/organizations/gospel-garden">Gospel Garden</a>');
+                                let marker_470 = L.marker([44.94441, -93.09327], {icon: Agency }).addTo(mymap);
+        marker_470.bindPopup('<a href="/organizations/gospel-joy-international">Gospel Joy International</a>');
+                                                let marker_472 = L.marker([39, -105], {icon: Agency }).addTo(mymap);
+        marker_472.bindPopup('<a href="/organizations/got-questions">Got Questions?</a>');
+                                                let marker_474 = L.marker([33, -112], {icon: Agency }).addTo(mymap);
+        marker_474.bindPopup('<a href="/organizations/greenstone-ministry">GreenStone Ministry</a>');
+                                                                                let marker_478 = L.marker([32, 35], {icon: Agency }).addTo(mymap);
+        marker_478.bindPopup('<a href="/organizations/hagefen-publishing">HaGefen Publishing</a>');
+                                let marker_479 = L.marker([40, -74], {icon: Agency }).addTo(mymap);
+        marker_479.bindPopup('<a href="/organizations/halleluyah-scriptures">HalleluYah Scriptures</a>');
+                                                let marker_481 = L.marker([43, -86], {icon: Agency }).addTo(mymap);
+        marker_481.bindPopup('<a href="/organizations/harpercollins">HarperCollins</a>');
+                                let marker_482 = L.marker([42, -71], {icon: Agency }).addTo(mymap);
+        marker_482.bindPopup('<a href="/organizations/harvard-press">Harvard Press</a>');
+                                let marker_483 = L.marker([48, -122], {icon: Agency }).addTo(mymap);
+        marker_483.bindPopup('<a href="/organizations/hayate-abadi">Hayate Abadi</a>');
+                                                                let marker_486 = L.marker([43, -71], {icon: Agency }).addTo(mymap);
+        marker_486.bindPopup('<a href="/organizations/hendrickson-publishing">Hendrickson Publishing</a>');
+                                                let marker_488 = L.marker([59.9815662, 11.0138249], {icon: Agency }).addTo(mymap);
+        marker_488.bindPopup('<a href="/organizations/hermon-forlag">Hermon Forlag</a>');
+                                                                let marker_491 = L.marker([36, -87], {icon: Agency }).addTo(mymap);
+        marker_491.bindPopup('<a href="/organizations/holman-bible-publishers">Holman Bible Publishers</a>');
+                                let marker_492 = L.marker([22, 114], {icon: Agency }).addTo(mymap);
+        marker_492.bindPopup('<a href="/organizations/hong-kong-bible-society">Hong Kong Bible Society</a>');
+                                let marker_493 = L.marker([52, -3], {icon: Agency }).addTo(mymap);
+        marker_493.bindPopup('<a href="/organizations/hope-for-wales">Hope for Wales</a>');
+                                                let marker_495 = L.marker([55, 37], {icon: Agency }).addTo(mymap);
+        marker_495.bindPopup('<a href="/organizations/ibt-zaoksky-russia">Ibt-Zaoksky-Russia</a>');
+                                                                                let marker_499 = L.marker([34, -118], {icon: Agency }).addTo(mymap);
+        marker_499.bindPopup('<a href="/organizations/immersion-digital">Immersion Digital</a>');
+                                                                                let marker_503 = L.marker([42, 2], {icon: Agency }).addTo(mymap);
+        marker_503.bindPopup('<a href="/organizations/institucio-biblica-evangelica-de-catalunya">Evangelical Biblical Institution of Catalonia</a>');
+                                let marker_504 = L.marker([56, 38], {icon: Agency }).addTo(mymap);
+        marker_504.bindPopup('<a href="/organizations/institute-for-bible-translation">Institute for Bible Translation</a>');
+                                let marker_505 = L.marker([60, 25], {icon: Agency }).addTo(mymap);
+        marker_505.bindPopup('<a href="/organizations/institute-for-bible-translation-helsinki">Institute for Bible Translation - Helsinki</a>');
+                                let marker_506 = L.marker([56, 38], {icon: Agency }).addTo(mymap);
+        marker_506.bindPopup('<a href="/organizations/institute-for-bible-translation-moscow">Institute for Bible Translation, Moscow</a>');
+                                                let marker_508 = L.marker([59.3160235, 18.0759559], {icon: Agency }).addTo(mymap);
+        marker_508.bindPopup('<a href="/organizations/institute-for-bible-translation-sweden">Institute for Bible Translation, Sweden</a>');
+                                let marker_509 = L.marker([-26, 28], {icon: Agency }).addTo(mymap);
+        marker_509.bindPopup('<a href="/organizations/institute-for-scripture-research">Institute for Scripture Research</a>');
+                                let marker_510 = L.marker([39, -90], {icon: Agency }).addTo(mymap);
+        marker_510.bindPopup('<a href="/organizations/int-lutheran-laymen-rsquo-s-league">International Lutheran Laymen&#039;s League</a>');
+                                let marker_511 = L.marker([32, -87], {icon: Agency }).addTo(mymap);
+        marker_511.bindPopup('<a href="/organizations/international-alliance-of-independent-publishers">International Alliance of Independent Publishers</a>');
+                                let marker_512 = L.marker([38.9971695, -104.7981002], {icon: UBS }).addTo(mymap);
+        marker_512.bindPopup('<a href="/organizations/international-bible-society">International Bible Society</a>');
+                                let marker_513 = L.marker([49, 2], {icon: Agency }).addTo(mymap);
+        marker_513.bindPopup('<a href="/organizations/international-bible-society-of-east-africa">International Bible Society of East Africa</a>');
+                                let marker_514 = L.marker([37.0418758, -76.3771384], {icon: Agency }).addTo(mymap);
+        marker_514.bindPopup('<a href="/organizations/international-cooperating-ministries">International Cooperating Ministries</a>');
+                                let marker_515 = L.marker([38, -77], {icon: Agency }).addTo(mymap);
+        marker_515.bindPopup('<a href="/organizations/international-mission-board">International Mission Board of the Southern Baptist Convention</a>');
+                                let marker_516 = L.marker([33.085698, -96.837228], {icon: Agency }).addTo(mymap);
+        marker_516.bindPopup('<a href="/organizations/international-scripture-ministries">International Scripture Ministries, Inc.</a>');
+                                let marker_517 = L.marker([39, -121], {icon: Agency }).addTo(mymap);
+        marker_517.bindPopup('<a href="/organizations/international-sharif-bible-society">International Sharif Bible Society</a>');
+                                let marker_518 = L.marker([35.951709, -86.809215], {icon: Agency }).addTo(mymap);
+        marker_518.bindPopup('<a href="/organizations/interstudy">Interstudy, inc.</a>');
+                                let marker_519 = L.marker([40, -95], {icon: Agency }).addTo(mymap);
+        marker_519.bindPopup('<a href="/organizations/iowa-and-sac-mission-press">Iowa and Sac Mission Press</a>');
+                                let marker_520 = L.marker([33, -97], {icon: Agency }).addTo(mymap);
+        marker_520.bindPopup('<a href="/organizations/iran-alive-ministries">Iran Alive Ministries</a>');
+                                                let marker_522 = L.marker([39.9851741, -85.9446813], {icon: Agency }).addTo(mymap);
+        marker_522.bindPopup('<a href="/organizations/itown-ministries">ITOWN Ministries, Inc.</a>');
+                                let marker_523 = L.marker([36, -80], {icon: Agency }).addTo(mymap);
+        marker_523.bindPopup('<a href="/organizations/j-rai-bible-association">Jơrai Bible Association</a>');
+                                                                                                                                let marker_530 = L.marker([40, -75], {icon: Agency }).addTo(mymap);
+        marker_530.bindPopup('<a href="/organizations/jewish-publication-society">Jewish Publication Society</a>');
+                                                let marker_532 = L.marker([50, 8], {icon: Agency }).addTo(mymap);
+        marker_532.bindPopup('<a href="/organizations/johannes-gutenberg">Johannes Gutenberg</a>');
+                                                let marker_534 = L.marker([56, -3], {icon: Agency }).addTo(mymap);
+        marker_534.bindPopup('<a href="/organizations/johnston-press">Johnston Press</a>');
+                                let marker_535 = L.marker([34, -118], {icon: Agency }).addTo(mymap);
+        marker_535.bindPopup('<a href="/organizations/joseph-films">Joseph Films</a>');
+                                let marker_536 = L.marker([33, -97], {icon: Agency }).addTo(mymap);
+        marker_536.bindPopup('<a href="/organizations/josh-mcdowell-ministries">Josh McDowell Ministries</a>');
+                                let marker_537 = L.marker([52, -1], {icon: Agency }).addTo(mymap);
+        marker_537.bindPopup('<a href="/organizations/jubilate-software-ltd">Jubilate Software Ltd</a>');
+                                let marker_538 = L.marker([41, -74], {icon: Agency }).addTo(mymap);
+        marker_538.bindPopup('<a href="/organizations/judaica-press">Judaica Press</a>');
+                                                let marker_540 = L.marker([-8.55408, 125.57033], {icon: Agency }).addTo(mymap);
+        marker_540.bindPopup('<a href="/organizations/kadi-kapasidade">Kadi Kapasidade</a>');
+                                let marker_541 = L.marker([41, -85], {icon: Agency }).addTo(mymap);
+        marker_541.bindPopup('<a href="/organizations/kairos-international">Kairos International</a>');
+                                let marker_542 = L.marker([52, -1], {icon: Agency }).addTo(mymap);
+        marker_542.bindPopup('<a href="/organizations/kalaam-media">Kalaam Media</a>');
+                                let marker_543 = L.marker([10, 76], {icon: Agency }).addTo(mymap);
+        marker_543.bindPopup('<a href="/organizations/kale-heywet-church">Kale Heywet Church</a>');
+                                                                let marker_546 = L.marker([51.0963235, 17.0090593], {icon: Agency }).addTo(mymap);
+        marker_546.bindPopup('<a href="/organizations/karzelek-ograniczon">Karzelek Ograniczon Odpowiedzialno</a>');
+                                                let marker_548 = L.marker([30, 31], {icon: Agency }).addTo(mymap);
+        marker_548.bindPopup('<a href="/organizations/kdec-presbyterian-church-egypt">Kasr El Dobara Evangelical Church</a>');
+                                                let marker_550 = L.marker([10, 76], {icon: Agency }).addTo(mymap);
+        marker_550.bindPopup('<a href="/organizations/kerala-catholic-bible-society">Kerala Catholic Bible Society</a>');
+                                let marker_551 = L.marker([44.79775, -106.95495], {icon: Agency }).addTo(mymap);
+        marker_551.bindPopup('<a href="/organizations/kerygma-digital">Kerygma Digital Co.</a>');
+                                let marker_552 = L.marker([50, -97], {icon: Agency }).addTo(mymap);
+        marker_552.bindPopup('<a href="/organizations/kindred-productions">Kindred Productions</a>');
+                                let marker_553 = L.marker([30, -98], {icon: Agency }).addTo(mymap);
+        marker_553.bindPopup('<a href="/organizations/kingdom-media-games">Kingdom Media Games</a>');
+                                                                                                let marker_558 = L.marker([50.1140813, 14.4728554], {icon: Agency }).addTo(mymap);
+        marker_558.bindPopup('<a href="/organizations/kms">Křesťanská misijní společnost</a>');
+                                                let marker_560 = L.marker([37, 127], {icon: Agency }).addTo(mymap);
+        marker_560.bindPopup('<a href="/organizations/korea-computer-mission">Korea Computer Mission</a>');
+                                let marker_561 = L.marker([43, -86], {icon: Agency }).addTo(mymap);
+        marker_561.bindPopup('<a href="/organizations/kregel-publications">Kregel Publications</a>');
+                                                let marker_563 = L.marker([55.9227867, 23.283445], {icon: Agency }).addTo(mymap);
+        marker_563.bindPopup('<a href="/organizations/krikscioniu">Krikščionių bendrija Tikėjimo žodis</a>');
+                                                                                let marker_567 = L.marker([47, 9], {icon: Agency }).addTo(mymap);
+        marker_567.bindPopup('<a href="/organizations/la-buona-novella">La Buona Novella</a>');
+                                let marker_568 = L.marker([41, -6], {icon: Agency }).addTo(mymap);
+        marker_568.bindPopup('<a href="/organizations/la-casa-de-la-biblia">La Casa de la Biblia</a>');
+                                let marker_569 = L.marker([19.29916, -99.1927118], {icon: Agency }).addTo(mymap);
+        marker_569.bindPopup('<a href="/organizations/la-casa-sobre-la-roca">La Casa Sobre la Roca AC</a>');
+                                                let marker_571 = L.marker([35, -107], {icon: Agency }).addTo(mymap);
+        marker_571.bindPopup('<a href="/organizations/laguna-mission-press">Laguna Mission Press</a>');
+                                let marker_572 = L.marker([44, -103], {icon: Agency }).addTo(mymap);
+        marker_572.bindPopup('<a href="/organizations/lakota-bible-translation-project">Lakota Bible Translation Project</a>');
+                                                let marker_574 = L.marker([-37.556949, 143.8571868], {icon: Agency }).addTo(mymap);
+        marker_574.bindPopup('<a href="/organizations/launch-interactive">Launch Interactive</a>');
+                                let marker_575 = L.marker([49, 2], {icon: Agency }).addTo(mymap);
+        marker_575.bindPopup('<a href="/organizations/le-cerf">Le Cerf</a>');
+                                                                let marker_578 = L.marker([39, -77], {icon: Agency }).addTo(mymap);
+        marker_578.bindPopup('<a href="/organizations/lederer-messianic-ministries">Lederer Messianic Ministries</a>');
+                                let marker_579 = L.marker([49, 17], {icon: Agency }).addTo(mymap);
+        marker_579.bindPopup('<a href="/organizations/legacy-of-st-wenceslas">Legacy of St. Wenceslas</a>');
+                                                let marker_581 = L.marker([51, 12], {icon: Agency }).addTo(mymap);
+        marker_581.bindPopup('<a href="/organizations/leipzig-university-library">Leipzig University Library</a>');
+                                                let marker_583 = L.marker([-25, -57], {icon: Agency }).addTo(mymap);
+        marker_583.bindPopup('<a href="/organizations/letra-paraguay">LETRA Paraguay</a>');
+                                let marker_584 = L.marker([41, -74], {icon: Agency }).addTo(mymap);
+        marker_584.bindPopup('<a href="/organizations/library-for-all">Library-For-All</a>');
+                                let marker_585 = L.marker([43.6479699, -70.26775], {icon: Agency }).addTo(mymap);
+        marker_585.bindPopup('<a href="/organizations/librarything">LibraryThing</a>');
+                                let marker_586 = L.marker([42, 12], {icon: Agency }).addTo(mymap);
+        marker_586.bindPopup('<a href="/organizations/libreria-editrice-vaticana">Libreria Editrice Vaticana</a>');
+                                                let marker_588 = L.marker([40.800288, -74.816794], {icon: Agency }).addTo(mymap);
+        marker_588.bindPopup('<a href="/organizations/liebenzal">Liebenzel Mission</a>');
+                                let marker_589 = L.marker([34, -117], {icon: Agency }).addTo(mymap);
+        marker_589.bindPopup('<a href="/organizations/life-giving-resources">Life Giving Resources</a>');
+                                let marker_590 = L.marker([45, -90], {icon: Agency }).addTo(mymap);
+        marker_590.bindPopup('<a href="/organizations/life-sentence">LIFE SENTENCE</a>');
+                                let marker_591 = L.marker([40, -86], {icon: Agency }).addTo(mymap);
+        marker_591.bindPopup('<a href="/organizations/lifegate-gospel">Lifegate Gospel</a>');
+                                let marker_592 = L.marker([-12, -77], {icon: Agency }).addTo(mymap);
+        marker_592.bindPopup('<a href="/organizations/liga-biblica-del-peru">Bible League of Peru</a>');
+                                let marker_593 = L.marker([18, -70], {icon: Agency }).addTo(mymap);
+        marker_593.bindPopup('<a href="/organizations/liga-biblica-mundial-del-hogar">Liga Biblica Mundial del Hogar</a>');
+                                                                let marker_596 = L.marker([29, -81], {icon: Agency }).addTo(mymap);
+        marker_596.bindPopup('<a href="/organizations/ligonier">Ligonier</a>');
+                                                let marker_598 = L.marker([-1, 37], {icon: Agency }).addTo(mymap);
+        marker_598.bindPopup('<a href="/organizations/literacy-and-bible-translation">Bible Translation &amp; Literacy</a>');
+                                let marker_599 = L.marker([36, -96], {icon: Agency }).addTo(mymap);
+        marker_599.bindPopup('<a href="/organizations/literacy-and-evangelism">Literacy and Evangelism</a>');
+                                                let marker_601 = L.marker([34, -118], {icon: Agency }).addTo(mymap);
+        marker_601.bindPopup('<a href="/organizations/living-stream-ministry">Living Stream Ministry</a>');
+                                let marker_602 = L.marker([34, -118], {icon: Agency }).addTo(mymap);
+        marker_602.bindPopup('<a href="/organizations/lockman-foundation">The Lockman Foundation</a>');
+                                let marker_603 = L.marker([49, -122], {icon: Agency }).addTo(mymap);
+        marker_603.bindPopup('<a href="/organizations/logos-bible-software">Logos Bible Software</a>');
+                                                let marker_605 = L.marker([36.3681139, -86.6109962], {icon: Agency }).addTo(mymap);
+        marker_605.bindPopup('<a href="/organizations/long-hollow-baptist-church">Long Hollow Baptist Church</a>');
+                                                let marker_607 = L.marker([52, 6], {icon: Agency }).addTo(mymap);
+        marker_607.bindPopup('<a href="/organizations/loukas-foundation">Loukas Foundation</a>');
+                                let marker_608 = L.marker([26, -80], {icon: Agency }).addTo(mymap);
+        marker_608.bindPopup('<a href="/organizations/lumo-project">LUMO Project</a>');
+                                let marker_609 = L.marker([39, -94], {icon: FOBAI }).addTo(mymap);
+        marker_609.bindPopup('<a href="/organizations/lutheran-bible-translators">Lutheran Bible Translators</a>');
+                                let marker_610 = L.marker([-34.908242, 138.5937662], {icon: Agency }).addTo(mymap);
+        marker_610.bindPopup('<a href="/organizations/lutheran-bible-translators-australia">Lutheran Bible Translators Australia</a>');
+                                let marker_611 = L.marker([60.1987879, 24.9220576], {icon: Agency }).addTo(mymap);
+        marker_611.bindPopup('<a href="/organizations/lutheran-church-council-of-finland">Church Council of the Evangelical Lutheran Church of Finland</a>');
+                                let marker_612 = L.marker([5, 8], {icon: Agency }).addTo(mymap);
+        marker_612.bindPopup('<a href="/organizations/lutheran-church-nigeria">Lutheran Church of Nigeria</a>');
+                                                let marker_614 = L.marker([23, 76], {icon: Agency }).addTo(mymap);
+        marker_614.bindPopup('<a href="/organizations/malvoday">Malvoday</a>');
+                                let marker_615 = L.marker([54, -4], {icon: UBS }).addTo(mymap);
+        marker_615.bindPopup('<a href="/organizations/manx-gaelic-society">Manx Gaelic Society</a>');
+                                let marker_616 = L.marker([-23.62294, -46.62961], {icon: Agency }).addTo(mymap);
+        marker_616.bindPopup('<a href="/organizations/maquinaria-sankto-editora-distribuidora">Maquinaria Sankto Editora e Distribuidora Ltda</a>');
+                                                let marker_618 = L.marker([44, -81], {icon: Agency }).addTo(mymap);
+        marker_618.bindPopup('<a href="/organizations/margaret-jank">Margaret Jank</a>');
+                                                let marker_620 = L.marker([30, -96], {icon: Agency }).addTo(mymap);
+        marker_620.bindPopup('<a href="/organizations/mars-hill">Mars Hill</a>');
+                                                let marker_622 = L.marker([41, -74], {icon: Agency }).addTo(mymap);
+        marker_622.bindPopup('<a href="/organizations/mary-knoll">Maryknoll</a>');
+                                let marker_623 = L.marker([41, -72], {icon: Agency }).addTo(mymap);
+        marker_623.bindPopup('<a href="/organizations/massachusetts-bible-society">Massachusetts Bible Society</a>');
+                                let marker_624 = L.marker([45.533137, -122.692136], {icon: Agency }).addTo(mymap);
+        marker_624.bindPopup('<a href="/organizations/mavrolabs">MavroLabs LLC</a>');
+                                let marker_625 = L.marker([52.3706703, 4.8963597], {icon: Agency }).addTo(mymap);
+        marker_625.bindPopup('<a href="/organizations/meertens-institute">Meertens Institute</a>');
+                                let marker_626 = L.marker([30, -82], {icon: FOBAI }).addTo(mymap);
+        marker_626.bindPopup('<a href="/organizations/megavoice">Megavoice</a>');
+                                                                                                let marker_631 = L.marker([34, -85], {icon: Agency }).addTo(mymap);
+        marker_631.bindPopup('<a href="/organizations/messianic-jewish-family-bible-society">Messianic Jewish Family Bible Society</a>');
+                                                                                                                                let marker_638 = L.marker([33, -117], {icon: Agency }).addTo(mymap);
+        marker_638.bindPopup('<a href="/organizations/military-bible-association">Military Bible Association</a>');
+                                let marker_639 = L.marker([39, -105], {icon: Agency }).addTo(mymap);
+        marker_639.bindPopup('<a href="/organizations/millennial-apps">Millennial Apps</a>');
+                                                                                let marker_643 = L.marker([42, -71], {icon: Agency }).addTo(mymap);
+        marker_643.bindPopup('<a href="/organizations/mission-aides-incorporated">Mission Aides Incorporated</a>');
+                                let marker_644 = L.marker([52.09822, -1.94736], {icon: Agency }).addTo(mymap);
+        marker_644.bindPopup('<a href="/organizations/mission-assist">MissionAssist</a>');
+                                let marker_645 = L.marker([44, -117], {icon: Agency }).addTo(mymap);
+        marker_645.bindPopup('<a href="/organizations/mission-aviation-fellowship-maf">Mission Aviation Fellowship</a>');
+                                let marker_646 = L.marker([51, 4], {icon: Agency }).addTo(mymap);
+        marker_646.bindPopup('<a href="/organizations/mission-evangelique-neerlandaise">Mission-Evangelique-Neerlandaise</a>');
+                                                let marker_648 = L.marker([43, -86], {icon: Agency }).addTo(mymap);
+        marker_648.bindPopup('<a href="/organizations/mission-india">Mission India</a>');
+                                                                let marker_651 = L.marker([30.198244, -81.381502], {icon: Agency }).addTo(mymap);
+        marker_651.bindPopup('<a href="/organizations/mlj-trust">MLJ Trust, Inc.</a>');
+                                                let marker_653 = L.marker([37, -76], {icon: Agency }).addTo(mymap);
+        marker_653.bindPopup('<a href="/organizations/mohabat-tv">MOHABAT.tv</a>');
+                                let marker_654 = L.marker([48, 107], {icon: Agency }).addTo(mymap);
+        marker_654.bindPopup('<a href="/organizations/mongolian-bible-translation-committee">Mongolian Bible Translation Committee</a>');
+                                let marker_655 = L.marker([47, 104], {icon: Agency }).addTo(mymap);
+        marker_655.bindPopup('<a href="/organizations/mongolian-union-bible-society">Mongolian Union Bible Society</a>');
+                                let marker_656 = L.marker([32.753077, -117.197864], {icon: Agency }).addTo(mymap);
+        marker_656.bindPopup('<a href="/organizations/monk-development">Monk Development LLC</a>');
+                                let marker_657 = L.marker([53, -60], {icon: Agency }).addTo(mymap);
+        marker_657.bindPopup('<a href="/organizations/moravian-church-in-newfoundland-and-labrador">Moravian Church in Newfoundland &amp; Labrador</a>');
+                                                                                                let marker_662 = L.marker([41, -88], {icon: Agency }).addTo(mymap);
+        marker_662.bindPopup('<a href="/organizations/multiplication-network">Multiplication Network</a>');
+                                                                                                let marker_667 = L.marker([55, -67], {icon: Agency }).addTo(mymap);
+        marker_667.bindPopup('<a href="/organizations/naskapi-development-corporation">Naskapi Development Corporation</a>');
+                                                let marker_669 = L.marker([39, -77], {icon: Agency }).addTo(mymap);
+        marker_669.bindPopup('<a href="/organizations/national-council-of-the-churches-of-christ">National Council of the Churches of Christ</a>');
+                                let marker_670 = L.marker([41.893299, -88.110735], {icon: Agency }).addTo(mymap);
+        marker_670.bindPopup('<a href="/organizations/navpress">NavPress Publishing Group</a>');
+                                                                let marker_673 = L.marker([27.676999, 85.3005034], {icon: Agency }).addTo(mymap);
+        marker_673.bindPopup('<a href="/organizations/nepali-national-language-preservation-institute">Nepali National Language Preservation Institute</a>');
+                                                                                                let marker_678 = L.marker([39.309419, -81.488335], {icon: Agency }).addTo(mymap);
+        marker_678.bindPopup('<a href="/organizations/new-india-evangelical-association">New India Evangelistic Association</a>');
+                                                let marker_680 = L.marker([7, 80], {icon: Agency }).addTo(mymap);
+        marker_680.bindPopup('<a href="/organizations/new-life-literature">New Life Literature</a>');
+                                                let marker_682 = L.marker([45.436869, -122.723524], {icon: Agency }).addTo(mymap);
+        marker_682.bindPopup('<a href="/organizations/new-thai foundation">New Thai Version Foundation</a>');
+                                                let marker_684 = L.marker([28.812006, -81.270607], {icon: Agency }).addTo(mymap);
+        marker_684.bindPopup('<a href="/organizations/new-tribes-mission">New Tribes Mission</a>');
+                                let marker_685 = L.marker([41, -74], {icon: Agency }).addTo(mymap);
+        marker_685.bindPopup('<a href="/organizations/new-york-bible-society">New York Bible Society</a>');
+                                                let marker_687 = L.marker([34.5213446, -82.6561936], {icon: Agency }).addTo(mymap);
+        marker_687.bindPopup('<a href="/organizations/newspring-church">NewSpring Church</a>');
+                                let marker_688 = L.marker([10, 9], {icon: Agency }).addTo(mymap);
+        marker_688.bindPopup('<a href="/organizations/nigeria-bible-translation-trust">Nigeria Bible Translation Trust</a>');
+                                                let marker_690 = L.marker([60, 11], {icon: Agency }).addTo(mymap);
+        marker_690.bindPopup('<a href="/organizations/norsk-bible">Norsk Bible</a>');
+                                let marker_691 = L.marker([59.90838, 10.4960255], {icon: Agency }).addTo(mymap);
+        marker_691.bindPopup('<a href="/organizations/norsk-gideon">Norsk Gideon</a>');
+                                                let marker_693 = L.marker([19, 99], {icon: Agency }).addTo(mymap);
+        marker_693.bindPopup('<a href="/organizations/north-thailand-christian-mission">North Thailand Christian Mission</a>');
+                                let marker_694 = L.marker([53, -106], {icon: Agency }).addTo(mymap);
+        marker_694.bindPopup('<a href="/organizations/northern-christian-evangelical-mission">Northern Christian Evangelical Mission</a>');
+                                let marker_695 = L.marker([60, 11], {icon: Agency }).addTo(mymap);
+        marker_695.bindPopup('<a href="/organizations/norwegian-samlaget">Norwegian Samlaget</a>');
+                                                let marker_697 = L.marker([45.9405664, 4.2681899], {icon: Agency }).addTo(mymap);
+        marker_697.bindPopup('<a href="/organizations/oasis-international">Oasis International LTD NFP</a>');
+                                let marker_698 = L.marker([48, -117], {icon: Agency }).addTo(mymap);
+        marker_698.bindPopup('<a href="/organizations/olive-tree-bible">Olive Tree</a>');
+                                let marker_699 = L.marker([40, -105], {icon: Agency }).addTo(mymap);
+        marker_699.bindPopup('<a href="/organizations/omf-international-philippines">OMF International</a>');
+                                                                                let marker_703 = L.marker([26, -80], {icon: FOBAI }).addTo(mymap);
+        marker_703.bindPopup('<a href="/organizations/onehope">OneHope</a>');
+                                                                let marker_706 = L.marker([52, 6], {icon: FOBAI }).addTo(mymap);
+        marker_706.bindPopup('<a href="/organizations/open-doors">Open Doors International</a>');
+                                                let marker_708 = L.marker([33, -85], {icon: Agency }).addTo(mymap);
+        marker_708.bindPopup('<a href="/organizations/operation-mobilization-international">Operation Mobilization International</a>');
+                                                                                                let marker_713 = L.marker([52.1498812, 5.3709728], {icon: Agency }).addTo(mymap);
+        marker_713.bindPopup('<a href="/organizations/oud-katholieke-kerk-van-nederland">Oud-Katholieke Kerk van Nederland</a>');
+                                let marker_714 = L.marker([-6.1491278, 106.7871372], {icon: Agency }).addTo(mymap);
+        marker_714.bindPopup('<a href="/organizations/our-language-bible">The OurLanguage Bible Organization</a>');
+                                let marker_715 = L.marker([38.912136, -104.830201], {icon: Agency }).addTo(mymap);
+        marker_715.bindPopup('<a href="/organizations/outreach">Outreach, Inc.</a>');
+                                let marker_716 = L.marker([34, -118], {icon: Agency }).addTo(mymap);
+        marker_716.bindPopup('<a href="/organizations/overseas-campus-magazine">Overseas Campus Magazine</a>');
+                                let marker_717 = L.marker([40, -105], {icon: Agency }).addTo(mymap);
+        marker_717.bindPopup('<a href="/organizations/overseas-missionary-fellowship">Overseas Missionary Fellowship</a>');
+                                let marker_718 = L.marker([52, -1], {icon: Agency }).addTo(mymap);
+        marker_718.bindPopup('<a href="/organizations/oxford-the-clarendon-press">Oxford: The Clarendon Press</a>');
+                                let marker_719 = L.marker([42, -88], {icon: Agency }).addTo(mymap);
+        marker_719.bindPopup('<a href="/organizations/pacific-garden-mission">Pacific Garden Mission</a>');
+                                let marker_720 = L.marker([43, -74], {icon: Agency }).addTo(mymap);
+        marker_720.bindPopup('<a href="/organizations/packard-and-van-benthuysen">Packard and Van Benthuysen</a>');
+                                                                let marker_723 = L.marker([49, 8], {icon: Agency }).addTo(mymap);
+        marker_723.bindPopup('<a href="/organizations/palatine-bible-club">Palatine Bible Club</a>');
+                                let marker_724 = L.marker([52, 17], {icon: Agency }).addTo(mymap);
+        marker_724.bindPopup('<a href="/organizations/pallottinum-publishers">Pallottinum Publishers</a>');
+                                let marker_725 = L.marker([43, -79], {icon: Agency }).addTo(mymap);
+        marker_725.bindPopup('<a href="/organizations/pamir-productions">Pamir Productions</a>');
+                                let marker_726 = L.marker([32.7626526, -97.1758191], {icon: Agency }).addTo(mymap);
+        marker_726.bindPopup('<a href="/organizations/pantego-central-bible-church">Pantego Bible Church (dba Central Bible Church)</a>');
+                                let marker_727 = L.marker([-41, 175], {icon: Agency }).addTo(mymap);
+        marker_727.bindPopup('<a href="/organizations/paris-foriegn-missions-society">Paris Foriegn Missions Society</a>');
+                                let marker_728 = L.marker([36, -95], {icon: Agency }).addTo(mymap);
+        marker_728.bindPopup('<a href="/organizations/park-hill-mission-press">Park Hill Mission Press</a>');
+                                let marker_729 = L.marker([21.3248378, -157.8536256], {icon: Agency }).addTo(mymap);
+        marker_729.bindPopup('<a href="/organizations/partners-in-development">Partners in Development Foundation</a>');
+                                let marker_730 = L.marker([48, -117], {icon: Agency }).addTo(mymap);
+        marker_730.bindPopup('<a href="/organizations/partners-international">Partners International</a>');
+                                                let marker_732 = L.marker([15, 121], {icon: Agency }).addTo(mymap);
+        marker_732.bindPopup('<a href="/organizations/pastoral-bible-foundation">Pastoral Bible Foundation</a>');
+                                                                                let marker_736 = L.marker([37, -122], {icon: Agency }).addTo(mymap);
+        marker_736.bindPopup('<a href="/organizations/peninsula-bible-church">Peninsula Bible Church</a>');
+                                let marker_737 = L.marker([33.65903, -112.35994], {icon: Agency }).addTo(mymap);
+        marker_737.bindPopup('<a href="/organizations/perfect-word-ministries">Perfect Word Ministries, Inc.</a>');
+                                let marker_738 = L.marker([37.9692024, 23.7396739], {icon: Agency }).addTo(mymap);
+        marker_738.bindPopup('<a href="/organizations/pergamos-publications">Pergamos Publications</a>');
+                                let marker_739 = L.marker([33, -97], {icon: Agency }).addTo(mymap);
+        marker_739.bindPopup('<a href="/organizations/perkins-school-of-theology">Perkins School of Theology</a>');
+                                let marker_740 = L.marker([40, -75], {icon: Agency }).addTo(mymap);
+        marker_740.bindPopup('<a href="/organizations/persian-world-outreach">Persian World Outreach</a>');
+                                let marker_741 = L.marker([29.600679, -95.5793552], {icon: Agency }).addTo(mymap);
+        marker_741.bindPopup('<a href="/organizations/persians-for-christ">Persians for Christ</a>');
+                                                                                                                let marker_747 = L.marker([33, -97], {icon: FOBAI }).addTo(mymap);
+        marker_747.bindPopup('<a href="/organizations/pioneer-bible-translators">Pioneer Bible Translators</a>');
+                                let marker_748 = L.marker([28, -81], {icon: Agency }).addTo(mymap);
+        marker_748.bindPopup('<a href="/organizations/pioneers-ministries">Pioneers Ministries</a>');
+                                let marker_749 = L.marker([53, -1], {icon: Agency }).addTo(mymap);
+        marker_749.bindPopup('<a href="/organizations/pioneers-uk">Pioneers UK</a>');
+                                let marker_750 = L.marker([-9, 147], {icon: Agency }).addTo(mymap);
+        marker_750.bindPopup('<a href="/organizations/png-bible-translation-association">PNG Bible Translation Association</a>');
+                                let marker_751 = L.marker([-9, 147], {icon: Agency }).addTo(mymap);
+        marker_751.bindPopup('<a href="/organizations/png-scripture-association">PNG Scripture Association</a>');
+                                let marker_752 = L.marker([40.155866, -76.3032103], {icon: Agency }).addTo(mymap);
+        marker_752.bindPopup('<a href="/organizations/pocket-testament-league">Pocket Testament League</a>');
+                                let marker_753 = L.marker([52, 17], {icon: Agency }).addTo(mymap);
+        marker_753.bindPopup('<a href="/organizations/polish-evangelical-biblical-institute">Evangelical Biblical Institute</a>');
+                                                let marker_755 = L.marker([49, -123], {icon: Agency }).addTo(mymap);
+        marker_755.bindPopup('<a href="/organizations/power-to-change">Power to Change</a>');
+                                                let marker_757 = L.marker([40, -75], {icon: Agency }).addTo(mymap);
+        marker_757.bindPopup('<a href="/organizations/presbyterian-board-of-publication">Presbyterian Board of Publication</a>');
+                                let marker_758 = L.marker([25, 122], {icon: Agency }).addTo(mymap);
+        marker_758.bindPopup('<a href="/organizations/presbyterian-church-in-taiwan">Presbyterian Church in Taiwan</a>');
+                                                let marker_760 = L.marker([28, -82], {icon: Agency }).addTo(mymap);
+        marker_760.bindPopup('<a href="/organizations/primitive-methodist-church">Primitive Methodist Church</a>');
+                                let marker_761 = L.marker([38.89037, -77.03196], {icon: Agency }).addTo(mymap);
+        marker_761.bindPopup('<a href="/organizations/prison-fellowship-international">Prison Fellowship International</a>');
+                                                                                let marker_765 = L.marker([43, 5], {icon: Agency }).addTo(mymap);
+        marker_765.bindPopup('<a href="/organizations/projet-babel">Projet Babel</a>');
+                                let marker_766 = L.marker([33.758636, -118.017253], {icon: Agency }).addTo(mymap);
+        marker_766.bindPopup('<a href="/organizations/promise-child">Promise Child</a>');
+                                                                let marker_769 = L.marker([52, 17], {icon: Agency }).addTo(mymap);
+        marker_769.bindPopup('<a href="/organizations/publisher-society-of-christ-hlondianum">Publisher Society of Christ Hlondianum</a>');
+                                                let marker_771 = L.marker([39, -77], {icon: Agency }).addTo(mymap);
+        marker_771.bindPopup('<a href="/organizations/pyongyang-bible">Pyongyang Bible</a>');
+                                let marker_772 = L.marker([60.407877, 22.313975], {icon: Agency }).addTo(mymap);
+        marker_772.bindPopup('<a href="/organizations/raamattu">Raamattu Kansalle ry</a>');
+                                let marker_773 = L.marker([47, 6], {icon: Agency }).addTo(mymap);
+        marker_773.bindPopup('<a href="/organizations/radio-reveil">Radio Réveil</a>');
+                                                let marker_775 = L.marker([48, -122], {icon: Agency }).addTo(mymap);
+        marker_775.bindPopup('<a href="/organizations/rainbow-missions">Rainbow Missions</a>');
+                                                                let marker_778 = L.marker([43, -86], {icon: Agency }).addTo(mymap);
+        marker_778.bindPopup('<a href="/organizations/rbc-ministries">RBC Ministries</a>');
+                                                let marker_780 = L.marker([52.3863665, 4.6168609], {icon: Agency }).addTo(mymap);
+        marker_780.bindPopup('<a href="/organizations/reformed-evangelical-mission-of-the-netherlands">Reformed-Evangelical-Mission-Of-The-Netherlands</a>');
+                                let marker_781 = L.marker([49.168379, 8.6199804], {icon: Agency }).addTo(mymap);
+        marker_781.bindPopup('<a href="/organizations/regional-culture-publishing-company">Regional Culture Publishing Company</a>');
+                                let marker_782 = L.marker([34, -84], {icon: Agency }).addTo(mymap);
+        marker_782.bindPopup('<a href="/organizations/renew-world-outreach">Renew World Outreach</a>');
+                                let marker_783 = L.marker([34, -84], {icon: Agency }).addTo(mymap);
+        marker_783.bindPopup('<a href="/organizations/renewed-vision">Renewed Vision</a>');
+                                let marker_784 = L.marker([35.911724, -84.040388], {icon: Agency }).addTo(mymap);
+        marker_784.bindPopup('<a href="/organizations/resources-for-the-blind-international">Resources for the Blind International, Inc.</a>');
+                                                let marker_786 = L.marker([45, -123], {icon: Agency }).addTo(mymap);
+        marker_786.bindPopup('<a href="/organizations/reyma-publishing">Reyma Publishing</a>');
+                                                                let marker_789 = L.marker([35, -82], {icon: Agency }).addTo(mymap);
+        marker_789.bindPopup('<a href="/organizations/rock-international">ROCK International</a>');
+                                let marker_790 = L.marker([28.638102, 77.0713697], {icon: Agency }).addTo(mymap);
+        marker_790.bindPopup('<a href="/organizations/rohingya-christian-assembly">Rohingya Christian Assembly</a>');
+                                                let marker_792 = L.marker([51, 8], {icon: Agency }).addTo(mymap);
+        marker_792.bindPopup('<a href="/organizations/romanes-arbeit-marburg-e-v">Romanes-Arbeit Marbug e.V.</a>');
+                                let marker_793 = L.marker([47.42684, 26.90345], {icon: Agency }).addTo(mymap);
+        marker_793.bindPopup('<a href="/organizations/romano-catolice">Departamentul de Cercetare Biblică al Diecezei Romano-Catolice de Iași</a>');
+                                let marker_794 = L.marker([52.9371877, 5.9499656], {icon: Agency }).addTo(mymap);
+        marker_794.bindPopup('<a href="/organizations/royal-jongbloed">Royal Jongbloed</a>');
+                                                let marker_796 = L.marker([60, 30], {icon: Agency }).addTo(mymap);
+        marker_796.bindPopup('<a href="/organizations/russian-orthodox-alaska-mission">Russian Orthodox Alaska mission</a>');
+                                let marker_797 = L.marker([32, 35], {icon: Agency }).addTo(mymap);
+        marker_797.bindPopup('<a href="/organizations/russian-spiritual-mission">Russian Spiritual Mission</a>');
+                                let marker_798 = L.marker([56, -4], {icon: Agency }).addTo(mymap);
+        marker_798.bindPopup('<a href="/organizations/ruthvens-book-and-job-office">Ruthven&#039;s Book and Job Office</a>');
+                                                                                let marker_802 = L.marker([35.1238437, -106.7017123], {icon: Agency }).addTo(mymap);
+        marker_802.bindPopup('<a href="/organizations/sagebrush-church">Sagebrush Church</a>');
+                                let marker_803 = L.marker([22, 114], {icon: Agency }).addTo(mymap);
+        marker_803.bindPopup('<a href="/organizations/saint-stephen-society">Saint Stephen Society</a>');
+                                let marker_804 = L.marker([38, -77], {icon: Agency }).addTo(mymap);
+        marker_804.bindPopup('<a href="/organizations/salem-web-network">Salem Web Network</a>');
+                                                let marker_806 = L.marker([36, -82], {icon: Agency }).addTo(mymap);
+        marker_806.bindPopup('<a href="/organizations/samaritan-purse">Samaritan Purse</a>');
+                                                                let marker_809 = L.marker([35, 33], {icon: Agency }).addTo(mymap);
+        marker_809.bindPopup('<a href="/organizations/sat-7">SAT-7</a>');
+                                                let marker_811 = L.marker([30, -94], {icon: Agency }).addTo(mymap);
+        marker_811.bindPopup('<a href="/organizations/school-of-christ-egypt">School of Christ</a>');
+                                                                let marker_814 = L.marker([51, -114], {icon: Agency }).addTo(mymap);
+        marker_814.bindPopup('<a href="/organizations/scripture-earth">Scripture Earth</a>');
+                                let marker_815 = L.marker([34, -118], {icon: Agency }).addTo(mymap);
+        marker_815.bindPopup('<a href="/organizations/scripture-translation-for-every-people">Scripture Translation for Every People</a>');
+                                let marker_816 = L.marker([52, -1], {icon: FOBAI }).addTo(mymap);
+        marker_816.bindPopup('<a href="/organizations/scripture-union-int">https://twitter.com/SUnionglobal</a>');
+                                                let marker_818 = L.marker([60.3752152, 5.3392923], {icon: Agency }).addTo(mymap);
+        marker_818.bindPopup('<a href="/organizations/senter-for-tro-og-medier">SENTER FOR TRO OG MEDIER</a>');
+                                let marker_819 = L.marker([49, 2], {icon: Agency }).addTo(mymap);
+        marker_819.bindPopup('<a href="/organizations/seuil">Seuil</a>');
+                                                                let marker_822 = L.marker([43, -88], {icon: Agency }).addTo(mymap);
+        marker_822.bindPopup('<a href="/organizations/sheed-and-ward">Sheed &amp; Ward</a>');
+                                let marker_823 = L.marker([47.006105, -124.15977], {icon: Agency }).addTo(mymap);
+        marker_823.bindPopup('<a href="/organizations/shepherds-square">Shepherds Square LLC</a>');
+                                                                                let marker_827 = L.marker([-2, -78], {icon: Agency }).addTo(mymap);
+        marker_827.bindPopup('<a href="/organizations/shuar-association-of-evangelical-churches">Shuar Association of Evangelical Churches</a>');
+                                                let marker_829 = L.marker([9.01358, 38.76286], {icon: Agency }).addTo(mymap);
+        marker_829.bindPopup('<a href="/organizations/sil-ethiopia">SIL Ethiopia</a>');
+                                                let marker_831 = L.marker([33, -97], {icon: FOBAI }).addTo(mymap);
+        marker_831.bindPopup('<a href="/organizations/sil-international">SIL International</a>');
+                                                                                let marker_835 = L.marker([14.6103516, 121.0392781], {icon: Agency }).addTo(mymap);
+        marker_835.bindPopup('<a href="/organizations/sil-philippines">SIL Philippines</a>');
+                                let marker_836 = L.marker([-6.4755899, 145.2538009], {icon: Agency }).addTo(mymap);
+        marker_836.bindPopup('<a href="/organizations/sil-png">SIL-PNG</a>');
+                                let marker_837 = L.marker([-9.43333, 159.95], {icon: Agency }).addTo(mymap);
+        marker_837.bindPopup('<a href="/organizations/sil-solomon-islands">SIL Solomon Islands</a>');
+                                let marker_838 = L.marker([32.6638803, -96.9539238], {icon: Agency }).addTo(mymap);
+        marker_838.bindPopup('<a href="/organizations/sil-west-africa">SIL West Africa</a>');
+                                                let marker_840 = L.marker([71.288405, -156.761998], {icon: Agency }).addTo(mymap);
+        marker_840.bindPopup('<a href="/organizations/silakkuagvik-communications-inc">Silakkuagvik Communications, Inc. (KBRW)</a>');
+                                let marker_841 = L.marker([35, -81], {icon: FOBAI }).addTo(mymap);
+        marker_841.bindPopup('<a href="/organizations/sim">SIM</a>');
+                                                                let marker_844 = L.marker([-3.69277, 128.18289], {icon: Agency }).addTo(mymap);
+        marker_844.bindPopup('<a href="/organizations/sinode-gereja-protestan-maluku">Sinode Gereja Protestan Maluku</a>');
+                                                                                let marker_848 = L.marker([-34.60084, -58.37214], {icon: Agency }).addTo(mymap);
+        marker_848.bindPopup('<a href="/organizations/sociedad-biblica-de-argentina">Sociedad Bíblica de Argentina</a>');
+                                                                let marker_851 = L.marker([-23.712195, -46.6978225], {icon: Agency }).addTo(mymap);
+        marker_851.bindPopup('<a href="/organizations/sociedade-vida-nova">Sociedade Religiosa Edições Vida Nova</a>');
+                                let marker_852 = L.marker([46.5722049, 6.6063051], {icon: Agency }).addTo(mymap);
+        marker_852.bindPopup('<a href="/organizations/society-biblique-de-geneve">Society Biblique de Geneve</a>');
+                                let marker_853 = L.marker([35.139925, -80.98471], {icon: Agency }).addTo(mymap);
+        marker_853.bindPopup('<a href="/organizations/society-for-international-ministries-kenya">Society for International Ministries (SIM)</a>');
+                                                let marker_855 = L.marker([34, -84], {icon: Agency }).addTo(mymap);
+        marker_855.bindPopup('<a href="/organizations/society-of-biblical-literature">Society of Biblical Literature</a>');
+                                let marker_856 = L.marker([-23.6584045, -46.666967], {icon: Agency }).addTo(mymap);
+        marker_856.bindPopup('<a href="/organizations/society-world-internet-mission">Society-World-Internet-Mission</a>');
+                                                let marker_858 = L.marker([33, -97], {icon: Agency }).addTo(mymap);
+        marker_858.bindPopup('<a href="/organizations/southwest-baptist-theological">Southwest Baptist Theological Seminary</a>');
+                                let marker_859 = L.marker([40, -87], {icon: Agency }).addTo(mymap);
+        marker_859.bindPopup('<a href="/organizations/sovereign-grace-publishers">Sovereign Grace Publishers</a>');
+                                let marker_860 = L.marker([25.850168, -80.326188], {icon: Agency }).addTo(mymap);
+        marker_860.bindPopup('<a href="/organizations/spanish-house-ministries">Spanish House Ministries, Inc</a>');
+                                                                let marker_863 = L.marker([33, -97], {icon: FOBAI }).addTo(mymap);
+        marker_863.bindPopup('<a href="/organizations/spoken-worldwide">Spoken Worldwide</a>');
+                                let marker_864 = L.marker([50, -5], {icon: Agency }).addTo(mymap);
+        marker_864.bindPopup('<a href="/organizations/spyrys-a-gernow">Spyrys a Gernow</a>');
+                                let marker_865 = L.marker([53, -2], {icon: Agency }).addTo(mymap);
+        marker_865.bindPopup('<a href="/organizations/st-jerome-publishing">St. Jerome Publishing</a>');
+                                let marker_866 = L.marker([51, 19], {icon: Agency }).addTo(mymap);
+        marker_866.bindPopup('<a href="/organizations/st-paul-publishing">St. Paul Publishing</a>');
+                                                let marker_868 = L.marker([37.76386, -108.9047557], {icon: Agency }).addTo(mymap);
+        marker_868.bindPopup('<a href="/organizations/stauros-ministries">Stauros Ministries (P. Esposito)</a>');
+                                let marker_869 = L.marker([42, -88], {icon: Agency }).addTo(mymap);
+        marker_869.bindPopup('<a href="/organizations/step-bible">STEP Bible</a>');
+                                                let marker_871 = L.marker([51.7623336, 4.1889162], {icon: Agency }).addTo(mymap);
+        marker_871.bindPopup('<a href="/organizations/stichting-dagelijksebroodkruimels">Stichting DagelijkseBroodkruimels</a>');
+                                                let marker_873 = L.marker([51.9123515, 4.5201118], {icon: Agency }).addTo(mymap);
+        marker_873.bindPopup('<a href="/organizations/stichting-jesus.net-foundation">Stichting Jesus.net Foundation</a>');
+                                let marker_874 = L.marker([52.0808104, 4.3455467], {icon: Agency }).addTo(mymap);
+        marker_874.bindPopup('<a href="/organizations/stichting-vrijwilligersnetwerk-nederlandse-taal">Stichting Vrijwilligersnetwerk Nederlandse Taal</a>');
+                                let marker_875 = L.marker([52.0808104, 4.3455467], {icon: Agency }).addTo(mymap);
+        marker_875.bindPopup('<a href="/organizations/stiftelsen-skjulte-skatters-forlag">Stiftelsen Skjulte Skatters Forlag</a>');
+                                                let marker_877 = L.marker([28.40651, -81.20355], {icon: FOBAI }).addTo(mymap);
+        marker_877.bindPopup('<a href="/organizations/story-runners">StoryRunners</a>');
+                                let marker_878 = L.marker([60, 11], {icon: Agency }).addTo(mymap);
+        marker_878.bindPopup('<a href="/organizations/student-language-associations">Student Language Associations</a>');
+                                let marker_879 = L.marker([22.2687523, 114.1927016], {icon: Agency }).addTo(mymap);
+        marker_879.bindPopup('<a href="/organizations/studium-biblicum-o-f-m">Studium Biblicum O.F.M.</a>');
+                                                                let marker_882 = L.marker([46, 15], {icon: Agency }).addTo(mymap);
+        marker_882.bindPopup('<a href="/organizations/svetopisemska-druzba-slovenije">Svetopisemska Družba Slovenije</a>');
+                                let marker_883 = L.marker([51.93491, 8.8793], {icon: Agency }).addTo(mymap);
+        marker_883.bindPopup('<a href="/organizations/sw-radio">SW-Radio e.V.</a>');
+                                let marker_884 = L.marker([59, 18], {icon: Agency }).addTo(mymap);
+        marker_884.bindPopup('<a href="/organizations/swedish-bible-foundation">Swedish Bible Foundation</a>');
+                                let marker_885 = L.marker([58, 14], {icon: Agency }).addTo(mymap);
+        marker_885.bindPopup('<a href="/organizations/swedish-mission-alliance">Swedish Mission Alliance</a>');
+                                let marker_886 = L.marker([33, -112], {icon: Agency }).addTo(mymap);
+        marker_886.bindPopup('<a href="/organizations/sword-project">Sword Project</a>');
+                                                let marker_888 = L.marker([32.92064, -96.766689], {icon: Agency }).addTo(mymap);
+        marker_888.bindPopup('<a href="/organizations/t4-global-dba-spoken-worldwide">T4 Global, Inc. dba Spoken Worldwide</a>');
+                                let marker_889 = L.marker([40, -105], {icon: Agency }).addTo(mymap);
+        marker_889.bindPopup('<a href="/organizations/talim-ministries">Talim Ministries</a>');
+                                let marker_890 = L.marker([33, -117], {icon: FOBAI }).addTo(mymap);
+        marker_890.bindPopup('<a href="/organizations/talking-bibles-international">Talking Bibles International</a>');
+                                                                let marker_893 = L.marker([40, -85], {icon: FOBAI }).addTo(mymap);
+        marker_893.bindPopup('<a href="/organizations/taylor-university-center-for-scripture-engagement">Taylor University Center for Scripture Engagement</a>');
+                                let marker_894 = L.marker([38.176798, -85.473164], {icon: Agency }).addTo(mymap);
+        marker_894.bindPopup('<a href="/organizations/team-expansion">Team Expansion</a>');
+                                                let marker_896 = L.marker([35.90446, -79.05279], {icon: Agency }).addTo(mymap);
+        marker_896.bindPopup('<a href="/organizations/terence-noble">Terence P. Noble</a>');
+                                let marker_897 = L.marker([47.180524, 11.405995], {icon: UBS }).addTo(mymap);
+        marker_897.bindPopup('<a href="/organizations/the-anglican-church-in-aotearoa-new-zealand">The Anglican Church in Aotearoa New Zealand and Polynesia</a>');
+                                let marker_898 = L.marker([5.9334225, 116.0873475], {icon: Agency }).addTo(mymap);
+        marker_898.bindPopup('<a href="/organizations/the-archdiocese-of-kota-kinabalu">The Archdiocese of Kota Kinabalu</a>');
+                                                                                let marker_902 = L.marker([41, -74], {icon: Agency }).addTo(mymap);
+        marker_902.bindPopup('<a href="/organizations/the-forum-of-bible-agencies">The Forum of Bible Agencies</a>');
+                                let marker_903 = L.marker([34, -117], {icon: Agency }).addTo(mymap);
+        marker_903.bindPopup('<a href="/organizations/the-god-story-project">The God Story Project</a>');
+                                let marker_904 = L.marker([40.7127281, -74.0060152], {icon: Agency }).addTo(mymap);
+        marker_904.bindPopup('<a href="/organizations/the-grace-and-mercy-foundation">The Grace and Mercy Foundation</a>');
+                                                let marker_906 = L.marker([32, 35], {icon: FOBAI }).addTo(mymap);
+        marker_906.bindPopup('<a href="/organizations/the-home-for-bible-translators">Jerusalem Center for Bible Translators</a>');
+                                let marker_907 = L.marker([28, -81], {icon: FOBAI }).addTo(mymap);
+        marker_907.bindPopup('<a href="/organizations/the-jesus-film-project">The JESUS Film Project</a>');
+                                                                                                let marker_912 = L.marker([31.78003, 35.21873], {icon: Agency }).addTo(mymap);
+        marker_912.bindPopup('<a href="/organizations/the-messianic-jewish-bible-society">The Messianic Jewish Bible Society Inc</a>');
+                                                let marker_914 = L.marker([40.155866, -76.3032103], {icon: Agency }).addTo(mymap);
+        marker_914.bindPopup('<a href="/organizations/the-pocket-testament-league">The Pocket Testament League</a>');
+                                                                let marker_917 = L.marker([33, -97], {icon: FOBAI }).addTo(mymap);
+        marker_917.bindPopup('<a href="/organizations/the-seed-company">The Seed Company</a>');
+                                let marker_918 = L.marker([29.940555, -95.599312], {icon: Agency }).addTo(mymap);
+        marker_918.bindPopup('<a href="/organizations/the-thailand-home-page">The Thailand Home Page</a>');
+                                                let marker_920 = L.marker([42, -88], {icon: Agency }).addTo(mymap);
+        marker_920.bindPopup('<a href="/organizations/the-university-of-chicago-press">The University of Chicago Press</a>');
+                                let marker_921 = L.marker([37, -96], {icon: Agency }).addTo(mymap);
+        marker_921.bindPopup('<a href="/organizations/the-voice-of-the-martyrs">The Voice of the Martyrs</a>');
+                                let marker_922 = L.marker([43.640725, -84.216025], {icon: Agency }).addTo(mymap);
+        marker_922.bindPopup('<a href="/organizations/the-wartburg-project">The Wartburg Project</a>');
+                                let marker_923 = L.marker([-34, 19], {icon: FOBAI }).addTo(mymap);
+        marker_923.bindPopup('<a href="/organizations/the-word-for-the-world">The Word for the World</a>');
+                                let marker_924 = L.marker([38.89486, -104.756675], {icon: FOBAI }).addTo(mymap);
+        marker_924.bindPopup('<a href="/organizations/the-word-for-the-world-bible-translators-international">The Word for the World Bible Translators International</a>');
+                                let marker_925 = L.marker([43, -83], {icon: Agency }).addTo(mymap);
+        marker_925.bindPopup('<a href="/organizations/the-work-of-gods-children">The Work of God&#039;s Children</a>');
+                                let marker_926 = L.marker([25.75661, 72.82292], {icon: Agency }).addTo(mymap);
+        marker_926.bindPopup('<a href="/organizations/theovision">Theovision International</a>');
+                                let marker_927 = L.marker([29, -81], {icon: Agency }).addTo(mymap);
+        marker_927.bindPopup('<a href="/organizations/third-millennium-ministries">Third Millennium Ministries</a>');
+                                let marker_928 = L.marker([36, -87], {icon: Agency }).addTo(mymap);
+        marker_928.bindPopup('<a href="/organizations/thomas-nelson">Thomas Nelson, Inc.</a>');
+                                                                let marker_931 = L.marker([34.15518, -118.15438], {icon: Agency }).addTo(mymap);
+        marker_931.bindPopup('<a href="/organizations/thru-the-bible-radio-network">THRU the BIBLE Radio Network</a>');
+                                                let marker_933 = L.marker([43, -101], {icon: Agency }).addTo(mymap);
+        marker_933.bindPopup('<a href="/organizations/tiospaye-bible-baptist">Tiospaye Bible Baptist</a>');
+                                                                let marker_936 = L.marker([44, -79], {icon: Agency }).addTo(mymap);
+        marker_936.bindPopup('<a href="/organizations/toronto-auxiliary-bible-society">Toronto Auxiliary Bible Society</a>');
+                                                                let marker_939 = L.marker([36, -79], {icon: Agency }).addTo(mymap);
+        marker_939.bindPopup('<a href="/organizations/trans-world-radio">Trans World Radio</a>');
+                                                let marker_941 = L.marker([26.1905, -81.774746], {icon: Agency }).addTo(mymap);
+        marker_941.bindPopup('<a href="/organizations/translation-services-international">Translation Services International Ltd.</a>');
+                                                                                                let marker_946 = L.marker([-24, -47], {icon: Agency }).addTo(mymap);
+        marker_946.bindPopup('<a href="/organizations/trinitarian-bible-society-of-brazil">Trinitarian Bible Society of Brazil</a>');
+                                let marker_947 = L.marker([35, -92], {icon: Agency }).addTo(mymap);
+        marker_947.bindPopup('<a href="/organizations/truth-for-today-world-mission-school">Truth for Today World Mission School</a>');
+                                let marker_948 = L.marker([45, -123], {icon: Agency }).addTo(mymap);
+        marker_948.bindPopup('<a href="/organizations/tucson-chinese-bible-society">Tucson Chinese Bible Society</a>');
+                                                                let marker_951 = L.marker([47.3732522, 8.5266479], {icon: Agency }).addTo(mymap);
+        marker_951.bindPopup('<a href="/organizations/tvz-theologischer-verlag-zfcrich">TVZ Theologischer Verlag Z\u00fcrich AG</a>');
+                                let marker_952 = L.marker([42, -88], {icon: Agency }).addTo(mymap);
+        marker_952.bindPopup('<a href="/organizations/tyndale-house-publishers">Tyndale House Publishers, Inc.</a>');
+                                let marker_953 = L.marker([34, -118], {icon: Agency }).addTo(mymap);
+        marker_953.bindPopup('<a href="/organizations/u-s-center-for-world-missions">U.S. Center for World Missions</a>');
+                                                                let marker_956 = L.marker([51.53845, -1.88653], {icon: Agency }).addTo(mymap);
+        marker_956.bindPopup('<a href="/organizations/ufm-international">UFM International</a>');
+                                let marker_957 = L.marker([52.21652, 5.96566], {icon: Agency }).addTo(mymap);
+        marker_957.bindPopup('<a href="/organizations/uitgeverij-de-banier">Uitgeverij de Banier</a>');
+                                let marker_958 = L.marker([55, -6], {icon: Agency }).addTo(mymap);
+        marker_958.bindPopup('<a href="/organizations/ulster-scots-language-society">Ulster-Scots Language Society</a>');
+                                let marker_959 = L.marker([28.414055, -81.241268], {icon: Agency }).addTo(mymap);
+        marker_959.bindPopup('<a href="/organizations/unfoldingword">unfoldingWord</a>');
+                                                let marker_961 = L.marker([52, -2], {icon: FOBAI }).addTo(mymap);
+        marker_961.bindPopup('<a href="/organizations/united-bible-societies">United Bible Societies</a>');
+                                let marker_962 = L.marker([42, -84], {icon: Library }).addTo(mymap);
+        marker_962.bindPopup('<a href="/organizations/university-of-michigan-library">University of Michigan Library</a>');
+                                                let marker_964 = L.marker([19.35, -99.17], {icon: Agency }).addTo(mymap);
+        marker_964.bindPopup('<a href="/organizations/unti">National Union of Indigenous Translators Civil Association</a>');
+                                let marker_965 = L.marker([36.1471308, -86.7962617], {icon: Agency }).addTo(mymap);
+        marker_965.bindPopup('<a href="/organizations/upper-room-ministries">Upper Room Ministries</a>');
+                                                                                let marker_969 = L.marker([51.3390131, 7.0374835], {icon: Agency }).addTo(mymap);
+        marker_969.bindPopup('<a href="/organizations/velberter-mission">Velberter Mission</a>');
+                                                                let marker_972 = L.marker([52.2919646, 5.6236312], {icon: Agency }).addTo(mymap);
+        marker_972.bindPopup('<a href="/organizations/vereniging-christelijke-bibliotheek">Vereniging CBB, Christelijke Bibliotheek voor Blinden en Slechtzienden</a>');
+                                                let marker_974 = L.marker([12, 105], {icon: Agency }).addTo(mymap);
+        marker_974.bindPopup('<a href="/organizations/vietnam-partnership">Vietnam Partnership</a>');
+                                let marker_975 = L.marker([33.7787, -117.95042], {icon: Agency }).addTo(mymap);
+        marker_975.bindPopup('<a href="/organizations/vietnamese-bible-association">Vietnamese Bible Association</a>');
+                                                let marker_977 = L.marker([39, -105], {icon: FOBAI }).addTo(mymap);
+        marker_977.bindPopup('<a href="/organizations/virtual-storehouse">Virtual Storehouse</a>');
+                                let marker_978 = L.marker([37.277151, -76.745452], {icon: Agency }).addTo(mymap);
+        marker_978.bindPopup('<a href="/organizations/visually-linked-bible">Visually Linked Bible</a>');
+                                                                                                                                let marker_985 = L.marker([36, 140], {icon: Agency }).addTo(mymap);
+        marker_985.bindPopup('<a href="/organizations/word-of-life-press">Word of Life Press</a>');
+                                let marker_986 = L.marker([22, 114], {icon: Agency }).addTo(mymap);
+        marker_986.bindPopup('<a href="/organizations/word-project">Word Project</a>');
+                                                                let marker_989 = L.marker([50.9871, -1.3769497], {icon: Agency }).addTo(mymap);
+        marker_989.bindPopup('<a href="/organizations/words-of-life-ministries">Words of Life Ministries</a>');
+                                let marker_990 = L.marker([41, -88], {icon: Agency }).addTo(mymap);
+        marker_990.bindPopup('<a href="/organizations/world-bible-translation-center">World Bible Translation Center</a>');
+                                let marker_991 = L.marker([52, -2], {icon: Agency }).addTo(mymap);
+        marker_991.bindPopup('<a href="/organizations/world-bibles">World Bibles</a>');
+                                let marker_992 = L.marker([12.9855207, 77.6167669], {icon: Agency }).addTo(mymap);
+        marker_992.bindPopup('<a href="/organizations/world-cassette-outreach-of-india">World Cassette Outreach of India</a>');
+                                let marker_993 = L.marker([36, -87], {icon: Agency }).addTo(mymap);
+        marker_993.bindPopup('<a href="/organizations/world-christian-broadcasting">World Christian Broadcasting</a>');
+                                let marker_994 = L.marker([38.8870743, -77.0047461], {icon: Library }).addTo(mymap);
+        marker_994.bindPopup('<a href="/organizations/world-digital-library">World Digital Library</a>');
+                                let marker_995 = L.marker([43, -86], {icon: Agency }).addTo(mymap);
+        marker_995.bindPopup('<a href="/organizations/world-mission">World Mission</a>');
+                                let marker_996 = L.marker([41.492503, -85.833111], {icon: Agency }).addTo(mymap);
+        marker_996.bindPopup('<a href="/organizations/world-missionary-press">World Missionary Press</a>');
+                                let marker_997 = L.marker([49, 2], {icon: Agency }).addTo(mymap);
+        marker_997.bindPopup('<a href="/organizations/world-team">World Team</a>');
+                                let marker_998 = L.marker([38, -122], {icon: Agency }).addTo(mymap);
+        marker_998.bindPopup('<a href="/organizations/worldreader">Worldreader</a>');
+                                let marker_999 = L.marker([37, -122], {icon: Agency }).addTo(mymap);
+        marker_999.bindPopup('<a href="/organizations/worldwide-bible-society">Worldwide Bible Society</a>');
+                                let marker_1000 = L.marker([28, -81], {icon: Agency }).addTo(mymap);
+        marker_1000.bindPopup('<a href="/organizations/wycliffe-associates">Wycliffe Associates</a>');
+                                                let marker_1002 = L.marker([33, -97], {icon: FOBAI }).addTo(mymap);
+        marker_1002.bindPopup('<a href="/organizations/wycliffe-bible-translators-inc">Wycliffe Bible Translators USA</a>');
+                                let marker_1003 = L.marker([14.6103516, 121.0392781], {icon: Agency }).addTo(mymap);
+        marker_1003.bindPopup('<a href="/organizations/wycliffe-bible-translators-philippines-inc">Wycliffe Bible Translators Philippines, Inc.</a>');
+                                let marker_1004 = L.marker([51.7268116, -1.194208], {icon: FOBAI }).addTo(mymap);
+        marker_1004.bindPopup('<a href="/organizations/wycliffe-bible-uk">Wycliffe Bible Translators UK and Ireland</a>');
+                                let marker_1005 = L.marker([28.413108, -81.201939], {icon: Agency }).addTo(mymap);
+        marker_1005.bindPopup('<a href="/organizations/wycliffe-eastern-congo-group">Wycliffe Eastern Congo Group</a>');
+                                let marker_1006 = L.marker([1, 104], {icon: Agency }).addTo(mymap);
+        marker_1006.bindPopup('<a href="/organizations/wycliffe-global-alliance">Wycliffe Global Alliance</a>');
+                                                let marker_1008 = L.marker([19, 99], {icon: Agency }).addTo(mymap);
+        marker_1008.bindPopup('<a href="/organizations/wycliffe-thailand">Wycliffe Thailand Foudation</a>');
+                                let marker_1009 = L.marker([41.31791, -72.92381], {icon: Library }).addTo(mymap);
+        marker_1009.bindPopup('<a href="/organizations/yanjing-university-press">Yanjing University Press</a>');
+                                                let marker_1011 = L.marker([-6, 107], {icon: Agency }).addTo(mymap);
+        marker_1011.bindPopup('<a href="/organizations/yayasan-sumber-sejahtera">Yayasan Sumber Sejahtera</a>');
+                                                                                let marker_1015 = L.marker([20, -156], {icon: Agency }).addTo(mymap);
+        marker_1015.bindPopup('<a href="/organizations/youth-with-a-mission">Youth With A Mission</a>');
+                                                let marker_1017 = L.marker([36, -97], {icon: FOBAI }).addTo(mymap);
+        marker_1017.bindPopup('<a href="/organizations/youversion">YouVersion</a>');
+                                let marker_1018 = L.marker([47, 19], {icon: Agency }).addTo(mymap);
+        marker_1018.bindPopup('<a href="/organizations/z-bible">z-BIBLE</a>');
+                                let marker_1019 = L.marker([51.98762, 5.84093], {icon: Agency }).addTo(mymap);
+        marker_1019.bindPopup('<a href="/organizations/zakbijbelbond-gospel-for-guests">ZakBijbelBond-Gospel for Guests</a>');
+                                let marker_1020 = L.marker([43, -86], {icon: Agency }).addTo(mymap);
+        marker_1020.bindPopup('<a href="/organizations/zondervan-publishing-house">Zondervan Publishing House</a>');
+                                let marker_1021 = L.marker([30, -84], {icon: Agency }).addTo(mymap);
+        marker_1021.bindPopup('<a href="/organizations/zurich-theological-publisher">Zurich Theological Publisher</a>');
+                
+
+
+
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

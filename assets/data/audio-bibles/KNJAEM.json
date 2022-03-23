@@ -1,0 +1,1547 @@
+{
+    "id": "KNJAEM",
+    "parent_bible_id": null,
+    "title": "Western Kanjobal 2016 Edition",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "knj",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2016",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2016-10-12T17:42:30.000000Z",
+    "updated_at": "2020-10-12T17:42:30.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Gen",
+            "chapter_id": "1",
+            "path": "KNJAEMP1DA\/A01___01_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "2",
+            "path": "KNJAEMP1DA\/A01___02_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "3",
+            "path": "KNJAEMP1DA\/A01___03_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "4",
+            "path": "KNJAEMP1DA\/A01___04_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "5",
+            "path": "KNJAEMP1DA\/A01___05_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "6",
+            "path": "KNJAEMP1DA\/A01___06_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "7",
+            "path": "KNJAEMP1DA\/A01___07_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "8",
+            "path": "KNJAEMP1DA\/A01___08_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "9",
+            "path": "KNJAEMP1DA\/A01___09_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "10",
+            "path": "KNJAEMP1DA\/A01___10_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "11",
+            "path": "KNJAEMP1DA\/A01___11_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "12",
+            "path": "KNJAEMP1DA\/A01___12_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "13",
+            "path": "KNJAEMP1DA\/A01___13_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "14",
+            "path": "KNJAEMP1DA\/A01___14_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "15",
+            "path": "KNJAEMP1DA\/A01___15_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "16",
+            "path": "KNJAEMP1DA\/A01___16_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "17",
+            "path": "KNJAEMP1DA\/A01___17_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "18",
+            "path": "KNJAEMP1DA\/A01___18_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "19",
+            "path": "KNJAEMP1DA\/A01___19_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "20",
+            "path": "KNJAEMP1DA\/A01___20_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "21",
+            "path": "KNJAEMP1DA\/A01___21_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "22",
+            "path": "KNJAEMP1DA\/A01___22_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "23",
+            "path": "KNJAEMP1DA\/A01___23_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "24",
+            "path": "KNJAEMP1DA\/A01___24_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "25",
+            "path": "KNJAEMP1DA\/A01___25_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "26",
+            "path": "KNJAEMP1DA\/A01___26_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "27",
+            "path": "KNJAEMP1DA\/A01___27_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "28",
+            "path": "KNJAEMP1DA\/A01___28_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "29",
+            "path": "KNJAEMP1DA\/A01___29_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "30",
+            "path": "KNJAEMP1DA\/A01___30_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "31",
+            "path": "KNJAEMP1DA\/A01___31_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "32",
+            "path": "KNJAEMP1DA\/A01___32_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "33",
+            "path": "KNJAEMP1DA\/A01___33_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "34",
+            "path": "KNJAEMP1DA\/A01___34_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "35",
+            "path": "KNJAEMP1DA\/A01___35_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "36",
+            "path": "KNJAEMP1DA\/A01___36_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "37",
+            "path": "KNJAEMP1DA\/A01___37_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "38",
+            "path": "KNJAEMP1DA\/A01___38_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "39",
+            "path": "KNJAEMP1DA\/A01___39_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "40",
+            "path": "KNJAEMP1DA\/A01___40_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "41",
+            "path": "KNJAEMP1DA\/A01___41_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "42",
+            "path": "KNJAEMP1DA\/A01___42_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "43",
+            "path": "KNJAEMP1DA\/A01___43_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "44",
+            "path": "KNJAEMP1DA\/A01___44_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "45",
+            "path": "KNJAEMP1DA\/A01___45_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "46",
+            "path": "KNJAEMP1DA\/A01___46_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "47",
+            "path": "KNJAEMP1DA\/A01___47_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "48",
+            "path": "KNJAEMP1DA\/A01___48_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "49",
+            "path": "KNJAEMP1DA\/A01___49_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Gen",
+            "chapter_id": "50",
+            "path": "KNJAEMP1DA\/A01___50_Genesis_____KNJAEMP1DA.mp3",
+            "id_usfm": "GEN",
+            "name": "Genesis",
+            "order": 1
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "1",
+            "path": "KNJAEMP1DA\/A02___01_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "2",
+            "path": "KNJAEMP1DA\/A02___02_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "3",
+            "path": "KNJAEMP1DA\/A02___03_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "4",
+            "path": "KNJAEMP1DA\/A02___04_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "5",
+            "path": "KNJAEMP1DA\/A02___05_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "6",
+            "path": "KNJAEMP1DA\/A02___06_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "7",
+            "path": "KNJAEMP1DA\/A02___07_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "8",
+            "path": "KNJAEMP1DA\/A02___08_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "9",
+            "path": "KNJAEMP1DA\/A02___09_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "10",
+            "path": "KNJAEMP1DA\/A02___10_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "11",
+            "path": "KNJAEMP1DA\/A02___11_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "12",
+            "path": "KNJAEMP1DA\/A02___12_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "13",
+            "path": "KNJAEMP1DA\/A02___13_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "14",
+            "path": "KNJAEMP1DA\/A02___14_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "15",
+            "path": "KNJAEMP1DA\/A02___15_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "16",
+            "path": "KNJAEMP1DA\/A02___16_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "17",
+            "path": "KNJAEMP1DA\/A02___17_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "18",
+            "path": "KNJAEMP1DA\/A02___18_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "19",
+            "path": "KNJAEMP1DA\/A02___19_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "20",
+            "path": "KNJAEMP1DA\/A02___20_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "21",
+            "path": "KNJAEMP1DA\/A02___21_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "22",
+            "path": "KNJAEMP1DA\/A02___22_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "23",
+            "path": "KNJAEMP1DA\/A02___23_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "24",
+            "path": "KNJAEMP1DA\/A02___24_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "25",
+            "path": "KNJAEMP1DA\/A02___25_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "26",
+            "path": "KNJAEMP1DA\/A02___26_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "27",
+            "path": "KNJAEMP1DA\/A02___27_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "28",
+            "path": "KNJAEMP1DA\/A02___28_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "29",
+            "path": "KNJAEMP1DA\/A02___29_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "30",
+            "path": "KNJAEMP1DA\/A02___30_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "31",
+            "path": "KNJAEMP1DA\/A02___31_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "32",
+            "path": "KNJAEMP1DA\/A02___32_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "33",
+            "path": "KNJAEMP1DA\/A02___33_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "34",
+            "path": "KNJAEMP1DA\/A02___34_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "35",
+            "path": "KNJAEMP1DA\/A02___35_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "36",
+            "path": "KNJAEMP1DA\/A02___36_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "37",
+            "path": "KNJAEMP1DA\/A02___37_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "38",
+            "path": "KNJAEMP1DA\/A02___38_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "39",
+            "path": "KNJAEMP1DA\/A02___39_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Exod",
+            "chapter_id": "40",
+            "path": "KNJAEMP1DA\/A02___40_Exodus______KNJAEMP1DA.mp3",
+            "id_usfm": "EXO",
+            "name": "Exodus",
+            "order": 2
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "1",
+            "path": "KNJAEMP1DA\/A03___01_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "2",
+            "path": "KNJAEMP1DA\/A03___02_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "3",
+            "path": "KNJAEMP1DA\/A03___03_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "4",
+            "path": "KNJAEMP1DA\/A03___04_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "5",
+            "path": "KNJAEMP1DA\/A03___05_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "6",
+            "path": "KNJAEMP1DA\/A03___06_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "7",
+            "path": "KNJAEMP1DA\/A03___07_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "8",
+            "path": "KNJAEMP1DA\/A03___08_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "9",
+            "path": "KNJAEMP1DA\/A03___09_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "10",
+            "path": "KNJAEMP1DA\/A03___10_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "11",
+            "path": "KNJAEMP1DA\/A03___11_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "12",
+            "path": "KNJAEMP1DA\/A03___12_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "13",
+            "path": "KNJAEMP1DA\/A03___13_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "14",
+            "path": "KNJAEMP1DA\/A03___14_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "15",
+            "path": "KNJAEMP1DA\/A03___15_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "16",
+            "path": "KNJAEMP1DA\/A03___16_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "17",
+            "path": "KNJAEMP1DA\/A03___17_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "18",
+            "path": "KNJAEMP1DA\/A03___18_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "19",
+            "path": "KNJAEMP1DA\/A03___19_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "20",
+            "path": "KNJAEMP1DA\/A03___20_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "21",
+            "path": "KNJAEMP1DA\/A03___21_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "22",
+            "path": "KNJAEMP1DA\/A03___22_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "23",
+            "path": "KNJAEMP1DA\/A03___23_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "24",
+            "path": "KNJAEMP1DA\/A03___24_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "25",
+            "path": "KNJAEMP1DA\/A03___25_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "26",
+            "path": "KNJAEMP1DA\/A03___26_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Lev",
+            "chapter_id": "27",
+            "path": "KNJAEMP1DA\/A03___27_Leviticus___KNJAEMP1DA.mp3",
+            "id_usfm": "LEV",
+            "name": "Leviticus",
+            "order": 3
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "1",
+            "path": "KNJAEMP1DA\/A04___01_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "2",
+            "path": "KNJAEMP1DA\/A04___02_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "3",
+            "path": "KNJAEMP1DA\/A04___03_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "4",
+            "path": "KNJAEMP1DA\/A04___04_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "5",
+            "path": "KNJAEMP1DA\/A04___05_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "6",
+            "path": "KNJAEMP1DA\/A04___06_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "7",
+            "path": "KNJAEMP1DA\/A04___07_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "8",
+            "path": "KNJAEMP1DA\/A04___08_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "9",
+            "path": "KNJAEMP1DA\/A04___09_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "10",
+            "path": "KNJAEMP1DA\/A04___10_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "11",
+            "path": "KNJAEMP1DA\/A04___11_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "12",
+            "path": "KNJAEMP1DA\/A04___12_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "13",
+            "path": "KNJAEMP1DA\/A04___13_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "14",
+            "path": "KNJAEMP1DA\/A04___14_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "15",
+            "path": "KNJAEMP1DA\/A04___15_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "16",
+            "path": "KNJAEMP1DA\/A04___16_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "17",
+            "path": "KNJAEMP1DA\/A04___17_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "18",
+            "path": "KNJAEMP1DA\/A04___18_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "19",
+            "path": "KNJAEMP1DA\/A04___19_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "20",
+            "path": "KNJAEMP1DA\/A04___20_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "21",
+            "path": "KNJAEMP1DA\/A04___21_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "22",
+            "path": "KNJAEMP1DA\/A04___22_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "23",
+            "path": "KNJAEMP1DA\/A04___23_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "24",
+            "path": "KNJAEMP1DA\/A04___24_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "25",
+            "path": "KNJAEMP1DA\/A04___25_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "26",
+            "path": "KNJAEMP1DA\/A04___26_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "27",
+            "path": "KNJAEMP1DA\/A04___27_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "28",
+            "path": "KNJAEMP1DA\/A04___28_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "29",
+            "path": "KNJAEMP1DA\/A04___29_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "30",
+            "path": "KNJAEMP1DA\/A04___30_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "31",
+            "path": "KNJAEMP1DA\/A04___31_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "32",
+            "path": "KNJAEMP1DA\/A04___32_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "33",
+            "path": "KNJAEMP1DA\/A04___33_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "34",
+            "path": "KNJAEMP1DA\/A04___34_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "35",
+            "path": "KNJAEMP1DA\/A04___35_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Num",
+            "chapter_id": "36",
+            "path": "KNJAEMP1DA\/A04___36_Numbers_____KNJAEMP1DA.mp3",
+            "id_usfm": "NUM",
+            "name": "Numbers",
+            "order": 4
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "1",
+            "path": "KNJAEMP1DA\/A05___01_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "2",
+            "path": "KNJAEMP1DA\/A05___02_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "3",
+            "path": "KNJAEMP1DA\/A05___03_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "4",
+            "path": "KNJAEMP1DA\/A05___04_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "5",
+            "path": "KNJAEMP1DA\/A05___05_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "6",
+            "path": "KNJAEMP1DA\/A05___06_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "7",
+            "path": "KNJAEMP1DA\/A05___07_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "8",
+            "path": "KNJAEMP1DA\/A05___08_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "9",
+            "path": "KNJAEMP1DA\/A05___09_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "10",
+            "path": "KNJAEMP1DA\/A05___10_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "11",
+            "path": "KNJAEMP1DA\/A05___11_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "12",
+            "path": "KNJAEMP1DA\/A05___12_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "13",
+            "path": "KNJAEMP1DA\/A05___13_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "14",
+            "path": "KNJAEMP1DA\/A05___14_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "15",
+            "path": "KNJAEMP1DA\/A05___15_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "16",
+            "path": "KNJAEMP1DA\/A05___16_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "17",
+            "path": "KNJAEMP1DA\/A05___17_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "18",
+            "path": "KNJAEMP1DA\/A05___18_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "19",
+            "path": "KNJAEMP1DA\/A05___19_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "20",
+            "path": "KNJAEMP1DA\/A05___20_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "21",
+            "path": "KNJAEMP1DA\/A05___21_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "22",
+            "path": "KNJAEMP1DA\/A05___22_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "23",
+            "path": "KNJAEMP1DA\/A05___23_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "24",
+            "path": "KNJAEMP1DA\/A05___24_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "25",
+            "path": "KNJAEMP1DA\/A05___25_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "26",
+            "path": "KNJAEMP1DA\/A05___26_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "27",
+            "path": "KNJAEMP1DA\/A05___27_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "28",
+            "path": "KNJAEMP1DA\/A05___28_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "29",
+            "path": "KNJAEMP1DA\/A05___29_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "30",
+            "path": "KNJAEMP1DA\/A05___30_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "31",
+            "path": "KNJAEMP1DA\/A05___31_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "32",
+            "path": "KNJAEMP1DA\/A05___32_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "33",
+            "path": "KNJAEMP1DA\/A05___33_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        },
+        {
+            "book_id": "Deut",
+            "chapter_id": "34",
+            "path": "KNJAEMP1DA\/A05___34_Deuteronomy_KNJAEMP1DA.mp3",
+            "id_usfm": "DEU",
+            "name": "Deuteronomy",
+            "order": 5
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5947,
+            "bible_id": "KNJAEM",
+            "equivalent_id": "KNJAEMP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 5948,
+            "bible_id": "KNJAEM",
+            "equivalent_id": "KNJAEMP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

@@ -1,0 +1,443 @@
+{
+    "id": "ADYIBT",
+    "parent_bible_id": null,
+    "title": "Adyghe Old Testament Portions",
+    "title_vernacular": "УблапІэ, Апэрэ Самуел, ЯтІонэрэ Самуел, Апэрэ тхылъыр, ЯтІонэрэ тхылъыр, ТхьэлІыкІоу Юныс, Рут, Эстэр, Ушъый гъэсэпэтхыдэхэр",
+    "description": "",
+    "description_vernacular": "УблапІэ, Апэрэ Самуел, ЯтІонэрэ Самуел, Апэрэ тхылъыр, ЯтІонэрэ тхылъыр, ТхьэлІыкІоу Юныс, Рут, Эстэр, Ушъый гъэсэпэтхыдэхэр",
+    "iso": "ady",
+    "script": "Cyrl",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": null,
+    "country_id": "RU",
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2020-08-12T14:12:07.000000Z",
+    "updated_at": "2020-10-12T15:51:52.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Ruth",
+            "chapter_id": "1",
+            "path": "ADYIBTP1DA\/A08___01_Ruth________ADYIBTP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "2",
+            "path": "ADYIBTP1DA\/A08___02_Ruth________ADYIBTP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "3",
+            "path": "ADYIBTP1DA\/A08___03_Ruth________ADYIBTP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "4",
+            "path": "ADYIBTP1DA\/A08___04_Ruth________ADYIBTP1DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Esth",
+            "chapter_id": "1",
+            "path": "ADYIBTP1DA\/A17___01_Esther______ADYIBTP1DA.mp3",
+            "id_usfm": "EST",
+            "name": "Esther",
+            "order": 17
+        },
+        {
+            "book_id": "Esth",
+            "chapter_id": "2",
+            "path": "ADYIBTP1DA\/A17___02_Esther______ADYIBTP1DA.mp3",
+            "id_usfm": "EST",
+            "name": "Esther",
+            "order": 17
+        },
+        {
+            "book_id": "Esth",
+            "chapter_id": "3",
+            "path": "ADYIBTP1DA\/A17___03_Esther______ADYIBTP1DA.mp3",
+            "id_usfm": "EST",
+            "name": "Esther",
+            "order": 17
+        },
+        {
+            "book_id": "Esth",
+            "chapter_id": "4",
+            "path": "ADYIBTP1DA\/A17___04_Esther______ADYIBTP1DA.mp3",
+            "id_usfm": "EST",
+            "name": "Esther",
+            "order": 17
+        },
+        {
+            "book_id": "Esth",
+            "chapter_id": "5",
+            "path": "ADYIBTP1DA\/A17___05_Esther______ADYIBTP1DA.mp3",
+            "id_usfm": "EST",
+            "name": "Esther",
+            "order": 17
+        },
+        {
+            "book_id": "Esth",
+            "chapter_id": "6",
+            "path": "ADYIBTP1DA\/A17___06_Esther______ADYIBTP1DA.mp3",
+            "id_usfm": "EST",
+            "name": "Esther",
+            "order": 17
+        },
+        {
+            "book_id": "Esth",
+            "chapter_id": "7",
+            "path": "ADYIBTP1DA\/A17___07_Esther______ADYIBTP1DA.mp3",
+            "id_usfm": "EST",
+            "name": "Esther",
+            "order": 17
+        },
+        {
+            "book_id": "Esth",
+            "chapter_id": "8",
+            "path": "ADYIBTP1DA\/A17___08_Esther______ADYIBTP1DA.mp3",
+            "id_usfm": "EST",
+            "name": "Esther",
+            "order": 17
+        },
+        {
+            "book_id": "Esth",
+            "chapter_id": "9",
+            "path": "ADYIBTP1DA\/A17___09_Esther______ADYIBTP1DA.mp3",
+            "id_usfm": "EST",
+            "name": "Esther",
+            "order": 17
+        },
+        {
+            "book_id": "Esth",
+            "chapter_id": "10",
+            "path": "ADYIBTP1DA\/A17___10_Esther______ADYIBTP1DA.mp3",
+            "id_usfm": "EST",
+            "name": "Esther",
+            "order": 17
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "1",
+            "path": "ADYIBTP1DA\/A20___01_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "2",
+            "path": "ADYIBTP1DA\/A20___02_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "3",
+            "path": "ADYIBTP1DA\/A20___03_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "4",
+            "path": "ADYIBTP1DA\/A20___04_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "5",
+            "path": "ADYIBTP1DA\/A20___05_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "6",
+            "path": "ADYIBTP1DA\/A20___06_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "7",
+            "path": "ADYIBTP1DA\/A20___07_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "8",
+            "path": "ADYIBTP1DA\/A20___08_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "9",
+            "path": "ADYIBTP1DA\/A20___09_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "10",
+            "path": "ADYIBTP1DA\/A20___10_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "11",
+            "path": "ADYIBTP1DA\/A20___11_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "12",
+            "path": "ADYIBTP1DA\/A20___12_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "13",
+            "path": "ADYIBTP1DA\/A20___13_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "14",
+            "path": "ADYIBTP1DA\/A20___14_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "15",
+            "path": "ADYIBTP1DA\/A20___15_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "16",
+            "path": "ADYIBTP1DA\/A20___16_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "17",
+            "path": "ADYIBTP1DA\/A20___17_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "18",
+            "path": "ADYIBTP1DA\/A20___18_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "19",
+            "path": "ADYIBTP1DA\/A20___19_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "20",
+            "path": "ADYIBTP1DA\/A20___20_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "21",
+            "path": "ADYIBTP1DA\/A20___21_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "22",
+            "path": "ADYIBTP1DA\/A20___22_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "23",
+            "path": "ADYIBTP1DA\/A20___23_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "24",
+            "path": "ADYIBTP1DA\/A20___24_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "25",
+            "path": "ADYIBTP1DA\/A20___25_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "26",
+            "path": "ADYIBTP1DA\/A20___26_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "27",
+            "path": "ADYIBTP1DA\/A20___27_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "28",
+            "path": "ADYIBTP1DA\/A20___28_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "29",
+            "path": "ADYIBTP1DA\/A20___29_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "30",
+            "path": "ADYIBTP1DA\/A20___30_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "31",
+            "path": "ADYIBTP1DA\/A20___31_Proverbs____ADYIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Jonah",
+            "chapter_id": "1",
+            "path": "ADYIBTP1DA\/A32___01_Jonah_______ADYIBTP1DA.mp3",
+            "id_usfm": "JON",
+            "name": "Jonah",
+            "order": 32
+        },
+        {
+            "book_id": "Jonah",
+            "chapter_id": "2",
+            "path": "ADYIBTP1DA\/A32___02_Jonah_______ADYIBTP1DA.mp3",
+            "id_usfm": "JON",
+            "name": "Jonah",
+            "order": 32
+        },
+        {
+            "book_id": "Jonah",
+            "chapter_id": "3",
+            "path": "ADYIBTP1DA\/A32___03_Jonah_______ADYIBTP1DA.mp3",
+            "id_usfm": "JON",
+            "name": "Jonah",
+            "order": 32
+        },
+        {
+            "book_id": "Jonah",
+            "chapter_id": "4",
+            "path": "ADYIBTP1DA\/A32___04_Jonah_______ADYIBTP1DA.mp3",
+            "id_usfm": "JON",
+            "name": "Jonah",
+            "order": 32
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5752,
+            "bible_id": "ADYIBT",
+            "equivalent_id": "ADYIBTP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 5753,
+            "bible_id": "ADYIBT",
+            "equivalent_id": "ADYIBTP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

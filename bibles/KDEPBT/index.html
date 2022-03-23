@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                            <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <style>
+        table {width:100%; font-size: .85em; border: thin solid #d7d7d;}
+        h4  {padding: .5em 0; text-align: left;}
+        td.title {width:30%; font-weight: bold;}
+        td.answer {width:70%;}
+        #bible-sample   {height: 80%; max-height:1200px;bible margin-top:2em;}
+        #bible_data     {font-size: .78em;}
+        .bible_description {display:block}
+        iframe      {height:100%}
+
+    </style>
+
+    <title>Makonde NT  | Find a Bible</title>
+
+    <style>
+        #subheader          {margin-top:82px; background:#fff;}
+        h1                  {font-size: clamp(1.1rem, 2vw, 1.6rem);line-height: clamp(1.4rem, 5vw, 1.8rem);}
+        .type h2            {font-size: clamp(1rem, 2vw, 1.4rem);line-height: clamp(1.1rem, 5vw, 1.5rem);
+                            font-weight: lighter; margin: 0 .5rem; text-align: left; text-transform: uppercase;}
+        .type h3            {margin: 0 .5rem; font-size: .9em; text-align: left;  font-weight: normal; }
+        a.nav-bibles        {color: var(--primary-color)!important}
+        #bible aside dl {display: flex;justify-content: space-between;background: #ccc;flex-direction: column;text-align: center;
+            margin: 1rem;border: thin solid gray;border-radius: 10px;}
+
+        #bible aside dl dt {background-color: #f0f0f0;color: #222;padding: .5rem;font-weight: bold;text-align: left;
+                text-transform: uppercase;font-size: .75rem;}
+        .panel {display: flex;align-items: stretch;justify-content: center;margin: 8px 0 10px;border-radius: .3em;border: thin solid #d7d7d7;
+                background-color: #fff; padding-right: .7em; }
+
+        .shadow {box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);}
+        .organization-section {border-radius: 6px;background-color: #fff;text-align: center;font-size: smaller;padding:6px;align-items: center;color: #222;}
+
+        .link {height: 30px;display: block;background-color: #999;line-height: 30px;color: #fff;margin: 9px 0;font-size: .88rem;
+                width: 100%;font-weight: 300;background-image: url(https://images.bible.cloud/fab/icons/fab-icon-link1.svg);
+                background-repeat: no-repeat;background-position: 0;background-size: 30px 30px;border-radius: 4px;padding-left: 42px;overflow: hidden;text-overflow: ellipsis;}
+        .link-head      {margin: .75rem 0;}
+        .link-type-title {font-size: 1.3rem;font-weight: 400;margin: 0 0 0 30px;text-transform: uppercase;}
+        .link-icon      {width:3.5em; margin:0; padding:0;}
+
+        .type           {background-color: #f0f0f0;background-image: url(/img/fabric-plaid.png); margin: 1em .5em 1em 2em; border: thin solid #c7c7c7;
+                        box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+                        border: thin solid #ccc; padding: 8px;border-radius: 6px;color: #222;background-repeat: repeat;}
+        .type-audio_web {background-color: #f598a8}
+        .type-print     {background-color: #d9d0f5}
+        .type-web       {background-color: #69b7eb}
+        .type-pdf       {background-color: #b55b5b}
+        .type-cat       {background-color: #b4bdc4}
+        .type-sign      {background-color: #69b7eb}
+        .type-ebooks    {background-color: #efc3a3}
+        .type-epub      {background-color: #3c71c5}
+        .type-historic  {background-color: #47becf}
+        .type-mobi      {background-color: #7ac678}
+        .type-app       {background-color: #ddabed}
+        .type-video_web {background-color: #676b72}
+        .type-audio     {background-color: #e29297}
+        .type-audio_player {background-color: #d0b662
+        }
+
+        .accordion-panel {
+            justify-content: left;
+        }
+
+        .accordion {
+            width:100%;
+            text-align: left;
+            padding-left:24px;
+        }
+
+        .accordion:after {
+            content: "+";
+            float: right;
+            font-size:18px;
+            margin-top: -20px;
+        }
+
+
+    </style>
+    <style>
+        a.nav-bibles  {color: var(--primary-color)!important}
+        [role="tablist"] {display: flex;flex-wrap: wrap}
+        nav[role=tablist] a {background-color: rgba(250, 250, 250, 0.75)}
+    </style>
+
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jonbitgood/fontable/fonts/Latn/default.css">
+    
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/language/KDE.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Makonde NT
+                </h1>
+                <h2 itemprop="description"   class="font-latn" >Makonde NT</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                               controls="KDEPBT" href="#KDEPBT">Makonde NT
+                                            </a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/bibles">
+                    <span itemprop="name">Bibles</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/languages/kde">
+                    <span itemprop="name">Makonde</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Makonde NT</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+
+    <article id="bible" class="columns">
+    <section id="KDEPBT" role="tabpanel" aria-hidden="false">
+        <div class="row">
+            <div class="medium-3">
+                <h4 class="text-center">Makonde NT</h4>
+
+
+
+    <div class="smaller text-center">
+        <div>
+
+                                                                        <a href="https://find.bible/organizations/pioneer-bible-translators">Pioneer Bible Translators <br> <small>Publisher</small></a><br><br>
+                                                        </div>
+    </div>
+
+<table id="bible_data">
+    <tbody>
+            <tr>
+            <td class="title">Date:</td>
+            <td class="answer">2019</td>
+        </tr>
+    
+            <tr>
+            <td class="title">ISO:</td>
+            <td class="answer">kde</td>
+        </tr>
+    
+            <tr>
+            <td class="title">Languages:</td>
+            <td class="answer">Makonde</td>
+        </tr>
+    
+
+            <tr>
+            <td class="title">Script:</td>
+            <td class="answer">Latin</td>
+        </tr>
+    
+            <tr>
+            <td class="title">Bible ID:</td>
+            <td class="answer">KDEPBT</td>
+        </tr>
+    
+
+
+            <tr>
+            <td class="title">Copyright:</td>
+            <td class="answer">© 2019 Pioneer Bible Translators</td>
+        </tr>
+    
+    
+    
+        </tbody>
+</table>
+
+
+            </div>
+            <div class="medium-9">
+                <div class="row">
+
+    <div class="small-12 type type-web">
+        <div class="row link-head">
+            <div class="small-11">
+                <h2>Online Bibles</h2>
+                <h3>Websites we know of that host this Bible.</h3>
+            </div>
+            <div class="small-1">
+                <img class="link-icon" src="https://images.bible.cloud/icon/type-web.svg" />
+            </div>
+        </div>
+
+                    <div class="row panel   shadow">
+                <div class="organization-section small-4 large-3">
+                    <div>YouVersion</div>
+                </div>
+
+                <div class="medium-8 large-9" >
+                                    <a class="link" href="https://www.bible.com/versions/2375-makonde-makonde-nt">
+                        Makonde NT
+
+                                            </a>
+                                </div>
+            </div>
+            </div>
+
+    <div class="small-12 type type-archive">
+        <div class="row link-head">
+            <div class="small-11">
+                <h2>Digital Bible </h2>
+                <h3>A Storage Site for Bible Data</h3>
+            </div>
+            <div class="small-1">
+                <img class="link-icon" src="https://images.bible.cloud/icon/type-archive.svg" />
+            </div>
+        </div>
+
+                    <div class="row panel   shadow">
+                <div class="organization-section small-4 large-3">
+                    <div>The Digital Bible Library</div>
+                </div>
+
+                <div class="medium-8 large-9" >
+                                    <a class="link" href="https://app.thedigitalbiblelibrary.org/entry?id=c11c93a0b8a04496">
+                        Bible For Developers
+
+                                            </a>
+                                </div>
+            </div>
+            </div>
+ </div>
+            </div>
+        </div>
+    </section>
+
+    
+</article>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Solomon Islands | Find a Bible</title>
+    <style>
+        .country-aside      {padding: .2em 1.2em .5em 1.2em;}
+        .country-aside p    {font-size: .8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin: .25em auto 1em auto;}
+        .country-persecution {background:url("https://images.bible.cloud/fab/logos/odi_gray_logo.svg") no-repeat 95% 10%/ 33px 26px;
+                            border: thin solid #d7d7d7; border-width: 1px 0 1px 0; margin-bottom: .5em;}
+        .country-facts      {margin: 0 0 .5em 0;}
+        .country-links      {margin-top: .75em; padding-top: .5em;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: .5em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .link-icon              {width: 1.5em; height: 1.5em;margin-left:.5em;}
+        th h6                                  {font-size: .7em; font-weight: normal;line-height:.9em; margin:.2em 0 0 0 ; text-transform: none}
+        .dataTable tr td:nth-child(2)       {max-width:120px;text-align:right;}
+        .dataTable tr td:nth-child(3)       {width:80px;text-align:center;}
+        .dataTable tr td:nth-child(4), .dataTable tr td:nth-child(5), .dataTable tr td:nth-child(6)      {width:90px;text-align:center;}
+        #banner .banner-flag {margin: 0 .5em 0 0;}
+    </style>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+    </style
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-flag " src="https://images.bible.cloud/flags/sb.svg" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Solomon Islands
+                </h1>
+                <h2 itemprop="description"  >A country of  Oceania</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Languages
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/SB/maps">Solomon Islands Maps | Info</a>
+                                                                <a class="external" href="https://find.bible/countries/SB/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Solomon Islands</span>
+                    <meta itemprop="position" content="3" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+            <img class="country-location" src="https://images.bible.cloud/maps/country/SB-location.png" alt="Solomon Islands Find a Bible" />
+            <div class="country-facts row">
+                <p><b>Population:</b> 690,598</p>
+                <p><b>Official Language:</b> English</p>
+                <p><b>Language Count:</b> <span class="num-badge">81</span></p>
+                <p><b>Primary Religion:</b> Christianity</p>
+                
+            </div>
+
+            <div class="country-links">
+                <p><b>Reference Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/SB" alt="Find a Bible Solomon Islands">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://en.wikipedia.org/wiki/Solomon_Islands" alt="Wikipedia - Solomon Islands">
+                            <img src="http://images.bible.cloud/wiki_type_logo.svg" title="Wikipedia" />
+                            <p>Wikipedia</p></a>
+                    </div>
+
+
+
+                                            <div><a target="_blank" href="https://www.cia.gov/the-world-factbook/countries/solomon-islands/" alt="World Fact Book - Solomon Islands">
+                                <img src="http://images.bible.cloud/logo_type_cia.svg" title="World Fact Book" />
+                                <p>WorldFact<br />Book</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="http://hdr.undp.org/en/countries/profiles/SLB" alt="Human Development - Solomon Islands">
+                                <img src="http://images.bible.cloud/logo_type_united_nations.svg" title="Human Development" />
+                                <p>Human<br />Develop.</p></a>
+                        </div>
+                    
+
+                                            <div><a target="_blank" href="https://www.state.gov/countries-areas/solomon-islands/" alt="Religious Freedom - Solomon Islands">
+                                <img src="http://images.bible.cloud/logo_type_dept_state.svg" title="Religious Freedom" />
+                                <p>Religious<br />Freedom</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://www.britannica.com/place/Solomon-Islands" alt="Britannica - Solomon Islands">
+                                <img src="http://images.bible.cloud/logo_type_britannica.svg" title="Britannica" />
+                                <p>Britannica</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+                            <p><b>Factbook Summary:</b>
+                    <a href="https://images.bible.cloud/maps/summary/BP-summary.pdf" target="_blank"  alt="World Fact Book Solomon Islands">
+                        <img class="pdf-icon" src="http://images.bible.cloud/icon/pdf_icon.svg" title="Country Summary" /></a></p>
+            
+
+        
+
+
+            <div class="country-links">
+                <p><b>Mission / Prayer Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/SB" alt="Find a Bible Solomon Islands">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://www.joshuaproject.net/countries/BP" alt="Joshua Project - Solomon Islands">
+                            <img src="http://images.bible.cloud/joshua_type_logo.svg" title="Joshua Project" />
+                            <p>Joshua<br />Project</p></a>
+                    </div>
+
+                    
+
+
+                                            <div><a target="_blank" href="https://operationworld.org/locations/solomon-islands" alt="Operation World - Solomon Islands">
+                                <img src="http://images.bible.cloud/logo_type_ow.svg" title="Operation World" />
+                                <p>Operation<br />World</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://prayercast.com/solomon-islands.html" alt="PrayerCasts - Solomon Islands">
+                                <img src="http://images.bible.cloud/prayercast_type_logo.svg" title="PrayerCast" />
+                                <p>PrayerCast</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://curlie.org/Regional/Oceania/Solomon_Islands" alt="ODP Database - Solomon Islands">
+                                <img src="http://images.bible.cloud/logo_type_odp.svg" title="Open Directory Project" />
+                                <p>Open<br />Directory</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+
+
+            <div class="country-overview">
+                    <p><b>Language Summary:</b>
+                        Melanesian pidgin (in much of the country is lingua franca), English (official but spoken by only 1%-2% of the population), 120 indigenous languages</p>
+                </div>
+
+                <div class="country-overview">
+                    <p><b>Ethnic Summary:</b>
+                        Melanesian 95.3%, Polynesian 3.1%, Micronesian 1.2%, other 0.3% (2009 est.)</p>
+                </div>
+
+
+
+
+            <div class="country-overview">
+                <p><b>Religious Summary:</b>
+                    Protestant 73.4% (Church of Melanesia 31.9%, South Sea Evangelical 17.1%, Seventh Day Adventist 11.7%, United Church 10.1%, Christian Fellowship Church 2.5%), Roman Catholic 19.6%, other Christian 2.9%, other 4%, unspecified 0.1% (2009 est.)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="medium-9">
+        <table id="languages" class="table responsive" cellspacing="0" width="100%"
+               data-json='{&quot;data&quot;:[{&quot;id&quot;:&quot;agw&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Kahua&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Anganiwai&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;8,880&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:16},{&quot;id&quot;:&quot;aia&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Arosi&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;alu&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;&#039;Are&#039;are&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Areare&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;30,770&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:6},{&quot;id&quot;:&quot;apb&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Sa&#039;a&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Apae&#039;aa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:7},{&quot;id&quot;:&quot;aua&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Asumboa&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Asubuo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;aud&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Anuta&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Te taranga paka-Anuta&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;450&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;baa&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Babatana&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;East Choiseul&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:5},{&quot;id&quot;:&quot;bgt&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bughotu&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Bugotu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:8},{&quot;id&quot;:&quot;bis&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bislama&quot;,&quot;ci&quot;:&quot;VU&quot;,&quot;cn&quot;:&quot;Vanuatu&quot;,&quot;tv&quot;:&quot;Bichelamar&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;13,890&quot;,&quot;bc&quot;:2,&quot;fc&quot;:2,&quot;rc&quot;:39},{&quot;id&quot;:&quot;blb&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bilua&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Mbilua&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;15,020&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:11},{&quot;id&quot;:&quot;blp&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Blablanga&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Gema&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,040&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;brr&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Birao&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Mbirao&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,140&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;bvc&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Baelelea&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Mbaelelea&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;15,120&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;bvd&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Baeggu&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Mbaenggu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,140&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;bxa&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Tairaha&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;8,550&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:5},{&quot;id&quot;:&quot;cmn&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Mandarin Chinese&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;\u5b98\u8bdd; \u5b98\u8a71; Gu\u0101nhu\u00e0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:45,&quot;fc&quot;:22,&quot;rc&quot;:65},{&quot;id&quot;:&quot;dor&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Dori&#039;o&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Kwarekwareo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,140&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;drr&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Dororo&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Doriri&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;eng&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;English&quot;,&quot;ci&quot;:&quot;GB&quot;,&quot;cn&quot;:&quot;United Kingdom&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;20,840&quot;,&quot;bc&quot;:244,&quot;fc&quot;:29,&quot;rc&quot;:314},{&quot;id&quot;:&quot;faf&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Fagani&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Faghani&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;far&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Fataleka&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;11,510&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:5},{&quot;id&quot;:&quot;fij&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Fijian&quot;,&quot;ci&quot;:&quot;FJ&quot;,&quot;cn&quot;:&quot;Fiji&quot;,&quot;tv&quot;:&quot;Na vosa vaka-Viti&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,080&quot;,&quot;bc&quot;:3,&quot;fc&quot;:2,&quot;rc&quot;:16},{&quot;id&quot;:&quot;gga&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Gao&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Nggao&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,090&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;ghn&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Ghanongga&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Ganongga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,310&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;gil&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Gilbertese&quot;,&quot;ci&quot;:&quot;KI&quot;,&quot;cn&quot;:&quot;Kiribati&quot;,&quot;tv&quot;:&quot;Kiribati&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;8,370&quot;,&quot;bc&quot;:5,&quot;fc&quot;:1,&quot;rc&quot;:7},{&quot;id&quot;:&quot;gli&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Guliguli&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Gulili&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;gmb&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Gula&#039;alaa&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Kwai&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,690&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;gri&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Ghari&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Gari&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:3,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:8},{&quot;id&quot;:&quot;hoa&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Hoava&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;780&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;jaj&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Zazao&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Jajao&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kji&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Zabana&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Kia&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,180&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;kkk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kokota&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Ooe Kokota&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;910&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;ksg&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kusaghe&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Kusage&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,120&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:5},{&quot;id&quot;:&quot;kwd&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kwaio&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;22,690&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;kwf&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kwara&#039;ae&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Fiu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;55,700&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:5},{&quot;id&quot;:&quot;kzk&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Kazukuru&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;lga&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Lungga&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Luga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,750&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:5},{&quot;id&quot;:&quot;lgb&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Laghu&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Katova&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;15&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;lgl&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Wala&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Langalanga&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;11,990&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;lgr&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Lengo&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Doku&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:21},{&quot;id&quot;:&quot;lgu&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Longgu&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Logu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,240&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;llu&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Lau&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;29,050&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;lvk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Lavukaleve&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Laube&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,060&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;mln&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Malango&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Teha&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,110&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;mlu&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;To&#039;abaita&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Malu\u2019u&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;21,650&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;mnv&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Rennell-Bellona&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,540&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;mpr&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Vangunu&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,560&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:11},{&quot;id&quot;:&quot;mrn&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Cheke Holo&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;A&#039;ara&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:5},{&quot;id&quot;:&quot;mte&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Mono (Solomon Islands)&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Mono-Alu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,740&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:11},{&quot;id&quot;:&quot;mvo&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Marovo&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;13,900&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;nfl&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Ayiwo&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Reef&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;14,440&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;ngr&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Engdewu&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Nanggu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;360&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nke&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Duke&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,970&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;nlg&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Gela&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Nggela&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;20,450&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;nlz&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Nal\u00f6go&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Nat\u00fcgu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,260&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;npx&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Noipx&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;290&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ntu&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Nat\u00fcgu&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,990&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;ojv&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Ontong Java&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Luangiua&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ora&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Oroha&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Mara Ma-Siki&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;61&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;pis&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Pijin&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Neo-Solomonic&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;41,900&quot;,&quot;bc&quot;:1,&quot;fc&quot;:3,&quot;rc&quot;:32},{&quot;id&quot;:&quot;piv&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Pileni&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;rri&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Ririo&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;rug&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Roviana&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Robiana&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;16,960&quot;,&quot;bc&quot;:3,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;rwm&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Amba (Uganda)&quot;,&quot;ci&quot;:&quot;UG&quot;,&quot;cn&quot;:&quot;Uganda&quot;,&quot;tv&quot;:&quot;Kwamba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:10},{&quot;id&quot;:&quot;sbb&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Simbo&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Madeggusu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,640&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;sky&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Sikaiana&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Sikayana&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,250&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;stn&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Owa&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Santa Ana&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;11,720&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;svs&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Savosavo&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Savo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,160&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;szs&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Solomon Islands Sign Language&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,020&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tbe&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tanimbili&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Tanibili&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;15&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tkp&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Tikopia&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,700&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;tkw&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Teanu&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tlr&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Talise&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Tolo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;21,480&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:8},{&quot;id&quot;:&quot;tnx&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Tanema&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Tetawo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tpi&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Tok Pisin&quot;,&quot;ci&quot;:&quot;PG&quot;,&quot;cn&quot;:&quot;Papua New Guinea&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,940&quot;,&quot;bc&quot;:1,&quot;fc&quot;:2,&quot;rc&quot;:84},{&quot;id&quot;:&quot;tqu&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Touo&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Baniata&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,210&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;tva&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Vaghua&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Tavula&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,360&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;uge&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Ughele&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Ugele&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,060&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;utp&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Amba (Solomon Islands)&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Aba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;vnk&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Vano&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Alavana&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;vrs&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Varisi&quot;,&quot;ci&quot;:&quot;SB&quot;,&quot;cn&quot;:&quot;Solomon Islands&quot;,&quot;tv&quot;:&quot;Varese&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;8,860&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3}]}'
+               data-searchplaceholder="Filter Items on this Page">
+            <thead>
+            <tr>
+                <th data-column-name="tt" data-link="id" data-path="/languages">Languages<h6>in Solomon Islands</h6></th>
+                <th data-column-name="po" data-sort-default="desc">Population<h6>Primary Language</h6></th>
+                <th data-column-name="id">iso</th>
+                <th data-column-name="bc">Bible<h6>Versions</h6></th>
+                <th data-column-name="fc">Films</th>
+                <th data-column-name="rc">Resources</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

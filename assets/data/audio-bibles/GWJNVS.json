@@ -1,0 +1,39 @@
+{
+    "id": "GWJNVS",
+    "parent_bible_id": null,
+    "title": "Portions of the Bible in |Gwi",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "gwj",
+    "script": "Qaax",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2001",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2016-10-12T17:40:56.000000Z",
+    "updated_at": "2020-10-12T17:40:56.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 5907,
+            "bible_id": "GWJNVS",
+            "equivalent_id": "GWJNVSP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

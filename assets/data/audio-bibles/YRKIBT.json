@@ -1,0 +1,39 @@
+{
+    "id": "YRKIBT",
+    "parent_bible_id": null,
+    "title": "Mark, Luke, and John in Nenets",
+    "title_vernacular": "Марк, Лука, Иоанн",
+    "description": "",
+    "description_vernacular": "",
+    "iso": "yrk",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": null,
+    "country_id": "RU",
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2018-02-12T14:16:50.000000Z",
+    "updated_at": "2020-10-12T17:24:07.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 6197,
+            "bible_id": "YRKIBT",
+            "equivalent_id": "YRKIBTP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

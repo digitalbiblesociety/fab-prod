@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-download   {text-align: right;margin-right:2em;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 9em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 2px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>Nepal | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/NP.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/np_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Nepal
+                </h1>
+                <h2 itemprop="description"  >A country of  Asia</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/NP">Nepal Languages</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Maps | Info
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/NP/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/NP">
+                    <span itemprop="name">Nepal</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+
+            <div class="country-facts row">
+                <p><b>Title:</b> The Federal Democratic Republic of Nepal </p><br>
+                <p><b>Population:</b> 30,424,878</p>
+                <p><b>Population Change:</b> 1.85</p>
+                <p><b>National Average Age:</b> 25</p>
+                <p><b>Urban Percentage:</b> 21</p>
+                <p><b>Christian Population:</b> 269,000</p>
+                <p><b>Christian Percentage:</b> 0.9</p>
+
+            </div>
+
+
+                        <div class="country-overview">
+                <p><b>Introduction:</b>
+                    Nepal officially the Federal Democratic Republic of Nepal is a landlocked country in South Asia located mainly in the Himalayas but also includes parts of the Indo-Gangetic Plain.</p><br>
+                <p><b>Overview:</b>
+                    During the late 18th-early 19th centuries the principality of Gorkha united many of the other principalities and states of the sub-Himalayan region into a Nepalese Kingdom. Nepal retained its independence following the Anglo-Nepalese War of 1814-16 and the subsequent peace treaty laid the foundations for two centuries of amicable relations between Britain and Nepal. (The Brigade of Gurkas continues to serve in the British Army to the present day.) In 1951 the Nepali monarch ended the century-old system of rule by hereditary premiers and instituted a cabinet system that brought political parties into the government. That arrangement lasted until 1960 when political parties were again banned but was reinstated in 1990 with the establishment of a multiparty democracy within the framework of a constitutional monarchy. ++ An insurgency led by Maoists broke out in 1996. The ensuing 10-year civil war between Maoist and government forces witnessed the dissolution of the cabinet and parliament and the re-assumption of absolute power by the king in 2002. A peace accord in 2006 led to the promulgation of an interim constitution in 2007. Following a nationwide Constituent Assembly (CA) election in 2008 the newly formed CA declared Nepal a federal democratic republic abolished the monarchy and elected the country&#039;s first president. After the CA failed to draft a constitution by a May 2012 deadline set by the Supreme Court then-Prime Minister Baburam BHATTARAI dissolved the CA. Months of negotiations ensued until March 2013 when the major political parties agreed to create an interim government headed by then-Chief Justice Khil Raj REGMI with a mandate to hold elections for a new CA. Elections were held in November 2013 in which the Nepali Congress won the largest share of seats in the CA and in February 2014 formed a coalition government with the second place Communist Party of Nepal-Unified Marxist-Leninist and with Nepali Congress President Sushil KOIRALA as prime minister. Nepal&#039;s new constitution came into effect in September 2015.</p>
+            </div>
+                
+
+        </div>
+    </div>
+
+
+
+    <div class="medium-9">
+
+
+        <div  class="row">
+
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Land</h4>
+                    <div><a href="#land" alt="Nepal land Map" title="Nepal land Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/NP-land.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/NP-land.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Language Map</h4>
+                    <div><a href="#language" alt="Nepal language Map" title="Nepal language Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/NP-lang.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/NP-lang.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Location</h4>
+                    <div><a href="#location" alt="Nepal location Map" title="Nepal location Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/NP-location.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/NP-location.png" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Transportation</h4>
+                    <div><a href="#trans" alt="Nepal trans Map" title="Nepal trans Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/NP-trans.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/NP-trans.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                    </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+<div class="map-modals">
+
+            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/NP-land.jpg' />
+    </div>
+</div>            <div id="language" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/NP-lang.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/NP-location.png' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/NP-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+
+
+                                    let marker_anp = L.marker([26.004685, 85.533985]).addTo(mymap);
+                    marker_anp.bindPopup('<a href="/languages/anp">Angika</a>').openPopup();
+                                                let marker_aph = L.marker([26.879440, 87.329580]).addTo(mymap);
+                    marker_aph.bindPopup('<a href="/languages/aph">Athpariya</a>').openPopup();
+                                                let marker_asm = L.marker([26.087630, 91.293155]).addTo(mymap);
+                    marker_asm.bindPopup('<a href="/languages/asm">Assamese</a>').openPopup();
+                                                let marker_awa = L.marker([27.590735, 82.466255]).addTo(mymap);
+                    marker_awa.bindPopup('<a href="/languages/awa">Awadhi</a>').openPopup();
+                                                let marker_bap = L.marker([27.121470, 87.047380]).addTo(mymap);
+                    marker_bap.bindPopup('<a href="/languages/bap">Bantawa</a>').openPopup();
+                                                let marker_bee = L.marker([29.920020, 80.636530]).addTo(mymap);
+                    marker_bee.bindPopup('<a href="/languages/bee">Byangsi</a>').openPopup();
+                                                let marker_ben = L.marker([24.000000, 90.000000]).addTo(mymap);
+                    marker_ben.bindPopup('<a href="/languages/ben">Bengali</a>').openPopup();
+                                                let marker_bfy = L.marker([24.683745, 87.499440]).addTo(mymap);
+                    marker_bfy.bindPopup('<a href="/languages/bfy">Bagheli</a>').openPopup();
+                                                let marker_bgc = L.marker([29.016580, 76.043200]).addTo(mymap);
+                    marker_bgc.bindPopup('<a href="/languages/bgc">Haryanvi</a>').openPopup();
+                                                let marker_bhj = L.marker([27.332270, 86.394870]).addTo(mymap);
+                    marker_bhj.bindPopup('<a href="/languages/bhj">Bahing</a>').openPopup();
+                                                let marker_bho = L.marker([26.458455, 84.817115]).addTo(mymap);
+                    marker_bho.bindPopup('<a href="/languages/bho">Bhojpuri</a>').openPopup();
+                                                let marker_bmj = L.marker([27.707390, 84.348010]).addTo(mymap);
+                    marker_bmj.bindPopup('<a href="/languages/bmj">Bote-Darai</a>').openPopup();
+                                                let marker_bod = L.marker([28.368070, 90.187243]).addTo(mymap);
+                    marker_bod.bindPopup('<a href="/languages/bod">Tibetan</a>').openPopup();
+                                                let marker_bon = L.marker([-9.088790, 142.893350]).addTo(mymap);
+                    marker_bon.bindPopup('<a href="/languages/bon">Bine</a>').openPopup();
+                                                let marker_brd = L.marker([28.376750, 85.058430]).addTo(mymap);
+                    marker_brd.bindPopup('<a href="/languages/brd">Baraamu</a>').openPopup();
+                                                let marker_brx = L.marker([26.725455, 89.333235]).addTo(mymap);
+                    marker_brx.bindPopup('<a href="/languages/brx">Bodo (India)</a>').openPopup();
+                                                let marker_byh = L.marker([28.008360, 84.506840]).addTo(mymap);
+                    marker_byh.bindPopup('<a href="/languages/byh">Bhujel</a>').openPopup();
+                                                let marker_byw = L.marker([26.997240, 87.278330]).addTo(mymap);
+                    marker_byw.bindPopup('<a href="/languages/byw">Belhariya</a>').openPopup();
+                                                let marker_cdm = L.marker([27.720650, 84.901680]).addTo(mymap);
+                    marker_cdm.bindPopup('<a href="/languages/cdm">Chepang</a>').openPopup();
+                                                let marker_cdn = L.marker([29.703310, 80.483170]).addTo(mymap);
+                    marker_cdn.bindPopup('<a href="/languages/cdn">Chaudangsi</a>').openPopup();
+                                                let marker_chx = L.marker([28.683990, 83.448760]).addTo(mymap);
+                    marker_chx.bindPopup('<a href="/languages/chx">Chantyal</a>').openPopup();
+                                                let marker_ctn = L.marker([26.960990, 87.189940]).addTo(mymap);
+                    marker_ctn.bindPopup('<a href="/languages/ctn">Chhintange</a>').openPopup();
+                                                let marker_cur = L.marker([26.910650, 87.213310]).addTo(mymap);
+                    marker_cur.bindPopup('<a href="/languages/cur">Chhulung</a>').openPopup();
+                                                let marker_cuw = L.marker([27.358020, 86.982420]).addTo(mymap);
+                    marker_cuw.bindPopup('<a href="/languages/cuw">Chukwa</a>').openPopup();
+                                                let marker_dhi = L.marker([26.628270, 88.379815]).addTo(mymap);
+                    marker_dhi.bindPopup('<a href="/languages/dhi">Dhimal</a>').openPopup();
+                                                let marker_dhw = L.marker([27.548030, 85.007400]).addTo(mymap);
+                    marker_dhw.bindPopup('<a href="/languages/dhw">Dhanwar (Nepal)</a>').openPopup();
+                                                let marker_drd = L.marker([29.862920, 80.543865]).addTo(mymap);
+                    marker_drd.bindPopup('<a href="/languages/drd">Darmiya</a>').openPopup();
+                                                let marker_dre = L.marker([29.195680, 83.292670]).addTo(mymap);
+                    marker_dre.bindPopup('<a href="/languages/dre">Dolpo</a>').openPopup();
+                                                let marker_drq = L.marker([28.173000, 84.435000]).addTo(mymap);
+                    marker_drq.bindPopup('<a href="/languages/drq">Dura</a>').openPopup();
+                                                let marker_dry = L.marker([27.862300, 84.135730]).addTo(mymap);
+                    marker_dry.bindPopup('<a href="/languages/dry">Darai</a>').openPopup();
+                                                                    let marker_dus = L.marker([27.458490, 86.756990]).addTo(mymap);
+                    marker_dus.bindPopup('<a href="/languages/dus">Dumi</a>').openPopup();
+                                                                    let marker_dzo = L.marker([27.410786, 89.581604]).addTo(mymap);
+                    marker_dzo.bindPopup('<a href="/languages/dzo">Dzongkha</a>').openPopup();
+                                                let marker_emg = L.marker([27.510340, 87.113360]).addTo(mymap);
+                    marker_emg.bindPopup('<a href="/languages/emg">Eastern Meohang</a>').openPopup();
+                                                let marker_eng = L.marker([53.000000, -1.000000]).addTo(mymap);
+                    marker_eng.bindPopup('<a href="/languages/eng">English</a>').openPopup();
+                                                let marker_gbk = L.marker([32.359980, 76.571270]).addTo(mymap);
+                    marker_gbk.bindPopup('<a href="/languages/gbk">Gaddi</a>').openPopup();
+                                                let marker_gbm = L.marker([30.506060, 78.720090]).addTo(mymap);
+                    marker_gbm.bindPopup('<a href="/languages/gbm">Garhwali</a>').openPopup();
+                                                                    let marker_ghe = L.marker([28.106030, 84.851130]).addTo(mymap);
+                    marker_ghe.bindPopup('<a href="/languages/ghe">Southern Ghale</a>').openPopup();
+                                                let marker_ghh = L.marker([28.233230, 84.928990]).addTo(mymap);
+                    marker_ghh.bindPopup('<a href="/languages/ghh">Northern Ghale</a>').openPopup();
+                                                let marker_ght = L.marker([28.380760, 84.929990]).addTo(mymap);
+                    marker_ght.bindPopup('<a href="/languages/ght">Kuke</a>').openPopup();
+                                                let marker_guj = L.marker([22.687012, 71.096191]).addTo(mymap);
+                    marker_guj.bindPopup('<a href="/languages/guj">Gujarati</a>').openPopup();
+                                                let marker_gvr = L.marker([27.416870, 86.289880]).addTo(mymap);
+                    marker_gvr.bindPopup('<a href="/languages/gvr">Gurung</a>').openPopup();
+                                                let marker_hin = L.marker([25.000000, 77.000000]).addTo(mymap);
+                    marker_hin.bindPopup('<a href="/languages/hin">Hindi</a>').openPopup();
+                                                let marker_hut = L.marker([30.145140, 81.565910]).addTo(mymap);
+                    marker_hut.bindPopup('<a href="/languages/hut">Humla</a>').openPopup();
+                                                let marker_jee = L.marker([27.174110, 86.254680]).addTo(mymap);
+                    marker_jee.bindPopup('<a href="/languages/jee">Jerung</a>').openPopup();
+                                                                    let marker_jml = L.marker([29.170760, 82.437000]).addTo(mymap);
+                    marker_jml.bindPopup('<a href="/languages/jml">Jumli</a>').openPopup();
+                                                let marker_jnl = L.marker([30.074165, 80.800455]).addTo(mymap);
+                    marker_jnl.bindPopup('<a href="/languages/jnl">Rawat</a>').openPopup();
+                                                let marker_jul = L.marker([27.693110, 86.320050]).addTo(mymap);
+                    marker_jul.bindPopup('<a href="/languages/jul">Jirel</a>').openPopup();
+                                                                    let marker_kdq = L.marker([25.796235, 90.256580]).addTo(mymap);
+                    marker_kdq.bindPopup('<a href="/languages/kdq">Koch</a>').openPopup();
+                                                let marker_kfv = L.marker([26.917500, 87.320500]).addTo(mymap);
+                    marker_kfv.bindPopup('<a href="/languages/kfv">Kurmukar</a>').openPopup();
+                                                let marker_kfy = L.marker([29.562155, 80.017100]).addTo(mymap);
+                    marker_kfy.bindPopup('<a href="/languages/kfy">Kumaoni</a>').openPopup();
+                                                let marker_kgg = L.marker([29.176630, 80.630920]).addTo(mymap);
+                    marker_kgg.bindPopup('<a href="/languages/kgg">Kusunda</a>').openPopup();
+                                                let marker_kgj = L.marker([28.411020, 82.674900]).addTo(mymap);
+                    marker_kgj.bindPopup('<a href="/languages/kgj">Gamale Kham</a>').openPopup();
+                                                let marker_kgy = L.marker([28.292150, 85.425740]).addTo(mymap);
+                    marker_kgy.bindPopup('<a href="/languages/kgy">Kyerung</a>').openPopup();
+                                                let marker_khr = L.marker([22.357120, 84.392190]).addTo(mymap);
+                    marker_khr.bindPopup('<a href="/languages/khr">Kharia</a>').openPopup();
+                                                let marker_kif = L.marker([28.525930, 82.952350]).addTo(mymap);
+                    marker_kif.bindPopup('<a href="/languages/kif">Eastern Parbate Kham</a>').openPopup();
+                                                let marker_kip = L.marker([27.943730, 82.646670]).addTo(mymap);
+                    marker_kip.bindPopup('<a href="/languages/kip">Sheshi Kham</a>').openPopup();
+                                                let marker_kjl = L.marker([28.652140, 82.734790]).addTo(mymap);
+                    marker_kjl.bindPopup('<a href="/languages/kjl">Western Parbate Kham</a>').openPopup();
+                                                let marker_kkt = L.marker([27.194070, 86.853080]).addTo(mymap);
+                    marker_kkt.bindPopup('<a href="/languages/kkt">Koi</a>').openPopup();
+                                                let marker_kle = L.marker([27.160575, 87.571690]).addTo(mymap);
+                    marker_kle.bindPopup('<a href="/languages/kle">Kulung (Nepal)</a>').openPopup();
+                                                let marker_klr = L.marker([27.391180, 87.505335]).addTo(mymap);
+                    marker_klr.bindPopup('<a href="/languages/klr">Khaling</a>').openPopup();
+                                                let marker_kra = L.marker([27.829670, 84.135730]).addTo(mymap);
+                    marker_kra.bindPopup('<a href="/languages/kra">Kumhali</a>').openPopup();
+                                                let marker_kru = L.marker([24.464420, 86.465675]).addTo(mymap);
+                    marker_kru.bindPopup('<a href="/languages/kru">Kurukh</a>').openPopup();
+                                                let marker_kte = L.marker([28.509180, 84.777160]).addTo(mymap);
+                    marker_kte.bindPopup('<a href="/languages/kte">Nubri</a>').openPopup();
+                                                let marker_kxl = L.marker([26.720570, 86.002550]).addTo(mymap);
+                    marker_kxl.bindPopup('<a href="/languages/kxl">Nepali Kurux</a>').openPopup();
+                                                let marker_kyv = L.marker([26.617870, 87.604160]).addTo(mymap);
+                    marker_kyv.bindPopup('<a href="/languages/kyv">Kayort</a>').openPopup();
+                                                let marker_kyw = L.marker([25.920000, 87.330000]).addTo(mymap);
+                    marker_kyw.bindPopup('<a href="/languages/kyw">Kudmali</a>').openPopup();
+                                                let marker_kzq = L.marker([28.853000, 83.138370]).addTo(mymap);
+                    marker_kzq.bindPopup('<a href="/languages/kzq">Kaike</a>').openPopup();
+                                                let marker_lbr = L.marker([27.510150, 87.215730]).addTo(mymap);
+                    marker_lbr.bindPopup('<a href="/languages/lbr">Lohorung</a>').openPopup();
+                                                let marker_lep = L.marker([27.086900, 88.572587]).addTo(mymap);
+                    marker_lep.bindPopup('<a href="/languages/lep">Lepcha</a>').openPopup();
+                                                let marker_lhm = L.marker([27.594787, 87.716067]).addTo(mymap);
+                    marker_lhm.bindPopup('<a href="/languages/lhm">Lhomi</a>').openPopup();
+                                                let marker_lif = L.marker([27.270335, 87.885935]).addTo(mymap);
+                    marker_lif.bindPopup('<a href="/languages/lif">Limbu</a>').openPopup();
+                                                let marker_lmh = L.marker([27.054260, 87.216770]).addTo(mymap);
+                    marker_lmh.bindPopup('<a href="/languages/lmh">Lambichhong</a>').openPopup();
+                                                let marker_loy = L.marker([29.032390, 83.895860]).addTo(mymap);
+                    marker_loy.bindPopup('<a href="/languages/loy">Loke</a>').openPopup();
+                                                let marker_lrr = L.marker([26.931970, 87.395920]).addTo(mymap);
+                    marker_lrr.bindPopup('<a href="/languages/lrr">Southern Yamphu</a>').openPopup();
+                                                let marker_luu = L.marker([27.232010, 87.314550]).addTo(mymap);
+                    marker_luu.bindPopup('<a href="/languages/luu">Lumba-Yakkha</a>').openPopup();
+                                                let marker_mag = L.marker([25.091490, 85.333540]).addTo(mymap);
+                    marker_mag.bindPopup('<a href="/languages/mag">Magahi</a>').openPopup();
+                                                let marker_mai = L.marker([26.381655, 86.221140]).addTo(mymap);
+                    marker_mai.bindPopup('<a href="/languages/mai">Maithili</a>').openPopup();
+                                                let marker_mar = L.marker([17.934380, 76.666490]).addTo(mymap);
+                    marker_mar.bindPopup('<a href="/languages/mar">Marathi</a>').openPopup();
+                                                let marker_mgp = L.marker([27.413517, 87.061710]).addTo(mymap);
+                    marker_mgp.bindPopup('<a href="/languages/mgp">Eastern Magar</a>').openPopup();
+                                                let marker_mjz = L.marker([29.455870, 80.378810]).addTo(mymap);
+                    marker_mjz.bindPopup('<a href="/languages/mjz">Majhi</a>').openPopup();
+                                                let marker_mrd = L.marker([28.246230, 83.511030]).addTo(mymap);
+                    marker_mrd.bindPopup('<a href="/languages/mrd">Western Magar</a>').openPopup();
+                                                let marker_muk = L.marker([30.898325, 79.466380]).addTo(mymap);
+                    marker_muk.bindPopup('<a href="/languages/muk">Mugom</a>').openPopup();
+                                                let marker_nao = L.marker([27.692550, 87.340930]).addTo(mymap);
+                    marker_nao.bindPopup('<a href="/languages/nao">Naaba</a>').openPopup();
+                                                let marker_ncd = L.marker([27.420200, 86.700070]).addTo(mymap);
+                    marker_ncd.bindPopup('<a href="/languages/ncd">Nachering</a>').openPopup();
+                                                let marker_new = L.marker([27.261445, 84.957715]).addTo(mymap);
+                    marker_new.bindPopup('<a href="/languages/new">Newari</a>').openPopup();
+                                                let marker_nmm = L.marker([28.641580, 84.051540]).addTo(mymap);
+                    marker_nmm.bindPopup('<a href="/languages/nmm">Manangba</a>').openPopup();
+                                                let marker_npa = L.marker([28.767140, 84.228520]).addTo(mymap);
+                    marker_npa.bindPopup('<a href="/languages/npa">Nar Phu</a>').openPopup();
+                                                                    let marker_nsp = L.marker([27.699300, 85.304070]).addTo(mymap);
+                    marker_nsp.bindPopup('<a href="/languages/nsp">Nepalese Sign Language</a>').openPopup();
+                                                let marker_ola = L.marker([27.695020, 87.237420]).addTo(mymap);
+                    marker_ola.bindPopup('<a href="/languages/ola">Walungge</a>').openPopup();
+                                                                    let marker_pan = L.marker([30.036762, 75.670166]).addTo(mymap);
+                    marker_pan.bindPopup('<a href="/languages/pan">Panjabi</a>').openPopup();
+                                                let marker_phw = L.marker([27.159450, 87.353710]).addTo(mymap);
+                    marker_phw.bindPopup('<a href="/languages/phw">Phangduwali</a>').openPopup();
+                                                let marker_plp = L.marker([27.874060, 83.392780]).addTo(mymap);
+                    marker_plp.bindPopup('<a href="/languages/plp">Palpa</a>').openPopup();
+                                                let marker_pum = L.marker([27.077380, 86.838010]).addTo(mymap);
+                    marker_pum.bindPopup('<a href="/languages/pum">Puma</a>').openPopup();
+                                                let marker_raa = L.marker([26.981270, 87.332790]).addTo(mymap);
+                    marker_raa.bindPopup('<a href="/languages/raa">Dungmali</a>').openPopup();
+                                                let marker_rab = L.marker([27.337130, 86.761160]).addTo(mymap);
+                    marker_rab.bindPopup('<a href="/languages/rab">Camling</a>').openPopup();
+                                                let marker_raf = L.marker([27.426500, 87.289340]).addTo(mymap);
+                    marker_raf.bindPopup('<a href="/languages/raf">Western Meohang</a>').openPopup();
+                                                let marker_raq = L.marker([26.844250, 87.953410]).addTo(mymap);
+                    marker_raq.bindPopup('<a href="/languages/raq">Saam</a>').openPopup();
+                                                let marker_rau = L.marker([28.951830, 81.161660]).addTo(mymap);
+                    marker_rau.bindPopup('<a href="/languages/rau">Raute</a>').openPopup();
+                                                let marker_rav = L.marker([27.299910, 87.001910]).addTo(mymap);
+                    marker_rav.bindPopup('<a href="/languages/rav">Sampang</a>').openPopup();
+                                                let marker_rji = L.marker([28.615110, 81.577000]).addTo(mymap);
+                    marker_rji.bindPopup('<a href="/languages/rji">Raji</a>').openPopup();
+                                                let marker_rjs = L.marker([26.383363, 88.453600]).addTo(mymap);
+                    marker_rjs.bindPopup('<a href="/languages/rjs">Rajbanshi</a>').openPopup();
+                                                let marker_rkt = L.marker([26.383363, 88.453600]).addTo(mymap);
+                    marker_rkt.bindPopup('<a href="/languages/rkt">Rangpuri</a>').openPopup();
+                                                let marker_rwr = L.marker([27.001997, 75.065600]).addTo(mymap);
+                    marker_rwr.bindPopup('<a href="/languages/rwr">Marwari (India)</a>').openPopup();
+                                                let marker_san = L.marker([20.000000, 77.000000]).addTo(mymap);
+                    marker_san.bindPopup('<a href="/languages/san">Sanskrit</a>').openPopup();
+                                                let marker_sat = L.marker([25.031700, 87.818517]).addTo(mymap);
+                    marker_sat.bindPopup('<a href="/languages/sat">Santali</a>').openPopup();
+                                                let marker_sck = L.marker([23.658530, 84.811360]).addTo(mymap);
+                    marker_sck.bindPopup('<a href="/languages/sck">Sadri</a>').openPopup();
+                                                let marker_scp = L.marker([27.921190, 85.628930]).addTo(mymap);
+                    marker_scp.bindPopup('<a href="/languages/scp">Hyolmo</a>').openPopup();
+                                                let marker_skj = L.marker([28.925100, 83.806380]).addTo(mymap);
+                    marker_skj.bindPopup('<a href="/languages/skj">Seke (Nepal)</a>').openPopup();
+                                                let marker_smm = L.marker([26.732870, 87.530440]).addTo(mymap);
+                    marker_smm.bindPopup('<a href="/languages/smm">Musasa</a>').openPopup();
+                                                let marker_snd = L.marker([26.000000, 69.000000]).addTo(mymap);
+                    marker_snd.bindPopup('<a href="/languages/snd">Sindhi</a>').openPopup();
+                                                let marker_soi = L.marker([28.778170, 81.218490]).addTo(mymap);
+                    marker_soi.bindPopup('<a href="/languages/soi">Sonha</a>').openPopup();
+                                                let marker_srb = L.marker([19.121270, 84.190050]).addTo(mymap);
+                    marker_srb.bindPopup('<a href="/languages/srb">Sora</a>').openPopup();
+                                                let marker_suz = L.marker([27.520090, 86.247620]).addTo(mymap);
+                    marker_suz.bindPopup('<a href="/languages/suz">Sunwar</a>').openPopup();
+                                                let marker_syw = L.marker([27.449210, 86.167530]).addTo(mymap);
+                    marker_syw.bindPopup('<a href="/languages/syw">Kagate</a>').openPopup();
+                                                let marker_taj = L.marker([27.323860, 87.083225]).addTo(mymap);
+                    marker_taj.bindPopup('<a href="/languages/taj">Eastern Tamang</a>').openPopup();
+                                                let marker_tcn = L.marker([28.950640, 83.467250]).addTo(mymap);
+                    marker_tcn.bindPopup('<a href="/languages/tcn">Tichurong</a>').openPopup();
+                                                let marker_tdg = L.marker([28.023860, 85.056280]).addTo(mymap);
+                    marker_tdg.bindPopup('<a href="/languages/tdg">Western Tamang</a>').openPopup();
+                                                let marker_tdh = L.marker([27.538895, 87.606280]).addTo(mymap);
+                    marker_tdh.bindPopup('<a href="/languages/tdh">Thulung</a>').openPopup();
+                                                let marker_tge = L.marker([28.221320, 84.945060]).addTo(mymap);
+                    marker_tge.bindPopup('<a href="/languages/tge">Eastern Gorkha Tamang</a>').openPopup();
+                                                let marker_the = L.marker([27.582470, 84.408250]).addTo(mymap);
+                    marker_the.bindPopup('<a href="/languages/the">Chitwania Tharu</a>').openPopup();
+                                                let marker_thf = L.marker([28.755375, 85.765680]).addTo(mymap);
+                    marker_thf.bindPopup('<a href="/languages/thf">Thangmi</a>').openPopup();
+                                                let marker_thl = L.marker([27.883445, 81.776085]).addTo(mymap);
+                    marker_thl.bindPopup('<a href="/languages/thl">Dangaura Tharu</a>').openPopup();
+                                                let marker_thq = L.marker([26.725115, 84.630060]).addTo(mymap);
+                    marker_thq.bindPopup('<a href="/languages/thq">Kochila Tharu</a>').openPopup();
+                                                let marker_thr = L.marker([28.648330, 80.441880]).addTo(mymap);
+                    marker_thr.bindPopup('<a href="/languages/thr">Rana Tharu</a>').openPopup();
+                                                let marker_ths = L.marker([28.701390, 83.646610]).addTo(mymap);
+                    marker_ths.bindPopup('<a href="/languages/ths">Thakali</a>').openPopup();
+                                                let marker_thw = L.marker([27.767780, 87.618870]).addTo(mymap);
+                    marker_thw.bindPopup('<a href="/languages/thw">Thudam</a>').openPopup();
+                                                let marker_tij = L.marker([27.220280, 86.469350]).addTo(mymap);
+                    marker_tij.bindPopup('<a href="/languages/tij">Tilung</a>').openPopup();
+                                                let marker_tkt = L.marker([28.586660, 80.893080]).addTo(mymap);
+                    marker_tkt.bindPopup('<a href="/languages/tkt">Kathoriya Tharu</a>').openPopup();
+                                                let marker_tmk = L.marker([27.908700, 85.164790]).addTo(mymap);
+                    marker_tmk.bindPopup('<a href="/languages/tmk">Northwestern Tamang</a>').openPopup();
+                                                let marker_tsk = L.marker([27.804640, 89.193080]).addTo(mymap);
+                    marker_tsk.bindPopup('<a href="/languages/tsk">Tseku</a>').openPopup();
+                                                let marker_ttz = L.marker([28.471930, 85.081750]).addTo(mymap);
+                    marker_ttz.bindPopup('<a href="/languages/ttz">Tsum</a>').openPopup();
+                                                let marker_unr = L.marker([25.039110, 87.179200]).addTo(mymap);
+                    marker_unr.bindPopup('<a href="/languages/unr">Mundari</a>').openPopup();
+                                                let marker_urd = L.marker([25.000000, 67.000000]).addTo(mymap);
+                    marker_urd.bindPopup('<a href="/languages/urd">Urdu</a>').openPopup();
+                                                let marker_vay = L.marker([27.304710, 86.122660]).addTo(mymap);
+                    marker_vay.bindPopup('<a href="/languages/vay">Wayu</a>').openPopup();
+                                                let marker_wly = L.marker([26.636900, 86.483730]).addTo(mymap);
+                    marker_wly.bindPopup('<a href="/languages/wly">Waling</a>').openPopup();
+                                                let marker_wme = L.marker([27.148080, 86.476460]).addTo(mymap);
+                    marker_wme.bindPopup('<a href="/languages/wme">Wambule</a>').openPopup();
+                                                let marker_xsr = L.marker([27.673953, 86.999427]).addTo(mymap);
+                    marker_xsr.bindPopup('<a href="/languages/xsr">Sherpa</a>').openPopup();
+                                                let marker_ybh = L.marker([27.371405, 87.930630]).addTo(mymap);
+                    marker_ybh.bindPopup('<a href="/languages/ybh">Yakha</a>').openPopup();
+                                                let marker_ybi = L.marker([27.632160, 87.044130]).addTo(mymap);
+                    marker_ybi.bindPopup('<a href="/languages/ybi">Yamphu</a>').openPopup();
+                    
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

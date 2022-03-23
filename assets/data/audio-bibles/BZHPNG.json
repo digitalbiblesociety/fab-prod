@@ -1,0 +1,50 @@
+{
+    "id": "BZHPNG",
+    "parent_bible_id": null,
+    "title": "Buang New Testament",
+    "title_vernacular": "Ġaġek Mewis",
+    "description": "The New Testament in the Central\/Mapos dialect of the Buang language of Papua New Guinea",
+    "description_vernacular": "Nupela Testamen long tokples Buang Mapos long Niugini",
+    "iso": "bzh",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2003",
+    "country_id": "PG",
+    "copyright": "Copyright © 2003 The Bible Society of Papua New Guinea",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0117-0",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2017-12-12T14:12:51.000000Z",
+    "updated_at": "2020-10-12T17:22:01.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 5838,
+            "bible_id": "BZHPNG",
+            "equivalent_id": "BZHPNGP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 5839,
+            "bible_id": "BZHPNG",
+            "equivalent_id": "BZHPNGP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

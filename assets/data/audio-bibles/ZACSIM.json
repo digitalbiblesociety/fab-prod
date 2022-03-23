@@ -1,0 +1,376 @@
+{
+    "id": "ZACSIM",
+    "parent_bible_id": null,
+    "title": "Ocotlán Zapotec",
+    "title_vernacular": "Dizaʼquë shtë Dios con dizë",
+    "description": "New Testament in Zapotec, Ocotlán (MX:zac:Zapotec, Ocotlán)",
+    "description_vernacular": "",
+    "iso": "zac",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "1983",
+    "country_id": "MX",
+    "copyright": "Copyright © 1983 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0738-7",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2016-10-12T17:48:19.000000Z",
+    "updated_at": "2020-10-12T17:48:19.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "John",
+            "chapter_id": "1",
+            "path": "ZACSIMP1DA\/B04___01_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "1",
+            "path": "ZACSIMP1DA\/B04___01_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "2",
+            "path": "ZACSIMP1DA\/B04___02_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "2",
+            "path": "ZACSIMP1DA\/B04___02_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "3",
+            "path": "ZACSIMP1DA\/B04___03_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "3",
+            "path": "ZACSIMP1DA\/B04___03_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "4",
+            "path": "ZACSIMP1DA\/B04___04_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "4",
+            "path": "ZACSIMP1DA\/B04___04_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "5",
+            "path": "ZACSIMP1DA\/B04___05_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "5",
+            "path": "ZACSIMP1DA\/B04___05_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "6",
+            "path": "ZACSIMP1DA\/B04___06_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "6",
+            "path": "ZACSIMP1DA\/B04___06_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "7",
+            "path": "ZACSIMP1DA\/B04___07_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "7",
+            "path": "ZACSIMP1DA\/B04___07_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "8",
+            "path": "ZACSIMP1DA\/B04___08_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "8",
+            "path": "ZACSIMP1DA\/B04___08_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "9",
+            "path": "ZACSIMP1DA\/B04___09_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "9",
+            "path": "ZACSIMP1DA\/B04___09_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "10",
+            "path": "ZACSIMP1DA\/B04___10_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "10",
+            "path": "ZACSIMP1DA\/B04___10_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "11",
+            "path": "ZACSIMP1DA\/B04___11_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "11",
+            "path": "ZACSIMP1DA\/B04___11_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "12",
+            "path": "ZACSIMP1DA\/B04___12_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "12",
+            "path": "ZACSIMP1DA\/B04___12_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "13",
+            "path": "ZACSIMP1DA\/B04___13_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "13",
+            "path": "ZACSIMP1DA\/B04___13_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "14",
+            "path": "ZACSIMP1DA\/B04___14_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "14",
+            "path": "ZACSIMP1DA\/B04___14_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "15",
+            "path": "ZACSIMP1DA\/B04___15_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "15",
+            "path": "ZACSIMP1DA\/B04___15_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "16",
+            "path": "ZACSIMP1DA\/B04___16_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "16",
+            "path": "ZACSIMP1DA\/B04___16_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "17",
+            "path": "ZACSIMP1DA\/B04___17_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "17",
+            "path": "ZACSIMP1DA\/B04___17_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "18",
+            "path": "ZACSIMP1DA\/B04___18_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "18",
+            "path": "ZACSIMP1DA\/B04___18_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "19",
+            "path": "ZACSIMP1DA\/B04___19_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "19",
+            "path": "ZACSIMP1DA\/B04___19_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "20",
+            "path": "ZACSIMP1DA\/B04___20_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "20",
+            "path": "ZACSIMP1DA\/B04___20_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "21",
+            "path": "ZACSIMP1DA\/B04___21_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "21",
+            "path": "ZACSIMP1DA\/B04___21_San_Juan____ZACSIMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6205,
+            "bible_id": "ZACSIM",
+            "equivalent_id": "ZACSIMP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

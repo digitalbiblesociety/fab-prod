@@ -1,0 +1,480 @@
+{
+    "id": "TKRIBT",
+    "parent_bible_id": null,
+    "title": "Book of Proverbs in Tsakhur",
+    "title_vernacular": "цӀаӀхна миз: Сулейман идаагын ивгьойбы",
+    "description": "",
+    "description_vernacular": "",
+    "iso": "tkr",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2012",
+    "country_id": "AZ",
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2018-06-12T14:16:15.000000Z",
+    "updated_at": "2020-10-12T17:23:11.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Prov",
+            "chapter_id": "1",
+            "path": "TKRIBTP1DA\/A20___01_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "2",
+            "path": "TKRIBTP1DA\/A20___02_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "3",
+            "path": "TKRIBTP1DA\/A20___03_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "4",
+            "path": "TKRIBTP1DA\/A20___04_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "5",
+            "path": "TKRIBTP1DA\/A20___05_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "6",
+            "path": "TKRIBTP1DA\/A20___06_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "7",
+            "path": "TKRIBTP1DA\/A20___07_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "8",
+            "path": "TKRIBTP1DA\/A20___08_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "9",
+            "path": "TKRIBTP1DA\/A20___09_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "10",
+            "path": "TKRIBTP1DA\/A20___10_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "11",
+            "path": "TKRIBTP1DA\/A20___11_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "12",
+            "path": "TKRIBTP1DA\/A20___12_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "13",
+            "path": "TKRIBTP1DA\/A20___13_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "14",
+            "path": "TKRIBTP1DA\/A20___14_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "15",
+            "path": "TKRIBTP1DA\/A20___15_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "16",
+            "path": "TKRIBTP1DA\/A20___16_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "17",
+            "path": "TKRIBTP1DA\/A20___17_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "18",
+            "path": "TKRIBTP1DA\/A20___18_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "19",
+            "path": "TKRIBTP1DA\/A20___19_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "20",
+            "path": "TKRIBTP1DA\/A20___20_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "21",
+            "path": "TKRIBTP1DA\/A20___21_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "22",
+            "path": "TKRIBTP1DA\/A20___22_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "23",
+            "path": "TKRIBTP1DA\/A20___23_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "24",
+            "path": "TKRIBTP1DA\/A20___24_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "25",
+            "path": "TKRIBTP1DA\/A20___25_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "26",
+            "path": "TKRIBTP1DA\/A20___26_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "27",
+            "path": "TKRIBTP1DA\/A20___27_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "28",
+            "path": "TKRIBTP1DA\/A20___28_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "29",
+            "path": "TKRIBTP1DA\/A20___29_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "30",
+            "path": "TKRIBTP1DA\/A20___30_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Prov",
+            "chapter_id": "31",
+            "path": "TKRIBTP1DA\/A20___31_Proverbs____TKRIBTP1DA.mp3",
+            "id_usfm": "PRO",
+            "name": "Proverbs",
+            "order": 20
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "1",
+            "path": "TKRIBTP1DA\/B03___01_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "2",
+            "path": "TKRIBTP1DA\/B03___02_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "3",
+            "path": "TKRIBTP1DA\/B03___03_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "4",
+            "path": "TKRIBTP1DA\/B03___04_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "5",
+            "path": "TKRIBTP1DA\/B03___05_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "6",
+            "path": "TKRIBTP1DA\/B03___06_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "7",
+            "path": "TKRIBTP1DA\/B03___07_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "8",
+            "path": "TKRIBTP1DA\/B03___08_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "9",
+            "path": "TKRIBTP1DA\/B03___09_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "10",
+            "path": "TKRIBTP1DA\/B03___10_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "11",
+            "path": "TKRIBTP1DA\/B03___11_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "12",
+            "path": "TKRIBTP1DA\/B03___12_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "13",
+            "path": "TKRIBTP1DA\/B03___13_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "14",
+            "path": "TKRIBTP1DA\/B03___14_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "15",
+            "path": "TKRIBTP1DA\/B03___15_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "16",
+            "path": "TKRIBTP1DA\/B03___16_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "17",
+            "path": "TKRIBTP1DA\/B03___17_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "18",
+            "path": "TKRIBTP1DA\/B03___18_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "19",
+            "path": "TKRIBTP1DA\/B03___19_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "20",
+            "path": "TKRIBTP1DA\/B03___20_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "21",
+            "path": "TKRIBTP1DA\/B03___21_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "22",
+            "path": "TKRIBTP1DA\/B03___22_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "23",
+            "path": "TKRIBTP1DA\/B03___23_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "24",
+            "path": "TKRIBTP1DA\/B03___24_Luke________TKRIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6111,
+            "bible_id": "TKRIBT",
+            "equivalent_id": "TKRIBTP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

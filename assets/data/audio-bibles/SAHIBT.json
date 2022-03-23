@@ -1,0 +1,1259 @@
+{
+    "id": "SAHIBT",
+    "parent_bible_id": null,
+    "title": "Yakut New Testaments and Old Testament Portions",
+    "title_vernacular": "САҤА: КЭС ТЫЛ",
+    "description": "",
+    "description_vernacular": "",
+    "iso": "sah",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2009",
+    "country_id": "RU",
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2017-10-12T14:15:49.000000Z",
+    "updated_at": "2020-10-12T17:24:19.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Ps",
+            "chapter_id": "1",
+            "path": "SAHIBTP1DA\/A19__001_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "2",
+            "path": "SAHIBTP1DA\/A19__002_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "3",
+            "path": "SAHIBTP1DA\/A19__003_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "4",
+            "path": "SAHIBTP1DA\/A19__004_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "5",
+            "path": "SAHIBTP1DA\/A19__005_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "6",
+            "path": "SAHIBTP1DA\/A19__006_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "7",
+            "path": "SAHIBTP1DA\/A19__007_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "8",
+            "path": "SAHIBTP1DA\/A19__008_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "9",
+            "path": "SAHIBTP1DA\/A19__009_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "10",
+            "path": "SAHIBTP1DA\/A19__010_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "11",
+            "path": "SAHIBTP1DA\/A19__011_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "12",
+            "path": "SAHIBTP1DA\/A19__012_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "13",
+            "path": "SAHIBTP1DA\/A19__013_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "14",
+            "path": "SAHIBTP1DA\/A19__014_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "15",
+            "path": "SAHIBTP1DA\/A19__015_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "16",
+            "path": "SAHIBTP1DA\/A19__016_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "17",
+            "path": "SAHIBTP1DA\/A19__017_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "18",
+            "path": "SAHIBTP1DA\/A19__018_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "19",
+            "path": "SAHIBTP1DA\/A19__019_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "20",
+            "path": "SAHIBTP1DA\/A19__020_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "21",
+            "path": "SAHIBTP1DA\/A19__021_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "22",
+            "path": "SAHIBTP1DA\/A19__022_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "23",
+            "path": "SAHIBTP1DA\/A19__023_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "24",
+            "path": "SAHIBTP1DA\/A19__024_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "25",
+            "path": "SAHIBTP1DA\/A19__025_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "26",
+            "path": "SAHIBTP1DA\/A19__026_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "27",
+            "path": "SAHIBTP1DA\/A19__027_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "28",
+            "path": "SAHIBTP1DA\/A19__028_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "29",
+            "path": "SAHIBTP1DA\/A19__029_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "30",
+            "path": "SAHIBTP1DA\/A19__030_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "31",
+            "path": "SAHIBTP1DA\/A19__031_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "32",
+            "path": "SAHIBTP1DA\/A19__032_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "33",
+            "path": "SAHIBTP1DA\/A19__033_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "34",
+            "path": "SAHIBTP1DA\/A19__034_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "35",
+            "path": "SAHIBTP1DA\/A19__035_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "36",
+            "path": "SAHIBTP1DA\/A19__036_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "37",
+            "path": "SAHIBTP1DA\/A19__037_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "38",
+            "path": "SAHIBTP1DA\/A19__038_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "39",
+            "path": "SAHIBTP1DA\/A19__039_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "40",
+            "path": "SAHIBTP1DA\/A19__040_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "41",
+            "path": "SAHIBTP1DA\/A19__041_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "42",
+            "path": "SAHIBTP1DA\/A19__042_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "43",
+            "path": "SAHIBTP1DA\/A19__043_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "44",
+            "path": "SAHIBTP1DA\/A19__044_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "45",
+            "path": "SAHIBTP1DA\/A19__045_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "46",
+            "path": "SAHIBTP1DA\/A19__046_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "47",
+            "path": "SAHIBTP1DA\/A19__047_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "48",
+            "path": "SAHIBTP1DA\/A19__048_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "49",
+            "path": "SAHIBTP1DA\/A19__049_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "50",
+            "path": "SAHIBTP1DA\/A19__050_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "51",
+            "path": "SAHIBTP1DA\/A19__051_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "52",
+            "path": "SAHIBTP1DA\/A19__052_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "53",
+            "path": "SAHIBTP1DA\/A19__053_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "54",
+            "path": "SAHIBTP1DA\/A19__054_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "55",
+            "path": "SAHIBTP1DA\/A19__055_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "56",
+            "path": "SAHIBTP1DA\/A19__056_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "57",
+            "path": "SAHIBTP1DA\/A19__057_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "58",
+            "path": "SAHIBTP1DA\/A19__058_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "59",
+            "path": "SAHIBTP1DA\/A19__059_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "60",
+            "path": "SAHIBTP1DA\/A19__060_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "61",
+            "path": "SAHIBTP1DA\/A19__061_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "62",
+            "path": "SAHIBTP1DA\/A19__062_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "63",
+            "path": "SAHIBTP1DA\/A19__063_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "64",
+            "path": "SAHIBTP1DA\/A19__064_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "65",
+            "path": "SAHIBTP1DA\/A19__065_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "66",
+            "path": "SAHIBTP1DA\/A19__066_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "67",
+            "path": "SAHIBTP1DA\/A19__067_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "68",
+            "path": "SAHIBTP1DA\/A19__068_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "69",
+            "path": "SAHIBTP1DA\/A19__069_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "70",
+            "path": "SAHIBTP1DA\/A19__070_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "71",
+            "path": "SAHIBTP1DA\/A19__071_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "72",
+            "path": "SAHIBTP1DA\/A19__072_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "73",
+            "path": "SAHIBTP1DA\/A19__073_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "74",
+            "path": "SAHIBTP1DA\/A19__074_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "75",
+            "path": "SAHIBTP1DA\/A19__075_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "76",
+            "path": "SAHIBTP1DA\/A19__076_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "77",
+            "path": "SAHIBTP1DA\/A19__077_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "78",
+            "path": "SAHIBTP1DA\/A19__078_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "79",
+            "path": "SAHIBTP1DA\/A19__079_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "80",
+            "path": "SAHIBTP1DA\/A19__080_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "81",
+            "path": "SAHIBTP1DA\/A19__081_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "82",
+            "path": "SAHIBTP1DA\/A19__082_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "83",
+            "path": "SAHIBTP1DA\/A19__083_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "84",
+            "path": "SAHIBTP1DA\/A19__084_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "85",
+            "path": "SAHIBTP1DA\/A19__085_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "86",
+            "path": "SAHIBTP1DA\/A19__086_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "87",
+            "path": "SAHIBTP1DA\/A19__087_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "88",
+            "path": "SAHIBTP1DA\/A19__088_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "89",
+            "path": "SAHIBTP1DA\/A19__089_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "90",
+            "path": "SAHIBTP1DA\/A19__090_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "91",
+            "path": "SAHIBTP1DA\/A19__091_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "92",
+            "path": "SAHIBTP1DA\/A19__092_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "93",
+            "path": "SAHIBTP1DA\/A19__093_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "94",
+            "path": "SAHIBTP1DA\/A19__094_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "95",
+            "path": "SAHIBTP1DA\/A19__095_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "96",
+            "path": "SAHIBTP1DA\/A19__096_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "97",
+            "path": "SAHIBTP1DA\/A19__097_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "98",
+            "path": "SAHIBTP1DA\/A19__098_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "99",
+            "path": "SAHIBTP1DA\/A19__099_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "100",
+            "path": "SAHIBTP1DA\/A19__100_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "101",
+            "path": "SAHIBTP1DA\/A19__101_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "102",
+            "path": "SAHIBTP1DA\/A19__102_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "103",
+            "path": "SAHIBTP1DA\/A19__103_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "104",
+            "path": "SAHIBTP1DA\/A19__104_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "105",
+            "path": "SAHIBTP1DA\/A19__105_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "106",
+            "path": "SAHIBTP1DA\/A19__106_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "107",
+            "path": "SAHIBTP1DA\/A19__107_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "108",
+            "path": "SAHIBTP1DA\/A19__108_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "109",
+            "path": "SAHIBTP1DA\/A19__109_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "110",
+            "path": "SAHIBTP1DA\/A19__110_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "111",
+            "path": "SAHIBTP1DA\/A19__111_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "112",
+            "path": "SAHIBTP1DA\/A19__112_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "113",
+            "path": "SAHIBTP1DA\/A19__113_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "114",
+            "path": "SAHIBTP1DA\/A19__114_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "115",
+            "path": "SAHIBTP1DA\/A19__115_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "116",
+            "path": "SAHIBTP1DA\/A19__116_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "117",
+            "path": "SAHIBTP1DA\/A19__117_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "118",
+            "path": "SAHIBTP1DA\/A19__118_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "119",
+            "path": "SAHIBTP1DA\/A19__119_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "120",
+            "path": "SAHIBTP1DA\/A19__120_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "121",
+            "path": "SAHIBTP1DA\/A19__121_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "122",
+            "path": "SAHIBTP1DA\/A19__122_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "123",
+            "path": "SAHIBTP1DA\/A19__123_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "124",
+            "path": "SAHIBTP1DA\/A19__124_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "125",
+            "path": "SAHIBTP1DA\/A19__125_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "126",
+            "path": "SAHIBTP1DA\/A19__126_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "127",
+            "path": "SAHIBTP1DA\/A19__127_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "128",
+            "path": "SAHIBTP1DA\/A19__128_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "129",
+            "path": "SAHIBTP1DA\/A19__129_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "130",
+            "path": "SAHIBTP1DA\/A19__130_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "131",
+            "path": "SAHIBTP1DA\/A19__131_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "132",
+            "path": "SAHIBTP1DA\/A19__132_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "133",
+            "path": "SAHIBTP1DA\/A19__133_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "134",
+            "path": "SAHIBTP1DA\/A19__134_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "135",
+            "path": "SAHIBTP1DA\/A19__135_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "136",
+            "path": "SAHIBTP1DA\/A19__136_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "137",
+            "path": "SAHIBTP1DA\/A19__137_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "138",
+            "path": "SAHIBTP1DA\/A19__138_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "139",
+            "path": "SAHIBTP1DA\/A19__139_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "140",
+            "path": "SAHIBTP1DA\/A19__140_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "141",
+            "path": "SAHIBTP1DA\/A19__141_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "142",
+            "path": "SAHIBTP1DA\/A19__142_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "143",
+            "path": "SAHIBTP1DA\/A19__143_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "144",
+            "path": "SAHIBTP1DA\/A19__144_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "145",
+            "path": "SAHIBTP1DA\/A19__145_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "146",
+            "path": "SAHIBTP1DA\/A19__146_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "147",
+            "path": "SAHIBTP1DA\/A19__147_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "148",
+            "path": "SAHIBTP1DA\/A19__148_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "149",
+            "path": "SAHIBTP1DA\/A19__149_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "150",
+            "path": "SAHIBTP1DA\/A19__150_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        },
+        {
+            "book_id": "Ps",
+            "chapter_id": "151",
+            "path": "SAHIBTP1DA\/A19__151_Psalms______SAHIBTP1DA.mp3",
+            "id_usfm": "PSA",
+            "name": "Psalm",
+            "order": 19
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6076,
+            "bible_id": "SAHIBT",
+            "equivalent_id": "SAHIBTP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 6078,
+            "bible_id": "SAHIBT",
+            "equivalent_id": "SAHIBTP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

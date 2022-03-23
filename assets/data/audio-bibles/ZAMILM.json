@@ -1,0 +1,416 @@
+{
+    "id": "ZAMILM",
+    "parent_bible_id": null,
+    "title": "Miahuatlán Zapotec New Testament",
+    "title_vernacular": "Testament cub coʼ nac diʼs ndac cheʼn Tad Jesucrist",
+    "description": "New Testament in Zapotec, Miahuatlán (MX:zam:Zapotec, Miahuatlán)",
+    "description_vernacular": "",
+    "iso": "zam",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "1971",
+    "country_id": "MX",
+    "copyright": "Copyright © 1971 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0741-7",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2018-11-12T14:16:54.000000Z",
+    "updated_at": "2020-10-12T17:25:22.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "John",
+            "chapter_id": "1",
+            "path": "ZAMILMP1DA\/B04___01_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "2",
+            "path": "ZAMILMP1DA\/B04___02_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "3",
+            "path": "ZAMILMP1DA\/B04___03_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "4",
+            "path": "ZAMILMP1DA\/B04___04_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "5",
+            "path": "ZAMILMP1DA\/B04___05_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "6",
+            "path": "ZAMILMP1DA\/B04___06_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "7",
+            "path": "ZAMILMP1DA\/B04___07_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "8",
+            "path": "ZAMILMP1DA\/B04___08_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "9",
+            "path": "ZAMILMP1DA\/B04___09_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "10",
+            "path": "ZAMILMP1DA\/B04___10_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "11",
+            "path": "ZAMILMP1DA\/B04___11_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "12",
+            "path": "ZAMILMP1DA\/B04___12_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "13",
+            "path": "ZAMILMP1DA\/B04___13_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "14",
+            "path": "ZAMILMP1DA\/B04___14_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "15",
+            "path": "ZAMILMP1DA\/B04___15_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "16",
+            "path": "ZAMILMP1DA\/B04___16_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "17",
+            "path": "ZAMILMP1DA\/B04___17_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "18",
+            "path": "ZAMILMP1DA\/B04___18_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "19",
+            "path": "ZAMILMP1DA\/B04___19_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "20",
+            "path": "ZAMILMP1DA\/B04___20_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "John",
+            "chapter_id": "21",
+            "path": "ZAMILMP1DA\/B04___21_John________ZAMILMP1DA.mp3",
+            "id_usfm": "JHN",
+            "name": "John",
+            "order": 44
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "1",
+            "path": "ZAMILMP1DA\/B09___01_Galatians___ZAMILMP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "2",
+            "path": "ZAMILMP1DA\/B09___02_Galatians___ZAMILMP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "3",
+            "path": "ZAMILMP1DA\/B09___03_Galatians___ZAMILMP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "4",
+            "path": "ZAMILMP1DA\/B09___04_Galatians___ZAMILMP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "5",
+            "path": "ZAMILMP1DA\/B09___05_Galatians___ZAMILMP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Gal",
+            "chapter_id": "6",
+            "path": "ZAMILMP1DA\/B09___06_Galatians___ZAMILMP1DA.mp3",
+            "id_usfm": "GAL",
+            "name": "Galatians",
+            "order": 49
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "1",
+            "path": "ZAMILMP1DA\/B10___01_Ephesians___ZAMILMP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "2",
+            "path": "ZAMILMP1DA\/B10___02_Ephesians___ZAMILMP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "3",
+            "path": "ZAMILMP1DA\/B10___03_Ephesians___ZAMILMP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "4",
+            "path": "ZAMILMP1DA\/B10___04_Ephesians___ZAMILMP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "5",
+            "path": "ZAMILMP1DA\/B10___05_Ephesians___ZAMILMP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Eph",
+            "chapter_id": "6",
+            "path": "ZAMILMP1DA\/B10___06_Ephesians___ZAMILMP1DA.mp3",
+            "id_usfm": "EPH",
+            "name": "Ephesians",
+            "order": 50
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "1",
+            "path": "ZAMILMP1DA\/B11___01_Philippians_ZAMILMP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "2",
+            "path": "ZAMILMP1DA\/B11___02_Philippians_ZAMILMP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "3",
+            "path": "ZAMILMP1DA\/B11___03_Philippians_ZAMILMP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Phil",
+            "chapter_id": "4",
+            "path": "ZAMILMP1DA\/B11___04_Philippians_ZAMILMP1DA.mp3",
+            "id_usfm": "PHP",
+            "name": "Philippians",
+            "order": 51
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "1",
+            "path": "ZAMILMP1DA\/B20___01_James_______ZAMILMP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "2",
+            "path": "ZAMILMP1DA\/B20___02_James_______ZAMILMP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "3",
+            "path": "ZAMILMP1DA\/B20___03_James_______ZAMILMP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "4",
+            "path": "ZAMILMP1DA\/B20___04_James_______ZAMILMP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "5",
+            "path": "ZAMILMP1DA\/B20___05_James_______ZAMILMP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "1",
+            "path": "ZAMILMP1DA\/B23___01_1John_______ZAMILMP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "2",
+            "path": "ZAMILMP1DA\/B23___02_1John_______ZAMILMP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "3",
+            "path": "ZAMILMP1DA\/B23___03_1John_______ZAMILMP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "4",
+            "path": "ZAMILMP1DA\/B23___04_1John_______ZAMILMP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "5",
+            "path": "ZAMILMP1DA\/B23___05_1John_______ZAMILMP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6211,
+            "bible_id": "ZAMILM",
+            "equivalent_id": "ZAMILMP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "id": "ZPQTBL",
+    "parent_bible_id": null,
+    "title": "Zoogocho Zapotec New Testament",
+    "title_vernacular": "Dižaʼ güen c̱he ancho Jesucristo",
+    "description": "New Testament in Zapotec, Zoogocho (MX:zpq:Zapotec, Zoogocho)",
+    "description_vernacular": "",
+    "iso": "zpq",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "1987",
+    "country_id": "MX",
+    "copyright": "Copyright © 1987 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0756-1",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2018-11-12T14:16:59.000000Z",
+    "updated_at": "2020-10-12T17:22:47.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 6220,
+            "bible_id": "ZPQTBL",
+            "equivalent_id": "ZPQBTTP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

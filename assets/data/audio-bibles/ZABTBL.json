@@ -1,0 +1,39 @@
+{
+    "id": "ZABTBL",
+    "parent_bible_id": null,
+    "title": "San Juan Guelavía Zapotec",
+    "title_vernacular": "Xtiidx Dios cun ditsa",
+    "description": "New Testament in Zapotec, San Juan Guelavía (MX:zab:Zapotec, San Juan Guelavía)",
+    "description_vernacular": "",
+    "iso": "zab",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "1995",
+    "country_id": "MX",
+    "copyright": "Copyright © 1995 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0737-0",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2017-05-12T14:16:52.000000Z",
+    "updated_at": "2020-10-12T17:24:15.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 6203,
+            "bible_id": "ZABTBL",
+            "equivalent_id": "ZABBTTP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

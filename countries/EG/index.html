@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Egypt | Find a Bible</title>
+    <style>
+        .country-aside      {padding: .2em 1.2em .5em 1.2em;}
+        .country-aside p    {font-size: .8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin: .25em auto 1em auto;}
+        .country-persecution {background:url("https://images.bible.cloud/fab/logos/odi_gray_logo.svg") no-repeat 95% 10%/ 33px 26px;
+                            border: thin solid #d7d7d7; border-width: 1px 0 1px 0; margin-bottom: .5em;}
+        .country-facts      {margin: 0 0 .5em 0;}
+        .country-links      {margin-top: .75em; padding-top: .5em;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: .5em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .link-icon              {width: 1.5em; height: 1.5em;margin-left:.5em;}
+        th h6                                  {font-size: .7em; font-weight: normal;line-height:.9em; margin:.2em 0 0 0 ; text-transform: none}
+        .dataTable tr td:nth-child(2)       {max-width:120px;text-align:right;}
+        .dataTable tr td:nth-child(3)       {width:80px;text-align:center;}
+        .dataTable tr td:nth-child(4), .dataTable tr td:nth-child(5), .dataTable tr td:nth-child(6)      {width:90px;text-align:center;}
+        #banner .banner-flag {margin: 0 .5em 0 0;}
+    </style>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+    </style
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-flag " src="https://images.bible.cloud/flags/eg.svg" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Egypt
+                </h1>
+                <h2 itemprop="description"  >A country of  Africa</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Languages
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/EG/maps">Egypt Maps | Info</a>
+                                                                <a class="external" href="https://find.bible/countries/EG/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Egypt</span>
+                    <meta itemprop="position" content="3" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+            <img class="country-location" src="https://images.bible.cloud/maps/country/EG-location.png" alt="Egypt Find a Bible" />
+            <div class="country-facts row">
+                <p><b>Population:</b> 106,437,241</p>
+                <p><b>Official Language:</b> Arabic Standard</p>
+                <p><b>Language Count:</b> <span class="num-badge">38</span></p>
+                <p><b>Primary Religion:</b> Islam</p>
+                                    <p><b>National Bible Society:</b><br />
+
+                                                    Bible Society of Egypt</p>
+                            <a href="http://sbuec.org/" target="_blank" alt="Bible Society of Egypt">
+                                <img src="https://images.bible.cloud/logo_type_bible_societies.svg" class="link-icon"/></a>
+                                         
+            </div>
+
+            <div class="country-links">
+                <p><b>Reference Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/EG" alt="Find a Bible Egypt">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://en.wikipedia.org/wiki/Egypt" alt="Wikipedia - Egypt">
+                            <img src="http://images.bible.cloud/wiki_type_logo.svg" title="Wikipedia" />
+                            <p>Wikipedia</p></a>
+                    </div>
+
+
+
+                                            <div><a target="_blank" href="https://www.cia.gov/the-world-factbook/countries/egypt/" alt="World Fact Book - Egypt">
+                                <img src="http://images.bible.cloud/logo_type_cia.svg" title="World Fact Book" />
+                                <p>WorldFact<br />Book</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="http://hdr.undp.org/en/countries/profiles/EGY" alt="Human Development - Egypt">
+                                <img src="http://images.bible.cloud/logo_type_united_nations.svg" title="Human Development" />
+                                <p>Human<br />Develop.</p></a>
+                        </div>
+                    
+
+                                            <div><a target="_blank" href="https://www.state.gov/countries-areas/egypt/" alt="Religious Freedom - Egypt">
+                                <img src="http://images.bible.cloud/logo_type_dept_state.svg" title="Religious Freedom" />
+                                <p>Religious<br />Freedom</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://www.britannica.com/place/Egypt" alt="Britannica - Egypt">
+                                <img src="http://images.bible.cloud/logo_type_britannica.svg" title="Britannica" />
+                                <p>Britannica</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+                            <p><b>Factbook Summary:</b>
+                    <a href="https://images.bible.cloud/maps/summary/EG-summary.pdf" target="_blank"  alt="World Fact Book Egypt">
+                        <img class="pdf-icon" src="http://images.bible.cloud/icon/pdf_icon.svg" title="Country Summary" /></a></p>
+            
+
+                        <div class="country-persecution">
+                    <p>Persecution: </p>
+                    <p><b>WatchList Rank: </b><span class="num-badge-red">16</span></p>
+                    <p><b>WatchList Page: </b> <a href="https://www.opendoorsusa.org/christian-persecution/world-watch-list/egypt/" target="_blank" > Egypt</a></p>
+                    <p><b>Type: </b>Dictatorial Paranoia</p>
+                </div>
+        
+
+
+            <div class="country-links">
+                <p><b>Mission / Prayer Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/EG" alt="Find a Bible Egypt">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://www.joshuaproject.net/countries/EG" alt="Joshua Project - Egypt">
+                            <img src="http://images.bible.cloud/joshua_type_logo.svg" title="Joshua Project" />
+                            <p>Joshua<br />Project</p></a>
+                    </div>
+
+                                            <div><a target="_blank" href="https://unitedbiblesocieties.org/locations/bible-society-of-egypt/" alt="United Bible Societies - Egypt">
+                                <img src="http://images.bible.cloud/logo_type_ubs.svg" title="United Bible Societies" />
+                                <p>UBS</p></a>
+                        </div>
+                    
+
+
+                                            <div><a target="_blank" href="https://operationworld.org/locations/egypt" alt="Operation World - Egypt">
+                                <img src="http://images.bible.cloud/logo_type_ow.svg" title="Operation World" />
+                                <p>Operation<br />World</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://prayercast.com/egypt.html" alt="PrayerCasts - Egypt">
+                                <img src="http://images.bible.cloud/prayercast_type_logo.svg" title="PrayerCast" />
+                                <p>PrayerCast</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://curlie.org/Regional/Africa/Egypt" alt="ODP Database - Egypt">
+                                <img src="http://images.bible.cloud/logo_type_odp.svg" title="Open Directory Project" />
+                                <p>Open<br />Directory</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+
+
+            <div class="country-overview">
+                    <p><b>Language Summary:</b>
+                        Arabic (official), Arabic, English, and French widely understood by educated classes</p>
+                </div>
+
+                <div class="country-overview">
+                    <p><b>Ethnic Summary:</b>
+                        Egyptian 99.7%, other 0.3% (2006 est.)
+note: data represent respondents by nationality</p>
+                </div>
+
+
+
+
+            <div class="country-overview">
+                <p><b>Religious Summary:</b>
+                    Muslim (predominantly Sunni) 90%, Christian (majority Coptic Orthodox, other Christians include Armenian Apostolic, Catholic, Maronite, Orthodox, and Anglican) 10% (2015 est.)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="medium-9">
+        <table id="languages" class="table responsive" cellspacing="0" width="100%"
+               data-json='{&quot;data&quot;:[{&quot;id&quot;:&quot;aao&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Algerian Saharan Arabic&quot;,&quot;ci&quot;:&quot;DZ&quot;,&quot;cn&quot;:&quot;Algeria&quot;,&quot;tv&quot;:&quot;Saharan Arabic&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;31,770&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;acq&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Ta&#039;izzi-Adeni Arabic&quot;,&quot;ci&quot;:&quot;YE&quot;,&quot;cn&quot;:&quot;Yemen&quot;,&quot;tv&quot;:&quot;Southern Yemeni Spoken Arabic&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;182,190&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:3,&quot;rc&quot;:30},{&quot;id&quot;:&quot;ady&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Adyghe&quot;,&quot;ci&quot;:&quot;RU&quot;,&quot;cn&quot;:&quot;Russia&quot;,&quot;tv&quot;:&quot;West Circassian&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;14,280&quot;,&quot;bc&quot;:2,&quot;fc&quot;:2,&quot;rc&quot;:2},{&quot;id&quot;:&quot;aec&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Saidi Arabic&quot;,&quot;ci&quot;:&quot;EG&quot;,&quot;cn&quot;:&quot;Egypt&quot;,&quot;tv&quot;:&quot;\u0635\u0639\u064a\u062f\u0649&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;29,667,000&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:5},{&quot;id&quot;:&quot;afb&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Gulf Arabic&quot;,&quot;ci&quot;:&quot;KW&quot;,&quot;cn&quot;:&quot;Kuwait&quot;,&quot;tv&quot;:&quot;\u062e\u0644\u064a\u062c\u064a&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,726,610&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:2,&quot;rc&quot;:4},{&quot;id&quot;:&quot;ajp&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;South Levantine Arabic&quot;,&quot;ci&quot;:&quot;JO&quot;,&quot;cn&quot;:&quot;Jordan&quot;,&quot;tv&quot;:&quot;\u0627\u0644\u0644\u0647\u062c\u0629 \u0627\u0644\u0634\u0627\u0645\u064a\u0629 \u0627\u0644\u062c\u0646\u0648\u0628\u064a\u0629&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;236,350&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:39,&quot;rc&quot;:5},{&quot;id&quot;:&quot;aln&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Gheg Albanian&quot;,&quot;ci&quot;:&quot;AL&quot;,&quot;cn&quot;:&quot;Albania&quot;,&quot;tv&quot;:&quot;gegnisht&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:7,&quot;fc&quot;:1,&quot;rc&quot;:33},{&quot;id&quot;:&quot;als&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Tosk Albanian&quot;,&quot;ci&quot;:&quot;AL&quot;,&quot;cn&quot;:&quot;Albania&quot;,&quot;tv&quot;:&quot;tosk\u00eb&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:17,&quot;fc&quot;:14,&quot;rc&quot;:8},{&quot;id&quot;:&quot;amh&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Amharic&quot;,&quot;ci&quot;:&quot;ET&quot;,&quot;cn&quot;:&quot;Ethiopia&quot;,&quot;tv&quot;:&quot;\u12a0\u121b\u1260\u12a0\u121b\u1228\u129b \u122d\u129b (Amar\u0259\u00f1\u00f1a)&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,160&quot;,&quot;bc&quot;:9,&quot;fc&quot;:15,&quot;rc&quot;:13},{&quot;id&quot;:&quot;apc&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;North Levantine Arabic&quot;,&quot;ci&quot;:&quot;SY&quot;,&quot;cn&quot;:&quot;Syria&quot;,&quot;tv&quot;:&quot;\u0627\u0644\u0644\u0647\u062c\u0629 \u0627\u0644\u0634\u0627\u0645\u064a \u0627\u0644\u0634\u0645\u0627\u0644&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;183,250&quot;,&quot;bc&quot;:2,&quot;fc&quot;:8,&quot;rc&quot;:5},{&quot;id&quot;:&quot;apd&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Sudanese Arabic&quot;,&quot;ci&quot;:&quot;SD&quot;,&quot;cn&quot;:&quot;Sudan&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,790,170&quot;,&quot;bc&quot;:2,&quot;fc&quot;:2,&quot;rc&quot;:11},{&quot;id&quot;:&quot;arb&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Arabic&quot;,&quot;ci&quot;:&quot;SA&quot;,&quot;cn&quot;:&quot;Saudi Arabia&quot;,&quot;tv&quot;:&quot;\u0639\u0631\u0628\u064a \u0641\u0635\u064a\u062d&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,000,000&quot;,&quot;bc&quot;:19,&quot;fc&quot;:3,&quot;rc&quot;:1506},{&quot;id&quot;:&quot;arq&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Algerian Arabic&quot;,&quot;ci&quot;:&quot;DZ&quot;,&quot;cn&quot;:&quot;Algeria&quot;,&quot;tv&quot;:&quot;\u062f\u0627\u0631\u062c\u0629&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,874,910&quot;,&quot;bc&quot;:1,&quot;fc&quot;:5,&quot;rc&quot;:5},{&quot;id&quot;:&quot;ary&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Moroccan Arabic&quot;,&quot;ci&quot;:&quot;MA&quot;,&quot;cn&quot;:&quot;Morocco&quot;,&quot;tv&quot;:&quot;\u0627\u0644\u062f\u0627\u0631\u062c\u0629 Darija&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,832,540&quot;,&quot;bc&quot;:1,&quot;fc&quot;:5,&quot;rc&quot;:10},{&quot;id&quot;:&quot;arz&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Egyptian Arabic&quot;,&quot;ci&quot;:&quot;EG&quot;,&quot;cn&quot;:&quot;Egypt&quot;,&quot;tv&quot;:&quot;\u0627\u0644\u0644\u0647\u062c\u0647 \u0627\u0644\u0645\u0635\u0631\u064a\u0647&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;69,564,000&quot;,&quot;bc&quot;:2,&quot;fc&quot;:47,&quot;rc&quot;:8},{&quot;id&quot;:&quot;avl&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Eastern Egyptian Bedawi Arabic&quot;,&quot;ci&quot;:&quot;EG&quot;,&quot;cn&quot;:&quot;Egypt&quot;,&quot;tv&quot;:&quot;Bedawi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,007,870&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;ayl&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Libyan Arabic&quot;,&quot;ci&quot;:&quot;LY&quot;,&quot;cn&quot;:&quot;Libya&quot;,&quot;tv&quot;:&quot;\u0644\u064a\u0628\u064a&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;473,320&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:3,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;bej&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Beja&quot;,&quot;ci&quot;:&quot;SD&quot;,&quot;cn&quot;:&quot;Sudan&quot;,&quot;tv&quot;:&quot;Bidhaawyeet&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;77,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:2,&quot;rc&quot;:2},{&quot;id&quot;:&quot;che&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Chechen&quot;,&quot;ci&quot;:&quot;RU&quot;,&quot;cn&quot;:&quot;Russia&quot;,&quot;tv&quot;:&quot;\u043d\u043e\u0445\u0447\u0438\u0439\u043d \u043c\u043e\u0442\u0442nox\u00e7iyn mott&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,060&quot;,&quot;bc&quot;:1,&quot;fc&quot;:2,&quot;rc&quot;:1},{&quot;id&quot;:&quot;cmn&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Mandarin Chinese&quot;,&quot;ci&quot;:&quot;CN&quot;,&quot;cn&quot;:&quot;China&quot;,&quot;tv&quot;:&quot;\u5b98\u8bdd; \u5b98\u8a71; Gu\u0101nhu\u00e0&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,150&quot;,&quot;bc&quot;:45,&quot;fc&quot;:22,&quot;rc&quot;:65},{&quot;id&quot;:&quot;cop&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Coptic&quot;,&quot;ci&quot;:&quot;EG&quot;,&quot;cn&quot;:&quot;Egypt&quot;,&quot;tv&quot;:&quot;\u03ef\u2c99\u2c89\u2ca7\u2ca3\u2c89\u2c99\u2c9b\u0300\u2cad\u2c8f\u2c99\u2c93 ~ \u2ca7\u2c99\u2c9b\u0304\u2ca7\u2ca3\u2c99\u0304\u2c9b\u0304\u2c95\u2c8f\u2c99\u2c89&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:8,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;deu&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;German&quot;,&quot;ci&quot;:&quot;DE&quot;,&quot;cn&quot;:&quot;Germany&quot;,&quot;tv&quot;:&quot;Deutsch&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;30,150&quot;,&quot;bc&quot;:34,&quot;fc&quot;:10,&quot;rc&quot;:12},{&quot;id&quot;:&quot;ell&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Modern Greek (1453-)&quot;,&quot;ci&quot;:&quot;GR&quot;,&quot;cn&quot;:&quot;Greece&quot;,&quot;tv&quot;:&quot;\u039d\u03ad\u03b1 \u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;60,180&quot;,&quot;bc&quot;:23,&quot;fc&quot;:3,&quot;rc&quot;:7},{&quot;id&quot;:&quot;eng&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;English&quot;,&quot;ci&quot;:&quot;GB&quot;,&quot;cn&quot;:&quot;United Kingdom&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;250,000&quot;,&quot;bc&quot;:244,&quot;fc&quot;:29,&quot;rc&quot;:314},{&quot;id&quot;:&quot;esl&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Egypt Sign Language&quot;,&quot;ci&quot;:&quot;EG&quot;,&quot;cn&quot;:&quot;Egypt&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;781,880&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;fia&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Nobiin&quot;,&quot;ci&quot;:&quot;SD&quot;,&quot;cn&quot;:&quot;Sudan&quot;,&quot;tv&quot;:&quot;Mahas&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;457,600&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;fra&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;French&quot;,&quot;ci&quot;:&quot;FR&quot;,&quot;cn&quot;:&quot;France&quot;,&quot;tv&quot;:&quot;fran\u00e7ais&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;250,000&quot;,&quot;bc&quot;:45,&quot;fc&quot;:3,&quot;rc&quot;:122},{&quot;id&quot;:&quot;fvr&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Fur&quot;,&quot;ci&quot;:&quot;SD&quot;,&quot;cn&quot;:&quot;Sudan&quot;,&quot;tv&quot;:&quot;b\u00e8le f\u00f2\u00f2r&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,080&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:3,&quot;rc&quot;:2},{&quot;id&quot;:&quot;gaz&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;West Central Oromo&quot;,&quot;ci&quot;:&quot;ET&quot;,&quot;cn&quot;:&quot;Ethiopia&quot;,&quot;tv&quot;:&quot;Afaan Oromoo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,040&quot;,&quot;bc&quot;:1,&quot;fc&quot;:4,&quot;rc&quot;:26},{&quot;id&quot;:&quot;hyw&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Western Armenian&quot;,&quot;ci&quot;:&quot;TR&quot;,&quot;cn&quot;:&quot;Turkey&quot;,&quot;tv&quot;:&quot;???????&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;13,360&quot;,&quot;bc&quot;:2,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;ita&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Italian&quot;,&quot;ci&quot;:&quot;IT&quot;,&quot;cn&quot;:&quot;Italy&quot;,&quot;tv&quot;:&quot;italiano&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,530&quot;,&quot;bc&quot;:15,&quot;fc&quot;:8,&quot;rc&quot;:15},{&quot;id&quot;:&quot;rmt&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Domari&quot;,&quot;ci&quot;:&quot;EG&quot;,&quot;cn&quot;:&quot;Egypt&quot;,&quot;tv&quot;:&quot;\u062f\u065b\u0648\u0645\u064e\u0631\u0650\u064a&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,831,340&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;rus&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Russian&quot;,&quot;ci&quot;:&quot;RU&quot;,&quot;cn&quot;:&quot;Russia&quot;,&quot;tv&quot;:&quot;\u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,010&quot;,&quot;bc&quot;:20,&quot;fc&quot;:9,&quot;rc&quot;:93},{&quot;id&quot;:&quot;siz&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Siwi&quot;,&quot;ci&quot;:&quot;EG&quot;,&quot;cn&quot;:&quot;Egypt&quot;,&quot;tv&quot;:&quot; Siwa Berber&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;23,620&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tgl&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Tagalog&quot;,&quot;ci&quot;:&quot;PH&quot;,&quot;cn&quot;:&quot;Philippines&quot;,&quot;tv&quot;:&quot;\u170f\u1712\u1703\u1705\u1714 \u1706\u1704\u170e\u1713\u1704\u1714&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,070&quot;,&quot;bc&quot;:8,&quot;fc&quot;:14,&quot;rc&quot;:12},{&quot;id&quot;:&quot;tur&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Turkish&quot;,&quot;ci&quot;:&quot;TR&quot;,&quot;cn&quot;:&quot;Turkey&quot;,&quot;tv&quot;:&quot;T\u00fcrk\u00e7e&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;45,540&quot;,&quot;bc&quot;:8,&quot;fc&quot;:35,&quot;rc&quot;:289},{&quot;id&quot;:&quot;urd&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Urdu&quot;,&quot;ci&quot;:&quot;PK&quot;,&quot;cn&quot;:&quot;Pakistan&quot;,&quot;tv&quot;:&quot;\u0627\u064f\u0631\u062f\u064f\u0648&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,020&quot;,&quot;bc&quot;:12,&quot;fc&quot;:33,&quot;rc&quot;:24},{&quot;id&quot;:&quot;xnz&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Kenzi&quot;,&quot;ci&quot;:&quot;EG&quot;,&quot;cn&quot;:&quot;Egypt&quot;,&quot;tv&quot;:&quot;Mattokki&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;55,400&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1}]}'
+               data-searchplaceholder="Filter Items on this Page">
+            <thead>
+            <tr>
+                <th data-column-name="tt" data-link="id" data-path="/languages">Languages<h6>in Egypt</h6></th>
+                <th data-column-name="po" data-sort-default="desc">Population<h6>Primary Language</h6></th>
+                <th data-column-name="id">iso</th>
+                <th data-column-name="bc">Bible<h6>Versions</h6></th>
+                <th data-column-name="fc">Films</th>
+                <th data-column-name="rc">Resources</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

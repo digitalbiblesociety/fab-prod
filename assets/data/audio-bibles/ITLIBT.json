@@ -1,0 +1,232 @@
+{
+    "id": "ITLIBT",
+    "parent_bible_id": null,
+    "title": "The Gospel of Luke in Itelmen, 2002",
+    "title_vernacular": "Евангелие от Луки на ительменском языке c параллельным русским, 2013",
+    "description": null,
+    "description_vernacular": null,
+    "iso": "itl",
+    "script": "Cyrl",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "2013",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2016-10-12T17:41:46.000000Z",
+    "updated_at": "2020-10-12T17:41:46.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Luke",
+            "chapter_id": "1",
+            "path": "ITLIBTP1DA\/B03___01_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "2",
+            "path": "ITLIBTP1DA\/B03___02_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "3",
+            "path": "ITLIBTP1DA\/B03___03_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "4",
+            "path": "ITLIBTP1DA\/B03___04_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "5",
+            "path": "ITLIBTP1DA\/B03___05_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "6",
+            "path": "ITLIBTP1DA\/B03___06_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "7",
+            "path": "ITLIBTP1DA\/B03___07_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "8",
+            "path": "ITLIBTP1DA\/B03___08_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "9",
+            "path": "ITLIBTP1DA\/B03___09_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "10",
+            "path": "ITLIBTP1DA\/B03___10_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "11",
+            "path": "ITLIBTP1DA\/B03___11_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "12",
+            "path": "ITLIBTP1DA\/B03___12_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "13",
+            "path": "ITLIBTP1DA\/B03___13_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "14",
+            "path": "ITLIBTP1DA\/B03___14_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "15",
+            "path": "ITLIBTP1DA\/B03___15_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "16",
+            "path": "ITLIBTP1DA\/B03___16_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "17",
+            "path": "ITLIBTP1DA\/B03___17_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "18",
+            "path": "ITLIBTP1DA\/B03___18_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "19",
+            "path": "ITLIBTP1DA\/B03___19_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "20",
+            "path": "ITLIBTP1DA\/B03___20_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "21",
+            "path": "ITLIBTP1DA\/B03___21_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "22",
+            "path": "ITLIBTP1DA\/B03___22_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "23",
+            "path": "ITLIBTP1DA\/B03___23_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        },
+        {
+            "book_id": "Luke",
+            "chapter_id": "24",
+            "path": "ITLIBTP1DA\/B03___24_Luke________ITLIBTP1DA.mp3",
+            "id_usfm": "LUK",
+            "name": "Luke",
+            "order": 43
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5925,
+            "bible_id": "ITLIBT",
+            "equivalent_id": "ITLIBTP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

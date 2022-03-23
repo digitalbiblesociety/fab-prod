@@ -1,0 +1,72 @@
+{
+    "id": "TODPBT",
+    "parent_bible_id": null,
+    "title": "Toma Bible Portions",
+    "title_vernacular": "GALA Sɛʋɛi",
+    "description": "Portions of the Holy Bible in the Toma language of Guinea",
+    "description_vernacular": "Des portions de la Sainte Bible dans la langue de la Guinée Toma",
+    "iso": "tod",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "2013",
+    "country_id": "GN",
+    "copyright": "Copyright © 2013 Pioneer Bible Translators",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0836-0",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2017-08-12T14:16:17.000000Z",
+    "updated_at": "2020-10-12T17:23:14.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Ruth",
+            "chapter_id": "1",
+            "path": "TODPBTP2DA\/A08___01_Ruth________TODPBTP2DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "2",
+            "path": "TODPBTP2DA\/A08___02_Ruth________TODPBTP2DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "3",
+            "path": "TODPBTP2DA\/A08___03_Ruth________TODPBTP2DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        },
+        {
+            "book_id": "Ruth",
+            "chapter_id": "4",
+            "path": "TODPBTP2DA\/A08___04_Ruth________TODPBTP2DA.mp3",
+            "id_usfm": "RUT",
+            "name": "Ruth",
+            "order": 8
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6113,
+            "bible_id": "TODPBT",
+            "equivalent_id": "TODPBTP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

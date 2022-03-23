@@ -1,0 +1,256 @@
+{
+    "id": "STOWBT",
+    "parent_bible_id": null,
+    "title": "Wycliffe Portions of the Bible in Stoney",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "sto",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "1970",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2017-04-16T23:58:55.000000Z",
+    "updated_at": "2020-10-12T15:32:41.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Jas",
+            "chapter_id": "1",
+            "path": "STOWBTP1DA\/B20___01_James_______STOWBTP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "2",
+            "path": "STOWBTP1DA\/B20___02_James_______STOWBTP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "3",
+            "path": "STOWBTP1DA\/B20___03_James_______STOWBTP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "4",
+            "path": "STOWBTP1DA\/B20___04_James_______STOWBTP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Jas",
+            "chapter_id": "5",
+            "path": "STOWBTP1DA\/B20___05_James_______STOWBTP1DA.mp3",
+            "id_usfm": "JAS",
+            "name": "James",
+            "order": 60
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "1",
+            "path": "STOWBTP1DA\/B27___01_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "2",
+            "path": "STOWBTP1DA\/B27___02_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "3",
+            "path": "STOWBTP1DA\/B27___03_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "4",
+            "path": "STOWBTP1DA\/B27___04_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "5",
+            "path": "STOWBTP1DA\/B27___05_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "6",
+            "path": "STOWBTP1DA\/B27___06_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "7",
+            "path": "STOWBTP1DA\/B27___07_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "8",
+            "path": "STOWBTP1DA\/B27___08_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "9",
+            "path": "STOWBTP1DA\/B27___09_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "10",
+            "path": "STOWBTP1DA\/B27___10_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "11",
+            "path": "STOWBTP1DA\/B27___11_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "12",
+            "path": "STOWBTP1DA\/B27___12_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "13",
+            "path": "STOWBTP1DA\/B27___13_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "14",
+            "path": "STOWBTP1DA\/B27___14_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "15",
+            "path": "STOWBTP1DA\/B27___15_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "16",
+            "path": "STOWBTP1DA\/B27___16_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "17",
+            "path": "STOWBTP1DA\/B27___17_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "18",
+            "path": "STOWBTP1DA\/B27___18_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "19",
+            "path": "STOWBTP1DA\/B27___19_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "20",
+            "path": "STOWBTP1DA\/B27___20_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "21",
+            "path": "STOWBTP1DA\/B27___21_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        },
+        {
+            "book_id": "Rev",
+            "chapter_id": "22",
+            "path": "STOWBTP1DA\/B27___22_Revelation__STOWBTP1DA.mp3",
+            "id_usfm": "REV",
+            "name": "Revelation",
+            "order": 67
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6099,
+            "bible_id": "STOWBT",
+            "equivalent_id": "STOWBTP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

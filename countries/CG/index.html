@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Congo | Find a Bible</title>
+    <style>
+        .country-aside      {padding: .2em 1.2em .5em 1.2em;}
+        .country-aside p    {font-size: .8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin: .25em auto 1em auto;}
+        .country-persecution {background:url("https://images.bible.cloud/fab/logos/odi_gray_logo.svg") no-repeat 95% 10%/ 33px 26px;
+                            border: thin solid #d7d7d7; border-width: 1px 0 1px 0; margin-bottom: .5em;}
+        .country-facts      {margin: 0 0 .5em 0;}
+        .country-links      {margin-top: .75em; padding-top: .5em;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: .5em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .link-icon              {width: 1.5em; height: 1.5em;margin-left:.5em;}
+        th h6                                  {font-size: .7em; font-weight: normal;line-height:.9em; margin:.2em 0 0 0 ; text-transform: none}
+        .dataTable tr td:nth-child(2)       {max-width:120px;text-align:right;}
+        .dataTable tr td:nth-child(3)       {width:80px;text-align:center;}
+        .dataTable tr td:nth-child(4), .dataTable tr td:nth-child(5), .dataTable tr td:nth-child(6)      {width:90px;text-align:center;}
+        #banner .banner-flag {margin: 0 .5em 0 0;}
+    </style>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+    </style
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-flag " src="https://images.bible.cloud/flags/cg.svg" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Congo
+                </h1>
+                <h2 itemprop="description"  >A country of  Africa</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Languages
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/CG/maps">Congo Maps | Info</a>
+                                                                <a class="external" href="https://find.bible/countries/CG/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Congo</span>
+                    <meta itemprop="position" content="3" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+            <img class="country-location" src="https://images.bible.cloud/maps/country/CG-location.png" alt="Congo Find a Bible" />
+            <div class="country-facts row">
+                <p><b>Population:</b> 5,417,414</p>
+                <p><b>Official Language:</b> French</p>
+                <p><b>Language Count:</b> <span class="num-badge">72</span></p>
+                <p><b>Primary Religion:</b> Christianity</p>
+                                    <p><b>National Bible Society:</b><br />
+
+                                                    Bible Society of Congo</p>
+                            <a href="http://alliancebiblique-congo.org/" target="_blank" alt="Bible Society of Congo">
+                                <img src="https://images.bible.cloud/logo_type_bible_societies.svg" class="link-icon"/></a>
+                                         
+            </div>
+
+            <div class="country-links">
+                <p><b>Reference Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/CG" alt="Find a Bible Congo">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://en.wikipedia.org/wiki/Republic_of_the_Congo" alt="Wikipedia - Congo">
+                            <img src="http://images.bible.cloud/wiki_type_logo.svg" title="Wikipedia" />
+                            <p>Wikipedia</p></a>
+                    </div>
+
+
+
+                                            <div><a target="_blank" href="https://www.cia.gov/the-world-factbook/countries/congo-republic-of-the/" alt="World Fact Book - Congo">
+                                <img src="http://images.bible.cloud/logo_type_cia.svg" title="World Fact Book" />
+                                <p>WorldFact<br />Book</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="http://hdr.undp.org/en/countries/profiles/COG" alt="Human Development - Congo">
+                                <img src="http://images.bible.cloud/logo_type_united_nations.svg" title="Human Development" />
+                                <p>Human<br />Develop.</p></a>
+                        </div>
+                    
+
+                                            <div><a target="_blank" href="https://www.state.gov/countries-areas/republic-of-the-congo/" alt="Religious Freedom - Congo">
+                                <img src="http://images.bible.cloud/logo_type_dept_state.svg" title="Religious Freedom" />
+                                <p>Religious<br />Freedom</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://www.britannica.com/place/Republic-of-the-Congo" alt="Britannica - Congo">
+                                <img src="http://images.bible.cloud/logo_type_britannica.svg" title="Britannica" />
+                                <p>Britannica</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+                            <p><b>Factbook Summary:</b>
+                    <a href="https://images.bible.cloud/maps/summary/CF-summary.pdf" target="_blank"  alt="World Fact Book Congo">
+                        <img class="pdf-icon" src="http://images.bible.cloud/icon/pdf_icon.svg" title="Country Summary" /></a></p>
+            
+
+        
+
+
+            <div class="country-links">
+                <p><b>Mission / Prayer Links:</b></p>
+                <div class="link-container">
+                    <div><a target="_blank" href="https://find.bible/countries/CG" alt="Find a Bible Congo">
+                            <img src="http://images.bible.cloud/fab_type_logo.svg" title="Find A Bible" />
+                            <p>Find-A-Bible</p></a>
+                    </div>
+
+
+                    <div><a target="_blank" href="https://www.joshuaproject.net/countries/CF" alt="Joshua Project - Congo">
+                            <img src="http://images.bible.cloud/joshua_type_logo.svg" title="Joshua Project" />
+                            <p>Joshua<br />Project</p></a>
+                    </div>
+
+                                            <div><a target="_blank" href="https://unitedbiblesocieties.org/locations/bible-society-of-congo/" alt="United Bible Societies - Congo">
+                                <img src="http://images.bible.cloud/logo_type_ubs.svg" title="United Bible Societies" />
+                                <p>UBS</p></a>
+                        </div>
+                    
+
+
+                                            <div><a target="_blank" href="https://operationworld.org/locations/congo-republic-of" alt="Operation World - Congo">
+                                <img src="http://images.bible.cloud/logo_type_ow.svg" title="Operation World" />
+                                <p>Operation<br />World</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://prayercast.com/congo.html" alt="PrayerCasts - Congo">
+                                <img src="http://images.bible.cloud/prayercast_type_logo.svg" title="PrayerCast" />
+                                <p>PrayerCast</p></a>
+                        </div>
+                    
+                                            <div><a target="_blank" href="https://curlie.org/Regional/Africa/Congo" alt="ODP Database - Congo">
+                                <img src="http://images.bible.cloud/logo_type_odp.svg" title="Open Directory Project" />
+                                <p>Open<br />Directory</p></a>
+                        </div>
+                                    </div>
+            </div>
+
+
+
+            <div class="country-overview">
+                    <p><b>Language Summary:</b>
+                        French (official), French Lingala and Monokutuba (lingua franca trade languages), many local languages and dialects (of which Kikongo is the most widespread)</p>
+                </div>
+
+                <div class="country-overview">
+                    <p><b>Ethnic Summary:</b>
+                        Kongo 40.5%, Teke 16.9%, Mbochi 13.1%, foreigner 8.2%, Sangha 5.6%, Mbere/Mbeti/Kele 4.4%, Punu 4.3%, Pygmy 1.6%, Oubanguiens 1.6%, Duma 1.5%, Makaa 1.3%, other and unspecified 1% (2014-15 est.)</p>
+                </div>
+
+
+
+
+            <div class="country-overview">
+                <p><b>Religious Summary:</b>
+                    Roman Catholic 33.1%, Awakening Churches/Christian Revival 22.3%, Protestant 19.9%, Salutiste 2.2%, Muslim 1.6%, Kimbanguiste 1.5%, other 8.1%, none 11.3% (2010 est.)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="medium-9">
+        <table id="languages" class="table responsive" cellspacing="0" width="100%"
+               data-json='{&quot;data&quot;:[{&quot;id&quot;:&quot;akw&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Akwa&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:null,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;45,300&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;apc&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;North Levantine Arabic&quot;,&quot;ci&quot;:&quot;SY&quot;,&quot;cn&quot;:&quot;Syria&quot;,&quot;tv&quot;:&quot;\u0627\u0644\u0644\u0647\u062c\u0629 \u0627\u0644\u0634\u0627\u0645\u064a \u0627\u0644\u0634\u0645\u0627\u0644&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,200&quot;,&quot;bc&quot;:2,&quot;fc&quot;:8,&quot;rc&quot;:5},{&quot;id&quot;:&quot;axk&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Yaka (Central African Republic)&quot;,&quot;ci&quot;:&quot;CF&quot;,&quot;cn&quot;:&quot;Central African Republic&quot;,&quot;tv&quot;:&quot;Yaka&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;42,150&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;beq&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Beembe&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Kibeembe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;130,700&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;bgf&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Bangandu&quot;,&quot;ci&quot;:&quot;CM&quot;,&quot;cn&quot;:&quot;Cameroon&quot;,&quot;tv&quot;:&quot;Ngombe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;bkw&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Bekwel&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Bakwele&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;14,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;bmw&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Bomwali&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Bomali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;53,550&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;bni&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bangi&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;Bobangi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;114,700&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;bok&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Bonjo&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Impfondo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,100&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;bui&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Bongili&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Bokiba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;12,490&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;bum&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Bulu (Cameroon)&quot;,&quot;ci&quot;:&quot;CM&quot;,&quot;cn&quot;:&quot;Cameroon&quot;,&quot;tv&quot;:&quot;Bulu-Bene&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;bvx&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Dibole&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;bwz&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Bwisi&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Ibwisi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,140&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;dde&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Doondo&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Kibeembe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;43,780&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:9},{&quot;id&quot;:&quot;ebo&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Teke-Ebo&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Eboo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;36,900&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;fan&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Fang (Equatorial Guinea)&quot;,&quot;ci&quot;:&quot;GQ&quot;,&quot;cn&quot;:&quot;Equatorial Guinea&quot;,&quot;tv&quot;:&quot;Pangwe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;12,000&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:5},{&quot;id&quot;:&quot;fra&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;French&quot;,&quot;ci&quot;:&quot;FR&quot;,&quot;cn&quot;:&quot;France&quot;,&quot;tv&quot;:&quot;fran\u00e7ais&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;500,000&quot;,&quot;bc&quot;:45,&quot;fc&quot;:3,&quot;rc&quot;:122},{&quot;id&quot;:&quot;gdi&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Gundi&quot;,&quot;ci&quot;:&quot;CF&quot;,&quot;cn&quot;:&quot;Central African Republic&quot;,&quot;tv&quot;:&quot;Ngondi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,210&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;gya&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Northwest Gbaya&quot;,&quot;ci&quot;:&quot;CF&quot;,&quot;cn&quot;:&quot;Central African Republic&quot;,&quot;tv&quot;:&quot;Gbaya&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;2,000&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;hau&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Hausa&quot;,&quot;ci&quot;:&quot;NG&quot;,&quot;cn&quot;:&quot;Nigeria&quot;,&quot;tv&quot;:&quot; \u0647\u064e\u0631\u0652\u0634\u064e\u0646 \u0647\u064e\u0648\u0652\u0633\u064e&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;11,000&quot;,&quot;bc&quot;:4,&quot;fc&quot;:18,&quot;rc&quot;:45},{&quot;id&quot;:&quot;ifm&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Teke-Fuumu&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Wuumu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;8,100&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;iyx&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Yaka (Congo)&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Iyaka&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;40,170&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kfe&quot;,&quot;bp&quot;:&quot;NS&quot;,&quot;tt&quot;:&quot;Kota (India)&quot;,&quot;ci&quot;:&quot;IN&quot;,&quot;cn&quot;:&quot;India&quot;,&quot;tv&quot;:&quot;K\u014d m\u0101nt&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;kkj&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kako&quot;,&quot;ci&quot;:&quot;CM&quot;,&quot;cn&quot;:&quot;Cameroon&quot;,&quot;tv&quot;:&quot;Kaka&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;14,020&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:3},{&quot;id&quot;:&quot;kkw&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Teke-Kukuya&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Southern Teke&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;70,190&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kng&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Koongo&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;Kikongo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;27,610&quot;,&quot;bc&quot;:4,&quot;fc&quot;:2,&quot;rc&quot;:2},{&quot;id&quot;:&quot;koh&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Koyo&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Ekoyo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,530&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;koq&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Kota (Gabon)&quot;,&quot;ci&quot;:&quot;GA&quot;,&quot;cn&quot;:&quot;Gabon&quot;,&quot;tv&quot;:&quot;iKota&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;16,500&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;kwc&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Likwala&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;85,220&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;kxx&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Likuba&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;57,170&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ldi&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Laari&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Kikongo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;171,500&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:10},{&quot;id&quot;:&quot;lin&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Lingala&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;Ngala&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;229,700&quot;,&quot;bc&quot;:4,&quot;fc&quot;:2,&quot;rc&quot;:23},{&quot;id&quot;:&quot;lli&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Teke-Laali&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Ilaali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,790&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;loq&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Lobala&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;lup&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Lumbu&quot;,&quot;ci&quot;:&quot;GA&quot;,&quot;cn&quot;:&quot;Gabon&quot;,&quot;tv&quot;:&quot;Ilumbu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,990&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;mbm&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Ombamba&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;24,810&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;mcx&quot;,&quot;bp&quot;:&quot;ST&quot;,&quot;tt&quot;:&quot;Mpiemo&quot;,&quot;ci&quot;:&quot;CF&quot;,&quot;cn&quot;:&quot;Central African Republic&quot;,&quot;tv&quot;:&quot;Mbimu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;mdt&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Mbere&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot; Limbede&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;106,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;mdu&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Mboko&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Mboxo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;50,700&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;mdw&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Mbosi&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Embosi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;571,000&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;mkw&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Kituba (Congo)&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Monokutuba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,887,800&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:10},{&quot;id&quot;:&quot;moj&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Monzombo&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Mondjembo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;16,280&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;mow&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Moi (Congo)&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Bobangi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;6,160&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nbm&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Ngbaka Ma&#039;bo&quot;,&quot;ci&quot;:&quot;CF&quot;,&quot;cn&quot;:&quot;Central African Republic&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;171,500&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:2},{&quot;id&quot;:&quot;nbw&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Southern Ngbandi&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;Mbati&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,010&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:3},{&quot;id&quot;:&quot;nda&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Ndasa&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Andasa&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;9,030&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ndn&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Ngundi&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Ingundi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;4,820&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nga&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Ngbaka&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;Ngbaka Minagende&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;7,210&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;ngz&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Ngungwel&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Eboo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;118,400&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:1,&quot;rc&quot;:1},{&quot;id&quot;:&quot;njx&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Kunyi&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Kikunyi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;147,900&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;njy&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Njyem&quot;,&quot;ci&quot;:&quot;CM&quot;,&quot;cn&quot;:&quot;Cameroon&quot;,&quot;tv&quot;:&quot;&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;5,720&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nra&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Ngom&quot;,&quot;ci&quot;:&quot;GA&quot;,&quot;cn&quot;:&quot;Gabon&quot;,&quot;tv&quot;:&quot;Dikele&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;8,060&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;nzb&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Njebi&quot;,&quot;ci&quot;:&quot;GA&quot;,&quot;cn&quot;:&quot;Gabon&quot;,&quot;tv&quot;:&quot;Yinjebi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;24,810&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:4},{&quot;id&quot;:&quot;nzu&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Teke-Nzikou&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Eboo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;124,200&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;ozm&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Koonzime&quot;,&quot;ci&quot;:&quot;CM&quot;,&quot;cn&quot;:&quot;Cameroon&quot;,&quot;tv&quot;:&quot; Koozime&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,070&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4},{&quot;id&quot;:&quot;pmm&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Pomo&quot;,&quot;ci&quot;:&quot;CM&quot;,&quot;cn&quot;:&quot;Cameroon&quot;,&quot;tv&quot;:&quot;Congo Pol&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;10,830&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;por&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Portuguese&quot;,&quot;ci&quot;:&quot;PT&quot;,&quot;cn&quot;:&quot;Portugal&quot;,&quot;tv&quot;:&quot;portugu\u00eas&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;1,310&quot;,&quot;bc&quot;:17,&quot;fc&quot;:7,&quot;rc&quot;:342},{&quot;id&quot;:&quot;puu&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Punu&quot;,&quot;ci&quot;:&quot;GA&quot;,&quot;cn&quot;:&quot;Gabon&quot;,&quot;tv&quot;:&quot;Bapunu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;17,790&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:2},{&quot;id&quot;:&quot;sag&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Sango&quot;,&quot;ci&quot;:&quot;CF&quot;,&quot;cn&quot;:&quot;Central African Republic&quot;,&quot;tv&quot;:&quot;y\u00e2ng\u00e2 t\u00ee s\u00e4ng\u00f6&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;126,200&quot;,&quot;bc&quot;:2,&quot;fc&quot;:1,&quot;rc&quot;:5},{&quot;id&quot;:&quot;sdj&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Suundi&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Kisuundi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;233,000&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;teg&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Teke-Tege&quot;,&quot;ci&quot;:&quot;GA&quot;,&quot;cn&quot;:&quot;Gabon&quot;,&quot;tv&quot;:&quot;T\u025bg\u025b&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;89,180&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;tek&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Ibali Teke&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;Bali&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;65,480&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;tsa&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Tsaangi&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Icaangi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;24,810&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;tyi&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Teke-Tsaayi&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Getsaayi&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;173,400&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:1},{&quot;id&quot;:&quot;tyx&quot;,&quot;bp&quot;:&quot;PO&quot;,&quot;tt&quot;:&quot;Teke-Tyee&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;West Teke&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;26,050&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;vif&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Vili&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Civili&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;13,000&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:7},{&quot;id&quot;:&quot;wum&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Wumbvu&quot;,&quot;ci&quot;:&quot;GA&quot;,&quot;cn&quot;:&quot;Gabon&quot;,&quot;tv&quot;:&quot;Wumvu&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;11,430&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;xku&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Kaamba&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Kibeembe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,060&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;yom&quot;,&quot;bp&quot;:&quot;NT&quot;,&quot;tt&quot;:&quot;Yombe&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;Kikongo&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;58,630&quot;,&quot;bc&quot;:1,&quot;fc&quot;:1,&quot;rc&quot;:5},{&quot;id&quot;:&quot;zmn&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Mbangwe&quot;,&quot;ci&quot;:&quot;GA&quot;,&quot;cn&quot;:&quot;Gabon&quot;,&quot;tv&quot;:&quot;Mba\u014bwe&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;3,010&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;zmx&quot;,&quot;bp&quot;:&quot;&quot;,&quot;tt&quot;:&quot;Bomitaba&quot;,&quot;ci&quot;:&quot;CG&quot;,&quot;cn&quot;:&quot;Congo&quot;,&quot;tv&quot;:&quot;Bamitaba&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;16,500&quot;,&quot;bc&quot;:&quot;&quot;,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:&quot;&quot;},{&quot;id&quot;:&quot;zmz&quot;,&quot;bp&quot;:&quot;FB&quot;,&quot;tt&quot;:&quot;Mbandja&quot;,&quot;ci&quot;:&quot;CD&quot;,&quot;cn&quot;:&quot;DR Congo&quot;,&quot;tv&quot;:&quot;Mbandza&quot;,&quot;type&quot;:&quot;languages&quot;,&quot;po&quot;:&quot;16,130&quot;,&quot;bc&quot;:1,&quot;fc&quot;:&quot;&quot;,&quot;rc&quot;:4}]}'
+               data-searchplaceholder="Filter Items on this Page">
+            <thead>
+            <tr>
+                <th data-column-name="tt" data-link="id" data-path="/languages">Languages<h6>in Congo</h6></th>
+                <th data-column-name="po" data-sort-default="desc">Population<h6>Primary Language</h6></th>
+                <th data-column-name="id">iso</th>
+                <th data-column-name="bc">Bible<h6>Versions</h6></th>
+                <th data-column-name="fc">Films</th>
+                <th data-column-name="rc">Resources</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+        <script defer src="/js/app.js"></script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

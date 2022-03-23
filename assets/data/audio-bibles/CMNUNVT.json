@@ -1,0 +1,50 @@
+{
+    "id": "CMNUNVT",
+    "parent_bible_id": "CMNUNVS",
+    "title": "Chinese Union Version | Traditional Script",
+    "title_vernacular": "新標點和合本",
+    "description": "Chinese Union Version with New Punctuation (traditional)",
+    "description_vernacular": "",
+    "iso": "cmn",
+    "script": "Hant",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "1919",
+    "country_id": "CN",
+    "copyright": "Public Domain",
+    "copyright_type": "OPEN",
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0158-3",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2020-05-12T14:13:08.000000Z",
+    "updated_at": "2020-10-12T15:52:49.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 5872,
+            "bible_id": "CMNUNVT",
+            "equivalent_id": "CHNUNVP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        },
+        {
+            "id": 5873,
+            "bible_id": "CMNUNVT",
+            "equivalent_id": "CHNUNVP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

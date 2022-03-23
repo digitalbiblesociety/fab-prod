@@ -1,0 +1,408 @@
+{
+    "id": "MAQTBL",
+    "parent_bible_id": null,
+    "title": "Chiquihuitlán Mazatec New Testament",
+    "title_vernacular": "Compromisu xi majo xi casahmi nina cojo xuta",
+    "description": "New Testament in Mazatec, Chiquihuitlán (MX:maq:Mazatec, Chiquihuitlán)",
+    "description_vernacular": "",
+    "iso": "maq",
+    "script": "Latn",
+    "versification": "Default",
+    "numeral_system_id": "default",
+    "date": "1991",
+    "country_id": "MX",
+    "copyright": "Copyright © 1991 Wycliffe Bible Translators, Inc.",
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": "978-1-5313-0388-4",
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": null,
+    "cover_url": null,
+    "created_at": "2017-04-12T14:14:42.000000Z",
+    "updated_at": "2020-10-12T17:23:04.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "Mark",
+            "chapter_id": "1",
+            "path": "MAQTBLP1DA\/B02___01_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "2",
+            "path": "MAQTBLP1DA\/B02___02_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "3",
+            "path": "MAQTBLP1DA\/B02___03_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "4",
+            "path": "MAQTBLP1DA\/B02___04_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "5",
+            "path": "MAQTBLP1DA\/B02___05_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "6",
+            "path": "MAQTBLP1DA\/B02___06_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "7",
+            "path": "MAQTBLP1DA\/B02___07_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "8",
+            "path": "MAQTBLP1DA\/B02___08_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "9",
+            "path": "MAQTBLP1DA\/B02___09_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "10",
+            "path": "MAQTBLP1DA\/B02___10_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "11",
+            "path": "MAQTBLP1DA\/B02___11_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "12",
+            "path": "MAQTBLP1DA\/B02___12_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "13",
+            "path": "MAQTBLP1DA\/B02___13_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "14",
+            "path": "MAQTBLP1DA\/B02___14_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "15",
+            "path": "MAQTBLP1DA\/B02___15_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Mark",
+            "chapter_id": "16",
+            "path": "MAQTBLP1DA\/B02___16_Mark________MAQTBLP1DA.mp3",
+            "id_usfm": "MRK",
+            "name": "Mark",
+            "order": 42
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "1",
+            "path": "MAQTBLP1DA\/B06___01_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "2",
+            "path": "MAQTBLP1DA\/B06___02_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "3",
+            "path": "MAQTBLP1DA\/B06___03_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "4",
+            "path": "MAQTBLP1DA\/B06___04_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "5",
+            "path": "MAQTBLP1DA\/B06___05_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "6",
+            "path": "MAQTBLP1DA\/B06___06_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "7",
+            "path": "MAQTBLP1DA\/B06___07_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "8",
+            "path": "MAQTBLP1DA\/B06___08_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "9",
+            "path": "MAQTBLP1DA\/B06___09_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "10",
+            "path": "MAQTBLP1DA\/B06___10_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "11",
+            "path": "MAQTBLP1DA\/B06___11_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "12",
+            "path": "MAQTBLP1DA\/B06___12_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "13",
+            "path": "MAQTBLP1DA\/B06___13_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "14",
+            "path": "MAQTBLP1DA\/B06___14_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "15",
+            "path": "MAQTBLP1DA\/B06___15_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Rom",
+            "chapter_id": "16",
+            "path": "MAQTBLP1DA\/B06___16_Romans______MAQTBLP1DA.mp3",
+            "id_usfm": "ROM",
+            "name": "Romans",
+            "order": 46
+        },
+        {
+            "book_id": "Col",
+            "chapter_id": "1",
+            "path": "MAQTBLP1DA\/B12___01_Colossians__MAQTBLP1DA.mp3",
+            "id_usfm": "COL",
+            "name": "Colossians",
+            "order": 52
+        },
+        {
+            "book_id": "Col",
+            "chapter_id": "2",
+            "path": "MAQTBLP1DA\/B12___02_Colossians__MAQTBLP1DA.mp3",
+            "id_usfm": "COL",
+            "name": "Colossians",
+            "order": 52
+        },
+        {
+            "book_id": "Col",
+            "chapter_id": "3",
+            "path": "MAQTBLP1DA\/B12___03_Colossians__MAQTBLP1DA.mp3",
+            "id_usfm": "COL",
+            "name": "Colossians",
+            "order": 52
+        },
+        {
+            "book_id": "Col",
+            "chapter_id": "4",
+            "path": "MAQTBLP1DA\/B12___04_Colossians__MAQTBLP1DA.mp3",
+            "id_usfm": "COL",
+            "name": "Colossians",
+            "order": 52
+        },
+        {
+            "book_id": "1Thess",
+            "chapter_id": "1",
+            "path": "MAQTBLP1DA\/B13___01_1Thess______MAQTBLP1DA.mp3",
+            "id_usfm": "1TH",
+            "name": "1 Thessalonians",
+            "order": 53
+        },
+        {
+            "book_id": "1Thess",
+            "chapter_id": "2",
+            "path": "MAQTBLP1DA\/B13___02_1Thess______MAQTBLP1DA.mp3",
+            "id_usfm": "1TH",
+            "name": "1 Thessalonians",
+            "order": 53
+        },
+        {
+            "book_id": "1Thess",
+            "chapter_id": "3",
+            "path": "MAQTBLP1DA\/B13___03_1Thess______MAQTBLP1DA.mp3",
+            "id_usfm": "1TH",
+            "name": "1 Thessalonians",
+            "order": 53
+        },
+        {
+            "book_id": "1Thess",
+            "chapter_id": "4",
+            "path": "MAQTBLP1DA\/B13___04_1Thess______MAQTBLP1DA.mp3",
+            "id_usfm": "1TH",
+            "name": "1 Thessalonians",
+            "order": 53
+        },
+        {
+            "book_id": "1Thess",
+            "chapter_id": "5",
+            "path": "MAQTBLP1DA\/B13___05_1Thess______MAQTBLP1DA.mp3",
+            "id_usfm": "1TH",
+            "name": "1 Thessalonians",
+            "order": 53
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "1",
+            "path": "MAQTBLP1DA\/B23___01_1John_______MAQTBLP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "2",
+            "path": "MAQTBLP1DA\/B23___02_1John_______MAQTBLP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "3",
+            "path": "MAQTBLP1DA\/B23___03_1John_______MAQTBLP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "4",
+            "path": "MAQTBLP1DA\/B23___04_1John_______MAQTBLP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        },
+        {
+            "book_id": "1John",
+            "chapter_id": "5",
+            "path": "MAQTBLP1DA\/B23___05_1John_______MAQTBLP1DA.mp3",
+            "id_usfm": "1JN",
+            "name": "1 John",
+            "order": 63
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 5978,
+            "bible_id": "MAQTBL",
+            "equivalent_id": "MAQTBLP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

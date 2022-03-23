@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-download   {text-align: right;margin-right:2em;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 9em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 2px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>Mexico | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/MX.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/mx_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Mexico
+                </h1>
+                <h2 itemprop="description"  >A country of  North America</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/MX">Mexico Languages</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Maps | Info
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/MX/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/MX">
+                    <span itemprop="name">Mexico</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+
+            <div class="country-facts row">
+                <p><b>Title:</b> The United Mexican States </p><br>
+                <p><b>Population:</b> 130,207,371</p>
+                <p><b>Population Change:</b> 1.06</p>
+                <p><b>National Average Age:</b> 29</p>
+                <p><b>Urban Percentage:</b> 84</p>
+                <p><b>Christian Population:</b> 107,780,000</p>
+                <p><b>Christian Percentage:</b> 92.4</p>
+
+            </div>
+
+
+                        <div class="country-overview">
+                <p><b>Introduction:</b>
+                    &#039;Mexico is a country between the U.S. and Central America that&#039;&#039;s known for its Pacific and Gulf of Mexico beaches and its diverse landscape of mountains deserts and jungles. Ancient ruins such as Teotihuacán and the Mayan city of Chichén Itzá are scattered throughout the country as are Spanish colonial-era towns. In capital Mexico City upscale shops renowned museums and gourmet restaurants cater to modern life.&#039;</p><br>
+                <p><b>Overview:</b>
+                    The site of several advanced Amerindian civilizations - including the Olmec Toltec Teotihuacan Zapotec Maya and Aztec - Mexico was conquered and colonized by Spain in the early 16th century. Administered as the Viceroyalty of New Spain for three centuries it achieved independence early in the 19th century. Elections held in 2000 marked the first time since the 1910 Mexican Revolution that an opposition candidate - Vicente FOX of the National Action Party (PAN) - defeated the party in government the Institutional Revolutionary Party (PRI). He was succeeded in 2006 by another PAN candidate Felipe CALDERON but Enrique PENA NIETO regained the presidency for the PRI in 2012. The global financial crisis in late 2008 caused a massive economic downturn in Mexico the following year although growth returned quickly in 2010. Ongoing economic and social concerns include low real wages high underemployment inequitable income distribution and few advancement opportunities for the largely indigenous population in the impoverished southern states. Since 2007 Mexico&#039;s powerful drug-trafficking organizations have engaged in bloody feuding resulting in tens of thousands of drug-related homicides.</p>
+            </div>
+                
+
+        </div>
+    </div>
+
+
+
+    <div class="medium-9">
+
+
+        <div  class="row">
+
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Government</h4>
+                    <div><a href="#gov" alt="Mexico gov Map" title="Mexico gov Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/MX-gov.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/MX-gov.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Land</h4>
+                    <div><a href="#land" alt="Mexico land Map" title="Mexico land Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/MX-land.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/MX-land.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Language Map</h4>
+                    <div><a href="#language" alt="Mexico language Map" title="Mexico language Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/MX-lang.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/MX-lang.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Location</h4>
+                    <div><a href="#location" alt="Mexico location Map" title="Mexico location Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/MX-location.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/MX-location.png" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Transportation</h4>
+                    <div><a href="#trans" alt="Mexico trans Map" title="Mexico trans Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/MX-trans.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/MX-trans.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                    </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+<div class="map-modals">
+
+            <div id="gov" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/MX-gov.jpg' />
+    </div>
+</div>            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/MX-land.jpg' />
+    </div>
+</div>            <div id="language" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/MX-lang.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/MX-location.png' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/MX-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+
+
+                                    let marker_afs = L.marker([31.784255, -99.293385]).addTo(mymap);
+                    marker_afs.bindPopup('<a href="/languages/afs">Afro-Seminole Creole</a>').openPopup();
+                                                let marker_agu = L.marker([15.330660, -91.315290]).addTo(mymap);
+                    marker_agu.bindPopup('<a href="/languages/agu">Aguacateco</a>').openPopup();
+                                                let marker_ajp = L.marker([31.560116, 38.083716]).addTo(mymap);
+                    marker_ajp.bindPopup('<a href="/languages/ajp">South Levantine Arabic</a>').openPopup();
+                                                let marker_amu = L.marker([16.772260, -98.189530]).addTo(mymap);
+                    marker_amu.bindPopup('<a href="/languages/amu">Guerrero Amuzgo</a>').openPopup();
+                                                let marker_apc = L.marker([34.170933, 36.046843]).addTo(mymap);
+                    marker_apc.bindPopup('<a href="/languages/apc">North Levantine Arabic</a>').openPopup();
+                                                                    let marker_azg = L.marker([16.519760, -98.046430]).addTo(mymap);
+                    marker_azg.bindPopup('<a href="/languages/azg">San Pedro Amuzgos Amuzgo</a>').openPopup();
+                                                let marker_azm = L.marker([16.505310, -98.012870]).addTo(mymap);
+                    marker_azm.bindPopup('<a href="/languages/azm">Ipalapa Amuzgo</a>').openPopup();
+                                                                    let marker_azz = L.marker([20.155360, -97.555620]).addTo(mymap);
+                    marker_azz.bindPopup('<a href="/languages/azz">Highland Puebla Nahuatl</a>').openPopup();
+                                                let marker_bzj = L.marker([17.394070, -88.628140]).addTo(mymap);
+                    marker_bzj.bindPopup('<a href="/languages/bzj">Belize Kriol English</a>').openPopup();
+                                                let marker_cac = L.marker([15.839865, -91.760030]).addTo(mymap);
+                    marker_cac.bindPopup('<a href="/languages/cac">Chuj</a>').openPopup();
+                                                let marker_caq = L.marker([9.188530, 92.767060]).addTo(mymap);
+                    marker_caq.bindPopup('<a href="/languages/caq">Car Nicobarese</a>').openPopup();
+                                                let marker_cat = L.marker([41.898260, 3.393755]).addTo(mymap);
+                    marker_cat.bindPopup('<a href="/languages/cat">Catalan</a>').openPopup();
+                                                let marker_cco = L.marker([17.590880, -96.445010]).addTo(mymap);
+                    marker_cco.bindPopup('<a href="/languages/cco">Comaltepec Chinantec</a>').openPopup();
+                                                let marker_chd = L.marker([16.184890, -95.730110]).addTo(mymap);
+                    marker_chd.bindPopup('<a href="/languages/chd">Highland Oaxaca Chontal</a>').openPopup();
+                                                let marker_chf = L.marker([18.171290, -92.736660]).addTo(mymap);
+                    marker_chf.bindPopup('<a href="/languages/chf">Tabasco Chontal</a>').openPopup();
+                                                let marker_chj = L.marker([18.075040, -96.336860]).addTo(mymap);
+                    marker_chj.bindPopup('<a href="/languages/chj">Ojitlán Chinantec</a>').openPopup();
+                                                let marker_chq = L.marker([17.562110, -96.602030]).addTo(mymap);
+                    marker_chq.bindPopup('<a href="/languages/chq">Quiotepec Chinantec</a>').openPopup();
+                                                let marker_chz = L.marker([17.697640, -96.224890]).addTo(mymap);
+                    marker_chz.bindPopup('<a href="/languages/chz">Ozumacín Chinantec</a>').openPopup();
+                                                let marker_cip = L.marker([16.656200, -91.941740]).addTo(mymap);
+                    marker_cip.bindPopup('<a href="/languages/cip">Chiapanec</a>').openPopup();
+                                                let marker_cle = L.marker([17.316250, -95.926510]).addTo(mymap);
+                    marker_cle.bindPopup('<a href="/languages/cle">Lealao Chinantec</a>').openPopup();
+                                                let marker_clo = L.marker([15.949740, -95.687570]).addTo(mymap);
+                    marker_clo.bindPopup('<a href="/languages/clo">Lowland Oaxaca Chontal</a>').openPopup();
+                                                let marker_cly = L.marker([16.243740, -97.152610]).addTo(mymap);
+                    marker_cly.bindPopup('<a href="/languages/cly">Eastern Highland Chatino</a>').openPopup();
+                                                let marker_cmn = L.marker([40.020884, 116.228026]).addTo(mymap);
+                    marker_cmn.bindPopup('<a href="/languages/cmn">Mandarin Chinese</a>').openPopup();
+                                                let marker_cnl = L.marker([17.582510, -96.006450]).addTo(mymap);
+                    marker_cnl.bindPopup('<a href="/languages/cnl">Lalana Chinantec</a>').openPopup();
+                                                let marker_cnt = L.marker([17.711510, -96.540390]).addTo(mymap);
+                    marker_cnt.bindPopup('<a href="/languages/cnt">Tepetotutla Chinantec</a>').openPopup();
+                                                let marker_cob = L.marker([15.607830, -91.286885]).addTo(mymap);
+                    marker_cob.bindPopup('<a href="/languages/cob">Chicomuceltec</a>').openPopup();
+                                                let marker_coc = L.marker([32.375965, -114.847780]).addTo(mymap);
+                    marker_coc.bindPopup('<a href="/languages/coc">Cocopa</a>').openPopup();
+                                                let marker_coj = L.marker([29.040010, -114.077030]).addTo(mymap);
+                    marker_coj.bindPopup('<a href="/languages/coj">Cochimi</a>').openPopup();
+                                                let marker_cok = L.marker([22.710180, -104.700030]).addTo(mymap);
+                    marker_cok.bindPopup('<a href="/languages/cok">Santa Teresa Cora</a>').openPopup();
+                                                let marker_coz = L.marker([17.666010, -97.238840]).addTo(mymap);
+                    marker_coz.bindPopup('<a href="/languages/coz">Chochotec</a>').openPopup();
+                                                let marker_cpa = L.marker([17.883970, -96.340730]).addTo(mymap);
+                    marker_cpa.bindPopup('<a href="/languages/cpa">Palantla Chinantec</a>').openPopup();
+                                                let marker_crn = L.marker([22.409930, -104.467440]).addTo(mymap);
+                    marker_crn.bindPopup('<a href="/languages/crn">El Nayar Cora</a>').openPopup();
+                                                let marker_csa = L.marker([18.060610, -96.218330]).addTo(mymap);
+                    marker_csa.bindPopup('<a href="/languages/csa">Chiltepec Chinantec</a>').openPopup();
+                                                let marker_cso = L.marker([17.798550, -96.607950]).addTo(mymap);
+                    marker_cso.bindPopup('<a href="/languages/cso">Sochiapam Chinantec</a>').openPopup();
+                                                let marker_cta = L.marker([16.296280, -97.531120]).addTo(mymap);
+                    marker_cta.bindPopup('<a href="/languages/cta">Tataltepec Chatino</a>').openPopup();
+                                                let marker_cte = L.marker([17.665070, -96.143310]).addTo(mymap);
+                    marker_cte.bindPopup('<a href="/languages/cte">Tepinapa Chinantec</a>').openPopup();
+                                                let marker_ctl = L.marker([17.864600, -96.517640]).addTo(mymap);
+                    marker_ctl.bindPopup('<a href="/languages/ctl">Tlacoatzintepec Chinantec</a>').openPopup();
+                                                let marker_ctp = L.marker([16.249500, -97.324360]).addTo(mymap);
+                    marker_ctp.bindPopup('<a href="/languages/ctp">Western Highland Chatino</a>').openPopup();
+                                                let marker_ctu = L.marker([17.489650, -92.469830]).addTo(mymap);
+                    marker_ctu.bindPopup('<a href="/languages/ctu">Chol</a>').openPopup();
+                                                let marker_ctz = L.marker([16.079980, -97.306900]).addTo(mymap);
+                    marker_ctz.bindPopup('<a href="/languages/ctz">Zacatepec Chatino</a>').openPopup();
+                                                let marker_cuc = L.marker([17.918400, -96.407430]).addTo(mymap);
+                    marker_cuc.bindPopup('<a href="/languages/cuc">Usila Chinantec</a>').openPopup();
+                                                let marker_cut = L.marker([17.902860, -96.664520]).addTo(mymap);
+                    marker_cut.bindPopup('<a href="/languages/cut">Teutila Cuicatec</a>').openPopup();
+                                                let marker_cux = L.marker([17.755980, -96.787970]).addTo(mymap);
+                    marker_cux.bindPopup('<a href="/languages/cux">Tepeuxila Cuicatec</a>').openPopup();
+                                                let marker_cvn = L.marker([17.796380, -96.318730]).addTo(mymap);
+                    marker_cvn.bindPopup('<a href="/languages/cvn">Valle Nacional Chinantec</a>').openPopup();
+                                                let marker_cya = L.marker([16.095360, -97.133920]).addTo(mymap);
+                    marker_cya.bindPopup('<a href="/languages/cya">Nopala Chatino</a>').openPopup();
+                                                let marker_czn = L.marker([16.527990, -97.455460]).addTo(mymap);
+                    marker_czn.bindPopup('<a href="/languages/czn">Zenzontepec Chatino</a>').openPopup();
+                                                let marker_deu = L.marker([48.648954, 12.467623]).addTo(mymap);
+                    marker_deu.bindPopup('<a href="/languages/deu">German</a>').openPopup();
+                                                let marker_dih = L.marker([32.515300, -116.609415]).addTo(mymap);
+                    marker_dih.bindPopup('<a href="/languages/dih">Kumiai</a>').openPopup();
+                                                let marker_ell = L.marker([42.322386, 24.869938]).addTo(mymap);
+                    marker_ell.bindPopup('<a href="/languages/ell">Modern Greek (1453-)</a>').openPopup();
+                                                let marker_eng = L.marker([53.000000, -1.000000]).addTo(mymap);
+                    marker_eng.bindPopup('<a href="/languages/eng">English</a>').openPopup();
+                                                let marker_eus = L.marker([43.278720, -1.316220]).addTo(mymap);
+                    marker_eus.bindPopup('<a href="/languages/eus">Basque</a>').openPopup();
+                                                let marker_fra = L.marker([48.000000, 2.000000]).addTo(mymap);
+                    marker_fra.bindPopup('<a href="/languages/fra">French</a>').openPopup();
+                                                let marker_glg = L.marker([42.244575, -7.534295]).addTo(mymap);
+                    marker_glg.bindPopup('<a href="/languages/glg">Galician</a>').openPopup();
+                                                let marker_gsw = L.marker([47.051570, 8.464190]).addTo(mymap);
+                    marker_gsw.bindPopup('<a href="/languages/gsw">Swiss German</a>').openPopup();
+                                                let marker_hat = L.marker([19.000000, -73.330000]).addTo(mymap);
+                    marker_hat.bindPopup('<a href="/languages/hat">Haitian</a>').openPopup();
+                                                let marker_hch = L.marker([21.953990, -104.062280]).addTo(mymap);
+                    marker_hch.bindPopup('<a href="/languages/hch">Huichol</a>').openPopup();
+                                                let marker_hue = L.marker([16.283610, -94.573830]).addTo(mymap);
+                    marker_hue.bindPopup('<a href="/languages/hue">San Francisco Del Mar Huave</a>').openPopup();
+                                                let marker_hus = L.marker([21.615300, -98.502760]).addTo(mymap);
+                    marker_hus.bindPopup('<a href="/languages/hus">Huastec</a>').openPopup();
+                                                let marker_huv = L.marker([16.212950, -95.007660]).addTo(mymap);
+                    marker_huv.bindPopup('<a href="/languages/huv">San Mateo Del Mar Huave</a>').openPopup();
+                                                let marker_hve = L.marker([16.351370, -94.700100]).addTo(mymap);
+                    marker_hve.bindPopup('<a href="/languages/hve">San Dionisio Del Mar Huave</a>').openPopup();
+                                                let marker_hvv = L.marker([16.216690, -94.815860]).addTo(mymap);
+                    marker_hvv.bindPopup('<a href="/languages/hvv">Santa María Del Mar Huave</a>').openPopup();
+                                                let marker_ita = L.marker([43.046411, 12.648925]).addTo(mymap);
+                    marker_ita.bindPopup('<a href="/languages/ita">Italian</a>').openPopup();
+                                                let marker_ixc = L.marker([17.759740, -97.124150]).addTo(mymap);
+                    marker_ixc.bindPopup('<a href="/languages/ixc">Ixcatec</a>').openPopup();
+                                                let marker_ixl = L.marker([15.456930, -90.893510]).addTo(mymap);
+                    marker_ixl.bindPopup('<a href="/languages/ixl">Ixil</a>').openPopup();
+                                                let marker_jac = L.marker([15.660950, -91.663270]).addTo(mymap);
+                    marker_jac.bindPopup('<a href="/languages/jac">Popti&#039;</a>').openPopup();
+                                                let marker_jmx = L.marker([17.300340, -98.209600]).addTo(mymap);
+                    marker_jmx.bindPopup('<a href="/languages/jmx">Western Juxtlahuaca Mixtec</a>').openPopup();
+                                                let marker_jpn = L.marker([35.000000, 135.000000]).addTo(mymap);
+                    marker_jpn.bindPopup('<a href="/languages/jpn">Japanese</a>').openPopup();
+                                                let marker_kek = L.marker([15.378797, -89.245210]).addTo(mymap);
+                    marker_kek.bindPopup('<a href="/languages/kek">Kekchí</a>').openPopup();
+                                                let marker_kic = L.marker([41.655145, -89.030340]).addTo(mymap);
+                    marker_kic.bindPopup('<a href="/languages/kic">Kickapoo</a>').openPopup();
+                                                let marker_kjb = L.marker([15.684550, -91.304300]).addTo(mymap);
+                    marker_kjb.bindPopup('<a href="/languages/kjb">Q&#039;anjob&#039;al</a>').openPopup();
+                                                let marker_klb = L.marker([30.547130, -115.123000]).addTo(mymap);
+                    marker_klb.bindPopup('<a href="/languages/klb">Kiliwa</a>').openPopup();
+                                                let marker_knj = L.marker([15.593205, -91.842115]).addTo(mymap);
+                    marker_knj.bindPopup('<a href="/languages/knj">Western Kanjobal</a>').openPopup();
+                                                let marker_kor = L.marker([37.500000, 128.000000]).addTo(mymap);
+                    marker_kor.bindPopup('<a href="/languages/kor">Korean</a>').openPopup();
+                                                let marker_lac = L.marker([17.020930, -91.423480]).addTo(mymap);
+                    marker_lac.bindPopup('<a href="/languages/lac">Lacandon</a>').openPopup();
+                                                let marker_maa = L.marker([18.199940, -96.883320]).addTo(mymap);
+                    marker_maa.bindPopup('<a href="/languages/maa">San Jerónimo Tecóatl Mazatec</a>').openPopup();
+                                                let marker_mab = L.marker([17.031080, -97.229310]).addTo(mymap);
+                    marker_mab.bindPopup('<a href="/languages/mab">Yutanduchi Mixtec</a>').openPopup();
+                                                let marker_maj = L.marker([18.080340, -96.497690]).addTo(mymap);
+                    marker_maj.bindPopup('<a href="/languages/maj">Jalapa De Díaz Mazatec</a>').openPopup();
+                                                let marker_mam = L.marker([14.803430, -91.723140]).addTo(mymap);
+                    marker_mam.bindPopup('<a href="/languages/mam">Mam</a>').openPopup();
+                                                let marker_maq = L.marker([18.054120, -96.665880]).addTo(mymap);
+                    marker_maq.bindPopup('<a href="/languages/maq">Chiquihuitlán Mazatec</a>').openPopup();
+                                                let marker_mat = L.marker([19.358390, -100.058090]).addTo(mymap);
+                    marker_mat.bindPopup('<a href="/languages/mat">San Francisco Matlatzinca</a>').openPopup();
+                                                let marker_mau = L.marker([18.255580, -96.724030]).addTo(mymap);
+                    marker_mau.bindPopup('<a href="/languages/mau">Huautla Mazatec</a>').openPopup();
+                                                let marker_maz = L.marker([19.735690, -100.018310]).addTo(mymap);
+                    marker_maz.bindPopup('<a href="/languages/maz">Central Mazahua</a>').openPopup();
+                                                let marker_mbz = L.marker([16.652090, -97.451790]).addTo(mymap);
+                    marker_mbz.bindPopup('<a href="/languages/mbz">Amoltepec Mixtec</a>').openPopup();
+                                                let marker_mce = L.marker([16.778760, -97.597530]).addTo(mymap);
+                    marker_mce.bindPopup('<a href="/languages/mce">Itundujia Mixtec</a>').openPopup();
+                                                let marker_mco = L.marker([16.940370, -95.465860]).addTo(mymap);
+                    marker_mco.bindPopup('<a href="/languages/mco">Coatlán Mixe</a>').openPopup();
+                                                let marker_mdv = L.marker([16.996940, -97.627670]).addTo(mymap);
+                    marker_mdv.bindPopup('<a href="/languages/mdv">Santa Lucía Monteverde Mixtec</a>').openPopup();
+                                                let marker_meh = L.marker([16.988740, -97.797440]).addTo(mymap);
+                    marker_meh.bindPopup('<a href="/languages/meh">Southwestern Tlaxiaco Mixtec</a>').openPopup();
+                                                let marker_mfs = L.marker([19.749990, -98.499990]).addTo(mymap);
+                    marker_mfs.bindPopup('<a href="/languages/mfs">Mexican Sign Language</a>').openPopup();
+                                                let marker_mfy = L.marker([26.452180, -108.981060]).addTo(mymap);
+                    marker_mfy.bindPopup('<a href="/languages/mfy">Mayo</a>').openPopup();
+                                                let marker_mhc = L.marker([15.453810, -92.173410]).addTo(mymap);
+                    marker_mhc.bindPopup('<a href="/languages/mhc">Mocho</a>').openPopup();
+                                                let marker_mib = L.marker([17.071330, -97.677530]).addTo(mymap);
+                    marker_mib.bindPopup('<a href="/languages/mib">Atatláhuca Mixtec</a>').openPopup();
+                                                let marker_mie = L.marker([17.182340, -97.751000]).addTo(mymap);
+                    marker_mie.bindPopup('<a href="/languages/mie">Ocotepec Mixtec</a>').openPopup();
+                                                let marker_mig = L.marker([17.077650, -97.543180]).addTo(mymap);
+                    marker_mig.bindPopup('<a href="/languages/mig">San Miguel El Grande Mixtec</a>').openPopup();
+                                                let marker_mih = L.marker([16.315850, -97.811450]).addTo(mymap);
+                    marker_mih.bindPopup('<a href="/languages/mih">Chayuco Mixtec</a>').openPopup();
+                                                let marker_mii = L.marker([18.630300, -98.104590]).addTo(mymap);
+                    marker_mii.bindPopup('<a href="/languages/mii">Chigmecatitlán Mixtec</a>').openPopup();
+                                                let marker_mil = L.marker([17.067130, -97.010130]).addTo(mymap);
+                    marker_mil.bindPopup('<a href="/languages/mil">Peñoles Mixtec</a>').openPopup();
+                                                let marker_mim = L.marker([17.494370, -98.467380]).addTo(mymap);
+                    marker_mim.bindPopup('<a href="/languages/mim">Alacatlatzala Mixtec</a>').openPopup();
+                                                let marker_mio = L.marker([16.304300, -97.996600]).addTo(mymap);
+                    marker_mio.bindPopup('<a href="/languages/mio">Pinotepa Nacional Mixtec</a>').openPopup();
+                                                let marker_mip = L.marker([17.614250, -97.065680]).addTo(mymap);
+                    marker_mip.bindPopup('<a href="/languages/mip">Apasco-Apoala Mixtec</a>').openPopup();
+                                                let marker_mir = L.marker([16.948120, -95.068060]).addTo(mymap);
+                    marker_mir.bindPopup('<a href="/languages/mir">Isthmus Mixe</a>').openPopup();
+                                                let marker_mit = L.marker([18.212290, -97.957220]).addTo(mymap);
+                    marker_mit.bindPopup('<a href="/languages/mit">Southern Puebla Mixtec</a>').openPopup();
+                                                let marker_miu = L.marker([17.724760, -97.763660]).addTo(mymap);
+                    marker_miu.bindPopup('<a href="/languages/miu">Cacaloxtepec Mixtec</a>').openPopup();
+                                                let marker_mix = L.marker([17.331710, -97.879070]).addTo(mymap);
+                    marker_mix.bindPopup('<a href="/languages/mix">Mixtepec Mixtec</a>').openPopup();
+                                                let marker_miy = L.marker([16.883320, -98.991600]).addTo(mymap);
+                    marker_miy.bindPopup('<a href="/languages/miy">Ayutla Mixtec</a>').openPopup();
+                                                let marker_miz = L.marker([18.120870, -96.659070]).addTo(mymap);
+                    marker_miz.bindPopup('<a href="/languages/miz">Coatzospan Mixtec</a>').openPopup();
+                                                let marker_mjc = L.marker([16.396420, -97.927880]).addTo(mymap);
+                    marker_mjc.bindPopup('<a href="/languages/mjc">San Juan Colorado Mixtec</a>').openPopup();
+                                                let marker_mks = L.marker([17.554070, -98.116290]).addTo(mymap);
+                    marker_mks.bindPopup('<a href="/languages/mks">Silacayoapan Mixtec</a>').openPopup();
+                                                let marker_mmc = L.marker([19.723870, -100.293390]).addTo(mymap);
+                    marker_mmc.bindPopup('<a href="/languages/mmc">Michoacán Mazahua</a>').openPopup();
+                                                let marker_mpm = L.marker([16.904240, -97.501790]).addTo(mymap);
+                    marker_mpm.bindPopup('<a href="/languages/mpm">Yosondúa Mixtec</a>').openPopup();
+                                                let marker_mqh = L.marker([17.006960, -96.978270]).addTo(mymap);
+                    marker_mqh.bindPopup('<a href="/languages/mqh">Tlazoyaltepec Mixtec</a>').openPopup();
+                                                let marker_msd = L.marker([20.499990, -88.999990]).addTo(mymap);
+                    marker_msd.bindPopup('<a href="/languages/msd">Yucatec Maya Sign Language</a>').openPopup();
+                                                let marker_mto = L.marker([17.215650, -96.017900]).addTo(mymap);
+                    marker_mto.bindPopup('<a href="/languages/mto">Totontepec Mixe</a>').openPopup();
+                                                let marker_mtu = L.marker([16.153990, -97.559690]).addTo(mymap);
+                    marker_mtu.bindPopup('<a href="/languages/mtu">Tututepec Mixtec</a>').openPopup();
+                                                let marker_mtx = L.marker([17.414160, -97.333280]).addTo(mymap);
+                    marker_mtx.bindPopup('<a href="/languages/mtx">Tidaá Mixtec</a>').openPopup();
+                                                let marker_mvg = L.marker([17.283190, -97.428450]).addTo(mymap);
+                    marker_mvg.bindPopup('<a href="/languages/mvg">Yucuañe Mixtec</a>').openPopup();
+                                                let marker_mxa = L.marker([17.828710, -98.057430]).addTo(mymap);
+                    marker_mxa.bindPopup('<a href="/languages/mxa">Northwest Oaxaca Mixtec</a>').openPopup();
+                                                let marker_mxb = L.marker([17.615520, -97.900170]).addTo(mymap);
+                    marker_mxb.bindPopup('<a href="/languages/mxb">Tezoatlán Mixtec</a>').openPopup();
+                                                let marker_mxp = L.marker([16.963350, -96.118570]).addTo(mymap);
+                    marker_mxp.bindPopup('<a href="/languages/mxp">Tlahuitoltepec Mixe</a>').openPopup();
+                                                let marker_mxq = L.marker([16.891230, -95.848410]).addTo(mymap);
+                    marker_mxq.bindPopup('<a href="/languages/mxq">Juquila Mixe</a>').openPopup();
+                                                let marker_mxs = L.marker([16.947580, -97.123650]).addTo(mymap);
+                    marker_mxs.bindPopup('<a href="/languages/mxs">Huitepec Mixtec</a>').openPopup();
+                                                let marker_mxt = L.marker([16.227940, -97.841670]).addTo(mymap);
+                    marker_mxt.bindPopup('<a href="/languages/mxt">Jamiltepec Mixtec</a>').openPopup();
+                                                let marker_mxv = L.marker([17.047960, -98.351380]).addTo(mymap);
+                    marker_mxv.bindPopup('<a href="/languages/mxv">Metlatónoc Mixtec</a>').openPopup();
+                                                let marker_mxy = L.marker([17.212190, -97.014540]).addTo(mymap);
+                    marker_mxy.bindPopup('<a href="/languages/mxy">Southeastern Nochixtlán Mixtec</a>').openPopup();
+                                                let marker_mza = L.marker([16.700250, -97.948390]).addTo(mymap);
+                    marker_mza.bindPopup('<a href="/languages/mza">Santa María Zacatepec Mixtec</a>').openPopup();
+                                                let marker_mzi = L.marker([18.153080, -96.571860]).addTo(mymap);
+                    marker_mzi.bindPopup('<a href="/languages/mzi">Ixcatlán Mazatec</a>').openPopup();
+                                                let marker_mzl = L.marker([17.015640, -95.283290]).addTo(mymap);
+                    marker_mzl.bindPopup('<a href="/languages/mzl">Mazatlán Mixe</a>').openPopup();
+                                                let marker_naz = L.marker([18.319990, -99.711430]).addTo(mymap);
+                    marker_naz.bindPopup('<a href="/languages/naz">Coatepec Nahuatl</a>').openPopup();
+                                                let marker_nch = L.marker([21.096260, -98.435610]).addTo(mymap);
+                    marker_nch.bindPopup('<a href="/languages/nch">Central Huasteca Nahuatl</a>').openPopup();
+                                                let marker_nci = L.marker([19.720000, -96.970000]).addTo(mymap);
+                    marker_nci.bindPopup('<a href="/languages/nci">Classical Nahuatl</a>').openPopup();
+                                                let marker_ncj = L.marker([20.135600, -97.981410]).addTo(mymap);
+                    marker_ncj.bindPopup('<a href="/languages/ncj">Northern Puebla Nahuatl</a>').openPopup();
+                                                let marker_ncl = L.marker([18.341190, -103.361180]).addTo(mymap);
+                    marker_ncl.bindPopup('<a href="/languages/ncl">Michoacán Nahuatl</a>').openPopup();
+                                                let marker_ncx = L.marker([18.754530, -98.126350]).addTo(mymap);
+                    marker_ncx.bindPopup('<a href="/languages/ncx">Central Puebla Nahuatl</a>').openPopup();
+                                                let marker_neq = L.marker([17.179470, -95.703180]).addTo(mymap);
+                    marker_neq.bindPopup('<a href="/languages/neq">North Central Mixe</a>').openPopup();
+                                                let marker_ngu = L.marker([17.858280, -99.002330]).addTo(mymap);
+                    marker_ngu.bindPopup('<a href="/languages/ngu">Guerrero Nahuatl</a>').openPopup();
+                                                let marker_nhc = L.marker([17.937150, -93.568830]).addTo(mymap);
+                    marker_nhc.bindPopup('<a href="/languages/nhc">Tabasco Nahuatl</a>').openPopup();
+                                                let marker_nhe = L.marker([21.063920, -97.907680]).addTo(mymap);
+                    marker_nhe.bindPopup('<a href="/languages/nhe">Eastern Huasteca Nahuatl</a>').openPopup();
+                                                let marker_nhg = L.marker([18.885390, -98.893010]).addTo(mymap);
+                    marker_nhg.bindPopup('<a href="/languages/nhg">Tetelcingo Nahuatl</a>').openPopup();
+                                                let marker_nhi = L.marker([20.058070, -97.897420]).addTo(mymap);
+                    marker_nhi.bindPopup('<a href="/languages/nhi">Zacatlán-Ahuacatlán-Tepetzintla Nahuatl</a>').openPopup();
+                                                let marker_nhk = L.marker([17.940050, -94.734660]).addTo(mymap);
+                    marker_nhk.bindPopup('<a href="/languages/nhk">Isthmus-Cosoleacaque Nahuatl</a>').openPopup();
+                                                let marker_nhm = L.marker([18.916140, -99.132190]).addTo(mymap);
+                    marker_nhm.bindPopup('<a href="/languages/nhm">Morelos Nahuatl</a>').openPopup();
+                                                let marker_nhn = L.marker([19.124850, -98.300170]).addTo(mymap);
+                    marker_nhn.bindPopup('<a href="/languages/nhn">Central Nahuatl</a>').openPopup();
+                                                let marker_nhp = L.marker([18.251320, -94.664700]).addTo(mymap);
+                    marker_nhp.bindPopup('<a href="/languages/nhp">Isthmus-Pajapan Nahuatl</a>').openPopup();
+                                                let marker_nhq = L.marker([18.898940, -96.953740]).addTo(mymap);
+                    marker_nhq.bindPopup('<a href="/languages/nhq">Huaxcaleca Nahuatl</a>').openPopup();
+                                                let marker_nht = L.marker([16.778570, -98.427040]).addTo(mymap);
+                    marker_nht.bindPopup('<a href="/languages/nht">Ometepec Nahuatl</a>').openPopup();
+                                                let marker_nhv = L.marker([19.328230, -99.796770]).addTo(mymap);
+                    marker_nhv.bindPopup('<a href="/languages/nhv">Temascaltepec Nahuatl</a>').openPopup();
+                                                let marker_nhw = L.marker([21.371100, -98.771140]).addTo(mymap);
+                    marker_nhw.bindPopup('<a href="/languages/nhw">Western Huasteca Nahuatl</a>').openPopup();
+                                                let marker_nhx = L.marker([18.200000, -94.754720]).addTo(mymap);
+                    marker_nhx.bindPopup('<a href="/languages/nhx">Isthmus-Mecayapan Nahuatl</a>').openPopup();
+                                                let marker_nhy = L.marker([18.188430, -96.974830]).addTo(mymap);
+                    marker_nhy.bindPopup('<a href="/languages/nhy">Northern Oaxaca Nahuatl</a>').openPopup();
+                                                let marker_nhz = L.marker([18.628600, -97.700910]).addTo(mymap);
+                    marker_nhz.bindPopup('<a href="/languages/nhz">Santa María La Alta Nahuatl</a>').openPopup();
+                                                let marker_nlv = L.marker([18.639950, -96.976480]).addTo(mymap);
+                    marker_nlv.bindPopup('<a href="/languages/nlv">Orizaba Nahuatl</a>').openPopup();
+                                                let marker_npl = L.marker([18.396880, -97.126550]).addTo(mymap);
+                    marker_npl.bindPopup('<a href="/languages/npl">Southeastern Puebla Nahuatl</a>').openPopup();
+                                                let marker_nsu = L.marker([18.396880, -97.126550]).addTo(mymap);
+                    marker_nsu.bindPopup('<a href="/languages/nsu">Sierra Negra Nahuatl</a>').openPopup();
+                                                let marker_ntp = L.marker([26.434760, -107.379320]).addTo(mymap);
+                    marker_ntp.bindPopup('<a href="/languages/ntp">Northern Tepehuan</a>').openPopup();
+                                                let marker_nuz = L.marker([18.623920, -99.399220]).addTo(mymap);
+                    marker_nuz.bindPopup('<a href="/languages/nuz">Tlamacazapa Nahuatl</a>').openPopup();
+                                                let marker_ocu = L.marker([19.387150, -99.923880]).addTo(mymap);
+                    marker_ocu.bindPopup('<a href="/languages/ocu">Atzingo Matlatzinca</a>').openPopup();
+                                                let marker_ood = L.marker([31.797250, -111.994865]).addTo(mymap);
+                    marker_ood.bindPopup('<a href="/languages/ood">Tohono O&#039;odham</a>').openPopup();
+                                                let marker_opt = L.marker([31.152110, -110.062120]).addTo(mymap);
+                    marker_opt.bindPopup('<a href="/languages/opt">Opata</a>').openPopup();
+                                                let marker_ote = L.marker([20.227450, -99.556420]).addTo(mymap);
+                    marker_ote.bindPopup('<a href="/languages/ote">Mezquital Otomi</a>').openPopup();
+                                                let marker_otl = L.marker([19.440260, -99.507400]).addTo(mymap);
+                    marker_otl.bindPopup('<a href="/languages/otl">Tilapa Otomi</a>').openPopup();
+                                                let marker_otm = L.marker([20.599060, -98.097830]).addTo(mymap);
+                    marker_otm.bindPopup('<a href="/languages/otm">Eastern Highland Otomi</a>').openPopup();
+                                                let marker_otn = L.marker([20.426230, -98.175090]).addTo(mymap);
+                    marker_otn.bindPopup('<a href="/languages/otn">Tenango Otomi</a>').openPopup();
+                                                let marker_otq = L.marker([20.139590, -100.114870]).addTo(mymap);
+                    marker_otq.bindPopup('<a href="/languages/otq">Querétaro Otomi</a>').openPopup();
+                                                let marker_ots = L.marker([19.878090, -99.609970]).addTo(mymap);
+                    marker_ots.bindPopup('<a href="/languages/ots">Estado de México Otomi</a>').openPopup();
+                                                let marker_ott = L.marker([19.600100, -99.654090]).addTo(mymap);
+                    marker_ott.bindPopup('<a href="/languages/ott">Temoaya Otomi</a>').openPopup();
+                                                let marker_otx = L.marker([20.734200, -98.266310]).addTo(mymap);
+                    marker_otx.bindPopup('<a href="/languages/otx">Texcatepec Otomi</a>').openPopup();
+                                                let marker_otz = L.marker([19.214650, -98.027180]).addTo(mymap);
+                    marker_otz.bindPopup('<a href="/languages/otz">Ixtenco Otomi</a>').openPopup();
+                                                let marker_pbe = L.marker([18.144160, -97.587920]).addTo(mymap);
+                    marker_pbe.bindPopup('<a href="/languages/pbe">Mezontla Popoloca</a>').openPopup();
+                                                let marker_pbf = L.marker([18.381390, -97.625840]).addTo(mymap);
+                    marker_pbf.bindPopup('<a href="/languages/pbf">Coyotepec Popoloca</a>').openPopup();
+                                                                    let marker_pbs = L.marker([21.376220, -99.289790]).addTo(mymap);
+                    marker_pbs.bindPopup('<a href="/languages/pbs">Central Pame</a>').openPopup();
+                                                let marker_pca = L.marker([18.386470, -97.859910]).addTo(mymap);
+                    marker_pca.bindPopup('<a href="/languages/pca">Santa Inés Ahuatempan Popoloca</a>').openPopup();
+                                                let marker_pdt = L.marker([12.046615, -81.352470]).addTo(mymap);
+                    marker_pdt.bindPopup('<a href="/languages/pdt">Plautdietsch</a>').openPopup();
+                                                let marker_pei = L.marker([21.294340, -100.524270]).addTo(mymap);
+                    marker_pei.bindPopup('<a href="/languages/pei">Chichimeca-Jonaz</a>').openPopup();
+                                                let marker_pia = L.marker([28.654010, -108.326330]).addTo(mymap);
+                    marker_pia.bindPopup('<a href="/languages/pia">Pima Bajo</a>').openPopup();
+                                                let marker_plo = L.marker([17.893740, -94.886340]).addTo(mymap);
+                    marker_plo.bindPopup('<a href="/languages/plo">Oluta Popoluca</a>').openPopup();
+                                                let marker_pls = L.marker([18.740000, -97.593580]).addTo(mymap);
+                    marker_pls.bindPopup('<a href="/languages/pls">San Marcos Tlacoyalco Popoloca</a>').openPopup();
+                                                let marker_pmq = L.marker([22.096830, -99.643420]).addTo(mymap);
+                    marker_pmq.bindPopup('<a href="/languages/pmq">Northern Pame</a>').openPopup();
+                                                let marker_pmz = L.marker([20.966000, -99.334000]).addTo(mymap);
+                    marker_pmz.bindPopup('<a href="/languages/pmz">Southern Pame</a>').openPopup();
+                                                let marker_poe = L.marker([18.222450, -97.379230]).addTo(mymap);
+                    marker_poe.bindPopup('<a href="/languages/poe">San Juan Atzingo Popoloca</a>').openPopup();
+                                                let marker_poi = L.marker([18.198040, -94.910880]).addTo(mymap);
+                    marker_poi.bindPopup('<a href="/languages/poi">Highland Popoluca</a>').openPopup();
+                                                let marker_poq = L.marker([17.892570, -94.807650]).addTo(mymap);
+                    marker_poq.bindPopup('<a href="/languages/poq">Texistepec Popoluca</a>').openPopup();
+                                                let marker_por = L.marker([42.034120, -4.188150]).addTo(mymap);
+                    marker_por.bindPopup('<a href="/languages/por">Portuguese</a>').openPopup();
+                                                let marker_pos = L.marker([17.860560, -94.953080]).addTo(mymap);
+                    marker_pos.bindPopup('<a href="/languages/pos">Sayula Popoluca</a>').openPopup();
+                                                let marker_pow = L.marker([18.359360, -97.743220]).addTo(mymap);
+                    marker_pow.bindPopup('<a href="/languages/pow">San Felipe Otlaltepec Popoloca</a>').openPopup();
+                                                let marker_ppi = L.marker([31.606250, -115.870530]).addTo(mymap);
+                    marker_ppi.bindPopup('<a href="/languages/ppi">Paipai</a>').openPopup();
+                                                let marker_pps = L.marker([18.681150, -97.545920]).addTo(mymap);
+                    marker_pps.bindPopup('<a href="/languages/pps">San Luís Temalacayuca Popoloca</a>').openPopup();
+                                                let marker_pua = L.marker([19.539240, -102.154000]).addTo(mymap);
+                    marker_pua.bindPopup('<a href="/languages/pua">Western Highland Purepecha</a>').openPopup();
+                                                let marker_pxm = L.marker([16.921470, -95.672690]).addTo(mymap);
+                    marker_pxm.bindPopup('<a href="/languages/pxm">Quetzaltepec Mixe</a>').openPopup();
+                                                let marker_quc = L.marker([14.527770, -91.169650]).addTo(mymap);
+                    marker_quc.bindPopup('<a href="/languages/quc">K&#039;iche&#039;</a>').openPopup();
+                                                                    let marker_rmy = L.marker([46.819124, 14.845093]).addTo(mymap);
+                    marker_rmy.bindPopup('<a href="/languages/rmy">Vlax Romani</a>').openPopup();
+                                                let marker_rus = L.marker([53.919516, 72.392575]).addTo(mymap);
+                    marker_rus.bindPopup('<a href="/languages/rus">Russian</a>').openPopup();
+                                                let marker_sei = L.marker([28.987670, -112.383660]).addTo(mymap);
+                    marker_sei.bindPopup('<a href="/languages/sei">Seri</a>').openPopup();
+                                                let marker_spa = L.marker([40.441418, -1.117880]).addTo(mymap);
+                    marker_spa.bindPopup('<a href="/languages/spa">Spanish</a>').openPopup();
+                                                let marker_stp = L.marker([23.158440, -103.983220]).addTo(mymap);
+                    marker_stp.bindPopup('<a href="/languages/stp">Southeastern Tepehuan</a>').openPopup();
+                                                let marker_tac = L.marker([27.462290, -107.854280]).addTo(mymap);
+                    marker_tac.bindPopup('<a href="/languages/tac">Lowland Tarahumara</a>').openPopup();
+                                                let marker_tar = L.marker([27.564780, -107.153560]).addTo(mymap);
+                    marker_tar.bindPopup('<a href="/languages/tar">Central Tarahumara</a>').openPopup();
+                                                let marker_tbu = L.marker([29.999990, -110.999990]).addTo(mymap);
+                    marker_tbu.bindPopup('<a href="/languages/tbu">Tubar</a>').openPopup();
+                                                let marker_tcf = L.marker([17.212230, -98.632210]).addTo(mymap);
+                    marker_tcf.bindPopup('<a href="/languages/tcf">Malinaltepec Me&#039;phaa</a>').openPopup();
+                                                let marker_tcu = L.marker([26.728240, -106.706160]).addTo(mymap);
+                    marker_tcu.bindPopup('<a href="/languages/tcu">Southeastern Tarahumara</a>').openPopup();
+                                                let marker_tcw = L.marker([20.295700, -97.843580]).addTo(mymap);
+                    marker_tcw.bindPopup('<a href="/languages/tcw">Tecpatlán Totonac</a>').openPopup();
+                                                let marker_tee = L.marker([20.618880, -97.934720]).addTo(mymap);
+                    marker_tee.bindPopup('<a href="/languages/tee">Huehuetla Tepehua</a>').openPopup();
+                                                let marker_tep = L.marker([19.234300, -101.728870]).addTo(mymap);
+                    marker_tep.bindPopup('<a href="/languages/tep">Tepecano</a>').openPopup();
+                                                let marker_thh = L.marker([28.607670, -107.657880]).addTo(mymap);
+                    marker_thh.bindPopup('<a href="/languages/thh">Northern Tarahumara</a>').openPopup();
+                                                let marker_tku = L.marker([20.295700, -97.843580]).addTo(mymap);
+                    marker_tku.bindPopup('<a href="/languages/tku">Upper Necaxa Totonac</a>').openPopup();
+                                                let marker_tla = L.marker([23.255340, -104.688470]).addTo(mymap);
+                    marker_tla.bindPopup('<a href="/languages/tla">Southwestern Tepehuan</a>').openPopup();
+                                                let marker_tlc = L.marker([20.176500, -96.874080]).addTo(mymap);
+                    marker_tlc.bindPopup('<a href="/languages/tlc">Yecuatla Totonac</a>').openPopup();
+                                                let marker_tlp = L.marker([20.141520, -97.593120]).addTo(mymap);
+                    marker_tlp.bindPopup('<a href="/languages/tlp">Filomena Mata-Coahuitlán Totonac</a>').openPopup();
+                                                let marker_toc = L.marker([20.544670, -97.685150]).addTo(mymap);
+                    marker_toc.bindPopup('<a href="/languages/toc">Coyutla Totonac</a>').openPopup();
+                                                let marker_toj = L.marker([16.257150, -91.782480]).addTo(mymap);
+                    marker_toj.bindPopup('<a href="/languages/toj">Tojolabal</a>').openPopup();
+                                                let marker_too = L.marker([20.653210, -97.746300]).addTo(mymap);
+                    marker_too.bindPopup('<a href="/languages/too">Xicotepec De Juárez Totonac</a>').openPopup();
+                                                let marker_top = L.marker([20.567090, -97.255390]).addTo(mymap);
+                    marker_top.bindPopup('<a href="/languages/top">Papantla Totonac</a>').openPopup();
+                                                let marker_tos = L.marker([20.379790, -97.615890]).addTo(mymap);
+                    marker_tos.bindPopup('<a href="/languages/tos">Highland Totonac</a>').openPopup();
+                                                let marker_tpc = L.marker([16.758450, -98.524130]).addTo(mymap);
+                    marker_tpc.bindPopup('<a href="/languages/tpc">Azoyú Me&#039;phaa</a>').openPopup();
+                                                let marker_tpl = L.marker([17.326160, -98.801290]).addTo(mymap);
+                    marker_tpl.bindPopup('<a href="/languages/tpl">Tlacoapa Me&#039;phaa</a>').openPopup();
+                                                let marker_tpp = L.marker([20.703920, -98.030530]).addTo(mymap);
+                    marker_tpp.bindPopup('<a href="/languages/tpp">Pisaflores Tepehua</a>').openPopup();
+                                                let marker_tpt = L.marker([20.704020, -98.194680]).addTo(mymap);
+                    marker_tpt.bindPopup('<a href="/languages/tpt">Tlachichilco Tepehua</a>').openPopup();
+                                                let marker_tpx = L.marker([17.103380, -99.060220]).addTo(mymap);
+                    marker_tpx.bindPopup('<a href="/languages/tpx">Acatepec Me&#039;phaa</a>').openPopup();
+                                                let marker_tqt = L.marker([20.457440, -97.948570]).addTo(mymap);
+                    marker_tqt.bindPopup('<a href="/languages/tqt">Western Totonac</a>').openPopup();
+                                                let marker_trc = L.marker([17.154140, -97.982620]).addTo(mymap);
+                    marker_trc.bindPopup('<a href="/languages/trc">Copala Triqui</a>').openPopup();
+                                                let marker_trq = L.marker([17.242840, -97.920190]).addTo(mymap);
+                    marker_trq.bindPopup('<a href="/languages/trq">San Martín Itunyoso Triqui</a>').openPopup();
+                                                let marker_trs = L.marker([17.162780, -97.854710]).addTo(mymap);
+                    marker_trs.bindPopup('<a href="/languages/trs">Chicahuaxtla Triqui</a>').openPopup();
+                                                let marker_tsz = L.marker([19.246650, -101.631400]).addTo(mymap);
+                    marker_tsz.bindPopup('<a href="/languages/tsz">Purepecha</a>').openPopup();
+                                                let marker_ttc = L.marker([15.459910, -92.113570]).addTo(mymap);
+                    marker_ttc.bindPopup('<a href="/languages/ttc">Tektiteko</a>').openPopup();
+                                                let marker_twr = L.marker([27.031370, -107.578150]).addTo(mymap);
+                    marker_twr.bindPopup('<a href="/languages/twr">Southwestern Tarahumara</a>').openPopup();
+                                                let marker_tzh = L.marker([16.638410, -92.278610]).addTo(mymap);
+                    marker_tzh.bindPopup('<a href="/languages/tzh">Tzeltal</a>').openPopup();
+                                                let marker_tzo = L.marker([16.636230, -92.738810]).addTo(mymap);
+                    marker_tzo.bindPopup('<a href="/languages/tzo">Tzotzil</a>').openPopup();
+                                                let marker_var = L.marker([27.868540, -108.437240]).addTo(mymap);
+                    marker_var.bindPopup('<a href="/languages/var">Huarijio</a>').openPopup();
+                                                let marker_vec = L.marker([45.409850, 13.034455]).addTo(mymap);
+                    marker_vec.bindPopup('<a href="/languages/vec">Venetian</a>').openPopup();
+                                                let marker_vmc = L.marker([17.351800, -98.014630]).addTo(mymap);
+                    marker_vmc.bindPopup('<a href="/languages/vmc">Juxtlahuaca Mixtec</a>').openPopup();
+                                                let marker_vmj = L.marker([16.577380, -97.575910]).addTo(mymap);
+                    marker_vmj.bindPopup('<a href="/languages/vmj">Ixtayutla Mixtec</a>').openPopup();
+                                                let marker_vmm = L.marker([17.160020, -97.175730]).addTo(mymap);
+                    marker_vmm.bindPopup('<a href="/languages/vmm">Mitlatongo Mixtec</a>').openPopup();
+                                                let marker_vmp = L.marker([18.286750, -96.494560]).addTo(mymap);
+                    marker_vmp.bindPopup('<a href="/languages/vmp">Soyaltepec Mazatec</a>').openPopup();
+                                                let marker_vmq = L.marker([17.556050, -97.192110]).addTo(mymap);
+                    marker_vmq.bindPopup('<a href="/languages/vmq">Soyaltepec Mixtec</a>').openPopup();
+                                                let marker_vmx = L.marker([17.125770, -97.099830]).addTo(mymap);
+                    marker_vmx.bindPopup('<a href="/languages/vmx">Tamazola Mixtec</a>').openPopup();
+                                                let marker_vmy = L.marker([18.099300, -96.595160]).addTo(mymap);
+                    marker_vmy.bindPopup('<a href="/languages/vmy">Ayautla Mazatec</a>').openPopup();
+                                                let marker_vmz = L.marker([18.082890, -96.888920]).addTo(mymap);
+                    marker_vmz.bindPopup('<a href="/languages/vmz">Mazatlán Mazatec</a>').openPopup();
+                                                let marker_xta = L.marker([17.368710, -98.396880]).addTo(mymap);
+                    marker_xta.bindPopup('<a href="/languages/xta">Alcozauca Mixtec</a>').openPopup();
+                                                let marker_xtb = L.marker([18.154120, -97.787330]).addTo(mymap);
+                    marker_xtb.bindPopup('<a href="/languages/xtb">Chazumba Mixtec</a>').openPopup();
+                                                let marker_xtd = L.marker([17.359590, -97.386150]).addTo(mymap);
+                    marker_xtd.bindPopup('<a href="/languages/xtd">Diuxi-Tilantongo Mixtec</a>').openPopup();
+                                                let marker_xti = L.marker([17.221850, -97.590430]).addTo(mymap);
+                    marker_xti.bindPopup('<a href="/languages/xti">Sinicahua Mixtec</a>').openPopup();
+                                                let marker_xtj = L.marker([17.154170, -97.389890]).addTo(mymap);
+                    marker_xtj.bindPopup('<a href="/languages/xtj">San Juan Teita Mixtec</a>').openPopup();
+                                                let marker_xtl = L.marker([17.153860, -97.457780]).addTo(mymap);
+                    marker_xtl.bindPopup('<a href="/languages/xtl">Tijaltepec Mixtec</a>').openPopup();
+                                                let marker_xtm = L.marker([17.283740, -97.541330]).addTo(mymap);
+                    marker_xtm.bindPopup('<a href="/languages/xtm">Magdalena Peñasco Mixtec</a>').openPopup();
+                                                let marker_xtn = L.marker([17.480580, -97.834900]).addTo(mymap);
+                    marker_xtn.bindPopup('<a href="/languages/xtn">Northern Tlaxiaco Mixtec</a>').openPopup();
+                                                let marker_xtp = L.marker([16.994380, -97.205610]).addTo(mymap);
+                    marker_xtp.bindPopup('<a href="/languages/xtp">San Miguel Piedras Mixtec</a>').openPopup();
+                                                let marker_xts = L.marker([17.019960, -97.303650]).addTo(mymap);
+                    marker_xts.bindPopup('<a href="/languages/xts">Sindihui Mixtec</a>').openPopup();
+                                                let marker_xtt = L.marker([16.964820, -97.453670]).addTo(mymap);
+                    marker_xtt.bindPopup('<a href="/languages/xtt">Tacahua Mixtec</a>').openPopup();
+                                                let marker_xtu = L.marker([18.082140, -96.731350]).addTo(mymap);
+                    marker_xtu.bindPopup('<a href="/languages/xtu">Cuyamecalco Mixtec</a>').openPopup();
+                                                let marker_xty = L.marker([16.805880, -98.629280]).addTo(mymap);
+                    marker_xty.bindPopup('<a href="/languages/xty">Yoloxochitl Mixtec</a>').openPopup();
+                                                let marker_yaq = L.marker([29.944630, -110.680990]).addTo(mymap);
+                    marker_yaq.bindPopup('<a href="/languages/yaq">Yaqui</a>').openPopup();
+                                                let marker_yua = L.marker([18.775675, -88.956730]).addTo(mymap);
+                    marker_yua.bindPopup('<a href="/languages/yua">Yucateco</a>').openPopup();
+                                                let marker_yue = L.marker([23.000000, 113.000000]).addTo(mymap);
+                    marker_yue.bindPopup('<a href="/languages/yue">Yue Chinese</a>').openPopup();
+                                                let marker_zaa = L.marker([17.421900, -96.619120]).addTo(mymap);
+                    marker_zaa.bindPopup('<a href="/languages/zaa">Sierra de Juárez Zapotec</a>').openPopup();
+                                                let marker_zab = L.marker([17.033170, -96.596750]).addTo(mymap);
+                    marker_zab.bindPopup('<a href="/languages/zab">Western Tlacolula Valley Zapotec</a>').openPopup();
+                                                let marker_zac = L.marker([16.825850, -96.726330]).addTo(mymap);
+                    marker_zac.bindPopup('<a href="/languages/zac">Ocotlán Zapotec</a>').openPopup();
+                                                let marker_zad = L.marker([17.142740, -96.335210]).addTo(mymap);
+                    marker_zad.bindPopup('<a href="/languages/zad">Cajonos Zapotec</a>').openPopup();
+                                                let marker_zae = L.marker([17.340640, -96.705200]).addTo(mymap);
+                    marker_zae.bindPopup('<a href="/languages/zae">Yareni Zapotec</a>').openPopup();
+                                                let marker_zaf = L.marker([16.663280, -96.857540]).addTo(mymap);
+                    marker_zaf.bindPopup('<a href="/languages/zaf">Ayoquesco Zapotec</a>').openPopup();
+                                                let marker_zai = L.marker([16.454790, -94.844380]).addTo(mymap);
+                    marker_zai.bindPopup('<a href="/languages/zai">Isthmus Zapotec</a>').openPopup();
+                                                let marker_zam = L.marker([16.219650, -96.664670]).addTo(mymap);
+                    marker_zam.bindPopup('<a href="/languages/zam">Miahuatlán Zapotec</a>').openPopup();
+                                                let marker_zao = L.marker([16.040000, -96.368630]).addTo(mymap);
+                    marker_zao.bindPopup('<a href="/languages/zao">Ozolotepec Zapotec</a>').openPopup();
+                                                                    let marker_zaq = L.marker([17.413750, -96.743810]).addTo(mymap);
+                    marker_zaq.bindPopup('<a href="/languages/zaq">Aloápam Zapotec</a>').openPopup();
+                                                let marker_zar = L.marker([17.445100, -96.314410]).addTo(mymap);
+                    marker_zar.bindPopup('<a href="/languages/zar">Rincón Zapotec</a>').openPopup();
+                                                let marker_zas = L.marker([17.034520, -96.281040]).addTo(mymap);
+                    marker_zas.bindPopup('<a href="/languages/zas">Santo Domingo Albarradas Zapotec</a>').openPopup();
+                                                let marker_zat = L.marker([17.282150, -96.277700]).addTo(mymap);
+                    marker_zat.bindPopup('<a href="/languages/zat">Tabaa Zapotec</a>').openPopup();
+                                                let marker_zav = L.marker([17.186900, -96.283980]).addTo(mymap);
+                    marker_zav.bindPopup('<a href="/languages/zav">Yatzachi Zapotec</a>').openPopup();
+                                                let marker_zaw = L.marker([16.868490, -96.294340]).addTo(mymap);
+                    marker_zaw.bindPopup('<a href="/languages/zaw">Mitla Zapotec</a>').openPopup();
+                                                let marker_zax = L.marker([15.882190, -96.031800]).addTo(mymap);
+                    marker_zax.bindPopup('<a href="/languages/zax">Xadani Zapotec</a>').openPopup();
+                                                let marker_zca = L.marker([16.560880, -96.733630]).addTo(mymap);
+                    marker_zca.bindPopup('<a href="/languages/zca">Coatecas Altas Zapotec</a>').openPopup();
+                                                let marker_zoc = L.marker([17.215750, -93.318250]).addTo(mymap);
+                    marker_zoc.bindPopup('<a href="/languages/zoc">Copainalá Zoque</a>').openPopup();
+                                                let marker_zoh = L.marker([16.654280, -94.691250]).addTo(mymap);
+                    marker_zoh.bindPopup('<a href="/languages/zoh">Chimalapa Zoque</a>').openPopup();
+                                                let marker_zoo = L.marker([16.876200, -96.870400]).addTo(mymap);
+                    marker_zoo.bindPopup('<a href="/languages/zoo">Asunción Mixtepec Zapotec</a>').openPopup();
+                                                let marker_zoq = L.marker([18.171290, -93.096790]).addTo(mymap);
+                    marker_zoq.bindPopup('<a href="/languages/zoq">Tabasco Zoque</a>').openPopup();
+                                                let marker_zor = L.marker([17.295330, -93.100610]).addTo(mymap);
+                    marker_zor.bindPopup('<a href="/languages/zor">Rayón Zoque</a>').openPopup();
+                                                let marker_zos = L.marker([17.365360, -93.363260]).addTo(mymap);
+                    marker_zos.bindPopup('<a href="/languages/zos">Francisco León Zoque</a>').openPopup();
+                                                let marker_zpa = L.marker([16.577180, -95.536730]).addTo(mymap);
+                    marker_zpa.bindPopup('<a href="/languages/zpa">Lachiguiri Zapotec</a>').openPopup();
+                                                let marker_zpb = L.marker([16.441470, -95.928250]).addTo(mymap);
+                    marker_zpb.bindPopup('<a href="/languages/zpb">Yautepec Zapotec</a>').openPopup();
+                                                let marker_zpc = L.marker([17.437100, -95.865620]).addTo(mymap);
+                    marker_zpc.bindPopup('<a href="/languages/zpc">Choapan Zapotec</a>').openPopup();
+                                                let marker_zpd = L.marker([17.258830, -96.619910]).addTo(mymap);
+                    marker_zpd.bindPopup('<a href="/languages/zpd">Southeastern Ixtlán Zapotec</a>').openPopup();
+                                                let marker_zpe = L.marker([16.802260, -95.111780]).addTo(mymap);
+                    marker_zpe.bindPopup('<a href="/languages/zpe">Petapa Zapotec</a>').openPopup();
+                                                let marker_zpf = L.marker([16.760780, -96.089900]).addTo(mymap);
+                    marker_zpf.bindPopup('<a href="/languages/zpf">San Pedro Quiatoni Zapotec</a>').openPopup();
+                                                let marker_zpg = L.marker([16.731180, -95.364080]).addTo(mymap);
+                    marker_zpg.bindPopup('<a href="/languages/zpg">Guevea De Humboldt Zapotec</a>').openPopup();
+                                                let marker_zph = L.marker([16.855370, -97.082350]).addTo(mymap);
+                    marker_zph.bindPopup('<a href="/languages/zph">Totomachapan Zapotec</a>').openPopup();
+                                                let marker_zpi = L.marker([16.033020, -96.048570]).addTo(mymap);
+                    marker_zpi.bindPopup('<a href="/languages/zpi">Santa María Quiegolani Zapotec</a>').openPopup();
+                                                let marker_zpj = L.marker([16.756490, -95.676110]).addTo(mymap);
+                    marker_zpj.bindPopup('<a href="/languages/zpj">Quiavicuzas Zapotec</a>').openPopup();
+                                                let marker_zpk = L.marker([16.297080, -95.741450]).addTo(mymap);
+                    marker_zpk.bindPopup('<a href="/languages/zpk">Tlacolulita Zapotec</a>').openPopup();
+                                                let marker_zpl = L.marker([16.721450, -96.931850]).addTo(mymap);
+                    marker_zpl.bindPopup('<a href="/languages/zpl">Lachixío Zapotec</a>').openPopup();
+                                                let marker_zpm = L.marker([16.172410, -96.237170]).addTo(mymap);
+                    marker_zpm.bindPopup('<a href="/languages/zpm">Mixtepec Zapotec</a>').openPopup();
+                                                let marker_zpn = L.marker([16.884160, -96.752730]).addTo(mymap);
+                    marker_zpn.bindPopup('<a href="/languages/zpn">Santa Inés Yatzechi Zapotec</a>').openPopup();
+                                                let marker_zpo = L.marker([16.270690, -96.400330]).addTo(mymap);
+                    marker_zpo.bindPopup('<a href="/languages/zpo">Amatlán Zapotec</a>').openPopup();
+                                                let marker_zpp = L.marker([16.874240, -96.998740]).addTo(mymap);
+                    marker_zpp.bindPopup('<a href="/languages/zpp">El Alto Zapotec</a>').openPopup();
+                                                let marker_zpq = L.marker([17.201570, -96.343260]).addTo(mymap);
+                    marker_zpq.bindPopup('<a href="/languages/zpq">Zoogocho Zapotec</a>').openPopup();
+                                                let marker_zpr = L.marker([15.883620, -96.218590]).addTo(mymap);
+                    marker_zpr.bindPopup('<a href="/languages/zpr">Santiago Xanica Zapotec</a>').openPopup();
+                                                let marker_zps = L.marker([16.146340, -96.768260]).addTo(mymap);
+                    marker_zps.bindPopup('<a href="/languages/zps">Coatlán Zapotec</a>').openPopup();
+                                                let marker_zpt = L.marker([16.281660, -96.866670]).addTo(mymap);
+                    marker_zpt.bindPopup('<a href="/languages/zpt">San Vicente Coatlán Zapotec</a>').openPopup();
+                                                let marker_zpu = L.marker([17.213400, -96.218340]).addTo(mymap);
+                    marker_zpu.bindPopup('<a href="/languages/zpu">Yalálag Zapotec</a>').openPopup();
+                                                let marker_zpv = L.marker([16.845940, -96.548600]).addTo(mymap);
+                    marker_zpv.bindPopup('<a href="/languages/zpv">Chichicapan Zapotec</a>').openPopup();
+                                                let marker_zpw = L.marker([16.680440, -97.287580]).addTo(mymap);
+                    marker_zpw.bindPopup('<a href="/languages/zpw">Zaniza Zapotec</a>').openPopup();
+                                                let marker_zpx = L.marker([16.040870, -96.761970]).addTo(mymap);
+                    marker_zpx.bindPopup('<a href="/languages/zpx">San Baltazar Loxicha Zapotec</a>').openPopup();
+                                                let marker_zpy = L.marker([17.154720, -96.879100]).addTo(mymap);
+                    marker_zpy.bindPopup('<a href="/languages/zpy">Mazaltepec Zapotec</a>').openPopup();
+                                                let marker_zpz = L.marker([16.491970, -97.089470]).addTo(mymap);
+                    marker_zpz.bindPopup('<a href="/languages/zpz">Texmelucan Zapotec</a>').openPopup();
+                                                let marker_zsr = L.marker([17.303090, -96.377500]).addTo(mymap);
+                    marker_zsr.bindPopup('<a href="/languages/zsr">Southern Rincon Zapotec</a>').openPopup();
+                                                let marker_zte = L.marker([16.869300, -97.191190]).addTo(mymap);
+                    marker_zte.bindPopup('<a href="/languages/zte">Elotepec Zapotec</a>').openPopup();
+                                                let marker_ztg = L.marker([15.974780, -96.192670]).addTo(mymap);
+                    marker_ztg.bindPopup('<a href="/languages/ztg">Xanaguía Zapotec</a>').openPopup();
+                                                let marker_ztl = L.marker([16.067610, -96.163600]).addTo(mymap);
+                    marker_ztl.bindPopup('<a href="/languages/ztl">Lapaguía-Guivini Zapotec</a>').openPopup();
+                                                let marker_ztm = L.marker([16.220160, -96.336230]).addTo(mymap);
+                    marker_ztm.bindPopup('<a href="/languages/ztm">San Agustín Mixtepec Zapotec</a>').openPopup();
+                                                let marker_ztn = L.marker([17.044610, -96.351150]).addTo(mymap);
+                    marker_ztn.bindPopup('<a href="/languages/ztn">Santa Catarina Albarradas Zapotec</a>').openPopup();
+                                                let marker_ztp = L.marker([15.844200, -96.699680]).addTo(mymap);
+                    marker_ztp.bindPopup('<a href="/languages/ztp">Loxicha Zapotec</a>').openPopup();
+                                                let marker_ztq = L.marker([16.341580, -96.155510]).addTo(mymap);
+                    marker_ztq.bindPopup('<a href="/languages/ztq">Quioquitani-Quierí Zapotec</a>').openPopup();
+                                                let marker_zts = L.marker([16.852910, -96.632130]).addTo(mymap);
+                    marker_zts.bindPopup('<a href="/languages/zts">Tilquiapan Zapotec</a>').openPopup();
+                                                let marker_ztt = L.marker([17.094360, -96.887570]).addTo(mymap);
+                    marker_ztt.bindPopup('<a href="/languages/ztt">Tejalapan Zapotec</a>').openPopup();
+                                                let marker_ztu = L.marker([16.882410, -96.457150]).addTo(mymap);
+                    marker_ztu.bindPopup('<a href="/languages/ztu">Güilá Zapotec</a>').openPopup();
+                                                let marker_ztx = L.marker([17.002450, -96.823370]).addTo(mymap);
+                    marker_ztx.bindPopup('<a href="/languages/ztx">Zaachila Zapotec</a>').openPopup();
+                                                let marker_zty = L.marker([17.288770, -96.198040]).addTo(mymap);
+                    marker_zty.bindPopup('<a href="/languages/zty">Yatee Zapotec</a>').openPopup();
+                    
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

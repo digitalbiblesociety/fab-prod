@@ -1,0 +1,39 @@
+{
+    "id": "SWEIBS",
+    "parent_bible_id": null,
+    "title": "Swedish IBS Version (1977)",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "swe",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": "1977",
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2018-12-16T23:58:53.000000Z",
+    "updated_at": "2020-10-12T15:32:47.000000Z",
+    "audio_paths": [],
+    "equivalents": [
+        {
+            "id": 6100,
+            "bible_id": "SWEIBS",
+            "equivalent_id": "SWDIBSP1DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}

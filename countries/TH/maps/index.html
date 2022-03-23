@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="referrer" content="always" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/icons/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#222">
+<meta name="theme-color" content="#ffffff">
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script>document.documentElement.className = 'js';</script>
+        
+                        <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70YXYF5WWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-70YXYF5WWE');
+    </script>
+    <title>Countries | Find a Bible</title>
+
+    <style>
+        .map-img        {padding: 1em 1.5em;}
+        .map-google iframe    {margin: 0 auto 2em auto; display:block;}
+        .map-download   {text-align: right;margin-right:2em;}
+        .map-img img    {margin:0 auto; display:block; padding:0 1em; max-height: 9em; border: 3px solid var(--primary-color)}
+        .map-img img:hover     {border: 2px solid var(--secondary-color)}
+        #mapid             {height:800px; width:auto; margin: 0 5% 2em 5%; border-radius: .3em; border: thin solid #ccc; z-index:2;}
+        .country-aside      {padding:1.2em;}
+        .country-aside p    {font-size:.8rem; line-height: 1rem;}
+        .country-overview   {margin: 1em 0; font-size:.78em;}
+        .country-location   {margin:2em auto 1em auto;}
+        .country-facts      {margin: 0 0 1.5em 0;}
+        .table i {background-color: var(--primary-color); width: 2.7em; color: #fff; border-radius: 16px; margin: 0 auto;
+            font-size: .8em;padding: 3px;}
+        .link-container      {margin: 1em 0;}
+        .link-container p   {padding:0 .2em; font-size: .6em; color:#666; line-height: .93em; text-align: center;}
+        .link-container img {padding:0 .2em;}
+        .pdf-icon           {width: 2em;height: 2.5em;position: relative;top: 12px;left: 6px;}
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <title>Thailand | Find a Bible</title>
+    <style>
+        a.nav-countries     {color: var(--primary-color)!important}
+        .link-container a[href^="https://find.bible"] {display: none;}
+        .banner.gradient .banner-image:after       {background: linear-gradient(180deg, rgba(167, 207, 223, 0.4) 0, rgba(35, 83, 138, 0.6));}
+        .banner-country {z-index: 1;position: relative;}
+
+
+    </style>
+    </head>
+    <body>
+
+    
+    <header id="header">
+            <a href="https://find.bible" id="logo">
+            <img src="/img/icon_fab_notitle.svg" alt="Find a Bible"
+                 width="40px"                  height="40px"  />
+            <span class="logo-text">Find a Bible</span>
+        </a>
+        <nav>
+                    <a class="nav-bibles nav-wide" href="https://find.bible/bibles">
+                Bibles
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#bible_resources"></use></svg>
+                            </a>
+                    <a class="nav-languages nav-wide" href="https://find.bible/languages">
+                Languages
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_languages"></use></svg>
+                            </a>
+                    <a class="nav-countries" href="https://find.bible/countries">
+                Countries
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_countries"></use></svg>
+                            </a>
+                    <a class="nav-agencies" href="https://find.bible/organizations">
+                Agencies
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#people_agencies"></use></svg>
+                            </a>
+                    <a class="nav-about" href="https://find.bible/about">
+                About
+                                    <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#menu_about"></use></svg>
+                            </a>
+                    </nav>
+</header>
+
+    <main>
+        <div id="search_results"></div>
+            <section role="banner" id="banner" class="banner  gradient " itemscope itemtype="http://schema.org/WPHeader">
+
+        <div class="banner-image">
+                    <img class="" src="https://images.bible.cloud/fab/banners/satellite/TH.jpg" onerror="this.style.display='none'" />
+            </div>
+    
+    
+        <input class="banner-button" type="search" value="" name="search" id="search_input" autocomplete="false" alt="Search" placeholder="Speed Search" />
+        <a class="banner-button modal-trigger" href="#page-info-modal" id="page-info"><svg><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#nav_info"></use></svg></a>
+        <div id="page-info-modal" class="modal">
+            <div class="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                    <div class="modal-info">
+        <h3>Countries Pages</h3>
+                <p>Most missions organizations think in terms of countries when it comes to their work. The COUNTRY pages were designed to assist in the research and rapid discovery of the languages that might be encountered in a given country.</p>
+                <p>Upon visiting the COUNTRIES page, the user is presented with a table of helpful data in accessing the need and scope of critical elements by country. Provided are sortable columns that include population, number of spoken languages, refugee count, literacy, and level of the persecution (as researched by the OpenDoors WorldWatch List). You can also compare nations by Continents or Territories using the filter boxes on the left. Take a minute to play with the different sort functions while you filter by continent. We think you will find it helpful and illuminating.</p>
+                <p>Once you click on a given COUNTRY, you will be taken to that page where you will find a list of languages known to be spoken in that country. These languages are initially sorted by a population estimate of speakers in that country.  In theory, those with a greater number of speakers will most likely be the languages you encounter should you travel there. Also provided is a variety of information and links that might assist in your research. For each COUNTRY, an additional tab is provided giving you access to information, maps and links.</p>
+        <div class="small-hide"><h3>Getting Started</h3>
+                <p>One of the best ways to get started is by simply asking questions. We have provided three scenarios that may be of help in understanding the site.</p><p>Scenario #2: My church is sending a missions group to Mexico and we would like to bring Bibles.</p>
+                <ol>
+                <li>From the top menu select COUNTRIES.  You will see that Mexico has about 129 million people who speak 300+ languages.</li>
+                <li>Click the Mexico page and you will see those languages sorted by population spoken inside the country of Mexico.</li>
+                <li>Select Mexico Maps and Info.  Use the provided maps to research which languages your group might encounter by geography.  Click on the pin to view resources in a given language.</li>
+                </ol></div>
+        <a href="https://find.bible/about/help" class="help">...More Help</a>
+    </div>
+            </div>
+        </div>
+
+            <div class="banner-heading flex-inline">
+
+                                <div>
+                                                                        <img class="icon  banner-country " src="https://images.bible.cloud/maps/icons/th_white.png" />
+                                                            </div>
+                
+
+            <div class="banner-title">
+                <h1 itemprop="headline"  >
+                    Thailand
+                </h1>
+                <h2 itemprop="description"  >A country of  Asia</h2>
+            </div>
+        </div>
+    
+            <nav role="tablist">
+                                                <a class="external" href="https://find.bible/countries/TH">Thailand Languages</a>
+                                                                <a role="tab"
+                         aria-selected="true"                                                controls="#" href="##">Maps | Info
+                                            </a>
+                                                                <a class="external" href="https://find.bible/countries/TH/language_map">Language Map</a>
+                                    </nav>
+    
+</section>
+
+    <div id="breadcrumbs" class="row" itemscope itemtype="http://schema.org/BreadcrumbList" >
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible">
+                    <span itemprop="name">Home</span>
+                    <meta itemprop="position" content="1" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries">
+                    <span itemprop="name">Countries</span>
+                    <meta itemprop="position" content="2" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://find.bible/countries/TH">
+                    <span itemprop="name">Thailand</span>
+                    <meta itemprop="position" content="3" />
+                </a>
+            </span>
+                                <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="item">
+                    <span itemprop="name">Maps</span>
+                    <meta itemprop="position" content="4" />
+                </span>
+            </span>
+            </div>
+
+        <div id="content">
+            
+    
+
+    <div class="row">
+    <div class="medium-3 small-hide">
+        <div class="country-aside">
+
+            <div class="country-facts row">
+                <p><b>Title:</b> The Kingdom of Thailand </p><br>
+                <p><b>Population:</b> 69,480,520</p>
+                <p><b>Population Change:</b> 0.25</p>
+                <p><b>National Average Age:</b> 40</p>
+                <p><b>Urban Percentage:</b> 51</p>
+                <p><b>Christian Population:</b> 778,000</p>
+                <p><b>Christian Percentage:</b> 1.2</p>
+
+            </div>
+
+
+                        <div class="country-overview">
+                <p><b>Introduction:</b>
+                    &#039;Thailand is a Southeast Asian country. It&#039;&#039;s known for tropical beaches opulent royal palaces ancient ruins and ornate temples displaying figures of Buddha. In Bangkok the capital an ultramodern cityscape rises next to quiet canalside communities and the iconic temples of Wat Arun Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew). Nearby beach resorts include bustling Pattaya and fashionable Hua Hin.&#039;</p><br>
+                <p><b>Overview:</b>
+                    A unified Thai kingdom was established in the mid-14th century. Known as Siam until 1939 Thailand is the only Southeast Asian country never to have been colonized by a European power. A bloodless revolution in 1932 led to the establishment of a constitutional monarchy. In alliance with Japan during World War II Thailand became a US treaty ally in 1954 after sending troops to Korea and later fighting alongside the US in Vietnam. Thailand since 2005 has experienced several rounds of political turmoil including a military coup in 2006 that ousted then Prime Minister THAKSIN Chinnawat followed by large-scale street protests by competing political factions in 2008 2009 and 2010. THAKSIN&#039;s youngest sister YINGLAK Chinnawat in 2011 led the Puea Thai Party to an electoral win and assumed control of the government. A blanket amnesty bill for individuals involved in street protests altered at the last minute to include all political crimes - including all convictions against THAKSIN - triggered months of large-scale anti-government protests in Bangkok beginning in November 2013. In early May 2014 YINGLAK was removed from office by the Constitutional Court and in late May 2014 the Royal Thai Army staged a coup against the caretaker government. Then head of the Royal Thai Army Gen. PRAYUT Chan-ocha was appointed prime minister in August 2014. The interim military government created several interim institutions to promote reform and draft a new constitution. Elections are tentatively set for mid-2017. King PHUMIPHON Adunyadet passed away in October 2016 after 70 years on the throne; his only son WACHIRALONGKON Bodinthrathepphayawarangkun ascended the throne in December 2016. Thailand has also experienced violence associated with the ethno-nationalist insurgency in its southern Malay-Muslim majority provinces. Since January 2004 thousands have been killed and wounded in the insurgency.</p>
+            </div>
+                
+
+        </div>
+    </div>
+
+
+
+    <div class="medium-9">
+
+
+        <div  class="row">
+
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Government</h4>
+                    <div><a href="#gov" alt="Thailand gov Map" title="Thailand gov Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/TH-gov.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/TH-gov.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Land</h4>
+                    <div><a href="#land" alt="Thailand land Map" title="Thailand land Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/TH-land.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/TH-land.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Language Map</h4>
+                    <div><a href="#language" alt="Thailand language Map" title="Thailand language Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/TH-lang.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/TH-lang.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Location</h4>
+                    <div><a href="#location" alt="Thailand location Map" title="Thailand location Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/TH-location.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/TH-location.png" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                        <div class="map-img small-6 medium-3 large-4">
+
+                    <h4>Transportation</h4>
+                    <div><a href="#trans" alt="Thailand trans Map" title="Thailand trans Map" class="modal-trigger">
+                        <img src="https://images.bible.cloud/maps/country/thumbs/TH-trans.jpg" /></a></div>
+                    <div class="map-download">
+                        <a href="https://images.bible.cloud/maps/country/TH-trans.jpg" target=_blank" alt="Download Map">
+                        <svg class="icon"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/img/icons.svg#type_download"></use></svg></a>
+                    </div>
+            </div>
+                    </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+<div class="map-modals">
+
+            <div id="gov" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TH-gov.jpg' />
+    </div>
+</div>            <div id="land" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TH-land.jpg' />
+    </div>
+</div>            <div id="language" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TH-lang.jpg' />
+    </div>
+</div>            <div id="location" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TH-location.png' />
+    </div>
+</div>            <div id="trans" class="modal">
+    <div class="modal-content">
+        <div class="modal-close"><a href="#modal-close" title="Close">Close &times;</a></div>
+        <img src='https://images.bible.cloud/maps/country/TH-trans.jpg' />
+    </div>
+</div>    
+</div>
+
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-box">
+            <h4>Forum of Bible Agencies</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a rel="noopener" href="https://forum-intl.org/" target="_blank">Forum of Bible Agencies</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="https://find.bible/fobai">Partners</a></li>
+                        <li><a rel="noopener" href="https://www.facebook.com/fobai" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h4>Find a Bible</h4>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/about/faq">FAQ</a></li>
+                        <li><a href="https://find.bible/organizations">Partners</a></li>
+                        <li><a rel="noopener" href="https://forum-intl.org/legal/privacy/" target="_blank">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href="https://find.bible/sitemap">Sitemap</a></li>
+                        <li><a href="https://find.bible/about/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row">
+                <img src="https://images.bible.cloud/fab/logos/forum-logo.svg" class="footer-logo">
+            </div>
+            <div class="row copyright">
+                <a href="https://dbs.org" target="_blank">© 2021 Digital Bible Society</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <template id="search_results_template">
+        <div class="row">
+            <div class="medium-3 small-6">
+                <h2 data-i18n="search.language_title">Languages</h2>
+                <section data-type="languages" class="search-languages"></section>
+            </div>
+            <div class="medium-5 small-12">
+                <h2 data-i18n="search.bible_title">Bibles</h2>
+                <section data-type="bibles" class="search-bibles"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.country_title">Countries</h2>
+                <section data-type="countries" class="search-countries"></section>
+            </div>
+            <div class="medium-2 small-6">
+                <h2 data-i18n="search.organization_title">Organizations</h2>
+                <section data-type="organizations" class="search-organizations"></section>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+            <script defer src="/js/app.js"></script>
+    <script>
+
+
+                                                        let marker_ahk = L.marker([21.230864, 100.964344]).addTo(mymap);
+                    marker_ahk.bindPopup('<a href="/languages/ahk">Akha</a>').openPopup();
+                                                let marker_ben = L.marker([24.000000, 90.000000]).addTo(mymap);
+                    marker_ben.bindPopup('<a href="/languages/ben">Bengali</a>').openPopup();
+                                                let marker_bfk = L.marker([16.911000, 103.296000]).addTo(mymap);
+                    marker_bfk.bindPopup('<a href="/languages/bfk">Ban Khor Sign Language</a>').openPopup();
+                                                let marker_blk = L.marker([20.210990, 97.596905]).addTo(mymap);
+                    marker_blk.bindPopup('<a href="/languages/blk">Pa&#039;o Karen</a>').openPopup();
+                                                let marker_blr = L.marker([22.009203, 99.740473]).addTo(mymap);
+                    marker_blr.bindPopup('<a href="/languages/blr">Blang</a>').openPopup();
+                                                let marker_blt = L.marker([18.957235, 102.927963]).addTo(mymap);
+                    marker_blt.bindPopup('<a href="/languages/blt">Tai Dam</a>').openPopup();
+                                                let marker_bru = L.marker([17.131050, 105.671357]).addTo(mymap);
+                    marker_bru.bindPopup('<a href="/languages/bru">Eastern Bru</a>').openPopup();
+                                                let marker_brv = L.marker([16.490570, 104.754290]).addTo(mymap);
+                    marker_brv.bindPopup('<a href="/languages/brv">Western Bru</a>').openPopup();
+                                                let marker_bwe = L.marker([18.979570, 96.993630]).addTo(mymap);
+                    marker_bwe.bindPopup('<a href="/languages/bwe">Bwe Karen</a>').openPopup();
+                                                let marker_bzi = L.marker([20.854160, 99.986230]).addTo(mymap);
+                    marker_bzi.bindPopup('<a href="/languages/bzi">Bisu</a>').openPopup();
+                                                let marker_cbn = L.marker([15.890910, 101.514650]).addTo(mymap);
+                    marker_cbn.bindPopup('<a href="/languages/cbn">Nyahkur</a>').openPopup();
+                                                let marker_cdo = L.marker([26.000000, 119.500000]).addTo(mymap);
+                    marker_cdo.bindPopup('<a href="/languages/cdo">Min Dong Chinese</a>').openPopup();
+                                                let marker_cja = L.marker([12.477113, 104.025660]).addTo(mymap);
+                    marker_cja.bindPopup('<a href="/languages/cja">Western Cham</a>').openPopup();
+                                                let marker_cjm = L.marker([11.285280, 108.490120]).addTo(mymap);
+                    marker_cjm.bindPopup('<a href="/languages/cjm">Eastern Cham</a>').openPopup();
+                                                let marker_cmn = L.marker([40.020884, 116.228026]).addTo(mymap);
+                    marker_cmn.bindPopup('<a href="/languages/cmn">Mandarin Chinese</a>').openPopup();
+                                                let marker_cog = L.marker([12.521810, 102.513715]).addTo(mymap);
+                    marker_cog.bindPopup('<a href="/languages/cog">Chong</a>').openPopup();
+                                                let marker_csd = L.marker([18.862950, 99.039010]).addTo(mymap);
+                    marker_csd.bindPopup('<a href="/languages/csd">Chiangmai Sign Language</a>').openPopup();
+                                                let marker_cuu = L.marker([23.568970, 101.898650]).addTo(mymap);
+                    marker_cuu.bindPopup('<a href="/languages/cuu">Tai Ya</a>').openPopup();
+                                                let marker_eky = L.marker([19.893875, 98.335860]).addTo(mymap);
+                    marker_eky.bindPopup('<a href="/languages/eky">Eastern Kayah</a>').openPopup();
+                                                let marker_eng = L.marker([53.000000, -1.000000]).addTo(mymap);
+                    marker_eng.bindPopup('<a href="/languages/eng">English</a>').openPopup();
+                                                let marker_fra = L.marker([48.000000, 2.000000]).addTo(mymap);
+                    marker_fra.bindPopup('<a href="/languages/fra">French</a>').openPopup();
+                                                let marker_hak = L.marker([25.000000, 116.000000]).addTo(mymap);
+                    marker_hak.bindPopup('<a href="/languages/hak">Hakka Chinese</a>').openPopup();
+                                                let marker_hin = L.marker([25.000000, 77.000000]).addTo(mymap);
+                    marker_hin.bindPopup('<a href="/languages/hin">Hindi</a>').openPopup();
+                                                let marker_hnj = L.marker([22.563832, 101.950052]).addTo(mymap);
+                    marker_hnj.bindPopup('<a href="/languages/hnj">Hmong Njua</a>').openPopup();
+                                                let marker_ium = L.marker([20.830000, 101.170000]).addTo(mymap);
+                    marker_ium.bindPopup('<a href="/languages/ium">Iu Mien</a>').openPopup();
+                                                let marker_jhi = L.marker([5.636950, 101.541450]).addTo(mymap);
+                    marker_jhi.bindPopup('<a href="/languages/jhi">Jehai</a>').openPopup();
+                                                let marker_jpn = L.marker([35.000000, 135.000000]).addTo(mymap);
+                    marker_jpn.bindPopup('<a href="/languages/jpn">Japanese</a>').openPopup();
+                                                let marker_kdt = L.marker([14.669807, 104.911040]).addTo(mymap);
+                    marker_kdt.bindPopup('<a href="/languages/kdt">Kuy</a>').openPopup();
+                                                let marker_khb = L.marker([21.032106, 101.281582]).addTo(mymap);
+                    marker_khb.bindPopup('<a href="/languages/khb">Lü</a>').openPopup();
+                                                let marker_khm = L.marker([12.051550, 105.015373]).addTo(mymap);
+                    marker_khm.bindPopup('<a href="/languages/khm">Khmer</a>').openPopup();
+                                                let marker_kjg = L.marker([20.246292, 101.671160]).addTo(mymap);
+                    marker_kjg.bindPopup('<a href="/languages/kjg">Khmu</a>').openPopup();
+                                                let marker_kjp = L.marker([15.191470, 98.735510]).addTo(mymap);
+                    marker_kjp.bindPopup('<a href="/languages/kjp">Pwo Eastern Karen</a>').openPopup();
+                                                let marker_kjt = L.marker([18.004830, 99.638220]).addTo(mymap);
+                    marker_kjt.bindPopup('<a href="/languages/kjt">Phrae Pwo Karen</a>').openPopup();
+                                                let marker_kkh = L.marker([19.606240, 99.336285]).addTo(mymap);
+                    marker_kkh.bindPopup('<a href="/languages/kkh">Khün</a>').openPopup();
+                                                let marker_knq = L.marker([5.750045, 101.277090]).addTo(mymap);
+                    marker_knq.bindPopup('<a href="/languages/knq">Kintaq</a>').openPopup();
+                                                let marker_kns = L.marker([5.980850, 101.025950]).addTo(mymap);
+                    marker_kns.bindPopup('<a href="/languages/kns">Kensiu</a>').openPopup();
+                                                let marker_kor = L.marker([37.500000, 128.000000]).addTo(mymap);
+                    marker_kor.bindPopup('<a href="/languages/kor">Korean</a>').openPopup();
+                                                let marker_ksw = L.marker([17.987200, 97.712620]).addTo(mymap);
+                    marker_ksw.bindPopup('<a href="/languages/ksw">S&#039;gaw Karen</a>').openPopup();
+                                                let marker_kxm = L.marker([14.467430, 103.863130]).addTo(mymap);
+                    marker_kxm.bindPopup('<a href="/languages/kxm">Northern Khmer</a>').openPopup();
+                                                let marker_kyu = L.marker([18.687040, 97.487700]).addTo(mymap);
+                    marker_kyu.bindPopup('<a href="/languages/kyu">Western Kayah</a>').openPopup();
+                                                let marker_lao = L.marker([16.072620, 104.568480]).addTo(mymap);
+                    marker_lao.bindPopup('<a href="/languages/lao">Lao</a>').openPopup();
+                                                let marker_lbn = L.marker([19.882870, 100.268065]).addTo(mymap);
+                    marker_lbn.bindPopup('<a href="/languages/lbn">Rmeet</a>').openPopup();
+                                                let marker_lcp = L.marker([19.867805, 99.205745]).addTo(mymap);
+                    marker_lcp.bindPopup('<a href="/languages/lcp">Western Lawa</a>').openPopup();
+                                                let marker_lhi = L.marker([21.207768, 100.970154]).addTo(mymap);
+                    marker_lhi.bindPopup('<a href="/languages/lhi">Lahu Shi</a>').openPopup();
+                                                let marker_lhu = L.marker([21.270104, 100.213720]).addTo(mymap);
+                    marker_lhu.bindPopup('<a href="/languages/lhu">Lahu</a>').openPopup();
+                                                let marker_lis = L.marker([22.548803, 94.018370]).addTo(mymap);
+                    marker_lis.bindPopup('<a href="/languages/lis">Lisu</a>').openPopup();
+                                                let marker_lwl = L.marker([19.013640, 98.761320]).addTo(mymap);
+                    marker_lwl.bindPopup('<a href="/languages/lwl">Eastern Lawa</a>').openPopup();
+                                                let marker_meo = L.marker([5.933000, 100.492000]).addTo(mymap);
+                    marker_meo.bindPopup('<a href="/languages/meo">Kedah Malay</a>').openPopup();
+                                                let marker_mfa = L.marker([6.381480, 101.410300]).addTo(mymap);
+                    marker_mfa.bindPopup('<a href="/languages/mfa">Pattani Malay</a>').openPopup();
+                                                let marker_mkm = L.marker([8.167610, 98.317620]).addTo(mymap);
+                    marker_mkm.bindPopup('<a href="/languages/mkm">Moklen</a>').openPopup();
+                                                let marker_mlf = L.marker([19.273035, 101.203525]).addTo(mymap);
+                    marker_mlf.bindPopup('<a href="/languages/mlf">Mal</a>').openPopup();
+                                                let marker_mnp = L.marker([27.050000, 118.320000]).addTo(mymap);
+                    marker_mnp.bindPopup('<a href="/languages/mnp">Min Bei Chinese</a>').openPopup();
+                                                let marker_mnw = L.marker([15.493940, 98.122465]).addTo(mymap);
+                    marker_mnw.bindPopup('<a href="/languages/mnw">Mon</a>').openPopup();
+                                                let marker_mpz = L.marker([18.171750, 100.209570]).addTo(mymap);
+                    marker_mpz.bindPopup('<a href="/languages/mpz">Mpi</a>').openPopup();
+                                                let marker_mqt = L.marker([18.911660, 99.582070]).addTo(mymap);
+                    marker_mqt.bindPopup('<a href="/languages/mqt">Mok</a>').openPopup();
+                                                let marker_mra = L.marker([18.553345, 101.162995]).addTo(mymap);
+                    marker_mra.bindPopup('<a href="/languages/mra">Mlabri</a>').openPopup();
+                                                let marker_mwt = L.marker([10.147440, 98.676545]).addTo(mymap);
+                    marker_mwt.bindPopup('<a href="/languages/mwt">Moken</a>').openPopup();
+                                                let marker_mww = L.marker([21.546060, 103.163915]).addTo(mymap);
+                    marker_mww.bindPopup('<a href="/languages/mww">Hmong Daw</a>').openPopup();
+                                                let marker_mya = L.marker([20.792575, 93.966490]).addTo(mymap);
+                    marker_mya.bindPopup('<a href="/languages/mya">Burmese</a>').openPopup();
+                                                let marker_nan = L.marker([24.500000, 118.170000]).addTo(mymap);
+                    marker_nan.bindPopup('<a href="/languages/nan">Min Nan Chinese</a>').openPopup();
+                                                let marker_nod = L.marker([18.857495, 100.207390]).addTo(mymap);
+                    marker_nod.bindPopup('<a href="/languages/nod">Northern Thai</a>').openPopup();
+                                                let marker_nyl = L.marker([14.881680, 104.330420]).addTo(mymap);
+                    marker_nyl.bindPopup('<a href="/languages/nyl">Nyeu</a>').openPopup();
+                                                let marker_nyw = L.marker([17.121330, 104.150920]).addTo(mymap);
+                    marker_nyw.bindPopup('<a href="/languages/nyw">Nyaw</a>').openPopup();
+                                                let marker_pan = L.marker([30.036762, 75.670166]).addTo(mymap);
+                    marker_pan.bindPopup('<a href="/languages/pan">Panjabi</a>').openPopup();
+                                                let marker_pce = L.marker([21.617647, 98.091480]).addTo(mymap);
+                    marker_pce.bindPopup('<a href="/languages/pce">Ruching Palaung</a>').openPopup();
+                                                let marker_pdu = L.marker([19.518285, 97.413850]).addTo(mymap);
+                    marker_pdu.bindPopup('<a href="/languages/pdu">Kayan</a>').openPopup();
+                                                let marker_pho = L.marker([20.799585, 100.956990]).addTo(mymap);
+                    marker_pho.bindPopup('<a href="/languages/pho">Phunoi</a>').openPopup();
+                                                let marker_pht = L.marker([17.754497, 104.684233]).addTo(mymap);
+                    marker_pht.bindPopup('<a href="/languages/pht">Phu Thai</a>').openPopup();
+                                                let marker_phu = L.marker([17.520725, 102.191190]).addTo(mymap);
+                    marker_phu.bindPopup('<a href="/languages/phu">Phuan</a>').openPopup();
+                                                let marker_prk = L.marker([22.865825, 99.375035]).addTo(mymap);
+                    marker_prk.bindPopup('<a href="/languages/prk">Parauk</a>').openPopup();
+                                                let marker_prt = L.marker([19.038265, 101.217815]).addTo(mymap);
+                    marker_prt.bindPopup('<a href="/languages/prt">Phai</a>').openPopup();
+                                                let marker_puo = L.marker([20.886205, 103.930730]).addTo(mymap);
+                    marker_puo.bindPopup('<a href="/languages/puo">Puoc</a>').openPopup();
+                                                let marker_pww = L.marker([18.016010, 98.270920]).addTo(mymap);
+                    marker_pww.bindPopup('<a href="/languages/pww">Pwo Northern Karen</a>').openPopup();
+                                                let marker_rhg = L.marker([20.831000, 93.169500]).addTo(mymap);
+                    marker_rhg.bindPopup('<a href="/languages/rhg">Rohingya</a>').openPopup();
+                                                let marker_shn = L.marker([21.599497, 98.034223]).addTo(mymap);
+                    marker_shn.bindPopup('<a href="/languages/shn">Shan</a>').openPopup();
+                                                let marker_sin = L.marker([8.000000, 81.000000]).addTo(mymap);
+                    marker_sin.bindPopup('<a href="/languages/sin">Sinhala</a>').openPopup();
+                                                let marker_skb = L.marker([17.455755, 104.787095]).addTo(mymap);
+                    marker_skb.bindPopup('<a href="/languages/skb">Saek</a>').openPopup();
+                                                let marker_soa = L.marker([13.213600, 99.865090]).addTo(mymap);
+                    marker_soa.bindPopup('<a href="/languages/soa">Thai Song</a>').openPopup();
+                                                let marker_sou = L.marker([6.856680, 99.703100]).addTo(mymap);
+                    marker_sou.bindPopup('<a href="/languages/sou">Southern Thai</a>').openPopup();
+                                                let marker_sss = L.marker([16.908105, 105.000745]).addTo(mymap);
+                    marker_sss.bindPopup('<a href="/languages/sss">Sô</a>').openPopup();
+                                                let marker_tam = L.marker([10.520219, 78.825989]).addTo(mymap);
+                    marker_tam.bindPopup('<a href="/languages/tam">Tamil</a>').openPopup();
+                                                let marker_tdd = L.marker([21.783673, 99.722045]).addTo(mymap);
+                    marker_tdd.bindPopup('<a href="/languages/tdd">Tai Nüa</a>').openPopup();
+                                                let marker_tha = L.marker([14.191968, 100.671386]).addTo(mymap);
+                    marker_tha.bindPopup('<a href="/languages/tha">Thai</a>').openPopup();
+                                                let marker_thm = L.marker([17.765480, 104.228545]).addTo(mymap);
+                    marker_thm.bindPopup('<a href="/languages/thm">Aheu</a>').openPopup();
+                                                let marker_tnz = L.marker([6.881375, 100.102185]).addTo(mymap);
+                    marker_tnz.bindPopup('<a href="/languages/tnz">Ten&#039;edn</a>').openPopup();
+                                                let marker_tsq = L.marker([13.783700, 100.445450]).addTo(mymap);
+                    marker_tsq.bindPopup('<a href="/languages/tsq">Thai Sign Language</a>').openPopup();
+                                                let marker_tts = L.marker([14.325260, 102.986380]).addTo(mymap);
+                    marker_tts.bindPopup('<a href="/languages/tts">Northeastern Thai</a>').openPopup();
+                                                let marker_tvn = L.marker([14.107809, 98.193970]).addTo(mymap);
+                    marker_tvn.bindPopup('<a href="/languages/tvn">Tavoyan</a>').openPopup();
+                                                let marker_ugo = L.marker([14.240810, 100.097780]).addTo(mymap);
+                    marker_ugo.bindPopup('<a href="/languages/ugo">Ugong</a>').openPopup();
+                                                let marker_urd = L.marker([25.000000, 67.000000]).addTo(mymap);
+                    marker_urd.bindPopup('<a href="/languages/urd">Urdu</a>').openPopup();
+                                                let marker_urk = L.marker([7.525800, 99.076820]).addTo(mymap);
+                    marker_urk.bindPopup('<a href="/languages/urk">Urak Lawoi&#039;</a>').openPopup();
+                                                let marker_vie = L.marker([18.388703, 106.756827]).addTo(mymap);
+                    marker_vie.bindPopup('<a href="/languages/vie">Vietnamese</a>').openPopup();
+                                                let marker_yno = L.marker([18.387260, 98.976460]).addTo(mymap);
+                    marker_yno.bindPopup('<a href="/languages/yno">Yong</a>').openPopup();
+                                                let marker_yoy = L.marker([17.621540, 104.785495]).addTo(mymap);
+                    marker_yoy.bindPopup('<a href="/languages/yoy">Yoy</a>').openPopup();
+                                                let marker_yue = L.marker([23.000000, 113.000000]).addTo(mymap);
+                    marker_yue.bindPopup('<a href="/languages/yue">Yue Chinese</a>').openPopup();
+                    
+    </script>
+    <template id="search_results_template">
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="medium-8 small-12 flex-center">
+                <h2>Bibles</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Language</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Countries</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Resources</h2>
+                <section></section>
+            </div>
+            <div class="medium-4 small-6">
+                <h2>Organizations</h2>
+                <section></section>
+            </div>
+        </div>
+</template>
+</body>
+</html>

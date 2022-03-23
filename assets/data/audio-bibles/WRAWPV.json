@@ -1,0 +1,184 @@
+{
+    "id": "WRAWPV",
+    "parent_bible_id": null,
+    "title": "Warapu Bible (Bouni Pou)",
+    "title_vernacular": null,
+    "description": null,
+    "description_vernacular": null,
+    "iso": "wra",
+    "script": "Latn",
+    "versification": null,
+    "numeral_system_id": "default",
+    "date": null,
+    "country_id": null,
+    "copyright": null,
+    "copyright_type": null,
+    "reviewed": 0,
+    "isbn13": null,
+    "back_text": null,
+    "cover": null,
+    "questionable": null,
+    "notes": "DBP import",
+    "cover_url": null,
+    "created_at": "2016-10-12T17:48:01.000000Z",
+    "updated_at": "2020-10-12T17:48:01.000000Z",
+    "audio_paths": [
+        {
+            "book_id": "1Tim",
+            "chapter_id": "0",
+            "path": "WR3WPVP2DA\/B15___00_1Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "1",
+            "path": "WR3WPVP2DA\/B15___01_1Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "2",
+            "path": "WR3WPVP2DA\/B15___02_1Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "3",
+            "path": "WR3WPVP2DA\/B15___03_1Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "4",
+            "path": "WR3WPVP2DA\/B15___04_1Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "5",
+            "path": "WR3WPVP2DA\/B15___05_1Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "1Tim",
+            "chapter_id": "6",
+            "path": "WR3WPVP2DA\/B15___06_1Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "1TI",
+            "name": "1 Timothy",
+            "order": 55
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "0",
+            "path": "WR3WPVP2DA\/B16___00_2Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "1",
+            "path": "WR3WPVP2DA\/B16___01_2Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "2",
+            "path": "WR3WPVP2DA\/B16___02_2Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "3",
+            "path": "WR3WPVP2DA\/B16___03_2Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "2Tim",
+            "chapter_id": "4",
+            "path": "WR3WPVP2DA\/B16___04_2Timothy____WR3WPVP2DA.mp3",
+            "id_usfm": "2TI",
+            "name": "2 Timothy",
+            "order": 56
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "0",
+            "path": "WR3WPVP2DA\/B17___00_Titus_______WR3WPVP2DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "1",
+            "path": "WR3WPVP2DA\/B17___01_Titus_______WR3WPVP2DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "2",
+            "path": "WR3WPVP2DA\/B17___02_Titus_______WR3WPVP2DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Titus",
+            "chapter_id": "3",
+            "path": "WR3WPVP2DA\/B17___03_Titus_______WR3WPVP2DA.mp3",
+            "id_usfm": "TIT",
+            "name": "Titus",
+            "order": 57
+        },
+        {
+            "book_id": "Phlm",
+            "chapter_id": "0",
+            "path": "WR3WPVP2DA\/B18___00_Philemon____WR3WPVP2DA.mp3",
+            "id_usfm": "PHM",
+            "name": "Philemon",
+            "order": 58
+        },
+        {
+            "book_id": "Phlm",
+            "chapter_id": "1",
+            "path": "WR3WPVP2DA\/B18___01_Philemon____WR3WPVP2DA.mp3",
+            "id_usfm": "PHM",
+            "name": "Philemon",
+            "order": 58
+        }
+    ],
+    "equivalents": [
+        {
+            "id": 6168,
+            "bible_id": "WRAWPV",
+            "equivalent_id": "WR3WPVP2DA",
+            "organization_id": 9,
+            "type": "api",
+            "url": null,
+            "site": "bible.is",
+            "suffix": "",
+            "notes": null
+        }
+    ]
+}
