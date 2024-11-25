@@ -1,0 +1,1 @@
+import"./hoisted.UDKN0QyT.js";import"./index.U3IA9L3b.js";function i(e,t){e.value.length>t&&(e.value=e.value.substring(0,t))}const n=document.getElementById("message");n.addEventListener("input",function(){i(n,500)});
