@@ -1,0 +1,16 @@
+/* home.css — home page only: centered title + tagline + summary. */
+.home          { padding:2rem 0 1rem; text-align:center; }
+.home-title    { font-size:2.25rem; line-height:1.15; color:var(--fg); margin:0 0 .25rem; }
+.home-tagline  { font-size:1.25rem; color:var(--muted); margin:0 0 .75rem; }
+.home-summary  { color:var(--muted); }
+
+.home-summary a              { color:#065f46;}
+.home-summary a:nth-child(2) {color:#1e40af;}
+
+html.dark .home-summary a { color:#10b981; }
+html.dark .home-summary a:nth-child(2) { color:#3b82f6; }
+
+.home-logo { display:none; }
+@media (max-width:639.98px) {
+  .home-logo { display:block; margin:0 auto .75rem; }
+}

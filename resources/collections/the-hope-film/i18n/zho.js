@@ -1,0 +1,1 @@
+window.zmFT&&window.zmFT.recv("hopefilm","zho",{"rows":{},"joins":{"name":{"by":"code","vals":{"tgl":"他加禄语","tel":"泰卢固语","oym":"瓦亚姆皮语","tpu":"坦普温语","hun":"匈牙利语","tha":"泰语","trc":"科帕拉特里基语","pes":"西波斯语","tca":"提库纳语","hin":"印地语","ury":"奥里亚语","hat":"海地克里奥尔语","adx":"安多方言","bod":"藏语","cab":"黑加勒比语","amh":"阿姆哈拉语","lao":"老挝语","heb":"希伯来语"}}}});

@@ -1,0 +1,10 @@
+/* flags.css — country flags: inline sprite (<use href="/img/flags.svg#XX">) in
+   the countries / languages / bibles / organizations tables. Linked by every
+   page that renders flags — both the fuzzytable pages (the island emits
+   svg.ft-flag for `flag` columns) and the plain lite tables / org aside. */
+.ft-flag { display:inline-block; width:1.35em; height:.675em; margin-right:.45em; border-radius:2px; }
+
+/* svg.ft-icon — a sprite glyph the island prepends for `icon:{base,id}` columns
+   (e.g. the android/apple platform marks from os_icons.svg). Square, inherits the
+   cell colour via the symbols' fill="currentColor". */
+.ft-icon { display:inline-block; width:1.1em; height:1.1em; margin-right:.4em; vertical-align:-.15em; color:var(--ft-muted); }

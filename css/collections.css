@@ -1,0 +1,26 @@
+/* collections.css — Resources / Collections: the featured-collection card grid
+   (/resources/collections/) and the prose intro on collection detail pages. */
+.collections-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:.5rem; max-width:72rem;
+  margin:1.5rem auto 0; padding-inline:1rem; }
+@media (max-width:640px) { .collections-grid { grid-template-columns:1fr; } }
+.collection-item { display:flex; gap:1rem; padding:.6rem; border-radius:.6rem; color:inherit; }
+.collection-item:hover { background:var(--surface-2); text-decoration:none; }
+.collection-img-wrap { flex-shrink:0; align-self:center; }
+.collection-img { width:6rem; border-radius:.5rem; border:4px solid var(--green); display:block; }
+.collection-img--green { background-color:#007c38; }
+.collection-title { font-size:1.125rem; font-weight:700; margin:0; color:var(--fg); }
+.collection-accent { color:var(--green); }
+.collection-desc { margin:.25rem 0 0; color:var(--muted); font-size:.92rem; }
+
+.collection-detail { max-width:56rem; margin-inline:auto; padding:1rem 1.5rem 3rem; line-height:1.7; }
+/* Float the thumbnail to the left so the intro prose wraps alongside it. */
+.collection-detail p:has(> .collection-img) { float:left; margin:0 1.25rem .5rem 0; }
+.collection-detail::after { content:""; display:block; clear:both; }
+.collection-detail .provider-link { display:inline-block; margin-top:1rem; padding:.55rem 1.1rem;
+  background:var(--green); color:#fff; border-radius:.5rem; font-weight:600; }
+.collection-detail .provider-link:hover { text-decoration:none; opacity:.92; }
+
+/* In the collection split layout the intro sits as an aside in the left column,
+   below the filter panel — drop the centered-wide framing and fill the column. */
+.entity-side > .collection-detail { max-width:none; margin:1rem 0 0; padding:1rem .25rem; line-height:1.6; font-size:.92rem; }
+.entity-side > .collection-detail .collection-img { width:6rem; }

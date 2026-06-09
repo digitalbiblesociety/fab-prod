@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Find a Bible</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="The page you were looking for could not be found.">
+  <!-- Apply the saved/OS theme before first paint (mirrors base.html). -->
+  <script>(function(){var d=document.documentElement;var t=null;try{t=localStorage.getItem("theme");}catch(_){}
+    if(t==="dark"||(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches))d.classList.add("dark");})();</script>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .nf-wrap { max-width:42rem; margin:0 auto; padding:5rem 1.5rem; text-align:center; }
+    .nf-logo { display:inline-block; margin-bottom:2rem; }
+    .nf-logo img { width:56px; height:56px; }
+    .nf-code { font-size:clamp(3.5rem,12vw,6rem); font-weight:800; line-height:1; color:var(--accent); margin:0; }
+    .nf-title { font-size:1.5rem; margin:.5rem 0 0; }
+    .nf-msg { color:var(--muted); margin:1rem 0 2.25rem; }
+    .nf-chips { display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center; }
+    .nf-chips a { display:inline-block; padding:.5rem 1rem; border:1px solid var(--line);
+      border-radius:999px; background:var(--surface); color:var(--fg); font-weight:600; }
+    .nf-chips a:hover { border-color:var(--accent); color:var(--accent); }
+    .nf-home { display:inline-block; margin-top:2rem; font-weight:600; }
+  </style>
+</head>
+<body>
+  <main class="nf-wrap">
+    <a class="nf-logo" href="/" aria-label="Find a Bible"><img src="/img/logo.svg" alt="Find a Bible" width="56" height="56"></a>
+    <p class="nf-code">404</p>
+    <h1 class="nf-title">Page not found</h1>
+    <p class="nf-msg">The page you were looking for doesn’t exist or may have moved. Try browsing the catalog:</p>
+    <nav class="nf-chips" aria-label="Catalog">
+      <a href="/bibles/">Bibles</a>
+      <a href="/languages/">Languages</a>
+      <a href="/countries/">Countries</a>
+      <a href="/organizations/">Organizations</a>
+      <a href="/resources/collections/">Collections</a>
+    </nav>
+    <a class="nf-home" href="/">← Back to home</a>
+  </main>
+  <script>document.documentElement.classList.remove("no-js");</script>
+  <!-- DBS analytics pixel (mirrors base.html). -->
+  <script>(function(){var img=new Image();img.src='https://stats.dbs.org/t.gif?sid=a97daf47-22e1-ef18-3539-942a35bfe48b&pid='+encodeURIComponent(location.pathname)+'&ref='+encodeURIComponent(document.referrer)+'&r='+Math.random();})();</script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Find a Bible</title>
+<link rel="alternate" type="text/html" href="https://find.bible"/>
+<link rel="self" type="application/atom+xml" href="https://find.bible/atom.xml"/>
+<id>https://find.bible</id>
+<updated>2026-01-01T00:00:00Z</updated>
+<subtitle>A free directory of Scripture in every language — find Bible translations, audio, film, and resources across thousands of languages and every country.</subtitle>
+<author><name>Digital Bible Society</name></author>
+<generator version="0.1.0">zigsag</generator>
+<entry>
+<title>Buki Kimaasabaina</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/GVSEBL/"/>
+<id>https://find.bible/bibles/GVSEBL/</id>
+<updated>2026-01-01T00:00:00Z</updated>
+<summary>Buki Kimaasabaina in Gumawana (Papua New Guinea), 2026</summary>
+</entry>
+<entry>
+<title>Inesaait Mamainaang Laa Sin Notsi</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/NCFEBL/"/>
+<id>https://find.bible/bibles/NCFEBL/</id>
+<updated>2026-01-01T00:00:00Z</updated>
+<summary>Inesaait Mamainaang Laa Sin Notsi in Notsi (Papua New Guinea), 2026</summary>
+</entry>
+<entry>
+<title>PATHEN LEKHABU THENG</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/TCZCGT/"/>
+<id>https://find.bible/bibles/TCZCGT/</id>
+<updated>2026-01-01T00:00:00Z</updated>
+<summary>PATHEN LEKHABU THENG in Thado Chin (India), 2026</summary>
+</entry>
+<entry>
+<title>Ayta Ambala NT Portions</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/ABCEBL/"/>
+<id>https://find.bible/bibles/ABCEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Ayta Ambala NT Portions in Ambala Ayta (Philippines), 2025</summary>
+</entry>
+<entry>
+<title>Garme New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/ACZUFW/"/>
+<id>https://find.bible/bibles/ACZUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Garme New Testament in Acheron (Sudan), 2025</summary>
+</entry>
+<entry>
+<title>Dogbo Gbe New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/AJGUFWD/"/>
+<id>https://find.bible/bibles/AJGUFWD/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Dogbo Gbe New Testament in Aja (Benin), 2025</summary>
+</entry>
+<entry>
+<title>Houin Gbe New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/AJGUFWH/"/>
+<id>https://find.bible/bibles/AJGUFWH/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Houin Gbe New Testament in Aja (Benin), 2025</summary>
+</entry>
+<entry>
+<title>Shikpi Gbe New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/AJGUFWS/"/>
+<id>https://find.bible/bibles/AJGUFWS/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Shikpi Gbe New Testament in Aja (Benin), 2025</summary>
+</entry>
+<entry>
+<title>ሃዕሮ ወኣድ መጻፈ</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/ALWEBL/"/>
+<id>https://find.bible/bibles/ALWEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>ሃዕሮ ወኣድ መጻፈ in Alaba-K’abeena (Ethiopia), 2025</summary>
+</entry>
+<entry>
+<title>Khawngtu Chin Bible</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/ANLUFW/"/>
+<id>https://find.bible/bibles/ANLUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Khawngtu Chin Bible in Anu-Hkongso Chin (Myanmar), 2025</summary>
+</entry>
+<entry>
+<title>Aninka NT Portion</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/AQKEBL/"/>
+<id>https://find.bible/bibles/AQKEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Aninka NT Portion in Aninka (Nigeria), 2025</summary>
+</entry>
+<entry>
+<title>Atohwaim New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/AQMUFW/"/>
+<id>https://find.bible/bibles/AQMUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Atohwaim New Testament in Atohwaim (Indonesia), 2025</summary>
+</entry>
+<entry>
+<title>Sari</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/ASJEBL/"/>
+<id>https://find.bible/bibles/ASJEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Sari in Sari (Cameroon), 2025</summary>
+</entry>
+<entry>
+<title>Aushi Bible</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/AUHUFW/"/>
+<id>https://find.bible/bibles/AUHUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Aushi Bible in Aushi (Zambia), 2025</summary>
+</entry>
+<entry>
+<title>Dekanmey Gbe New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/AYBUFW/"/>
+<id>https://find.bible/bibles/AYBUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Dekanmey Gbe New Testament in Ayizo Gbe (Benin), 2025</summary>
+</entry>
+<entry>
+<title>Bantawa Rai New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BAPUFW/"/>
+<id>https://find.bible/bibles/BAPUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Bantawa Rai New Testament in Bantawa (Nepal), 2025</summary>
+</entry>
+<entry>
+<title>Ngumbo Bible</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BEMUFWN/"/>
+<id>https://find.bible/bibles/BEMUFWN/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Ngumbo Bible in Bemba (Zambia), 2025</summary>
+</entry>
+<entry>
+<title>Pauri Bareli New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BFBUFW/"/>
+<id>https://find.bible/bibles/BFBUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Pauri Bareli New Testament in Pauri Bareli (India), 2025</summary>
+</entry>
+<entry>
+<title>Bhili Billori New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BHBUFW/"/>
+<id>https://find.bible/bibles/BHBUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Bhili Billori New Testament in Bhili (India), 2025</summary>
+</entry>
+<entry>
+<title>भड्लाई बाइबिल</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BHDEBL/"/>
+<id>https://find.bible/bibles/BHDEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>भड्लाई बाइबिल in Bhadrawahi (India), 2025</summary>
+</entry>
+<entry>
+<title>भगवानेन छाचला बुल</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BHIEBL/"/>
+<id>https://find.bible/bibles/BHIEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>भगवानेन छाचला बुल in Bhilali (India), 2025</summary>
+</entry>
+<entry>
+<title>भगवान कर सच्चा बचन</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BHUEBL/"/>
+<id>https://find.bible/bibles/BHUEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>भगवान कर सच्चा बचन in Bhunjia (India), 2025</summary>
+</entry>
+<entry>
+<title>Bile Bible</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BILUFW/"/>
+<id>https://find.bible/bibles/BILUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Bile Bible in Bile (Nigeria), 2025</summary>
+</entry>
+<entry>
+<title>Bekwel</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BKWEBL/"/>
+<id>https://find.bible/bibles/BKWEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Bekwel in Bekwel (Congo), 2025</summary>
+</entry>
+<entry>
+<title>Anii New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BLOUFW/"/>
+<id>https://find.bible/bibles/BLOUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Anii New Testament in Anii (Benin), 2025</summary>
+</entry>
+<entry>
+<title>Kasenga New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BNXUFWK/"/>
+<id>https://find.bible/bibles/BNXUFWK/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Kasenga New Testament in Bangubangu (DR Congo), 2025</summary>
+</entry>
+<entry>
+<title>Bondei Bible Version</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BOUEBL/"/>
+<id>https://find.bible/bibles/BOUEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Bondei Bible Version in Bondei (Tanzania), 2025</summary>
+</entry>
+<entry>
+<title>Barambu New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BRMUFW/"/>
+<id>https://find.bible/bibles/BRMUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Barambu New Testament in Barambu (DR Congo), 2025</summary>
+</entry>
+<entry>
+<title>አማቶ ኦኡሱብ</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BSWEBB/"/>
+<id>https://find.bible/bibles/BSWEBB/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>አማቶ ኦኡሱብ in Baiso (Ethiopia), 2025</summary>
+</entry>
+<entry>
+<title>Ammato Oɂusub</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BSWLEB/"/>
+<id>https://find.bible/bibles/BSWLEB/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Ammato Oɂusub in Baiso (Ethiopia), 2025</summary>
+</entry>
+<entry>
+<title>Basa-Gurmana</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BUJEBL/"/>
+<id>https://find.bible/bibles/BUJEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Basa-Gurmana in Basa-Gurmana (Nigeria), 2025</summary>
+</entry>
+<entry>
+<title>Bamunka NT</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BVMWBT/"/>
+<id>https://find.bible/bibles/BVMWBT/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Bamunka NT in Bamunka (Cameroon), 2025</summary>
+</entry>
+<entry>
+<title>Boga New Testament Portion</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BVWEBL/"/>
+<id>https://find.bible/bibles/BVWEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Boga New Testament Portion in Boga (Nigeria), 2025</summary>
+</entry>
+<entry>
+<title>Namosi-Naitasiri-Serua New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BWBUFW/"/>
+<id>https://find.bible/bibles/BWBUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Namosi-Naitasiri-Serua New Testament in Namosi-Naitasiri-Serua (Fiji), 2025</summary>
+</entry>
+<entry>
+<title>Bwile Bible Translation</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BWCEBL/"/>
+<id>https://find.bible/bibles/BWCEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Bwile Bible Translation in Bwile (Zambia), 2025</summary>
+</entry>
+<entry>
+<title>Bwile New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BWCUFW/"/>
+<id>https://find.bible/bibles/BWCUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Bwile New Testament in Bwile (Zambia), 2025</summary>
+</entry>
+<entry>
+<title>Barwe New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/BWGUFW/"/>
+<id>https://find.bible/bibles/BWGUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Barwe New Testament in Barwe (Mozambique), 2025</summary>
+</entry>
+<entry>
+<title>Chodri New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/CDIUFW/"/>
+<id>https://find.bible/bibles/CDIUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Chodri New Testament in Chodri (India), 2025</summary>
+</entry>
+<entry>
+<title>কড়া অনুবাদ</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/CDZEBL/"/>
+<id>https://find.bible/bibles/CDZEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>কড়া অনুবাদ in Koda (India), 2025</summary>
+</entry>
+<entry>
+<title>Dijim New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/CFAUFW/"/>
+<id>https://find.bible/bibles/CFAUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Dijim New Testament in Dijim-Bwilim (Nigeria), 2025</summary>
+</entry>
+<entry>
+<title>Chokwe New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/CJKUFW/"/>
+<id>https://find.bible/bibles/CJKUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Chokwe New Testament in Chokwe (Angola), 2025</summary>
+</entry>
+<entry>
+<title>Ngawn Chin Bible</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/CNWUFW/"/>
+<id>https://find.bible/bibles/CNWUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Ngawn Chin Bible in Ngawn Chin (Myanmar), 2025</summary>
+</entry>
+<entry>
+<title>Chonyi-Dzihana-Kauma New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/COHUFW/"/>
+<id>https://find.bible/bibles/COHUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Chonyi-Dzihana-Kauma New Testament in Chonyi-Dzihana-Kauma (Kenya), 2025</summary>
+</entry>
+<entry>
+<title>Kauma New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/COHUFWK/"/>
+<id>https://find.bible/bibles/COHUFWK/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Kauma New Testament in Chonyi-Dzihana-Kauma (Kenya), 2025</summary>
+</entry>
+<entry>
+<title>Sao Tomense New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/CRIUFW/"/>
+<id>https://find.bible/bibles/CRIUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Sao Tomense New Testament in Sãotomense (Sao Tome &amp; Principe), 2025</summary>
+</entry>
+<entry>
+<title>Tinaung Takluem</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/CSYEBL/"/>
+<id>https://find.bible/bibles/CSYEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Tinaung Takluem in Siyin Chin (Myanmar), 2025</summary>
+</entry>
+<entry>
+<title>Gichuka New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/CUHTBL/"/>
+<id>https://find.bible/bibles/CUHTBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Gichuka New Testament in Chuka (Kenya), 2025</summary>
+</entry>
+<entry>
+<title>Taita Dawida New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/DAVUFW/"/>
+<id>https://find.bible/bibles/DAVUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Taita Dawida New Testament in Taita (Kenya), 2025</summary>
+</entry>
+<entry>
+<title>परमेश्वरन सत्य वचन</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/DHNEBL/"/>
+<id>https://find.bible/bibles/DHNEBL/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>परमेश्वरन सत्य वचन in Dhanki (India), 2025</summary>
+</entry>
+<entry>
+<title>Dhaiso New Testament</title>
+<link rel="alternate" type="text/html" href="https://find.bible/bibles/DHSUFW/"/>
+<id>https://find.bible/bibles/DHSUFW/</id>
+<updated>2025-01-01T00:00:00Z</updated>
+<summary>Dhaiso New Testament in Dhaiso (Tanzania), 2025</summary>
+</entry>
+</feed>

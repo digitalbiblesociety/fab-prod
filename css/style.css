@@ -1,0 +1,173 @@
+/* style.css — the site-wide core, loaded by base.html on EVERY page: theme
+   vars, reset, header/nav, footer, the theme toggle and the zero-JS language
+   dropdown. Everything page- or section-specific lives in its own file
+   (banner.css, entity.css, worldmap.css, …) linked only by the pages that use
+   it — so mono builds inline just what each page needs. */
+:root {
+    --fg:#1a2433;
+    --muted:#6b7785;
+    --accent:#2f7d5b;
+    --bg:#fbfcfd;
+    --surface:#ffffff;
+    --surface-2:#f5f5f4;
+    --line:#e6eaef;
+    --green:#059669;
+    --green-soft:rgba(5,150,105,.1);
+    --code-bg:#eef2f0;
+}
+
+/* Dark theme — toggled by `html.dark` (see header toggle + FOUC script in base.html).
+   fuzzytable.css carries its own html.dark vars; these cover the rest of the site. */
+html.dark {
+    --fg:#e7e5e4;
+    --muted:#a8a29e;
+    --accent:#34d399;
+    --bg:#1c1917;
+    --surface:#1c1917;
+    --surface-2:#292524;
+    --line:#44403c;
+    --green:#34d399;
+    --green-soft:rgba(52,211,153,.14);
+    --code-bg:#292524;
+}
+html.dark body { background:#0c0a09; }
+
+* { box-sizing: border-box; }
+
+body { margin:0; color:var(--fg); background:var(--bg);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  display:flex; flex-direction:column; min-height:100vh; min-height:100dvh; }
+
+a { color:var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+code { background:var(--code-bg); padding:.08em .35em; border-radius:4px; font-size:.9em; }
+
+.site-header { border-bottom:1px solid var(--line); background:var(--surface); position:sticky; top:0; z-index:60; }
+html.dark .site-header { background:rgba(28,25,23,.92); backdrop-filter:blur(4px); }
+.site-header .container { display:flex; align-items:center; justify-content:space-between; padding:1rem 0; flex-wrap:wrap; }
+
+#logo {display:inline-flex;}
+
+.site-nav a { color:var(--muted); margin-inline-start:1.1rem; }
+.site-nav a:first-child { margin-inline-start:0; }
+.site-nav a:hover { color:var(--accent); }
+.header-tools { height:2rem; display:flex; align-items:center; gap:.2rem; }
+.container,
+body > main {width: min(100% - 2rem, 1200px);margin-inline: auto;}
+/* Push the footer to the bottom on short pages (body is flex-column min-height:100vh). */
+body > main { flex:1; }
+
+@media (max-width:639.98px) {
+  body > main {width: 100%;}
+  #logo, .site-nav .nav-countries { display:none; }
+}
+
+
+
+h1 { margin:.2rem 0 1rem; line-height:1.2; }
+h2 { margin-top:2rem; border-bottom:1px solid var(--line); padding-bottom:.3rem; }
+.autonym { color:var(--muted); font-style:italic; margin-top:-.6rem; }
+.muted { color:var(--muted); font-size:.85em; }
+
+dl { display:grid; grid-template-columns:max-content 1fr; gap:.35rem 1.25rem; margin:1rem 0; }
+dt { color:var(--muted); }
+dd { margin:0; }
+
+/* Footer — ported from fab-svelte's Footer.svelte; pushed to the bottom by the
+   flex-column body above (main { flex:1 }). */
+.site-footer { flex-shrink:0; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:.4rem; min-height:6rem; padding-block:1rem; margin-top:2rem;
+  text-align:center; font-size:.875rem; color:var(--muted);
+  background:var(--surface); border-top:1px solid var(--line); }
+.footer-nav { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+/* Countries lives in the header nav on desktop; only the mobile footer shows it. */
+.footer-countries { display:none; }
+.footer-nav a { font-weight:600; color:var(--fg); text-decoration:none; padding:.125rem .25rem; }
+.footer-nav a:hover { text-decoration:underline; }
+.footer-blurb { margin:0; max-width:38rem; padding-inline:1rem; }
+.footer-blurb a { font-weight:700; text-decoration:none; }
+.footer-blurb a:first-of-type { color:#065f46; }
+.footer-blurb a:last-of-type { color:#1e40af; }
+html.dark .footer-blurb a:first-of-type { color:#10b981; }
+html.dark .footer-blurb a:last-of-type { color:#3b82f6; }
+
+/* ============================================================================
+   Header tools — dark-mode toggle button + sun/moon icon swap
+   ============================================================================ */
+.theme-toggle, .tool-link, .zm-lang-trigger { display:inline-flex; align-items:center; justify-content:center; color:var(--muted);
+  background:transparent; border:none; border-radius:.5rem; padding:.4rem; cursor:pointer; }
+.theme-toggle:hover, .tool-link:hover, .zm-lang-trigger:hover { background:var(--surface-2); color:var(--fg); }
+.theme-toggle svg, .tool-link svg, .zm-lang-trigger svg { width:1.4rem; height:1.4rem; display:block; }
+.theme-toggle .icon-moon { display:none; }
+html.dark .theme-toggle .icon-sun { display:none; }
+html.dark .theme-toggle .icon-moon { display:block; }
+
+/* ============================================================================
+   Language dropdown — checkbox-hack menu of locale cards, styled after
+   fab-svelte's /translation language picker (.lp-card). Wired to the zero-JS
+   zm-loc radios in base.html: each card is a <label for="zm-loc-…">.
+   ============================================================================ */
+.lang-dd { position:relative; }
+.zm-lang-toggle { position:absolute; opacity:0; width:1px; height:1px; pointer-events:none; }
+/* .zm-lang-trigger base/hover/svg are merged into the .theme-toggle/.tool-link group above. */
+#zm-lang-toggle:checked ~ .zm-lang-trigger { background:var(--green-soft); color:var(--green); }
+
+.zm-lang-panel { display:none; position:absolute; right:0; top:calc(100% + .5rem); z-index:70;
+  width:min(20rem, 80vw); padding:.85rem; background:var(--surface); border:1px solid var(--line);
+  border-radius:.6rem; box-shadow:0 10px 30px rgb(0 0 0 / .14); }
+#zm-lang-toggle:checked ~ .zm-lang-panel { display:block; }
+[dir="rtl"] .zm-lang-panel { right:auto; left:0; }
+/* Mobile: the trigger-anchored panel can stick out of the viewport (the wrapping
+   header may park the tools anywhere, and RTL flips the anchor edge). Anchor to
+   the header container instead and center it, so it can never leave the screen. */
+@media (max-width:639.98px) {
+  .site-header .container { position:relative; }
+  .lang-dd { position:static; }
+  .zm-lang-panel, [dir="rtl"] .zm-lang-panel {
+    right:auto; left:50%; transform:translateX(-50%);
+    top:calc(100% + .5rem); width:min(20rem, calc(100vw - 2rem));
+  }
+  /* Keep nav + tool icons on ONE row (iPhone-width screens): never wrap the
+     header; the nav shrinks (links re-flow inside it) instead of pushing the
+     tools onto a second line, and spacing/padding tighten to make room. */
+  .site-header .container { flex-wrap:nowrap; }
+  .site-nav { flex:1 1 auto; min-width:0; }
+  .site-nav a { margin-inline-start:.7rem; font-size:.95rem; }
+  .theme-toggle, .tool-link, .zm-lang-trigger { padding:.3rem; }
+  .footer-countries { display:inline; }
+}
+.zm-lang-heading { margin:0 0 .6rem; font-size:.72rem; font-weight:600; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--muted); }
+.zm-lang-grid { display:grid; grid-template-columns:1fr 1fr; gap:.4rem; }
+.zm-lang-card { display:flex; align-items:center; gap:.5rem; min-width:0; padding:.5rem .7rem;
+  background:var(--surface); border:1px solid var(--line); border-radius:999px; cursor:pointer;
+  transition:background .12s, border-color .12s; }
+.zm-lang-card:hover { background:var(--surface-2); border-color:#a8a29e; }
+html.dark .zm-lang-card:hover { border-color:#57534e; }
+.zm-lang-native { flex:1 1 auto; min-width:0; font-size:.9rem; font-weight:600; color:var(--fg);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.zm-lang-code { flex:0 0 auto; font:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.62rem;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+
+/* Highlight the active locale's card (one rule per offered locale: en/ara/jpn/kor/zho).
+   `~ *` reaches the card wherever it sits in a following sibling of the radios. */
+#zm-loc-en:checked  ~ * .zm-lang-card[for="zm-loc-en"],
+#zm-loc-ara:checked ~ * .zm-lang-card[for="zm-loc-ara"],
+#zm-loc-jpn:checked ~ * .zm-lang-card[for="zm-loc-jpn"],
+#zm-loc-kor:checked ~ * .zm-lang-card[for="zm-loc-kor"],
+#zm-loc-zho:checked ~ * .zm-lang-card[for="zm-loc-zho"] {
+  background:var(--green-soft); border-color:var(--green);
+}
+#zm-loc-en:checked  ~ * .zm-lang-card[for="zm-loc-en"]  .zm-lang-code,
+#zm-loc-ara:checked ~ * .zm-lang-card[for="zm-loc-ara"] .zm-lang-code,
+#zm-loc-jpn:checked ~ * .zm-lang-card[for="zm-loc-jpn"] .zm-lang-code,
+#zm-loc-kor:checked ~ * .zm-lang-card[for="zm-loc-kor"] .zm-lang-code,
+#zm-loc-zho:checked ~ * .zm-lang-card[for="zm-loc-zho"] .zm-lang-code { color:var(--green); }
+
+/* ============================================================================
+   No-JS — hide controls that require JavaScript (class removed on load)
+   ============================================================================ */
+/* The dropdown (checkbox + radio + CSS) and locale switching work without JS, so
+   only hide the theme toggle here. The map controls/legend get the same treatment
+   in worldmap.css. */
+.no-js #dark-mode-toggle { visibility:hidden; }

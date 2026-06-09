@@ -1,0 +1,115 @@
+/* fuzzytable.css — plain-CSS port of fuzzytable's default (Tailwind) classes.
+   Hooks are the semantic ft-* names from islands/fuzzytable-classes.js. Light/dark
+   flip via CSS vars under html.dark (the site's dark convention). Loaded alongside
+   /js/fuzzytable-boot.js on pages that use the table. */
+/* --ft-even is SOLID (light #fff ≡ the old transparent over the #fff tbody): the sticky
+   first column reuses it, and sticky cells must be opaque or panned content shows through. */
+   :root{--ft-accent:#F8BB39;--ft-text:#292524;--ft-bg:#fff;--ft-bg2:#f5f5f4;--ft-border:#e7e5e4;--ft-muted:#78716c;--ft-even:#fff;--ft-fade:rgba(0,0,0,.18);--ft-sbar:16px}
+   html.dark{--ft-text:#f8f8f0;--ft-bg:#292524;--ft-bg2:#44403c;--ft-border:#1c1917;--ft-muted:#d6d3d1;--ft-even:#1c1917;--ft-fade:rgba(0,0,0,.55)}
+   .ft-table{width:100%;border-collapse:collapse}
+   /* Scroll wrapper around the <table> only (NOT .ft-table-container — that would clip
+      the absolutely-positioned download dropdown): nowrap cells can push the table wider
+      than the page below ~800px; let it pan instead of bleeding out of its container. */
+   .ft-table-scroll{overflow-x:auto;min-width:0;width:100%;scrollbar-width:none}
+   .ft-table-scroll::-webkit-scrollbar{display:none}
+   /* The horizontal scrollbar lives INSIDE the column-header row: when the table is
+      scrollable (.ft-scrollable on the wrap, set by JS) the thead reserves a strip of
+      --ft-sbar (+1px separator) at its bottom (padding rules below) and this proxy bar —
+      two-way synced with the hidden native scroller — overlays it. JS publishes the
+      measured thead height as --ft-thead-h on the wrap; the proxy's top and the body
+      fade's top both derive from it. Forced content-box so the geometry holds under any
+      site-wide border-box reset: 1px border-top + --ft-sbar of bar = the reserved strip.
+      Themed via the ft vars: scrollbar-color for Firefox/Chrome, ::-webkit-* for Safari. */
+   .ft-scroll-proxy{display:none;position:absolute;inset-inline:0;top:calc(var(--ft-thead-h,0px) - var(--ft-sbar) - 1px);z-index:2;height:var(--ft-sbar);box-sizing:content-box;border:0;border-top:1px solid var(--ft-border);overflow-x:auto;overflow-y:hidden;scrollbar-color:var(--ft-muted) var(--ft-bg2)}
+   .ft-scrollable .ft-scroll-proxy{display:block}
+   .ft-scroll-proxy::-webkit-scrollbar{height:var(--ft-sbar)}
+   .ft-scroll-proxy::-webkit-scrollbar-track{background:var(--ft-bg2)}
+   .ft-scroll-proxy::-webkit-scrollbar-thumb{background:var(--ft-muted);border-radius:calc(var(--ft-sbar)/2);border:2px solid var(--ft-bg2)}
+   .ft-scroll-proxy-inner{height:1px}
+   /* The reserved strip: extra thead bottom padding for the separator + bar; the ▼ sort
+      arrow (anchored to the th's bottom) lifts with it. */
+   .ft-scrollable .ft-th{padding-bottom:calc(.75rem + var(--ft-sbar) + 1px)}
+   .ft-scrollable .ft-arrow-down{bottom:calc(.375rem + var(--ft-sbar) + 1px)}
+   /* Positioned shell around the scroller: hosts the edge-fade overlay (pseudo-elements on
+      the scroller itself would scroll away with the content). JS toggles ft-scroll-start/-end. */
+   .ft-scroll-wrap{position:relative;min-width:0;width:100%}
+   /* top:--ft-thead-h ⇒ the fade covers only the body rows, not the column headers. */
+   .ft-scroll-wrap::after{content:"";position:absolute;top:var(--ft-thead-h,0px);bottom:0;inset-inline-end:0;width:1.5rem;pointer-events:none;opacity:0;transition:opacity .15s;background:linear-gradient(to left,var(--ft-fade),transparent);z-index:2}
+   [dir=rtl] .ft-scroll-wrap::after{background:linear-gradient(to right,var(--ft-fade),transparent)}
+   .ft-scroll-end::after{opacity:1}
+   /* Sticky first column: the identity column stays put while the rest pans. Opaque
+      backgrounds (see --ft-even) + z-index:1 to paint over the position:relative sibling
+      cells. Collapsed-border caveat: cell borders don't travel with sticky cells, but that
+      only shows while panned — exactly when the ft-scroll-start shadow covers that edge. */
+   .ft-th:first-child,.ft-td:first-child{position:sticky;inset-inline-start:0;z-index:1}
+   .ft-th:first-child{background:var(--ft-bg2)}
+   .ft-td:first-child{background:var(--ft-bg)}
+   .ft-tr:nth-child(even) .ft-td:first-child{background:var(--ft-even)}
+   /* Thicker trailing edge on the first column — drawn as an in-cell line (not a border)
+      so it travels with the sticky cells; collapsed table borders don't. :not(:only-child)
+      skips the full-width colspan "No matches" cell. */
+   .ft-th:first-child::after,.ft-td:first-child:not(:only-child)::after{content:"";position:absolute;top:0;bottom:0;inset-inline-end:0;width:2px;background:var(--ft-border)}
+   /* Start-side affordance: once panned, the sticky column casts a shadow over the rows
+      sliding beneath it (the start-edge counterpart of the end fade). */
+   .ft-scroll-start .ft-th:first-child,.ft-scroll-start .ft-td:first-child{box-shadow:6px 0 8px -4px var(--ft-fade)}
+   [dir=rtl] .ft-scroll-start .ft-th:first-child,[dir=rtl] .ft-scroll-start .ft-td:first-child{box-shadow:-6px 0 8px -4px var(--ft-fade)}
+   .ft-thead{background:var(--ft-bg2)}
+   .ft-tbody{background:var(--ft-bg);border:1px solid #78716c}
+   html.dark .ft-tbody{border:0}
+   .ft-tbody .ft-tr+.ft-tr{border-top:1px solid var(--ft-border)}
+   .ft-tr:nth-child(even){background:var(--ft-even)}
+   .ft-th{position:relative;padding:.75rem .25rem;text-align:left;font-size:.875rem;font-weight:600;color:var(--ft-text);cursor:pointer}
+   [dir=rtl] .ft-th{text-align:right;padding-right:1.75rem}
+   .ft-td{white-space:nowrap;padding:.5rem .75rem;font-size:.875rem;color:var(--ft-text);border:1px solid var(--ft-border);position:relative;overflow:hidden;text-overflow:ellipsis;max-width:240px}
+   .ft-th.ft-code,.ft-td.ft-code{width:1%;white-space:nowrap;text-align:center}
+   .ft-th.ft-code{padding:.75rem 1rem .75rem .5rem;text-align: left;}
+   .ft-arrow-up,.ft-arrow-down{position:absolute;right:.5rem;font-size:.875rem}
+   .ft-arrow-up{top:.375rem}
+   .ft-arrow-down{bottom:.375rem}
+   .ft-cell-link{color:var(--accent);text-decoration:none}
+   .ft-cell-subtitle{display:block;color:var(--ft-muted);font-size:.8em}
+   .ft-table-container{display:flex;flex-direction:column;width:100%;position:relative;z-index:10;max-width:80rem;margin:0 auto}
+   /* Layout wrapper: plain when there are no filters; a row (aside + table) when there are. */
+   .ft-layout.ft-has-aside{display:flex;align-items:flex-start;max-width:80rem;margin:0 auto}
+   .ft-has-aside .ft-table-container{margin:0;max-width:none;flex:1;min-width:0}
+   .ft-table-header{display:flex;flex-direction:row;margin-bottom:.125rem;height:3rem}
+   .ft-search-wrapper{position:relative;width:100%;height:3rem;flex-shrink:1;border-right:2px solid var(--ft-border)}
+   .ft-search-input{position:relative;text-indent:1.5rem;display:block;width:100%;height:3rem;padding:0 1rem;font-size:.875rem;color:var(--ft-text);background:var(--ft-bg2);border:0;border-top-left-radius:.75rem}
+   [dir=rtl] .ft-search-input{border-top-left-radius:0;border-top-right-radius:.75rem}
+   /* Short tables (<25 rows): search is the whole header — no dangling divider, round both corners. */
+   .ft-search-wrapper:only-child{border-right:0}
+   [dir=rtl] .ft-search-wrapper:only-child{border-left:0}
+   .ft-search-wrapper:only-child .ft-search-input{border-top-left-radius:.75rem;border-top-right-radius:.75rem}
+   /* Magnifier inside the search box — sits in the gap the input's text-indent reserves.
+      inset-inline-start flips it to the right edge under RTL along with the indent. */
+   .ft-search-icon{position:absolute;display:block;inset-inline-start:0;top:0;width:1.5rem;height:1.5rem;z-index:30;margin:.75rem .5rem;color:var(--ft-muted);pointer-events:none}
+   .ft-size-select-container{height:3rem;width:9rem;position:relative}
+   .ft-size-select{appearance:none;width:100%;height:100%;background:var(--ft-bg2);color:var(--ft-text);text-align:center;border:0;border-top-right-radius:.75rem}
+   [dir=rtl] .ft-size-select{border-top-right-radius:0;border-top-left-radius:.75rem}
+   .ft-pagination-top-arrow,.ft-download-btn{position:relative;display:inline-flex;align-items:center;background:var(--ft-bg2);padding:0 .5rem;height:3rem;color:var(--ft-text);border:0;cursor:pointer}
+   .ft-pagination-top-arrow:focus,.ft-download-btn:focus{z-index:10}
+   .ft-pagination-top-slash{padding:0 .25rem}
+   .ft-top-pagination-nav{position:relative;display:flex;align-items:center;height:3rem;font-size:.875rem;border-right:2px solid var(--ft-border);background:var(--ft-bg2);color:var(--ft-text)}
+   /* RTL: dividers sit on the trailing (left) edge, like the flipped radii above. */
+   [dir=rtl] .ft-search-wrapper,[dir=rtl] .ft-top-pagination-nav,[dir=rtl] .ft-download-wrapper{border-right:0;border-left:2px solid var(--ft-border)}
+   .ft-top-pagination-current{display:flex;flex-direction:row;font-size:.875rem;font-weight:700;text-align:center;white-space:nowrap;padding:0 .5rem}
+   .ft-download-wrapper{position:relative;border-right:2px solid var(--ft-border)}
+   .ft-fieldset-wrap{display:block;width:100%;background:var(--ft-bg2);font-size:.875rem;font-weight:600;padding:.75rem;color:var(--ft-text);border-bottom:1px solid var(--ft-border);border-radius:.5rem .5rem 0 0}
+   .ft-fieldset{margin-bottom:1rem;border:1px solid var(--ft-border);padding:.5rem}
+   .ft-filter-container{display:flex;flex-direction:column;width:100%}
+   .ft-filter-btn{font-size:.875rem;position:relative;padding:.25rem .5rem;margin:.5rem 0;width:100%;display:flex;flex-direction:row;justify-content:center;cursor:pointer;border-radius:.5rem;border:1px solid var(--ft-border);background:var(--ft-bg);color:var(--ft-text);box-shadow:0 1px 2px rgba(0,0,0,.05)}
+   .ft-filter-btn-active{background:#a8a29e;color:#fff;border-color:#292524}
+   html.dark .ft-filter-btn-active{background:#0c0a09}
+   .ft-aside-wrapper{display:none;flex-direction:column;margin-right:1rem}
+   [dir=rtl] .ft-aside-wrapper{margin-right:0;margin-left:1rem}
+   @media(min-width:640px){.ft-aside-wrapper{display:flex}}
+   @media(min-width:1024px){.ft-aside-wrapper{width:20%}}
+   /* Externally-hosted filter panel (data-aside-host) — fills its host column
+      (e.g. above the info aside on language pages) instead of flanking the table. */
+   .ft-filter-host .ft-aside-wrapper{width:100%;margin:0 0 1rem}
+   /* Column utility: set via a column's `class` (lands on both th and td) to drop
+      the column on mobile. Breakpoint matches the aside's 640px. The CSV download
+      button is dropped with it — exporting is a desktop affordance. */
+   @media(max-width:639.98px){.ft-hide-mobile,.ft-download-wrapper{display:none}}
+   .ft-fallback{margin:1rem 0}
+   .ft-fallback a{color:var(--ft-accent)}

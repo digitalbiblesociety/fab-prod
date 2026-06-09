@@ -1,0 +1,6 @@
+/* about.css — the About / FAQ / Contact prose pages: readable prose column. */
+.about-content { max-width:56rem; margin-inline:auto; padding:1rem 1.5rem 3rem; line-height:1.75; }
+.about-content h2 { font-size:1.5rem; margin-top:2rem; border:0; padding:0; }
+.about-content h3 { font-size:1.25rem; margin-top:1.6rem; }
+.about-content p { margin:1.1rem 0; }
+.about-content a { color:var(--green); text-decoration:underline; }

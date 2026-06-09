@@ -1,0 +1,283 @@
+/* Bible show-page links section — grouped by link-type → provider.
+ * Ported from ~/Sites/fab src/pages/bibles/[id].astro's <style> block so the
+ * zigsag-rendered grouping (pages/bibles/show.html) matches the astro layout. */
+
+/* ── Links section layout ── */
+.links-section {
+  color: #57534e;
+}
+
+.links-main {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.links-inner {
+  grid-column: span 2;
+}
+
+/* ── Link type group (card) ── */
+.link-type-group {
+  background-color: #fafaf9;
+  margin: 0 0 1rem;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  padding: 0.375rem;
+}
+
+@media (min-width: 640px) {
+  .link-type-group {
+    margin: 0 0.5rem 1.5rem;
+    padding: 0.5rem;
+  }
+}
+
+/* ── Link type header ── */
+.link-type-header {
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+}
+
+@media (min-width: 640px) {
+  .link-type-header {
+    padding: 0.625rem 1.25rem;
+    gap: 0.875rem;
+  }
+}
+
+.link-type-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .link-type-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* ── Link type color classes ── */
+.link-type-quick-access { background-color: #3b82f6; }
+.link-type-print        { background-color: #f59e0b; }
+.link-type-pdf          { background-color: #ef4444; }
+.link-type-web          { background-color: #a855f7; }
+.link-type-audio        { background-color: #10b981; }
+.link-type-audio-web    { background-color: #22c55e; }
+.link-type-app          { background-color: #6366f1; }
+.link-type-archive      { background-color: #f43f5e; }
+.link-type-historic     { background-color: #ec4899; }
+
+/* ── Provider group ── */
+.provider-group {
+  background-color: #f5f5f4;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0.375rem 0 0;
+  padding: 0.5rem 0.625rem 0.625rem;
+}
+
+@media (min-width: 640px) {
+  .provider-group {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0.5rem;
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
+  }
+}
+
+.provider-label {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: center;
+  color: #57534e;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.125rem 0.25rem 0.375rem;
+}
+
+@media (min-width: 640px) {
+  .provider-label {
+    width: 8rem;
+    flex-shrink: 0;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #44403c;
+    padding: 0;
+  }
+}
+
+.provider-links {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.375rem;
+}
+
+@media (min-width: 640px) {
+  .provider-links {
+    width: auto;
+    flex: 1;
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .provider-links {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── Individual bible link ── */
+.link-slot:empty {
+  display: none;
+}
+
+.link-slot {
+  min-width: 0;
+}
+
+.bible-link {
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: 0.375rem;
+  background-color: #e7e5e4;
+  color: #44403c;
+  text-decoration: none;
+}
+
+.bible-link:hover {
+  background-color: #d6d3d1;
+}
+
+.bible-link-title {
+  flex-grow: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+  font-size: 0.9375rem;
+}
+
+.bible-link-size {
+  font-size: 0.75rem;
+  align-self: center;
+  color: #78716c;
+  flex-shrink: 0;
+}
+
+.link-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+  opacity: 0.65;
+}
+
+/* ── Dark mode ── */
+html.dark .links-section { color: #a8a29e; }
+html.dark .link-type-group {
+  background-color: #292524;
+  border-color: #57534e;
+}
+html.dark .provider-group {
+  background-color: #292524;
+  border-color: #57534e;
+}
+html.dark .provider-label { color: #e7e5e4; }
+html.dark .bible-link {
+  background-color: #1c1917;
+  color: #e7e5e4;
+}
+html.dark .bible-link-size { color: #a8a29e; }
+html.dark .bible-link:hover { background-color: #292524; }
+
+html.dark .link-type-quick-access { background-color: #2563eb; }
+html.dark .link-type-print { background-color: #d97706; }
+html.dark .link-type-pdf { background-color: #dc2626; }
+html.dark .link-type-web { background-color: #9333ea; }
+html.dark .link-type-audio { background-color: #059669; }
+html.dark .link-type-audio-web { background-color: #16a34a; }
+html.dark .link-type-app { background-color: #4f46e5; }
+html.dark .link-type-archive { background-color: #f43f5e; }
+html.dark .link-type-historic { background-color: #ec4899; }
+
+/* Link-section title — the per-type heading beside its icon in the colored header
+   (inherits the header's white text). */
+.link-type-title {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .link-type-title { font-size: 1.125rem; }
+}
+
+/* ── Description ⇄ Links view toggle (zero-JS radio hack) ──
+   Emitted only when a bible's description runs long (page.content_long) AND it has
+   links. The radios sit at the top of <main>; the tab bar is rendered into each
+   locale-pane's banner and the panels live in <article>, so the radios precede both
+   and `:checked ~` reaches each. Links is the default view. */
+.bible-view-radio { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+
+/* Park the tab bar at the banner's bottom edge: the banner is a fixed 10rem tall and
+   is this pane's first child, so top:10rem is its bottom; translateY(-100%) lifts the
+   bar so its own bottom aligns there (margin-independent). Reuses `.banner-tabs` (the
+   nav carries that class) for the centered, rounded-top tab-bar look. */
+.locale-pane { position: relative; }
+.bible-view-tabs { position: absolute; left: 50%; top: 10rem; transform: translate(-50%, -100%); z-index: 30; }
+.bible-view-tab { cursor: pointer; }
+/* Active tab = whichever radio is checked (mirrors the .banner-tabs aria-current look). */
+#bible-view-description:checked ~ .locale-pane .bible-tab-description,
+#bible-view-links:checked ~ .locale-pane .bible-tab-links { color: #16a34a; border-bottom-color: #10b981; }
+html.dark #bible-view-description:checked ~ .locale-pane .bible-tab-description,
+html.dark #bible-view-links:checked ~ .locale-pane .bible-tab-links { border-bottom-color: #047857; }
+/* Keyboard focus: ring the label of whichever radio is focused (the radios are hidden). */
+#bible-view-description:focus-visible ~ .locale-pane .bible-tab-description,
+#bible-view-links:focus-visible ~ .locale-pane .bible-tab-links { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Panels: hide both, reveal the one whose radio is checked (in the following <article>). */
+.bible-view { display: none; }
+#bible-view-description:checked ~ .entity .bible-view-description,
+#bible-view-links:checked ~ .entity .bible-view-links { display: block; }
+
+/* ── Source-language fallback for aside names (zero-JS) ──
+   The aside renders the language/country name as one `.zm-name` span per available
+   translation (revealed by the active locale via the global .zm-pane rules). Upstream
+   coverage is uneven — e.g. most languages have no Korean name — so under a locale
+   with no translation, none reveal and the link would be blank. `.zm-name-fb` carries
+   the source (English) name + ISO code and is shown ONLY when the active locale has no
+   `.zm-name` for it in that <dd> (matching how the entity's own detail page falls back).
+   One selector per offered non-default locale — keep in sync with zigsag.yaml `languages:`. */
+.zm-name-fb { display: none; }
+#zm-loc-spa:checked ~ * dd:not(:has(.zm-name.zm-spa)) .zm-name-fb,
+#zm-loc-por:checked ~ * dd:not(:has(.zm-name.zm-por)) .zm-name-fb,
+#zm-loc-fra:checked ~ * dd:not(:has(.zm-name.zm-fra)) .zm-name-fb,
+#zm-loc-hin:checked ~ * dd:not(:has(.zm-name.zm-hin)) .zm-name-fb,
+#zm-loc-ara:checked ~ * dd:not(:has(.zm-name.zm-ara)) .zm-name-fb,
+#zm-loc-jpn:checked ~ * dd:not(:has(.zm-name.zm-jpn)) .zm-name-fb,
+#zm-loc-kor:checked ~ * dd:not(:has(.zm-name.zm-kor)) .zm-name-fb,
+#zm-loc-zho:checked ~ * dd:not(:has(.zm-name.zm-zho)) .zm-name-fb { display: block; }

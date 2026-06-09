@@ -1,0 +1,1 @@
+window.zmFT&&window.zmFT.recv("hopefilm","kor",{"rows":{},"joins":{"name":{"by":"code","vals":{"tgl":"타갈로그어","tel":"텔루구어","hun":"헝가리어","tha":"태국어","pes":"이란 페르시아어","hin":"힌디어","hat":"아이티 크리올어","adx":"암도 티베트어","bod":"티베트어","cab":"가리푸나어","amh":"암하라어","lao":"라오어","heb":"현대 이스라엘 히브리어"}}}});

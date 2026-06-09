@@ -1,0 +1,62 @@
+/* worldmap.css — the front-page world map (partials/worldmap.html + the
+   worldmap-boot.js island). Linked only by the home page. Ported from
+   fab-svelte's FrontPageMap.svelte. */
+.frontpage-map { position:relative; width:100%; }
+#worldmap { width:100%; height:50vh; background-color:#78B9C4; position:relative; z-index:0; display:block;
+  touch-action:none; cursor:grab; }
+#worldmap:active { cursor:grabbing; }
+html.dark #worldmap { background-color:#1c1917; }
+#worldmap path { opacity:.7; fill:#ddd; stroke:#1c1917; stroke-width:2px; }
+#worldmap path:hover { opacity:1; stroke:#000; }
+#worldmap.current-view-wwl path[data-wwl="1"] { fill:#EBA500; }
+#worldmap.current-view-wwl path[data-wwl="2"] { fill:#E05C16; }
+#worldmap.current-view-wwl path[data-wwl="3"] { fill:#C01F1C; }
+#worldmap.current-view-bwl path[data-bwl="1"] { fill:#C01F1C; }
+#worldmap.current-view-bwl path[data-bwl="2"] { fill:#E05C16; }
+#worldmap.current-view-bwl path[data-bwl="3"] { fill:#EBA500; }
+#worldmap.current-view-bwl path[data-bwl="4"] { fill:#F5D76E; }
+
+#map-controls { position:absolute; z-index:30; top:1rem; left:1rem; display:flex; flex-direction:column; }
+#map-controls button { color:#fff; font-size:1.5rem; background-color:#1c1917; border-radius:.5rem;
+  width:2rem; height:2rem; border:none; cursor:pointer; margin-top:.5rem; display:flex;
+  align-items:center; justify-content:center; overflow:hidden; }
+html.dark #map-controls button { background-color:#0c0a09; }
+#map-controls button span { display:none; }
+#map-controls button:hover { width:auto; }
+#map-controls button:hover span { display:inline-block; font-size:.875rem; padding-inline:.5rem; white-space:nowrap; }
+#map-controls button svg { width:1.25rem; height:1.25rem; flex-shrink:0; }
+
+#tooltip { position:fixed; top:0; left:0; display:none; background-color:#292524; color:#fff;
+  padding:.1rem .5rem; border-radius:.375rem; pointer-events:none; z-index:9999; will-change:transform;
+  font-size:.85rem; }
+
+.map-title { position:absolute; top:1rem; right:1rem; z-index:20; font-size:.875rem; font-weight:600;
+  padding:.4rem .625rem; border-radius:.5rem; background-color:rgba(255,255,255,.92); color:#1c1917;
+  box-shadow:0 2px 6px rgb(0 0 0 / .15); max-width:calc(100% - 2rem); }
+html.dark .map-title, html.dark .map-legend { background-color:rgba(28,25,23,.9); color:#f5f5f4; }
+.map-title-link { display:inline-flex; align-items:center; gap:.35rem; color:inherit; text-decoration:none; }
+.map-title-link:hover { text-decoration:underline; }
+
+.map-legend { position:absolute; left:50%; bottom:.75rem; transform:translateX(-50%); z-index:20;
+  display:flex; align-items:center; padding:.5rem .75rem; background-color:rgba(255,255,255,.92);
+  color:#1c1917; border-radius:.5rem; box-shadow:0 2px 6px rgb(0 0 0 / .15); font-size:.75rem;
+  max-width:calc(100% - 2rem); pointer-events:none; }
+.legend-scale { list-style:none; margin:0; padding:0; display:flex; align-items:center; gap:.5rem;
+  flex-wrap:wrap; justify-content:center; }
+.legend-scale li { display:inline-flex; align-items:center; gap:.25rem; white-space:nowrap; }
+.swatch { display:inline-block; width:.9rem; height:.9rem; border-radius:.15rem; border:1px solid rgb(0 0 0 / .15); }
+html.dark .swatch { border-color:rgb(255 255 255 / .2); }
+.legend-anchor { opacity:.7; font-style:italic; }
+
+/* Both view labels/legends ship in the DOM; reveal only the one matching the SVG's
+   current-view-* class (toggled by the map JS). Pure CSS, no JS for the legend. */
+.map-title-bwl, .map-legend-bwl { display:none; }
+#worldmap.current-view-bwl ~ .map-title-wwl, #worldmap.current-view-bwl ~ .map-legend-wwl { display:none; }
+#worldmap.current-view-bwl ~ .map-title-bwl, #worldmap.current-view-bwl ~ .map-legend-bwl { display:flex; }
+
+/* No-JS: pan/zoom and the WWL/BWL legend (driven by the view-toggle buttons)
+   genuinely require JavaScript — hide them until the boot removes .no-js. */
+.no-js #map-controls, .no-js .map-legend { visibility:hidden; }
+
+/* Mobile: the map is too cramped to be useful — hide it entirely. */
+@media (max-width:639.98px) { .frontpage-map { display:none; } }

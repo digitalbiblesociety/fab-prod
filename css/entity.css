@@ -1,0 +1,39 @@
+/* entity.css — entity detail (show) pages with the split layout: countries,
+   languages, organizations. Info aside + main column, plus the per-page content
+   tables (country-languages / bibles-resources via lang_table & org_table). */
+
+/* Entity detail split layout — the info card (<aside class="entity-aside">:
+   notes + dl + external links) sits at inline-start, with the main content
+   (fuzzytable etc.) beside it. Flex follows the pane's writing direction, so
+   RTL locale panes mirror automatically. Stacks on narrow screens. */
+.entity-split { display:flex; align-items:flex-start; gap:2rem; max-width:80rem; margin:0 auto; padding:0 1.25rem; }
+/* The left slot is either the aside card itself, or a .entity-side wrapper
+   stacking the card plus anything below it (e.g. the country description). */
+.entity-split > .entity-aside, .entity-split > .entity-side { flex:0 0 17rem; min-width:0; }
+.entity-aside { background:var(--surface); border:1px solid var(--line); border-radius:.6rem;
+  padding:.25rem 1.25rem .75rem; font-size:.95rem; }
+.entity-side > .description { margin:1rem .25rem 0; font-size:.9rem; color:var(--muted); }
+.entity-split > .entity-main { flex:1 1 0; min-width:0; }
+.entity-aside dl { margin:.75rem 0; }
+.entity-aside .note { margin-bottom:0; }
+.entity-aside .external { display:flex; flex-wrap:wrap; gap:.25rem .9rem; margin:.75rem 0; }
+.entity-aside .alt-names { margin:.5rem 0; padding-inline-start:1.2rem; color:var(--muted); font-size:.85em; }
+@media (max-width:60rem) {
+  .entity-split { flex-direction:column; }
+  .entity-split > .entity-aside, .entity-split > .entity-side, .entity-split > .entity-main { width:100%; flex:none; }
+}
+
+/* Organization detail — inline-SVG logo from the record's `logo` field. */
+.entity.organizations .org-logo { max-width:200px; margin:0 0 1.25rem; }
+.entity.organizations .org-logo svg { display:block; width:100%; height:auto; max-height:140px; }
+.entity.organizations .note { margin-top:0; }
+
+/* Entity tables — the per-page content tables on country show pages
+   (country-languages) and language/organization show pages (bibles, resources). */
+.entity-table { width:100%; border-collapse:collapse; margin:1rem 0 2rem; font-size:.9rem; }
+.entity-table th, .entity-table td { text-align:left; padding:.5rem .65rem; border-bottom:1px solid var(--line); vertical-align:top; }
+[dir=rtl] .entity-table th, [dir=rtl] .entity-table td { text-align:right; }
+.entity-table thead th { color:var(--muted); font-weight:600; font-size:.8rem; text-transform:uppercase; letter-spacing:.03em; border-bottom:2px solid var(--line); }
+.entity-table tbody tr:hover { background:var(--surface-2); }
+.entity-table td .vernacular { display:inline-block; margin-left:.4rem; font-style:italic; }
+[dir=rtl] .entity-table td .vernacular { margin-left:0; margin-right:.4rem; }

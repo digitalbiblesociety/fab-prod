@@ -1,0 +1,132 @@
+/* search.css — the global /search/ page (.search-data → bootSearch in
+   fuzzytable-boot.js). Federated, Algolia-style: a centered search box over
+   grouped results. Each group renders its hits as a multi-column CARD GRID
+   (not a single stacked column), and a fullscreen toggle expands the groups
+   into side-by-side panels. The widget renders only search-* classes, so the
+   search page loads this INSTEAD of fuzzytable.css. Colors flip via CSS vars
+   under html.dark (the site's dark convention; see base.html). */
+.search {
+  --s-accent:#5468ff; --s-ink:#1c1e21; --s-muted:#7a7f87; --s-line:#e6e8ee;
+  --s-bg:#fff; --s-card:#fcfcfe; --s-head:#f6f7fb; --s-hover:#eef1ff; --s-overlay:#f7f8fc;
+}
+html.dark .search {
+  --s-accent:#8a9bff; --s-ink:#e7e5e4; --s-muted:#a8a29e; --s-line:#3a3f4b;
+  --s-bg:#1f2230; --s-card:#262a3a; --s-head:#262a3a; --s-hover:#2c3350; --s-overlay:#15171f;
+}
+/* Wide enough that result grids show several columns; the input/count stay narrow. */
+.search-widget { max-width: 64rem; margin: 1.25rem auto 3rem; }
+
+/* The input + fullscreen toggle sit on one centered row. */
+.search-bar { display: flex; gap: .55rem; align-items: stretch; max-width: 42rem; margin: 0 auto; }
+.search-input {
+  flex: 1 1 auto; min-width: 0; box-sizing: border-box;
+  padding: .95rem 1rem .95rem 2.9rem;
+  font-size: 1.15rem; color: var(--s-ink); background: var(--s-bg);
+  border: 1px solid var(--s-line); border-radius: .85rem; outline: none;
+  box-shadow: 0 1px 2px rgba(20,23,40,.04);
+}
+.search-input:focus { border-color: var(--s-accent); box-shadow: 0 0 0 4px rgba(84,104,255,.15); }
+
+/* Icon button — masked SVG tinted with currentColor so it themes for free. */
+.search-fs-toggle {
+  flex: none; width: 3.1rem; cursor: pointer; color: var(--s-muted);
+  display: flex; align-items: center; justify-content: center;
+  background: var(--s-bg); border: 1px solid var(--s-line); border-radius: .85rem;
+  box-shadow: 0 1px 2px rgba(20,23,40,.04);
+}
+.search-fs-toggle:hover { color: var(--s-accent); border-color: var(--s-accent); }
+.search-fs-toggle::before {
+  content: ""; width: 1.3rem; height: 1.3rem; background: currentColor;
+  --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3M8 21H5a2 2 0 0 1-2-2v-3m18 0v3a2 2 0 0 1-2 2h-3'/%3E%3C/svg%3E");
+  -webkit-mask: var(--ico) center / contain no-repeat; mask: var(--ico) center / contain no-repeat;
+}
+.search-fs-toggle[aria-pressed="true"]::before {
+  --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3M3 16h3a2 2 0 0 1 2 2v3m13-5h-3a2 2 0 0 0-2 2v3'/%3E%3C/svg%3E");
+}
+
+.search-count { color: var(--s-muted); font-size: .8rem; margin: .65rem auto .35rem; max-width: 42rem; }
+
+/* Fixed editorial layout (matches the original): Languages on the left, Bibles on the
+   right, Countries + Organizations across the bottom. Placement is by grid-area, so it
+   holds regardless of DOM order, and empty groups simply leave their cell blank. */
+.search-results-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: .65rem; align-items: start;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas:
+    "languages bibles"
+    "countries organizations";
+}
+.search-group-language     { grid-area: languages; }
+.search-group-bible        { grid-area: bibles; }
+.search-group-country      { grid-area: countries; }
+.search-group-organization { grid-area: organizations; }
+
+/* Per-section card columns: the wide Languages panel reads 2-up, Bibles stays single
+   file in its narrower column, Countries/Organizations read 2-up along the bottom. */
+.search-group-language .search-group-list { grid-template-columns: repeat(2, 1fr); }
+.search-group-bible .search-group-list { grid-template-columns: 1fr; }
+.search-group-country .search-group-list,
+.search-group-organization .search-group-list { grid-template-columns: repeat(2, 1fr); }
+
+/* Narrow screens: collapse the 2×2 into a single stacked column of single-file panels. */
+@media (max-width: 52rem) {
+  .search-results-list {
+    grid-template-columns: 1fr;
+    grid-template-areas: "languages" "bibles" "countries" "organizations";
+  }
+  .search-group-list { grid-template-columns: 1fr !important; }
+}
+
+.search-group {
+  background: var(--s-bg); border: 1px solid var(--s-line); border-radius: .7rem;
+  overflow: hidden; box-shadow: 0 1px 3px rgba(20,23,40,.05);
+}
+.search-group-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .35rem .7rem; background: var(--s-head); border-bottom: 1px solid var(--s-line);
+}
+.search-group-label { font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--s-muted); }
+.search-group-count { font-size: .7rem; font-weight: 600; color: #fff; background: var(--s-accent); border-radius: 1rem; padding: .05rem .5rem; }
+
+/* The hits themselves: a dense horizontal card grid, one compact line per result
+   (name + muted detail), so results read across the row with no wasted height. */
+.search-group-list {
+  list-style: none; margin: 0; padding: .3rem;
+  display: grid; gap: .25rem;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+}
+
+.search-result { min-width: 0; }
+.search-link {
+  display: flex; align-items: baseline; gap: .45rem;
+  padding: .3rem .5rem; border-radius: .4rem;
+  text-decoration: none; color: inherit; transition: background-color .12s;
+}
+.search-link:hover, .search-link:focus { background: var(--s-hover); outline: none; }
+.search-name { flex: 0 1 auto; min-width: 0; font-weight: 600; color: var(--s-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.search-detail { flex: 1 1 auto; min-width: 0; font-size: .78rem; color: var(--s-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.search-fallback { max-width: 42rem; margin: 1rem auto; color: var(--s-muted); }
+
+/* Fullscreen: the widget covers the viewport. Sections become wider side-by-side
+   panels, each still an internal multi-column card grid, and the overlay scrolls. */
+html.search-fs-open, html.search-fs-open body { overflow: hidden; }
+.search-widget.is-fullscreen {
+  position: fixed; inset: 0; z-index: 1000; max-width: none; margin: 0;
+  display: flex; flex-direction: column; gap: .6rem;
+  padding: 1.1rem 1.25rem 0; background: var(--s-overlay);
+}
+.is-fullscreen .search-bar,
+.is-fullscreen .search-count { max-width: 52rem; }
+/* Two equal-height rows fill the viewport; each panel is a fixed-height quadrant that
+   scrolls internally, so a long Languages list never pushes Countries/Organizations off
+   the bottom — all four panels stay on screen at once. */
+.is-fullscreen .search-results-list {
+  flex: 1 1 auto; min-height: 0; overflow: hidden; padding-bottom: 1.25rem;
+  grid-template-rows: 1fr 1fr; align-items: stretch;
+}
+.is-fullscreen .search-group { min-height: 0; display: flex; flex-direction: column; }
+.is-fullscreen .search-group-list { flex: 1 1 auto; min-height: 0; overflow-y: auto; align-content: start; }
+/* The extra room lets the two top panels pack in more card columns. */
+.is-fullscreen .search-group-language .search-group-list,
+.is-fullscreen .search-group-bible .search-group-list { grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); }

@@ -1,0 +1,60 @@
+/* banner.css — the page banner (partials/banner.html): gradient hero, breadcrumbs,
+   and the optional tab bar. Linked by every page that fills the banner slot (the
+   home page and the lite tables don't). Ported from find.bible's Banner.astro /
+   fab-svelte's Banner.svelte. */
+.banner { position:relative; display:flex; flex-direction:column; justify-content:center; overflow:hidden; text-align:center; height:10rem; color:#f5f5f4;margin-bottom: 1rem;}
+.banner > header { flex-grow:1; position:relative; z-index:30; display:flex; flex-direction:column; justify-content:center; }
+/* The i18n banner_section nests a `.banner` per translated pane inside the outer
+   role="banner" parent; that inner copy only carries the per-locale flex layout
+   (centered title, bottom-pinned tabs). Its bottom margin would make the pane
+   taller than the parent (the pane is a flex item, so the margin can't collapse),
+   shifting the tabs up off the bottom edge — drop it (the parent owns the margin). */
+.banner-pane > .banner { margin-bottom:0; }
+
+.banner h1 { font-size:1.5rem; font-weight:800; letter-spacing:.025em; margin:0; line-height:1.2; border:0; }
+@media (min-width:768px) { .banner h1 { font-size:2.25rem; } }
+.banner h2 { font-size:1.25rem; font-weight:400; margin:.25rem 0 0; border:0; padding:0; }
+
+.banner .banner-image, .banner .banner-gradient { position:absolute; inset:0; }
+.banner .banner-image { object-fit:cover; z-index:10; width:100%; height:100%; }
+.banner .banner-gradient { overflow:hidden; opacity:.8; z-index:20;
+  background:linear-gradient(to right, #10b981, #1e40af, #3b82f6); }
+
+.banner .banner-breadcrumbs { position:absolute; top:.5rem; inset-inline-start:1rem; z-index:50; font-size:.85rem; }
+.banner .banner-breadcrumbs a { color:#f5f5f4; }
+.banner .banner-breadcrumbs a + a::before, .banner .banner-breadcrumbs a + span::before { content:"›"; margin:0 .4rem; opacity:.7; }
+/* Current page: plain text (aria-current span), slightly dimmed vs the links. */
+.banner .banner-breadcrumbs span[aria-current] { opacity:.8; }
+/* Home crumb → house icon. The "Home" text stays in the DOM for screen readers
+   (font-size:0 hides it visually); the icon is a currentColor-masked inline SVG. */
+.banner .banner-breadcrumbs a:first-child { font-size:0; }
+.banner .banner-breadcrumbs a:first-child::before { content:""; display:inline-block; width:1rem; height:1rem; vertical-align:-.2rem;
+  background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3 2 11h3v9h6v-6h2v6h6v-9h3z'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3 2 11h3v9h6v-6h2v6h6v-9h3z'/%3E%3C/svg%3E") no-repeat center / contain; }
+
+/* Banner tabs — matched to fab-svelte's Banner.svelte tablist styling. */
+.banner-tabs { display:flex; justify-content:center; width:50%; margin-inline:auto;
+  border-radius:.5rem .5rem 0 0; z-index:30; position:relative; }
+@media (min-width:1024px) { .banner-tabs { width:33.333%; } }
+.banner-tabs [role="tab"] { display:flex; flex-grow:1; justify-content:center; align-items:center;
+  background:#fafaf9; color:#78716c; white-space:nowrap; padding:.5rem 1rem;border:none; border-bottom:2px solid transparent; }
+.banner-tabs [role="tab"]:not([aria-current]):hover { color:#44403c; border-bottom-color:#e7e5e4; }
+html.dark .banner-tabs [role="tab"] { background:#1c1917; color:#e7e5e4; }
+.banner-tabs [role="tab"]:first-child { border-radius:.5rem 0 0 0; }
+.banner-tabs [role="tab"]:last-child  { border-radius:0 .5rem 0 0; }
+[dir="rtl"] .banner-tabs [role="tab"]:first-child { border-radius:0 .5rem 0 0; }
+[dir="rtl"] .banner-tabs [role="tab"]:last-child  { border-radius:.5rem 0 0 0; }
+.banner-tabs [role="tab"][aria-current] { border-bottom-color:#10b981; color:#16a34a; }
+.banner-tabs [role="tab"]:hover { background:#059669; color:#e7e5e4 !important; }
+html.dark .banner-tabs [role="tab"][aria-current] { border-bottom-color:#047857; }
+/* Count pill (e.g. download size) — green rounded badge beside the tab label. */
+.banner-tabs .tab-count { display:none; background:#10b981; color:#e7e5e4;
+  padding:.125rem .625rem; border-radius:9999px; font-size:.75rem; }
+[dir="ltr"] .banner-tabs .tab-count { margin-left:.75rem; }
+[dir="rtl"] .banner-tabs .tab-count { margin-right:.75rem; }
+html.dark .banner-tabs .tab-count { background:#047857; color:#f5f5f4; }
+@media (min-width:768px) { .banner-tabs .tab-count { display:inline-block; } }
+
+/* Dark-mode override for the ported banner gradient. */
+html.dark .banner .banner-gradient { background:linear-gradient(to right,#065f46,#064e3b,#1e40af); }
